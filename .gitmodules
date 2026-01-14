@@ -1,0 +1,3 @@
+[submodule "idr-metadata"]
+	path = idr-metadata
+	url = https://github.com/IDR/idr-metadata.git
