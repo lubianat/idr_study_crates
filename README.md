@@ -81,3 +81,8 @@ python3 scripts/batch_generate.py --input-dir examples --output-dir ro-crates
 
 This converter is built around the IDR study metadata format and templates from the `IDR/idr-metadata` repository:
 `https://github.com/IDR/idr-metadata`.
+## Profile crate
+
+The repository includes a draft RO-Crate profile for the generated IDR crates in `profile/`.
+The profile URI is `https://idr.openmicroscopy.org/ro-crate/profile/0.1`, and generated
+crates declare conformance using `conformsTo` on the root dataset.

@@ -6,6 +6,20 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, Iterable, List, Optional, Tuple
 
+DEFAULT_TERM_BASES = {
+    "efo": "http://www.ebi.ac.uk/efo/",
+    "ncbitaxon": "http://purl.obolibrary.org/obo/",
+    "cmpo": "http://purl.obolibrary.org/obo/",
+    "fbbi": "http://purl.obolibrary.org/obo/",
+    "pato": "http://purl.obolibrary.org/obo/",
+    "go": "http://purl.obolibrary.org/obo/",
+}
+
+DEFAULT_OLS_SOURCES = set(DEFAULT_TERM_BASES.keys())
+IDR_PROFILE_ID = "https://idr.openmicroscopy.org/ro-crate/profile/0.1"
+IDR_PROFILE_NAME = "IDR study metadata RO-Crate profile"
+IDR_PROFILE_VERSION = "0.1.0"
+
 
 @dataclass
 class IDRRow:
@@ -178,6 +192,17 @@ class ROCrateEncoder:
             "@id": root_id,
             "@type": "Dataset",
         }
+        root["conformsTo"] = {"@id": IDR_PROFILE_ID}
+
+        graph.add(
+            {
+                "@id": IDR_PROFILE_ID,
+                "@type": ["CreativeWork", "Profile"],
+                "name": IDR_PROFILE_NAME,
+                "version": IDR_PROFILE_VERSION,
+                "url": IDR_PROFILE_ID,
+            }
+        )
 
         title = metadata.first_value("Study Title", study_rows)
         if title:
@@ -520,6 +545,8 @@ def get_term_set_id(term_set_map: Dict[str, str], source_ref: Optional[str]) -> 
     for name, term_set_id in term_set_map.items():
         if name.lower() == key_lower:
             return term_set_id
+    if key_lower in DEFAULT_OLS_SOURCES:
+        return f"https://www.ebi.ac.uk/ols/ontologies/{key_lower}"
     return None
 
 
@@ -619,6 +646,8 @@ def get_term_source_uri(term_sources: Dict[str, str], source_ref: Optional[str])
     for name, uri in term_sources.items():
         if name.lower() == key_lower:
             return uri
+    if key_lower in DEFAULT_TERM_BASES:
+        return DEFAULT_TERM_BASES[key_lower]
     return None
 
 
