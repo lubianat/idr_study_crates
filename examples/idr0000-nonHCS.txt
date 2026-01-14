@@ -1,0 +1,101 @@
+# FILL IN AS MUCH INFORMATION AS YOU CAN.  HINTS HAVE BEEN PUT IN SOME FIELDS AFTER THE HASH # SYMBOL. REPLACE THE HINT WITH TEXT WHERE APPROPRIATE.																																	
+																																	
+# STUDY DESCRIPTION SECTION																																	
+# Section with generic information about the study including title, description, publication details (if applicable) and contact details																																	
+																																	
+Comment[IDR Study Accession]	# leave blank																																
+Study Title	# fill in																																
+Study Type	# look up in https://www.ebi.ac.uk/ols/ontologies/efo or leave blank																																
+Study Type Term Source REF	# leave blank																																
+Study Type Term Accession	# leave blank																																
+Study Description	# a brief description of the overall aim of the study.  The publication abstract can be entered here.																	
+Study Key Words	# fill in																												
+Study Organism	# if more than one organism was studied, enter them in separate columns																																
+Study Organism Term Source REF	NCBITaxon																																
+Study Organism Term Accession	# leave blank																																
+Study Experiments Number	# enter how many separate experiments are in this study.  An experiment is a discrete piece of work with its own protocols, results etc.																																
+Study External URL	# if there is an existing web page related to the study enter it here																																
+Study Public Release Date	# enter a date of when the data can be made public, if known																																
+																																	
+# Study Publication																																	
+Study PubMed ID	# fill in if known																																
+Study Publication Title	# fill in if known																																
+Study Author List	# fill in if known																																
+Study PMC ID	# fill in if known																																
+Study DOI	# fill in if known																																
+																																	
+# Study Contacts																																	
+Study Person Last Name	# fill in, you can add more people, each in their own column if you wish																																
+Study Person First Name	# fill in																																
+Study Person Email	# fill in																																
+Study Person Address	# fill in																																
+Study Person ORCID	# fill in																																
+Study Person Roles	submitter																																
+																																	
+# Study License and Data DOI																																	
+Study License	# fill in (CC BY 4.0 is the default licence, update this line to confirm)																																
+Study License URL	# leave blank																																
+Study Copyright	# fill in																																
+Study Data Publisher	# leave blank																																
+Study Data DOI	# leave blank																																
+																																	
+Term Source Name	NCBITaxon	EFO	CMPO	FBbi																													
+Term Source URI	http://purl.obolibrary.org/obo/	http://www.ebi.ac.uk/efo/	http://www.ebi.ac.uk/cmpo/	http://purl.obolibrary.org/obo/																													
+																																	
+																																	
+# EXPERIMENT SECTION																																	
+# Experiment Section containing all information relative to each experiment in the study including materials used, protocols names and description, phenotype names and description. For multiple experiments this section should be repeated.  Copy and paste the whole section below and fill out for the next experiment																																	
+																																	
+Experiment Number	# enter '1' for the first experiment, '2' for the second etc																																
+Comment[IDR Experiment Name]	# leave blank																																
+Experiment Description	# a brief description of the experiment																																
+Experiment Size	5D Images: 	Average Image Dimension (XYZCT):	Total Tb: 	# fill in any values you know																													
+Experiment Example Images	# if you have a favourite image from the screen, list it here.  We may use this image to highlight your screen																																
+Experiment Imaging Method	# fill in with the name of the imaging method used e.g. 3D-SIM, super resolution microscopy etc																																
+Experiment Imaging Method Term Source REF	Fbbi																																
+Experiment Imaging Method Term Accession	# look up in http://www.ebi.ac.uk/ols/ontologies/fbbi or leave blank																																
+Experiment Organism	# fill in if different from Study Organism, if more than one organism was studied, enter them in separate columns																																
+Experiment Organism Term Source REF	NCBITaxon																																
+Experiment Organism Term Accession	# leave blank																																
+Experiment Comments	# if there is anything you would like to say about the experiment not covered elsewhere you can enter it here e.g. image X is missing, or an additional file is included																																
+																																	
+# assay files																																	
+Experiment Assay File	# put in the name of the assay file																																
+Experiment Assay File Format	tab-delimited text																																
+Assay Experimental Conditions	# if there were any experimental conditions some cells were grown under as part of the study enter the information here e.g. different environmental stress conditions, or mutant background compared to wild type																																
+Assay Experimental Conditions Term Source REF	# leave blank																																
+Assay Experimental Conditions Term Accession	# leave blank																																
+Quality Control Description	# a brief description of the kind of quality control measures that were taken (if applicable)																																
+																																	
+# Protocols																																	
+Protocol Name	growth protocol	treatment protocol	image acquistion and feature extraction protocol	data analysis protocol																													
+Protocol Type	growth protocol	treatment protocol	image acquistion and feature extraction protocol	data analysis protocol																													
+Protocol Type Term Source REF	EFO	EFO																															
+Protocol Type Term Accession	EFO_0003789	EFO_0003969																															
+Protocol Description	# text about how the cells were grown here	# text about any specific treatment to the cells here	# text about labeling, the imaging hardware and software, feature extraction methods.	# text about the analysis of the images and features if applicable																													
+																																	
+# Phenotypes																																	
+Phenotype Name	# if any specific phenotypes were identified in the experiment enter the information here.  Each phenotype should be in a separate column.																																
+Phenotype Description	# give a brief description of each phenotype, or how it was determined e.g. if score X is greater than Y then this phenotype assigned.																																
+Phenotype Score Type	# choose from: manual, automatic																																
+Phenotype Term Source REF	CMPO																																
+Phenotype Term Name	# if your phenotype matches a term in the Cellular Microscopy Phenotype Ontology enter it here http://www.ebi.ac.uk/CMPO																																
+Phenotype Term Accession	# if your phenotype matches a term in the Cellular Microscopy Phenotype Ontology enter the accession for the term here http://www.ebi.ac.uk/CMPO		 																														
+																																	
+																																	
+# Feature Level Data Files (give individual file details unless there is one file per well)																																	
+Feature Level Data File Name	# list any feature level table files here																																
+Feature Level Data File Format	# a description of the table																																
+Feature Level Data File Description	# tab-delimited text or other format																																
+Feature Level Data Column Name	# list all the columns in the table, each column in the table should be in a separate column here																																
+Feature Level Data Column Description	# describe the values in each column																																
+																																	
+#  Processed Data Files 																																	
+Processed Data File Name	# the name of the processed data file																																
+Processed Data File Format	tab-delimited text																																
+Processed Data File Description	# a brief description of the what is in the file																																
+Processed Data Column Name	# list each of the columns in the processed data file here, each column in the table should be ain a separate column here																																
+Processed Data Column Type	# state the type of value in each column. Choose from: location, reagent identifier, gene identifier, gene symbol, gene description, data, phenotype, experimental condition																																
+Processed Data Column Annotation Level	# for data and phenotype columns enter the level of the annotation so that it is clear if the value is derived from data from a image, is averaged over many images. E.g. gene, experimental condition, experimental condition and gene, phenotype, image, protein																															
+Processed Data Column Description	# for each data and phenotype column, enter a brief description of what the value represents																																
+Processed Data Column Link To Assay File	# enter which column can be used to link the information in the processed data file to the assay file e.g. targeted protein, or gene identifier																																

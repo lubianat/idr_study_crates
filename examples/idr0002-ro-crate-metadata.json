@@ -1,0 +1,819 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "text": "http://schema.org/text",
+      "additionalProperty": "http://schema.org/additionalProperty",
+      "value": "http://schema.org/value",
+      "propertyID": "http://schema.org/propertyID",
+      "termCode": "http://schema.org/termCode",
+      "inDefinedTermSet": "http://schema.org/inDefinedTermSet",
+      "measurementTechnique": "http://schema.org/measurementTechnique",
+      "category": "http://schema.org/category",
+      "studyType": "http://schema.org/additionalType",
+      "screenImagingMethod": "http://schema.org/measurementTechnique",
+      "screenTechnologyType": "http://schema.org/additionalType",
+      "screenType": "http://schema.org/category",
+      "experimentImagingMethod": "http://schema.org/measurementTechnique"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "https://www.ebi.ac.uk/ols/ontologies/ncbitaxon",
+      "@type": "DefinedTermSet",
+      "name": "NCBITaxon",
+      "url": "https://www.ebi.ac.uk/ols/ontologies/ncbitaxon"
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/",
+      "@type": "DefinedTermSet",
+      "name": "EFO",
+      "url": "http://www.ebi.ac.uk/efo/"
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/cmpo/",
+      "@type": "DefinedTermSet",
+      "name": "CMPO",
+      "url": "http://www.ebi.ac.uk/cmpo/"
+    },
+    {
+      "@id": "https://www.ebi.ac.uk/ols/ontologies/fbbi",
+      "@type": "DefinedTermSet",
+      "name": "FBbi",
+      "url": "https://www.ebi.ac.uk/ols/ontologies/fbbi"
+    },
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0002/"
+      },
+      "description": "RO-Crate metadata generated from IDR metadata"
+    },
+    {
+      "@id": "https://creativecommons.org/licenses/by/4.0/",
+      "@type": "CreativeWork",
+      "name": "CC BY 4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007550",
+      "@type": "DefinedTerm",
+      "name": "high content screen",
+      "identifier": "EFO_0007550",
+      "termCode": "EFO_0007550",
+      "inDefinedTermSet": {
+        "@id": "http://www.ebi.ac.uk/efo/"
+      }
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "DefinedTerm",
+      "name": "Homo sapiens",
+      "identifier": "NCBITaxon_9606",
+      "termCode": "NCBITaxon_9606",
+      "inDefinedTermSet": {
+        "@id": "https://www.ebi.ac.uk/ols/ontologies/ncbitaxon"
+      }
+    },
+    {
+      "@id": "#person-1",
+      "@type": "Person",
+      "name": "Jean-Karim Heriche",
+      "givenName": "Jean-Karim",
+      "familyName": "Heriche",
+      "email": "heriche@embl.de",
+      "address": "EMBL Heidelberg, Meyerhofstrasse 1, 69117 Heidelberg, Germany"
+    },
+    {
+      "@id": "https://dx.doi.org/10.1091/mbc.E13-04-0221",
+      "@type": "ScholarlyArticle",
+      "name": "Integration of biological data by kernels on graph nodes allows prediction of new genes involved in mitotic chromosome condensation.",
+      "identifier": [
+        "https://dx.doi.org/10.1091/mbc.E13-04-0221",
+        "https://pubmed.ncbi.nlm.nih.gov/24943848/",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4142622/"
+      ]
+    },
+    {
+      "@id": "#FBbi_00000246",
+      "@type": "DefinedTerm",
+      "name": "fluorescence microscopy",
+      "identifier": "FBbi_00000246",
+      "termCode": "FBbi_00000246"
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007551",
+      "@type": "DefinedTerm",
+      "name": "RNAi screen",
+      "identifier": "EFO_0007551",
+      "termCode": "EFO_0007551",
+      "inDefinedTermSet": {
+        "@id": "http://www.ebi.ac.uk/efo/"
+      }
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007556",
+      "@type": "DefinedTerm",
+      "name": "primary screen",
+      "identifier": "EFO_0007556",
+      "termCode": "EFO_0007556",
+      "inDefinedTermSet": {
+        "@id": "http://www.ebi.ac.uk/efo/"
+      }
+    },
+    {
+      "@id": "#screen-1",
+      "@type": "Dataset",
+      "name": "idr0002-heriche-condensation/screenA",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Screen Number",
+          "value": [
+            "1"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Comment[IDR Screen Name]",
+          "value": [
+            "idr0002-heriche-condensation/screenA"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Screen Sample Type",
+          "value": [
+            "cell"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Screen Description",
+          "value": [
+            "Screen of 100 candidate genes predicted to be involved in mitotic chromosome condensation. Knock down of 22 genes resulted in signficantly shorter prophases and knock down of 18 genes caused signficant delays in prophase."
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Screen Size",
+          "value": [
+            "Plates: 12",
+            "5D Images: 1152",
+            "Planes: 761280",
+            "Average Image Dimension (XYZCT): 1344 x 1024 x 1 x 2 x 330",
+            "Total Tb: 2.10"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Screen Example Images",
+          "value": [
+            "https://idr.openmicroscopy.org/webclient/?show=well-67124",
+            "https://idr.openmicroscopy.org/webclient/img_detail/179754/",
+            "plate1_1_013;D2"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Screen Imaging Method",
+          "value": [
+            "fluorescence microscopy"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Screen Imaging Method Term Source REF",
+          "value": [
+            "Fbbi"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Screen Imaging Method Term Accession",
+          "value": [
+            "FBbi_00000246"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Screen Technology Type",
+          "value": [
+            "RNAi screen"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Screen Technology Term Source REF",
+          "value": [
+            "EFO"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Screen Technology Term Accession",
+          "value": [
+            "EFO_0007551"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Screen Type",
+          "value": [
+            "primary screen"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Screen Type Term Source REF",
+          "value": [
+            "EFO"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Screen Type Term Accession",
+          "value": [
+            "EFO_0007556"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Screen Comments",
+          "value": [
+            ""
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Library File Name",
+          "value": [
+            "idr0002-screenA-library.txt"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Library File Format",
+          "value": [
+            "tab-delimited text"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Library Type",
+          "value": [
+            "siRNA library"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Library Type Term Source REF",
+          "value": [
+            "EFO"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Library Type Term Accession",
+          "value": [
+            "EFO_0007564"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Library Manufacturer",
+          "value": [
+            "Ambion"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Library Version",
+          "value": [
+            ""
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Library Experimental Conditions",
+          "value": [
+            "none"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Library Experimental Conditions Term Source REF",
+          "value": [
+            ""
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Library Experimental Conditions Term Accession",
+          "value": [
+            ""
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Quality Control Description",
+          "value": [
+            ""
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Protocol Name",
+          "value": [
+            "growth protocol",
+            "HCS library protocol",
+            "HCS image acquistion and feature extraction protocol",
+            "HCS data analysis protocol"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Protocol Type",
+          "value": [
+            "growth protocol",
+            "HCS library protocol",
+            "HCS image acquistion and feature extraction protocol",
+            "HCS data analysis protocol"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Protocol Type Term Source REF",
+          "value": [
+            "EFO",
+            "EFO",
+            "EFO",
+            "EFO"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Protocol Type Term Accession",
+          "value": [
+            "EFO_0003789",
+            "EFO_0007571",
+            "EFO_0007572",
+            "EFO_0007573"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Protocol Description",
+          "value": [
+            "We seeded 4000 HeLa cells stably expressing HIST1H2BJ-mCherry and LMNA-eGFP in each well and incubated them for 17 h at 37 C and 5% CO2. After 17 h of incubation, the medium was replaced by preheated CO2-independent imaging medium (Invitrogen; containing 10% heat-inactivated fetal calf serum, 2 mM glutamine, 100 U/ml penicillin, and 100 _g/ml streptomycin). Gas exchange was prevented by sealing the plates with Baysilone paste (Bayer, Leverkusen, Germany). Plates were then kept at least 1 h in the preheated incubation chamber of the microscope before imaging.",
+            "A parameter-free gene function prediction method using kernels on graph nodes was used to select candidate genes for a focused RNAi screen. Ensembl 61 (February 2011) was used for the inference of siRNA target genes. We prepared siRNA-coated 96-well plates as described previously (Neumann et al., 2010)",
+            "Images were acquired with an automated epifluorescence microscope (IX-81; Olympus-Europe, Hamburg, Germany) with a 20_ objective and a time interval of 8.5 min for 44 h. Four independent replicates were acquired for each siRNA treatment. Images were processed using the CellCognition software (Held et al., 2010). Only the H2B-mCherry channel was used. After segmentation, a training set was assembled by manually assigning _1800 nuclei from negative control wells to one of the following 10 classes based on the morphological aspect of the nuclei: interphase, early prophase, late prophase, prometaphase, metaphase, early anaphase, late anaphase, apoptosis, artifact, and out of focus. Early prophase was defined as the first visually detectable changes in the texture of chromatin after interphase, and late prophase was defined as the first appearance of clearly condensed chromatin before prometaphase. This late-prophase definition corresponds to events preceding complete disassembly of the nuclear envelope as judged by the LMNA-eGFP marker. All nuclei were then automatically assigned by a multiclass support vector machine to one of these classes. Mitoses were detected as any transition from interphase to one or more of prophase, prometaphase, or metaphase followed by at least one of either metaphase or anaphase. Mitotic nuclei were then tracked for 22 frames (eight before the detected transition and 14 after). Mitoses with too-dark nuclei or for which the first eight frames before the transition were not classified as interphase (e.g., out-of-focus nuclei) were discarded. Wells with fewer than five valid mitoses were discarded.",
+            "Lack of condensin function, which results in absence of condensation in prophase, translated in our screen as a shorter prophase because the prophase class definition is based on the visual appearance of condensation before nuclear envelope breakdown. In negative control cells (i.e., treated with nontargeting siRNAs), the mode of duration of prophase was two frames (17 min). To get an overview of the screen, we derived a short prophase score for each gene as the median of the difference in the fraction of shorter prophase between all replicates involving the gene and corresponding negative controls (i.e., nontargeting siRNA). Similarly, we defined a long-prophase score by looking at the fraction of mitoses with prophase lasting >17 min. Then for each well, we tested whether the fraction of mitoses with prophase less (respectively more) than two frames was significantly different from the corresponding plate's pooled negative controls (Fisher's exact test with p < 0.1). A siRNA was then considered to affect mitotic chromosome condensation if it produced the same significant change in prophase duration in at least two replicates. A combined p value over replicates was calculated using the QFAST algorithm (Bailey and Gribskov, 1998), and siRNAs with combined p > 0.05 were not considered as hits."
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Phenotype Name",
+          "value": [
+            "shorter prophase",
+            "longer prophase"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Phenotype Description",
+          "value": [
+            "A short prophase score was derived for each gene. Then for each well, we tested whether the fraction of mitoses with prophase less  than two frames was significantly different from the corresponding plate's pooled negative controls (Fisher's exact test with p < 0.1). A siRNA was then considered to affect mitotic chromosome condensation if it produced the same significant change in prophase duration in at least two replicates. A combined p value over replicates was calculated using the QFAST algorithm (Bailey and Gribskov, 1998), and siRNAs with combined p > 0.05 were not considered as hits.",
+            "A long prophase score was derived for each gene. Then for each well, we tested whether the fraction of mitoses with prophase more  than two frames was significantly different from the corresponding plate's pooled negative controls (Fisher's exact test with p < 0.1). A siRNA was then considered to affect mitotic chromosome condensation if it produced the same significant change in prophase duration in at least two replicates. A combined p value over replicates was calculated using the QFAST algorithm (Bailey and Gribskov, 1998), and siRNAs with combined p > 0.05 were not considered as hits."
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Phenotype Score Type",
+          "value": [
+            "automatic",
+            "automatic"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Phenotype Term Source REF",
+          "value": [
+            "CMPO",
+            "CMPO"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Phenotype Term Name",
+          "value": [
+            "decreased duration of mitotic prophase phenotype",
+            "increased duration of mitotic prophase phenotype"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Phenotype Term Accession",
+          "value": [
+            "CMPO_0000329",
+            "CMPO_0000328"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Raw Image Data Format",
+          "value": [
+            "OME-TIFF"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Raw Image Organization",
+          "value": [
+            "There are 4 replicates of 3 x 96 well plates.  Images were taken in each well every 8.5 mins for 44 hours.  The image folders and file names include information about the wells and time points."
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Feature Level Data File Name",
+          "value": [
+            ""
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Feature Level Data File Description",
+          "value": [
+            "These files contain all tracked events.   One file per well."
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Feature Level Data File Format",
+          "value": [
+            "yaml"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Feature Level Data Column Name",
+          "value": [
+            ""
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Feature Level Data Column Type",
+          "value": [
+            ""
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Feature Level Data Column Description",
+          "value": [
+            ""
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Processed Data File Name",
+          "value": [
+            "idr0002-screenA-processed.txt"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Processed Data File Format",
+          "value": [
+            "tab-delimited text"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Processed Data File Description",
+          "value": [
+            "Provides summary statistics for the analysis of phenotypes in the screen, including short and long prophase score, reproducibility, final result of whether an gene was considered to affect prophase length and therefore mitotic chromosome condensation."
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Processed Data Column Name",
+          "value": [
+            "siRNA Identifier",
+            "Gene Identifier",
+            "Gene Symbol",
+            "Median Deviation Fraction - Shorter Prophase",
+            "Median Deviation Fraction - Longer Prophase",
+            "Has Phenotype",
+            "Phenotype Annotation Level",
+            "Phenotype Reproducibility - Shorter Prophase",
+            "Phenotype Reproducibility - Longer Prophase",
+            "Phenotype 1",
+            "Phenotype 2"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Processed Data Column Type",
+          "value": [
+            "Reagent Identifier",
+            "gene identifier",
+            "gene symbol",
+            "data",
+            "data",
+            "other",
+            "other",
+            "data",
+            "data",
+            "phenotype",
+            "phenotype"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Processed Data Column Annotation Level",
+          "value": [
+            "",
+            "",
+            "multiple replicates of reagent",
+            "multiple replicates of reagent",
+            "",
+            "",
+            "multiple replicates of reagent",
+            "multiple replicates of reagent",
+            "gene",
+            "gene"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Processed Data Column Description",
+          "value": [
+            "Name of the siRNA used",
+            "The Ensembl identifier for the target gene",
+            "The target gene for the siRNA",
+            "The median of the difference in the fraction of shorter prophase between all replicates involving the siRNA and corresponding negative controls (i.e., nontargeting siRNA)",
+            "The median of the difference in the fraction of mitotoses with prophase lasting >17 min involving the siRNA and corresponding negative controls.",
+            "Whether there is a phenotype associated with the entity in the row.",
+            "The level of entity that is annotated with the phenotype.",
+            "The reproducibility of phenotypes for each siRNA, i.e. 2/3 means the phenotype is found in 2 replicates out of 3. The number of replicates is maximum 4 but is variable due to quality control. A hit is required to have at least half of the replicates with the same phenotype (and more than one positive replicate, i.e. 1/2 is not a hit but 2/4 is).",
+            "The reproducibility of phenotypes for each siRNA, i.e. 2/3 means the phenotype is found in 2 replicates out of 3. The number of replicates is maximum 4 but is variable due to quality control. A hit is required to have at least half of the replicates with the same phenotype (and more than one positive replicate, i.e. 1/2 is not a hit but 2/4 is).",
+            "Phenotype at the gene level",
+            "Phenotype at the gene level"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Processed Data Column Link To Library File",
+          "value": [
+            "siRNA Identifier"
+          ]
+        }
+      ],
+      "description": "Screen of 100 candidate genes predicted to be involved in mitotic chromosome condensation. Knock down of 22 genes resulted in signficantly shorter prophases and knock down of 18 genes caused signficant delays in prophase.",
+      "screenImagingMethod": {
+        "@id": "#FBbi_00000246"
+      },
+      "screenTechnologyType": {
+        "@id": "http://www.ebi.ac.uk/efo/EFO_0007551"
+      },
+      "screenType": {
+        "@id": "http://www.ebi.ac.uk/efo/EFO_0007556"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0002/",
+      "@type": "Dataset",
+      "name": "Focused mitotic chromsome condensaton screen using HeLa cells",
+      "description": "The advent of genome-wide RNA interference (RNAi) based screens puts us in the position to identify genes for all functions human cells carry out. However, for many functions, assay complexity and cost make genome-scale knockdown experiments impossible. Methods to predict genes required for cell functions are therefore needed to focus RNAi screens from the whole genome on the most likely candidates. Although different bioinformatics tools for gene function prediction exist, they lack experimental validation and are therefore rarely used by experimentalists. To address this, we developed an effective computational gene selection strategy that represents public data about genes as graphs and then analyzes these graphs using kernels on graph nodes to predict functional relationships. To demonstrate its performance, we predicted human genes required for a poorly understood cellular function 'mitotic chromosome condensation' and experimentally validated the top 100 candidates with a focused RNAi screen by automated microscopy. Quantitative analysis of the images demonstrated that the candidates were indeed strongly enriched in condensation genes, including the discovery of several new factors. By combining bioinformatics prediction with experimental validation, our study shows that kernels on graph nodes are powerful tools to integrate public biological data and predict genes involved in cellular functions of interest.",
+      "datePublished": "2016-05-26",
+      "identifier": "idr0002",
+      "license": {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "copyrightHolder": "Heriche et al",
+      "studyType": {
+        "@id": "http://www.ebi.ac.uk/efo/EFO_0007550"
+      },
+      "about": {
+        "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+      },
+      "author": [
+        {
+          "@id": "#person-1"
+        }
+      ],
+      "citation": {
+        "@id": "https://dx.doi.org/10.1091/mbc.E13-04-0221"
+      },
+      "creditText": "Hériché JK, Lees JG, Morilla I, Walter T, Petrova B, Roberti MJ, Hossain MJ, Adler P, Fernández JM, Krallinger M, Haering CH, Vilo J, Valencia A, Ranea JA, Orengo C, Ellenberg J",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Comment[IDR Study Accession]",
+          "value": [
+            "idr0002"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Study Title",
+          "value": [
+            "Focused mitotic chromsome condensaton screen using HeLa cells"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Study Type",
+          "value": [
+            "high content screen"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Study Type Term Source REF",
+          "value": [
+            "EFO"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Study Type Term Accession",
+          "value": [
+            "EFO_0007550"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Study Description",
+          "value": [
+            "The advent of genome-wide RNA interference (RNAi) based screens puts us in the position to identify genes for all functions human cells carry out. However, for many functions, assay complexity and cost make genome-scale knockdown experiments impossible. Methods to predict genes required for cell functions are therefore needed to focus RNAi screens from the whole genome on the most likely candidates. Although different bioinformatics tools for gene function prediction exist, they lack experimental validation and are therefore rarely used by experimentalists. To address this, we developed an effective computational gene selection strategy that represents public data about genes as graphs and then analyzes these graphs using kernels on graph nodes to predict functional relationships. To demonstrate its performance, we predicted human genes required for a poorly understood cellular function 'mitotic chromosome condensation' and experimentally validated the top 100 candidates with a focused RNAi screen by automated microscopy. Quantitative analysis of the images demonstrated that the candidates were indeed strongly enriched in condensation genes, including the discovery of several new factors. By combining bioinformatics prediction with experimental validation, our study shows that kernels on graph nodes are powerful tools to integrate public biological data and predict genes involved in cellular functions of interest."
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Study Organism",
+          "value": [
+            "Homo sapiens"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Study Organism Term Source REF",
+          "value": [
+            "NCBITaxon"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Study Organism Term Accession",
+          "value": [
+            "NCBITaxon_9606"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Study Screens Number",
+          "value": [
+            "1"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Study External URL",
+          "value": [
+            ""
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Study Public Release Date",
+          "value": [
+            "2016-05-26"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Study PubMed ID",
+          "value": [
+            "24943848"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Study Publication Title",
+          "value": [
+            "Integration of biological data by kernels on graph nodes allows prediction of new genes involved in mitotic chromosome condensation."
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Study Author List",
+          "value": [
+            "Hériché JK, Lees JG, Morilla I, Walter T, Petrova B, Roberti MJ, Hossain MJ, Adler P, Fernández JM, Krallinger M, Haering CH, Vilo J, Valencia A, Ranea JA, Orengo C, Ellenberg J"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Study PMC ID",
+          "value": [
+            "PMC4142622"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Study DOI",
+          "value": [
+            "http://dx.doi.org/10.1091/mbc.E13-04-0221"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Study License",
+          "value": [
+            "CC BY 4.0"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Study License URL",
+          "value": [
+            "https://creativecommons.org/licenses/by/4.0/"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Study Copyright",
+          "value": [
+            "Heriche et al"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Study Person Last Name",
+          "value": [
+            "Heriche"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Study Person First Name",
+          "value": [
+            "Jean-Karim"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Study Person Email",
+          "value": [
+            "heriche@embl.de"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Study Person Address",
+          "value": [
+            "EMBL Heidelberg, Meyerhofstrasse 1, 69117 Heidelberg, Germany"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Study Person Roles",
+          "value": [
+            "submitter"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Term Source Name",
+          "value": [
+            "NCBITaxon",
+            "EFO",
+            "CMPO",
+            "FBbi"
+          ]
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Term Source URI",
+          "value": [
+            "http://purl.obolibrary.org/obo/",
+            "http://www.ebi.ac.uk/efo/",
+            "http://www.ebi.ac.uk/cmpo/",
+            "http://purl.obolibrary.org/obo/"
+          ]
+        }
+      ],
+      "hasPart": [
+        {
+          "@id": "#screen-1"
+        }
+      ]
+    }
+  ]
+}
