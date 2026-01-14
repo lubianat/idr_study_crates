@@ -76,16 +76,27 @@ class IDRMetadata:
 
 
 class IDRDecoder:
-    def __init__(self, encoding: str = "utf-8") -> None:
+    def __init__(self, encoding: str = "utf-8", fallback_encodings: Optional[List[str]] = None) -> None:
         self.encoding = encoding
+        fallback_encodings = fallback_encodings or ["utf-8", "utf-8-sig", "cp1252", "latin-1"]
+        self.fallback_encodings = [encoding] + [enc for enc in fallback_encodings if enc != encoding]
 
     def decode(self, path: Path) -> IDRMetadata:
-        raw_text = path.read_text(encoding=self.encoding)
+        raw_bytes = path.read_bytes()
+        raw_text = self._decode_bytes(raw_bytes)
         return self.decode_text(raw_text)
 
     def decode_text(self, raw_text: str) -> IDRMetadata:
         rows = self._parse_text(raw_text)
         return IDRMetadata(raw_text=raw_text, rows=rows)
+
+    def _decode_bytes(self, raw_bytes: bytes) -> str:
+        for encoding in self.fallback_encodings:
+            try:
+                return raw_bytes.decode(encoding)
+            except UnicodeDecodeError:
+                continue
+        return raw_bytes.decode(self.fallback_encodings[-1], errors="replace")
 
     def _parse_text(self, raw_text: str) -> List[IDRRow]:
         rows: List[IDRRow] = []
