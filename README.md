@@ -60,13 +60,7 @@ Sample inputs:
 ## Tests
 
 ```
-python3 -m unittest discover -s tests
-```
-
-If you prefer pytest:
-
-```
-pytest
+uv run pytest
 ```
 
 ## Batch Generation
@@ -74,8 +68,20 @@ pytest
 Generate RO-Crates for all `idr*-study.txt` files under `examples/`:
 
 ```
-python3 scripts/batch_generate.py --input-dir examples --output-dir ro-crates
+uv run scripts/batch_generate.py --input-dir examples --output-dir ro-crates
 ```
+
+Add `--verbose` to log per-crate output paths while processing.
+
+## Turtle Export
+
+To merge all generated RO-Crates into a single Turtle file:
+
+```
+uv run scripts/batch_generate.py --input-dir examples --output-dir ro-crates --ttl-out ro-crates/idr-studies.ttl
+```
+
+Relative identifiers are resolved against each crate's `ro-crate-metadata.json` file URI.
 
 ## Acknowledgements
 

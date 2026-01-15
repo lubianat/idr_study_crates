@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
+# /// script
+# requires-python = ">=3.8"
+# dependencies = ["tqdm>=4.60", "rdflib>=6.0"] # rdflib is optional for --ttl-out.
+# ///
 import argparse
 import json
 import sys
 from datetime import date
 from pathlib import Path
+from typing import Optional
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
@@ -29,6 +34,16 @@ def main() -> None:
         action="store_true",
         help="Skip generating an index RO-Crate that links to all subcrates",
     )
+    parser.add_argument(
+        "--ttl-out",
+        default=None,
+        help="Write merged Turtle output for all generated crates (requires rdflib)",
+    )
+    parser.add_argument(
+        "--verbose",
+        action="store_true",
+        help="Print per-crate progress details",
+    )
     args = parser.parse_args()
 
     input_dir = Path(args.input_dir)
@@ -42,22 +57,50 @@ def main() -> None:
     if not study_files:
         raise SystemExit(f"No idr*-study.txt files found under {input_dir}")
 
+    try:
+        from tqdm import tqdm
+    except ImportError as exc:
+        raise SystemExit(
+            "tqdm is required for progress output. Run with `uv run` or install via `python3 -m pip install tqdm`."
+        ) from exc
+
+    progress = tqdm(
+        study_files,
+        desc=f"Generating {len(study_files)} RO-Crates",
+        unit="study",
+        disable=not sys.stderr.isatty(),
+    )
+
+    def log(message: str) -> None:
+        if not args.verbose:
+            return
+        progress.write(message)
+
+    log(f"Found {len(study_files)} study metadata files under {input_dir}")
+    log(f"Writing RO-Crates to {output_dir}")
+
     subcrates = []
-    for study_path in study_files:
+    for study_path in progress:
         metadata = decoder.decode(study_path)
         crate = encoder.encode(metadata)
         crate_dir = output_dir / study_path.stem
         crate_dir.mkdir(parents=True, exist_ok=True)
         output_path = crate_dir / "ro-crate-metadata.json"
         output_path.write_text(json.dumps(crate, indent=2, ensure_ascii=False), encoding="utf-8")
+        log(f"Wrote {output_path}")
         subcrates.append((crate_dir, crate))
 
-    if args.no_index_crate:
-        return
+    index_path: Optional[Path] = None
+    if not args.no_index_crate:
+        index_crate = build_index_crate(output_dir, subcrates)
+        index_path = output_dir / "ro-crate-metadata.json"
+        index_path.write_text(json.dumps(index_crate, indent=2, ensure_ascii=False), encoding="utf-8")
+        log(f"Wrote index crate to {index_path}")
 
-    index_crate = build_index_crate(output_dir, subcrates)
-    index_path = output_dir / "ro-crate-metadata.json"
-    index_path.write_text(json.dumps(index_crate, indent=2, ensure_ascii=False), encoding="utf-8")
+    if args.ttl_out:
+        ttl_path = Path(args.ttl_out)
+        write_merged_ttl(ttl_path, subcrates, index_path)
+        log(f"Wrote merged Turtle to {ttl_path}")
 
 
 def build_index_crate(output_dir: Path, subcrates) -> dict:
@@ -115,6 +158,27 @@ def build_index_crate(output_dir: Path, subcrates) -> dict:
         "@context": "https://w3id.org/ro/crate/1.2/context",
         "@graph": graph,
     }
+
+
+def write_merged_ttl(output_path: Path, subcrates, index_path: Optional[Path]) -> None:
+    try:
+        from rdflib import Graph
+    except ImportError as exc:
+        raise SystemExit(
+            "rdflib is required to write Turtle output. Run with `uv run` or install via `python3 -m pip install rdflib`."
+        ) from exc
+
+    graph = Graph()
+    crate_paths = [crate_dir / "ro-crate-metadata.json" for crate_dir, _ in subcrates]
+    if index_path is not None:
+        crate_paths.insert(0, index_path)
+
+    for crate_path in crate_paths:
+        crate_path = crate_path.resolve()
+        graph.parse(str(crate_path), format="json-ld", publicID=crate_path.as_uri())
+
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    graph.serialize(destination=str(output_path), format="turtle")
 
 
 def extract_root_entity(crate: dict) -> dict | None:

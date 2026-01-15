@@ -22,6 +22,6 @@ if ! command -v uv >/dev/null 2>&1; then
   exit 1
 fi
 
-uv run -- python "${ROOT_DIR}/scripts/batch_generate.py" \
+uv run "${ROOT_DIR}/scripts/batch_generate.py" \
   --input-dir "${STUDIES_DIR}" \
   --output-dir "${OUTPUT_DIR}"
