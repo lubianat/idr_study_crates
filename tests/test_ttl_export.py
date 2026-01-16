@@ -64,4 +64,6 @@ def test_write_merged_ttl(tmp_path: Path) -> None:
     graph.parse(str(ttl_path), format="turtle")
     for study_id in ("idr0001", "idr0002"):
         study_uri = URIRef(f"https://idr.openmicroscopy.org/study/{study_id}/")
+        descriptor_uri = URIRef(f"https://idr.openmicroscopy.org/study/{study_id}/ro-crate-metadata.json")
         assert any(graph.triples((study_uri, None, None)))
+        assert any(graph.triples((descriptor_uri, None, None)))
