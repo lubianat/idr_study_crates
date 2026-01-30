@@ -536,8 +536,8 @@ class ROCrateEncoder:
         size_refs = []
 
         # Look for Screen Size or Experiment Size fields
-        total_tb = 0.0
-        total_images = 0
+        tb_parts = []
+        images_parts = []
 
         for block in screen_blocks + experiment_blocks:
             for row in block:
@@ -550,18 +550,27 @@ class ROCrateEncoder:
                             r"Total\s+Tb:\s*([0-9.]+)", val, re.IGNORECASE
                         )
                         if tb_match:
-                            total_tb += float(tb_match.group(1))
+                            tb_parts.append(float(tb_match.group(1)))
                         # Parse "5D Images: 109728" format
                         images_match = re.search(
                             r"5D\s+Images:\s*(\d+)", val, re.IGNORECASE
                         )
                         if images_match:
-                            total_images += int(images_match.group(1))
+                            images_parts.append(int(images_match.group(1)))
+
+        total_tb = sum(tb_parts)
+        total_images = sum(images_parts)
 
         # Convert TB to bytes (1 TB = 1099511627776 bytes)
         if total_tb > 0:
             total_bytes = int(total_tb * 1099511627776)
             size_id = "#total-dataset-size"
+            # Build description showing sum if multiple sources
+            if len(tb_parts) > 1:
+                parts_str = " + ".join(str(t) for t in tb_parts)
+                desc = f"{parts_str} = {total_tb} TB"
+            else:
+                desc = f"{total_tb} TB"
             graph.add(
                 {
                     "@id": size_id,
@@ -569,12 +578,19 @@ class ROCrateEncoder:
                     "value": total_bytes,
                     "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
                     "unitText": "bytes",
+                    "description": desc,
                 }
             )
             size_refs.append({"@id": size_id})
 
         if total_images > 0:
             count_id = "#file-count"
+            # Build description showing sum if multiple sources
+            if len(images_parts) > 1:
+                parts_str = " + ".join(str(i) for i in images_parts)
+                desc = f"{parts_str} = {total_images} 5D images"
+            else:
+                desc = f"{total_images} 5D images"
             graph.add(
                 {
                     "@id": count_id,
@@ -582,6 +598,7 @@ class ROCrateEncoder:
                     "value": total_images,
                     "unitCode": "http://purl.obolibrary.org/obo/UO_0000189",
                     "unitText": "file count",
+                    "description": desc,
                 }
             )
             size_refs.append({"@id": count_id})
