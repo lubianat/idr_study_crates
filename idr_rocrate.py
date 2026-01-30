@@ -235,6 +235,10 @@ class ROCrateEncoder:
             }
         )
 
+        # Add Dataset placeholder early so it appears right after CreativeWork
+        # It will be updated with full properties later
+        graph.add({"@id": root_id, "@type": "Dataset"})
+
         # Publisher entity
         graph.add(
             {
@@ -288,6 +292,7 @@ class ROCrateEncoder:
         biosample_refs = []
         all_protocol_refs = []
         all_imaging_refs = []
+        all_imaging_protocol_refs = []
 
         for idx, block in enumerate(screen_blocks, start=1):
             sample_type = first_value_in_block(block, "Screen Sample Type") or "cell"
@@ -319,9 +324,20 @@ class ROCrateEncoder:
                 graph.add(imaging_entity)
                 all_imaging_refs.append({"@id": imaging_id})
 
+                # Create an imaging protocol (protocol-0) that links to the FBbi term
+                imaging_protocol_id = f"#screen-protocol-{idx}-0"
+                imaging_protocol = {
+                    "@id": imaging_protocol_id,
+                    "@type": "LabProtocol",
+                    "name": imaging_method or imaging_accession,
+                    "measurementTechnique": [{"@id": imaging_id}],
+                }
+                graph.add(imaging_protocol)
+                all_imaging_protocol_refs.append({"@id": imaging_protocol_id})
+
                 # Build LabProtocols for this screen
                 protocol_refs = self._build_lab_protocols(
-                    block, idx, imaging_id, graph, "screen"
+                    block, idx, imaging_id, graph, "screen", term_sources
                 )
                 all_protocol_refs.extend(protocol_refs)
 
@@ -357,9 +373,20 @@ class ROCrateEncoder:
                 graph.add(imaging_entity)
                 all_imaging_refs.append({"@id": imaging_id})
 
+                # Create an imaging protocol (protocol-0) that links to the FBbi term
+                imaging_protocol_id = f"#experiment-protocol-{idx}-0"
+                imaging_protocol = {
+                    "@id": imaging_protocol_id,
+                    "@type": "LabProtocol",
+                    "name": imaging_method or imaging_accession,
+                    "measurementTechnique": [{"@id": imaging_id}],
+                }
+                graph.add(imaging_protocol)
+                all_imaging_protocol_refs.append({"@id": imaging_protocol_id})
+
                 # Build LabProtocols for this experiment
                 protocol_refs = self._build_lab_protocols(
-                    block, idx, imaging_id, graph, "experiment"
+                    block, idx, imaging_id, graph, "experiment", term_sources
                 )
                 all_protocol_refs.extend(protocol_refs)
 
@@ -407,8 +434,10 @@ class ROCrateEncoder:
         if about_refs:
             root["about"] = about_refs
 
-        # measurementMethod (LabProtocols and imaging methods)
-        measurement_refs = all_protocol_refs + all_imaging_refs
+        # measurementMethod (imaging protocols first, then other protocols, then imaging methods)
+        measurement_refs = (
+            all_imaging_protocol_refs + all_protocol_refs + all_imaging_refs
+        )
         measurement_refs = self._dedupe_refs(measurement_refs)
         if measurement_refs:
             root["measurementMethod"] = measurement_refs
@@ -493,6 +522,7 @@ class ROCrateEncoder:
         imaging_id: str,
         graph: GraphBuilder,
         prefix: str,
+        term_sources: Dict[str, str],
     ) -> List[dict]:
         """Build LabProtocol entities from protocol fields in a block."""
         protocol_refs = []
@@ -500,18 +530,26 @@ class ROCrateEncoder:
         # Get protocol names and descriptions from multi-valued fields
         protocol_names = []
         protocol_descriptions = []
+        protocol_types = []
+        protocol_type_accessions = []
+        protocol_type_source_refs = []
         for row in block:
             if row.key == "Protocol Name":
                 protocol_names = [v.strip() for v in row.values if v.strip()]
             elif row.key == "Protocol Description":
                 protocol_descriptions = [v.strip() for v in row.values if v.strip()]
+            elif row.key == "Protocol Type":
+                protocol_types = [v.strip() for v in row.values]
+            elif row.key == "Protocol Type Term Accession":
+                protocol_type_accessions = [v.strip() for v in row.values]
+            elif row.key == "Protocol Type Term Source REF":
+                protocol_type_source_refs = [v.strip() for v in row.values]
 
         # Create LabProtocol entities for each protocol
         for protocol_counter, name in enumerate(protocol_names, start=1):
+            idx = protocol_counter - 1
             description = (
-                protocol_descriptions[protocol_counter - 1]
-                if protocol_counter - 1 < len(protocol_descriptions)
-                else ""
+                protocol_descriptions[idx] if idx < len(protocol_descriptions) else ""
             )
             protocol_id = f"#{prefix}-protocol-{block_idx}-{protocol_counter}"
             protocol = {
@@ -519,12 +557,78 @@ class ROCrateEncoder:
                 "@type": "LabProtocol",
                 "name": name,
                 "description": description or name,
-                "measurementTechnique": [{"@id": imaging_id}],
             }
+
+            # Use EFO protocol type term as measurementTechnique if available
+            if idx < len(protocol_type_accessions) and protocol_type_accessions[idx]:
+                accession = protocol_type_accessions[idx]
+                source_ref = (
+                    protocol_type_source_refs[idx]
+                    if idx < len(protocol_type_source_refs)
+                    else None
+                )
+                type_id = self._build_term_id_with_source(
+                    accession, source_ref, term_sources
+                )
+                if type_id:
+                    # Add DefinedTerm entity for the protocol type
+                    type_name = (
+                        protocol_types[idx]
+                        if idx < len(protocol_types) and protocol_types[idx]
+                        else name
+                    )
+                    graph.add(
+                        {
+                            "@id": type_id,
+                            "@type": "DefinedTerm",
+                            "name": type_name,
+                        }
+                    )
+                    protocol["measurementTechnique"] = [{"@id": type_id}]
+
+            # Fallback to imaging method if no protocol type term
+            if "measurementTechnique" not in protocol:
+                protocol["measurementTechnique"] = [{"@id": imaging_id}]
+
             graph.add(protocol)
             protocol_refs.append({"@id": protocol_id})
 
         return protocol_refs
+
+    def _build_term_id_with_source(
+        self, accession: str, source_ref: Optional[str], term_sources: Dict[str, str]
+    ) -> Optional[str]:
+        """Build a term ID from an ontology accession and source reference."""
+        if not accession:
+            return None
+        accession = accession.strip()
+        if re.match(r"^https?://", accession):
+            return accession
+
+        # Try to use the source reference to determine the base URI
+        if source_ref:
+            source_ref_lower = source_ref.lower()
+            if source_ref_lower in term_sources:
+                base = term_sources[source_ref_lower]
+                # Handle cases like "EFO_0003789" -> use as-is
+                return f"{base}{accession}"
+            # Check DEFAULT_TERM_BASES
+            if source_ref_lower in DEFAULT_TERM_BASES:
+                base = DEFAULT_TERM_BASES[source_ref_lower]
+                return f"{base}{accession}"
+
+        # Fallback: try to resolve common ontology prefixes from accession
+        match = re.match(r"^([A-Za-z]+)[_:](\d+)$", accession)
+        if match:
+            prefix = match.group(1).lower()
+            number = match.group(2)
+            if prefix in DEFAULT_TERM_BASES:
+                base = DEFAULT_TERM_BASES[prefix]
+                return f"{base}{prefix.upper()}_{number}"
+            # Default OBO format
+            return f"http://purl.obolibrary.org/obo/{match.group(1).upper()}_{number}"
+
+        return None
 
     def _build_dataset_size(
         self,
