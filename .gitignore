@@ -1,17 +1,50 @@
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-*.egg-info/
-build/
-dist/
-.venv/
-venv/
-env/
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-.DS_Store
-ro-crates/
-examples/studies/*
-ro-crates/*
+
+I think it we could consider lightweight mechanisms for extra metadata. SSBD, for example (see https://ssbd.riken.jp/database/dataset/537/) has curated Gene Ontology terms per dataset, and other values that would be "lost" 
+
+One option would be to just allow "https://schema.org/additionalProperty" in the RO-Crate for arbitrary key-value pair metadata, without kany guarantees Even if they are not in a standard schema, it could be good to have more pieces on information on the RO-Crate, if nothing else to potentially improve keyword-search/elasticsearch. 
+
+ 
+
+For the protocol + biosample/specimen metadata, I was flirting with the idea of a very simple schema like (on pseudo-schema with random values): 
+
+```
+
+dataset
+
+   about: 
+
+       // Scientific subjects. May include taxa (NCBI Taxon terms), Gene Ontology terms, Disease Ontology terms
+       // Terms on anatomical regions, tissues, drugs, diseases, phases of life, cell lines
+       // ON REMBI, "Biosample" level metadata 
+
+      [
+          {@id:   http://purl.obolibrary.org/obo/NCBITaxon_4896},
+          {@id:   http://purl.obolibrary.org/obo/GO_0007343},
+          // UBERON term
+          // Cell Ontology term
+         // Disease Ontology term etc etc
+      ]
+
+  has_used:
+                // Methods. May include EFO terms (experimental design), but also other things like 
+                // protocols, sample preparation techniques, particular equipment/model/setup, software libraries and so on
+                // terms from OBO Foundry ontologies should be used whenever possible
+                // PIDs from other providers are welcome. Ideally resolvable. 
+                // On REMBI, "Specimen" but perhaps "Image Acquisition" and "Study Component"  
+
+         "http://purl.obolibrary.org/obo/FBbi_00000251"
+
+```
+
+and then have below something like 
+
+ ```
+   {
+        "@id": "http://purl.obolibrary.org/obo/NCBITaxon_4896",
+        "name": "Schizosaccharomyces pombe",
+    }
+```
+for each entry there. 
+
+This would be a `schema-on-read` kind of setup: the API/reader would need to have additional filters (taxa are mapped to about: AND have a NCBI Taxon) 
+__pycache__

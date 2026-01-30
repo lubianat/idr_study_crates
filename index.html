@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIDE Search RO-Crate Validator</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --error-color: #dc2626;
+            --warning-color: #d97706;
+            --success-color: #16a34a;
+            --info-color: #0891b2;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #1e293b;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #64748b;
+            font-size: 1.1rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 300px;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            font-size: 13px;
+            padding: 16px;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            resize: vertical;
+            transition: border-color 0.2s;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .button-group {
+            display: flex;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        button {
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+        }
+
+        .btn-secondary {
+            background: var(--border-color);
+            color: var(--text-color);
+        }
+
+        .btn-secondary:hover {
+            background: #cbd5e1;
+        }
+
+        #results {
+            display: none;
+        }
+
+        #results.show {
+            display: block;
+        }
+
+        .result-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .result-icon {
+            font-size: 2rem;
+        }
+
+        .result-title {
+            margin: 0;
+        }
+
+        .result-valid {
+            color: var(--success-color);
+        }
+
+        .result-invalid {
+            color: var(--error-color);
+        }
+
+        .message-section {
+            margin-bottom: 20px;
+        }
+
+        .message-section h3 {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .message-section.errors h3 {
+            color: var(--error-color);
+        }
+
+        .message-section.warnings h3 {
+            color: var(--warning-color);
+        }
+
+        .message-section.info h3 {
+            color: var(--info-color);
+        }
+
+        .message-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .message-list li {
+            padding: 10px 14px;
+            margin-bottom: 8px;
+            border-radius: 6px;
+            font-size: 0.95rem;
+        }
+
+        .errors .message-list li {
+            background: #fef2f2;
+            border-left: 4px solid var(--error-color);
+        }
+
+        .warnings .message-list li {
+            background: #fffbeb;
+            border-left: 4px solid var(--warning-color);
+        }
+
+        .info .message-list li {
+            background: #ecfeff;
+            border-left: 4px solid var(--info-color);
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 24px;
+            height: 24px;
+            padding: 0 8px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: white;
+        }
+
+        .badge-error {
+            background: var(--error-color);
+        }
+
+        .badge-warning {
+            background: var(--warning-color);
+        }
+
+        .badge-info {
+            background: var(--info-color);
+        }
+
+        .example-link {
+            color: var(--primary-color);
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .example-link:hover {
+            color: #1d4ed8;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--primary-color);
+        }
+
+        .loading {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 20px;
+            color: #64748b;
+        }
+
+        .loading.show {
+            display: flex;
+        }
+
+        .spinner {
+            width: 24px;
+            height: 24px;
+            border: 3px solid var(--border-color);
+            border-top-color: var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+    <!-- JSON-LD library for proper validation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsonld/8.3.2/jsonld.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔬 GIDE Search RO-Crate Validator</h1>
+            <p class="subtitle">Validate your RO-Crate JSON-LD against the GIDE Search Input Profile</p>
+        </header>
+
+        <div class="card">
+            <label for="rocrate-input">Paste your RO-Crate JSON-LD:</label>
+            <textarea id="rocrate-input" placeholder='{
+  "@context": "https://w3id.org/ro/crate/1.2/context",
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      ...
+    }
+  ]
+}'></textarea>
+            <div class="button-group">
+                <button class="btn-primary" id="validate-btn" onclick="validate()">✓ Validate</button>
+                <button class="btn-secondary" onclick="clearAll()">Clear</button>
+                <button class="btn-secondary" onclick="loadExample()">Load Example</button>
+            </div>
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <span>Validating JSON-LD...</span>
+            </div>
+        </div>
+
+        <div id="results" class="card">
+            <div class="result-header">
+                <span class="result-icon" id="result-icon"></span>
+                <h2 class="result-title" id="result-title"></h2>
+            </div>
+            <div id="errors-section" class="message-section errors"></div>
+            <div id="warnings-section" class="message-section warnings"></div>
+            <div id="info-section" class="message-section info"></div>
+        </div>
+
+        <footer>
+            <p>GIDE Search RO-Crate Profile Validator | 
+               <a href="https://w3id.org/ro/crate" target="_blank">RO-Crate Specification</a>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // GIDE Search RO-Crate Profile Validator (JavaScript port)
+        
+        const MIN_ROCRATE_VERSION = 1.2;
+
+        class ValidationResult {
+            constructor() {
+                this.valid = true;
+                this.errors = [];
+                this.warnings = [];
+                this.info = [];
+            }
+
+            addError(message) {
+                this.errors.push(message);
+                this.valid = false;
+            }
+
+            addWarning(message) {
+                this.warnings.push(message);
+            }
+
+            addInfo(message) {
+                this.info.push(message);
+            }
+
+            merge(other) {
+                if (!other.valid) {
+                    this.valid = false;
+                }
+                this.errors.push(...other.errors);
+                this.warnings.push(...other.warnings);
+                this.info.push(...other.info);
+            }
+        }
+
+        function hasType(entity, typeName) {
+            let entityType = entity['@type'] || [];
+            if (typeof entityType === 'string') {
+                entityType = [entityType];
+            }
+            const typeNames = Array.isArray(typeName) ? typeName : [typeName];
+            return typeNames.some(t => entityType.includes(t));
+        }
+
+        function validateContext(data) {
+            const result = new ValidationResult();
+            const context = data['@context'];
+
+            if (!context) {
+                result.addError('Missing @context');
+                return result;
+            }
+
+            let rocrate_context_found = false;
+            let rocrate_version = null;
+
+            const contexts = Array.isArray(context) ? context : [context];
+
+            for (const ctx of contexts) {
+                if (typeof ctx === 'string' && ctx.includes('w3id.org/ro/crate')) {
+                    rocrate_context_found = true;
+                    const match = ctx.match(/\/(\d+\.\d+)\//);
+                    if (match) {
+                        rocrate_version = match[1];
+                    }
+                    break;
+                }
+            }
+
+            if (!rocrate_context_found) {
+                result.addError('@context must include RO-Crate context (https://w3id.org/ro/crate/X.X/context)');
+            } else if (rocrate_version) {
+                const version = parseFloat(rocrate_version);
+                if (version < MIN_ROCRATE_VERSION) {
+                    result.addError(`RO-Crate version must be >= ${MIN_ROCRATE_VERSION} for detached crates (found ${rocrate_version})`);
+                } else {
+                    result.addInfo(`RO-Crate version ${rocrate_version} detected`);
+                }
+            }
+
+            return result;
+        }
+
+        function validateStructure(data) {
+            const result = new ValidationResult();
+            const graph = data['@graph'] || [];
+
+            if (!graph.length) {
+                result.addError('@graph is missing or empty');
+                return result;
+            }
+
+            // Build entity index
+            const entities = {};
+            for (const entity of graph) {
+                if (entity['@id']) {
+                    entities[entity['@id']] = entity;
+                }
+            }
+
+            // Find metadata descriptor
+            const metadataDescriptor = entities['ro-crate-metadata.json'];
+            if (!metadataDescriptor) {
+                result.addError("Missing RO-Crate Metadata Descriptor with @id 'ro-crate-metadata.json'");
+                return result;
+            }
+
+            if (!hasType(metadataDescriptor, 'CreativeWork')) {
+                result.addError("Metadata descriptor must have @type 'CreativeWork'");
+            }
+
+            // Check conformsTo
+            if (!metadataDescriptor.conformsTo) {
+                result.addError("Metadata descriptor missing 'conformsTo' property");
+            }
+
+            // Find root dataset
+            const about = metadataDescriptor.about;
+            if (!about) {
+                result.addError("Metadata descriptor missing 'about' property linking to root dataset");
+                return result;
+            }
+
+            const rootId = typeof about === 'object' ? about['@id'] : about;
+            if (!rootId) {
+                result.addError('Root dataset @id is missing or empty');
+                return result;
+            }
+
+            const rootDataset = entities[rootId];
+            if (!rootDataset) {
+                result.addError(`Root dataset with @id '${rootId}' not found in graph`);
+                return result;
+            }
+
+            if (!hasType(rootDataset, 'Dataset')) {
+                result.addError("Root dataset must have @type 'Dataset'");
+            }
+
+            // Check root dataset @id is absolute URL
+            if (!rootId.startsWith('http://') && !rootId.startsWith('https://')) {
+                result.addError(`Root dataset @id must be an absolute URL (found: ${rootId})`);
+            }
+
+            result.addInfo(`Found root dataset: ${rootId}`);
+
+            return result;
+        }
+
+        function validateTaxons(dataset, entities) {
+            const result = new ValidationResult();
+            let about = dataset.about || [];
+            about = Array.isArray(about) ? about : [about];
+
+            let taxonFound = false;
+            for (const ref of about) {
+                const refId = typeof ref === 'object' ? ref['@id'] : ref;
+                const entity = entities[refId];
+                if (entity && hasType(entity, 'Taxon')) {
+                    taxonFound = true;
+                    if (!entity.scientificName) {
+                        result.addError(`Taxon '${refId}' missing required field 'scientificName'`);
+                    }
+                    break;
+                }
+            }
+
+            if (!taxonFound) {
+                result.addError("Dataset 'about' must include at least one Taxon");
+            } else {
+                result.addInfo("Taxon found in dataset 'about'");
+            }
+
+            return result;
+        }
+
+        function validateImagingMethods(dataset, entities) {
+            const result = new ValidationResult();
+            let methods = dataset.measurementMethod || [];
+            methods = Array.isArray(methods) ? methods : [methods];
+
+            let definedTermFound = false;
+            for (const ref of methods) {
+                const refId = typeof ref === 'object' ? ref['@id'] : ref;
+                const entity = entities[refId];
+                if (entity && hasType(entity, 'DefinedTerm')) {
+                    definedTermFound = true;
+                    break;
+                }
+            }
+
+            if (!definedTermFound) {
+                result.addError("Dataset 'measurementMethod' must include at least one DefinedTerm for imaging method");
+            } else {
+                result.addInfo("Imaging method (DefinedTerm) found in measurementMethod");
+            }
+
+            return result;
+        }
+
+        function validateAuthors(dataset, entities) {
+            const result = new ValidationResult();
+            let authors = dataset.author || [];
+            authors = Array.isArray(authors) ? authors : [authors];
+
+            if (!authors.length) {
+                result.addError('Dataset must have at least one author');
+                return result;
+            }
+
+            let personFound = false;
+            for (const ref of authors) {
+                const refId = typeof ref === 'object' ? ref['@id'] : ref;
+                if (!refId) continue;
+                
+                const entity = entities[refId];
+                if (entity) {
+                    if (hasType(entity, 'Person')) {
+                        personFound = true;
+                        if (!refId.startsWith('https://orcid.org/')) {
+                            result.addWarning(`Author '${refId}' should preferably use an ORCID identifier`);
+                        }
+                    }
+                }
+            }
+
+            if (!personFound) {
+                result.addWarning('Dataset should have at least one Person as author');
+            } else {
+                result.addInfo('Person author found');
+            }
+
+            return result;
+        }
+
+        function validatePublisher(dataset, entities) {
+            const result = new ValidationResult();
+            const publisher = dataset.publisher;
+
+            if (!publisher) {
+                result.addError("Dataset must have a 'publisher' property");
+                return result;
+            }
+
+            const pubId = typeof publisher === 'object' ? publisher['@id'] : publisher;
+            const pubEntity = entities[pubId];
+
+            if (!pubEntity) {
+                result.addError(`Publisher entity '${pubId}' not found in graph`);
+            } else if (!hasType(pubEntity, ['Organization', 'Organisation'])) {
+                result.addError(`Publisher '${pubId}' must be of type Organization/Organisation`);
+            } else {
+                result.addInfo(`Publisher found: ${pubEntity.name || pubId}`);
+            }
+
+            return result;
+        }
+
+        function validateQuantitativeValues(dataset, entities) {
+            const result = new ValidationResult();
+            let size = dataset.size || [];
+            size = Array.isArray(size) ? size : (size ? [size] : []);
+
+            let hasFileCount = false;
+            let hasBytes = false;
+
+            for (const ref of size) {
+                const refId = typeof ref === 'object' ? ref['@id'] : ref;
+                const entity = entities[refId];
+
+                if (entity && hasType(entity, 'QuantitativeValue')) {
+                    const unitCode = entity.unitCode || '';
+                    const unitText = entity.unitText || '';
+
+                    if (unitCode.includes('UO_0000189')) {
+                        hasFileCount = true;
+                        if (unitText !== 'file count') {
+                            result.addWarning("File count QuantitativeValue should use unitText 'file count'");
+                        }
+                    }
+
+                    if (unitCode.includes('UO_0000233')) {
+                        hasBytes = true;
+                        if (unitText !== 'bytes') {
+                            result.addWarning("Bytes QuantitativeValue should use unitText 'bytes'");
+                        }
+                    }
+                }
+            }
+
+            if (size.length) {
+                if (!hasFileCount) {
+                    result.addWarning('Recommended: Include QuantitativeValue for file count (unitCode: UO_0000189)');
+                }
+                if (!hasBytes) {
+                    result.addWarning('Recommended: Include QuantitativeValue for total bytes (unitCode: UO_0000233)');
+                }
+            } else {
+                result.addWarning("Recommended: Include 'size' property with QuantitativeValues for file count and bytes");
+            }
+
+            return result;
+        }
+
+        function validateSemanticRequirements(data) {
+            const result = new ValidationResult();
+            const graph = data['@graph'] || [];
+
+            const entities = {};
+            for (const entity of graph) {
+                if (entity['@id']) {
+                    entities[entity['@id']] = entity;
+                }
+            }
+
+            const metadataDescriptor = entities['ro-crate-metadata.json'];
+            if (!metadataDescriptor) return result;
+
+            const about = metadataDescriptor.about;
+            const rootId = typeof about === 'object' ? about['@id'] : about;
+            const rootDataset = entities[rootId];
+
+            if (!rootDataset) return result;
+
+            result.merge(validateTaxons(rootDataset, entities));
+            result.merge(validateImagingMethods(rootDataset, entities));
+            result.merge(validateAuthors(rootDataset, entities));
+            result.merge(validatePublisher(rootDataset, entities));
+            result.merge(validateQuantitativeValues(rootDataset, entities));
+
+            return result;
+        }
+
+        function validateRequiredDatasetFields(data) {
+            const result = new ValidationResult();
+            const graph = data['@graph'] || [];
+
+            const entities = {};
+            for (const entity of graph) {
+                if (entity['@id']) {
+                    entities[entity['@id']] = entity;
+                }
+            }
+
+            const metadataDescriptor = entities['ro-crate-metadata.json'];
+            if (!metadataDescriptor) return result;
+
+            const about = metadataDescriptor.about;
+            const rootId = typeof about === 'object' ? about['@id'] : about;
+            const rootDataset = entities[rootId];
+
+            if (!rootDataset) return result;
+
+            const requiredFields = ['name', 'description', 'datePublished', 'license'];
+            for (const field of requiredFields) {
+                if (!rootDataset[field]) {
+                    result.addError(`Root dataset missing required field '${field}'`);
+                }
+            }
+
+            // Validate datePublished format
+            if (rootDataset.datePublished) {
+                const datePattern = /^\d{4}(-\d{2}(-\d{2})?)?$/;
+                if (!datePattern.test(rootDataset.datePublished)) {
+                    result.addError(`datePublished must be ISO 8601 format (YYYY, YYYY-MM, or YYYY-MM-DD), found: ${rootDataset.datePublished}`);
+                }
+            }
+
+            // Validate license is a URL
+            if (rootDataset.license && !rootDataset.license.startsWith('http')) {
+                result.addWarning('license should be a URL to the license description');
+            }
+
+            return result;
+        }
+
+        // Known valid types for RO-Crate and GIDE profile
+        const KNOWN_TYPES = new Set([
+            'CreativeWork', 'Dataset', 'Person', 'Organization', 'Organisation',
+            'Taxon', 'BioSample', 'DefinedTerm', 'LabProtocol', 'Grant',
+            'ScholarlyArticle', 'QuantitativeValue', 'PropertyValue',
+            'Place', 'GeoCoordinates', 'ImageObject', 'MediaObject', 'File',
+            'SoftwareApplication', 'SoftwareSourceCode', 'ComputerLanguage',
+            'Action', 'CreateAction', 'UpdateAction', 'ControlAction',
+            'HowTo', 'HowToStep', 'HowToDirection', 'WebPage', 'WebSite',
+            'ContactPoint', 'PostalAddress', 'MonetaryAmount', 'Duration'
+        ]);
+
+        async function validateJsonLdWithLibrary(data) {
+            const result = new ValidationResult();
+
+            // First, check for obvious typos in @type before expansion
+            const graph = data['@graph'] || [];
+            for (const entity of graph) {
+                if (!entity['@type']) continue;
+                
+                const types = Array.isArray(entity['@type']) ? entity['@type'] : [entity['@type']];
+                for (const t of types) {
+                    if (typeof t !== 'string') continue;
+                    
+                    // Skip if it's already a URI
+                    if (t.startsWith('http://') || t.startsWith('https://')) continue;
+                    
+                    // Check for common typos using Levenshtein-like detection
+                    if (!KNOWN_TYPES.has(t)) {
+                        // Find similar known types
+                        const similar = findSimilarType(t);
+                        if (similar) {
+                            result.addError(`Entity '${entity['@id']}' has unknown type '${t}' - did you mean '${similar}'?`);
+                        } else {
+                            // Check if it might be defined in the custom context
+                            const ctx = data['@context'];
+                            const isDefinedInContext = checkTypeInContext(t, ctx);
+                            if (!isDefinedInContext) {
+                                result.addWarning(`Entity '${entity['@id']}' has type '${t}' which is not a standard schema.org/RO-Crate type and not defined in @context`);
+                            }
+                        }
+                    }
+                }
+            }
+
+            try {
+                // Attempt to expand the JSON-LD document
+                // This will validate that the context can be processed and terms resolve
+                const expanded = await jsonld.expand(data);
+                
+                if (!expanded || expanded.length === 0) {
+                    result.addWarning('JSON-LD expansion produced empty result - document may have issues');
+                } else {
+                    result.addInfo(`JSON-LD expansion successful (${expanded.length} node(s))`);
+                }
+
+                // Check each expanded node for proper type URIs
+                for (const node of expanded) {
+                    const nodeId = node['@id'] || 'unknown';
+                    
+                    // Check @type was properly expanded to URIs
+                    if (node['@type']) {
+                        for (const typeUri of node['@type']) {
+                            // Types should be full URIs after expansion
+                            if (!typeUri.startsWith('http://') && !typeUri.startsWith('https://')) {
+                                result.addError(`Entity '${nodeId}' has type '${typeUri}' that did not expand to a valid URI - possible typo or undefined term`);
+                            }
+                        }
+                    }
+                }
+
+            } catch (e) {
+                // JSON-LD library throws detailed errors
+                result.addError(`JSON-LD validation error: ${e.message}`);
+                
+                // Try to provide more specific error info
+                if (e.details) {
+                    if (e.details.code) {
+                        result.addError(`JSON-LD error code: ${e.details.code}`);
+                    }
+                }
+            }
+
+            return result;
+        }
+
+        function findSimilarType(type) {
+            // Simple similarity check for common typos
+            for (const known of KNOWN_TYPES) {
+                if (levenshteinDistance(type.toLowerCase(), known.toLowerCase()) <= 2) {
+                    return known;
+                }
+            }
+            return null;
+        }
+
+        function levenshteinDistance(a, b) {
+            if (a.length === 0) return b.length;
+            if (b.length === 0) return a.length;
+
+            const matrix = [];
+
+            for (let i = 0; i <= b.length; i++) {
+                matrix[i] = [i];
+            }
+
+            for (let j = 0; j <= a.length; j++) {
+                matrix[0][j] = j;
+            }
+
+            for (let i = 1; i <= b.length; i++) {
+                for (let j = 1; j <= a.length; j++) {
+                    if (b.charAt(i - 1) === a.charAt(j - 1)) {
+                        matrix[i][j] = matrix[i - 1][j - 1];
+                    } else {
+                        matrix[i][j] = Math.min(
+                            matrix[i - 1][j - 1] + 1,
+                            matrix[i][j - 1] + 1,
+                            matrix[i - 1][j] + 1
+                        );
+                    }
+                }
+            }
+
+            return matrix[b.length][a.length];
+        }
+
+        function checkTypeInContext(type, context) {
+            if (!context) return false;
+            
+            const contexts = Array.isArray(context) ? context : [context];
+            
+            for (const ctx of contexts) {
+                if (typeof ctx === 'object' && ctx !== null) {
+                    if (ctx[type]) return true;
+                }
+            }
+            
+            return false;
+        }
+
+        function validateJsonLd(data) {
+            const result = new ValidationResult();
+
+            // Check basic JSON-LD structure
+            if (typeof data !== 'object' || data === null) {
+                result.addError('JSON-LD must be an object');
+                return result;
+            }
+
+            // Must have @context
+            if (!data['@context']) {
+                result.addError("JSON-LD missing required '@context' property");
+            }
+
+            // For RO-Crate, must have @graph
+            if (!data['@graph']) {
+                result.addError("JSON-LD missing '@graph' property (required for RO-Crate)");
+                return result;
+            }
+
+            if (!Array.isArray(data['@graph'])) {
+                result.addError("'@graph' must be an array");
+                return result;
+            }
+
+            // Build index of all entities
+            const entities = {};
+            const duplicateIds = [];
+            
+            for (const entity of data['@graph']) {
+                if (typeof entity !== 'object' || entity === null) {
+                    result.addError('Each entity in @graph must be an object');
+                    continue;
+                }
+
+                // Every entity must have @id
+                if (!entity['@id']) {
+                    result.addError(`Entity missing required '@id' property: ${JSON.stringify(entity).substring(0, 100)}...`);
+                    continue;
+                }
+
+                // Check for duplicate @ids
+                if (entities[entity['@id']]) {
+                    duplicateIds.push(entity['@id']);
+                }
+                entities[entity['@id']] = entity;
+
+                // Every entity must have @type
+                if (!entity['@type']) {
+                    result.addWarning(`Entity '${entity['@id']}' missing '@type' property`);
+                }
+
+                // Validate @type format
+                if (entity['@type']) {
+                    const types = Array.isArray(entity['@type']) ? entity['@type'] : [entity['@type']];
+                    for (const t of types) {
+                        if (typeof t !== 'string') {
+                            result.addError(`Entity '${entity['@id']}' has invalid @type (must be string or array of strings)`);
+                        }
+                    }
+                }
+
+                // Validate @id format (should be URI or blank node or local)
+                const id = entity['@id'];
+                if (typeof id !== 'string') {
+                    result.addError(`Entity @id must be a string, found: ${typeof id}`);
+                }
+            }
+
+            // Report duplicate IDs
+            if (duplicateIds.length > 0) {
+                result.addError(`Duplicate @id values found: ${duplicateIds.join(', ')}`);
+            }
+
+            // Validate references (@id references point to existing entities or valid URIs)
+            const unresolvedRefs = [];
+            for (const entity of data['@graph']) {
+                if (!entity['@id']) continue;
+                
+                for (const [key, value] of Object.entries(entity)) {
+                    if (key.startsWith('@')) continue; // Skip JSON-LD keywords
+                    
+                    const refs = Array.isArray(value) ? value : [value];
+                    for (const ref of refs) {
+                        if (ref && typeof ref === 'object' && ref['@id']) {
+                            const refId = ref['@id'];
+                            // Check if reference exists in graph or is an absolute URI
+                            if (!entities[refId] && 
+                                !refId.startsWith('http://') && 
+                                !refId.startsWith('https://') &&
+                                !refId.startsWith('_:')) {
+                                // Local reference that doesn't exist
+                                if (!unresolvedRefs.includes(refId)) {
+                                    unresolvedRefs.push(refId);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            if (unresolvedRefs.length > 0) {
+                result.addWarning(`Unresolved local references (not in @graph): ${unresolvedRefs.join(', ')}`);
+            }
+
+            // Validate @context format
+            if (data['@context']) {
+                const ctx = data['@context'];
+                if (typeof ctx !== 'string' && !Array.isArray(ctx) && typeof ctx !== 'object') {
+                    result.addError("'@context' must be a string, array, or object");
+                }
+                
+                if (Array.isArray(ctx)) {
+                    for (const item of ctx) {
+                        if (typeof item !== 'string' && typeof item !== 'object') {
+                            result.addError("Each item in '@context' array must be a string or object");
+                        }
+                    }
+                }
+            }
+
+            if (result.errors.length === 0) {
+                result.addInfo('JSON-LD structure validation passed');
+            }
+
+            return result;
+        }
+
+        async function validateROCrate(jsonString) {
+            const result = new ValidationResult();
+
+            // Parse JSON
+            let data;
+            try {
+                data = JSON.parse(jsonString);
+            } catch (e) {
+                result.addError(`Invalid JSON: ${e.message}`);
+                return result;
+            }
+
+            // Validate JSON-LD structure first (basic checks)
+            result.merge(validateJsonLd(data));
+            
+            // If basic JSON-LD validation failed, don't continue
+            if (result.errors.length > 0) {
+                return result;
+            }
+
+            // Use jsonld library for proper JSON-LD validation
+            const jsonldResult = await validateJsonLdWithLibrary(data);
+            result.merge(jsonldResult);
+
+            // If JSON-LD library validation found errors, still continue with other checks
+            // but report them
+
+            // Run all RO-Crate specific validations
+            result.merge(validateContext(data));
+            result.merge(validateStructure(data));
+            result.merge(validateRequiredDatasetFields(data));
+            result.merge(validateSemanticRequirements(data));
+
+            return result;
+        }
+
+        async function validate() {
+            const input = document.getElementById('rocrate-input').value.trim();
+            
+            if (!input) {
+                alert('Please paste your RO-Crate JSON-LD first.');
+                return;
+            }
+
+            // Show loading state
+            const loading = document.getElementById('loading');
+            const validateBtn = document.getElementById('validate-btn');
+            const resultsDiv = document.getElementById('results');
+            
+            loading.classList.add('show');
+            validateBtn.disabled = true;
+            resultsDiv.classList.remove('show');
+
+            try {
+                const result = await validateROCrate(input);
+                displayResults(result);
+            } catch (e) {
+                const result = new ValidationResult();
+                result.addError(`Unexpected error: ${e.message}`);
+                displayResults(result);
+            } finally {
+                loading.classList.remove('show');
+                validateBtn.disabled = false;
+            }
+        }
+
+        function displayResults(result) {
+            const resultsDiv = document.getElementById('results');
+            const icon = document.getElementById('result-icon');
+            const title = document.getElementById('result-title');
+            const errorsSection = document.getElementById('errors-section');
+            const warningsSection = document.getElementById('warnings-section');
+            const infoSection = document.getElementById('info-section');
+
+            resultsDiv.classList.add('show');
+
+            if (result.valid) {
+                icon.textContent = '✅';
+                title.textContent = 'Validation PASSED';
+                title.className = 'result-title result-valid';
+            } else {
+                icon.textContent = '❌';
+                title.textContent = 'Validation FAILED';
+                title.className = 'result-title result-invalid';
+            }
+
+            // Display errors
+            if (result.errors.length) {
+                errorsSection.innerHTML = `
+                    <h3>❌ Errors <span class="badge badge-error">${result.errors.length}</span></h3>
+                    <ul class="message-list">
+                        ${result.errors.map(e => `<li>${escapeHtml(e)}</li>`).join('')}
+                    </ul>
+                `;
+                errorsSection.style.display = 'block';
+            } else {
+                errorsSection.style.display = 'none';
+            }
+
+            // Display warnings
+            if (result.warnings.length) {
+                warningsSection.innerHTML = `
+                    <h3>⚠️ Warnings <span class="badge badge-warning">${result.warnings.length}</span></h3>
+                    <ul class="message-list">
+                        ${result.warnings.map(w => `<li>${escapeHtml(w)}</li>`).join('')}
+                    </ul>
+                `;
+                warningsSection.style.display = 'block';
+            } else {
+                warningsSection.style.display = 'none';
+            }
+
+            // Display info
+            if (result.info.length) {
+                infoSection.innerHTML = `
+                    <h3>ℹ️ Info <span class="badge badge-info">${result.info.length}</span></h3>
+                    <ul class="message-list">
+                        ${result.info.map(i => `<li>${escapeHtml(i)}</li>`).join('')}
+                    </ul>
+                `;
+                infoSection.style.display = 'block';
+            } else {
+                infoSection.style.display = 'none';
+            }
+
+            // Scroll to results
+            resultsDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function clearAll() {
+            document.getElementById('rocrate-input').value = '';
+            document.getElementById('results').classList.remove('show');
+        }
+
+        function loadExample() {
+            const example = {
+                "@context": "https://w3id.org/ro/crate/1.2/context",
+                "@graph": [
+                    {
+                        "@id": "ro-crate-metadata.json",
+                        "@type": "CreativeWork",
+                        "conformsTo": {"@id": "https://w3id.org/ro/crate/1.2"},
+                        "about": {"@id": "https://idr.openmicroscopy.org/webclient/?show=screen-1"}
+                    },
+                    {
+                        "@id": "https://idr.openmicroscopy.org/webclient/?show=screen-1",
+                        "@type": "Dataset",
+                        "name": "Example Imaging Dataset",
+                        "description": "An example dataset for validation testing",
+                        "datePublished": "2024-01-15",
+                        "license": "https://creativecommons.org/licenses/by/4.0/",
+                        "author": [{"@id": "https://orcid.org/0000-0001-2345-6789"}],
+                        "publisher": {"@id": "#idr"},
+                        "about": [{"@id": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606"}],
+                        "measurementMethod": [{"@id": "http://purl.obolibrary.org/obo/FBbi_00000246"}]
+                    },
+                    {
+                        "@id": "https://orcid.org/0000-0001-2345-6789",
+                        "@type": "Person",
+                        "name": "Jane Scientist"
+                    },
+                    {
+                        "@id": "#idr",
+                        "@type": "Organization",
+                        "name": "Image Data Resource"
+                    },
+                    {
+                        "@id": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606",
+                        "@type": "Taxon",
+                        "scientificName": "Homo sapiens",
+                        "vernacularName": "Human"
+                    },
+                    {
+                        "@id": "http://purl.obolibrary.org/obo/FBbi_00000246",
+                        "@type": "DefinedTerm",
+                        "name": "confocal microscopy"
+                    }
+                ]
+            };
+
+            document.getElementById('rocrate-input').value = JSON.stringify(example, null, 2);
+        }
+    </script>
+</body>
+</html>
