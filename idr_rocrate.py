@@ -586,9 +586,7 @@ class ROCrateEncoder:
                     )
                     protocol["measurementTechnique"] = [{"@id": type_id}]
 
-            # Fallback to imaging method if no protocol type term
-            if "measurementTechnique" not in protocol:
-                protocol["measurementTechnique"] = [{"@id": imaging_id}]
+            # No fallback - leave measurementTechnique empty if no EFO term found
 
             graph.add(protocol)
             protocol_refs.append({"@id": protocol_id})
