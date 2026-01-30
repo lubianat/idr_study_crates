@@ -40,7 +40,9 @@ class IDRMetadata:
     def rows_for_key(self, key: str) -> List[IDRRow]:
         return [row for row in self.rows if row.key == key]
 
-    def first_value(self, key: str, rows: Optional[List[IDRRow]] = None) -> Optional[str]:
+    def first_value(
+        self, key: str, rows: Optional[List[IDRRow]] = None
+    ) -> Optional[str]:
         for row in rows or self.rows:
             if row.key != key:
                 continue
@@ -49,7 +51,9 @@ class IDRMetadata:
                     return value.strip()
         return None
 
-    def values_for_key(self, key: str, rows: Optional[List[IDRRow]] = None) -> List[str]:
+    def values_for_key(
+        self, key: str, rows: Optional[List[IDRRow]] = None
+    ) -> List[str]:
         for row in rows or self.rows:
             if row.key == key:
                 return row.values
@@ -76,10 +80,19 @@ class IDRMetadata:
 
 
 class IDRDecoder:
-    def __init__(self, encoding: str = "utf-8", fallback_encodings: Optional[List[str]] = None) -> None:
+    def __init__(
+        self, encoding: str = "utf-8", fallback_encodings: Optional[List[str]] = None
+    ) -> None:
         self.encoding = encoding
-        fallback_encodings = fallback_encodings or ["utf-8", "utf-8-sig", "cp1252", "latin-1"]
-        self.fallback_encodings = [encoding] + [enc for enc in fallback_encodings if enc != encoding]
+        fallback_encodings = fallback_encodings or [
+            "utf-8",
+            "utf-8-sig",
+            "cp1252",
+            "latin-1",
+        ]
+        self.fallback_encodings = [encoding] + [
+            enc for enc in fallback_encodings if enc != encoding
+        ]
 
     def decode(self, path: Path) -> IDRMetadata:
         raw_bytes = path.read_bytes()
@@ -118,7 +131,9 @@ class IDRDecoder:
             values = trim_trailing_empty(values)
             if not values:
                 continue
-            rows.append(IDRRow(key=key, values=values, line_no=line_no, section=current_section))
+            rows.append(
+                IDRRow(key=key, values=values, line_no=line_no, section=current_section)
+            )
         return rows
 
 
@@ -161,285 +176,439 @@ class GraphBuilder:
 
 
 class ROCrateEncoder:
+    """Encoder that generates GIDE-compliant RO-Crate from IDR metadata."""
+
+    def _load_gide_context(self) -> dict:
+        """Load the GIDE context from the JSON-LD file."""
+        context_path = Path(__file__).resolve().parent / "gide-search-context.jsonld"
+        if context_path.exists():
+            try:
+                data = json.loads(context_path.read_text(encoding="utf-8"))
+                if isinstance(data, dict) and "@context" in data:
+                    return data["@context"]
+                return data if isinstance(data, dict) else {}
+            except (OSError, json.JSONDecodeError):
+                pass
+        # Fallback GIDE context
+        return {
+            "bia": "https://bioimage-archive.org/ro-crate/",
+            "obo": "http://purl.obolibrary.org/obo/",
+            "dwc": "http://rs.tdwg.org/dwc/terms/",
+            "dwciri": "http://rs.tdwg.org/dwc/iri/",
+            "bao": "http://www.bioassayontology.org/bao#",
+            "vernacularName": {"@id": "dwc:vernacularName"},
+            "scientificName": {"@id": "dwc:scientificName"},
+            "Taxon": {"@id": "dwc:Taxon"},
+            "hasCellLine": {"@id": "bao:BAO_0002004"},
+            "measurementMethod": {"@id": "dwciri:measurementMethod", "@type": "@id"},
+            "taxonomicRange": {
+                "@id": "http://schema.org/taxonomicRange",
+                "@type": "@id",
+            },
+            "seeAlso": {"@id": "rdf:seeAlso", "@type": "@id"},
+            "BioSample": {"@id": "http://schema.org/BioSample"},
+            "LabProtocol": {"@id": "http://schema.org/LabProtocol"},
+            "labEquipment": {"@id": "http://schema.org/labEquipment"},
+        }
+
     def encode(self, metadata: IDRMetadata) -> dict:
         graph = GraphBuilder()
+        gide_context = self._load_gide_context()
         context = [
             "https://w3id.org/ro/crate/1.2/context",
-            {
-                "text": "http://schema.org/text",
-                "additionalProperty": "http://schema.org/additionalProperty",
-                "value": "http://schema.org/value",
-                "propertyID": "http://schema.org/propertyID",
-                "termCode": "http://schema.org/termCode",
-                "inDefinedTermSet": "http://schema.org/inDefinedTermSet",
-                "measurementTechnique": "http://schema.org/measurementTechnique",
-                "category": "http://schema.org/category",
-                "studyType": "http://schema.org/additionalType",
-                "screenImagingMethod": "http://schema.org/measurementTechnique",
-                "screenTechnologyType": "http://schema.org/additionalType",
-                "screenType": "http://schema.org/category",
-                "experimentImagingMethod": "http://schema.org/measurementTechnique",
-            },
+            gide_context,
         ]
 
         study_rows, _ = metadata.split_study_rows()
         term_sources = metadata.term_source_map()
-        term_set_map = build_term_set_map(term_sources)
-        add_term_sets(graph, term_set_map)
         accession = metadata.first_value("Comment[IDR Study Accession]", study_rows)
         study_external_url = metadata.first_value("Study External URL", study_rows)
         root_id = build_root_id(accession, study_external_url)
+
+        # RO-Crate Metadata Descriptor
         graph.add(
             {
                 "@id": "ro-crate-metadata.json",
                 "@type": "CreativeWork",
                 "conformsTo": {"@id": "https://w3id.org/ro/crate/1.2"},
                 "about": {"@id": root_id},
-                "description": "RO-Crate metadata generated from IDR metadata",
             }
         )
 
-        root = {
-            "@id": root_id,
-            "@type": "Dataset",
-        }
-        root["conformsTo"] = {"@id": IDR_PROFILE_ID}
-
+        # Publisher entity
         graph.add(
             {
-                "@id": IDR_PROFILE_ID,
-                "@type": ["CreativeWork", "Profile"],
-                "name": IDR_PROFILE_NAME,
-                "version": IDR_PROFILE_VERSION,
-                "url": IDR_PROFILE_ID,
+                "@id": "https://idr.openmicroscopy.org/",
+                "@type": "Organization",
+                "name": "Image Data Resource",
+                "url": "https://idr.openmicroscopy.org/",
             }
         )
 
+        # Parse authors
+        people = parse_people(study_rows)
+        for person in people:
+            graph.add(person)
+
+        # Publication entity
+        publication = self._build_publication_gide(study_rows)
+        if publication:
+            graph.add(publication)
+
+        # Taxon entities from Study Organism
+        taxon_refs = []
+        organism_values = metadata.values_for_key("Study Organism", study_rows)
+        organism_accessions = metadata.values_for_key(
+            "Study Organism Term Accession", study_rows
+        )
+        for idx, org_name in enumerate(organism_values):
+            if not org_name.strip():
+                continue
+            accession_value = (
+                organism_accessions[idx] if idx < len(organism_accessions) else ""
+            )
+            taxon_id = self._build_taxon_id(accession_value, org_name, term_sources)
+            taxon_entity = {
+                "@id": taxon_id,
+                "@type": "Taxon",
+                "scientificName": org_name.strip(),
+            }
+            graph.add(taxon_entity)
+            taxon_refs.append({"@id": taxon_id})
+
+        # Process screens and experiments
+        screen_blocks = find_blocks(
+            metadata.rows, "Screen Number", stop_keys=["Experiment Number"]
+        )
+        experiment_blocks = find_blocks(
+            metadata.rows, "Experiment Number", stop_keys=["Screen Number"]
+        )
+
+        # Build BioSamples
+        biosample_refs = []
+        all_protocol_refs = []
+        all_imaging_refs = []
+
+        for idx, block in enumerate(screen_blocks, start=1):
+            sample_type = first_value_in_block(block, "Screen Sample Type") or "cell"
+            description = first_value_in_block(block, "Screen Description") or ""
+            biosample_id = f"#screen-biosample-{idx}"
+            biosample = {
+                "@id": biosample_id,
+                "@type": "BioSample",
+                "name": sample_type,
+                "description": description,
+            }
+            if taxon_refs:
+                biosample["taxonomicRange"] = taxon_refs
+            graph.add(biosample)
+            biosample_refs.append({"@id": biosample_id})
+
+            # Imaging method
+            imaging_method = first_value_in_block(block, "Screen Imaging Method")
+            imaging_accession = first_value_in_block(
+                block, "Screen Imaging Method Term Accession"
+            )
+            if imaging_method or imaging_accession:
+                imaging_id = self._build_term_id_simple(imaging_accession, term_sources)
+                imaging_entity = {
+                    "@id": imaging_id,
+                    "@type": "DefinedTerm",
+                    "name": imaging_method or imaging_accession,
+                }
+                graph.add(imaging_entity)
+                all_imaging_refs.append({"@id": imaging_id})
+
+                # Build LabProtocols for this screen
+                protocol_refs = self._build_lab_protocols(
+                    block, idx, imaging_id, graph, "screen"
+                )
+                all_protocol_refs.extend(protocol_refs)
+
+        for idx, block in enumerate(experiment_blocks, start=1):
+            sample_type = (
+                first_value_in_block(block, "Experiment Sample Type") or "tissue"
+            )
+            description = first_value_in_block(block, "Experiment Description") or ""
+            biosample_id = f"#experiment-biosample-{idx}"
+            biosample = {
+                "@id": biosample_id,
+                "@type": "BioSample",
+                "name": sample_type,
+                "description": description,
+            }
+            if taxon_refs:
+                biosample["taxonomicRange"] = taxon_refs
+            graph.add(biosample)
+            biosample_refs.append({"@id": biosample_id})
+
+            # Imaging method
+            imaging_method = first_value_in_block(block, "Experiment Imaging Method")
+            imaging_accession = first_value_in_block(
+                block, "Experiment Imaging Method Term Accession"
+            )
+            if imaging_method or imaging_accession:
+                imaging_id = self._build_term_id_simple(imaging_accession, term_sources)
+                imaging_entity = {
+                    "@id": imaging_id,
+                    "@type": "DefinedTerm",
+                    "name": imaging_method or imaging_accession,
+                }
+                graph.add(imaging_entity)
+                all_imaging_refs.append({"@id": imaging_id})
+
+                # Build LabProtocols for this experiment
+                protocol_refs = self._build_lab_protocols(
+                    block, idx, imaging_id, graph, "experiment"
+                )
+                all_protocol_refs.extend(protocol_refs)
+
+        # Dataset size
+        size_refs = self._build_dataset_size(screen_blocks, experiment_blocks, graph)
+
+        # Root Dataset entity
+        root = {"@id": root_id, "@type": "Dataset"}
+
+        # name
         title = metadata.first_value("Study Title", study_rows)
-        if title:
-            root["name"] = title
+        root["name"] = title or accession or root_id
+
+        # description
         description = metadata.first_value("Study Description", study_rows)
-        if description:
-            root["description"] = description
+        root["description"] = description or title or root_id
+
+        # datePublished
         pub_date = metadata.first_value("Study Public Release Date", study_rows)
         if pub_date:
             root["datePublished"] = pub_date
 
-        keywords = [v for v in metadata.values_for_key("Study Key Words", study_rows) if v.strip()]
-        if keywords:
-            root["keywords"] = ", ".join(keywords)
-
-        if study_external_url:
-            root["url"] = normalize_url(study_external_url)
-
-        identifiers: List[str] = []
-        if accession:
-            identifiers.append(accession)
-        data_doi = metadata.first_value("Study Data DOI", study_rows)
-        study_doi = metadata.first_value("Study DOI", study_rows)
-        study_doi_url = normalize_doi(study_doi) if study_doi else None
-        data_doi_url = normalize_doi(data_doi) if data_doi else None
-        if data_doi_url:
-            identifiers.append(data_doi_url)
-            root["cite-as"] = data_doi_url
-            if data_doi_url != study_doi_url:
-                graph.add(
-                    {
-                        "@id": data_doi_url,
-                        "@type": "PropertyValue",
-                        "propertyID": "https://registry.identifiers.org/registry/doi",
-                        "value": f"doi:{data_doi_url.replace('https://doi.org/', '')}",
-                        "url": data_doi_url,
-                    }
-                )
-        if identifiers:
-            root["identifier"] = identifiers if len(identifiers) > 1 else identifiers[0]
-
-        license_name = metadata.first_value("Study License", study_rows)
+        # license
         license_url = metadata.first_value("Study License URL", study_rows)
-        if license_name or license_url:
-            license_id = normalize_url(license_url) if license_url else "#license"
-            license_entity = {
-                "@id": license_id,
-                "@type": "CreativeWork",
-                "name": license_name or license_id,
-            }
-            if license_url:
-                license_entity["url"] = normalize_url(license_url)
-            graph.add(license_entity)
-            root["license"] = {"@id": license_id}
+        if license_url:
+            root["license"] = normalize_url(license_url)
 
-        copyright_holder = metadata.first_value("Study Copyright", study_rows)
-        if copyright_holder:
-            root["copyrightHolder"] = copyright_holder
+        # identifier
+        if accession:
+            root["identifier"] = accession
 
-        study_type = metadata.first_value("Study Type", study_rows)
-        study_type_accession = metadata.first_value("Study Type Term Accession", study_rows)
-        study_type_source = metadata.first_value("Study Type Term Source REF", study_rows)
-        if study_type or study_type_accession:
-            term_id, term_entity = build_defined_term(
-                study_type,
-                study_type_accession,
-                study_type_source,
-                term_sources,
-                term_set_map,
-                fallback_prefix="study-type",
-            )
-            graph.add(term_entity)
-            root["studyType"] = {"@id": term_id}
+        # publisher
+        root["publisher"] = {"@id": "https://idr.openmicroscopy.org/"}
 
-        organism_values = metadata.values_for_key("Study Organism", study_rows)
-        organism_accessions = metadata.values_for_key("Study Organism Term Accession", study_rows)
-        organism_source = metadata.first_value("Study Organism Term Source REF", study_rows)
-        organism_ids = []
-        for idx, org_name in enumerate(organism_values):
-            if not org_name.strip():
-                continue
-            accession_value = organism_accessions[idx] if idx < len(organism_accessions) else ""
-            term_id, term_entity = build_defined_term(
-                org_name,
-                accession_value,
-                organism_source,
-                term_sources,
-                term_set_map,
-                fallback_prefix="organism",
-            )
-            graph.add(term_entity)
-            organism_ids.append({"@id": term_id})
-        if organism_ids:
-            root["about"] = organism_ids if len(organism_ids) > 1 else organism_ids[0]
-
-        people = parse_people(study_rows)
+        # author
         if people:
             root["author"] = [{"@id": person["@id"]} for person in people]
-            for person in people:
-                graph.add(person)
 
-        publication = build_publication(study_rows)
+        # seeAlso (publication)
         if publication:
-            root["citation"] = {"@id": publication["@id"]}
-            graph.add(publication)
+            root["seeAlso"] = [{"@id": publication["@id"]}]
 
-        study_author_list = metadata.first_value("Study Author List", study_rows)
-        if study_author_list:
-            root["creditText"] = study_author_list
+        # about (BioSamples and Taxa)
+        about_refs = biosample_refs + taxon_refs
+        if about_refs:
+            root["about"] = about_refs
 
-        root["additionalProperty"] = rows_to_property_values(study_rows)
+        # measurementMethod (LabProtocols and imaging methods)
+        measurement_refs = all_protocol_refs + all_imaging_refs
+        measurement_refs = self._dedupe_refs(measurement_refs)
+        if measurement_refs:
+            root["measurementMethod"] = measurement_refs
 
-        screen_blocks = find_blocks(metadata.rows, "Screen Number", stop_keys=["Experiment Number"])
-        screen_ids = []
-        for idx, block in enumerate(screen_blocks, start=1):
-            screen_number = first_value_in_block(block, "Screen Number") or str(idx)
-            screen_name = first_value_in_block(block, "Comment[IDR Screen Name]") or f"Screen {screen_number}"
-            screen_description = first_value_in_block(block, "Screen Description")
-            screen_id = f"#screen-{screen_number}"
-            screen = {
-                "@id": screen_id,
-                "@type": "Dataset",
-                "name": screen_name,
-                "additionalProperty": rows_to_property_values(block),
-            }
-            if screen_description:
-                screen["description"] = screen_description
+        # thumbnailUrl - get all values from the row, not just the first
+        thumbnails = []
+        for block in screen_blocks:
+            for row in block:
+                if row.key == "Screen Example Images":
+                    for val in row.values:
+                        thumbnails.extend(self._extract_urls(val))
+        for block in experiment_blocks:
+            for row in block:
+                if row.key == "Experiment Example Images":
+                    for val in row.values:
+                        thumbnails.extend(self._extract_urls(val))
+        if thumbnails:
+            root["thumbnailUrl"] = thumbnails
 
-            imaging_method = first_value_in_block(block, "Screen Imaging Method")
-            imaging_accession = first_value_in_block(block, "Screen Imaging Method Term Accession")
-            imaging_source = first_value_in_block(block, "Screen Imaging Method Term Source REF")
-            if imaging_method or imaging_accession:
-                term_id, term_entity = build_defined_term(
-                    imaging_method,
-                    imaging_accession,
-                    imaging_source,
-                    term_sources,
-                    term_set_map,
-                    fallback_prefix="screen-imaging",
-                )
-                graph.add(term_entity)
-                screen["screenImagingMethod"] = {"@id": term_id}
-
-            technology_type = first_value_in_block(block, "Screen Technology Type") or first_value_in_block(
-                block, "Screen Technology"
-            )
-            technology_accession = first_value_in_block(block, "Screen Technology Type Term Accession") or first_value_in_block(
-                block, "Screen Technology Term Accession"
-            )
-            technology_source = first_value_in_block(block, "Screen Technology Type Term Source REF") or first_value_in_block(
-                block, "Screen Technology Term Source REF"
-            )
-            if technology_type or technology_accession:
-                term_id, term_entity = build_defined_term(
-                    technology_type,
-                    technology_accession,
-                    technology_source,
-                    term_sources,
-                    term_set_map,
-                    fallback_prefix="screen-technology",
-                )
-                graph.add(term_entity)
-                screen["screenTechnologyType"] = {"@id": term_id}
-
-            screen_type = first_value_in_block(block, "Screen Type")
-            screen_type_accession = first_value_in_block(block, "Screen Type Term Accession")
-            screen_type_source = first_value_in_block(block, "Screen Type Term Source REF")
-            if screen_type or screen_type_accession:
-                term_id, term_entity = build_defined_term(
-                    screen_type,
-                    screen_type_accession,
-                    screen_type_source,
-                    term_sources,
-                    term_set_map,
-                    fallback_prefix="screen-type",
-                )
-                graph.add(term_entity)
-                screen["screenType"] = {"@id": term_id}
-
-            graph.add(screen)
-            screen_ids.append({"@id": screen_id})
-
-        experiment_blocks = find_blocks(metadata.rows, "Experiment Number", stop_keys=["Screen Number"])
-        experiment_ids = []
-        for idx, block in enumerate(experiment_blocks, start=1):
-            experiment_number = first_value_in_block(block, "Experiment Number") or str(idx)
-            experiment_name = first_value_in_block(block, "Comment[IDR Experiment Name]") or f"Experiment {experiment_number}"
-            experiment_description = first_value_in_block(block, "Experiment Description")
-            experiment_id = f"#experiment-{experiment_number}"
-            experiment = {
-                "@id": experiment_id,
-                "@type": "Dataset",
-                "name": experiment_name,
-                "additionalProperty": rows_to_property_values(block),
-            }
-            if experiment_description:
-                experiment["description"] = experiment_description
-
-            imaging_method = first_value_in_block(block, "Experiment Imaging Method")
-            imaging_accession = first_value_in_block(block, "Experiment Imaging Method Term Accession")
-            imaging_source = first_value_in_block(block, "Experiment Imaging Method Term Source REF")
-            if imaging_method or imaging_accession:
-                term_id, term_entity = build_defined_term(
-                    imaging_method,
-                    imaging_accession,
-                    imaging_source,
-                    term_sources,
-                    term_set_map,
-                    fallback_prefix="experiment-imaging",
-                )
-                graph.add(term_entity)
-                experiment["experimentImagingMethod"] = {"@id": term_id}
-
-            graph.add(experiment)
-            experiment_ids.append({"@id": experiment_id})
-
-        has_part = []
-        if screen_ids:
-            has_part.extend(screen_ids)
-        if experiment_ids:
-            has_part.extend(experiment_ids)
-        if has_part:
-            root["hasPart"] = has_part
+        # size
+        if size_refs:
+            root["size"] = size_refs
 
         graph.add(root)
         return {"@context": context, "@graph": graph.to_list()}
+
+    def _build_publication_gide(self, study_rows: List[IDRRow]) -> Optional[dict]:
+        """Build a ScholarlyArticle entity for GIDE format."""
+        doi = first_value(study_rows, "Study DOI")
+        title = first_value(study_rows, "Study Publication Title")
+
+        if not doi:
+            return None
+
+        pub_id = normalize_doi(doi)
+        return {
+            "@id": pub_id,
+            "@type": "ScholarlyArticle",
+            "name": title or pub_id,
+        }
+
+    def _build_taxon_id(
+        self, accession: str, name: str, term_sources: Dict[str, str]
+    ) -> str:
+        """Build a taxon ID from NCBITaxon accession."""
+        accession = accession.strip() if accession else ""
+        if accession:
+            # Handle NCBITaxon format
+            match = re.search(
+                r"(?:NCBITaxon[_:]?)(\d+)", accession, flags=re.IGNORECASE
+            )
+            if match:
+                return f"http://purl.obolibrary.org/obo/NCBITaxon_{match.group(1)}"
+            if accession.isdigit():
+                return f"http://purl.obolibrary.org/obo/NCBITaxon_{accession}"
+            if re.match(r"^https?://", accession):
+                return accession
+        # Fallback to fragment ID
+        return f"#taxon-{slugify(name)}"
+
+    def _build_term_id_simple(
+        self, accession: Optional[str], term_sources: Dict[str, str]
+    ) -> str:
+        """Build a term ID from an ontology accession."""
+        if not accession:
+            return "#term"
+        accession = accession.strip()
+        if re.match(r"^https?://", accession):
+            return accession
+        # Try to resolve common ontology prefixes
+        match = re.match(r"^([A-Za-z]+)[_:](\d+)$", accession)
+        if match:
+            prefix = match.group(1).upper()
+            number = match.group(2)
+            return f"http://purl.obolibrary.org/obo/{prefix}_{number}"
+        return f"#{accession}"
+
+    def _build_lab_protocols(
+        self,
+        block: List[IDRRow],
+        block_idx: int,
+        imaging_id: str,
+        graph: GraphBuilder,
+        prefix: str,
+    ) -> List[dict]:
+        """Build LabProtocol entities from protocol fields in a block."""
+        protocol_refs = []
+
+        # Get protocol names and descriptions from multi-valued fields
+        protocol_names = []
+        protocol_descriptions = []
+        for row in block:
+            if row.key == "Protocol Name":
+                protocol_names = [v.strip() for v in row.values if v.strip()]
+            elif row.key == "Protocol Description":
+                protocol_descriptions = [v.strip() for v in row.values if v.strip()]
+
+        # Create LabProtocol entities for each protocol
+        for protocol_counter, name in enumerate(protocol_names, start=1):
+            description = (
+                protocol_descriptions[protocol_counter - 1]
+                if protocol_counter - 1 < len(protocol_descriptions)
+                else ""
+            )
+            protocol_id = f"#{prefix}-protocol-{block_idx}-{protocol_counter}"
+            protocol = {
+                "@id": protocol_id,
+                "@type": "LabProtocol",
+                "name": name,
+                "description": description or name,
+                "measurementTechnique": [{"@id": imaging_id}],
+            }
+            graph.add(protocol)
+            protocol_refs.append({"@id": protocol_id})
+
+        return protocol_refs
+
+    def _build_dataset_size(
+        self,
+        screen_blocks: List[List[IDRRow]],
+        experiment_blocks: List[List[IDRRow]],
+        graph: GraphBuilder,
+    ) -> List[dict]:
+        """Build QuantitativeValue entities for dataset size."""
+        size_refs = []
+
+        # Look for Screen Size or Experiment Size fields
+        total_tb = 0.0
+        total_images = 0
+
+        for block in screen_blocks + experiment_blocks:
+            for row in block:
+                # Parse "Screen Size" or "Experiment Size" fields
+                if row.key in ("Screen Size", "Experiment Size"):
+                    for val in row.values:
+                        val = val.strip()
+                        # Parse "Total Tb: 10.06" format
+                        tb_match = re.search(
+                            r"Total\s+Tb:\s*([0-9.]+)", val, re.IGNORECASE
+                        )
+                        if tb_match:
+                            total_tb += float(tb_match.group(1))
+                        # Parse "5D Images: 109728" format
+                        images_match = re.search(
+                            r"5D\s+Images:\s*(\d+)", val, re.IGNORECASE
+                        )
+                        if images_match:
+                            total_images += int(images_match.group(1))
+
+        # Convert TB to bytes (1 TB = 1099511627776 bytes)
+        if total_tb > 0:
+            total_bytes = int(total_tb * 1099511627776)
+            size_id = "#total-dataset-size"
+            graph.add(
+                {
+                    "@id": size_id,
+                    "@type": "QuantitativeValue",
+                    "value": total_bytes,
+                    "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+                    "unitText": "bytes",
+                }
+            )
+            size_refs.append({"@id": size_id})
+
+        if total_images > 0:
+            count_id = "#file-count"
+            graph.add(
+                {
+                    "@id": count_id,
+                    "@type": "QuantitativeValue",
+                    "value": total_images,
+                    "unitCode": "http://purl.obolibrary.org/obo/UO_0000189",
+                    "unitText": "file count",
+                }
+            )
+            size_refs.append({"@id": count_id})
+
+        return size_refs
+
+    def _extract_urls(self, value: str) -> List[str]:
+        """Extract URLs from a string value."""
+        urls = []
+        for token in re.split(r"\s+", value.strip()):
+            if not token:
+                continue
+            candidate = token.strip(",;")
+            if candidate.startswith(("http://", "https://", "www.")):
+                urls.append(normalize_url(candidate))
+        return urls
+
+    def _dedupe_refs(self, refs: List[dict]) -> List[dict]:
+        """Remove duplicate references by @id."""
+        seen = set()
+        result = []
+        for ref in refs:
+            ref_id = ref.get("@id")
+            if ref_id and ref_id not in seen:
+                seen.add(ref_id)
+                result.append(ref)
+        return result
 
 
 class ROCrateDecoder:
@@ -456,22 +625,36 @@ class ROCrateDecoder:
         if not isinstance(graph, list):
             raise ValueError("RO-Crate @graph must be a list")
 
-        entity_map = {entity.get("@id"): entity for entity in graph if isinstance(entity, dict) and entity.get("@id")}
+        entity_map = {
+            entity.get("@id"): entity
+            for entity in graph
+            if isinstance(entity, dict) and entity.get("@id")
+        }
         root_entity = find_root_entity(entity_map)
 
         rows: List[IDRRow] = []
         if root_entity:
-            rows.extend(rows_from_property_values(root_entity.get("additionalProperty"), entity_map))
+            rows.extend(
+                rows_from_property_values(
+                    root_entity.get("additionalProperty"), entity_map
+                )
+            )
             for part_ref in as_list(root_entity.get("hasPart")):
                 part_entity = resolve_entity(part_ref, entity_map)
                 if part_entity:
-                    rows.extend(rows_from_property_values(part_entity.get("additionalProperty"), entity_map))
+                    rows.extend(
+                        rows_from_property_values(
+                            part_entity.get("additionalProperty"), entity_map
+                        )
+                    )
 
         raw_text = IDREncoder().encode_rows(rows)
         return IDRMetadata(raw_text=raw_text, rows=rows)
 
 
-def rows_to_property_values(rows: Iterable[IDRRow], exclude_keys: Optional[set] = None) -> List[dict]:
+def rows_to_property_values(
+    rows: Iterable[IDRRow], exclude_keys: Optional[set] = None
+) -> List[dict]:
     props = []
     for row in rows:
         if not row.key:
@@ -544,7 +727,9 @@ def build_defined_term(
     return term_id, term_entity
 
 
-def get_term_set_id(term_set_map: Dict[str, str], source_ref: Optional[str]) -> Optional[str]:
+def get_term_set_id(
+    term_set_map: Dict[str, str], source_ref: Optional[str]
+) -> Optional[str]:
     if not source_ref:
         return None
     key = source_ref.strip()
@@ -561,9 +746,9 @@ def get_term_set_id(term_set_map: Dict[str, str], source_ref: Optional[str]) -> 
     return None
 
 
-
-
-def rows_from_property_values(properties: Optional[Iterable], entity_map: Dict[str, dict]) -> List[IDRRow]:
+def rows_from_property_values(
+    properties: Optional[Iterable], entity_map: Dict[str, dict]
+) -> List[IDRRow]:
     rows: List[IDRRow] = []
     for prop in as_list(properties):
         prop_entity = prop
@@ -624,12 +809,13 @@ def normalize_doi(value: str) -> str:
     if not value:
         return value
     value = value.replace("doi:", "").strip()
+    # Handle dx.doi.org first (before the general doi.org check)
+    if "dx.doi.org" in value:
+        value = value.replace("http://dx.doi.org/", "https://doi.org/")
+        value = value.replace("https://dx.doi.org/", "https://doi.org/")
+        return value
     if "doi.org" in value:
         return value.replace("http://", "https://")
-    if value.startswith("http://dx.doi.org/"):
-        return value.replace("http://dx.doi.org/", "https://doi.org/")
-    if value.startswith("https://dx.doi.org/"):
-        return value.replace("https://dx.doi.org/", "https://doi.org/")
     if re.match(r"^https?://", value):
         return value
     return f"https://doi.org/{value}"
@@ -645,7 +831,9 @@ def build_root_id(accession: Optional[str], external_url: Optional[str]) -> str:
     return "./"
 
 
-def get_term_source_uri(term_sources: Dict[str, str], source_ref: Optional[str]) -> Optional[str]:
+def get_term_source_uri(
+    term_sources: Dict[str, str], source_ref: Optional[str]
+) -> Optional[str]:
     if not source_ref:
         return None
     key = source_ref.strip()
@@ -680,10 +868,6 @@ def build_term_id(
     return "#term"
 
 
-
-
-
-
 def clean_value(value: str) -> str:
     stripped = value.strip()
     if stripped.startswith("#"):
@@ -712,7 +896,15 @@ def parse_people(study_rows: List[IDRRow]) -> List[dict]:
     orcids = values_for_key(study_rows, "Study Person ORCID")
     roles = values_for_key(study_rows, "Study Person Roles")
 
-    max_len = max(len(last_names), len(first_names), len(emails), len(addresses), len(orcids), len(roles), 0)
+    max_len = max(
+        len(last_names),
+        len(first_names),
+        len(emails),
+        len(addresses),
+        len(orcids),
+        len(roles),
+        0,
+    )
     people = []
     for idx in range(max_len):
         last_name = last_names[idx] if idx < len(last_names) else ""
@@ -725,7 +917,10 @@ def parse_people(study_rows: List[IDRRow]) -> List[dict]:
             continue
 
         person_id = build_orcid_id(orcid) if orcid else f"#person-{idx + 1}"
-        name = " ".join([part for part in [first_name, last_name] if part]).strip() or person_id
+        name = (
+            " ".join([part for part in [first_name, last_name] if part]).strip()
+            or person_id
+        )
         person = {
             "@id": person_id,
             "@type": "Person",
@@ -768,7 +963,9 @@ def build_publication(study_rows: List[IDRRow]) -> Optional[dict]:
         if not pub_id:
             pub_id = identifiers[-1]
     if pmc and pmc[0].strip():
-        identifiers.append(f"https://www.ncbi.nlm.nih.gov/pmc/articles/{pmc[0].strip()}/")
+        identifiers.append(
+            f"https://www.ncbi.nlm.nih.gov/pmc/articles/{pmc[0].strip()}/"
+        )
         if not pub_id:
             pub_id = identifiers[-1]
 
@@ -801,7 +998,9 @@ def first_value(rows: List[IDRRow], key: str) -> Optional[str]:
     return None
 
 
-def find_blocks(rows: List[IDRRow], start_key: str, stop_keys: List[str]) -> List[List[IDRRow]]:
+def find_blocks(
+    rows: List[IDRRow], start_key: str, stop_keys: List[str]
+) -> List[List[IDRRow]]:
     blocks: List[List[IDRRow]] = []
     current: Optional[List[IDRRow]] = None
     for row in rows:
@@ -832,7 +1031,9 @@ def first_value_in_block(block: List[IDRRow], key: str) -> Optional[str]:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Convert between IDR metadata text and RO-Crate 1.2 JSON-LD.")
+    parser = argparse.ArgumentParser(
+        description="Convert between IDR metadata text and RO-Crate 1.2 JSON-LD."
+    )
     parser.add_argument("input", help="Path to IDR metadata text or RO-Crate JSON-LD")
     parser.add_argument(
         "-o",
@@ -863,7 +1064,9 @@ def main() -> None:
     decoder = IDRDecoder(encoding=args.encoding)
     metadata = decoder.decode(Path(args.input))
     crate = ROCrateEncoder().encode(metadata)
-    output_path.write_text(json.dumps(crate, indent=2, ensure_ascii=False), encoding="utf-8")
+    output_path.write_text(
+        json.dumps(crate, indent=2, ensure_ascii=False), encoding="utf-8"
+    )
 
 
 if __name__ == "__main__":

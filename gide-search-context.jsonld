@@ -1,0 +1,42 @@
+{
+  "@context": {
+    "bia": "https://bioimage-archive.org/ro-crate/",
+    "obo": "http://purl.obolibrary.org/obo/",
+    "dwc": "http://rs.tdwg.org/dwc/terms/",
+    "dwciri": "http://rs.tdwg.org/dwc/iri/",
+    "bao": "http://www.bioassayontology.org/bao#",
+    "vernacularName": {
+      "@id": "dwc:vernacularName"
+    },
+    "scientificName": {
+      "@id": "dwc:scientificName"
+    },
+    "Taxon": {
+      "@id": "dwc:Taxon"
+    },
+    "hasCellLine": {
+      "@id": "bao:BAO_0002004"
+    },
+    "measurementMethod": {
+      "@id": "dwciri:measurementMethod",
+      "@type": "@id"
+    },
+    "taxonomicRange": {
+      "@id": "http://schema.org/taxonomicRange",
+      "@type": "@id"
+    },
+    "seeAlso": {
+      "@id": "rdf:seeAlso",
+      "@type": "@id"
+    },
+    "BioSample": {
+      "@id": "http://schema.org/BioSample"
+    },
+    "LabProtocol": {
+      "@id": "http://schema.org/LabProtocol"
+    },
+    "labEquipment": {
+      "@id": "http://schema.org/labEquipment"
+    }
+  }
+}

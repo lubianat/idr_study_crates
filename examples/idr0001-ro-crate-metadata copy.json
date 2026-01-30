@@ -53,6 +53,65 @@
         "@id": "https://idr.openmicroscopy.org/study/idr0001/"
       }
     },
+        {
+      "@id": "https://idr.openmicroscopy.org/study/idr0001/",
+      "@type": "Dataset",
+      "name": "A genomic Multiprocess survey of machineries that control and link cell shape, microtubule organization, and cell-cycle progression.",
+      "description": "Understanding cells as integrated systems requires that we systematically decipher how single genes affect multiple biological processes and how processes are functionally linked. Here, we used multiprocess phenotypic profiling, combining high-resolution 3D confocal microscopy and multiparametric image analysis, to simultaneously survey the fission yeast genome with respect to three key cellular processes: cell shape, microtubule organization, and cell-cycle progression. We identify, validate, and functionally annotate 262 genes controlling specific aspects of those processes. Of these, 62% had not been linked to these processes before and 35% are implicated in multiple processes. Importantly, we identify a conserved role for DNA-damage responses in controlling microtubule stability. In addition, we investigate how the processes are functionally linked. We show unexpectedly that disruption of cell-cycle progression does not necessarily affect cell size control and that distinct aspects of cell shape regulate microtubules and vice versa, identifying important systems-level links across these processes.",
+      "datePublished": "2016-04-27",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "identifier": "idr0001",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "#auth-001"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1016/j.devcel.2014.09.005"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#screen-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_4896"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#screen-protocol-1-1"
+        },
+        {
+          "@id": "#screen-protocol-1-2"
+        },
+        {
+          "@id": "#screen-protocol-1-3"
+        },
+        {
+          "@id": "#screen-protocol-1-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBbi_00000253"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webclient/?show=well-592362",
+        "https://idr.openmicroscopy.org/webclient/img_detail/1239777/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        },
+        {
+          "@id": "#file-count"
+        }
+      ]
+    },
     {
       "@id": "https://idr.openmicroscopy.org/",
       "@type": "Organization",
@@ -63,7 +122,14 @@
       "@id": "#auth-001",
       "@type": "Person",
       "name": "Rafael Carazo Salas",
-      "email": "rafael.carazosalas@bristol.ac.uk"
+      "email": "rafael.carazosalas@bristol.ac.uk",
+      "affiliation" : {"@id": "#affiliation-1"}
+    },
+    {
+      "@id": "#affiliation-1",
+      "@type": "Organization",
+      "name": "School of Cellular and Molecular Medicine, University of Bristol, United Kingdom"
+      "address": "School of Cellular and Molecular Medicine, University of Bristol, United Kingdom"
     },
     {
       "@id": "https://doi.org/10.1016/j.devcel.2014.09.005",
@@ -148,65 +214,6 @@
       "value": 109728,
       "unitCode": "http://purl.obolibrary.org/obo/UO_0000189",
       "unitText": "file count"
-    },
-    {
-      "@id": "https://idr.openmicroscopy.org/study/idr0001/",
-      "@type": "Dataset",
-      "name": "A genomic Multiprocess survey of machineries that control and link cell shape, microtubule organization, and cell-cycle progression.",
-      "description": "Understanding cells as integrated systems requires that we systematically decipher how single genes affect multiple biological processes and how processes are functionally linked. Here, we used multiprocess phenotypic profiling, combining high-resolution 3D confocal microscopy and multiparametric image analysis, to simultaneously survey the fission yeast genome with respect to three key cellular processes: cell shape, microtubule organization, and cell-cycle progression. We identify, validate, and functionally annotate 262 genes controlling specific aspects of those processes. Of these, 62% had not been linked to these processes before and 35% are implicated in multiple processes. Importantly, we identify a conserved role for DNA-damage responses in controlling microtubule stability. In addition, we investigate how the processes are functionally linked. We show unexpectedly that disruption of cell-cycle progression does not necessarily affect cell size control and that distinct aspects of cell shape regulate microtubules and vice versa, identifying important systems-level links across these processes.",
-      "datePublished": "2016-04-27",
-      "license": "https://creativecommons.org/licenses/by/4.0/",
-      "identifier": "idr0001",
-      "publisher": {
-        "@id": "https://idr.openmicroscopy.org/"
-      },
-      "author": [
-        {
-          "@id": "#auth-001"
-        }
-      ],
-      "seeAlso": [
-        {
-          "@id": "https://doi.org/10.1016/j.devcel.2014.09.005"
-        }
-      ],
-      "about": [
-        {
-          "@id": "#screen-biosample-1"
-        },
-        {
-          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_4896"
-        }
-      ],
-      "measurementMethod": [
-        {
-          "@id": "#screen-protocol-1-1"
-        },
-        {
-          "@id": "#screen-protocol-1-2"
-        },
-        {
-          "@id": "#screen-protocol-1-3"
-        },
-        {
-          "@id": "#screen-protocol-1-4"
-        },
-        {
-          "@id": "http://purl.obolibrary.org/obo/FBbi_00000253"
-        }
-      ],
-      "thumbnailUrl": [
-        "https://idr.openmicroscopy.org/webclient/?show=well-592362",
-        "https://idr.openmicroscopy.org/webclient/img_detail/1239777/"
-      ],
-      "size": [
-        {
-          "@id": "#total-dataset-size"
-        },
-        {
-          "@id": "#file-count"
-        }
-      ]
     }
   ]
 }
