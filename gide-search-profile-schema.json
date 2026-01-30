@@ -1,0 +1,465 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "TBD",
+  "title": "GIDE Search Input RO-Crate Profile Schema",
+  "description": "JSON Schema for validating detached RO-Crates conforming to the GIDE search input profile (January 2026)",
+  "type": "object",
+  "required": ["@context", "@graph"],
+  "properties": {
+    "@context": {
+      "description": "JSON-LD context - must include RO-Crate 1.2+ context"
+    },
+    "@graph": {
+      "type": "array",
+      "description": "The graph of entities in the RO-Crate",
+      "items": {
+        "anyOf": [
+          { "$ref": "#/$defs/ROCrateMetadataDescriptor" },
+          { "$ref": "#/$defs/Dataset" },
+          { "$ref": "#/$defs/Person" },
+          { "$ref": "#/$defs/Organisation" },
+          { "$ref": "#/$defs/Taxon" },
+          { "$ref": "#/$defs/BioSample" },
+          { "$ref": "#/$defs/DefinedTerm" },
+          { "$ref": "#/$defs/LabProtocol" },
+          { "$ref": "#/$defs/Grant" },
+          { "$ref": "#/$defs/ScholarlyArticle" },
+          { "$ref": "#/$defs/QuantitativeValue" },
+          { "$ref": "#/$defs/GenericEntity" }
+        ]
+      }
+    }
+  },
+  "$defs": {
+    "IdReference": {
+      "type": "object",
+      "required": ["@id"],
+      "properties": {
+        "@id": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "IdReferenceOrArray": {
+      "oneOf": [
+        { "$ref": "#/$defs/IdReference" },
+        {
+          "type": "array",
+          "items": { "$ref": "#/$defs/IdReference" },
+          "minItems": 1
+        }
+      ]
+    },
+    "TypeField": {
+      "oneOf": [
+        { "type": "string" },
+        {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        }
+      ]
+    },
+    "ROCrateMetadataDescriptor": {
+      "type": "object",
+      "title": "RO-Crate Metadata Descriptor",
+      "description": "Self-describing metadata descriptor with @id of 'ro-crate-metadata.json'",
+      "required": ["@id", "@type", "conformsTo", "about"],
+      "properties": {
+        "@id": {
+          "type": "string",
+          "const": "ro-crate-metadata.json"
+        },
+        "@type": {
+          "$ref": "#/$defs/TypeField",
+          "description": "Must include 'CreativeWork'"
+        },
+        "conformsTo": {
+          "description": "Must reference RO-Crate 1.2 or higher",
+          "$ref": "#/$defs/IdReference"
+        },
+        "about": {
+          "description": "Reference to the root dataset entity",
+          "$ref": "#/$defs/IdReference"
+        }
+      },
+      "additionalProperties": true
+    },
+    "Dataset": {
+      "type": "object",
+      "title": "Dataset (Root Entity)",
+      "description": "The root dataset entity describing the imaging dataset",
+      "required": [
+        "@id",
+        "@type",
+        "name",
+        "description",
+        "datePublished",
+        "license",
+        "author",
+        "publisher",
+        "about",
+        "measurementMethod"
+      ],
+      "properties": {
+        "@id": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL of the entry in its original database (must be absolute URL)"
+        },
+        "@type": {
+          "$ref": "#/$defs/TypeField",
+          "description": "MUST include 'Dataset'"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Should identify the dataset to humans"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Overview of the dataset summarising the context"
+        },
+        "datePublished": {
+          "type": "string",
+          "pattern": "^\\d{4}(-\\d{2}(-\\d{2})?)?$",
+          "description": "ISO 8601 date format, should be specified to the day"
+        },
+        "license": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL to a licence description"
+        },
+        "author": {
+          "description": "Persons or Organisations who contributed to the dataset",
+          "$ref": "#/$defs/IdReferenceOrArray"
+        },
+        "publisher": {
+          "description": "Single Organisation that provides the data",
+          "$ref": "#/$defs/IdReference"
+        },
+        "about": {
+          "description": "Biological matter relevant to this dataset (BioSamples, Taxons, DefinedTerms)",
+          "$ref": "#/$defs/IdReferenceOrArray"
+        },
+        "measurementMethod": {
+          "description": "Imaging techniques relevant to this dataset (LabProtocols, DefinedTerms)",
+          "$ref": "#/$defs/IdReferenceOrArray"
+        },
+        "thumbnailUrl": {
+          "oneOf": [
+            { "type": "string", "format": "uri" },
+            {
+              "type": "array",
+              "items": { "type": "string", "format": "uri" }
+            }
+          ],
+          "description": "URLs for thumbnail images"
+        },
+        "identifier": {
+          "type": "string",
+          "description": "Unique identifier used by the publisher"
+        },
+        "keywords": {
+          "oneOf": [
+            { "type": "string" },
+            {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          ],
+          "description": "Relevant keywords or tags"
+        },
+        "funder": {
+          "description": "Grants which funded the contributors",
+          "$ref": "#/$defs/IdReferenceOrArray"
+        },
+        "seeAlso": {
+          "description": "ScholarlyArticles published alongside or supported by this Dataset",
+          "$ref": "#/$defs/IdReferenceOrArray"
+        },
+        "size": {
+          "description": "QuantitativeValues defining dimensions of the Dataset",
+          "$ref": "#/$defs/IdReferenceOrArray"
+        }
+      },
+      "additionalProperties": true
+    },
+    "Person": {
+      "type": "object",
+      "title": "Person",
+      "description": "An author or contributor",
+      "required": ["@id", "@type", "name"],
+      "properties": {
+        "@id": {
+          "type": "string",
+          "description": "Should be an ORCID id, or local identifier"
+        },
+        "@type": {
+          "$ref": "#/$defs/TypeField",
+          "description": "MUST include 'Person'"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Person's name for crediting authorship"
+        },
+        "affiliation": {
+          "description": "Organisations the person was affiliated with",
+          "$ref": "#/$defs/IdReferenceOrArray"
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "Contact email address"
+        }
+      },
+      "additionalProperties": true
+    },
+    "Organisation": {
+      "type": "object",
+      "title": "Organisation",
+      "description": "Publisher, author affiliation, or funder organisation",
+      "required": ["@id", "@type", "name"],
+      "properties": {
+        "@id": {
+          "type": "string",
+          "description": "Should be ROR ID, URI, or local identifier"
+        },
+        "@type": {
+          "$ref": "#/$defs/TypeField",
+          "description": "MUST include 'Organization' or 'Organisation'"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Identifying name or acronym"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Main landing page URL"
+        },
+        "address": {
+          "type": "string",
+          "description": "Organisation's address"
+        }
+      },
+      "additionalProperties": true
+    },
+    "Taxon": {
+      "type": "object",
+      "title": "Taxon",
+      "description": "A taxonomic classification",
+      "required": ["@id", "@type", "scientificName"],
+      "properties": {
+        "@id": {
+          "type": "string",
+          "description": "Should be an NCBI taxonomy ID"
+        },
+        "@type": {
+          "$ref": "#/$defs/TypeField",
+          "description": "MUST include 'Taxon'"
+        },
+        "scientificName": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Scientific name following relevant nomenclature code"
+        },
+        "vernacularName": {
+          "type": "string",
+          "description": "Common or vernacular name"
+        }
+      },
+      "additionalProperties": true
+    },
+    "BioSample": {
+      "type": "object",
+      "title": "BioSample",
+      "description": "A biological sample (draft schema.org type)",
+      "required": ["@id", "@type", "name", "description"],
+      "properties": {
+        "@id": {
+          "type": "string",
+          "description": "Resolvable URL or local identifier"
+        },
+        "@type": {
+          "$ref": "#/$defs/TypeField",
+          "description": "MUST include 'BioSample'"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Main features distinguishing this biosample"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Details of the biosample"
+        },
+        "taxonomicRange": {
+          "description": "Taxons classifying this BioSample",
+          "$ref": "#/$defs/IdReferenceOrArray"
+        },
+        "hasCellLine": {
+          "description": "DefinedTerm representing cell line classification",
+          "$ref": "#/$defs/IdReferenceOrArray"
+        }
+      },
+      "additionalProperties": true
+    },
+    "DefinedTerm": {
+      "type": "object",
+      "title": "DefinedTerm",
+      "description": "A defined term from an ontology or vocabulary",
+      "required": ["@id", "@type", "name"],
+      "properties": {
+        "@id": {
+          "type": "string",
+          "format": "uri",
+          "description": "Absolute URI to documentation about the term"
+        },
+        "@type": {
+          "$ref": "#/$defs/TypeField",
+          "description": "MUST include 'DefinedTerm'"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Human-readable label for the term"
+        }
+      },
+      "additionalProperties": true
+    },
+    "LabProtocol": {
+      "type": "object",
+      "title": "LabProtocol",
+      "description": "A laboratory protocol (draft schema.org type)",
+      "required": ["@id", "@type", "name", "description"],
+      "properties": {
+        "@id": {
+          "type": "string",
+          "description": "Resolvable URL or local identifier"
+        },
+        "@type": {
+          "$ref": "#/$defs/TypeField",
+          "description": "MUST include 'LabProtocol'"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Protocol name"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Details of steps or settings"
+        },
+        "labEquipment": {
+          "type": "string",
+          "description": "Equipment used in image capture"
+        },
+        "measurementTechnique": {
+          "description": "DefinedTerm (preferably from FBBI ontology)",
+          "$ref": "#/$defs/IdReferenceOrArray"
+        }
+      },
+      "additionalProperties": true
+    },
+    "Grant": {
+      "type": "object",
+      "title": "Grant",
+      "description": "A funding grant",
+      "required": ["@id", "@type", "name"],
+      "properties": {
+        "@id": {
+          "type": "string",
+          "description": "Resolvable ID (DOI) or local identifier"
+        },
+        "@type": {
+          "$ref": "#/$defs/TypeField",
+          "description": "MUST include 'Grant'"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Name or title of the grant"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Link to more information"
+        }
+      },
+      "additionalProperties": true
+    },
+    "ScholarlyArticle": {
+      "type": "object",
+      "title": "ScholarlyArticle",
+      "description": "A scholarly publication",
+      "required": ["@id", "@type", "name"],
+      "properties": {
+        "@id": {
+          "type": "string",
+          "description": "Resolvable ID (DOI) or local identifier"
+        },
+        "@type": {
+          "$ref": "#/$defs/TypeField",
+          "description": "MUST include 'ScholarlyArticle'"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Title of the article"
+        },
+        "datePublished": {
+          "type": "string",
+          "pattern": "^\\d{4}(-\\d{2}(-\\d{2})?)?$",
+          "description": "ISO 8601 date format"
+        }
+      },
+      "additionalProperties": true
+    },
+    "QuantitativeValue": {
+      "type": "object",
+      "title": "QuantitativeValue",
+      "description": "A quantitative measurement value",
+      "required": ["@id", "@type", "value", "unitCode", "unitText"],
+      "properties": {
+        "@id": {
+          "type": "string",
+          "description": "Local identifier for the value"
+        },
+        "@type": {
+          "$ref": "#/$defs/TypeField",
+          "description": "MUST include 'QuantitativeValue'"
+        },
+        "value": {
+          "type": "number",
+          "description": "Numeric value using '.' for decimal"
+        },
+        "unitCode": {
+          "type": "string",
+          "format": "uri",
+          "description": "Unit code URI (e.g., UO ontology)"
+        },
+        "unitText": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Human-readable unit text"
+        }
+      },
+      "additionalProperties": true
+    },
+    "GenericEntity": {
+      "type": "object",
+      "description": "Any other entity type allowed in the open schema",
+      "required": ["@id", "@type"],
+      "properties": {
+        "@id": { "type": "string" },
+        "@type": { "$ref": "#/$defs/TypeField" }
+      },
+      "additionalProperties": true
+    }
+  }
+}
