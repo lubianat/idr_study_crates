@@ -672,7 +672,7 @@ class ROCrateEncoder:
             # Build description showing sum if multiple sources
             if len(tb_parts) > 1:
                 parts_str = " + ".join(str(t) for t in tb_parts)
-                desc = f"{parts_str} = {total_tb} TB"
+                desc = f"{parts_str} = {total_tb:.2f} TB"
             else:
                 desc = f"{total_tb} TB"
             graph.add(
