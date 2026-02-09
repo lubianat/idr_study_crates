@@ -209,6 +209,11 @@ class ROCrateEncoder:
             "BioSample": {"@id": "http://schema.org/BioSample"},
             "LabProtocol": {"@id": "http://schema.org/LabProtocol"},
             "labEquipment": {"@id": "http://schema.org/labEquipment"},
+            "xsd": "http://www.w3.org/2001/XMLSchema#",
+            "datePublished": {
+                "@id": "http://schema.org/datePublished",
+                "@type": "xsd:date",
+            },
         }
 
     def encode(self, metadata: IDRMetadata) -> dict:
@@ -224,11 +229,12 @@ class ROCrateEncoder:
         accession = metadata.first_value("Comment[IDR Study Accession]", study_rows)
         study_external_url = metadata.first_value("Study External URL", study_rows)
         root_id = build_root_id(accession, study_external_url)
+        descriptor_id = build_metadata_descriptor_id(accession)
 
         # RO-Crate Metadata Descriptor
         graph.add(
             {
-                "@id": "ro-crate-metadata.json",
+                "@id": descriptor_id,
                 "@type": "CreativeWork",
                 "conformsTo": {"@id": "https://w3id.org/ro/crate/1.2"},
                 "about": {"@id": root_id},
@@ -332,6 +338,8 @@ class ROCrateEncoder:
                     "name": imaging_method or imaging_accession,
                     "measurementTechnique": [{"@id": imaging_id}],
                 }
+                if description:
+                    imaging_protocol["description"] = description
                 graph.add(imaging_protocol)
                 all_imaging_protocol_refs.append({"@id": imaging_protocol_id})
 
@@ -381,6 +389,8 @@ class ROCrateEncoder:
                     "name": imaging_method or imaging_accession,
                     "measurementTechnique": [{"@id": imaging_id}],
                 }
+                if description:
+                    imaging_protocol["description"] = description
                 graph.add(imaging_protocol)
                 all_imaging_protocol_refs.append({"@id": imaging_protocol_id})
 
@@ -890,9 +900,22 @@ def rows_from_property_values(
 
 
 def find_root_entity(entity_map: Dict[str, dict]) -> Optional[dict]:
-    descriptor = entity_map.get("ro-crate-metadata.json")
-    if descriptor and isinstance(descriptor.get("about"), dict):
-        root_id = descriptor["about"].get("@id")
+    for descriptor in entity_map.values():
+        if not isinstance(descriptor, dict):
+            continue
+        entity_type = descriptor.get("@type", [])
+        if isinstance(entity_type, str):
+            types = [entity_type]
+        elif isinstance(entity_type, list):
+            types = entity_type
+        else:
+            types = []
+        if "CreativeWork" not in types:
+            continue
+        about = descriptor.get("about")
+        if not about:
+            continue
+        root_id = about.get("@id") if isinstance(about, dict) else about
         if root_id and root_id in entity_map:
             return entity_map[root_id]
     return entity_map.get("./")
@@ -948,6 +971,35 @@ def build_root_id(accession: Optional[str], external_url: Optional[str]) -> str:
     if external_url:
         return normalize_url(external_url)
     return "./"
+
+
+def build_metadata_descriptor_id(accession: Optional[str]) -> str:
+    if accession:
+        accession = accession.strip()
+    if accession:
+        return f"{accession}-ro-crate-metadata.json"
+    return "ro-crate-metadata.json"
+
+
+def extract_metadata_descriptor_id(crate: dict) -> Optional[str]:
+    graph = crate.get("@graph", [])
+    if not isinstance(graph, list):
+        return None
+    for entity in graph:
+        if not isinstance(entity, dict):
+            continue
+        entity_type = entity.get("@type", [])
+        if isinstance(entity_type, str):
+            types = [entity_type]
+        elif isinstance(entity_type, list):
+            types = entity_type
+        else:
+            types = []
+        if "CreativeWork" not in types:
+            continue
+        if "about" in entity:
+            return entity.get("@id")
+    return None
 
 
 def get_term_source_uri(
@@ -1158,7 +1210,7 @@ def main() -> None:
         "-o",
         "--output",
         default=None,
-        help="Output path (defaults to ro-crate-metadata.json or idr-metadata.txt)",
+        help="Output path (defaults to <accession>-ro-crate-metadata.json when available, or idr-metadata.txt)",
     )
     parser.add_argument(
         "--reverse",
@@ -1179,10 +1231,16 @@ def main() -> None:
         output_path.write_text(idr_text, encoding=args.encoding)
         return
 
-    output_path = Path(args.output or "ro-crate-metadata.json")
     decoder = IDRDecoder(encoding=args.encoding)
     metadata = decoder.decode(Path(args.input))
     crate = ROCrateEncoder().encode(metadata)
+    if args.output:
+        output_path = Path(args.output)
+    else:
+        descriptor_id = (
+            extract_metadata_descriptor_id(crate) or "ro-crate-metadata.json"
+        )
+        output_path = Path(descriptor_id)
     output_path.write_text(
         json.dumps(crate, indent=2, ensure_ascii=False), encoding="utf-8"
     )
