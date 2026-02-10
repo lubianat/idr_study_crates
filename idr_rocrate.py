@@ -5,6 +5,7 @@ import re
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, Iterable, List, Optional, Tuple
+from urllib.parse import parse_qs, urlparse
 
 DEFAULT_TERM_BASES = {
     "efo": "http://www.ebi.ac.uk/efo/",
@@ -422,18 +423,19 @@ class ROCrateEncoder:
         if measurement_refs:
             root["measurementMethod"] = measurement_refs
 
-        # thumbnailUrl - get all values from the row, not just the first
+        # thumbnailUrl - collect embeddable thumbnail links
         thumbnails = []
         for block in screen_blocks:
             for row in block:
                 if row.key == "Screen Example Images":
                     for val in row.values:
-                        thumbnails.extend(self._extract_urls(val))
+                        thumbnails.extend(self._extract_thumbnail_urls(val))
         for block in experiment_blocks:
             for row in block:
                 if row.key == "Experiment Example Images":
                     for val in row.values:
-                        thumbnails.extend(self._extract_urls(val))
+                        thumbnails.extend(self._extract_thumbnail_urls(val))
+        thumbnails = list(dict.fromkeys(thumbnails))
         if thumbnails:
             root["thumbnailUrl"] = thumbnails
 
@@ -687,16 +689,47 @@ class ROCrateEncoder:
 
         return size_refs
 
-    def _extract_urls(self, value: str) -> List[str]:
-        """Extract URLs from a string value."""
+    def _extract_thumbnail_urls(self, value: str) -> List[str]:
+        """Extract embeddable thumbnail URLs from a string value."""
         urls = []
-        for token in re.split(r"\s+", value.strip()):
-            if not token:
-                continue
-            candidate = token.strip(",;")
-            if candidate.startswith(("http://", "https://", "www.")):
-                urls.append(normalize_url(candidate))
+        for match in re.finditer(r"(?:https?://|www\.)[^\s]+", value.strip()):
+            candidate = match.group(0).rstrip(".,;:)]}>'\"")
+            thumbnail_url = self._to_thumbnail_url(candidate)
+            if thumbnail_url:
+                urls.append(thumbnail_url)
         return urls
+
+    def _to_thumbnail_url(self, value: str) -> Optional[str]:
+        """Convert known IDR image links to canonical render_thumbnail URLs."""
+        normalized = normalize_url(value)
+        parsed = urlparse(normalized)
+        if "openmicroscopy.org" not in parsed.netloc.lower():
+            return None
+
+        path = parsed.path or ""
+        render_match = re.search(r"/webgateway/render_thumbnail/(\d+)/?", path)
+        if render_match:
+            image_id = render_match.group(1)
+            return (
+                f"https://idr.openmicroscopy.org/webgateway/render_thumbnail/{image_id}/?"
+            )
+
+        detail_match = re.search(r"/webclient/img_detail/(\d+)/?", path)
+        if detail_match:
+            image_id = detail_match.group(1)
+            return (
+                f"https://idr.openmicroscopy.org/webgateway/render_thumbnail/{image_id}/?"
+            )
+
+        for show_value in parse_qs(parsed.query).get("show", []):
+            image_match = re.fullmatch(r"image-(\d+)", show_value)
+            if image_match:
+                image_id = image_match.group(1)
+                return (
+                    f"https://idr.openmicroscopy.org/webgateway/render_thumbnail/{image_id}/?"
+                )
+
+        return None
 
     def _dedupe_refs(self, refs: List[dict]) -> List[dict]:
         """Remove duplicate references by @id."""
