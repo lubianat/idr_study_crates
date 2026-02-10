@@ -181,40 +181,10 @@ class ROCrateEncoder:
     def _load_gide_context(self) -> dict:
         """Load the GIDE context from the JSON-LD file."""
         context_path = Path(__file__).resolve().parent / "gide-search-context.jsonld"
-        if context_path.exists():
-            try:
-                data = json.loads(context_path.read_text(encoding="utf-8"))
-                if isinstance(data, dict) and "@context" in data:
-                    return data["@context"]
-                return data if isinstance(data, dict) else {}
-            except (OSError, json.JSONDecodeError):
-                pass
-        # Fallback GIDE context
-        return {
-            "bia": "https://bioimage-archive.org/ro-crate/",
-            "obo": "http://purl.obolibrary.org/obo/",
-            "dwc": "http://rs.tdwg.org/dwc/terms/",
-            "dwciri": "http://rs.tdwg.org/dwc/iri/",
-            "bao": "http://www.bioassayontology.org/bao#",
-            "vernacularName": {"@id": "dwc:vernacularName"},
-            "scientificName": {"@id": "dwc:scientificName"},
-            "Taxon": {"@id": "dwc:Taxon"},
-            "hasCellLine": {"@id": "bao:BAO_0002004"},
-            "measurementMethod": {"@id": "dwciri:measurementMethod", "@type": "@id"},
-            "taxonomicRange": {
-                "@id": "http://schema.org/taxonomicRange",
-                "@type": "@id",
-            },
-            "seeAlso": {"@id": "rdf:seeAlso", "@type": "@id"},
-            "BioSample": {"@id": "http://schema.org/BioSample"},
-            "LabProtocol": {"@id": "http://schema.org/LabProtocol"},
-            "labEquipment": {"@id": "http://schema.org/labEquipment"},
-            "xsd": "http://www.w3.org/2001/XMLSchema#",
-            "datePublished": {
-                "@id": "http://schema.org/datePublished",
-                "@type": "xsd:date",
-            },
-        }
+        data = json.loads(context_path.read_text(encoding="utf-8"))
+        if isinstance(data, dict) and "@context" in data:
+            return data["@context"]
+        return data if isinstance(data, dict) else {}
 
     def encode(self, metadata: IDRMetadata) -> dict:
         graph = GraphBuilder()

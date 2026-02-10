@@ -37,6 +37,11 @@
     },
     "labEquipment": {
       "@id": "http://schema.org/labEquipment"
+    },
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "datePublished": {
+    "@id": "http://schema.org/datePublished",
+    "@type": "xsd:date"
+     }
     }
-  }
 }
