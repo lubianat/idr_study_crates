@@ -1,6 +1,6 @@
 # IDR Metadata to RO-Crate 1.2
 
-Simple Python converter that parses an IDR metadata text file and emits a RO-Crate 1.2 `ro-crate-metadata.json`, plus a reverse converter back to IDR text.
+Simple Python converter that parses an IDR metadata text file and emits a RO-Crate 1.2 `<accession>-ro-crate-metadata.json` (or `ro-crate-metadata.json` when no accession is available), plus a reverse converter back to IDR text.
 
 ## Features
 
@@ -81,7 +81,7 @@ To merge all generated RO-Crates into a single Turtle file:
 uv run scripts/batch_generate.py --input-dir examples --output-dir ro-crates --ttl-out ro-crates/idr-studies.ttl
 ```
 
-Relative identifiers are resolved against each crate's `ro-crate-metadata.json` file URI.
+Relative identifiers are resolved against each crate's `<accession>-ro-crate-metadata.json` file URI.
 
 ## Acknowledgements
 

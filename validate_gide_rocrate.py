@@ -95,7 +95,7 @@ class GIDEProfileValidator:
         Validate an RO-Crate file against the GIDE profile.
 
         Args:
-            rocrate_path: Path to the ro-crate-metadata.json file
+            rocrate_path: Path to the RO-Crate metadata descriptor file
 
         Returns:
             ValidationResult with errors, warnings, and info messages
@@ -216,10 +216,10 @@ class GIDEProfileValidator:
         entities = {entity.get("@id"): entity for entity in graph if "@id" in entity}
 
         # Find metadata descriptor
-        metadata_descriptor = entities.get("ro-crate-metadata.json")
+        metadata_descriptor = self._find_metadata_descriptor(entities)
         if not metadata_descriptor:
             result.add_error(
-                "Missing RO-Crate Metadata Descriptor with @id 'ro-crate-metadata.json'"
+                "Missing RO-Crate Metadata Descriptor (CreativeWork with 'about')"
             )
             return result
 
@@ -271,7 +271,7 @@ class GIDEProfileValidator:
         entities = {entity.get("@id"): entity for entity in graph if "@id" in entity}
 
         # Get root dataset
-        metadata_descriptor = entities.get("ro-crate-metadata.json")
+        metadata_descriptor = self._find_metadata_descriptor(entities)
         if not metadata_descriptor:
             return result  # Already reported in structure validation
 
@@ -464,6 +464,16 @@ class GIDEProfileValidator:
 
         return any(t in entity_type for t in type_name)
 
+    def _find_metadata_descriptor(self, entities: dict) -> dict | None:
+        for entity in entities.values():
+            if not isinstance(entity, dict):
+                continue
+            if not self._has_type(entity, "CreativeWork"):
+                continue
+            if "about" in entity:
+                return entity
+        return None
+
     def _get_id(self, ref: Any) -> str | None:
         """Extract @id from a reference (dict or string)."""
         if isinstance(ref, dict):
@@ -486,7 +496,8 @@ Examples:
         """,
     )
     parser.add_argument(
-        "rocrate_file", help="Path to the ro-crate-metadata.json file to validate"
+        "rocrate_file",
+        help="Path to the RO-Crate metadata descriptor file to validate",
     )
     parser.add_argument(
         "--schema", help="Path to custom JSON schema file (optional)", type=Path

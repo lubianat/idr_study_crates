@@ -366,6 +366,16 @@
             return typeNames.some(t => entityType.includes(t));
         }
 
+        function findMetadataDescriptor(entities) {
+            for (const key of Object.keys(entities)) {
+                const entity = entities[key];
+                if (!entity) continue;
+                if (!hasType(entity, 'CreativeWork')) continue;
+                if (entity.about) return entity;
+            }
+            return null;
+        }
+
         function validateContext(data) {
             const result = new ValidationResult();
             const context = data['@context'];
@@ -423,9 +433,9 @@
             }
 
             // Find metadata descriptor
-            const metadataDescriptor = entities['ro-crate-metadata.json'];
+            const metadataDescriptor = findMetadataDescriptor(entities);
             if (!metadataDescriptor) {
-                result.addError("Missing RO-Crate Metadata Descriptor with @id 'ro-crate-metadata.json'");
+                result.addError("Missing RO-Crate Metadata Descriptor (CreativeWork with 'about')");
                 return result;
             }
 
@@ -637,7 +647,7 @@
                 }
             }
 
-            const metadataDescriptor = entities['ro-crate-metadata.json'];
+            const metadataDescriptor = findMetadataDescriptor(entities);
             if (!metadataDescriptor) return result;
 
             const about = metadataDescriptor.about;
@@ -666,7 +676,7 @@
                 }
             }
 
-            const metadataDescriptor = entities['ro-crate-metadata.json'];
+            const metadataDescriptor = findMetadataDescriptor(entities);
             if (!metadataDescriptor) return result;
 
             const about = metadataDescriptor.about;
