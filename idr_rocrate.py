@@ -399,6 +399,32 @@ class ROCrateEncoder:
         if license_url:
             root["license"] = normalize_url(license_url)
 
+            # map license URL to short identifier if possible
+
+            license_map = {
+                "https://creativecommons.org/licenses/by/4.0/": "CC-BY-4.0",
+                "https://creativecommons.org/licenses/by-sa/4.0/": "CC-BY-SA-4.0",
+                "https://creativecommons.org/licenses/by-nc/4.0/": "CC-BY-NC-4.0",
+                "https://creativecommons.org/licenses/by-nc-sa/4.0/": "CC-BY-NC-SA-4.0",
+                "https://creativecommons.org/licenses/by-nc-nd/4.0/": "CC-BY-NC-ND-4.0",
+                "https://creativecommons.org/licenses/by-nc-sa/3.0/": "CC-BY-NC-SA-3.0",
+                "https://creativecommons.org/licenses/by-nc-nd/3.0/": "CC-BY-NC-ND-3.0",
+                "https://creativecommons.org/licenses/by/3.0/": "CC-BY-3.0",
+                "https://creativecommons.org/licenses/by-sa/3.0/": "CC-BY-SA-3.0",
+                "https://creativecommons.org/publicdomain/zero/1.0/": "CC0-1.0",
+                "https://v18.proteinatlas.org/about/licence": "https://v18.proteinatlas.org/about/licence",
+            }
+
+            license_id = license_map[license_url]
+
+            # schema:copyrightHolder
+            copyright_holder = metadata.first_value("Study Copyright", study_rows)
+            pub_year = pub_date.split("-")[0]
+            if copyright_holder:
+                root["schema:copyrightNotice"] = (
+                    f"{copyright_holder}, {license_id}, {pub_year}"
+                )
+
         # identifier
         if accession:
             root["identifier"] = accession

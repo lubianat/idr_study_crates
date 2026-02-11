@@ -2468,6 +2468,7 @@
     schema1:about obo:NCBITaxon_4896,
         <https://idr.openmicroscopy.org/study/idr0001/#screen-biosample-1> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0001/#person-1> ;
+    schema1:copyrightNotice "Graml et al, CC-BY-4.0, 2016" ;
     schema1:datePublished "2016-04-27"^^xsd:date ;
     schema1:description "Understanding cells as integrated systems requires that we systematically decipher how single genes affect multiple biological processes and how processes are functionally linked. Here, we used multiprocess phenotypic profiling, combining high-resolution 3D confocal microscopy and multiparametric image analysis, to simultaneously survey the fission yeast genome with respect to three key cellular processes: cell shape, microtubule organization, and cell-cycle progression. We identify, validate, and functionally annotate 262 genes controlling specific aspects of those processes. Of these, 62% had not been linked to these processes before and 35% are implicated in multiple processes. Importantly, we identify a conserved role for DNA-damage responses in controlling microtubule stability. In addition, we investigate how the processes are functionally linked. We show unexpectedly that disruption of cell-cycle progression does not necessarily affect cell size control and that distinct aspects of cell shape regulate microtubules and vice versa, identifying important systems-level links across these processes." ;
     schema1:identifier "idr0001" ;
@@ -2538,6 +2539,7 @@
     schema1:about obo:NCBITaxon_9606,
         <https://idr.openmicroscopy.org/study/idr0002/#screen-biosample-1> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0002/#person-1> ;
+    schema1:copyrightNotice "Heriche et al, CC-BY-4.0, 2016" ;
     schema1:datePublished "2016-05-26"^^xsd:date ;
     schema1:description "The advent of genome-wide RNA interference (RNAi) based screens puts us in the position to identify genes for all functions human cells carry out. However, for many functions, assay complexity and cost make genome-scale knockdown experiments impossible. Methods to predict genes required for cell functions are therefore needed to focus RNAi screens from the whole genome on the most likely candidates. Although different bioinformatics tools for gene function prediction exist, they lack experimental validation and are therefore rarely used by experimentalists. To address this, we developed an effective computational gene selection strategy that represents public data about genes as graphs and then analyzes these graphs using kernels on graph nodes to predict functional relationships. To demonstrate its performance, we predicted human genes required for a poorly understood cellular function 'mitotic chromosome condensation' and experimentally validated the top 100 candidates with a focused RNAi screen by automated microscopy. Quantitative analysis of the images demonstrated that the candidates were indeed strongly enriched in condensation genes, including the discovery of several new factors. By combining bioinformatics prediction with experimental validation, our study shows that kernels on graph nodes are powerful tools to integrate public biological data and predict genes involved in cellular functions of interest." ;
     schema1:identifier "idr0002" ;
@@ -2609,6 +2611,7 @@
     schema1:about obo:NCBITaxon_4932,
         <https://idr.openmicroscopy.org/study/idr0003/#screen-biosample-1> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0003/#person-1> ;
+    schema1:copyrightNotice "Breker et al, CC-BY-NC-SA-3.0, 2016" ;
     schema1:datePublished "2016-04-27"^^xsd:date ;
     schema1:description "Uncovering the mechanisms underlying robust responses of cells to stress is crucial for our understanding of cellular physiology. Indeed, vast amounts of data have been collected on transcriptional responses in Saccharomyces cerevisiae. However, only a handful of pioneering studies describe the dynamics of proteins in response to external stimuli, despite the fact that regulation of protein levels and localization is an essential part of such responses. Here we characterized unprecedented proteome plasticity by systematically tracking the localization and abundance of 5,330 yeast proteins at single-cell resolution under three different stress conditions (DTT, H2O2, and nitrogen starvation) using the GFP-tagged yeast library. We uncovered a unique 'fingerprint' of changes for each stress and elucidated a new response arsenal for adapting to radical environments. These include bet-hedging strategies, organelle rearrangement, and redistribution of protein localizations. All data are available for download through our online database, LOQATE (localization and quantitation atlas of yeast proteome)." ;
     schema1:identifier "idr0003" ;
@@ -2684,6 +2687,7 @@
     schema1:about obo:NCBITaxon_4932,
         <https://idr.openmicroscopy.org/study/idr0004/#screen-biosample-1> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0004/#person-1> ;
+    schema1:copyrightNotice "Thorpe et al, CC-BY-NC-SA-3.0, 2016" ;
     schema1:datePublished "2016-04-27"^^xsd:date ;
     schema1:description "To investigate the DNA damage response, we undertook a genome-wide study in Saccharomyces cerevisiae and identified 86 gene deletions that lead to increased levels of spontaneous Rad52 foci in proliferating diploid cells. More than half of the genes are conserved across species ranging from yeast to humans. Along with genes involved in DNA replication, repair, and chromatin remodeling, we found 22 previously uncharacterized open reading frames. Analysis of recombination rates and synthetic genetic interactions with rad52Delta suggests that multiple mechanisms are responsible for elevated levels of spontaneous Rad52 foci, including increased production of recombinogenic lesions, sister chromatid recombination defects, and improper focus assembly/disassembly. Our cell biological approach demonstrates the diversity of processes that converge on homologous recombination, protect against spontaneous DNA damage, and facilitate efficient repair." ;
     schema1:identifier "idr0004" ;
@@ -2760,6 +2764,7 @@
         <https://idr.openmicroscopy.org/study/idr0005/#screen-biosample-1>,
         <https://idr.openmicroscopy.org/study/idr0005/#screen-biosample-2> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0005/#person-1> ;
+    schema1:copyrightNotice "Toret et al, CC-BY-NC-SA-3.0, 2016" ;
     schema1:datePublished "2016-04-27"^^xsd:date ;
     schema1:description "Cadherins and associated catenins provide an important structural interface between neighboring cells, the actin cytoskeleton, and intracellular signaling pathways in a variety of cell types throughout the Metazoa. However, the full inventory of the proteins and pathways required for cadherin-mediated adhesion has not been established. To this end, we completed a genome-wide (_14,000 genes) ribonucleic acid interference (RNAi) screen that targeted Ca2+-dependent adhesion in DE-cadherin-expressing Drosophila melanogaster S2 cells in suspension culture. This novel screen eliminated Ca2+-independent cell-cell adhesion, integrin-based adhesion, cell spreading, and cell migration. We identified 17 interconnected regulatory hubs, based on protein functions and protein-protein interactions that regulate the levels of the core cadherin-catenin complex and coordinate cadherin-mediated cell-cell adhesion. Representative proteins from these hubs were analyzed further in Drosophila oogenesis, using targeted germline RNAi, and adhesion was analyzed in Madin-Darby canine kidney mammalian epithelial cell-cell adhesion. These experiments reveal roles for a diversity of cellular pathways that are required for cadherin function in Metazoa, including cytoskeleton organization, cell-substrate interactions, and nuclear and cytoplasmic signaling." ;
     schema1:identifier "idr0005" ;
@@ -2858,6 +2863,7 @@
     schema1:about obo:NCBITaxon_9606,
         <https://idr.openmicroscopy.org/study/idr0006/#screen-biosample-1> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0006/#person-1> ;
+    schema1:copyrightNotice "Fong et al, CC-BY-NC-SA-3.0, 2016" ;
     schema1:datePublished "2016-04-27"^^xsd:date ;
     schema1:description "The nucleus is a unique organelle that contains essential genetic materials in chromosome territories. The interchromatin space is composed of nuclear subcompartments, which are defined by several distinctive nuclear bodies believed to be factories of DNA or RNA processing and sites of transcriptional and/or posttranscriptional regulation. In this paper, we performed a genome-wide microscopy-based screening for proteins that form nuclear foci and characterized their localizations using markers of known nuclear bodies. In total, we identified 325 proteins localized to distinct nuclear bodies, including nucleoli (148), promyelocytic leukemia nuclear bodies (38), nuclear speckles (27), paraspeckles (24), Cajal bodies (17), Sam68 nuclear bodies (5), Polycomb bodies (2), and uncharacterized nuclear bodies (64). Functional validation revealed several proteins potentially involved in the assembly of Cajal bodies and paraspeckles. Together, these data establish the first atlas of human proteins in different nuclear bodies and provide key information for research on nuclear bodies." ;
     schema1:identifier "idr0006" ;
@@ -2925,6 +2931,7 @@
     schema1:about obo:NCBITaxon_4932,
         <https://idr.openmicroscopy.org/study/idr0007/#screen-biosample-1> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0007/#person-1> ;
+    schema1:copyrightNotice "Srikumar et al, CC-BY-NC-SA-3.0, 2016" ;
     schema1:datePublished "2016-04-27"^^xsd:date ;
     schema1:description "Like ubiquitin, the small ubiquitin-related modifier (SUMO) proteins can form oligomeric \"chains,\" but the biological functions of these superstructures are not well understood. Here, we created mutant yeast strains unable to synthesize SUMO chains (smt3(allR)) and subjected them to high-content microscopic screening, synthetic genetic array (SGA) analysis, and high-density transcript profiling to perform the first global analysis of SUMO chain function. This comprehensive assessment identified 144 proteins with altered localization or intensity in smt3(allR) cells, 149 synthetic genetic interactions, and 225 mRNA transcripts (primarily consisting of stress- and nutrient-response genes) that displayed a >1.5-fold increase in expression levels. This information-rich resource strongly implicates SUMO chains in the regulation of chromatin. Indeed, using several different approaches, we demonstrate that SUMO chains are required for the maintenance of normal higher-order chromatin structure and transcriptional repression of environmental stress response genes in budding yeast." ;
     schema1:identifier "idr0007" ;
@@ -2997,6 +3004,7 @@
     schema1:about <https://idr.openmicroscopy.org/study/idr0008/#screen-biosample-1>,
         <https://idr.openmicroscopy.org/study/idr0008/#screen-biosample-2> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0008/#person-1> ;
+    schema1:copyrightNotice "Rohn et al, CC-BY-NC-SA-3.0, 2016" ;
     schema1:datePublished "2016-04-27"^^xsd:date ;
     schema1:description "Although a large number of actin-binding proteins and their regulators have been identified through classical approaches, gaps in our knowledge remain. Here, we used genome-wide RNA interference as a systematic method to define metazoan actin regulators based on visual phenotype. Using comparative screens in cultured Drosophila and human cells, we generated phenotypic profiles for annotated actin regulators together with proteins bearing predicted actin-binding domains. These phenotypic clusters for the known metazoan \"actinome\" were used to identify putative new core actin regulators, together with a number of genes with conserved but poorly studied roles in the regulation of the actin cytoskeleton, several of which we studied in detail. This work suggests that although our search for new components of the core actin machinery is nearing saturation, regulation at the level of nuclear actin export, RNA splicing, ubiquitination, and other upstream processes remains an important but unexplored frontier of actin biology." ;
     schema1:identifier "idr0008" ;
@@ -3096,6 +3104,7 @@
         <https://idr.openmicroscopy.org/study/idr0009/#screen-biosample-1>,
         <https://idr.openmicroscopy.org/study/idr0009/#screen-biosample-2> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0009/#person-1> ;
+    schema1:copyrightNotice "Simpson et al, CC-BY-4.0, 2016" ;
     schema1:datePublished "2016-05-26"^^xsd:date ;
     schema1:description "The secretory pathway in mammalian cells has evolved to facilitate the transfer of cargo molecules to internal and cell surface membranes. Use of automated microscopy-based genome-wide RNA interference screens in cultured human cells allowed us to identify 554 proteins influencing secretion. Cloning, fluorescent-tagging and subcellular localization analysis of 179 of these proteins revealed that more than two-thirds localize to either the cytoplasm or membranes of the secretory and endocytic pathways. The depletion of 143 of them resulted in perturbations in the organization of the COPII and/or COPI vesicular coat complexes of the early secretory pathway, or the morphology of the Golgi complex. Network analyses revealed a so far unappreciated link between early secretory pathway function, small GTP-binding protein regulation, actin cytoskeleton organization and EGF-receptor-mediated signalling. This work provides an important resource for an integrative understanding of global cellular organization and regulation of the secretory pathway in mammalian cells." ;
     schema1:identifier "idr0009" ;
@@ -3190,6 +3199,7 @@
     schema1:about obo:NCBITaxon_9606,
         <https://idr.openmicroscopy.org/study/idr0010/#screen-biosample-1> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0010/#person-1> ;
+    schema1:copyrightNotice "Doil et al, CC-BY-4.0, 2016" ;
     schema1:datePublished "2016-05-26"^^xsd:date ;
     schema1:description "DNA double-strand breaks (DSBs) not only interrupt the genetic information, but also disrupt the chromatin structure, and both impairments require repair mechanisms to ensure genome integrity. We showed previously that RNF8-mediated chromatin ubiquitylation protects genome integrity by promoting the accumulation of repair factors at DSBs. Here, we provide evidence that, while RNF8 is necessary to trigger the DSB-associated ubiquitylations, it is not sufficient to sustain conjugated ubiquitin in this compartment. We identified RNF168 as a novel chromatin-associated ubiquitin ligase with an ability to bind ubiquitin. We show that RNF168 interacts with ubiquitylated H2A, assembles at DSBs in an RNF8-dependent manner, and, by targeting H2A and H2AX, amplifies local concentration of lysine 63-linked ubiquitin conjugates to the threshold required for retention of 53BP1 and BRCA1. Thus, RNF168 defines a new pathway involving sequential ubiquitylations on damaged chromosomes and uncovers a functional cooperation between E3 ligases in genome maintenance." ;
     schema1:identifier "idr0010" ;
@@ -3284,6 +3294,7 @@
         <https://idr.openmicroscopy.org/study/idr0011/#screen-biosample-4>,
         <https://idr.openmicroscopy.org/study/idr0011/#screen-biosample-5> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0011/#person-1> ;
+    schema1:copyrightNotice "Ledesma-Fernandez et al, CC-BY-4.0, 2017" ;
     schema1:datePublished "2017-01-18"^^xsd:date ;
     schema1:description "Kinetochores serve both a structural role linking chromosomes to the mitotic spindle and a regulatory role, controlling the timing of mitosis via the spindle assembly checkpoint. To identify proteins that regulate the kinetochore we used a genome-wide fluorescence microscopy approach. We combined an array of mutants of either non-essential gene deletions or essential temperature-sensitive alleles with fluorescently tagged spindle pole bodies (centrosome) and outer kinetochores. Quantitative and qualitative analysis revealed mutants that affect the levels and distribution of kinetochores respectively. These mutants are enriched for those involved in mRNA processing, chromatin organization, DNA replication/repair and mitosis. Our data show that the Pkc1 kinase maintains the kinetochore focus via its ability to prevent cell stress and this phenotype is rescued by an osmotic stabilizer. These data support the notion that kinetochore and microtubule homeostasis are perturbed by the stress response pathways. Hence this observation provides a candidate mechanism for extracellular stress leading to chromosome segregation defects." ;
     schema1:identifier "idr0011" ;
@@ -3485,6 +3496,7 @@
         <https://idr.openmicroscopy.org/study/idr0012/#screen-biosample-2>,
         <https://idr.openmicroscopy.org/study/idr0012/#screen-biosample-3> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0012/#person-1> ;
+    schema1:copyrightNotice "Fuchs et al, CC-BY-NC-ND-4.0, 2016" ;
     schema1:datePublished "2016-12-16"^^xsd:date ;
     schema1:description "Genetic screens for phenotypic similarity have made key contributions to associating genes with biological processes. With RNA interference (RNAi), highly parallel phenotyping of loss-of-function effects in cells has become feasible. One of the current challenges however is the computational categorization of visual phenotypes and the prediction of biological function and processes. In this study, we describe a combined computational and experimental approach to discover novel gene functions and explore functional relationships. We performed a genome-wide RNAi screen in human cells and used quantitative descriptors derived from high-throughput imaging to generate multiparametric phenotypic profiles. We show that profiles predicted functions of genes by phenotypic similarity. Specifically, we examined several candidates including the largely uncharacterized gene DONSON, which shared phenotype similarity with known factors of DNA damage response (DDR) and genomic integrity. Experimental evidence supports that DONSON is a novel centrosomal protein required for DDR signalling and genomic integrity. Multiparametric phenotyping by automated imaging and computational annotation is a powerful method for functional discovery and mapping the landscape of phenotypic responses to cellular perturbations." ;
     schema1:identifier "idr0012" ;
@@ -3621,6 +3633,7 @@
         <https://idr.openmicroscopy.org/study/idr0013/#screen-biosample-1>,
         <https://idr.openmicroscopy.org/study/idr0013/#screen-biosample-2> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0013/#person-1> ;
+    schema1:copyrightNotice "Neumann et al, CC0-1.0, 2016" ;
     schema1:datePublished "2016-04-27"^^xsd:date ;
     schema1:description "Despite our rapidly growing knowledge about the human genome, we do not know all of the genes required for some of the most basic functions of life. To start to fill this gap we developed a high-throughput phenotypic screening platform combining potent gene silencing by RNA interference, time-lapse microscopy and computational image processing. We carried out a genome-wide phenotypic profiling of each of the approximately 21,000 human protein-coding genes by two-day live imaging of fluorescently labelled chromosomes. Phenotypes were scored quantitatively by computational image processing, which allowed us to identify hundreds of human genes involved in diverse biological functions including cell division, migration and survival. As part of the Mitocheck consortium, this study provides an in-depth analysis of cell division phenotypes and makes the entire high-content data set available as a resource to the community." ;
     schema1:identifier "idr0013" ;
@@ -3718,6 +3731,7 @@
     schema1:about obo:NCBITaxon_1427524,
         <https://idr.openmicroscopy.org/study/idr0015/#screen-biosample-1> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0015/#person-1> ;
+    schema1:copyrightNotice "Colin et al, CC-BY-4.0, 2016" ;
     schema1:datePublished "2016-04-27"^^xsd:date ;
     schema1:description "We present a 3D-fluorescence imaging and classification tool for high throughput analysis of microbial eukaryotes in environmental samples. It entails high-content feature extraction that permits accurate automated taxonomic classification and quantitative data about organism ultrastructures and interactions. Using plankton samples from the Tara Oceans expeditions, we validate its applicability to taxonomic profiling and ecosystem analyses, and discuss its potential for future integration of eukaryotic cell biology into evolutionary and ecological studies. This study is subject to the data release policy described here: http://www.embl.de/tara-oceans/start/Tara-Oceans-Data-Release-Policy.pdf" ;
     schema1:identifier "idr0015" ;
@@ -3769,6 +3783,7 @@
         <https://idr.openmicroscopy.org/study/idr0016/#screen-biosample-1> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0016/#person-1>,
         <https://idr.openmicroscopy.org/study/idr0016/#person-2> ;
+    schema1:copyrightNotice "Wawer et al, CC0-1.0, 2016" ;
     schema1:datePublished "2016-12-16"^^xsd:date ;
     schema1:description "Phenotypic profiling attempts to summarize multiparametric, feature-based analysis of cellular phenotypes of each sample so that similarities between profiles reflect similarities between samples. This image set provides a basis for testing image-based profiling methods wrt. to their ability to distinguish the effects of small molecules. The images are of U2OS cells treated with each of over 30,000 known bioactive compounds and labeled with six labels that characterize seven organelles (the cell-painting assay). Gustafsdottir et al. (doi:10.1371/journal.pone.0080999) have developed a multiplex cytological profiling assay that \"paints the cell\" with as many fluorescent markers as possible without compromising our ability to extract rich, quantitative profiles in high throughput. The assay detects seven major cellular components. In a pilot screen of bioactive compounds, the assay detected a range of cellular phenotypes and it clustered compounds with similar annotated protein targets or chemical structure based on cytological profiles. The results demonstrate that the assay captures subtle patterns in the combination of morphological labels, thereby detecting the effects of chemical compounds even though their targets are not stained directly. This image-based assay provides an unbiased approach to characterize compound- and disease-associated cell states to support future probe discovery. Using the cell-painting assay, the Broad Institute has assembled a reference dataset of profiles for U2OS osteosarcoma cells treated with ~30,000 compounds. The compound collection includes DOS-derived compounds (20,000), as well as chemically diverse MLI compounds with biologically diverse performance identified through analysis of PubChem (10,000), and known bioactive compounds to serve as landmarks (2,500). The DOS compounds consist of structurally diverse and stereochemically rich compounds with structures distinct from the current MLSMR. The compound collection also includes 267 distinct compounds nominated by MLPCN Centers from projects for which the Centers would like to identify new chemical series with similar activities." ;
     schema1:identifier "idr0016" ;
@@ -3832,6 +3847,7 @@
     schema1:about obo:NCBITaxon_9606,
         <https://idr.openmicroscopy.org/study/idr0017/#screen-biosample-1> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0017/#person-1> ;
+    schema1:copyrightNotice "Breinig et al, CC-BY-NC-ND-4.0, 2016" ;
     schema1:datePublished "2016-04-27"^^xsd:date ;
     schema1:description "Small molecules often affect multiple targets, elicit off-target effects and induce genotype-specific responses. Chemical genetics, the mapping of the genotype-dependence of a small molecule's effects across a broad spectrum of phenotypes can identify novel mechanisms of action. It can also reveal unanticipated effects and could thereby reduce high attrition rates of small molecule development pipelines. Here, we used high-content screening and image analysis to measure effects of 1280 pharmacologically active compounds on complex phenotypes in isogenic cancer cell lines which harbor activating or inactivating mutations in key oncogenic signaling pathways. Using multiparametric chemical-genetic interaction analysis, we observed phenotypic gene-drug interactions for more than 193 compounds, with many affecting phenotypes other than cell growth. We created a resource termed the Pharmacogenetic Phenome Compendium (PGPC), which enables exploration of drug mode-of-action, detection of potential off-target effects and the generation of hypotheses on drug combinations and synergism. For example, we demonstrate that MEK inhibitors amplify the viability effect of the clinically used anti-alcoholism drug disulfiram and show that the EGFR inhibitor tyrphostin AG555 has off-target activity on the proteasome. Taken together, this study demonstrates how combining multiparametric phenotyping in different genetic backgrounds can be used to predict additional mechanisms of action and to reposition clinically used drugs." ;
     schema1:identifier "idr0017" ;
@@ -3900,6 +3916,7 @@
     schema1:about obo:NCBITaxon_10090,
         <https://idr.openmicroscopy.org/study/idr0018/#experiment-biosample-1> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0018/#person-1> ;
+    schema1:copyrightNotice "Frauke Neff and Jean-Karim Heriche, CC-BY-4.0, 2016" ;
     schema1:datePublished "2016-05-26"^^xsd:date ;
     schema1:description "Histopathology study of 14 tissues from mice with 10 different mitotic gene knockouts. This data was produced as part of Work Package 6 of the BioMedBridges project http://www.biomedbridges.eu/workpackages/wp6 which looked at interoperability of large scale image data sets from different biological scales." ;
     schema1:identifier "idr0018" ;
@@ -3958,6 +3975,7 @@
     schema1:about obo:NCBITaxon_9606,
         <https://idr.openmicroscopy.org/study/idr0019/#screen-biosample-1> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0019/#person-1> ;
+    schema1:copyrightNotice "Sero et al, CC-BY-4.0, 2017" ;
     schema1:datePublished "2017-01-18"^^xsd:date ;
     schema1:description "The aim of the study was to investigate relationships between NF-kappaB nuclear localisation and cell morphology in breast cancer cells." ;
     schema1:identifier "idr0019" ;
@@ -4028,6 +4046,7 @@
     schema1:about obo:NCBITaxon_9606,
         <https://idr.openmicroscopy.org/study/idr0020/#screen-biosample-1> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0020/#person-1> ;
+    schema1:copyrightNotice "Barr et al, CC-BY-4.0, 2017" ;
     schema1:datePublished "2017-01-18"^^xsd:date ;
     schema1:description "We used a sensitised RNAi screen to identify genes that genetically interact with the evolutionary conserved, spindle assembly protein, ch-TOG/CKAP5.  Briefly, we generated cell lines carrying doxycycline inducible non-silencing (NS) shRNA or a ch-TOG specific shRNA.  We performed an siRNA screen in these two backgrounds to find genes that modify the ch-TOG mitotic phenotype." ;
     schema1:identifier "idr0020" ;
@@ -4098,6 +4117,7 @@
         <https://idr.openmicroscopy.org/study/idr0021/#experiment-biosample-1> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0021/#person-1>,
         <https://idr.openmicroscopy.org/study/idr0021/#person-2> ;
+    schema1:copyrightNotice "Lawo et al, CC-BY-4.0, 2016" ;
     schema1:datePublished "2016-05-26"^^xsd:date ;
     schema1:description "The centrosome is the main microtubule organization centre of animal cells. It is composed of a centriole pair surrounded by pericentriolar material (PCM). Traditionally described as amorphous, the architecture of the PCM is not known, although its intricate mode of assembly alludes to the presence of a functional, hierarchical structure. Here we used subdiffraction imaging to reveal organizational features of the PCM. Interphase PCM components adopt a concentric toroidal distribution of discrete diameter around centrioles. Positional mapping of multiple non-overlapping epitopes revealed that pericentrin (PCNT) is an elongated molecule extending away from the centriole. We find that PCM components occupy separable spatial domains within mitotic PCM that are maintained in the absence of microtubule nucleation complexes and further implicate PCNT and CDK5RAP2 in the organization and assembly of PCM. Globally, this work highlights the role of higher-order PCM organization in the regulation of centrosome assembly and function." ;
     schema1:identifier "idr0021" ;
@@ -4172,6 +4192,7 @@
         <https://idr.openmicroscopy.org/study/idr0022/#screen-biosample-1>,
         <https://idr.openmicroscopy.org/study/idr0022/#screen-biosample-2> ;
     schema1:author <https://orcid.org/0000-0002-9041-0075> ;
+    schema1:copyrightNotice "Koedoot et al., CC-BY-4.0, 2019" ;
     schema1:datePublished "2019-09-17"^^xsd:date ;
     schema1:description "Triple-negative breast cancer (TNBC) is an aggressive and highly metastatic breast cancer subtype. Enhanced TNBC cell motility is a prerequisite of TNBC cell dissemination. Here, we apply an imaging-based RNAi phenotypic cell migration screen using two highly motile TNBC cell lines (Hs578T and MDA-MB-231) to provide a repository of signaling determinants that functionally drive TNBC cell motility." ;
     schema1:identifier "idr0022" ;
@@ -4235,6 +4256,7 @@
         <https://idr.openmicroscopy.org/study/idr0023/#experiment-biosample-1> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0023/#person-1>,
         <https://idr.openmicroscopy.org/study/idr0023/#person-2> ;
+    schema1:copyrightNotice "Szymborska et al, CC-BY-4.0, 2016" ;
     schema1:datePublished "2016-05-26"^^xsd:date ;
     schema1:description "Much of life's essential molecular machinery consists of large protein assemblies that currently pose challenges for structure determination. A prominent example is the nuclear pore complex (NPC), for which the organization of its individual components remains unknown. By combining stochastic super-resolution microscopy, to directly resolve the ringlike structure of the NPC, with single particle averaging, to use information from thousands of pores, we determined the average positions of fluorescent molecular labels in the NPC with a precision well below 1 nanometer. Applying this approach systematically to the largest building block of the NPC, the Nup107-160 subcomplex, we assessed the structure of the NPC scaffold. Thus, light microscopy can be used to study the molecular organization of large protein complexes in situ in whole cells." ;
     schema1:identifier "idr0023" ;
@@ -4300,6 +4322,7 @@
         <https://idr.openmicroscopy.org/study/idr0025/#screen-biosample-1> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0025/#person-1>,
         <https://idr.openmicroscopy.org/study/idr0025/#person-2> ;
+    schema1:copyrightNotice "Stadler et al, CC-BY-SA-3.0, 2017" ;
     schema1:datePublished "2017-03-16"^^xsd:date ;
     schema1:description "We have developed a platform for validation of antibody binding and protein subcellular localization data obtained from immunofluorescence using siRNA technology combined with automated confocal microscopy and image analysis. By combining the siRNA technology with automated sample preparation, automated imaging and quantitative image analysis, a high-throughput assay has been set-up to enable confirmation of accurate protein binding and localization in a systematic manner. Here, we describe the analysis and validation of the subcellular location of 65 human proteins, targeted by 75 antibodies and silenced by 130 siRNAs. A large fraction of (80%) the subcellular locations, including locations of several previously uncharacterized proteins, could be confirmed by the significant down-regulation of the antibody signal after the siRNA silencing. A quantitative analysis was set-up using automated image analysis to facilitate studies of targets found in more than one compartment. The results obtained using the platform demonstrate that siRNA silencing in combination with quantitative image analysis of antibody signals in different compartments of the cells is an attractive approach for ensuring accurate protein localization as well as antibody binding using immunofluorescence. With a large fraction of the human proteome still unexplored, we suggest this approach to be of great importance under the continued work of mapping the human proteome on a subcellular level." ;
     schema1:identifier "idr0025" ;
@@ -4381,6 +4404,7 @@
     schema1:about obo:NCBITaxon_10090,
         <https://idr.openmicroscopy.org/study/idr0026/#experiment-biosample-1> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0026/#person-1> ;
+    schema1:copyrightNotice "Weigelin et al, CC-BY-4.0, 2017" ;
     schema1:datePublished "2017-04-17"^^xsd:date ;
     schema1:description "Cancer immunotherapy is undergoing significant progress due to recent clinical successes by refined adoptive T-cell transfer and immunostimulatory monoclonal Ab (mAbs). B16F10-derived OVA-expressing mouse melanomas resist curative immunotherapy with either adoptive transfer of activated anti-OVA OT1 CTLs or agonist anti-CD137 (4-1BB) mAb. However, when acting in synergistic combination, these treatments consistently achieve tumor eradication. Tumor-infiltrating lymphocytes that accomplish tumor rejection exhibit enhanced effector functions in both transferred OT-1 and endogenous cytotoxic T lymphocytes (CTLs). This is consistent with higher levels of expression of eomesodermin in transferred and endogenous CTLs and with intravital live-cell two-photon microscopy evidence for more efficacious CTL-mediated tumor cell killing. Anti-CD137 mAb treatment resulted in prolonged intratumor persistence of the OT1 CTL-effector cells and improved function with focused and confined interaction kinetics of OT-1 CTL with target cells and increased apoptosis induction lasting up to six days postadoptive transfer. The synergy of adoptive T-cell therapy and agonist anti-CD137 mAb thus results from in vivo enhancement and sustainment of effector functions." ;
     schema1:identifier "idr0026" ;
@@ -4444,6 +4468,7 @@
         <https://idr.openmicroscopy.org/study/idr0027/#experiment-biosample-1> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0027/#person-1>,
         <https://idr.openmicroscopy.org/study/idr0027/#person-2> ;
+    schema1:copyrightNotice "Dickerson et al, CC-BY-4.0, 2016" ;
     schema1:datePublished "2016-11-01"^^xsd:date ;
     schema1:description "We established a work flow for measuring the distance between two fluorescently tagged, syntenic gene loci with a mean measurement error of 63 nm.  In general, physical separation was observed to increase with increasing genomic separations.  However, the extent to which chromatin is compressed varies for different genomic regions. No correlation was observed between compaction and the distribution of chromatin markers from genomic datasets or with contacts identified using capture based approaches. Variation in spatial separation was also observed within cells over time and between cells.  Differences in the conformation of individual loci can persist for minutes in individual cells. Separation of reporter loci was found to be similar in related and unrelated daughter cell pairs." ;
     schema1:identifier "idr0027" ;
@@ -4532,6 +4557,7 @@
         <https://idr.openmicroscopy.org/study/idr0028/#screen-biosample-3>,
         <https://idr.openmicroscopy.org/study/idr0028/#screen-biosample-4> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0028/#person-1> ;
+    schema1:copyrightNotice "Pascual Vargas et al, CC-BY-4.0, 2016" ;
     schema1:datePublished "2016-11-01"^^xsd:date ;
     schema1:description "In order to metastasize triple negative breast cancer (TNBC) must make dynamic changes in cell shape. The shape of all eukaryotic cells is regulated by Rho GTP Exchange Factors (RhoGEFs), which activate Rho-family GTPases in response to mechanical and informational cues. In contrast, Rho GTPase-activating proteins (RhoGAPs) inhibit Rho GTPases. However, which RhoGEFs and RhoGAPS couple TNBC cell shape to changes in their environment is very poorly understood. Moreover, whether the activity of particular RhoGEFs and RhoGAPs become dysregulated as cells evolve the ability to metastasise is not clear. Towards the ultimate goal of identifying RhoGEFs and RhoGAPs that are essential for TNBC metastasis, we performed an RNAi screen to isolate RhoGEFs and RhoGAPs that contribute to the morphogenesis of the highly metastatic TNBC cell line LM2, and its less-metastatic parental cell line MDA-MB-231. For ~6 million cells from each cell line we measured 127 different features following the depletion of 142 genes. Using a linear classifier scheme we also describe the morphological heterogeneity of each gene-depleted population." ;
     schema1:identifier "idr0028" ;
@@ -4692,6 +4718,7 @@
     schema1:about obo:NCBITaxon_9606,
         <https://idr.openmicroscopy.org/study/idr0030/#screen-biosample-1> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0030/#person-1> ;
+    schema1:copyrightNotice "Sero et al, CC-BY-4.0, 2017" ;
     schema1:datePublished "2017-03-16"^^xsd:date ;
     schema1:description "Mechanical signals from the extracellular matrix and cellular geometry regulate the nuclear translocation of transcriptional regulators such as Yes-Associated Protein (YAP). Elucidating how physical signals control the activity of mechanosensitive proteins poses a technical challenge, because perturbations that affect cell shape may also affect protein localization indirectly. Here we present an approach that mitigates confounding effects of cell shape changes, allowing us to identify direct regulators of YAP localization. This method uses single cell image analysis and statistical models that exploit the naturally occurring heterogeneity of cellular populations. Through systematic depletion of all human kinases, Rho family GTPases, GEFs, and GAPs, and targeted chemical perturbations we found that _-PIX, a Rac1/Ccd42 GEF, and PAK2, a Rac1/Cdc42 effector, drive both YAP activation and cell-ECM adhesion turnover during cell spreading. Our observations suggest that coupling YAP to adhesion dynamics acts as a mechano-timer, allowing cells to rapidly tune gene expression in response to physical signals." ;
     schema1:identifier "idr0030" ;
@@ -4817,6 +4844,7 @@
     schema1:about obo:NCBITaxon_9606,
         <https://idr.openmicroscopy.org/study/idr0033/#screen-biosample-1> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0033/#person-1> ;
+    schema1:copyrightNotice "Rohban et al, CC-BY-4.0, 2017" ;
     schema1:datePublished "2017-03-16"^^xsd:date ;
     schema1:description "We hypothesized that human genes and disease-associated alleles might be systematically functionally annotated using morphological profiling of cDNA constructs, via a microscopy-based Cell Painting assay. Indeed, 50% of the 220 tested genes yielded detectable morphological profiles, which grouped into biologically meaningful gene clusters consistent with known functional annotation (e.g., the RAS-RAF-MEK-ERK cascade). We used novel subpopulation-based visualization methods to interpret the morphological changes for specific clusters. This unbiased morphologic map of gene function revealed TRAF2/c-REL negative regulation of YAP1/WWTR1-responsive pathways. We confirmed this discovery of functional connectivity between the NF-kB pathway and Hippo pathway effectors at the transcriptional level, thereby expanding knowledge of these two signaling pathways that critically regulate tumor initiation and progression. We make the images and raw data publicly available, providing an initial morphological map of major biological pathways for future study." ;
     schema1:identifier "idr0033" ;
@@ -4891,6 +4919,7 @@
     schema1:about obo:NCBITaxon_9606,
         <https://idr.openmicroscopy.org/study/idr0034/#screen-biosample-1> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0034/#person-1> ;
+    schema1:copyrightNotice "Kilpinen et al, CC-BY-4.0, 2017" ;
     schema1:datePublished "2017-05-10"^^xsd:date ;
     schema1:description "Induced pluripotent stem cell (iPSC) technology has enormous potential to provide improved cellular models of human disease. However, variable genetic and phenotypic characterisation of many existing iPSC lines limits their potential use for research and therapy. Here, we describe the systematic generation, genotyping and phenotyping of 522 open access human iPSCs derived from 189 healthy male and female individuals as part of the Human Induced Pluripotent Stem Cells Initiative (HipSci: http://www.hipsci.org). Our study provides a comprehensive picture of the major sources of genetic and phenotypic variation in iPSCs and establishes their suitability for use in genetic studies of complex human traits and cancer. Using a combination of genome- wide analyses we find that 5-25% of the variation in different iPSC phenotypes, including differentiation capacity and cellular morphology, arises from differences between individuals. We also assess the phenotypic effects of rare, genomic copy number mutations that are recurrently seen following iPSC reprogramming and present an initial map of common regulatory variants affecting the transcriptome of pluripotent cells in humans." ;
     schema1:identifier "idr0034" ;
@@ -4954,6 +4983,7 @@
     schema1:about obo:NCBITaxon_9606,
         <https://idr.openmicroscopy.org/study/idr0035/#screen-biosample-1> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0035/#person-1> ;
+    schema1:copyrightNotice "The images and ground truth are copyright AstraZeneca Pharmaceuticals., CC-BY-4.0, 2018" ;
     schema1:datePublished "2018-02-12"^^xsd:date ;
     schema1:description "The application of high-content imaging in conjunction with multivariate clustering techniques has recently shown value in the confirmation of cellular activity and further characterization of drug mode of action following pharmacologic perturbation. However, such practical examples of phenotypic profiling of drug response published to date have largely been restricted to cell lines and phenotypic response markers that are amenable to basic cellular imaging. As such, these approaches preclude the analysis of both complex heterogeneous phenotypic responses and subtle changes in cell morphology across physiologically relevant cell panels. Here, we describe the application of a cell-based assay and custom designed image analysis algorithms designed to monitor morphologic phenotypic response in detail across distinct cancer cell types. We further describe the integration of these methods with automated data analysis workflows incorporating principal component analysis, Kohonen neural networking, and kNN classification to enable rapid and robust interrogation of such data sets. We show the utility of these approaches by providing novel insight into pharmacologic response across four cancer cell types, Ovcar3, MiaPaCa2, and MCF7 cells wild-type and mutant for p53. These methods have the potential to drive the development of a new generation of novel therapeutic classes encompassing pharmacologic compositions or polypharmacology in appropriate disease context.  Note: The images in idr0035/screenA were generated by Caie et al, 2010 and are from MCF7 wild-type cells only.  They were obtained from the Broad BioImage Benchmark Collection image set BBBC021v1. (https://data.broadinstitute.org/bbbc/BBBC021/) submitted by Ljosa et al, 2013.  The Mechanism of Action ground truth data comes from Ljosa et al, 2013." ;
     schema1:identifier "idr0035" ;
@@ -5006,6 +5036,7 @@
         <https://idr.openmicroscopy.org/study/idr0036/#screen-biosample-1> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0036/#person-1>,
         <https://idr.openmicroscopy.org/study/idr0036/#person-2> ;
+    schema1:copyrightNotice "Waived by Anne Carpenter, CC0-1.0, 2017" ;
     schema1:datePublished "2017-09-22"^^xsd:date ;
     schema1:description "Computational methods for image-based profiling are under active development, but their success hinges on assays that can capture a wide range of phenotypes. We have developed a multiplex cytological profiling assay that \"paints the cell\" with as many fluorescent markers as possible without compromising our ability to extract rich, quantitative profiles in high throughput. The assay detects seven major cellular components. In a pilot screen of bioactive compounds, the assay detected a range of cellular phenotypes and it clustered compounds with similar annotated protein targets or chemical structure based on cytological profiles. The results demonstrate that the assay captures subtle patterns in the combination of morphological labels, thereby detecting the effects of chemical compounds even though their targets are not stained directly. This image-based assay provides an unbiased approach to characterize compound- and disease-associated cell states to support future probe discovery. Note: This image set is BBBC022v1 [Gustafsdottir et al., PLOS ONE, 2013], obtained from the Broad Bioimage Benchmark Collection [Ljosa et al., Nature Methods, 2012]." ;
     schema1:identifier "idr0036" ;
@@ -5068,6 +5099,7 @@
     schema1:about obo:NCBITaxon_9606,
         <https://idr.openmicroscopy.org/study/idr0037/#screen-biosample-1> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0037/#person-1> ;
+    schema1:copyrightNotice "Vigilante et al, CC-BY-4.0, 2019" ;
     schema1:datePublished "2019-02-26"^^xsd:date ;
     schema1:description "Large cohorts of human induced pluripotent stem cells (iPSCs) from healthy donors are a potentially powerful tool for investigating the relationship between genetic variants and cellular behavior. Here, we integrate high content imaging of cell shape, proliferation, and other phenotypes with gene expression and DNA sequence datasets from over 100 human iPSC lines. By applying a dimensionality reduction approach, Probabilistic Estimation of Expression Residuals (PEER), we extracted factors that captured the effects of intrinsic (genetic concordance between different cell lines from the same donor) and extrinsic (cell responses to different fibronectin concentrations) conditions. We identify genes that correlate in expression with intrinsic and extrinsic PEER factors and associate outlier cell behavior with genes containing rare deleterious non-synonymous SNVs. Our study, thus, establishes a strategy for examining the genetic basis of inter-individual variability in cell behavior." ;
     schema1:identifier "idr0037" ;
@@ -5129,6 +5161,7 @@
         <https://idr.openmicroscopy.org/study/idr0038/#experiment-biosample-3> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0038/#person-1>,
         <https://idr.openmicroscopy.org/study/idr0038/#person-2> ;
+    schema1:copyrightNotice "Held et al, CC-BY-4.0, 2017" ;
     schema1:datePublished "2017-12-04"^^xsd:date ;
     schema1:description "We have adapted the mouse kidney rudiment assay to generate renal organoids. We have immunostained endpoint fixed organoids and E13.5 embryonic kidneys and imaged them with a light sheet fluorescent microscope. The data generated for this manuscript is made accessible here and includes immunofluorescence staining after end point fixation revealing that organotypic structures develop within the organoids. Furthermore, we have performed an assay to ascertain tubular functionality. Following, we have imaged organoids containing Wt1-GFP knock-in cells live on the light sheet microscope to evaluate the ability to follow cells long-term and generate previously unavailable quantitative tracking data.\\n\\nidr0038 consists of a set of 3 experiments: experimentA (immunofluorescence staining after end point fixation), experimentB (assays to ascertain tubular functionality) and experimentC (Wt1-GFP knock-in cells followed long term)." ;
     schema1:identifier "idr0038" ;
@@ -5237,6 +5270,7 @@
     schema1:about obo:NCBITaxon_4932,
         <https://idr.openmicroscopy.org/study/idr0040/#experiment-biosample-1> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0040/#person-1> ;
+    schema1:copyrightNotice "Pelet et al, CC-BY-4.0, 2018" ;
     schema1:datePublished "2018-04-12"^^xsd:date ;
     schema1:description "During development, morphogens provide extracellular cues allowing cells to select a specific fate by inducing complex transcriptional programs. The mating pathway in budding yeast offers simplified settings to understand this process. Pheromone secreted by the mating partner triggers the activity of a MAPK pathway, which results in the expression of hundreds of genes. Using a dynamic expression reporter, we quantified the kinetics of gene expression in single cells upon exogenous pheromone stimulation and in the physiological context of mating. In both conditions, we observed striking differences in the timing of induction of mating-responsive promoters. Biochemical analyses and generation of synthetic promoter variants demonstrated how the interplay between transcription factor binding and nucleosomes contribute to determine the kinetics of transcription in a simplified cell-fate decision system." ;
     schema1:identifier "idr0040" ;
@@ -5277,6 +5311,7 @@
     schema1:about obo:NCBITaxon_9606,
         <https://idr.openmicroscopy.org/study/idr0041/#experiment-biosample-1> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0041/#person-1> ;
+    schema1:copyrightNotice "Cai et al, CC-BY-4.0, 2018" ;
     schema1:datePublished "2018-04-12"^^xsd:date ;
     schema1:description "Using the cell and nuclear boundaries as landmarks, we generated a 4D image data-driven, canonical model of a human mitotic cell. This model is used to integrate the dynamic distribution of 3D concentration data for many mitotic proteins imaged by calibrated fluorescence microscopy in a large number of dividing cells. Analysis of the data allows to automatically identify sub-cellular structures and quantify the timing and magnitude of protein fluxes between structures, as well as predicting dynamic multi-molecular biological processes such as organelle assembly and disassembly. The integrated experimental and computational method enables building a 4D protein atlas of the dividing human cell." ;
     schema1:identifier "idr0041" ;
@@ -5343,6 +5378,7 @@
     schema1:about obo:NCBITaxon_9606,
         <https://idr.openmicroscopy.org/study/idr0042/#experiment-biosample-1> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0042/#person-1> ;
+    schema1:copyrightNotice "Nirschl et al, CC-BY-4.0, 2018" ;
     schema1:datePublished "2018-04-12"^^xsd:date ;
     schema1:description "Cardiac histopathology from human patients with clinical heart failure or cadaveric donor hearts from patients without clinical heart failure." ;
     schema1:identifier "idr0042" ;
@@ -5388,6 +5424,7 @@
     schema1:about obo:NCBITaxon_9606,
         <https://idr.openmicroscopy.org/study/idr0043/#experiment-biosample-1> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0043/#person-1> ;
+    schema1:copyrightNotice "Uhlen et al, https://v18.proteinatlas.org/about/licence, 2018" ;
     schema1:datePublished "2018-11-01"^^xsd:date ;
     schema1:description "Sequencing the human genome gave new insights into human biology and disease. However, the ultimate goal is to understand the dynamic expression of each of the approximately 20,000 protein-coding genes and the function of each protein. Uhlen et al. now present a map of protein expression across 32 human tissues. They not only measured expression at an RNA level, but also used antibody profiling to precisely localize the corresponding proteins." ;
     schema1:identifier "idr0043" ;
@@ -5444,6 +5481,7 @@
     schema1:author <https://idr.openmicroscopy.org/study/idr0044/#person-1>,
         <https://idr.openmicroscopy.org/study/idr0044/#person-2>,
         <https://idr.openmicroscopy.org/study/idr0044/#person-3> ;
+    schema1:copyrightNotice "McDole et al., CC-BY-4.0, 2018" ;
     schema1:datePublished "2018-11-29"^^xsd:date ;
     schema1:description "The mouse embryo has long been central to the study of mammalian development; however, elucidating the cell behaviors governing gastrulation and the formation of tissues and organs remains a fundamental challenge. A major obstacle is the lack of live imaging and image analysis technologies capable of systematically following cellular dynamics across the developing embryo. We developed a light-sheet microscope that adapts itself to the dramatic changes in size, shape and optical properties of the post-implantation mouse embryo and captures its development from gastrulation to early organogenesis at the cellular level. We furthermore developed a computational framework for reconstructing long-term cell tracks, cell divisions, dynamic fate maps and maps of tissue morphogenesis across the entire embryo. By jointly analyzing cellular dynamics in multiple embryos registered in space and time, we built a dynamic atlas of post-implantation mouse development that, together with our microscopy and computational methods, is provided as a resource." ;
     schema1:identifier "idr0044" ;
@@ -5519,6 +5557,7 @@
         obo:NCBITaxon_186842,
         <https://idr.openmicroscopy.org/study/idr0045/#experiment-biosample-1> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0045/#person-1> ;
+    schema1:copyrightNotice "Reichmann et al, CC-BY-4.0, 2018" ;
     schema1:datePublished "2018-08-29"^^xsd:date ;
     schema1:description "At the beginning of mammalian life the genetic material from each parent meets when the fertilized egg divides. It was previously thought that a single microtubule spindle is responsible to spatially combine the two genomes and then segregate them to create the two-cell embryo. Utilizing light-sheet microscopy, we showed that two bipolar spindles form in the zygote, which independently congress the maternal and paternal genomes. These two spindles aligned their poles prior to anaphase but kept the parental genomes apart during the first cleavage. This spindle assembly mechanism provides a potential rationale for erroneous divisions into more than two blastomeric nuclei observed in mammalian zygotes and reveals the mechanism behind the observation that parental genomes occupy separate nuclear compartments in the two-cell embryo." ;
     schema1:identifier "idr0045" ;
@@ -5574,6 +5613,7 @@
     schema1:about obo:NCBITaxon_4932,
         <https://idr.openmicroscopy.org/study/idr0047/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0002-8928-6425> ;
+    schema1:copyrightNotice "Neuert et al., CC-BY-4.0, 2019" ;
     schema1:datePublished "2019-01-16"^^xsd:date ;
     schema1:description "We report a comprehensive single cell dataset of spatial distributions of nuclear and cytoplasmic mRNA as a function of time. We measure mRNA expression with single molecule RNA fluorescent in-situ hybridization microscopy in the yeast model organism Saccharomyces cerevisiae in tens of thousands of cells. The resulting dataset contains the discrete number of mRNA molecules in the nucleus and the cytoplasm for sixteen time points, two genes and two stress conditions each in biological duplicates or triplicates. We present these datasets as population means, fraction of cells above basal mRNA expression (ON-cells), the variance normalized by the expression mean (Fano factor), marginal probability of nuclear and cytoplasmic mRNA, and the joint probability of nuclear and cytoplasmic RNA expression. The reuse potential are in three areas: (1) development of discreate single cell modelling approaches, (2) building predictive models to study fundamental processes in transcription regulation, (3) development of single cell image processing approaches not possible with continuous, non-spatial datasets of low temporal resolution." ;
     schema1:identifier "idr0047" ;
@@ -5630,6 +5670,7 @@
     schema1:author <https://orcid.org/0000-0002-2082-8214>,
         <https://orcid.org/0000-0003-3079-4908>,
         <https://orcid.org/NA> ;
+    schema1:copyrightNotice "Abdeladim et al, CC-BY-NC-4.0, 2020" ;
     schema1:datePublished "2020-08-12"^^xsd:date ;
     schema1:description "Large-scale microscopy approaches are transforming brain imaging, but currently lack efficient multicolor contrast modalities. We introduce chromatic multiphoton serial (ChroMS) microscopy, a method integrating one‐shot multicolor multiphoton excitation through wavelength mixing and serial block-face image acquisition. This approach provides organ-scale micrometric imaging of spectrally distinct fluorescent proteins and label-free third harmonic generation (THG) / coherent anti-Stokes Raman scattering (CARS) nonlinear  contrasts, with constant micrometer-scale resolution and sub-micron channel registration over the entire imaged volume. We demonstrate tridimensional (3D) multicolor imaging over several cubic millimeters as well as brain-wide serial 2D multichannel imaging. We  illustrate the strengths of this method through color-based 3D analysis of astrocyte morphology and contacts in the mouse cerebral cortex, tracing of densely labeled pyramidal neurons and multiplexed whole-brain mapping of axonal projections labeled with distinct tracers." ;
     schema1:identifier "idr0048" ;
@@ -5684,6 +5725,7 @@
     schema1:about obo:NCBITaxon_9606,
         <https://idr.openmicroscopy.org/study/idr0050/#experiment-biosample-1> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0050/#person-1> ;
+    schema1:copyrightNotice "Springer et al, CC-BY-4.0, 2019" ;
     schema1:datePublished "2019-02-07"^^xsd:date ;
     schema1:description "In mammalian cells, actin, microtubules, and various types of cytoplasmic intermediate filaments respond to external stretching. Here, we investigated the underlying processes in endothelial cells plated on soft substrates from silicone elastomer. After cyclic stretch (0.13 Hz, 14% strain amplitude) for periods ranging from 5 min to 8 h, cells were fixed and double-stained for microtubules and either actin or vimentin. Cell images were analyzed by a two-step routine. In the first step, micrographs were segmented for potential fibrous structures. In the second step, the resulting binary masks were auto- or cross-correlated. Autocorrelation of segmented images provided a sensitive and objective measure of orientational and translational order of the different cytoskeletal systems. Aligning of correlograms from individual cells removed the influence of only partial alignment between cells and enabled determination of intrinsic cytoskeletal order. We found that cyclic stretching affected the actin cytoskeleton most, microtubules little, and vimentin mostly only via reorientation of the whole cell. The similarity, i.e., cross-correlation, between vimentin and microtubules was much higher than the one between actin and microtubules. Moreover, prolonged cyclic stretching slightly decoupled the cytoskeletal systems as it reduced the cross-correlations in both cases. Finally, actin and microtubules were more correlated at peripheral regions of cells whereas vimentin and microtubules correlated more in central regions." ;
     schema1:identifier "idr0050" ;
@@ -5736,6 +5778,7 @@
     schema1:about obo:NCBITaxon_7955,
         <https://idr.openmicroscopy.org/study/idr0051/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0001-7838-839X> ;
+    schema1:copyrightNotice "Steventon et al., CC-BY-4.0, 2018" ;
     schema1:datePublished "2018-11-29"^^xsd:date ;
     schema1:description "Lightsheet microscopy has been previously used to image and directly study the process of gastrulation in a zebrafish embryo. Before now it was not possible to use this method to study late-stage somatogenesis, due to the movement of the embryo, resulting in displacement from the field of view. Here we achieve 4D lightsheet imaging with online, image based registration to maintain the field of view during long timelapses, with emphasis on the tailbud. The zebrafish tailbud is of special interest as it contains a population of bipotent progenitor cells, neuromesodermal progenitors (NMps), competent to enter either the mesodermal or neural lineages. This dataset provides in toto tracking of the tailbud of the developing zebrafish whilst also demonstrating the potential of online tracking during developing to maintain high magnification images whilst tracking a growing object." ;
     schema1:identifier "idr0051" ;
@@ -5795,6 +5838,7 @@
         <https://idr.openmicroscopy.org/study/idr0052/#experiment-biosample-2>,
         <https://idr.openmicroscopy.org/study/idr0052/#experiment-biosample-3> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0052/#person-1> ;
+    schema1:copyrightNotice "Walther et al., CC-BY-4.0, 2019" ;
     schema1:datePublished "2019-04-15"^^xsd:date ;
     schema1:description "Homozygous genome editing was used to fluorescently tag subunits of Condensin I and II in HeLa cells. Absolute abundance, spacing, and dynamic localization of the tagged proteins during mitosis was recorded by fluorescence correlation spectroscopy (FSC)-calibrated live-cell imaging and superresolution microscopy." ;
     schema1:identifier "idr0052" ;
@@ -5914,6 +5958,7 @@
         obo:NCBITaxon_9606,
         <https://idr.openmicroscopy.org/study/idr0053/#experiment-biosample-1> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0053/#person-1> ;
+    schema1:copyrightNotice "Faas et al., CC-BY-NC-SA-3.0, 2019" ;
     schema1:datePublished "2019-01-16"^^xsd:date ;
     schema1:description "A key obstacle in uncovering the orchestration between molecular and cellular events is the vastly different length scales on which they occur. We describe here a methodology for ultrastructurally mapping regions of cells and tissue as large as 1 mm(2) at nanometer resolution. Our approach employs standard transmission electron microscopy, rapid automated data collection, and stitching to create large virtual slides. It greatly facilitates correlative light-electron microscopy studies to relate structure and function and provides a genuine representation of ultrastructural events. The method is scalable as illustrated by slides up to 281 gigapixels in size. Here, we applied virtual nanoscopy in a correlative light-electron microscopy study to address the role of the endothelial glycocalyx in protein leakage over the glomerular filtration barrier, in an immunogold labeling study of internalization of oncolytic reovirus in human dendritic cells, in a cryo-electron microscopy study of intact vitrified mouse embryonic cells, and in an ultrastructural mapping of a complete zebrafish embryo slice." ;
     schema1:identifier "idr0053" ;
@@ -5967,6 +6012,7 @@
     schema1:about obo:NCBITaxon_9606,
         <https://idr.openmicroscopy.org/study/idr0054/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0003-1795-1921> ;
+    schema1:copyrightNotice "Durand et al., CC-BY-4.0, 2019" ;
     schema1:datePublished "2019-03-19"^^xsd:date ;
     schema1:description "We analysed the in situ localisation of immune cell types in human tonsils using imaging mass cytometry." ;
     schema1:identifier "idr0054" ;
@@ -6030,6 +6076,7 @@
         <https://idr.openmicroscopy.org/study/idr0056/#screen-biosample-3> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0056/#person-2>,
         <https://orcid.org/0000-0001-6691-3396> ;
+    schema1:copyrightNotice "Stojic et al, CC-BY-4.0, 2020" ;
     schema1:datePublished "2020-03-03"^^xsd:date ;
     schema1:description "Long noncoding RNAs (lncRNAs) regulate many biological processes and have been implicated in development and disease pathogenesis. The exact function for the large majority of lncRNAs is still unknown. To address whether lncRNAs could play a role in cell division, we combined a microscopy-based high-content RNAi screen with dedicated image analysis workflows to identify lncRNAs that regulate mitotic progression, chromosome segregation and cytokinesis. By targeting over 2000 lncRNAs in HeLa cells, we discovered an assortment of new lncRNAs with unexplored functions in maintenance of genome stability." ;
     schema1:identifier "idr0056" ;
@@ -6159,6 +6206,7 @@
     schema1:about obo:NCBITaxon_9606,
         <https://idr.openmicroscopy.org/study/idr0061/#screen-biosample-1> ;
     schema1:author <https://orcid.org/0000-0001-5673-4239> ;
+    schema1:copyrightNotice "Wolf et al., CC-BY-4.0, 2019" ;
     schema1:datePublished "2019-07-03"^^xsd:date ;
     schema1:description "Proper spindle positioning is crucial for spatial cell division control. Spindle positioning in human cells relies on a ternary complex comprising Gαi1-3, LGN and NuMA, which anchors dynein at the cell cortex, thus enabling pulling forces to be exerted on astral microtubules. We developed a live imaging siRNA-based screen using stereotyped fibronectin micropatterns to uncover components modulating spindle positioning in human cells, testing 1280 genes, including all kinases and phosphatases. We thus discover 16 components whose inactivation dramatically perturbs spindle positioning, including Tyrosine receptor kinase 3 (TYRO3) and cyclin G associated kinase (GAK). TYRO3 depletion results in excess NuMA and dynein at the cell cortex during metaphase, as upon blocking Phosphatidylinositol 3-kinase (PI3K), which TYRO3 activates. Furthermore, depletion of GAK leads to impaired astral microtubules, as upon down-regulation of Clathrin, with which GAK interacts. Overall, our work uncovers novel components and mechanisms governing spindle positioning in human cells." ;
     schema1:identifier "idr0061" ;
@@ -6213,6 +6261,7 @@
     schema1:about obo:NCBITaxon_10090,
         <https://idr.openmicroscopy.org/study/idr0062/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0002-9295-237X> ;
+    schema1:copyrightNotice "Blin et al., CC-BY-4.0, 2019" ;
     schema1:datePublished "2019-06-17"^^xsd:date ;
     schema1:description "Methods for measuring the properties of individual cells within their native 3D environment will enable a deeper understanding of embryonic development, tissue regeneration, and tumorigenesis. However current methods for segmenting nuclei in 3D tissues are not designed for situations where nuclei are densely packed, non- spherical, heterogeneous in shape, size, or texture, all of which are true of many embryonic and adult tissue types as well as in many cases for cells differentiating in culture. Here we overcome this bottleneck by devising a novel method based on labelling the nuclear envelope (NE) and automatically distinguishing individual nuclei using a tree structured ridge tracing method followed by shape ranking according to a trained classifier. The method is fast and makes it possible to process images that are larger than the computer’s memory. We consistently obtain accurate segmentation rates of >90% even for challenging images such as mid-gestation embryos or 3D cultures. We provide a 3D editor and inspector for the manual curation of the segmentation results as well as a program to assess the accuracy of the segmentation. We have also generated a live reporter of the NE that can be used to track live cells in three dimensions over time. We use this to monitor the history of cell interactions and occurrences of neighbour exchange within cultures of pluripotent cells during differentiation. We provide these tools in an open-access user-friendly format." ;
     schema1:identifier "idr0062" ;
@@ -6264,6 +6313,7 @@
         <https://orcid.org/0000-0002-6767-1429>,
         <https://orcid.org/0000-0003-0511-0084>,
         <https://orcid.org/0000-0003-2931-5412> ;
+    schema1:copyrightNotice "Newman et al, CC-BY-4.0, 2021" ;
     schema1:datePublished "2021-04-29"^^xsd:date ;
     schema1:description "The pairing of homologous chromosomes in meiosis I is essential for sexual reproduction and is mediated, in part, by the formation and repair of Spo11-induced DNA double strand breaks (DSBs). In budding yeast, each cell receives 150-200 DSBs, yet only a fraction go on to form crossover products. How and why the cell initially coordinates so many interactions along each chromosome is not well understood. Using a fluorescent reporter-operator system (FROS), we measure the kinetics of interacting homologous loci at various stages of meiosis. We find that while tagged loci undergo considerable motion throughout prophase I, they are constrained in how far they can diffuse from their homolog pair. This effective tethering radius decreases over the course of meiosis in a DSB-dependent manner. We develop a theoretical model that captures the biological contributions of centromere attachment to the nuclear envelope, homolog pairing, and nuclear confinement. With this model, we demonstrate that the experimentally observed heterogeneity in single-cell behavior and the effective tethering between loci is captured for two polymers forming randomly-spaced linkages. The small number of connections required to reproduce our data demonstrates that a single linkage site between homologous chromosomes can constrain the movement of loci up to hundreds of kilobases away." ;
     schema1:identifier "idr0063" ;
@@ -6329,6 +6379,7 @@
     schema1:about obo:NCBITaxon_10090,
         <https://idr.openmicroscopy.org/study/idr0064/#screen-biosample-1> ;
     schema1:author <https://orcid.org/0000-0002-1546-4030> ;
+    schema1:copyrightNotice "Goglia et al, CC-BY-4.0, 2020" ;
     schema1:datePublished "2020-04-27"^^xsd:date ;
     schema1:description "Complex, time-varying responses have been observed widely in cell signaling, but how specific dynamics are generated or regulated is largely unknown. One major obstacle has been that high-throughput screens for identifying pathway components are typically incompatible with the live-cell assays used to monitor dynamics. Here, we address this challenge by performing a drug screen for altered Erk signaling dynamics in primary mouse keratinocytes. We screened a library of 429 kinase inhibitors, monitoring Erk activity over 5 h in more than 80,000 single live cells. The screen revealed both known and uncharacterized modulators of Erk dynamics, including inhibitors of non-EGFR receptor tyrosine kinases (RTKs) that increased Erk pulse frequency and overall activity. Using drug treatment and direct optogenetic control, we demonstrate that drug-induced changes to Erk dynamics alter the conditions under which cells proliferate. Our work opens the door to high-throughput screens using live-cell biosensors and reveals that cell proliferation integrates information from Erk dynamics as well as additional permissive cues." ;
     schema1:identifier "idr0064" ;
@@ -6389,6 +6440,7 @@
         <https://idr.openmicroscopy.org/study/idr0065/#experiment-biosample-1>,
         <https://idr.openmicroscopy.org/study/idr0065/#experiment-biosample-2> ;
     schema1:author <https://orcid.org/0000-0001-5522-1810> ;
+    schema1:copyrightNotice "Uppsala University, CC-BY-4.0, 2019" ;
     schema1:datePublished "2019-12-10"^^xsd:date ;
     schema1:description "Our ability to connect genotypic variation to biologically important phenotypes has been seriously limited by the gap between live-cell microscopy and library-scale genomic engineering. Here, we show how in situ genotyping of a library of strains after time-lapse imaging in a microfluidic device overcomes this problem. We determine how 235 different CRISPR interference knockdowns impact the coordination of the replication and division cycles of Escherichia coli by monitoring the location of replication forks throughout on average >500 cell cycles per knockdown. Subsequent in situ genotyping allows us to map each phenotype distribution to a specific genetic perturbation to determine which genes are important for cell cycle control. The single-cell time-resolved assay allows us to determine the distribution of single-cell growth rates, cell division sizes and replication initiation volumes. The technology presented in this study enables genome-scale screens of most live-cell microscopy assays." ;
     schema1:identifier "idr0065" ;
@@ -6495,6 +6547,7 @@
         <https://idr.openmicroscopy.org/study/idr0066/#experiment-biosample-3>,
         <https://idr.openmicroscopy.org/study/idr0066/#experiment-biosample-4> ;
     schema1:author <https://orcid.org/0000-0002-7108-2176> ;
+    schema1:copyrightNotice "Voigt et al., CC-BY-4.0, 2019" ;
     schema1:datePublished "2019-09-17"^^xsd:date ;
     schema1:description "The mesoscale selective plane illumination microscope (mesoSPIM) designed in this study was tested with various cleared tissue samples." ;
     schema1:identifier "idr0066" ;
@@ -6629,6 +6682,7 @@
     schema1:about obo:NCBITaxon_4932,
         <https://idr.openmicroscopy.org/study/idr0067/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0002-6768-609X> ;
+    schema1:copyrightNotice "King et al., CC-BY-4.0, 2019" ;
     schema1:datePublished "2019-12-10"^^xsd:date ;
     schema1:description "Production of healthy gametes in meiosis relies on the quality control and proper distribution of both nuclear and cytoplasmic contents. Meiotic differentiation naturally eliminates age-induced cellular damage by an unknown mechanism. Using time-lapse fluorescence microscopy in budding yeast, we found that nuclear senescence factors - including protein aggregates, extrachromosomal ribosomal DNA circles, and abnormal nucleolar material - are sequestered away from chromosomes during meiosis II and subsequently eliminated. A similar sequestration and elimination process occurs for the core subunits of the nuclear pore complex in both young and aged cells. Nuclear envelope remodeling drives the formation of a membranous compartment containing the sequestered material. Importantly, de novo generation of plasma membrane is required for the sequestration event, preventing the inheritance of long-lived nucleoporins and senescence factors into the newly formed gametes. Our study uncovers a new mechanism of nuclear quality control and provides insight into its function in meiotic cellular rejuvenation." ;
     schema1:identifier "idr0067" ;
@@ -6676,6 +6730,7 @@
     schema1:author <https://orcid.org/0000-0001-7250-3756>,
         <https://orcid.org/0000-0002-0154-9455>,
         <https://orcid.org/0000-0003-4003-9121> ;
+    schema1:copyrightNotice "Shah et al, CC-BY-4.0, 2021" ;
     schema1:datePublished "2021-12-07"^^xsd:date ;
     schema1:description "The coordination of cell movements across spatio-temporal scales ensures precise positioning of organs during vertebrate gastrulation. Mechanisms governing such morphogenetic movements have been studied only within a local region, a single germlayer or in whole embryos without cell identity. Scale-bridging imaging and automated analysis of cell dynamics are needed for a deeper understanding of tissue formation during gastrulation. Here we report pan-embryo analyses of formation and dynamics of all three germlayers simultaneously within a developing zebrafish embryo. We show that a distinct distribution of cells in each germlayer is established during early gastrulation via cell movement characteristics that are predominantly determined by their position in the embryo. The differences in initial germlayer distributions are subsequently amplified by a global movement, which organizes the organ precursors along the embryonic body axis, giving rise to the blueprint of organ formation. The tools and data are available as a resource for the community." ;
     schema1:identifier "idr0068" ;
@@ -6721,6 +6776,7 @@
     schema1:about obo:NCBITaxon_9606,
         <https://idr.openmicroscopy.org/study/idr0069/#screen-biosample-1> ;
     schema1:author <https://orcid.org/0000-0002-1583-6404> ;
+    schema1:copyrightNotice "Caldera et al., CC-BY-NC-4.0, 2019" ;
     schema1:datePublished "2019-11-05"^^xsd:date ;
     schema1:description "Drug combinations provide effective treatments for diverse diseases, but also represent a major cause of adverse reactions. Currently there is no systematic understanding of how the complex cellular perturbations induced by individual drugs influence each other when used in combination. Here, we introduce a mathematical framework for mapping out precisely, how perturbations with high-dimensional effects interact with each other in terms of 12 distinct interaction types. We applied our framework to a large-scale imaging screen of cell morphology changes induced by diverse drugs and their combination, resulting in a perturbome network of 242 drugs and 1832 interactions. Our analysis of the chemical and biological features of the drug compounds reveals distinct molecular fingerprints for each interaction type. We found a direct link between drug similarities on the cell morphology level and the distance of their respective protein targets within the cellular interactome of molecular interactions. The interactome distance was also predictive for different types of drug interactions. Our framework can be applied to other key challenges, such as dissecting the combined impact of genetic variations or predicting the effect of a drug on a particular disease phenotype." ;
     schema1:identifier "idr0069" ;
@@ -6793,6 +6849,7 @@
         <https://idr.openmicroscopy.org/study/idr0070/#person-3>,
         <https://idr.openmicroscopy.org/study/idr0070/#person-4>,
         <https://idr.openmicroscopy.org/study/idr0070/#person-5> ;
+    schema1:copyrightNotice "Kerwin et al, CC-BY-4.0, 2020" ;
     schema1:datePublished "2020-06-30"^^xsd:date ;
     schema1:description "Gene expression studies in early human development from 3 to 17 post conceptional weeks (PCW)." ;
     schema1:identifier "idr0070" ;
@@ -6905,6 +6962,7 @@
         <https://idr.openmicroscopy.org/study/idr0071/#experiment-biosample-5>,
         <https://idr.openmicroscopy.org/study/idr0071/#experiment-biosample-6> ;
     schema1:author <https://orcid.org/0000-0002-4889-8783> ;
+    schema1:copyrightNotice "Feldman et al, CC-BY-4.0, 2021" ;
     schema1:datePublished "2021-01-27"^^xsd:date ;
     schema1:description "Genetic screens are critical for the systematic identification of genes underlying cellular phenotypes. Pooling gene perturbations greatly improves scalability, but is not compatible with imaging of complex and dynamic cellular phenotypes. Here, we introduce a pooled approach for optical genetic screens in mammalian cells. We use targeted in situ sequencing to demultiplex a library of genetic perturbations following image-based phenotyping. We screened a set of 952 genes across millions of cells for involvement in NF-κB signaling by imaging the translocation of RelA (p65) to the nucleus. Screening at a single time point across 3 cell lines recovered 15 known pathway components, while repeating the screen with live-cell imaging revealed a novel role for Mediator complex subunits in regulating the duration of p65 nuclear retention. These results establish a new approach to perform highly multiplexed, image-based screens of spatially and temporally defined phenotypes with pooled libraries." ;
     schema1:identifier "idr0071" ;
@@ -7099,6 +7157,7 @@
     schema1:about <https://idr.openmicroscopy.org/study/idr0072/#screen-biosample-1>,
         <https://idr.openmicroscopy.org/study/idr0072/#screen-biosample-2> ;
     schema1:author <https://orcid.org/0000-0002-9266-7157> ;
+    schema1:copyrightNotice "Schormann et al, CC-BY-4.0, 2021" ;
     schema1:datePublished "2021-04-29"^^xsd:date ;
     schema1:description "Libraries composed of 789,011 and 523,319 optically validated reference confocal micrographs of 17 and 20 EGFP fusion proteins localized at key cell organelles as landmarks in murine and human cells were generated for assignment of subcellular localization in mammalian cells. For each image of individual cells, 160 morphology and statistical features were used to train a random forests classifier to automatically assign the localization of proteins and dyes in both cell types and to analyze the sequence requirements that specify subcellular localization of a model tail-anchor (TA) protein. Automated assignment of subcellular localizations for a library of TA proteins with randomly mutated C-terminal targeting sequences enabled the discovery of motifs responsible for targeting TA proteins to mitochondria, endoplasmic reticulum and the late secretory pathway. Analysis of directed mutants enabled refinement of subcellular localization motifs that characterize cellular sub-compartments." ;
     schema1:identifier "idr0072" ;
@@ -7183,6 +7242,7 @@
     schema1:about obo:NCBITaxon_9606,
         <https://idr.openmicroscopy.org/study/idr0073/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0002-1234-982X> ;
+    schema1:copyrightNotice "Schaadt et al., CC-BY-4.0, 2020" ;
     schema1:datePublished "2020-03-03"^^xsd:date ;
     schema1:description "Object-oriented image analysis and graph-based description of the spatial context of B- and T-lymphocytes were performed to reflect the degree of organization in lymphocyte accumulations and their similarity with TLOs.  This study addresses the need to detect and reproducibly classify immune cell infiltrates in histopathological sections. We propose complementing observer-dependent approaches of immune cell evaluation in microscopy images with reproducible measures for spatial composition of lymphocytic infiltrates." ;
     schema1:identifier "idr0073" ;
@@ -7218,6 +7278,7 @@
     schema1:author <https://idr.openmicroscopy.org/study/idr0075/#person-1>,
         <https://idr.openmicroscopy.org/study/idr0075/#person-3>,
         <https://idr.openmicroscopy.org/study/idr0075/#person-4> ;
+    schema1:copyrightNotice "Amelie Cabirol, Albrecht Haase, CC-BY-4.0, 2020" ;
     schema1:datePublished "2020-01-20"^^xsd:date ;
     schema1:description "Synaptic boutons are highly plastic structures undergoing experience-dependent changes in their number, volume, and shape. Their plasticity has been intensively studied in the insect mushroom bodies by manually counting the number of boutons in small regions of interest and extrapolating this number to the volume of the mushroom body neuropil. Here we extend this analysis to the synaptic bouton distribution within a larger subregion of the mushroom body olfactory neuropil of honey bees (Apis mellifera). This required the development of an automated method combining two-photon imaging with advanced image post-processing and multiple threshold segmentation. The method was first validated in subregions of the mushroom body olfactory and visual neuropils. Further analyses in the olfactory neuropil suggested that previous studies overestimated the number of synaptic boutons. As a reason for that, we identified boundaries effects in the small volume samples. The application of the automated analysis to larger volumes of the mushroom body olfactory neuropil revealed a corrected average density of synaptic boutons and, for the first time, their 3D spatial distribution. This distribution exhibited a considerable heterogeneity. This additional information on the synaptic bouton distribution provides the basis for future studies on brain development, symmetry, and plasticity." ;
     schema1:identifier "idr0075" ;
@@ -7294,6 +7355,7 @@
     schema1:about obo:NCBITaxon_9606,
         <https://idr.openmicroscopy.org/study/idr0076/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0001-7587-0906> ;
+    schema1:copyrightNotice "Ali et al, CC-BY-4.0, 2020" ;
     schema1:datePublished "2020-09-29"^^xsd:date ;
     schema1:description "Genomic alterations shape cell phenotypes and the structure of tumour ecosystems in poorly defined ways. To investigate these relationships, we used imaging mass cytometry to quantify the expression of 37 proteins with subcellular spatial resolution in 483 tumours from the METABRIC cohort. Single-cell analysis revealed cell phenotypes spanning epithelial, stromal, and immune types. Distinct combinations of cell phenotypes and cell-cell interactions were associated with genomic subtypes of breast cancer. Epithelial luminal cell phenotypes separated into those predominantly impacted by mutations and those affected by copy-number aberrations. Several features of tumour ecosystems, including cellular neighbourhoods, were linked to prognosis, illustrating their clinical relevance. In summary, systematic analysis of single-cell phenotypic and spatial correlates of genomic alterations in cancer revealed how genomes shape both the composition and architecture of breast tumour ecosystems and will enable greater understanding of the phenotypic impact of genomic alterations." ;
     schema1:identifier "idr0076" ;
@@ -7341,6 +7403,7 @@
     schema1:about obo:NCBITaxon_3702,
         <https://idr.openmicroscopy.org/study/idr0077/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0003-1109-4279> ;
+    schema1:copyrightNotice "Valuchova et al, CC-BY-4.0, 2020" ;
     schema1:datePublished "2020-06-30"^^xsd:date ;
     schema1:description "In higher plants, germline differentiation occurs during a relatively short period within developing flowers. Understanding of the mechanisms that govern germline differentiation lags behind other plant developmental processes. This is largely because the germline is restricted to relatively few cells buried deep within floral tissues, which makes them difficult to study. To overcome this limitation, we have developed a methodology for live imaging of the germ cell lineage within floral organs of Arabidopsis using light sheet fluorescence microscopy. We have established reporter lines, cultivation conditions, and imaging protocols for high-resolution microscopy of developing flowers continuously for up to several days. We used multiview imagining to reconstruct a three-dimensional model of a flower at subcellular resolution.  We demonstrate the power of this approach by capturing male and female meiosis, asymmetric pollen division, movement of meiotic chromosomes, and unusual restitution mitosis in tapetum cells. This method will enable new avenues of research into plant sexual reproduction." ;
     schema1:identifier "idr0077" ;
@@ -7404,6 +7467,7 @@
         <https://idr.openmicroscopy.org/study/idr0078/#screen-biosample-2> ;
     schema1:author <https://orcid.org/0000-0001-6427-6493>,
         <https://orcid.org/0000-0002-7389-8478> ;
+    schema1:copyrightNotice "Mattiazzi Usaj et al, CC-BY-4.0, 2020" ;
     schema1:datePublished "2020-09-29"^^xsd:date ;
     schema1:description "Our ability to understand the genotype-to-phenotype relationship is hindered by the lack of detailed understanding of phenotypes at a single-cell level. To systematically assess cell-to-cell phenotypic variability, we combined automated yeast genetics, high-content screening and neural network-based image analysis of single cells, focussing on genes that influence the architecture of four subcellular compartments of the endocytic pathway as a model system. Our unbiased assessment of the morphology of these compartments — endocytic patch, actin patch, late endosome and vacuole — identified 17 distinct mutant phenotypes associated with ~1,600 genes (~30% of all yeast genes). Approximately half of these mutants exhibited multiple phenotypes, highlighting the extent of morphological pleiotropy. Quantitative analysis also revealed that incomplete penetrance was prevalent, with the majority of mutants exhibiting substantial variability in phenotype at the single-cell level. Our single-cell analysis enabled exploration of factors that contribute to incomplete penetrance and cellular heterogeneity, including replicative age, organelle inheritance and response to stress." ;
     schema1:identifier "idr0078" ;
@@ -7505,6 +7569,7 @@
         <https://idr.openmicroscopy.org/study/idr0079/#experiment-biosample-2> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0079/#person-2>,
         <https://orcid.org/0000-0002-5600-8285> ;
+    schema1:copyrightNotice "Hartmann et al, CC-BY-4.0, 2020" ;
     schema1:datePublished "2020-06-30"^^xsd:date ;
     schema1:description "A data-driven analysis of cell morphology and intracellular organization in the developing zebrafish posterior lateral line primordium, a model tissue for the study of self-organized morphogenesis. 3D image stacks were acquired using AiryScan FAST-mode confocal fluorescence microscopy. Automated single-cell segmentation and point cloud-based morphometry were developed to extract numerical features representing cell morphology and intracellular protein distributions. Machine learning was used with the extracted numerical features to perform data integration across experiments and context-guided data visualization. The resulting data was analyzed to discover biologically meaningful patterns at the cell and tissue scale." ;
     schema1:identifier "idr0079" ;
@@ -7601,6 +7666,7 @@
         <https://orcid.org/0000-0002-2857-4685>,
         <https://orcid.org/0000-0003-1555-8261>,
         <https://orcid.org/0000-0003-3150-3025> ;
+    schema1:copyrightNotice "Broad Institute of MIT and Harvard, CC0-1.0, 2020" ;
     schema1:datePublished "2020-12-10"^^xsd:date ;
     schema1:description "Genetic and chemical perturbations impact diverse cellular phenotypes, including multiple indicators of cell health. These readouts reveal toxicity and antitumorigenic effects relevant to drug discovery and personalized medicine. We present an approach to predict multiple cell health phenotypes using Cell Painting, an inexpensive and scalable image-based morphology assay. In matched CRISPR perturbations of three cancer cell lines, we collected both Cell Painting data and targeted assay readouts from seven reagents that measure specific cell health phenotypes including proliferation, apoptosis, reactive oxygen species (ROS), DNA damage, and aberrant cell cycle stage progression. We showed many of these targeted readouts, which are expensive and tedious to acquire and measure, can be predicted directly from Cell Painting images by simple machine learning algorithms. We hypothesized that these trained models can be applied to accurately predict cell health assay outcomes for any future or existing Cell Painting dataset. We applied the models to a set of 1,500+ compound perturbations across multiple doses and validated the predictions by orthogonal assay readouts, and by confirming mitotic arrest and ROS phenotypes via PLK and proteasome inhibition, respectively. We provide an intuitive web app to browse all predictions at http://broad.io/cell-health-app. Our approach can be extended to other morphology data collected in other batches or by other labs to enable rapid and inexpensive cell health predictions from images." ;
     schema1:identifier "idr0080" ;
@@ -7734,6 +7800,7 @@
         <https://idr.openmicroscopy.org/study/idr0081/#screen-biosample-4>,
         <https://idr.openmicroscopy.org/study/idr0081/#screen-biosample-5> ;
     schema1:author <https://orcid.org/0000-0002-4803-5099> ;
+    schema1:copyrightNotice "Georgi et al, CC-BY-4.0, 2020" ;
     schema1:datePublished "2020-05-19"^^xsd:date ;
     schema1:description "Human adenoviruses (HAdVs) are fatal to immune-suppressed people, but no effective anti-HAdV therapy is available. Here, we present a novel image-based high-throughput screening (HTS) platform, which scores the full viral replication cycle from virus entry to dissemination of progeny. We analysed 1,280 small molecular compounds of the Prestwick Chemical Library (PCL) for interference with HAdV-C2 infection in a quadruplicate blinded format, followed by robust image analyses, and hit identification. We identified Nelfinavir mesylate as an inhibitor of HAdV plaque formation, in agreement with the previous notion that Nelfinavir is ineffective in single round HAdV infection assays. Nelfinavir has been FDA-approved for anti-retroviral therapy in humans. Our results underscore the power of image-based multi-round infection assays in identifying viral inhibitors with clinical potential." ;
     schema1:identifier "idr0081" ;
@@ -7947,6 +8014,7 @@
     schema1:about obo:NCBITaxon_9606,
         <https://idr.openmicroscopy.org/study/idr0082/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0001-5836-0250> ;
+    schema1:copyrightNotice "Pennycuick et al, CC-BY-4.0, 2020" ;
     schema1:datePublished "2020-09-03"^^xsd:date ;
     schema1:description "Before squamous cell lung cancer develops, pre-cancerous lesions can be found in the airways. From longitudinal monitoring, we know that only half of such lesions become cancer, whereas a third spontaneously regress. While recent studies have described the presence of an active immune response in high-grade lesions, the mechanisms underpinning clinical regression of pre-cancerous lesions remain unknown. Here, we show that host immune surveillance is strongly implicated in lesion regression. Using bronchoscopic biopsies from human subjects, we find that regressive carcinoma in-situ lesions harbour more infiltrating immune cells than those that progress to cancer. Moreover, molecular profiling of these lesions identifies potential immune escape mechanisms specifically in those that progress to cancer: antigen presentation is impaired by genomic and epigenetic changes, CCL27/CCR10 signalling is overactive, and the immunomodulator TNFSF9 is downregulated. Changes appear intrinsic to the CIS lesions as the adjacent stroma of progressive and regressive lesions are transcriptomically similar." ;
     schema1:identifier "idr0082" ;
@@ -7995,6 +8063,7 @@
         obo:NCBITaxon_9606,
         <https://idr.openmicroscopy.org/study/idr0083/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0001-6591-4637> ;
+    schema1:copyrightNotice "Maastricht University, CC-BY-4.0, 2020" ;
     schema1:datePublished "2020-04-27"^^xsd:date ;
     schema1:description "COVID-19, caused by the SARS-CoV-2 virus, is a flu-like disease with a respiratory route of transmission, yet clinical evidence suggests that the intestine may present another viral target organ. Indeed, the SARS-CoV-2 receptor ACE2 (angiotensin converting enzyme 2) is highly expressed on differentiated enterocytes. In human small intestinal organoids, enterocytes were readily infected by SARS-CoV and SARS-CoV2 as demonstrated by confocal- and electron-microscopy. Consequently, significant titers of infectious viral particles were measured. mRNA expression analysis revealed strong induction of a generic viral response program. We conclude that intestinal epithelium supports SARS-CoV-2 replication." ;
     schema1:identifier "idr0083" ;
@@ -8057,6 +8126,7 @@
     schema1:about obo:NCBITaxon_10090,
         <https://idr.openmicroscopy.org/study/idr0084/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0003-1076-5595> ;
+    schema1:copyrightNotice "Oudelaar et al, CC-BY-4.0, 2020" ;
     schema1:datePublished "2020-07-22"^^xsd:date ;
     schema1:description "Mammalian gene expression patterns are controlled by regulatory elements, which interact within Topologically Associating Domains (TADs). The relationship between activation of regulatory elements, formation of structural chromatin interactions and gene expression during development is unclear. Here, we present Tiled-C, a low-input Chromosome Conformation Capture (3C) technique. We use this approach to study chromatin architecture at high spatial and temporal resolution through in vivo mouse erythroid differentiation. In this dataset, we measure nascent transcription of the mouse alpha-globin genes by FISH using oligonucleotide probes that are specific for the alpha-globin introns. We measure the initial stages of alpha-globin upregulation in three subsets of early erythroid progenitors (S0-low, S0-medium and S1) and compare these to the levels observed in a positive control (mature, Ter119+ mouse erythroblasts) and in two negative controls (mouse primary brain, which does not express alpha-globin, and a no primary antibody control)." ;
     schema1:identifier "idr0084" ;
@@ -8113,6 +8183,7 @@
     schema1:about obo:NCBITaxon_10090,
         <https://idr.openmicroscopy.org/study/idr0085/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0003-3769-3392> ;
+    schema1:copyrightNotice "Walsh et al., CC-BY-4.0, 2020" ;
     schema1:datePublished "2020-08-12"^^xsd:date ;
     schema1:description "Multi-fluorescent High Resolution Episcopic Microscopy (MF-HREM) is a serial-sectioning, block-facing, wide-field fluorescence technique. It can image large volumes (>0.5mm3) at high resolution (~2um) without the need for tissue clearing or optical sectioning. We detail developments in sample processing including stain penetration, resin embedding and imaging. In addition, we describe image post-processing methods needed to segment and further quantify these data. Finally, we demonstrate the wide applicability of MF-HREM by: 1) quantifying adult mouse glomeruli. 2) identifying injected cells and vascular networks in tumour xenograft models; 3) quantifying vascular networks and white matter track orientation in mouse brain." ;
     schema1:identifier "idr0085" ;
@@ -8174,6 +8245,7 @@
         <https://idr.openmicroscopy.org/study/idr0086/#experiment-biosample-4> ;
     schema1:author <https://orcid.org/0000-0001-9689-8342>,
         <https://orcid.org/0000-0002-1612-9699> ;
+    schema1:copyrightNotice "Lothar Schermelleh and Ezequiel Miron, CC-BY-4.0, 2020" ;
     schema1:datePublished "2020-07-22"^^xsd:date ;
     schema1:description "Three-dimensional (3D) chromatin organization plays a key role in regulating mammalian genome function, however many of its physical features at the single-cell level remain underexplored. Here we use 3D super-resolution and scanning electron microscopy to analyze structural and functional nuclear organization in somatic cells. We identify linked chromatin domains (CDs) composed of irregular ~200-300-nm-wide aggregates of nucleosomes that can overlap with individual topologically associating domains and are distinct from a surrounding RNA-populated interchromatin region. High-content mapping uncovers confinement of cohesin and active histone modifications to surfaces and enrichment of repressive modifications towards the core of CDs in both hetero- and euchromatic regions. This nanoscale functional topography is temporarily relaxed in postreplicative chromatin, but remarkably persists after ablation of cohesin. Our findings establish CDs as physical and functional modules of mesoscale genome organization." ;
     schema1:identifier "idr0086" ;
@@ -8292,6 +8364,7 @@
     schema1:about obo:NCBITaxon_9606,
         <https://idr.openmicroscopy.org/study/idr0087/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0002-8791-4766> ;
+    schema1:copyrightNotice "Paci et al, CC-BY-4.0, 2020" ;
     schema1:datePublished "2020-07-22"^^xsd:date ;
     schema1:description "Nucleocytoplasmic transport is tightly regulated by the nuclear pore complex (NPC). Even very large cargoes such as many pathogens, mRNAs and pre-ribosomal subunits can pass the NPC intact. Compared to small import complexes, for such large cargoes >15 nm there is very little quantitative understanding of the mechanism for efficient transport, the role of multivalent binding to nuclear transport receptors via nuclear localisation sequences (NLSs) and effects of size differences. Here, we assayed nuclear import kinetics in cells for a total of 30 large cargo models based on four capsid-like particles in the size range of 17-36 nm, with tuneable numbers of up to 240 NLSs. We show that the requirements for transport can be recapitulated by a simple two-parameter biophysical model that allow us to correlate the import flux to the energetic requirements for nuclear transport. Together, our results reveal key molecular determinants of large cargo import in cells." ;
     schema1:identifier "idr0087" ;
@@ -8347,6 +8420,7 @@
     schema1:about obo:NCBITaxon_9606,
         <https://idr.openmicroscopy.org/study/idr0088/#screen-biosample-1> ;
     schema1:author <https://orcid.org/0000-0001-5637-3154> ;
+    schema1:copyrightNotice "Cox et al, CC-BY-NC-4.0, 2020" ;
     schema1:datePublished "2020-11-19"^^xsd:date ;
     schema1:description "To devise an economical set of phenomic profiling assays, we assembled a library of 1,008 approved drugs and tool compounds manually annotated to 218 unique MoAs and an addtional 169 natural products, and we profiled each compound at four concentrations in live-cell, high-content imaging screens against a panel of 15 reporter cell lines, which expressed a diverse set of fluorescent organelle and pathway markers in three distinct cell lineages. Phenomic profiling can be used for compound target identification or mechanism of action (MoA) prediction and other applications in drug discovery. For 41 of 83 MoAs with sufficiently many active compounds, phenomic profiles accurately ranked the reference compounds (AUC-ROC ³0.9) in at least one of our cell lines." ;
     schema1:identifier "idr0088" ;
@@ -8416,6 +8490,7 @@
         <https://idr.openmicroscopy.org/study/idr0089/#experiment-biosample-2> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0089/#person-2>,
         <https://orcid.org/0000-0002-1161-2841> ;
+    schema1:copyrightNotice "Harry Fischl, Andre Furger, CC-BY-4.0, 2020" ;
     schema1:datePublished "2020-09-29"^^xsd:date ;
     schema1:description "Cooling patients to sub-physiological temperatures is an integral part of modern medicine. We show that cold exposure induces temperature-specific changes to the higher-order chromatin and gene expression profiles of human cells. These changes are particularly dramatic at 18°C, a temperature synonymous with that experienced by patients undergoing controlled deep-hypothermia during surgery. Cells exposed to 18°C exhibit largely nuclear-restricted transcriptome changes. These include the nuclear accumulation of core circadian clock suppressor gene transcripts, most notably REV-ERBα. This response is accompanied by compaction of higher-order chromatin and hindrance of mRNPs from engaging nuclear pores. Rewarming reverses chromatin compaction and releases the transcripts into the cytoplasm, triggering a pulse of suppressor gene proteins that resets the circadian clock. We show that cold-induced upregulation of REV-ERBα alone is sufficient to trigger this resetting. Our findings uncover principles of the cellular cold-response that must be considered for current and future applications involving therapeutic deep-hypothermia." ;
     schema1:identifier "idr0089" ;
@@ -8506,6 +8581,7 @@
         <https://idr.openmicroscopy.org/study/idr0090/#screen-biosample-1> ;
     schema1:author <https://orcid.org/0000-0001-9022-8444>,
         <https://orcid.org/0000-0002-0275-352X> ;
+    schema1:copyrightNotice "Imperial College London, CC-BY-4.0, 2021" ;
     schema1:datePublished "2021-03-02"^^xsd:date ;
     schema1:description "Drug resistance threatens the effective prevention and treatment of an ever-increasing range of human infections. This highlights an urgent need for new and improved drugs with novel mechanisms of action to avoid cross-resistance. Current cell-based drug screens are, however, restricted to binary live/dead readouts with no provision for mechanism of action prediction. Machine learning methods are increasingly being used to improve information extraction from imaging data. Such methods, however, work poorly with heterogeneous cellular phenotypes and generally require time-consuming human-led training. We have developed a semi-supervised machine learning approach, combining human- and machine-labelled training data from mixed human malaria parasite cultures. Designed for high-throughput and high-resolution screening, our semi-supervised approach is robust to natural parasite morphological heterogeneity and correctly orders parasite developmental stages. Our approach also reproducibly detects and clusters drug-induced morphological outliers by mechanism of action, demonstrating the potential power of machine learning for accelerating cell-based drug discovery." ;
     schema1:identifier "idr0090" ;
@@ -8574,6 +8650,7 @@
     schema1:about obo:NCBITaxon_562,
         <https://idr.openmicroscopy.org/study/idr0091/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0001-7123-198X> ;
+    schema1:copyrightNotice "Julou et al., CC-BY-4.0, 2020" ;
     schema1:datePublished "2020-10-06"^^xsd:date ;
     schema1:description "We use quantitative time-lapse microscopy combined with microfluidics to analyse the induction dynamics of the lac operon in single bacteria cells." ;
     schema1:identifier "idr0091" ;
@@ -8633,6 +8710,7 @@
         <https://orcid.org/0000-0002-4971-3250>,
         <https://orcid.org/0000-0003-0498-4273>,
         <https://orcid.org/0000-0003-2752-8377> ;
+    schema1:copyrightNotice "Ostrop et al, CC-BY-4.0, 2020" ;
     schema1:datePublished "2020-09-03"^^xsd:date ;
     schema1:description "Intestinal organoids are an excellent model to study epithelial biology. Yet, the selection of analytical tools to accurately quantify heterogeneous organoid cultures remains limited. Here, we developed a semi-automated organoid screening method, which we applied to a library of highly specific chemical probes to identify epigenetic regulators of intestinal epithelial biology. The role of epigenetic modifiers in adult stem cell systems, such as the intestinal epithelium, is still undefined. Based on this resource dataset, we identified several targets that affected epithelial cell differentiation, including HDACs, EP300/CREBBP, LSD1, and type I PRMTs, which were verified by complementary methods. For example, we show that inhibiting type I PRMTs, which leads enhanced epithelial differentiation, blocks the growth of adenoma but not normal organoid cultures. Thus, epigenetic probes are powerful tools to study intestinal epithelial biology and may have therapeutic potential." ;
     schema1:identifier "idr0092" ;
@@ -8701,6 +8779,7 @@
         <https://idr.openmicroscopy.org/study/idr0093/#screen-biosample-1> ;
     schema1:author <https://orcid.org/0000-0002-1651-153X>,
         <https://orcid.org/0000-0002-1838-4976> ;
+    schema1:copyrightNotice "Mueller et al, CC-BY-4.0, 2021" ;
     schema1:datePublished "2021-03-17"^^xsd:date ;
     schema1:description "Coordination of RNA abundance and transcription rates with cell size has been observed in diverse organisms and isogenic cell populations. However, how cells achieve such ‘size-scaling’ of transcription is unknown. Here we describe a genome-wide siRNA screen to find novel regulators of global RNA production in human cells. We quantify single-cell RNA production rates using metabolic pulse-labelling of RNA and subsequent high-content imaging. Our quantitative, single-cell measurements of DNA, nascent RNA, proliferating cell nuclear antigen (PCNA), and total protein, as well as cell morphology and population-context, capture a detailed phenotype of each cell. This allows us to account for changes in cell size and cell-cycle distribution (G1/S/G2) in perturbation conditions, which indirectly affect global RNA production. We also take advantage of the subcellular information to distinguish between nascent RNA localised in the nucleolus and nucleoplasm, to approximate ribosomal and non-ribosomal RNA contributions to the phenotype. The perturbations uncovered through the screen provide a resource for exploring the mechanisms of regulation of global RNA metabolism." ;
     schema1:identifier "idr0093" ;
@@ -8763,6 +8842,7 @@
         <https://idr.openmicroscopy.org/study/idr0094/#screen-biosample-1>,
         <https://idr.openmicroscopy.org/study/idr0094/#screen-biosample-2> ;
     schema1:author <https://orcid.org/0000-0001-5703-3901> ;
+    schema1:copyrightNotice "Ellinger et al., CC0-1.0, 2020" ;
     schema1:datePublished "2020-10-06"^^xsd:date ;
     schema1:description "To identify possible candidates for progression towards clinical studies against SARS-CoV-2, we screened a well-defined collection of 5632 compounds including 3488 compounds which have undergone clinical investigations (marketed drugs, phases 1 -3, and withdrawn) across 600 indications. Compounds were screened for their inhibition of viral induced cytotoxicity using the human epithelial colorectal adenocarcinoma cell line Caco-2 and a SARS-CoV-2 isolate. The primary screen of 5632 compounds gave 271 hits. A total of 64 compounds with IC50 <20 μM were identified, including 19 compounds with IC50 < 1 μM. Of this confirmed hit population, 90% have not yet been previously reported as active against SARS-CoV-2 in-vitro cell assays. Some 37 of the actives are launched drugs, 19 are in phases 1-3 and 10 pre-clinical. Several inhibitors were associated with modulation of host pathways including kinase signaling P53 activation, ubiquitin pathways and PDE activity modulation, with long chain acyl transferases were effective viral inhibitors." ;
     schema1:identifier "idr0094" ;
@@ -8849,6 +8929,7 @@
         <https://idr.openmicroscopy.org/study/idr0095/#experiment-biosample-2>,
         <https://idr.openmicroscopy.org/study/idr0095/#experiment-biosample-3> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0095/#person-4> ;
+    schema1:copyrightNotice "Ali et al, CC-BY-4.0, 2020" ;
     schema1:datePublished "2020-11-19"^^xsd:date ;
     schema1:description "Predicting gene expression from DNA sequence remains a major goal in the field of gene regulation. A challenge to this goal is the connectivity of the network, whose role in altering gene expression remains unclear. Here, we study a common autoregulatory network motif, the negative single-input module, to explore the regulatory properties inherited from the motif. Using stochastic simulations and a synthetic biology approach in E. coli, we find that the TF gene and its target genes have inherent asymmetry in regulation, even when their promoters are identical; the TF gene being more repressed than its targets. The magnitude of asymmetry depends on network features such as network size and TF binding affinities. Intriguingly, asymmetry disappears when the growth rate is too fast or too slow and is most significant for typical growth conditions. These results highlight the importance of accounting for network architecture in quantitative models of gene expression." ;
     schema1:identifier "idr0095" ;
@@ -8911,6 +8992,7 @@
         <https://idr.openmicroscopy.org/study/idr0096/#experiment-biosample-2> ;
     schema1:author <https://orcid.org/0000-0003-2136-0462>,
         <https://orcid.org/0000-0003-3434-0022> ;
+    schema1:copyrightNotice "Tratwal et al, CC-BY-4.0, 2021" ;
     schema1:datePublished "2021-11-10"^^xsd:date ;
     schema1:description "We report the development of a semi-automated image analysis plug-in, MarrowQuant, which employs the open-source software QuPath, to systematically quantify multiple bone components in H&E sections in an unbiased manner. MarrowQuant discerns and quantifies the areas occupied by bone, adipocyte ghosts, hematopoietic cells and the interstitial/microvascular compartment. A separate feature, AdipoQuant, fragments adipocyte ghosts in H&E-stained sections of extramedullary adipose tissue sections to render adipocyte area and size distribution. Quantification of BM hematopoietic cellularity with MarrowQuant lies within the range of scoring by four independent pathologists, while quantification of the total adipocyte area in whole bone sections compares with volumetric measurements." ;
     schema1:identifier "idr0096" ;
@@ -8976,6 +9058,7 @@
         <https://idr.openmicroscopy.org/study/idr0097/#screen-biosample-1> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0097/#person-1>,
         <https://orcid.org/0000-0003-0855-8343> ;
+    schema1:copyrightNotice "Reicher et al, CC-BY-4.0, 2021" ;
     schema1:datePublished "2021-02-11"^^xsd:date ;
     schema1:description "The levels and subcellular localizations of proteins regulate critical aspects of many cellular processes and can become targets of therapeutic intervention. However, high-throughput methods for unbiased discovery of proteins that change localization either by shuttling between compartments, by binding larger complexes or by localizing to distinct membraneless organelles are not available. Here we describe a scalable strategy to characterize effects on protein localizations and levels in response to different perturbations. We use CRISPR-Cas9 based intron tagging to generate cell pools expressing hundreds of GFP-fusion proteins from their endogenous promoters and monitor localization changes by time-lapse microscopy followed by clone identification using in situ sequencing. We show that this strategy can characterize cellular responses to drug treatment and thus identify non-classical effects such as modulation of protein-protein interactions, condensate formation and chemical degradation." ;
     schema1:identifier "idr0097" ;
@@ -9108,6 +9191,7 @@
         <https://idr.openmicroscopy.org/study/idr0098/#experiment-biosample-2> ;
     schema1:author <https://orcid.org/0000-0001-6244-1555>,
         <https://orcid.org/0000-0002-4864-1670> ;
+    schema1:copyrightNotice "Calderon-Delgado et al, CC-BY-4.0, 2021" ;
     schema1:datePublished "2021-02-11"^^xsd:date ;
     schema1:description "The incidence of cutaneous squamous cell carcinoma (SCC) has increased in recent years, while it remains as an understudied subject. Current methods for the diagnose of skin cancer are either invasive, present a low resolution, or images that are difficult to interpret. Full-field optical coherence tomography (FF-OCT) has proven its potential as a non-invasive imaging technique of epithelial tissue. The sub-micrometer resolution offered by FF-OCT is able to show fine features such as cell nuclei, blood vessels, and fibrous structures in the dermis. However, not many physicians are familiar with the images derived from this technique. Using a well-known mouse model of SCC, we acquired volumetric data from skin samples at different stages of the disease using our home-made FF-OCT system. We present OCT-Mouse Skin (OCT-MoS) dataset, a curated dataset of 3400 annotated tomograms distributed into four classes, representing different stages in the development of SCC: normal, dysplasia, papilloma, and SCC. This dataset has a high potential for reuse in areas such as cancer research, medical training, image processing, and deep learning." ;
     schema1:identifier "idr0098" ;
@@ -9197,6 +9281,7 @@
         <https://idr.openmicroscopy.org/study/idr0099/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0002-2222-9370>,
         <https://orcid.org/0000-0003-4704-7992> ;
+    schema1:copyrightNotice "Pavel Tomancak, Akanksha Jain, CC-BY-4.0, 2021" ;
     schema1:datePublished "2021-03-02"^^xsd:date ;
     schema1:description "Many animal embryos pull and close an epithelial sheet around the ellipsoidal egg surface during a gastrulation process known as epiboly. The ovoidal geometry dictates that the epithelial sheet first expands and subsequently compacts. Moreover, the spreading epithelium is mechanically stressed and this stress needs to be released. We show that during extraembryonic tissue (serosa) epiboly in the insect Tribolium castaneum, the non-proliferative serosa becomes regionalized into a solid-like dorsal region with larger non-rearranging cells, and a more fluid-like ventral region surrounding the leading edge with smaller cells undergoing intercalations. Our results suggest that a heterogeneous actomyosin cable contributes to the fluidization of the leading edge by driving sequential eviction and intercalation of individual cells away from the serosa margin. Since this developmental solution utilized during epiboly resembles the mechanism of wound healing, we propose actomyosin cable-driven local tissue fluidization as a conserved morphogenetic module for closure of epithelial gaps." ;
     schema1:identifier "idr0099" ;
@@ -9252,6 +9337,7 @@
         <https://idr.openmicroscopy.org/study/idr0100/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0003-1106-3288>,
         <https://orcid.org/0000-0003-4406-2783> ;
+    schema1:copyrightNotice "Capar et al, CC-BY-4.0, 2020" ;
     schema1:datePublished "2020-12-10"^^xsd:date ;
     schema1:description "Myelin is an essential component of the nervous system and myelin damage causes demyelination diseases. Myelin is a sheet of oligodendrocyte membrane wrapped around the neuronal axon. In the fluorescent images, experts manually identify myelin by co-localization of oligodendrocyte and axonal membranes that fit certain shape and size criteria. Because myelin wriggles along x-y-z axes, machine learning is ideal for its segmentation. However, machine-learning methods, especially convolutional neural networks (CNNs), require a high number of annotated images, which necessitate expert labor. To facilitate myelin annotation, we developed a workflow and a software for myelin ground truth extraction from multi-spectral fluorescent images. Additionally, we shared a set of myelin ground truths annotated using this workflow." ;
     schema1:identifier "idr0100" ;
@@ -9304,6 +9390,7 @@
     schema1:author <https://orcid.org/0000-0001-9958-3987>,
         <https://orcid.org/0000-0002-0419-3351>,
         <https://orcid.org/0000-0003-2308-3649> ;
+    schema1:copyrightNotice "Payne et al, CC-BY-4.0, 2021" ;
     schema1:datePublished "2021-09-21"^^xsd:date ;
     schema1:description "Understanding genome organization requires integration of DNA sequence and 3D spatial context, however, existing genome-wide methods lack either base-pair sequence resolution or direct spatial localization. Here, we describe in situ genome sequencing (IGS), a method for simultaneously sequencing and imaging genomes within intact biological samples. We applied IGS to human fibroblasts and early mouse embryos, spatially localizing thousands of genomic loci in individual nuclei. Using these data, we characterized parent-specific changes in genome structure across embryonic stages, revealed single-cell chromatin domains in zygotes, and uncovered epigenetic memory of global chromosome positioning within individual embryos. These results demonstrate how in situ genome sequencing can directly connect sequence and structure across length scales from single base pairs to whole organisms." ;
     schema1:identifier "idr0101" ;
@@ -9356,6 +9443,7 @@
         <https://idr.openmicroscopy.org/study/idr0103/#experiment-biosample-1> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0103/#person-2>,
         <https://orcid.org/0000-0002-8010-9481> ;
+    schema1:copyrightNotice "Coomer et al, CC-BY-4.0, 2021" ;
     schema1:datePublished "2021-01-27"^^xsd:date ;
     schema1:description "There has been resurgence in determining the role of host metabolism in viral infection yet deciphering how the metabolic state of single cells affects viral entry and fusion remains unknown. Here, we have developed a novel assay multiplexing genetically-encoded biosensors with single virus tracking (SVT) to evaluate the influence of global metabolic processes on the success rate of virus entry in single cells. We found that cells with a lower ATP:ADP ratio prior to virus addition were less permissive to virus fusion and infection. These results indicated a relationship between host metabolic state and the likelihood for virus-cell fusion to occur. SVT revealed that HIV-1 virions were arrested at hemifusion in glycolytically-inactive cells. Interestingly, cells acutely treated with glycolysis inhibitor 2-deoxyglucose (2-DG) become resistant to virus infection and also display less surface membrane cholesterol. Addition of cholesterol in these in glycolytically-inactive cells rescued the virus entry block at hemifusion and enabled completion of HIV-1 fusion. Further investigation with FRET-based membrane tension and membrane order reporters revealed a link between host cell glycolytic activity and host membrane order and tension. Indeed, cells treated with 2-DG possessed lower plasma membrane lipid order and higher tension values, respectively. Our novel imaging approach that combines lifetime imaging (FLIM) and SVT revealed not only changes in plasma membrane tension at the point of viral fusion, but also that HIV is less likely to enter cells at areas of higher membrane tension. We therefore have identified a connection between host cell glycolytic activity and membrane tension that influences HIV-1 fusion in real-time at the single-virus fusion level in live cells." ;
     schema1:identifier "idr0103" ;
@@ -9408,6 +9496,7 @@
     schema1:about obo:NCBITaxon_10090,
         <https://idr.openmicroscopy.org/study/idr0106/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0003-3188-3988> ;
+    schema1:copyrightNotice "Shimpei Kubota, CC-BY-4.0, 2021" ;
     schema1:datePublished "2021-03-17"^^xsd:date ;
     schema1:description "Tissue clearing is one of the most powerful strategies for a comprehensive analysis of disease progression. Here, we established an integrated pipeline that combines tissue clearing, 3D imaging, and machine learning and applied to a mouse tumour model of experimental lung metastasis using human lung adenocarcinoma A549 cells. This pipeline provided the spatial information of the tumour microenvironment. We further explored the role of transforming growth factor-beta (TGF-beta) in cancer metastasis. TGF-beta-stimulated cancer cells enhanced metastatic colonization of unstimulated-cancer cells in vivo when both cells were mixed. RNA-sequencing analysis showed that expression of the genes related to coagulation and inflammation were up-regulated in TGF-beta-stimulated cancer cells. Further, whole-organ analysis revealed accumulation of platelets or macrophages with TGF-beta-stimulated cancer cells, suggesting that TGF-beta might promote remodelling of the tumour microenvironment, enhancing the colonization of cancer cells. Hence, our integrated pipeline for 3D profiling will help the understanding of the tumour microenvironment." ;
     schema1:identifier "idr0106" ;
@@ -9462,6 +9551,7 @@
     schema1:about obo:NCBITaxon_3702,
         <https://idr.openmicroscopy.org/study/idr0107/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0002-7475-2155> ;
+    schema1:copyrightNotice "Morgan et al, CC-BY-4.0, 2021" ;
     schema1:datePublished "2021-06-30"^^xsd:date ;
     schema1:description "In most organisms, the number and distribution of crossovers that occur during meiosis are tightly controlled. All chromosomes must receive at least one Òobligatory crossoverÓ and crossovers are prevented from occurring near one another by Òcrossover interferenceÓ. However, the mechanistic basis of this phenomenon of crossover interference has remained mostly mysterious. Using quantitative super-resolution cytogenetics and mathematical modelling, we investigated crossover positioning in the Arabidopsis thaliana wild-type, an over-expressor of the conserved E3 ligase HEI10, and a hei10 heterozygous line5. We show that crossover positions can be explained by a predictive, diffusion-mediated coarsening model, in which large, approximately evenly-spaced HEI10 foci grow at the expense of smaller, closely-spaced clusters. We propose this coarsening process explains many aspects of Arabidopsis crossover positioning, including crossover interference. Consistent with this model, we also demonstrate that crossover positioning can be predictably modified in vivo simply by altering HEI10 dosage, with higher and lower dosage leading to weaker and stronger crossover interference, respectively. As HEI10 is a conserved member of the RING finger protein family that functions in the interference-sensitive pathway for crossover formation, we anticipate that similar mechanisms may regulate crossover positioning in diverse eukaryotes." ;
     schema1:identifier "idr0107" ;
@@ -9508,6 +9598,7 @@
     schema1:about obo:NCBITaxon_9606,
         <https://idr.openmicroscopy.org/study/idr0108/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0001-5909-701X> ;
+    schema1:copyrightNotice "Sabinina et al, CC-BY-4.0, 2021" ;
     schema1:datePublished "2021-09-01"^^xsd:date ;
     schema1:description "We explored the power of 3D super-resolution microscopy combined with computational classification and averaging to explore the 3D structure of the NPC in single human cells. We show that this approach can build the first integrated 3D structural map containing both central as well as peripheral NPC subunits with molecular specificity and nanoscale resolution. Our unbiased classification of over ten thousand individual NPCs indicates that the nuclear ring and the nuclear basket can adopt different conformations. Our approach opens up the exciting possibility to relate different structural states of the NPC to function in situ." ;
     schema1:identifier "idr0108" ;
@@ -9556,6 +9647,7 @@
         <https://idr.openmicroscopy.org/study/idr0109/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0001-8583-2014>,
         <https://orcid.org/0000-0002-1477-5478> ;
+    schema1:copyrightNotice "Zaritsky et al, CC-BY-4.0, 2021" ;
     schema1:datePublished "2021-05-31"^^xsd:date ;
     schema1:description "Deep learning has emerged as the technique of choice for identifying hidden patterns in cell imaging data, but is often criticized as ‘black-box’. Here, we demonstrate that a generative neural network captures subtle details of cell appearance, which permit the prediction of the metastatic efficiency of patient-derived melanoma xenografts with known clinical outcomes. To probe the predictor, we used the network to generate “in-silico” cell images that amplified the critical predictive cellular features. These images unveiled pseudopodial extensions and increased light scattering as hallmark properties of metastatic cells. We validated this interpretation using live cells spontaneously transitioning between states indicative of low and high metastatic efficiency. This study illustrates how the application of Artificial Intelligence can support the identification of cellular properties that are predictive of complex phenotypes and integrated cell functions, but are too subtle to be identified in the raw imagery by a human expert." ;
     schema1:identifier "idr0109" ;
@@ -9619,6 +9711,7 @@
     schema1:author <https://idr.openmicroscopy.org/study/idr0110/#person-2>,
         <https://idr.openmicroscopy.org/study/idr0110/#person-3>,
         <https://orcid.org/0000-0002-3233-7885> ;
+    schema1:copyrightNotice "Rodermund et al, CC-BY-4.0, 2021" ;
     schema1:datePublished "2021-08-03"^^xsd:date ;
     schema1:description "Xist RNA directs the process of X-chromosome inactivation in mammals by spreading in cis along the chromosome from which it is transcribed and recruiting chromatin modifiers to silence gene transcription. To elucidate mechanisms of Xist RNA cis-confinement, we established a sequential dual-color labeling, super-resolution imaging approach to trace individual Xist RNA molecules over time, enabling us to define fundamental parameters of spreading. We demonstrate a feedback mechanism linking Xist RNA synthesis and degradation, and an unexpected physical coupling between preceding and newly synthesized Xist RNA molecules. Additionally, we find that the protein SPEN, a key factor for Xist-mediated gene-silencing, has a distinct function in Xist RNA localization, stability and coupling behavior. Our results provide important insights towards understanding the unique dynamic properties of Xist RNA." ;
     schema1:identifier "idr0110" ;
@@ -9687,6 +9780,7 @@
         <https://idr.openmicroscopy.org/study/idr0111/#experiment-biosample-2> ;
     schema1:author <https://orcid.org/0000-0001-9359-0422>,
         <https://orcid.org/0000-0002-4378-4381> ;
+    schema1:copyrightNotice "Lee et al, CC-BY-4.0, 2021" ;
     schema1:datePublished "2021-06-30"^^xsd:date ;
     schema1:description "Recent evidence suggests that groups of cells are more likely to form clinically dangerous metastatic tumors, emphasizing the importance of understanding mechanisms underlying collective behavior. The emergent collective behavior of migrating cell sheets in vitro has been shown to be disrupted in tumorigenic cells but the connection between this behavior and in vivo tumorigenicity remains unclear. We use particle image velocimetry to measure a multidimensional migration phenotype for genetically defined human breast epithelial cell lines that range in their in vivo behavior from non-tumorigenic to aggressively metastatic. By using cells with controlled mutations, we show that PTEN deletion enhances collective migration, while Ras activation suppresses it, even when combined with PTEN deletion. These opposing effects on collective migration of two mutations that are frequently found in patient tumors could be exploited in the development of novel treatments for metastatic disease. Our methods are based on label-free phase contrast imaging, and thus could easily be applied to patient tumor cells. The short time scales of our approach do not require potentially selective growth, and thus in combination with label-free imaging would allow multidimensional collective migration phenotypes to be utilized in clinical assessments of metastatic potential." ;
     schema1:identifier "idr0111" ;
@@ -9777,6 +9871,7 @@
         <https://idr.openmicroscopy.org/study/idr0112/#screen-biosample-1> ;
     schema1:author <https://orcid.org/0000-0002-3825-7675>,
         <https://orcid.org/0000-0002-5657-2943> ;
+    schema1:copyrightNotice "The Francis Crick Institute, Idiap Research Institute, CC-BY-4.0, 2021" ;
     schema1:datePublished "2021-09-01"^^xsd:date ;
     schema1:description "The aim of the study was to investigate relationships between ALS-related RNA-binding proteins and ALS, under different stress conditions." ;
     schema1:identifier "idr0112" ;
@@ -9840,6 +9935,7 @@
         <https://idr.openmicroscopy.org/study/idr0113/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0002-0056-8275>,
         <https://orcid.org/0000-0003-1801-9247> ;
+    schema1:copyrightNotice "Bottes et al, CC-BY-4.0, 2021" ;
     schema1:datePublished "2021-08-03"^^xsd:date ;
     schema1:description "Oligodendrocyte precursor cells (OPCs) retain the capacity to remyelinate axons in the corpus callosum (CC) upon demyelination. However, the dynamics of OPC activation, mode of cell division, migration, and differentiation on a single cell level remain poorly understood due to the lack of longitudinal observations of individual cells within the injured brain. After inducing focal demyelination with lysophosphatidylcholin (LPC) in the CC of adult mice, we used 2-photon microscopy to follow for up to 2 months OPCs and their differentiating progeny, genetically labeled through conditional recombination driven by the regulatory elements of the gene Achaete-scute homolog 1 (Ascl1). OPCs underwent several rounds of symmetric and asymmetric cell divisions, producing a subset of daughter cells that differentiates into myelinating oligodendrocytes. While OPCs continue to proliferate, differentiation into myelinating oligodendrocytes declines with time and death of OPC-derived daughter cells increases. Thus, chronic in vivo imaging delineates the cellular principles leading to remyelination in the adult brain, providing a framework for the development of novel strategies to enhance endogenous brain repair in acute and chronic demyelinating disease." ;
     schema1:identifier "idr0113" ;
@@ -9893,6 +9989,7 @@
         <https://idr.openmicroscopy.org/study/idr0114/#person-3>,
         <https://idr.openmicroscopy.org/study/idr0114/#person-4>,
         <https://idr.openmicroscopy.org/study/idr0114/#person-5> ;
+    schema1:copyrightNotice "Gerrelli et al, CC-BY-4.0, 2021" ;
     schema1:datePublished "2021-12-07"^^xsd:date ;
     schema1:description "Gene expression studies in early human development from 3 to 19 post conceptional weeks (PCW)." ;
     schema1:identifier "idr0114" ;
@@ -9975,6 +10072,7 @@
         <https://idr.openmicroscopy.org/study/idr0115/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0001-5909-701X>,
         <https://orcid.org/0000-0003-3976-0843> ;
+    schema1:copyrightNotice "Otsuka et al, CC-BY-4.0, 2022" ;
     schema1:datePublished "2022-05-05"^^xsd:date ;
     schema1:description "3D time-lapse imaging of nucleoporins." ;
     schema1:identifier "idr0115" ;
@@ -10030,6 +10128,7 @@
     schema1:about obo:NCBITaxon_9606,
         <https://idr.openmicroscopy.org/study/idr0116/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0001-5105-5915> ;
+    schema1:copyrightNotice "de Boer et al, CC-BY-4.0, 2021" ;
     schema1:datePublished "2021-09-21"^^xsd:date ;
     schema1:description "Autoimmune β-cell destruction leads to type 1 diabetes, but the pathophysiological mechanisms remain unclear. To help address this void, we created an open-access online repository composed of large-scale electron microscopy images (‘nanotomy’) of human pancreas tissue obtained from the Network for Pancreatic Organ donors with Diabetes (nPOD; www.nanotomy.org). Nanotomy allows analyses of complete donor islets with up to macromolecular resolution. Our first results of mining the database support recent findings that suggest that type 1 diabetes includes abnormalities in the exocrine pancreas that may induce endocrine cellular stress as a trigger for autoimmunity." ;
     schema1:identifier "idr0116" ;
@@ -10077,6 +10176,7 @@
     schema1:about obo:NCBITaxon_7656,
         <https://idr.openmicroscopy.org/study/idr0117/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0001-7092-0257> ;
+    schema1:copyrightNotice "Croce et al, CC-BY-4.0, 2021" ;
     schema1:datePublished "2021-09-01"^^xsd:date ;
     schema1:description "T-box transcription factors regulate many developmental processes. Here we report the cloning and expression analysis of ske-T, a novel sea urchin T-box gene. The distribution of the maternal ske-T transcript is uniform in the egg and early embryonic stages while zygotic expression is restricted to the skeletogenic mesenchyme lineage." ;
     schema1:identifier "idr0117" ;
@@ -10124,6 +10224,7 @@
     schema1:about obo:NCBITaxon_7227,
         <https://idr.openmicroscopy.org/study/idr0118/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0002-9152-9334> ;
+    schema1:copyrightNotice "Keenan et al, CC-BY-4.0, 2021" ;
     schema1:datePublished "2021-11-10"^^xsd:date ;
     schema1:description "During early Drosophila embryogenesis, a network of gene regulatory interactions orchestrates terminal patterning, playing a critical role in the subsequent formation of the gut. We utilized CRISPR gene editing at endogenous loci to create live reporters of transcription and light-sheet microscopy to monitor the individual components of posterior patterning network across 90 minutes prior to gastrulation. We developed a computational pipeline for fusing imaging datasets of the individual components into a common multivariable trajectory. This heterogeneous data fusion approach revealed low intrinsic dimensionality of posterior patterning and cell fate specification in wild type embryos." ;
     schema1:identifier "idr0118" ;
@@ -10179,6 +10280,7 @@
     schema1:about obo:NCBITaxon_9606,
         <https://idr.openmicroscopy.org/study/idr0119/#screen-biosample-1> ;
     schema1:author <https://orcid.org/0000-0003-3330-0950> ;
+    schema1:copyrightNotice "Gross et al, CC-BY-4.0, 2023" ;
     schema1:datePublished "2023-07-17"^^xsd:date ;
     schema1:description "Identifying effective therapeutic treatment strategies is a major challenge to improving outcomes for patients with breast cancer. To gain a comprehensive understanding of how clinically relevant anti-cancer agents modulate cell cycle progression, we genetically-engineered breast cancer cell lines express a fluorescently-labelled cell cycle reporter. We then used these cell lines to track drug-induced changes in cell number and cell cycle phase, which revealed drug-specific cell cycle effects that vary across time. We developed a linear chain trick (LCT) computational model, where the cell cycle is partitioned into subphases that can faithfully capture drug-induced dynamic responses. The model correctly infers drug effects and also localizes them to specific cell cycle phases. We used our LCT model to predict the effect of unseen drug combinations and experimentally confirmed the effectiveness of predicted combination treatment strategies. Our integrated experimental and modeling approach opens avenues to assess drug responses, predict effective drug combinations, and identify optimal drug sequencing strategies." ;
     schema1:identifier "idr0119" ;
@@ -10255,6 +10357,7 @@
         <https://idr.openmicroscopy.org/study/idr0120/#screen-biosample-3>,
         <https://idr.openmicroscopy.org/study/idr0120/#screen-biosample-4> ;
     schema1:author <https://orcid.org/0000-0002-7278-6503> ;
+    schema1:copyrightNotice "German et al, CC-BY-4.0, 2022" ;
     schema1:datePublished "2022-07-25"^^xsd:date ;
     schema1:description "The immunological synapse is a complex structure that decodes stimulatory signals into adapted lymphocyte responses. As such, it represents a unique window to monitor lymphocyte activity, owing to the development of systematic quantitative approaches applicable to primary cells. Here we demonstrate the applicability of high-content imaging to human T and NK cells and develop a pipeline for unbiased analysis of high-definition morphological profiles. Our approach reveals how distinct facets of actin cytoskeleton remodeling shape immunological synapse architecture and impact lytic granule positioning. Morphological profiling of CD8+ T cells from immunodeficient patients allows discriminating the roles of the ARP2/3 subunit ARPC1B and the ARP2/3 activator WASP in immunological synapse assembly. Single cell analysis further identifies uncoupling of lytic granules and F-actin radial distribution in ARPC1B-deficient lymphocytes. Our study provides a foundation for the development of morphological profiling as a scalable approach to monitor primary lymphocyte responsiveness and to identify complex aspects of lymphocyte micro-architecture." ;
     schema1:identifier "idr0120" ;
@@ -10420,6 +10523,7 @@
     schema1:about obo:NCBITaxon_9606,
         <https://idr.openmicroscopy.org/study/idr0123/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0002-6499-9082> ;
+    schema1:copyrightNotice "Mota et al, CC-BY-4.0, 2022" ;
     schema1:datePublished "2022-02-28"^^xsd:date ;
     schema1:description "We describe a dataset obtained by applying our recently developed iFISH pipeline to simultaneously visualize 16 small (size range: 62–73 kilobases, kb) evenly spaced DNA loci on chromosome 2 in human cells, in a single round of hybridization. We show how, using combinatorial color coding, multiple loci can be precisely 3D localized in single cells, and how inter-loci distances scale inversely with chromosome contact frequencies determined by Hi-C, as expected. We provide raw images and sub-pixel resolution 3D coordinates for nearly 100,000 dots." ;
     schema1:identifier "idr0123" ;
@@ -10481,6 +10585,7 @@
         <https://idr.openmicroscopy.org/study/idr0124/#person-4>,
         <https://orcid.org/0000-0003-0906-4767>,
         <https://orcid.org/0000-0003-3530-1850> ;
+    schema1:copyrightNotice "Esteban et al, CC-BY-4.0, 2022" ;
     schema1:datePublished "2022-01-17"^^xsd:date ;
     schema1:description "We provide the first and complete atlas for morphometric analysis and visualization of heart tube morphogenesis, reporting morphological variability and early emergence of left-right asymmetry patterns." ;
     schema1:identifier "idr0124" ;
@@ -10557,6 +10662,7 @@
         <https://idr.openmicroscopy.org/study/idr0127/#experiment-biosample-2>,
         <https://idr.openmicroscopy.org/study/idr0127/#experiment-biosample-3> ;
     schema1:author <https://orcid.org/0000-0003-1929-0338> ;
+    schema1:copyrightNotice "Baer et al, CC-BY-4.0, 2022" ;
     schema1:datePublished "2022-02-28"^^xsd:date ;
     schema1:description "Staphylococcus aureus was isolated from patients suffering cardiovascular, prosthetic joint or other infections and plated on Columbia sheep blood agar. Macroscopic time-lapse imaging was performed to quantify colony appearance-time and growth-rate. As a baseline reference, the same time-lapse imaging protocol was used after subculturing clinical isolates in tryptic soy broth until bacteria reached exponential growth phase." ;
     schema1:identifier "idr0127" ;
@@ -10684,6 +10790,7 @@
         <https://idr.openmicroscopy.org/study/idr0128/#screen-biosample-4>,
         <https://idr.openmicroscopy.org/study/idr0128/#screen-biosample-5> ;
     schema1:author <https://orcid.org/0000-0002-4803-5099> ;
+    schema1:copyrightNotice "Olszewski et al, CC-BY-4.0, 2022" ;
     schema1:datePublished "2022-05-05"^^xsd:date ;
     schema1:description "Viral infectious diseases span a myriad of maladies, including immunosuppression, cancer, organ failure and, if lacking effective treatment, even death. While numerous targeted antiviral therapies have been developed over the past century, many viral diseases still lack effective antivirals to date. Revisiting compounds approved for other applications offers accelerated development, and automated screening and data processing boost the feasibility of the re-purposing approach. Here, we extended our high-content image-based platform  on three human viruses differing in genome composition, envelope state, and tropism, namely human rhinovirus (RV), influenza A virus (IAV) and herpes simplex virus (HSV). Among the 1,280 mainly FDA-approved compounds, we identified potent inhibitors and even enhancers of multi-round infection propagation in vitro. The most potent inhibitors were 5-azacytidin against RV-A16, clotrimazole against IAV-WSN, and raltitrexed against HSV-1. Clobetasol was found to significantly enhance HSV-1 infection. Remarkably, Aminacrine, a topical antiseptic, inhibited all three viruses tested. Follow-up experiments of the highest-scoring modulators confirmed their performance." ;
     schema1:identifier "idr0128" ;
@@ -10919,6 +11026,7 @@
         <https://idr.openmicroscopy.org/study/idr0129/#screen-biosample-3>,
         <https://idr.openmicroscopy.org/study/idr0129/#screen-biosample-4> ;
     schema1:author <https://orcid.org/0000-0002-4803-5099> ;
+    schema1:copyrightNotice "Olszewski et al, CC-BY-4.0, 2022" ;
     schema1:datePublished "2022-05-05"^^xsd:date ;
     schema1:description "Viral infectious diseases span a myriad of maladies, including immunosuppression, cancer, organ failure and, if lacking effective treatment, even death. While numerous targeted antiviral therapies have been developed over the past century, many viral diseases still lack effective antivirals to date. Revisiting compounds approved for other applications offers accelerated development, and automated screening and data processing boost the feasibility of the re-purposing approach. Here, we extended our high-content image-based platform  on three human viruses differing in genome composition, envelope state, and tropism, namely human rhinovirus (RV), Human rhinovirus (IAV) and herpes simplex virus (HSV). Among the 1,280 mainly FDA-approved compounds, we identified potent inhibitors and even enhancers of multi-round infection propagation in vitro. The most potent inhibitors were 5-azacytidin against RV-A16, clotrimazole against IAV-WSN, and raltitrexed against HSV-1. Clobetasol was found to significantly enhance HSV-1 infection. Remarkably, Aminacrine, a topical antiseptic, inhibited all three viruses tested. Follow-up experiments of the highest-scoring modulators confirmed their performance." ;
     schema1:identifier "idr0129" ;
@@ -11111,6 +11219,7 @@
         <https://idr.openmicroscopy.org/study/idr0130/#screen-biosample-2>,
         <https://idr.openmicroscopy.org/study/idr0130/#screen-biosample-3> ;
     schema1:author <https://orcid.org/0000-0001-5389-4034> ;
+    schema1:copyrightNotice "Olszewski et al, CC-BY-4.0, 2022" ;
     schema1:datePublished "2022-05-05"^^xsd:date ;
     schema1:description "Viral infectious diseases span a myriad of maladies, including immunosuppression, cancer, organ failure and, if lacking effective treatment, even death. While numerous targeted antiviral therapies have been developed over the past century, many viral diseases still lack effective antivirals to date. Revisiting compounds approved for other applications offers accelerated development, and automated screening and data processing boost the feasibility of the re-purposing approach. Here, we extended our high-content image-based platform  on three human viruses differing in genome composition, envelope state, and tropism, namely human rhinovirus (RV), Human rhinovirus (IAV) and herpes simplex virus (HSV). Among the 1,280 mainly FDA-approved compounds, we identified potent inhibitors and even enhancers of multi-round infection propagation in vitro. The most potent inhibitors were 5-azacytidin against RV-A16, clotrimazole against IAV-WSN, and raltitrexed against HSV-1. Clobetasol was found to significantly enhance HSV-1 infection. Remarkably, Aminacrine, a topical antiseptic, inhibited all three viruses tested. Follow-up experiments of the highest-scoring modulators confirmed their performance." ;
     schema1:identifier "idr0130" ;
@@ -11252,6 +11361,7 @@
     schema1:about obo:NCBITaxon_9606,
         <https://idr.openmicroscopy.org/study/idr0133/#screen-biosample-1> ;
     schema1:author <https://orcid.org/0000-0003-4151-9944> ;
+    schema1:copyrightNotice "Dahlin & Hua et al, CC-BY-4.0, 2022" ;
     schema1:datePublished "2022-07-05"^^xsd:date ;
     schema1:description "Robust, generalizable approaches to efficiently identify compounds with undesirable mechanisms of action in complex cellular assays remain elusive. Such a process would be useful for hit triage during high-throughput screening and, ultimately, predictive toxicology during drug development. Here, we report on the generation of Cell Painting and cellular health profiles for 218 prototypical cytotoxic and nuisance compounds in U-2 OS cells in a concentration-response format. Compounds causing cellular damage such as cytoskeletal poisons, genotoxins, nonspecific electrophiles, and redox-active compounds produced bioactive Cell Painting morphologies. Further, we show that lower-quality lysine acetyltransferase inhibitors and nonspecific electrophiles can be distinguished from more selective counter-parts. We propose that the purposeful inclusion of cytotoxic and nuisance reference compounds such as those profiled in this Resource will help with assay optimization and compound prioritization in complex cellular assays like Cell Painting." ;
     schema1:identifier "idr0133" ;
@@ -11352,6 +11462,7 @@
         obo:NCBITaxon_8320028,
         <https://idr.openmicroscopy.org/study/idr0134/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0002-4321-0257> ;
+    schema1:copyrightNotice "Peters et al, CC-BY-4.0, 2022" ;
     schema1:datePublished "2022-08-25"^^xsd:date ;
     schema1:description "Here, we present a high-quality reference dataset containing macroscopic and bright-field microscopic images documenting various phenotypic properties of the species belonging to the family of Scapaniaceae occurring in Europe. The information contained in the images is of particular interest for biodiversity research, machine learning and image segmentation used in bioinformatics and computational ecology." ;
     schema1:identifier "idr0134" ;
@@ -11447,6 +11558,7 @@
         <https://idr.openmicroscopy.org/study/idr0135/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0002-5651-4268>,
         <https://orcid.org/0000-0002-6059-0116> ;
+    schema1:copyrightNotice "Hodis, Torlai Triglia et al, CC-BY-4.0, 2022" ;
     schema1:datePublished "2022-05-05"^^xsd:date ;
     schema1:description "Establishing causal relationships between genetic alterations of human cancers and the specific phenotypes of malignancy remains a challenge. We sequentially introduced mutations into healthy human melanocytes in up to five genes spanning six commonly disrupted melanoma pathways forming nine genetically distinct cellular models of melanoma. We connected mutant melanocyte genotypes to malignant cell expression programs in vitro and in vivo, replicative immortality, malignancy, rapid tumor growth, pigmentation, metastasis, and histopathology. Mutations in malignant cells also affected tumor microenvironment composition and cell states. Our melanoma models shared genotype-associated expression programs with patient melanomas, and a deep learning model showed they partially recapitulated genotype-associated histopathological features as well. Thus, a progressive series of genome-edited, human cancer models can causally connect genotypes carrying multiple mutations to phenotype." ;
     schema1:identifier "idr0135" ;
@@ -11505,6 +11617,7 @@
         obo:NCBITaxon_5931123,
         <https://idr.openmicroscopy.org/study/idr0137/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0002-4321-0257> ;
+    schema1:copyrightNotice "Peters et al, CC-BY-4.0, 2023" ;
     schema1:datePublished "2023-01-17"^^xsd:date ;
     schema1:description "A reference dataset containing macroscopic and bright-field microscopic images to integrate phenotypic data with metabolomics and sequencing for use in integrative taxonomy." ;
     schema1:identifier "idr0137" ;
@@ -11554,6 +11667,7 @@
     schema1:about obo:NCBITaxon_10090,
         <https://idr.openmicroscopy.org/study/idr0138/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0001-7861-6997> ;
+    schema1:copyrightNotice "Lohoff et al, CC-BY-4.0, 2024" ;
     schema1:datePublished "2024-09-10"^^xsd:date ;
     schema1:description "Molecular profiling of single cells has advanced our knowledge of the molecular basis of development. However, current approaches mostly rely on dissociating cells from tissues, thereby losing the crucial spatial context of regulatory processes. Here, we apply an image-based single-cell transcriptomics method, sequential fluorescence in situ hybridization (seqFISH), to detect mRNAs for 387 target genes in tissue sections of mouse embryos at the 8–12 somite stage. By integrating spatial context and multiplexed transcriptional measurements with two single-cell transcriptome atlases, we characterize cell types across the embryo and demonstrate that spatially resolved expression of genes not profiled by seqFISH can be imputed. We use this high-resolution spatial map to characterize fundamental steps in the patterning of the midbrain–hindbrain boundary (MHB) and the developing gut tube. We uncover axes of cell differentiation that are not apparent from single-cell RNA-sequencing (scRNA-seq) data, such as early dorsal–ventral separation of esophageal and tracheal progenitor populations in the gut tube. Our method provides an approach for studying cell fate decisions in complex tissues and development." ;
     schema1:identifier "idr0138" ;
@@ -11618,6 +11732,7 @@
         <https://idr.openmicroscopy.org/study/idr0139/#screen-biosample-3> ;
     schema1:author <https://orcid.org/0000-0001-5349-0638>,
         <https://orcid.org/0000-0002-2021-8379> ;
+    schema1:copyrightNotice "Lawson et al, CC-BY-4.0, 2023" ;
     schema1:datePublished "2023-08-17"^^xsd:date ;
     schema1:description "Fascin is an important regulator of F-actin bundling leading to enhanced filopodia assembly. Fascin is also overexpressed in most solid tumours where it supports invasion through control of F-actin structures at the periphery and nuclear envelope. Recently fascin has been identified in the nucleus of a broad range of cell types but the contributions of nuclear fascin to cancer cell behaviour remain unknown. Here we demonstrate that fascin bundles F-actin within the nucleus to support chromatin organisation and efficient DNA damage response. Fascin associates directly with phosphorylated Histone H3 leading to regulated levels of nuclear fascin to support these phenotypes. Forcing nuclear fascin accumulation through the expression of nuclear-targeted fascin-specific nanobodies or inhibition of Histone H3 kinases results in enhanced and sustained nuclear F-actin bundling leading to reduced invasion, viability and nuclear fascin-specific/driven apoptosis. These findings represent an additional important route through which fascin can support tumorigenesis and provide insight into potential pathways for targeted fascin-dependent cancer cell killing." ;
     schema1:identifier "idr0139" ;
@@ -11757,6 +11872,7 @@
         <https://idr.openmicroscopy.org/study/idr0140/#screen-biosample-1>,
         <https://idr.openmicroscopy.org/study/idr0140/#screen-biosample-2> ;
     schema1:author <https://orcid.org/0000-0002-9002-5003> ;
+    schema1:copyrightNotice "Ho et al, CC-BY-4.0, 2022" ;
     schema1:datePublished "2022-10-31"^^xsd:date ;
     schema1:description "Cells respond to environmental stressors by activating programs that result in protein abundance and localization changes. The DNA damage and DNA replication stress responses have been heavily studied and provide exemplars of the roles of protein localization and abundance regulation in proper cellular stress response. While vast amounts of data have been collected to describe the dynamics of yeast proteins in response to numerous external stresses, few have assessed and compared both protein localization kinetics and phenotypic heterogeneity in the same context, particularly during DNA replication stress. We developed a robust yet simple quantification scheme to identify and measure protein localization change events (re-localization) and applied it to the 314 yeast proteins whose subcellular distribution changes following DNA replication stress. We captured different kinetics of protein re-localization, identified proteins with localization changes that were not detected in previous analyses, and defined the extent of heterogeneity in stress-induced protein re-localization. Our imaging platforms and analysis pipeline enables efficient measurements of protein localization phenotypes for single cells over time and will guide future work in elucidating the biological parameters that govern cellular heterogeneity." ;
     schema1:identifier "idr0140" ;
@@ -11852,6 +11968,7 @@
     schema1:about obo:NCBITaxon_9606,
         <https://idr.openmicroscopy.org/study/idr0141/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0001-5105-5915> ;
+    schema1:copyrightNotice "Sokol et al, CC-BY-4.0, 2022" ;
     schema1:datePublished "2022-09-29"^^xsd:date ;
     schema1:description "Large-scale electron microscopy ('nanotomy') allows straight forward ultrastructural examination of tissue, cells, organelles, and macromolecules in a single data set. Such data set equals thousands of conventional electron microscopy images and is freely accessible (www.nanotomy.org). The software allows zooming in and out of the image from total overview to nanometer scale resolution in a ÔGoogle EarthÕ approach. We studied the life-threatening human autoimmune blistering disease pemphigus, using nanotomy. The pathomechanism of cellÐcell separation (acantholysis) that underlies the blistering is poorly understood. Ultrastructural examination of pemphigus tissue revealed previously unreported findings: (i) the presence of double-membrane structures between cells in all pemphigus types; (ii) the absence of desmosomes around spontaneous blisters in pemphigus foliaceus (PF); (iii) lower level blistering in PF when force induced; and (iv) intercellular widening at non-acantholytic cell layers. Thus, nanotomy delivers open-source electron microscopic maps of patient tissue, which can be analyzed for additional anomalies from any computer by experts from different fields." ;
     schema1:identifier "idr0141" ;
@@ -11900,6 +12017,7 @@
     schema1:about obo:NCBITaxon_9606,
         <https://idr.openmicroscopy.org/study/idr0143/#screen-biosample-1> ;
     schema1:author <https://orcid.org/0000-0002-0648-1832> ;
+    schema1:copyrightNotice "Herbst, Kim, Roider et al., CC-BY-4.0, 2023" ;
     schema1:datePublished "2023-10-09"^^xsd:date ;
     schema1:description "Large-scale compound screens are a powerful model system for understanding variability of treatment response and for discovering druggable tumor vulnerabilities of hematological malignancies. However, as mostly performed in a monoculture of tumor cells, these assays disregard modulatory effects of the in vivo microenvironment. It is an open question whether and to what extent coculture with bone marrow stromal cells could improve the biological relevance of drug testing assays over monoculture. Here, we established a high throughput platform to measured ex vivo sensitivity of 108 primary blood cancer samples to 50 drugs in monoculture and in coculture with bone marrow stromal cells. Stromal coculture conferred resistance to 52 % of compounds in chronic lymphocytic leukemia (CLL) and to 36 % of compounds in acute myeloid leukemia (AML), including chemotherapeutics, BCR inhibitors, proteasome inhibitors and BET inhibitors. While most of the remaining drugs were similarly effective in mono- and coculture, oOnly the JAK inhibitors ruxolitinib and tofacitinib exhibited increased efficacy in AML and CLL stromal coculture. We further confirmed the importance of JAK-STAT signaling for stroma-mediated resistance by showing that stromal cells induce phosphorylation of STAT3 in CLL cells. We genetically characterized the 108 cancer samples and found that drug-gene associations agreed strongly correlated well between mono- and coculture. OverallHowever, effect sizes were lower in coculture, thus with more drug-gene associations were detected in monoculture than in coculture. Our results suggest justifies a two-step strategy for drug perturbation testing, with large-scale screening performed in monoculture, followed by focused evaluation of potential stroma-mediated resistances in coculture." ;
     schema1:identifier "idr0143" ;
@@ -11953,6 +12071,7 @@
     schema1:about obo:NCBITaxon_9606,
         <https://idr.openmicroscopy.org/study/idr0144/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0002-2841-3021> ;
+    schema1:copyrightNotice "Baskay et al, CC-BY-4.0, 2022" ;
     schema1:datePublished "2022-12-08"^^xsd:date ;
     schema1:description "The goal of this study is to present a methodology to create 3 dimensional structures reconstructed from high resolution histological sections by utilizing convolutional neural networks to annotate the images, discard the folded and/or torn section with an unsupervised information-theory-based clustering algorithm and apply Homography to correct perspective of each image. The resulting models then can be used for 3 dimensional micromorphometry analysis to aid the decision making process of medical professionals." ;
     schema1:identifier "idr0144" ;
@@ -12002,6 +12121,7 @@
         <https://idr.openmicroscopy.org/study/idr0145/#screen-biosample-1>,
         <https://idr.openmicroscopy.org/study/idr0145/#screen-biosample-2> ;
     schema1:author <https://orcid.org/0000-0002-9002-5003> ;
+    schema1:copyrightNotice "Ho et al, CC-BY-4.0, 2023" ;
     schema1:datePublished "2023-01-17"^^xsd:date ;
     schema1:description "The replication checkpoint is essential for accurate DNA replication and repair, and maintenance of genomic integrity when a cell is challenged with genotoxic stress. Several studies have defined the complement of proteins that change subcellular location in the budding yeast Saccharomyces cerevisiae following chemically-induced DNA replication stress using methyl methanesulfonate (MMS) or hydroxyurea (HU). How these protein movements are regulated remains largely unexplored. We find that the essential checkpoint kinases Mec1 and Rad53 are responsible for regulating the subcellular localization of 159 proteins during MMS-induced replication stress. Unexpectedly, Rad53 regulation of the localization of 52 proteins is independent of its known kinase activators, Mec1, and in some scenarios independent of Tel1, or mediator components, Rad9 and Mrc1. We demonstrate that Rad53 is phosphorylated and active following MMS exposure in cells lacking Mec1 and Tel1. This non-canonical mode of Rad53 activation depends partly on the retrograde signaling transcription factor Rtg3, which also facilitates proper DNA replication dynamics. We conclude that there are biologically important modes of Rad53 protein kinase activation that respond to replication stress and operate in parallel to Mec1 and Tel1." ;
     schema1:identifier "idr0145" ;
@@ -12099,6 +12219,7 @@
         <https://idr.openmicroscopy.org/study/idr0146/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0002-0804-7597>,
         <https://orcid.org/0000-0002-1960-7190> ;
+    schema1:copyrightNotice "Dominguez et al, CC-BY-4.0, 2023" ;
     schema1:datePublished "2023-02-06"^^xsd:date ;
     schema1:description "Using four-dimensional whole-embryo light sheet imaging with improved and accessible computational tools, we longitudinally reconstruct early murine cardiac development at single-cell resolution. Nascent mesoderm progenitors form opposing density and motility gradients, converting the temporal birth sequence of gastrulation into a spatial anterolateral-to-posteromedial arrangement. Migrating precardiac mesoderm doesn’t strictly preserve cellular neighbor relationships; spatial patterns only become solidified as the cardiac crescent emerges. Progenitors undergo a heretofore unknown mesenchymal-to-epithelial transition, with an anchored first heart field (FHF) ridge apposing a motile juxtacardiac field (JCF). The nascent heart tube forms as the JCF rotates forward, due to push-pull morphodynamics of the second heart field transmitted through the FHF epithelium. In Mesp1 mutants that fail to make a cardiac crescent, mesoderm remains highly motile but directionally incoherent, resulting in density gradient inversion. Our practicable live embryo imaging approach defines spatial origins and behaviors of cardiac progenitors, and identifies their unanticipated morphological transitions." ;
     schema1:identifier "idr0146" ;
@@ -12147,6 +12268,7 @@
         <https://idr.openmicroscopy.org/study/idr0147/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0002-0870-7997>,
         <https://orcid.org/0000-0003-2665-0995> ;
+    schema1:copyrightNotice "Kuo at al, CC-BY-4.0, 2023" ;
     schema1:datePublished "2023-06-19"^^xsd:date ;
     schema1:description "The performance of machine learning algorithms, when used for segmenting 3D biomedical images, does not reach the level expected based on results achieved with 2D photos. This may be explained by the comparative lack of high-volume, high-quality training datasets, which require state-of-the art imaging facilities, domain experts for annotation and large computational and personal resources. The HR-Kidney dataset presented in this work bridges this gap by providing 1.7 TB of artefact-corrected synchrotron radiation-based X-ray phase-contrast microtomography images of whole mouse kidneys and validated segmentations of 33 729 glomeruli, which corresponds to a one to two orders of magnitude increase over currently available biomedical datasets. The image sets also contain the underlying raw data, threshold- and morphology-based semi-automatic segmentations of renal vasculature and uriniferous tubules, as well as true 3D manual annotations. We therewith provide a broad basis for the scientific community to build upon and expand in the fields of image processing, data augmentation and machine learning, in particular unsupervised and semi-supervised learning investigations, as well as transfer learning and generative adversarial networks." ;
     schema1:identifier "idr0147" ;
@@ -12191,6 +12313,7 @@
     schema1:about obo:NCBITaxon_9606,
         <https://idr.openmicroscopy.org/study/idr0148/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0001-7790-2756> ;
+    schema1:copyrightNotice "Schumacher et al, CC-BY-4.0, 2023" ;
     schema1:datePublished "2023-04-05"^^xsd:date ;
     schema1:description "Research on the ultrastructural development of the kidney is limited, and research on rodent kidneys prevails. Yet, large differences between rodent and human nephrogenesis exist and therefore translation between species is not desirable. At the same time, there is an increasing demand for human research, in addition to assessing the potential of novel therapies such as renal organoids. We therefore generated an interactive atlas of large transmission electron microscopy tile scans of first trimester human kidneys, specifically Carnegie stage 20 until post-conceptional week 12. Analysis identified key ultrastructural features of proximal and distal progenitor cells such as cell shape, microvilli and luminal budding in the renal vesicle. Regarding glomerular development, we identified a new W-shaped body stage and three distinct sub-stages of the well-known capillary loop stage. Chromatin organization, nuclear shape and location were used to describe tubule cell identity and maturity, indicating a specific order of tubular maturation. The greatest congruence with adult tissue was seen in proximal tubules and the least in distal tubules. Finally, cytoplasmic glycogen depositions in collecting duct cells, which are absent in adult tissue, were found to be an early feature distinguishing distal tubules from collecting ducts as well as differentiating cortical from medullary collecting ducts. The findings of this research provide new fundamental insights for researchers who aim to understand and recreate kidney development." ;
     schema1:identifier "idr0148" ;
@@ -12249,6 +12372,7 @@
         <https://idr.openmicroscopy.org/study/idr0149/#experiment-biosample-6> ;
     schema1:author <https://orcid.org/0000-0002-9807-5099>,
         <https://orcid.org/0000-0003-1637-3365> ;
+    schema1:copyrightNotice "Batty et al, CC-BY-4.0, 2023" ;
     schema1:datePublished "2023-08-17"^^xsd:date ;
     schema1:description "Genetic information is stored in linear DNA molecules, which fold extensively inside cells. DNA replication along the folded template path yields two sister chromatids that initially occupy the same nuclear region in a highly intertwined arrangement. Dividing cells must disentangle and condense the sister chromatids into separate bodies such that a microtubule-based spindle can move them to opposite poles. While the spindle-mediated transport of sister chromatids has been studied in detail, the chromosome-intrinsic mechanics pre-segregating sister chromatids have remained elusive. Here, we show that human sister chromatids resolve extensively already during interphase, in a process dependent on the loop-extruding activity of cohesin, but not that of condensins. Increasing cohesin’s looping capability increases sister DNA resolution in interphase nuclei to an extent normally seen only during mitosis, despite the presence of abundant arm cohesion. That cohesin can resolve sister chromatids so extensively in the absence of mitosis-specific activities indicates that DNA loop extrusion is a generic mechanism for segregating replicated genomes, shared across different Structural Maintenance of Chromosomes (SMC) protein complexes in all kingdoms of life." ;
     schema1:identifier "idr0149" ;
@@ -12419,6 +12543,7 @@
     schema1:about obo:NCBITaxon_9606,
         <https://idr.openmicroscopy.org/study/idr0150/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0002-4570-121X> ;
+    schema1:copyrightNotice "Scherz-Shouval et al, CC-BY-4.0, 2023" ;
     schema1:datePublished "2023-10-09"^^xsd:date ;
     schema1:description "Tumors are supported by cancer-associated fibroblasts (CAFs). CAFs are heterogeneous and carry out distinct cancer-associated functions. Understanding the full repertoire of CAFs and their dynamic changes as tumors evolve could improve the precision of cancer treatment. Here we comprehensively analyze CAFs using index and transcriptional single-cell sorting at several time points along breast tumor progression in mice, uncovering distinct subpopulations. Notably, the transcriptional programs of these subpopulations change over time and in metastases, transitioning from an immunoregulatory program to wound-healing and antigen-presentation programs, indicating that CAFs and their functions are dynamic. Two main CAF subpopulations are also found in human breast tumors, where their ratio is associated with disease outcome across subtypes and is particularly correlated withÊBRCAÊmutations in triple-negative breast cancer. These findings indicate that the repertoire of CAF changes over time in breast cancer progression, with direct clinical implications." ;
     schema1:identifier "idr0150" ;
@@ -12467,6 +12592,7 @@
         <https://idr.openmicroscopy.org/study/idr0151/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0001-7953-0765>,
         <https://orcid.org/0000-0002-5588-796X> ;
+    schema1:copyrightNotice "Clark et al, CC-BY-4.0, 2025" ;
     schema1:datePublished "2025-07-10"^^xsd:date ;
     schema1:description "In insect embryos, anteroposterior patterning is coordinated by the sequential expression of the  timer  genes caudal, Dichaete, and odd-paired, whose expression dynamics correlate with the mode of segmentation. In Drosophila, the timer genes are expressed broadly across much of the blastoderm, which segments simultaneously, but their expression is delayed in a small  tail  region, just anterior to the hindgut, which segments during germband extension. Specification of the tail and the hindgut depends on the terminal gap gene tailless, but beyond this the regulation of the timer genes is poorly understood. We used a combination of multiplexed imaging, mutant analysis, and gene network modelling to resolve the regulation of the timer genes, identifying 11 new regulatory interactions and clarifying the mechanism of posterior terminal patterning. We propose that a dynamic Tailless expression gradient modulates the intrinsic dynamics of a timer gene cross-regulatory module, delineating the tail region and delaying its developmental maturation." ;
     schema1:identifier "idr0151" ;
@@ -12522,6 +12648,7 @@
         obo:NCBITaxon_9606,
         <https://idr.openmicroscopy.org/study/idr0154/#experiment-biosample-1> ;
     schema1:author <https://idr.openmicroscopy.org/study/idr0154/#person-1> ;
+    schema1:copyrightNotice "Queen et al, CC-BY-4.0, 2024" ;
     schema1:datePublished "2024-03-05"^^xsd:date ;
     schema1:description "Validation of novel genes identified by Spatial Transcriptomics in human embryonic arterial valves at CS16 and CS19." ;
     schema1:identifier "idr0154" ;
@@ -12577,6 +12704,7 @@
         <https://idr.openmicroscopy.org/study/idr0155/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0002-8816-2906>,
         <https://orcid.org/0000-0003-4492-5139> ;
+    schema1:copyrightNotice "Fu at al, CC-BY-4.0, 2024" ;
     schema1:datePublished "2024-03-05"^^xsd:date ;
     schema1:description "Super-resolution and single-molecule microscopy are increasingly being applied to complex biological systems. While this can lead greater insight, it also means data analysis becomes more complex: fluorescent puncta must reliably and efficiently be detected in the low signal, high noise, heterogeneous background environments of cells and tissue. We present a bioimaging-segmentation method that accomplishes this. It detects features over a broad range of spatial scales: from single proteins to complex cell phenotypes. Our method outperforms the state-of-the-art in both precision and speed, using image gradients to separate Gaussian-shaped objects from background features. We demonstrate that this approach both works robustly on simple test systems, and that it enables us to extract previously unseen correlations between Parkinson’s Disease-relevant $\\alpha$-synuclein oligomers and multiple different cells types in the human brain. This sensitive, computationally efficient approach will enable fluorescent puncta and cellular features to be distinguished in cellular and tissue environments with a sensitivity down to the level of the single protein." ;
     schema1:identifier "idr0155" ;
@@ -12670,6 +12798,7 @@
         <https://orcid.org/0000-0003-1579-0773>,
         <https://orcid.org/0000-0003-3709-3469>,
         <https://orcid.org/0000-0003-4063-7324> ;
+    schema1:copyrightNotice "Szabo et al, CC-BY-4.0, 2025" ;
     schema1:datePublished "2025-05-08"^^xsd:date ;
     schema1:description "The genome folds into a hierarchy of three-dimensional structures within the nucleus. At the sub-megabase scale, chromosomes form topologically associating domains (TADs). However, how TADs fold in single cells is elusive. Here, we reveal TAD features inaccessible to cell population analysis by using super-resolution microscopy. TAD structures and physical insulation associated with their borders are variable between individual cells,  yet chromatin intermingling is enriched within TADs compared to adjacent TADs in most cells. The spatial segregation of TADs is further exacerbated during cell differentiation.  Favored interactions within TADs are regulated by cohesin and CTCF through distinct mechanisms:  cohesin generates chromatin contacts and intermingling while CTCF prevents inter-TAD contacts.  Furthermore, TADs are subdivided into discrete nanodomains, which persist in cells depleted of CTCF or cohesin,  whereas disruption of nucleosome contacts alters their structural organization. Altogether, these results provide a physical basis for the folding of individual chromosomes at the nanoscale." ;
     schema1:identifier "idr0156" ;
@@ -12897,6 +13026,7 @@
         obo:NCBITaxon_71659,
         <https://idr.openmicroscopy.org/study/idr0157/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0002-4321-0257> ;
+    schema1:copyrightNotice "Peters et al, CC-BY-4.0, 2024" ;
     schema1:datePublished "2024-05-20"^^xsd:date ;
     schema1:description "A reference dataset containing macroscopic and bright-field microscopic images of 16 specimens of thallose liverworts of biological soil crusts collected in Southern Sweden and Germany." ;
     schema1:identifier "idr0157" ;
@@ -12952,6 +13082,7 @@
     schema1:about obo:NCBITaxon_9606,
         <https://idr.openmicroscopy.org/study/idr0158/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0003-4379-8967> ;
+    schema1:copyrightNotice "Radtke et al, CC-BY-4.0, 2024" ;
     schema1:datePublished "2024-10-08"^^xsd:date ;
     schema1:description "Reference atlases, molecular and spatial maps of mammalian tissues, are critical resources for discovery efforts and translational research. Their utility is dependent on operationalizing the resulting data by identifying cell types, histological patterns, and predictive biomarkers underlying health and disease. The human lymph node (LN) offers a compelling use case because of its importance in immunity, structural and cellular diversity, and neoplastic involvement. One hematological malignancy, follicular lymphoma (FL), evolves from developmentally blocked germinal center B cells residing in and trafficking through these tissues. To promote survival and immune escape, tumor B cells undergo significant genetic changes and extensively remodel the lymphoid microenvironment. Here, we present an integrated portrait of healthy and FL LNs using multiple genomic and advanced imaging technologies. By leveraging the strengths of each platform, we identify several tumor-specific features and microenvironmental patterns enriched in individuals who experience early relapse, the most high-risk of FL patients." ;
     schema1:identifier "idr0158" ;
@@ -12985,6 +13116,7 @@
     schema1:about obo:NCBITaxon_7070,
         <https://idr.openmicroscopy.org/study/idr0159/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0002-5350-0194> ;
+    schema1:copyrightNotice "Strobl et al, CC-BY-4.0, 2025" ;
     schema1:datePublished "2025-02-18"^^xsd:date ;
     schema1:description "Insect development has contributed significantly to our understanding" ;
     schema1:identifier "idr0159" ;
@@ -13041,6 +13173,7 @@
         <https://idr.openmicroscopy.org/study/idr0160/#screen-biosample-1> ;
     schema1:author <https://orcid.org/0000-0002-0503-9348>,
         <https://orcid.org/0000-0002-8637-1448> ;
+    schema1:copyrightNotice "Lippincott et al, CC0-1.0, 2025" ;
     schema1:datePublished "2025-05-08"^^xsd:date ;
     schema1:description "Pyroptosis represents one type of Programmed Cell Death (PCD). It is a form of inflammatory cell death that is canonically defined by caspase-1 cleavage and Gasdermin-mediated membrane pore formation. Caspase-1 initiates the inflammatory response (through IL-1β processing), and the N-terminal cleaved fragment of Gasdermin D polymerizes at the cell periphery forming pores to secrete pro-inflammatory markers. Cell morphology also changes in pyroptosis, with nuclear condensation and membrane rupture. However, recent research challenges canon, revealing a more complex secretome and morphological response in pyroptosis, including overlapping molecular characterization with other forms of cell death, such as apoptosis. Here, we take a multimodal, systems biology approach to characterize pyroptosis. We treated human Peripheral Blood Mononuclear Cells (PBMCs) with 36 different combinations of stimuli to induce pyroptosis or apoptosis. We applied both secretome profiling (nELISA) and high-content fluorescence microscopy (Cell Painting). To differentiate apoptotic, pyroptotic and control cells, we used canonical secretome markers and modified our Cell Painting assay to mark the N-terminus of Gasdermin-D. We trained hundreds of machine learning (ML) models to reveal intricate morphology signatures of pyroptosis that implicate changes across many different organelles and predict levels of many pro-inflammatory markers. Overall, our analysis provides a detailed map of pyroptosis which includes overlapping and distinct connections with apoptosis revealed through a mechanistic link between cell morphology and cell secretome." ;
     schema1:identifier "idr0160" ;
@@ -13101,6 +13234,7 @@
     schema1:about obo:NCBITaxon_9606,
         <https://idr.openmicroscopy.org/study/idr0161/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0002-7034-0524> ;
+    schema1:copyrightNotice "Yayon et al, CC-BY-4.0, 2024" ;
     schema1:datePublished "2024-12-12"^^xsd:date ;
     schema1:description "T cells develop from circulating precursor cells, which enter the thymus and migrate through specialised sub-compartments that support their maturation and selection. In humans, this process starts in early fetal development and is highly active until thymic involution in adolescence. To map the micro-anatomical underpinnings of this process in pre- and early postnatal stages, we established a novel quantitative morphological framework for the thymus, the Cortico-Medullary Axis, and used it to perform a spatially resolved analysis. By applying this framework to a curated multimodal single-cell atlas, spatial transcriptomics, and high-resolution multiplex imaging data, we demonstrate establishment of the lobular cytokine network, canonical thymocyte trajectories and thymic epithelial cell distributions within the first trimester of fetal development. We pinpoint tissue niches of thymic epithelial cell progenitors and distinct subtypes associated with Hassall’s corpuscles and uncover divergence in the timing of medullary entry between CD4 vs. CD8 T cell lineages. These findings provide a basis for a detailed understanding of T lymphocyte development and are complemented with a holistic toolkit for cross-platform imaging data analysis, annotation, and Organ Axis construction (TissueTag), which can be applied to any tissue." ;
     schema1:identifier "idr0161" ;
@@ -13143,6 +13277,7 @@
         <https://orcid.org/0000-0002-7836-4379>,
         <https://orcid.org/0009-0000-5757-6818>,
         <https://orcid.org/0009-0003-2650-1428> ;
+    schema1:copyrightNotice "Greenwald et al, CC0-1.0, 2024" ;
     schema1:datePublished "2024-12-12"^^xsd:date ;
     schema1:description "Immune checkpoint inhibition (ICI) has fundamentally changed cancer treatment. However, only a minority of patients with metastatic triple negative breast cancer (TNBC) benefit from ICI, and our understanding of the determinants of response is limited. To better understand the factors influencing patient outcome, we assembled a longitudinal cohort with tissue from the primary tumor, pre-treatment metastatic tumor, and on-treatment metastatic tumor from 117 patients treated with ICI (nivolumab) in the phase II TONIC trial. We used highly multiplexed imaging to quantify the subcellular localization of 37 proteins in each tumor. To extract meaningful information from the imaging data, we developed SpaceCat, a computational pipeline that quantifies features from imaging data such as cell density, cell diversity, spatial structure, and functional marker expression. We applied SpaceCat to 678 images from 294 tumors, generating more than 800 distinct features. Numerous spatial features were associated with patient outcome, including the degree of mixing between cancer and immune cells, the diversity of the neighboring immune cells surrounding cancer cells, and the degree of T cell infiltration at the cancer border. Non-spatial features, including the ratio between T cells and cancer cells and PDL1 levels on myeloid cells, were associated with ICI benefit. We did not identify robust predictors of response in the primary tumors. In contrast, the metastatic tumors had numerous features which predicted response. Some of these features, such as the cellular diversity at the cancer border, were shared across distinct timepoints, but many of the features were predictive at only a single timepoint. Multivariate models accurately predicted patient outcome from the pre-treatment metastatic tumors, with improved performance in the on-treatment tumor. We validated our findings in matched bulk RNA-seq data, observing similar longitudinal trends in the predictive power, but were not able to robustly predict outcome using matched pre-treatment exome sequencing data. Our study highlights the importance of profiling sequential tumor biopsies to understand the evolution of the tumor microenvironment, elucidating the temporal and spatial dynamics underlying patient responses to ICI." ;
     schema1:identifier "idr0163" ;
@@ -13193,6 +13328,7 @@
     schema1:about obo:NCBITaxon_9606,
         <https://idr.openmicroscopy.org/study/idr0164/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0009-0006-5163-2405> ;
+    schema1:copyrightNotice "Alzu'bi et al, CC-BY-4.0, 2025" ;
     schema1:datePublished "2025-05-08"^^xsd:date ;
     schema1:description "Gene expression analysis in early human development CS12 to 22 post conception weeks." ;
     schema1:identifier "idr0164" ;
@@ -13238,6 +13374,7 @@
     schema1:about obo:NCBITaxon_9606,
         <https://idr.openmicroscopy.org/study/idr0165/#experiment-biosample-1> ;
     schema1:author <https://orcid.org/0000-0001-5105-5915> ;
+    schema1:copyrightNotice "Duinkerken et al, CC-BY-4.0, 2025" ;
     schema1:datePublished "2025-02-18"^^xsd:date ;
     schema1:description "Microscopy is a key technique to visualize and understand biology. Electron microscopy (EM) facilitates the investigation of cellular ultrastructure at biomolecular resolution. Cellular EM was recently revolutionized by automation and digitalisation allowing routine capture of large areas and volumes at nanoscale resolution. Analysis, however, is hampered by the greyscale nature of electron images and their large data volume, often requiring laborious manual annotation. Here we demonstrate unsupervised and automated extraction of biomolecular assemblies in conventionally processed tissues using large-scale hyperspectral energy-dispersive X-ray (EDX) imaging. First, we discriminated biological features in the context of tissue based on selected elemental maps. Next, we designed a data-driven workflow based on dimensionality reduction and spectral mixture analysis, allowing the visualization and isolation of subcellular features with minimal manual intervention. Broad implementations of the presented methodology will accelerate the understanding of biological ultrastructure." ;
     schema1:identifier "idr0165" ;
