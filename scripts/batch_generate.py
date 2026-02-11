@@ -2993,7 +2993,8 @@ def main() -> None:
         crate = encoder.encode(metadata)
         crate_dir = output_dir / study_path.stem
         crate_dir.mkdir(parents=True, exist_ok=True)
-        output_path = crate_dir / "ro-crate-metadata.json"
+        descriptor_id = extract_metadata_descriptor_id(crate) or "ro-crate-metadata.json"
+        output_path = crate_dir / descriptor_id
         output_path.write_text(
             json.dumps(crate, indent=2, ensure_ascii=False), encoding="utf-8"
         )
@@ -3039,11 +3040,12 @@ def build_index_crate(output_dir: Path, subcrates) -> dict:
     for crate_dir, crate in subcrates:
         crate_rel = crate_dir.relative_to(output_dir).as_posix() + "/"
         root_entry = extract_root_entity(crate)
+        descriptor_id = extract_metadata_descriptor_id(crate) or "ro-crate-metadata.json"
         entity = {
             "@id": crate_rel,
             "@type": "Dataset",
             "conformsTo": {"@id": "https://w3id.org/ro/crate"},
-            "subjectOf": {"@id": f"{crate_rel}ro-crate-metadata.json"},
+            "subjectOf": {"@id": f"{crate_rel}{descriptor_id}"},
         }
         if root_entry:
             name = root_entry.get("name")
@@ -3059,7 +3061,7 @@ def build_index_crate(output_dir: Path, subcrates) -> dict:
         graph.append(entity)
         graph.append(
             {
-                "@id": f"{crate_rel}ro-crate-metadata.json",
+                "@id": f"{crate_rel}{descriptor_id}",
                 "@type": "CreativeWork",
                 "encodingFormat": "application/ld+json",
             }
@@ -3101,7 +3103,8 @@ def write_merged_ttl(output_path: Path, subcrates, index_path: Optional[Path]) -
             )
 
         for crate_dir, crate in subcrates:
-            crate_path = (crate_dir / "ro-crate-metadata.json").resolve()
+            descriptor_id = extract_metadata_descriptor_id(crate) or "ro-crate-metadata.json"
+            crate_path = (crate_dir / descriptor_id).resolve()
             crate_base = crate_base_iri(crate, crate_path.as_uri())
             graph.parse(data=json.dumps(crate), format="json-ld", publicID=crate_base)
     finally:
@@ -3109,6 +3112,34 @@ def write_merged_ttl(output_path: Path, subcrates, index_path: Optional[Path]) -
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     graph.serialize(destination=str(output_path), format="turtle")
+
+
+def extract_metadata_descriptor(crate: dict) -> dict | None:
+    graph = crate.get("@graph", [])
+    if not isinstance(graph, list):
+        return None
+    for entity in graph:
+        if not isinstance(entity, dict):
+            continue
+        entity_type = entity.get("@type", [])
+        if isinstance(entity_type, str):
+            types = [entity_type]
+        elif isinstance(entity_type, list):
+            types = entity_type
+        else:
+            types = []
+        if "CreativeWork" not in types:
+            continue
+        if "about" in entity:
+            return entity
+    return None
+
+
+def extract_metadata_descriptor_id(crate: dict) -> str | None:
+    descriptor = extract_metadata_descriptor(crate)
+    if descriptor:
+        return descriptor.get("@id")
+    return None
 
 
 def extract_root_entity(crate: dict) -> dict | None:
@@ -3120,11 +3151,13 @@ def extract_root_entity(crate: dict) -> dict | None:
         for entity in graph
         if isinstance(entity, dict) and entity.get("@id")
     }
-    descriptor = entity_map.get("ro-crate-metadata.json")
-    if descriptor and isinstance(descriptor.get("about"), dict):
-        root_id = descriptor["about"].get("@id")
-        if root_id and root_id in entity_map:
-            return entity_map[root_id]
+    descriptor = extract_metadata_descriptor(crate)
+    if not descriptor:
+        return None
+    about = descriptor.get("about")
+    root_id = about.get("@id") if isinstance(about, dict) else about
+    if root_id and root_id in entity_map:
+        return entity_map[root_id]
     return None
 
 

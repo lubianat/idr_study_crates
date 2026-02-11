@@ -19,6 +19,7 @@ from batch_generate import write_merged_ttl
 
 def build_minimal_crate(study_id: str) -> dict:
     study_uri = f"https://idr.openmicroscopy.org/study/{study_id}/"
+    descriptor_id = f"{study_id}-ro-crate-metadata.json"
     return {
         "@context": {
             "@vocab": "http://schema.org/",
@@ -27,7 +28,7 @@ def build_minimal_crate(study_id: str) -> dict:
         },
         "@graph": [
             {
-                "@id": "ro-crate-metadata.json",
+                "@id": descriptor_id,
                 "@type": "CreativeWork",
                 "conformsTo": {"@id": "https://w3id.org/ro/crate/1.2"},
                 "about": {"@id": study_uri},
@@ -50,7 +51,7 @@ def test_write_merged_ttl(tmp_path: Path) -> None:
         crate = build_minimal_crate(study_id)
         crate_dir = output_dir / study_id
         crate_dir.mkdir(parents=True, exist_ok=True)
-        output_path = crate_dir / "ro-crate-metadata.json"
+        output_path = crate_dir / f"{study_id}-ro-crate-metadata.json"
         output_path.write_text(json.dumps(crate, indent=2), encoding="utf-8")
         subcrates.append((crate_dir, crate))
 
@@ -64,6 +65,6 @@ def test_write_merged_ttl(tmp_path: Path) -> None:
     graph.parse(str(ttl_path), format="turtle")
     for study_id in ("idr0001", "idr0002"):
         study_uri = URIRef(f"https://idr.openmicroscopy.org/study/{study_id}/")
-        descriptor_uri = URIRef(f"https://idr.openmicroscopy.org/study/{study_id}/ro-crate-metadata.json")
+        descriptor_uri = URIRef(f"https://idr.openmicroscopy.org/study/{study_id}/{study_id}-ro-crate-metadata.json")
         assert any(graph.triples((study_uri, None, None)))
         assert any(graph.triples((descriptor_uri, None, None)))

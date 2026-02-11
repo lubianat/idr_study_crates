@@ -62,12 +62,15 @@
     "ROCrateMetadataDescriptor": {
       "type": "object",
       "title": "RO-Crate Metadata Descriptor",
-      "description": "Self-describing metadata descriptor with @id of 'ro-crate-metadata.json'",
+      "description": "Self-describing metadata descriptor with @id of '<identifier>-ro-crate-metadata.json' (or 'ro-crate-metadata.json' when no identifier is available)",
       "required": ["@id", "@type", "conformsTo", "about"],
       "properties": {
         "@id": {
           "type": "string",
-          "const": "ro-crate-metadata.json"
+          "anyOf": [
+            { "const": "ro-crate-metadata.json" },
+            { "pattern": "^[A-Za-z0-9._-]+-ro-crate-metadata\\.json$" }
+          ]
         },
         "@type": {
           "$ref": "#/$defs/TypeField",

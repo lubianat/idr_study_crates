@@ -5,6 +5,7 @@ import re
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, Iterable, List, Optional, Tuple
+from urllib.parse import parse_qs, urlparse
 
 DEFAULT_TERM_BASES = {
     "efo": "http://www.ebi.ac.uk/efo/",
@@ -181,35 +182,10 @@ class ROCrateEncoder:
     def _load_gide_context(self) -> dict:
         """Load the GIDE context from the JSON-LD file."""
         context_path = Path(__file__).resolve().parent / "gide-search-context.jsonld"
-        if context_path.exists():
-            try:
-                data = json.loads(context_path.read_text(encoding="utf-8"))
-                if isinstance(data, dict) and "@context" in data:
-                    return data["@context"]
-                return data if isinstance(data, dict) else {}
-            except (OSError, json.JSONDecodeError):
-                pass
-        # Fallback GIDE context
-        return {
-            "bia": "https://bioimage-archive.org/ro-crate/",
-            "obo": "http://purl.obolibrary.org/obo/",
-            "dwc": "http://rs.tdwg.org/dwc/terms/",
-            "dwciri": "http://rs.tdwg.org/dwc/iri/",
-            "bao": "http://www.bioassayontology.org/bao#",
-            "vernacularName": {"@id": "dwc:vernacularName"},
-            "scientificName": {"@id": "dwc:scientificName"},
-            "Taxon": {"@id": "dwc:Taxon"},
-            "hasCellLine": {"@id": "bao:BAO_0002004"},
-            "measurementMethod": {"@id": "dwciri:measurementMethod", "@type": "@id"},
-            "taxonomicRange": {
-                "@id": "http://schema.org/taxonomicRange",
-                "@type": "@id",
-            },
-            "seeAlso": {"@id": "rdf:seeAlso", "@type": "@id"},
-            "BioSample": {"@id": "http://schema.org/BioSample"},
-            "LabProtocol": {"@id": "http://schema.org/LabProtocol"},
-            "labEquipment": {"@id": "http://schema.org/labEquipment"},
-        }
+        data = json.loads(context_path.read_text(encoding="utf-8"))
+        if isinstance(data, dict) and "@context" in data:
+            return data["@context"]
+        return data if isinstance(data, dict) else {}
 
     def encode(self, metadata: IDRMetadata) -> dict:
         graph = GraphBuilder()
@@ -224,11 +200,12 @@ class ROCrateEncoder:
         accession = metadata.first_value("Comment[IDR Study Accession]", study_rows)
         study_external_url = metadata.first_value("Study External URL", study_rows)
         root_id = build_root_id(accession, study_external_url)
+        descriptor_id = build_metadata_descriptor_id(accession)
 
         # RO-Crate Metadata Descriptor
         graph.add(
             {
-                "@id": "ro-crate-metadata.json",
+                "@id": descriptor_id,
                 "@type": "CreativeWork",
                 "conformsTo": {"@id": "https://w3id.org/ro/crate/1.2"},
                 "about": {"@id": root_id},
@@ -332,6 +309,8 @@ class ROCrateEncoder:
                     "name": imaging_method or imaging_accession,
                     "measurementTechnique": [{"@id": imaging_id}],
                 }
+                if description:
+                    imaging_protocol["description"] = description
                 graph.add(imaging_protocol)
                 all_imaging_protocol_refs.append({"@id": imaging_protocol_id})
 
@@ -381,6 +360,8 @@ class ROCrateEncoder:
                     "name": imaging_method or imaging_accession,
                     "measurementTechnique": [{"@id": imaging_id}],
                 }
+                if description:
+                    imaging_protocol["description"] = description
                 graph.add(imaging_protocol)
                 all_imaging_protocol_refs.append({"@id": imaging_protocol_id})
 
@@ -442,18 +423,19 @@ class ROCrateEncoder:
         if measurement_refs:
             root["measurementMethod"] = measurement_refs
 
-        # thumbnailUrl - get all values from the row, not just the first
+        # thumbnailUrl - collect embeddable thumbnail links
         thumbnails = []
         for block in screen_blocks:
             for row in block:
                 if row.key == "Screen Example Images":
                     for val in row.values:
-                        thumbnails.extend(self._extract_urls(val))
+                        thumbnails.extend(self._extract_thumbnail_urls(val))
         for block in experiment_blocks:
             for row in block:
                 if row.key == "Experiment Example Images":
                     for val in row.values:
-                        thumbnails.extend(self._extract_urls(val))
+                        thumbnails.extend(self._extract_thumbnail_urls(val))
+        thumbnails = list(dict.fromkeys(thumbnails))
         if thumbnails:
             root["thumbnailUrl"] = thumbnails
 
@@ -707,16 +689,47 @@ class ROCrateEncoder:
 
         return size_refs
 
-    def _extract_urls(self, value: str) -> List[str]:
-        """Extract URLs from a string value."""
+    def _extract_thumbnail_urls(self, value: str) -> List[str]:
+        """Extract embeddable thumbnail URLs from a string value."""
         urls = []
-        for token in re.split(r"\s+", value.strip()):
-            if not token:
-                continue
-            candidate = token.strip(",;")
-            if candidate.startswith(("http://", "https://", "www.")):
-                urls.append(normalize_url(candidate))
+        for match in re.finditer(r"(?:https?://|www\.)[^\s]+", value.strip()):
+            candidate = match.group(0).rstrip(".,;:)]}>'\"")
+            thumbnail_url = self._to_thumbnail_url(candidate)
+            if thumbnail_url:
+                urls.append(thumbnail_url)
         return urls
+
+    def _to_thumbnail_url(self, value: str) -> Optional[str]:
+        """Convert known IDR image links to canonical render_thumbnail URLs."""
+        normalized = normalize_url(value)
+        parsed = urlparse(normalized)
+        if "openmicroscopy.org" not in parsed.netloc.lower():
+            return None
+
+        path = parsed.path or ""
+        render_match = re.search(r"/webgateway/render_thumbnail/(\d+)/?", path)
+        if render_match:
+            image_id = render_match.group(1)
+            return (
+                f"https://idr.openmicroscopy.org/webgateway/render_thumbnail/{image_id}/?"
+            )
+
+        detail_match = re.search(r"/webclient/img_detail/(\d+)/?", path)
+        if detail_match:
+            image_id = detail_match.group(1)
+            return (
+                f"https://idr.openmicroscopy.org/webgateway/render_thumbnail/{image_id}/?"
+            )
+
+        for show_value in parse_qs(parsed.query).get("show", []):
+            image_match = re.fullmatch(r"image-(\d+)", show_value)
+            if image_match:
+                image_id = image_match.group(1)
+                return (
+                    f"https://idr.openmicroscopy.org/webgateway/render_thumbnail/{image_id}/?"
+                )
+
+        return None
 
     def _dedupe_refs(self, refs: List[dict]) -> List[dict]:
         """Remove duplicate references by @id."""
@@ -890,9 +903,22 @@ def rows_from_property_values(
 
 
 def find_root_entity(entity_map: Dict[str, dict]) -> Optional[dict]:
-    descriptor = entity_map.get("ro-crate-metadata.json")
-    if descriptor and isinstance(descriptor.get("about"), dict):
-        root_id = descriptor["about"].get("@id")
+    for descriptor in entity_map.values():
+        if not isinstance(descriptor, dict):
+            continue
+        entity_type = descriptor.get("@type", [])
+        if isinstance(entity_type, str):
+            types = [entity_type]
+        elif isinstance(entity_type, list):
+            types = entity_type
+        else:
+            types = []
+        if "CreativeWork" not in types:
+            continue
+        about = descriptor.get("about")
+        if not about:
+            continue
+        root_id = about.get("@id") if isinstance(about, dict) else about
         if root_id and root_id in entity_map:
             return entity_map[root_id]
     return entity_map.get("./")
@@ -948,6 +974,35 @@ def build_root_id(accession: Optional[str], external_url: Optional[str]) -> str:
     if external_url:
         return normalize_url(external_url)
     return "./"
+
+
+def build_metadata_descriptor_id(accession: Optional[str]) -> str:
+    if accession:
+        accession = accession.strip()
+    if accession:
+        return f"{accession}-ro-crate-metadata.json"
+    return "ro-crate-metadata.json"
+
+
+def extract_metadata_descriptor_id(crate: dict) -> Optional[str]:
+    graph = crate.get("@graph", [])
+    if not isinstance(graph, list):
+        return None
+    for entity in graph:
+        if not isinstance(entity, dict):
+            continue
+        entity_type = entity.get("@type", [])
+        if isinstance(entity_type, str):
+            types = [entity_type]
+        elif isinstance(entity_type, list):
+            types = entity_type
+        else:
+            types = []
+        if "CreativeWork" not in types:
+            continue
+        if "about" in entity:
+            return entity.get("@id")
+    return None
 
 
 def get_term_source_uri(
@@ -1158,7 +1213,7 @@ def main() -> None:
         "-o",
         "--output",
         default=None,
-        help="Output path (defaults to ro-crate-metadata.json or idr-metadata.txt)",
+        help="Output path (defaults to <accession>-ro-crate-metadata.json when available, or idr-metadata.txt)",
     )
     parser.add_argument(
         "--reverse",
@@ -1179,10 +1234,16 @@ def main() -> None:
         output_path.write_text(idr_text, encoding=args.encoding)
         return
 
-    output_path = Path(args.output or "ro-crate-metadata.json")
     decoder = IDRDecoder(encoding=args.encoding)
     metadata = decoder.decode(Path(args.input))
     crate = ROCrateEncoder().encode(metadata)
+    if args.output:
+        output_path = Path(args.output)
+    else:
+        descriptor_id = (
+            extract_metadata_descriptor_id(crate) or "ro-crate-metadata.json"
+        )
+        output_path = Path(descriptor_id)
     output_path.write_text(
         json.dumps(crate, indent=2, ensure_ascii=False), encoding="utf-8"
     )
