@@ -6,6 +6,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, Iterable, List, Optional, Tuple
 from urllib.parse import parse_qs, urlparse
+import csv
 
 DEFAULT_TERM_BASES = {
     "efo": "http://www.ebi.ac.uk/efo/",
@@ -178,6 +179,9 @@ class GraphBuilder:
 
 class ROCrateEncoder:
     """Encoder that generates GIDE-compliant RO-Crate from IDR metadata."""
+
+    def __init__(self) -> None:
+        self.thumbnail_map = self._load_thumbnail_map(Path("idr_study_thumbnails.tsv"))
 
     def _load_gide_context(self) -> dict:
         """Load the GIDE context from the JSON-LD file."""
@@ -435,6 +439,13 @@ class ROCrateEncoder:
                 if row.key == "Experiment Example Images":
                     for val in row.values:
                         thumbnails.extend(self._extract_thumbnail_urls(val))
+
+        if accession:
+            mapped = self.thumbnail_map.get(accession.lower(), [])
+            if len(thumbnails) == 0 and mapped:
+                print(f"Adding mapped thumbnail for {accession}: {mapped}")
+                thumbnails = [mapped] + thumbnails
+
         thumbnails = list(dict.fromkeys(thumbnails))
         if thumbnails:
             root["thumbnailUrl"] = thumbnails
@@ -699,6 +710,27 @@ class ROCrateEncoder:
                 urls.append(thumbnail_url)
         return urls
 
+    def _load_thumbnail_map(self, path: Path) -> Dict[str, List[str]]:
+        print("here")
+        # read idr_study_thumbnails.tsv using csv module
+        with path.open(encoding="utf-8") as f:
+            reader = csv.reader(f, delimiter="\t")
+            study_to_thumbnail = {}
+            for row in reader:
+                print(row)
+                study = row[1].strip()
+                thumbnail_url = row[2].strip()
+
+                study_to_thumbnail[study] = thumbnail_url
+
+        return study_to_thumbnail
+
+    def _extract_study_accession(self, value: str) -> Optional[str]:
+        match = re.search(r"(idr\d+)", value or "", flags=re.IGNORECASE)
+        if not match:
+            return None
+        return match.group(1).lower()
+
     def _to_thumbnail_url(self, value: str) -> Optional[str]:
         """Convert known IDR image links to canonical render_thumbnail URLs."""
         normalized = normalize_url(value)
@@ -710,24 +742,18 @@ class ROCrateEncoder:
         render_match = re.search(r"/webgateway/render_thumbnail/(\d+)/?", path)
         if render_match:
             image_id = render_match.group(1)
-            return (
-                f"https://idr.openmicroscopy.org/webgateway/render_thumbnail/{image_id}/?"
-            )
+            return f"https://idr.openmicroscopy.org/webgateway/render_thumbnail/{image_id}/"
 
         detail_match = re.search(r"/webclient/img_detail/(\d+)/?", path)
         if detail_match:
             image_id = detail_match.group(1)
-            return (
-                f"https://idr.openmicroscopy.org/webgateway/render_thumbnail/{image_id}/?"
-            )
+            return f"https://idr.openmicroscopy.org/webgateway/render_thumbnail/{image_id}/"
 
         for show_value in parse_qs(parsed.query).get("show", []):
             image_match = re.fullmatch(r"image-(\d+)", show_value)
             if image_match:
                 image_id = image_match.group(1)
-                return (
-                    f"https://idr.openmicroscopy.org/webgateway/render_thumbnail/{image_id}/?"
-                )
+                return f"https://idr.openmicroscopy.org/webgateway/render_thumbnail/{image_id}/"
 
         return None
 
@@ -1236,7 +1262,8 @@ def main() -> None:
 
     decoder = IDRDecoder(encoding=args.encoding)
     metadata = decoder.decode(Path(args.input))
-    crate = ROCrateEncoder().encode(metadata)
+    encoder = ROCrateEncoder()
+    crate = encoder.encode(metadata)
     if args.output:
         output_path = Path(args.output)
     else:

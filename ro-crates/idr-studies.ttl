@@ -564,7 +564,7 @@
     schema1:about <https://idr.openmicroscopy.org/study/idr0165/> .
 
 <file:///home/lubianat/Documents/gerbi/idr_study_crates/ro-crates/> a schema1:Dataset ;
-    schema1:datePublished "2026-02-10" ;
+    schema1:datePublished "2026-02-11" ;
     schema1:description "Index of RO-Crates generated from IDR study metadata." ;
     schema1:hasPart <file:///home/lubianat/Documents/gerbi/idr_study_crates/ro-crates/idr0001-study/>,
         <file:///home/lubianat/Documents/gerbi/idr_study_crates/ro-crates/idr0002-study/>,
@@ -2476,7 +2476,7 @@
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0001/#file-count>,
         <https://idr.openmicroscopy.org/study/idr0001/#total-dataset-size> ;
-    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/1239777/?" ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/1239777/" ;
     rdf:seeAlso <https://doi.org/10.1016/j.devcel.2014.09.005> .
 
 <https://idr.openmicroscopy.org/study/idr0001/#file-count> a schema1:QuantitativeValue ;
@@ -2546,7 +2546,7 @@
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0002/#file-count>,
         <https://idr.openmicroscopy.org/study/idr0002/#total-dataset-size> ;
-    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/179754/?" ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/179754/" ;
     rdf:seeAlso <https://doi.org/10.1091/mbc.E13-04-0221> .
 
 <https://idr.openmicroscopy.org/study/idr0002/#file-count> a schema1:QuantitativeValue ;
@@ -2617,7 +2617,7 @@
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0003/#file-count>,
         <https://idr.openmicroscopy.org/study/idr0003/#total-dataset-size> ;
-    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/14269/?" ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/14269/" ;
     rdf:seeAlso <https://doi.org/10.1083/jcb.201301120> .
 
 <https://idr.openmicroscopy.org/study/idr0003/#file-count> a schema1:QuantitativeValue ;
@@ -2692,7 +2692,7 @@
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0004/#file-count>,
         <https://idr.openmicroscopy.org/study/idr0004/#total-dataset-size> ;
-    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/696815/?" ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/696815/" ;
     rdf:seeAlso <https://doi.org/10.1083/jcb.201108095> .
 
 <https://idr.openmicroscopy.org/study/idr0004/#file-count> a schema1:QuantitativeValue ;
@@ -2768,8 +2768,8 @@
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0005/#file-count>,
         <https://idr.openmicroscopy.org/study/idr0005/#total-dataset-size> ;
-    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/1013924/?",
-        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/928607/?" ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/1013924/",
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/928607/" ;
     rdf:seeAlso <https://doi.org/10.1083/jcb.201306082> .
 
 <https://idr.openmicroscopy.org/study/idr0005/#file-count> a schema1:QuantitativeValue ;
@@ -2866,6 +2866,7 @@
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0006/#file-count>,
         <https://idr.openmicroscopy.org/study/idr0006/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/353185/" ;
     rdf:seeAlso <https://doi.org/10.1083/jcb.201303145> .
 
 <https://idr.openmicroscopy.org/study/idr0006/#file-count> a schema1:QuantitativeValue ;
@@ -2932,7 +2933,7 @@
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0007/#file-count>,
         <https://idr.openmicroscopy.org/study/idr0007/#total-dataset-size> ;
-    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/95543/?" ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/95543/" ;
     rdf:seeAlso <https://doi.org/10.1083/jcb.201210019> .
 
 <https://idr.openmicroscopy.org/study/idr0007/#file-count> a schema1:QuantitativeValue ;
@@ -3004,8 +3005,8 @@
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0008/#file-count>,
         <https://idr.openmicroscopy.org/study/idr0008/#total-dataset-size> ;
-    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/107025/?",
-        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/37747/?" ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/107025/",
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/37747/" ;
     rdf:seeAlso <https://doi.org/10.1083/jcb.201103168> .
 
 <https://idr.openmicroscopy.org/study/idr0008/#file-count> a schema1:QuantitativeValue ;
@@ -3103,6 +3104,7 @@
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0009/#file-count>,
         <https://idr.openmicroscopy.org/study/idr0009/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/1313778/" ;
     rdf:seeAlso <https://doi.org/10.1038/ncb2510> .
 
 <https://idr.openmicroscopy.org/study/idr0009/#file-count> a schema1:QuantitativeValue ;
@@ -3196,7 +3198,7 @@
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0010/#file-count>,
         <https://idr.openmicroscopy.org/study/idr0010/#total-dataset-size> ;
-    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/3054590/?" ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/3054590/" ;
     rdf:seeAlso <https://doi.org/10.1016/j.cell.2008.12.041> .
 
 <https://idr.openmicroscopy.org/study/idr0010/#file-count> a schema1:QuantitativeValue ;
@@ -3289,7 +3291,8 @@
     schema1:name "Protein Kinase C and the stress response pathways are required for kinetochore homeostasis." ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0011/#file-count>,
-        <https://idr.openmicroscopy.org/study/idr0011/#total-dataset-size> .
+        <https://idr.openmicroscopy.org/study/idr0011/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/2857890/" .
 
 <https://idr.openmicroscopy.org/study/idr0011/#file-count> a schema1:QuantitativeValue ;
     schema1:description "6 + 1 + 86 + 865 + 25 = 983 5D images" ;
@@ -3490,7 +3493,7 @@
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0012/#file-count>,
         <https://idr.openmicroscopy.org/study/idr0012/#total-dataset-size> ;
-    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/1811438/?" ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/1811438/" ;
     rdf:seeAlso <https://doi.org/10.1038/msb.2010.25> .
 
 <https://idr.openmicroscopy.org/study/idr0012/#file-count> a schema1:QuantitativeValue ;
@@ -3626,8 +3629,8 @@
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0013/#file-count>,
         <https://idr.openmicroscopy.org/study/idr0013/#total-dataset-size> ;
-    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/1483954/?",
-        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/2866071/?" ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/1483954/",
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/2866071/" ;
     rdf:seeAlso <https://doi.org/10.1038/nature08869> .
 
 <https://idr.openmicroscopy.org/study/idr0013/#file-count> a schema1:QuantitativeValue ;
@@ -3723,6 +3726,7 @@
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0015/#file-count>,
         <https://idr.openmicroscopy.org/study/idr0015/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/1845698/" ;
     rdf:seeAlso <https://doi.org/10.7554/eLife.26066> .
 
 <https://idr.openmicroscopy.org/study/idr0015/#file-count> a schema1:QuantitativeValue ;
@@ -3771,7 +3775,7 @@
     schema1:license "https://creativecommons.org/publicdomain/zero/1.0/" ;
     schema1:name "Human U2OS cells - compound cell-painting experiment" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
-    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/2782349/?" ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/2782349/" ;
     rdf:seeAlso <https://doi.org/10.1073/pnas.1410933111> .
 
 <https://idr.openmicroscopy.org/study/idr0016/#person-1> a schema1:Person ;
@@ -3836,7 +3840,7 @@
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0017/#file-count>,
         <https://idr.openmicroscopy.org/study/idr0017/#total-dataset-size> ;
-    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/1713612/?" ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/1713612/" ;
     rdf:seeAlso <https://doi.org/10.15252/msb.20156400> .
 
 <https://idr.openmicroscopy.org/study/idr0017/#file-count> a schema1:QuantitativeValue ;
@@ -3904,7 +3908,7 @@
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0018/#file-count>,
         <https://idr.openmicroscopy.org/study/idr0018/#total-dataset-size> ;
-    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/1920093/?" .
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/1920093/" .
 
 <https://idr.openmicroscopy.org/study/idr0018/#experiment-biosample-1> a schema1:BioSample ;
     schema1:description "Histopathology raw images and annotated tiff files of tissues from mice with 10 different single gene knockouts." ;
@@ -3962,6 +3966,7 @@
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0019/#file-count>,
         <https://idr.openmicroscopy.org/study/idr0019/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/1851832/" ;
     rdf:seeAlso <https://doi.org/10.15252/msb.20145644> .
 
 <https://idr.openmicroscopy.org/study/idr0019/#file-count> a schema1:QuantitativeValue ;
@@ -4031,6 +4036,7 @@
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0020/#file-count>,
         <https://idr.openmicroscopy.org/study/idr0020/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/1911858/" ;
     rdf:seeAlso <https://doi.org/10.1038/srep10564> .
 
 <https://idr.openmicroscopy.org/study/idr0020/#file-count> a schema1:QuantitativeValue ;
@@ -4100,7 +4106,7 @@
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0021/#file-count>,
         <https://idr.openmicroscopy.org/study/idr0021/#total-dataset-size> ;
-    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/1885209/?" ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/1885209/" ;
     rdf:seeAlso <https://doi.org/10.1038/ncb2591> .
 
 <https://idr.openmicroscopy.org/study/idr0021/#experiment-biosample-1> a schema1:BioSample ;
@@ -4172,6 +4178,7 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "Uncovering the signaling landscape controlling breast cancer cell migration identifies novel metastasis driver genes." ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/7948817/" ;
     rdf:seeAlso <https://doi.org/10.1038/s41467-019-11020-3> .
 
 <https://idr.openmicroscopy.org/study/idr0022/#screen-biosample-1> a schema1:BioSample ;
@@ -4235,7 +4242,7 @@
     schema1:name "Nuclear pore scaffold structure analyzed by super-resolution microscopy and particle averaging." ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0023/#file-count> ;
-    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/1885618/?" ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/1885618/" ;
     rdf:seeAlso <https://doi.org/10.1126/science.1240672> .
 
 <https://idr.openmicroscopy.org/study/idr0023/#experiment-biosample-1> a schema1:BioSample ;
@@ -4301,7 +4308,7 @@
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0025/#file-count>,
         <https://idr.openmicroscopy.org/study/idr0025/#total-dataset-size> ;
-    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/3261175/?" ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/3261175/" ;
     rdf:seeAlso <https://doi.org/10.1016/j.jprot.2012.01.030> .
 
 <https://idr.openmicroscopy.org/study/idr0025/#file-count> a schema1:QuantitativeValue ;
@@ -4382,7 +4389,7 @@
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0026/#file-count>,
         <https://idr.openmicroscopy.org/study/idr0026/#total-dataset-size> ;
-    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/3261855/?" ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/3261855/" ;
     rdf:seeAlso <https://doi.org/10.1073/pnas.1506357112> .
 
 <https://idr.openmicroscopy.org/study/idr0026/#experiment-biosample-1> a schema1:BioSample ;
@@ -4445,7 +4452,7 @@
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0027/#file-count>,
         <https://idr.openmicroscopy.org/study/idr0027/#total-dataset-size> ;
-    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/2858285/?" ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/2858285/" ;
     rdf:seeAlso <https://doi.org/10.1186/s12860-016-0111-y> .
 
 <https://idr.openmicroscopy.org/study/idr0027/#experiment-biosample-1> a schema1:BioSample ;
@@ -4533,7 +4540,7 @@
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0028/#file-count>,
         <https://idr.openmicroscopy.org/study/idr0028/#total-dataset-size> ;
-    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/2898590/?" ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/2898590/" ;
     rdf:seeAlso <https://doi.org/10.1038/sdata.2017.18> .
 
 <https://idr.openmicroscopy.org/study/idr0028/#file-count> a schema1:QuantitativeValue ;
@@ -4693,7 +4700,7 @@
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0030/#file-count>,
         <https://idr.openmicroscopy.org/study/idr0030/#total-dataset-size> ;
-    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/3134322/?" ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/3134322/" ;
     rdf:seeAlso <https://doi.org/10.1016/j.cels.2016.11.015> .
 
 <https://idr.openmicroscopy.org/study/idr0030/#file-count> a schema1:QuantitativeValue ;
@@ -4760,6 +4767,7 @@
     schema1:name "Regulation of Meristem Morphogenesis by Cell Wall Synthases in Arabidopsis." ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0032/#file-count> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/3125701/" ;
     rdf:seeAlso <https://doi.org/10.1016/j.cub.2016.04.026> .
 
 <https://idr.openmicroscopy.org/study/idr0032/#experiment-biosample-1> a schema1:BioSample ;
@@ -4817,7 +4825,7 @@
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0033/#file-count>,
         <https://idr.openmicroscopy.org/study/idr0033/#total-dataset-size> ;
-    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/3245579/?" ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/3245579/" ;
     rdf:seeAlso <https://doi.org/10.7554/eLife.24060> .
 
 <https://idr.openmicroscopy.org/study/idr0033/#file-count> a schema1:QuantitativeValue ;
@@ -4891,7 +4899,7 @@
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0034/#file-count>,
         <https://idr.openmicroscopy.org/study/idr0034/#total-dataset-size> ;
-    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/3271621/?" ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/3271621/" ;
     rdf:seeAlso <https://doi.org/10.1038/nature22403> .
 
 <https://idr.openmicroscopy.org/study/idr0034/#file-count> a schema1:QuantitativeValue ;
@@ -4952,6 +4960,7 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "High-Content Phenotypic Profiling of Drug Response Signatures across Distinct Cancer Cells" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/3414398/" ;
     rdf:seeAlso <https://doi.org/10.1158/1535-7163.MCT-09-1148> .
 
 <https://idr.openmicroscopy.org/study/idr0035/#person-1> a schema1:Person ;
@@ -5003,7 +5012,7 @@
     schema1:license "https://creativecommons.org/publicdomain/zero/1.0/" ;
     schema1:name "Human U2OS cells - compound-profiling Cell Painting experiment" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
-    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/2782349/?" ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/2782349/" ;
     rdf:seeAlso <https://doi.org/10.1371/journal.pone.0080999> .
 
 <https://idr.openmicroscopy.org/study/idr0036/#person-1> a schema1:Person ;
@@ -5065,6 +5074,7 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "Identifying Extrinsic versus Intrinsic Drivers of Variation in Cell Behavior in Human iPSC Lines from Healthy Donors" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/4996009/" ;
     rdf:seeAlso <https://doi.org/10.1016/j.celrep.2019.01.094> .
 
 <https://idr.openmicroscopy.org/study/idr0037/#person-1> a schema1:Person ;
@@ -5126,7 +5136,7 @@
     schema1:name "Ex vivo live cell tracking in kidney organoids using light sheet fluorescence microscopy" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0038/#total-dataset-size> ;
-    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/3414064/?" ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/3414064/" ;
     rdf:seeAlso <https://doi.org/10.1371/journal.pone.0199918> .
 
 <https://idr.openmicroscopy.org/study/idr0038/#experiment-biosample-1> a schema1:BioSample ;
@@ -5233,7 +5243,7 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "Timing of gene expression in a cell-fate decision system" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
-    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/3491616/?" ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/3491616/" ;
     rdf:seeAlso <https://doi.org/10.15252/msb.20178024> .
 
 <https://idr.openmicroscopy.org/study/idr0040/#experiment-biosample-1> a schema1:BioSample ;
@@ -5275,7 +5285,7 @@
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0041/#file-count>,
         <https://idr.openmicroscopy.org/study/idr0041/#total-dataset-size> ;
-    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/3452472/?" ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/3452472/" ;
     rdf:seeAlso <https://doi.org/10.1038/s41586-018-0518-z> .
 
 <https://idr.openmicroscopy.org/study/idr0041/#experiment-biosample-1> a schema1:BioSample ;
@@ -5339,7 +5349,7 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "A Deep-learning classifier identifies patients with clinical heart failure using whole-slide images of H&E tissue" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
-    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/3428111/?" ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/3428111/" ;
     rdf:seeAlso <https://doi.org/10.1371/journal.pone.0192726> .
 
 <https://idr.openmicroscopy.org/study/idr0042/#experiment-biosample-1> a schema1:BioSample ;
@@ -5384,7 +5394,7 @@
     schema1:license "https://v18.proteinatlas.org/about/licence" ;
     schema1:name "Tissue-based map of the human proteome" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
-    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/3977054/?" ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/3977054/" ;
     rdf:seeAlso <https://doi.org/10.1126/science.1260419> .
 
 <https://idr.openmicroscopy.org/study/idr0043/#experiment-biosample-1> a schema1:BioSample ;
@@ -5441,6 +5451,7 @@
     schema1:name "In Toto Imaging and Reconstruction of Post-Implantation Mouse Development at the Single-Cell Level" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0044/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/4007802/" ;
     rdf:seeAlso <https://doi.org/10.1016/j.cell.2018.09.031> .
 
 <https://idr.openmicroscopy.org/study/idr0044/#experiment-biosample-1> a schema1:BioSample ;
@@ -5514,6 +5525,7 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "Dual spindle formation in zygotes keeps parental genomes apart in early mammalian embryos" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/3509480/" ;
     rdf:seeAlso <https://doi.org/10.1126/science.aar7462> .
 
 <https://idr.openmicroscopy.org/study/idr0045/#experiment-biosample-1> a schema1:BioSample ;
@@ -5569,6 +5581,7 @@
     schema1:name "A microscopy data set of discrete spatial and temporal single molecule RNA expression in single cells" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0047/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/4498386/" ;
     rdf:seeAlso <https://doi.org/10.1038/s41597-019-0106-6> .
 
 <https://idr.openmicroscopy.org/study/idr0047/#experiment-biosample-1> a schema1:BioSample ;
@@ -5624,6 +5637,7 @@
     schema1:name "Multicolor multiscale brain imaging with chromatic multiphoton serial microscopy" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0048/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/9846152/" ;
     rdf:seeAlso <https://doi.org/10.1038/s41467-019-09552-9> .
 
 <https://idr.openmicroscopy.org/study/idr0048/#experiment-biosample-1> a schema1:BioSample ;
@@ -5676,6 +5690,7 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "Analysis of cyclic straining on cytoskeletal systems" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/4995115/" ;
     rdf:seeAlso <https://doi.org/10.1371/journal.pone.0210570> .
 
 <https://idr.openmicroscopy.org/study/idr0050/#experiment-biosample-1> a schema1:BioSample ;
@@ -5727,6 +5742,7 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "In Toto Cell Tracking using Lightsheet Microscopy of the Neuromesodermal Progenitor Zone of the Zebrafish Tailbud from the 21st Somite Stage" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/4007817/" ;
     rdf:seeAlso <https://doi.org/10.1242/dev.166728> .
 
 <https://idr.openmicroscopy.org/study/idr0051/#experiment-biosample-1> a schema1:BioSample ;
@@ -5786,6 +5802,7 @@
     schema1:name "A quantitative map of human Condensins provides new insights into mitotic chromosome architecture." ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0052/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/5514131/" ;
     rdf:seeAlso <https://doi.org/10.1083/jcb.201801048> .
 
 <https://idr.openmicroscopy.org/study/idr0052/#experiment-biosample-1> a schema1:BioSample ;
@@ -5903,6 +5920,7 @@
     schema1:license "https://creativecommons.org/licenses/by-nc-sa/3.0/" ;
     schema1:name "Virtual nanoscopy of the mouse glomerulus, mouse embryonic fibroblasts, human dendritic cells and a zebrafish embryo slice." ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/4495402/" ;
     rdf:seeAlso <https://doi.org/10.1083/jcb.201201140> .
 
 <https://idr.openmicroscopy.org/study/idr0053/#experiment-biosample-1> a schema1:BioSample ;
@@ -5955,6 +5973,7 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "Imaging Mass Cytometry of human tonsil sections" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/5025551/" ;
     rdf:seeAlso <https://doi.org/10.1084/jem.20181994> .
 
 <https://idr.openmicroscopy.org/study/idr0054/#experiment-biosample-1> a schema1:BioSample ;
@@ -6017,6 +6036,7 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "Identification of long noncoding RNAs in regulation of cell division" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/9753804/" ;
     rdf:seeAlso <https://doi.org/10.1038/s41467-020-14978-7> .
 
 <https://idr.openmicroscopy.org/study/idr0056/#person-2> a schema1:Person ;
@@ -6145,6 +6165,7 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "Live imaging screen reveals that TYRO3 and GAK ensure accurate spindle positioning in human cells" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/6001463/" ;
     rdf:seeAlso <https://doi.org/10.1038/s41467-019-10446-z> .
 
 <https://idr.openmicroscopy.org/study/idr0061/#screen-biosample-1> a schema1:BioSample ;
@@ -6198,6 +6219,7 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "NesSys: a new set of tools for the automated detection of nuclei within intact tissues and dense 3D cultures" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/6001240/" ;
     rdf:seeAlso <https://doi.org/10.1371/journal.pbio.3000388> .
 
 <https://idr.openmicroscopy.org/study/idr0062/#experiment-biosample-1> a schema1:BioSample ;
@@ -6249,7 +6271,8 @@
     schema1:name "Homologous chromosomes undergo sequential quasi-stable interactions during meiotic prophase" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0063/#file-count>,
-        <https://idr.openmicroscopy.org/study/idr0063/#total-dataset-size> .
+        <https://idr.openmicroscopy.org/study/idr0063/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/12922261/" .
 
 <https://idr.openmicroscopy.org/study/idr0063/#experiment-biosample-1> a schema1:BioSample ;
     schema1:description "Live-cell imaging was used to measure the distance between two fluorescently-tagged chromosomal loci over time in yeast nuclei throughout prophase I of meiosis." ;
@@ -6312,6 +6335,7 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "A live-cell screen for altered Erk dynamics reveals principles of proliferative control" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/9822058/" ;
     rdf:seeAlso <https://doi.org/10.1016/j.cels.2020.02.005> .
 
 <https://idr.openmicroscopy.org/study/idr0064/#screen-biosample-1> a schema1:BioSample ;
@@ -6373,6 +6397,7 @@
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0065/#file-count>,
         <https://idr.openmicroscopy.org/study/idr0065/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/9035363/" ;
     rdf:seeAlso <https://doi.org/10.1038/s41592-019-0629-y> .
 
 <https://idr.openmicroscopy.org/study/idr0065/#experiment-biosample-1> a schema1:BioSample ;
@@ -6477,6 +6502,7 @@
     schema1:name "The mesoSPIM initiative – open-source light-sheet microscopes for imaging cleared tissue" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0066/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/8343616/" ;
     rdf:seeAlso <https://doi.org/10.1038/s41592-019-0554-0> .
 
 <https://idr.openmicroscopy.org/study/idr0066/#experiment-biosample-1> a schema1:BioSample ;
@@ -6609,6 +6635,7 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "Meiotic cellular rejuvenation is coupled to nuclear remodeling in budding yeast" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/9036345/" ;
     rdf:seeAlso <https://doi.org/10.7554/eLife.47156> .
 
 <https://idr.openmicroscopy.org/study/idr0067/#experiment-biosample-1> a schema1:BioSample ;
@@ -6656,6 +6683,7 @@
     schema1:name "Multi-scale imaging and analysis identifies pan-embryo cell dynamics of germlayer formation in zebrafish" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0068/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/13462847/" ;
     rdf:seeAlso <https://doi.org/10.1038/s41467-019-13625-0> .
 
 <https://idr.openmicroscopy.org/study/idr0068/#experiment-biosample-1> a schema1:BioSample ;
@@ -6701,6 +6729,7 @@
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0069/#file-count>,
         <https://idr.openmicroscopy.org/study/idr0069/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/8833072/" ;
     rdf:seeAlso <https://doi.org/10.1038/s41467-019-13058-9> .
 
 <https://idr.openmicroscopy.org/study/idr0069/#file-count> a schema1:QuantitativeValue ;
@@ -6770,6 +6799,7 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "HDBR Atlas: Gene Expression in Early Human Development" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/9840230/" ;
     rdf:seeAlso <https://doi.org/10.1111/j.1469-7580.2010.01290.x> .
 
 <https://idr.openmicroscopy.org/study/idr0070/#experiment-biosample-1> a schema1:BioSample ;
@@ -6881,6 +6911,7 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "Optical pooled screens in human cells" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/12142871/" ;
     rdf:seeAlso <https://doi.org/10.1016/j.cell.2019.09.016> .
 
 <https://idr.openmicroscopy.org/study/idr0071/#experiment-biosample-1> a schema1:BioSample ;
@@ -7074,6 +7105,7 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "A Reference Library for Characterizing Protein Subcellular Localizations by Image-Based Machine Learning" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/12814262/" ;
     rdf:seeAlso <https://doi.org/10.1083/jcb.201904090> .
 
 <https://idr.openmicroscopy.org/study/idr0072/#screen-biosample-1> a schema1:BioSample ;
@@ -7157,6 +7189,7 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "Graph-based description of tertiary lymphoid organs (TLOs)  at single-cell level" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/9798438/" ;
     rdf:seeAlso <https://doi.org/10.1371/journal.pcbi.1007385> .
 
 <https://idr.openmicroscopy.org/study/idr0073/#experiment-biosample-1> a schema1:BioSample ;
@@ -7193,6 +7226,7 @@
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0075/#file-count>,
         <https://idr.openmicroscopy.org/study/idr0075/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/9528933/" ;
     rdf:seeAlso <https://doi.org/10.1038/s41598-019-55974-2> .
 
 <https://idr.openmicroscopy.org/study/idr0075/#experiment-biosample-1> a schema1:BioSample ;
@@ -7266,6 +7300,7 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "Imaging mass cytometry and cell masks for 483 breast tumour samples from the METABRIC study" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/10501759/" ;
     rdf:seeAlso <https://doi.org/10.1038/s43018-020-0026-6> .
 
 <https://idr.openmicroscopy.org/study/idr0076/#experiment-biosample-1> a schema1:BioSample ;
@@ -7313,6 +7348,7 @@
     schema1:name "Imaging plant germline differentiation within Arabidopsis flowers by light sheet microscopy" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0077/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/9836841/" ;
     rdf:seeAlso <https://doi.org/10.7554/eLife.52546> .
 
 <https://idr.openmicroscopy.org/study/idr0077/#experiment-biosample-1> a schema1:BioSample ;
@@ -7375,6 +7411,7 @@
     schema1:name "Systematic genetics and single-cell imaging reveal widespread morphological pleiotropy and cell-to-cell variability" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0078/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/10496304/" ;
     rdf:seeAlso <https://doi.org/10.15252/msb.20199243> .
 
 <https://idr.openmicroscopy.org/study/idr0078/#screen-biosample-1> a schema1:BioSample ;
@@ -7476,6 +7513,7 @@
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0079/#file-count>,
         <https://idr.openmicroscopy.org/study/idr0079/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/9837354/" ;
     rdf:seeAlso <https://doi.org/10.7554/eLife.55913> .
 
 <https://idr.openmicroscopy.org/study/idr0079/#experiment-biosample-1> a schema1:BioSample ;
@@ -7570,6 +7608,7 @@
     schema1:name "Cell health phenotypes can be predicted from unbiased image-based morphology readouts" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0080/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/11550334/" ;
     rdf:seeAlso <https://doi.org/10.1091/mbc.E20-12-0784> .
 
 <https://idr.openmicroscopy.org/study/idr0080/#person-10> a schema1:Person ;
@@ -7703,6 +7742,7 @@
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0081/#file-count>,
         <https://idr.openmicroscopy.org/study/idr0081/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/9830833/" ;
     rdf:seeAlso <https://doi.org/10.1038/s41597-020-00604-0> .
 
 <https://idr.openmicroscopy.org/study/idr0081/#file-count> a schema1:QuantitativeValue ;
@@ -7913,6 +7953,7 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "Immune surveillance in clinical regression of pre-invasive squamous cell lung cancer" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/9846228/" ;
     rdf:seeAlso <https://doi.org/10.1158/2159-8290.CD-19-1366> .
 
 <https://idr.openmicroscopy.org/study/idr0082/#experiment-biosample-1> a schema1:BioSample ;
@@ -7962,6 +8003,7 @@
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0083/#file-count>,
         <https://idr.openmicroscopy.org/study/idr0083/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/9822152/" ;
     rdf:seeAlso <https://doi.org/10.1126/science.abc1669> .
 
 <https://idr.openmicroscopy.org/study/idr0083/#experiment-biosample-1> a schema1:BioSample ;
@@ -8022,6 +8064,7 @@
     schema1:name "Activation of alpha-globin transcription in primary mouse erythroid progenitors" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0084/#file-count> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/9842150/" ;
     rdf:seeAlso <https://doi.org/10.1038/s41467-020-16598-7> .
 
 <https://idr.openmicroscopy.org/study/idr0084/#experiment-biosample-1> a schema1:BioSample ;
@@ -8075,7 +8118,8 @@
     schema1:identifier "idr0085" ;
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "Multi-fluorescence high-resolution episcopic microscopy (MF-HREM) for three dimensional imaging of adult murine organs" ;
-    schema1:publisher <https://idr.openmicroscopy.org/> .
+    schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/9846157/" .
 
 <https://idr.openmicroscopy.org/study/idr0085/#experiment-biosample-1> a schema1:BioSample ;
     schema1:description "Application of MF-HREM to imaging and analysis of adult mouse: kidney glomeruli, xenograft tumour vasculature and cell migration, brain microsvasculature and white matter orientation, brain white matter orientation and cell nuclei distribution" ;
@@ -8137,6 +8181,7 @@
     schema1:name "Chromatin arranges in chains of mesoscale domains with nanoscale functional topography independent of cohesin" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0086/#file-count> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/9846131/" ;
     rdf:seeAlso <https://doi.org/10.1126/sciadv.aba8811> .
 
 <https://idr.openmicroscopy.org/study/idr0086/#experiment-biosample-1> a schema1:BioSample ;
@@ -8254,6 +8299,7 @@
     schema1:name "Molecular determinants of large cargo transport into the nucleus" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0087/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/9844391/" ;
     rdf:seeAlso <https://doi.org/10.7554/eLife.55963> .
 
 <https://idr.openmicroscopy.org/study/idr0087/#experiment-biosample-1> a schema1:BioSample ;
@@ -8308,6 +8354,7 @@
     schema1:name "Tales of 1,008 Small Molecules: Phenomic Profiling through Live-cell Imaging in a Panel of Reporter Cell Lines" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0088/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/11407784/" ;
     rdf:seeAlso <https://doi.org/10.1038/s41598-020-69354-8> .
 
 <https://idr.openmicroscopy.org/study/idr0088/#screen-biosample-1> a schema1:BioSample ;
@@ -8376,6 +8423,7 @@
     schema1:name "Cold-induced chromatin compaction and nuclear retention of clock mRNAs resets the circadian rhythm" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0089/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/10502961/" ;
     rdf:seeAlso <https://doi.org/10.15252/embj.2020105604> .
 
 <https://idr.openmicroscopy.org/study/idr0089/#experiment-biosample-1> a schema1:BioSample ;
@@ -8466,6 +8514,7 @@
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0090/#file-count>,
         <https://idr.openmicroscopy.org/study/idr0090/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/12540310/" ;
     rdf:seeAlso <https://doi.org/10.1126/sciadv.aba9338> .
 
 <https://idr.openmicroscopy.org/study/idr0090/#file-count> a schema1:QuantitativeValue ;
@@ -8532,6 +8581,7 @@
     schema1:name "Subpopulations of sensorless bacteria drive fitness in fluctuating environments" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0091/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/10647409/" ;
     rdf:seeAlso <https://doi.org/10.1371/journal.pbio.3000952> .
 
 <https://idr.openmicroscopy.org/study/idr0091/#experiment-biosample-1> a schema1:BioSample ;
@@ -8590,6 +8640,7 @@
     schema1:name "A semi-automated organoid screening method demonstrates epigenetic control of intestinal epithelial differentiation" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0092/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/10340801/" ;
     rdf:seeAlso <https://doi.org/10.3389/fcell.2020.618552> .
 
 <https://idr.openmicroscopy.org/study/idr0092/#screen-biosample-1> a schema1:BioSample ;
@@ -8655,7 +8706,8 @@
     schema1:identifier "idr0093" ;
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "High content genome-wide siRNA screen to investigate the coordination of cell size and RNA production" ;
-    schema1:publisher <https://idr.openmicroscopy.org/> .
+    schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/12570400/" .
 
 <https://idr.openmicroscopy.org/study/idr0093/#screen-biosample-1> a schema1:BioSample ;
     schema1:description "Genome-wide siRNA screen to investigate the coordination of cell size and RNA production." ;
@@ -8717,6 +8769,7 @@
     schema1:license "https://creativecommons.org/publicdomain/zero/1.0/" ;
     schema1:name "SARS-COV-2 drug repurposing - Caco2 cell line" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/10560362/" ;
     rdf:seeAlso <https://doi.org/10.1038/s41597-021-00848-4> .
 
 <https://idr.openmicroscopy.org/study/idr0094/#screen-biosample-1> a schema1:BioSample ;
@@ -8803,6 +8856,7 @@
     schema1:name "Inherent regulatory asymmetry emanating from network architecture in a prevalent autoregulatory motif" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0095/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/11512177/" ;
     rdf:seeAlso <https://doi.org/10.7554/eLife.56517> .
 
 <https://idr.openmicroscopy.org/study/idr0095/#experiment-biosample-1> a schema1:BioSample ;
@@ -8864,6 +8918,7 @@
     schema1:name "Quantification of Bone Marrow Compartments in Histological Sections" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0096/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/13461816/" ;
     rdf:seeAlso <https://doi.org/10.3389/fendo.2020.00480> .
 
 <https://idr.openmicroscopy.org/study/idr0096/#experiment-biosample-1> a schema1:BioSample ;
@@ -8929,6 +8984,7 @@
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0097/#file-count>,
         <https://idr.openmicroscopy.org/study/idr0097/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/12529301/" ;
     rdf:seeAlso <https://doi.org/10.1101/gr.261503.120> .
 
 <https://idr.openmicroscopy.org/study/idr0097/#experiment-biosample-1> a schema1:BioSample ;
@@ -9059,7 +9115,8 @@
     schema1:name "OCT-MoS, a dataset of mouse skin squamous cell carcinoma stages by full-field optical coherence tomography" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0098/#file-count>,
-        <https://idr.openmicroscopy.org/study/idr0098/#total-dataset-size> .
+        <https://idr.openmicroscopy.org/study/idr0098/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/12539666/" .
 
 <https://idr.openmicroscopy.org/study/idr0098/#experiment-biosample-1> a schema1:BioSample ;
     schema1:description "Abdominal skin from FVB/N mice was untreated to serve as control samples for the normal class. Back skin from FVB/N mice was treated with immunosupresant and tumor promoter solutions to study different stages of cutaneous squamous cell carcinoma. All samples were excised and imaged by full-field optical coherence tomography." ;
@@ -9147,6 +9204,7 @@
     schema1:name "Regionalized tissue fluidization is required for epithelial gap closure during insect gastrulation" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0099/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/12557110/" ;
     rdf:seeAlso <https://doi.org/10.1038/s41467-020-19356-x> .
 
 <https://idr.openmicroscopy.org/study/idr0099/#experiment-biosample-1> a schema1:BioSample ;
@@ -9200,7 +9258,8 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "A Multi-Spectral Myelin Annotation Tool for Machine Learning Based Myelin Quantification" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
-    schema1:size <https://idr.openmicroscopy.org/study/idr0100/#file-count> .
+    schema1:size <https://idr.openmicroscopy.org/study/idr0100/#file-count> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/11576516/" .
 
 <https://idr.openmicroscopy.org/study/idr0100/#experiment-biosample-1> a schema1:BioSample ;
     schema1:description "Immunolabeling of mouse embryonic stem cell derived neurons (TUJ1) and oligodendrocytes (MBP) and their nuclei (DAPI). Cells were grown in microfluidic chambers. Myelin is annotated on images." ;
@@ -9253,6 +9312,7 @@
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0101/#file-count>,
         <https://idr.openmicroscopy.org/study/idr0101/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/13457423/" ;
     rdf:seeAlso <https://doi.org/10.1126/science.aay3446> .
 
 <https://idr.openmicroscopy.org/study/idr0101/#experiment-biosample-1> a schema1:BioSample ;
@@ -9302,6 +9362,7 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "HIV-1 fusion is disrupted by addition of deoxygluose and is rescued with addition of cholesterol" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/12074276/" ;
     rdf:seeAlso <https://doi.org/10.1371/journal.ppat.1008359> .
 
 <https://idr.openmicroscopy.org/study/idr0103/#experiment-biosample-1> a schema1:BioSample ;
@@ -9354,6 +9415,7 @@
     schema1:name "Whole-organ analysis of TGF-beta-mediated remodelling of the tumour microenvironment by tissue clearing" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0106/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/12689244/" ;
     rdf:seeAlso <https://doi.org/10.1038/s42003-021-01786-y> .
 
 <https://idr.openmicroscopy.org/study/idr0106/#experiment-biosample-1> a schema1:BioSample ;
@@ -9405,7 +9467,8 @@
     schema1:identifier "idr0107" ;
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "Diffusion-mediated HEI10 coarsening can explain meiotic crossover positioning in Arabidopsis" ;
-    schema1:publisher <https://idr.openmicroscopy.org/> .
+    schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/13417058/" .
 
 <https://idr.openmicroscopy.org/study/idr0107/#experiment-biosample-1> a schema1:BioSample ;
     schema1:description "Images used for HEI10 focus patterning and intensity measurements in Morgan et al., 2021. These are multichannel 3D-SIM reconstructed images of Arabidopsis pachytene cells labelled for ZYP1 and HEI10 and stained with DAPI. 3D skeleton traces of each of the 5 bivalent paths for each cell are also included to facilitate downstream image analysis." ;
@@ -9451,6 +9514,7 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "3D super-resolution fluorescence microscopy maps the variable molecular architecture of the Nuclear Pore Complex" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/13425351/" ;
     rdf:seeAlso <https://doi.org/10.1091/mbc.E20-11-0728> .
 
 <https://idr.openmicroscopy.org/study/idr0108/#experiment-biosample-1> a schema1:BioSample ;
@@ -9500,6 +9564,7 @@
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0109/#file-count>,
         <https://idr.openmicroscopy.org/study/idr0109/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/12922839/" ;
     rdf:seeAlso <https://doi.org/10.1016/j.cels.2021.05.003> .
 
 <https://idr.openmicroscopy.org/study/idr0109/#experiment-biosample-1> a schema1:BioSample ;
@@ -9560,6 +9625,7 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "Time-resolved structured illumination microscopy reveals key principles of Xist RNA spreading" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/13422206/" ;
     rdf:seeAlso <https://doi.org/10.1126/science.abe7500> .
 
 <https://idr.openmicroscopy.org/study/idr0110/#experiment-biosample-1> a schema1:BioSample ;
@@ -9629,6 +9695,7 @@
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0111/#file-count>,
         <https://idr.openmicroscopy.org/study/idr0111/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/13416991/" ;
     rdf:seeAlso <https://doi.org/10.1038/s41598-021-89130-6> .
 
 <https://idr.openmicroscopy.org/study/idr0111/#experiment-biosample-1> a schema1:BioSample ;
@@ -9718,6 +9785,7 @@
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0112/#file-count>,
         <https://idr.openmicroscopy.org/study/idr0112/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/13444729/" ;
     rdf:seeAlso <https://doi.org/10.1111/nan.12770> .
 
 <https://idr.openmicroscopy.org/study/idr0112/#file-count> a schema1:QuantitativeValue ;
@@ -9779,6 +9847,7 @@
     schema1:name "Live imaging of remyelination in the adult mouse corpus callosum" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0113/#file-count> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/13425213/" ;
     rdf:seeAlso <https://doi.org/10.1073/pnas.2025795118> .
 
 <https://idr.openmicroscopy.org/study/idr0113/#experiment-biosample-1> a schema1:BioSample ;
@@ -9830,6 +9899,7 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "HDBR Atlas: Gene Expression in Early Human Development" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/13462232/" ;
     rdf:seeAlso <https://doi.org/10.1242/dev.122820> .
 
 <https://idr.openmicroscopy.org/study/idr0114/#experiment-biosample-1> a schema1:BioSample ;
@@ -9913,6 +9983,7 @@
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0115/#file-count>,
         <https://idr.openmicroscopy.org/study/idr0115/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/13966272/" ;
     rdf:seeAlso <https://doi.org/10.1038/s41586-022-05528-w> .
 
 <https://idr.openmicroscopy.org/study/idr0115/#experiment-biosample-1> a schema1:BioSample ;
@@ -9965,6 +10036,7 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "Large-Scale electron microscopy database for human type 1 diabetes" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/13457674/" ;
     rdf:seeAlso <https://doi.org/10.1038/s41467-020-16287-5> .
 
 <https://idr.openmicroscopy.org/study/idr0116/#experiment-biosample-1> a schema1:BioSample ;
@@ -10011,6 +10083,7 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "ske-T, a T-box gene expressed in the skeletogenic mesenchyme lineage of the sea urchin embryo" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/13441324/" ;
     rdf:seeAlso <https://doi.org/10.1016/S0925-4773(01)00470-1> .
 
 <https://idr.openmicroscopy.org/study/idr0117/#experiment-biosample-1> a schema1:BioSample ;
@@ -10058,6 +10131,7 @@
     schema1:name "Dynamics of Drosophila endoderm specification" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0118/#file-count> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/13461595/" ;
     rdf:seeAlso <https://doi.org/10.1073/pnas.2112892119> .
 
 <https://idr.openmicroscopy.org/study/idr0118/#experiment-biosample-1> a schema1:BioSample ;
@@ -10111,6 +10185,7 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "Analysis and modeling of cancer drug responses using cell cycle phase-specific rate effects" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/14789117/" ;
     rdf:seeAlso <https://doi.org/10.1038/s41467-023-39122-z> .
 
 <https://idr.openmicroscopy.org/study/idr0119/#screen-biosample-1> a schema1:BioSample ;
@@ -10187,6 +10262,7 @@
     schema1:name "Morphological profiling of human T and NK lymphocytes by high-content cell imaging" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0120/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/14231132/" ;
     rdf:seeAlso <https://doi.org/10.1016/j.celrep.2021.109318> .
 
 <https://idr.openmicroscopy.org/study/idr0120/#screen-biosample-1> a schema1:BioSample ;
@@ -10352,6 +10428,7 @@
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0123/#file-count>,
         <https://idr.openmicroscopy.org/study/idr0123/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/13965888/" ;
     rdf:seeAlso <https://doi.org/10.1038/s41597-022-01139-2> .
 
 <https://idr.openmicroscopy.org/study/idr0123/#experiment-biosample-1> a schema1:BioSample ;
@@ -10411,6 +10488,7 @@
     schema1:name "Pseudo-dynamic analysis of heart tube formation in the mouse reveals strong regional variability and early left-right asymmetry" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0124/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/13965767/" ;
     rdf:seeAlso <https://doi.org/10.1038/s44161-022-00065-1> .
 
 <https://idr.openmicroscopy.org/study/idr0124/#experiment-biosample-1> a schema1:BioSample ;
@@ -10485,6 +10563,7 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "Quantification of within patient Staphylococcus aureus phenotypic heterogeneity as a proxy for presence of persisters across clinical presentations" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/13966192/" ;
     rdf:seeAlso <https://doi.org/10.1016/j.cmi.2022.01.021> .
 
 <https://idr.openmicroscopy.org/study/idr0127/#experiment-biosample-1> a schema1:BioSample ;
@@ -10612,7 +10691,8 @@
     schema1:name "Parallel compound screen for infection modulators identifies re-purposing candidates against common viral infections" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0128/#file-count>,
-        <https://idr.openmicroscopy.org/study/idr0128/#total-dataset-size> .
+        <https://idr.openmicroscopy.org/study/idr0128/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/13966432/" .
 
 <https://idr.openmicroscopy.org/study/idr0128/#file-count> a schema1:QuantitativeValue ;
     schema1:description "1 + 1 + 1 + 12 + 12 = 27 5D images" ;
@@ -10846,7 +10926,8 @@
     schema1:name "Parallel compound screen for infection modulators identifies re-purposing candidates against common viral infections" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0129/#file-count>,
-        <https://idr.openmicroscopy.org/study/idr0129/#total-dataset-size> .
+        <https://idr.openmicroscopy.org/study/idr0129/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/13981032/" .
 
 <https://idr.openmicroscopy.org/study/idr0129/#file-count> a schema1:QuantitativeValue ;
     schema1:description "1 + 1 + 12 + 12 = 26 5D images" ;
@@ -11037,7 +11118,8 @@
     schema1:name "Parallel compound screen for infection modulators identifies re-purposing candidates against common viral infections" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0130/#file-count>,
-        <https://idr.openmicroscopy.org/study/idr0130/#total-dataset-size> .
+        <https://idr.openmicroscopy.org/study/idr0130/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/13994856/" .
 
 <https://idr.openmicroscopy.org/study/idr0130/#file-count> a schema1:QuantitativeValue ;
     schema1:description "1 + 1 + 12 = 14 5D images" ;
@@ -11176,6 +11258,7 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "Reference compounds for characterizing cellular injury in high-content cellular morphology assays" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/14002649/" ;
     rdf:seeAlso <https://doi.org/10.1038/s41467-023-36829-x> .
 
 <https://idr.openmicroscopy.org/study/idr0133/#screen-biosample-1> a schema1:BioSample ;
@@ -11275,6 +11358,7 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "Reference BioImaging dataset to assess the phenotypic trait diversity of bryophytes within the family Scapaniaceae" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/14239501/" ;
     rdf:seeAlso <https://doi.org/10.1038/s41597-022-01691-x> .
 
 <https://idr.openmicroscopy.org/study/idr0134/#experiment-biosample-1> a schema1:BioSample ;
@@ -11370,6 +11454,7 @@
     schema1:name "Stepwise-edited, human melanoma models reveal mutationsÕ effect on tumor and microenvironment" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0135/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/14000892/" ;
     rdf:seeAlso <https://doi.org/10.1126/science.abi8175> .
 
 <https://idr.openmicroscopy.org/study/idr0135/#experiment-biosample-1> a schema1:BioSample ;
@@ -11425,7 +11510,8 @@
     schema1:identifier "idr0137" ;
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "Reference BioImaging dataset to assess the phenotypic trait diversity of bryophytes within the family Scapaniaceae" ;
-    schema1:publisher <https://idr.openmicroscopy.org/> .
+    schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/14276397/" .
 
 <https://idr.openmicroscopy.org/study/idr0137/#experiment-biosample-1> a schema1:BioSample ;
     schema1:description "Samples of R. glauca, R. sorocarpa, R. warnstorfii were collected by Uwe Schwarz from an arable stubble field near Aichtal Grötzingen in Baden-Württemberg, Germany on 09/13/2021 (geographic coordinates: 48.638275 N, 9.2534083 E, elevation: 376 m, precision: 10 m). To evaluate phylogenetic distances, Lunularia cruciata (L.) Dumort. ex Lindb. was additionally sampled near the lab site on 12/08/2021 at 51.494848 N, 11.942323 E. The specimens were brought to the lab at IPB in sterile petri dishes, where plant material was isolated, washed under a light microscope to remove dirt and other residues, filled into Eppendorf tubes and shock-frozen. Voucher specimens were stored in the herbarium Haussknecht Jena (voucher id’s: Riccia glauca: JE04010991, Riccia sorocarpa: JE04010990, Riccia warnstorfii: JE04010989, Lunularia cruciata: JE04010993). For image acquisition, a Zeiss Axio Scope.A1 HAL 100/HBO, 6x HD/DIC, M27, 10x/23 microscope with an achromatic-aplanatic 0.9 H D Ph DIC condenser was used for microscopy utilizing the objectives EC Plan Neofluar 2.5x/0.075 M27 (a=8.8mm), Plan-Apochromat 5x/0.16 M27 (a=12.1mm), Plan-Apochromat 10x/0.45 M27 (a=2.1mm), Plan-Apochromat 20x/0.8 M27 (a=0.55mm), and Plan-Apochromat 40x/0.95 Korr M27 (a=0.25mm) using the EC PN and the Fluar 40x/1.30 III and PA 40x/0.95 III filters for DIC. The conversion filter CB3 and the interference filter wideband green were used to improve digital reproduction of colors. The color balance was adjusted in the camera and in software accordingly. For macroscopy and for preparing microscopy slides, a binocular microscope Zeiss Stemi 2000c was used. For macroscopic images, the Venus Optics Laowa 25mm 2.5-5.0x ultra-macro for Canon EF and the Canon EF-RF adapter were used. To acquire digital images, a full-frame, high-resolution camera (Canon EOS RP, 26 megapixel) was used and adapted to the photographic objectives or to the microscopes using binocular phototubes with sliding prism 30°/23 (Axio Scope.A1) and 100:0/0:100 reversed image (Stemi 2000c) using 60-T2 camera adapter for Canon EOS and a Canon EF-RF adapter. To construct images with extended depth-of-field, images were recorded at different focal planes. This “focus stacking” approach was automatized for macroscopy by attaching the camera to a Cognisys StackShot macro rail fixed on a Novoflex macro stand, and for microscopy by adapting a Cognisys StackShot motor to the fine adjustment of the microscope using two cogged wheels, one small wheel (1 cm diameter) adapted on the motor and one large wheel (8.5 cm diameter) on the fine adjustment of the microscope. The two cogged wheels were coupled with a toothed belt to obtain fine step increments of the stepping motor for high magnifications. A Cognisys StackShot controller was used to control the amount and distance of the stepping motor with the following controller settings: Dist/Rev: 3200 stp, Backlash: 0 steps, # pics: 1, Tsettle: 100.0 ms, Toff: 450.0 ms, Auto Return: yes, Speed: 3000 st/sec, Tlapse: off, Tpulse: 800.0 ms, Tramp: 100 ms, Units: steps, Torque: 6, Hi Precision: Off, LCD Backlight: 10, Mode: Auto-Step using between 25 steps (magnification 1x) and 50 steps (magnification 25x) and 100 steps (magnification 400x) (number of steps depending on aperture settings and effective magnification). Raw images were recorded in CR3-format and pre-processed with Adobe Camera RAW. Non-destructive image processing such as corrections of the field curvature, removal of chromatic aberration, color balance, increase of contrast and brightness were performed in Adobe Camera RAW. Images were then exported to TIFF-format and any image processing steps were recorded in individual Adobe XMP-files. Multi-focus image fusion was performed on the individual images in the z-stacks using the software Helicon Focus 8.1.1 and by choosing the algorithms depth map and pyramid with different settings of radius (4, 8, 16, 24) and smoothing (2, 4). The best composite image was chosen manually and retained. When composite images contained specimen that were larger than the frame, several images were stitched together using the panorama stitching function in the software Affinity Photo 1.10.5. Images were manually segmented and interfering background removed using the flood select, brush selection and freehand selection tools in the software Affinity Photo. In order to determine the scale, a stage micrometer was photographed separately with any of the objectives and microscope combinations. The scale was calculated per pixel for each combination and scale bars were put post-hoc onto the segmented images. Meta-data including species name, taxonomic rank information (NCBI-Taxon and GBIF taxonomy identifiers), voucher specimen id, image acquisition date, an object description including the name of the captured phenotypic character(s), the used objective, microscope, and magnification were associated with any raw image based on unique respective file names. Individual file names, name within an image focus stack and name within an image stitching stack were recorded additionally to facilitate subsequent automized image processing in workflows. Python scripts were created to automatize image fusion and image stitching tasks. Image features were estimated using the R package EBImage (Pau et al., 2010) by extracting the histograms of the red, green, and blue channels of the bioimages representing the visible spectra of the thalli of the different species. To investigate relationships of the image properties and the molecular traits, distance-based ReDundancy Analyses (dbRDA) were performed using the dbrda function of the package vegan (Peters et al., 2018a). Spectral values other than pure black (all RGB channels zero) and pure white (all RGB channels one) were extracted from the histogram models and used as traits in a dbRDA model. A Euclidean distance measure was used for the ordination. The dbRDA-model with the largest explained variance was chosen using forward variable selection and the ordistep function. The goodness of fit statistic (squared correlation coefficient) was determined for the remaining variables by applying the envfit function on the dbRDA ordination model. Raw camera and pre-processed imaging data in CR3 and TIFF format, respectively, were deposited to the BioImage Archive (BioStudies) using the command line IBM Aspera software tool ascp version 3.8.1.161274 to ensure that data has been transmitted without errors. The raw bioimaging data is available under the BioStudies identifier S-BIAD443 (https://www.ebi.ac.uk/biostudies/studies/S-BIAD443). Processed images were converted to the Bio-Formats OME-TIFF format by creating intermediate ZARR-pyramid tiles using the bioformats2raw converter version 0.4.0 and then using the raw2ometiff version 0.3.0 software tool to create the final pyramid images. Processed images and the metadata were first aggregated in a TSV table and then deposited to the Image Data Resource (https://idr.openmicroscopy.org/search/?query=Name:137) under accession number idr0137 using the software Globus Connect Personal 3.1.6." ;
@@ -11474,6 +11560,7 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "Integration of spatial and single-cell transcriptomic data elucidates mouse organogenesis" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/15157712/" ;
     rdf:seeAlso <https://doi.org/10.1038/s41587-021-01006-2> .
 
 <https://idr.openmicroscopy.org/study/idr0138/#experiment-biosample-1> a schema1:BioSample ;
@@ -11538,6 +11625,7 @@
     schema1:name "Nuclear fascin regulates cancer cell survival" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0139/#file-count> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/14874940/" ;
     rdf:seeAlso <https://doi.org/10.7554/eLife.79283> .
 
 <https://idr.openmicroscopy.org/study/idr0139/#file-count> a schema1:QuantitativeValue ;
@@ -11675,7 +11763,8 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "Phenotypic Heterogeneity in the DNA Replication Stress Response Revealed by Quantitative Protein Dynamics Measurements" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
-    schema1:size <https://idr.openmicroscopy.org/study/idr0140/#total-dataset-size> .
+    schema1:size <https://idr.openmicroscopy.org/study/idr0140/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/14249830/" .
 
 <https://idr.openmicroscopy.org/study/idr0140/#screen-biosample-1> a schema1:BioSample ;
     schema1:description "High-throughput confocal microscope screen of protein localization screen for 314 yeast strains expressing unique GFP-tagged proteins treated with 200mM HU, imaged at 7 time points over 4 hours (0, 30, 60, 90, 120, 180, and 240 minutes)." ;
@@ -11769,6 +11858,7 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "Large-Scale Electron Microscopy Maps of Patient Skin and Mucosa Provide Insight into Pathogenesis of Blistering Diseases" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/14239635/" ;
     rdf:seeAlso <https://doi.org/10.1038/jid.2015.109> .
 
 <https://idr.openmicroscopy.org/study/idr0141/#experiment-biosample-1> a schema1:BioSample ;
@@ -11816,6 +11906,7 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "Comparing the value of mono- versus coculture for high-throughput compound screening in hematological malignancies" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/14915538/" ;
     rdf:seeAlso <https://doi.org/10.1182/bloodadvances.2022009652> .
 
 <https://idr.openmicroscopy.org/study/idr0143/#screen-biosample-1> a schema1:BioSample ;
@@ -11867,7 +11958,8 @@
     schema1:identifier "idr0144" ;
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "Reconstructing 3D histological structures using machine learning (AI) algorithms" ;
-    schema1:publisher <https://idr.openmicroscopy.org/> .
+    schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/14257890/" .
 
 <https://idr.openmicroscopy.org/study/idr0144/#experiment-biosample-1> a schema1:BioSample ;
     schema1:description "Bright-field scans of histological sections of trabecular bone from homo sapiens jaw." ;
@@ -11917,6 +12009,7 @@
     schema1:name "Mec1-Independent Activation of the Rad53 Checkpoint Kinase Revealed by Quantitative Analysis of Protein Localization Dynamics" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0145/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/14271231/" ;
     rdf:seeAlso <https://doi.org/10.7554/eLife.82483> .
 
 <https://idr.openmicroscopy.org/study/idr0145/#screen-biosample-1> a schema1:BioSample ;
@@ -12012,6 +12105,7 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "Time lapse imaging of mesoderm and early cardiac progenitors in mouse embryos" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/14788631/" ;
     rdf:seeAlso <https://doi.org/10.1016/j.cell.2023.01.001> .
 
 <https://idr.openmicroscopy.org/study/idr0146/#experiment-biosample-1> a schema1:BioSample ;
@@ -12059,6 +12153,7 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "Terabyte-scale supervised 3D training and benchmarking dataset of the mouse kidney" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/14788883/" ;
     rdf:seeAlso <https://doi.org/10.1038/s41597-023-02407-5> .
 
 <https://idr.openmicroscopy.org/study/idr0147/#experiment-biosample-1> a schema1:BioSample ;
@@ -12101,7 +12196,8 @@
     schema1:identifier "idr0148" ;
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "Ultrastructure of first trimester human fetal kidneys" ;
-    schema1:publisher <https://idr.openmicroscopy.org/> .
+    schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/14788721/" .
 
 <https://idr.openmicroscopy.org/study/idr0148/#experiment-biosample-1> a schema1:BioSample ;
     schema1:description "Development of human fetal kidneys of first trimester were assessed using large transmission electron microscopy tilescans." ;
@@ -12160,6 +12256,7 @@
     schema1:name "Cohesin-mediated DNA loop extrusion resolves sister chromatids in G2 phase" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0149/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/14874730/" ;
     rdf:seeAlso <https://doi.org/10.15252/embj.2023113475> .
 
 <https://idr.openmicroscopy.org/study/idr0149/#experiment-biosample-1> a schema1:BioSample ;
@@ -12328,6 +12425,7 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "Cancer-associated fibroblast compositions change with breast cancer progression linking the ratio of S100A4+Êand PDPN+ÊCAFs to clinical outcome" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/15148341/" ;
     rdf:seeAlso <https://doi.org/10.1038/s43018-020-0082-y> .
 
 <https://idr.openmicroscopy.org/study/idr0150/#experiment-biosample-1> a schema1:BioSample ;
@@ -12376,6 +12474,7 @@
     schema1:name "A timer gene network is spatially regulated by the terminal system in the Drosophila embryo" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0151/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/15177681/" ;
     rdf:seeAlso <https://doi.org/10.7554/eLife.78902> .
 
 <https://idr.openmicroscopy.org/study/idr0151/#experiment-biosample-1> a schema1:BioSample ;
@@ -12429,6 +12528,7 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "Novel genes in human embryonic arterial valves" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/15148779/" ;
     rdf:seeAlso <https://doi.org/10.1371/journal.pgen.1010777> .
 
 <https://idr.openmicroscopy.org/study/idr0154/#experiment-biosample-1> a schema1:BioSample ;
@@ -12484,7 +12584,8 @@
     schema1:name "A new method for reliably detecting single fluorescent puncta in structured backgrounds" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0155/#file-count>,
-        <https://idr.openmicroscopy.org/study/idr0155/#total-dataset-size> .
+        <https://idr.openmicroscopy.org/study/idr0155/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/15149681/" .
 
 <https://idr.openmicroscopy.org/study/idr0155/#experiment-biosample-1> a schema1:BioSample ;
     schema1:description "We took 5400 field of views from three Parkinson's disease (PD) cases in the anterior cingulate gyrus for microglia and neuron markers respectively, covering dimensions of 4mm x 4mm x 13µm per patient. Cells were stained in 488nm channel while alpha-synuclein protein was labelled in 561nm channel. The colocalization study was performed based on the locations of detected cells and alpha-synucleins." ;
@@ -12575,6 +12676,7 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "Regulation of single-cell genome organization into TADs and chromatin nanodomains" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/15170695/" ;
     rdf:seeAlso <https://doi.org/10.1038/s41588-020-00716-8> .
 
 <https://idr.openmicroscopy.org/study/idr0156/#experiment-biosample-1> a schema1:BioSample ;
@@ -12800,7 +12902,8 @@
     schema1:identifier "idr0157" ;
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "Estimating phenotypic traits with morphometry from 16 specimens of thallose liverworts of biological soil crusts collected in Southern Sweden and Germany" ;
-    schema1:publisher <https://idr.openmicroscopy.org/> .
+    schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/15154594/" .
 
 <https://idr.openmicroscopy.org/study/idr0157/#experiment-biosample-1> a schema1:BioSample ;
     schema1:description "Samples of were collected in Southern Sweden in September 2022 and Germany in October 2022. The specimens were brought to the lab at IPB in sterile petri dishes and stored for five days in a sample incubator to let plants acclimatize. Plant material was isolated, washed under a light microscope to remove dirt and other residues, filled into Eppendorf tubes and shock-frozen. Voucher specimens were stored in the herbarium Haussknecht Jena (voucher barcodes: JE04010739, JE04010740, JE04010741, JE04010742, JE04010743, JE04010744, JE04010745, JE04010746, JE04010747, JE04010748, JE04010749, JE04010750, JE04010751, JE04010752, JE04010753, JE04010754). For image acquisition, a Zeiss Axio Scope.A1 HAL 50, 6x HD/DIC, M27, 10x/23 microscope with an achromatic-aplanatic 0.9 H D Ph DIC condenser was used for microscopy utilizing the objectives EC Plan Neofluar 2.5x/0.075 M27 (a=8.8mm), Plan-Apochromat 5x/0.16 M27 (a=12.1mm), Plan-Apochromat 10x/0.45 M27 (a=2.1mm), Plan-Apochromat 20x/0.8 M27 (a=0.55mm), and Plan-Apochromat 40x/0.95 Korr M27 (a=0.25mm) using the EC PN and the Fluar 40x/1.30 III and PA 40x/0.95 III filters for DIC. The conversion filter CB3 and the interference filter wideband green were used to improve digital reproduction of colors. The color balance was adjusted in the camera and in software accordingly. For macroscopy and for preparing microscopy slides, a binocular stereo microscope Zeiss Stemi 2000c was used. For macroscopic images, the Venus Optics Laowa 25mm 2.5-5.0x ultra-macro for Canon EF and the Canon EF-RF adapter were used. To acquire digital images, a full-frame, high-resolution camera (Canon EOS RP, 26 megapixel) was used and adapted to the photographic objectives or to the microscopes using binocular phototubes with sliding prism 30°/23 (Axio Scope.A1) and 100:0/0:100 reversed image (Stemi 2000c) using 60-T2 camera adapter for Canon EOS and a Canon EF-RF adapter. To construct images with extended depth-of-field, images were recorded at different focal planes and by attaching the camera to a Cognisys StackShot macro rail fixed on a Novoflex macro stand, and for microscopy by adapting a Cognisys StackShot motor to the fine adjustment of the microscope using two cogged wheels, one small wheel (1 cm diameter) adapted on the motor and one large wheel (8.5 cm diameter) on the fine adjustment of the microscope. The two cogged wheels were coupled with a toothed belt to obtain fine step increments of the stepping motor for high magnifications. A Cognisys StackShot controller was used to control the amount and distance of the stepping motor with the following controller settings: Dist/Rev: 3200 stp, Backlash: 0 steps, # pics: 1, Tsettle: 100.0 ms, Toff: 450.0 ms, Auto Return: yes, Speed: 3000 st/sec, Tlapse: off, Tpulse: 800.0 ms, Tramp: 100 ms, Units: steps, Torque: 6, Hi Precision: Off, LCD Backlight: 10, Mode: Auto-Step using between 25 steps (magnification 1x) and 50 steps (magnification 25x) and 100 steps (magnification 400x) (number of steps depending on aperture settings and effective magnification). Raw images were recorded in CR3-format and pre-processed with Adobe Lightroom Classic (2022 version) where non-destructive image processing such as corrections of the field curvature, removal of chromatic aberration, color balance, increase of contrast and brightness were performed (NELSON 2012). Images were then exported to TIFF-format and any image processing steps were recorded in individual Adobe XMP-files. Multi-focus image fusion was performed on the individual images in the z-stacks using the software Helicon Focus 8.2.9 and by choosing the algorithms depth map and pyramid with different settings of radius (4, 8, 16, 24) and smoothing (2, 4). The best composite image was chosen manually and retained. When composite images contained specimen that were larger than the frame, several images were stitched together using the Photomerge-Reposition function in the software Adobe Photoshop 2023. Images were manually segmented and interfering background removed using the object selection tools. In order to determine the scale, a stage micrometer was photographed separately with any of the objectives and microscope combinations. The scale was calculated per pixel for each combination and scale bars were put post-hoc onto the segmented images. Measurements of morphometric characters were performed manually with ImageJ / Fiji (SCHINDELIN 2012). After setting up the scales for the individual images in the Image-Properties menu, the following morphometric characters were measured: thallus width [µm], thallus length [µm], thallus with violet pigments [0/1], ventral scales [0/1], ventral scales with slime cells [0/1], ventral scales with violet pigments [0/1], ventral scales with hairs [0/1], air pores [0/1], width of ring cells of air pores in adaxial view [µm], height of ring cells p fair pores in cross section [µm], number of ring cells of air pores in cross section [#], width of ring cells of air pores in cross section [µm], height of ring cells of air pores in cross section [µm], width of epidermis cells in cross section [µm], height of epidermis cells in cross section [µm], width of subepidermal cells in cross section [µm], height of subepidermal cells in cross section [µm], width of thallus in cross section [µm], height of thallus in cross section [µm], height of thallus wing in cross section [µm], angle of thallus wing in cross section [°], width of thallus wing in cross section [µm], area of thallus in cross section [µm2]. Lengths and widths were measured using the Measure function from the Analyze menu and saved in CSV files. To automate the measurement of areas, a pixel classification model was first trained using the plugin LabKit (Arzt et al. 2022) by selecting representative background and foreground areas, training and saving the classifier, which was then imported in the plugin StarDist (WEIGERT et al. 2020), which was used to automatically segment the images. Segmented areas were then measured using the Measure function from the Analyze menu and results were saved. CSV files with all individual morphometric measurements of all specimens were joined into one single table and used for subsequent data analyses. Metadata including species name, taxonomic rank information (NCBI-Taxon and GBIF taxonomy identifiers), voucher specimen id, image acquisition date, an object description including the name of the captured phenotypic character(s), the used objective, microscope, and magnification were associated with any raw image based on unique respective file names. Individual file names, name within an image focus stack and name within an image stitching stack were recorded additionally to facilitate subsequent automized image processing in workflows. Python scripts were created to automatize image fusion and image stitching tasks. Raw camera and pre-processed imaging data in CR3 and TIFF format, respectively, were deposited to the BioImage Archive (BioStudies) using the command line IBM Aspera software tool ascp version 3.8.1.161274 to ensure that data has been transmitted without errors. The raw bioimaging data is available under the BioStudies identifier S-BIAD824 (https://www.ebi.ac.uk/biostudies/studies/S-BIAD824). Processed images were converted to the Bio-Formats OME-TIFF format by creating intermediate ZARR-pyramid tiles using the bioformats2raw converter version 0.7.0 and then using the raw2ometiff version 0.5.0 software tool to create the final pyramid images. Processed images and the metadata were first aggregated in a TSV table and then deposited to the Image Data Resource using the software Globus Connect Personal 3.1.6." ;
@@ -12855,6 +12958,7 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "Multi-omic profiling of follicular lymphoma tumors reveals changes in tissue architecture and enhanced stromal remodeling in high-risk patients" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/15159217/" ;
     rdf:seeAlso <https://doi.org/10.1016/j.ccell.2024.02.001> .
 
 <https://idr.openmicroscopy.org/study/idr0158/#experiment-biosample-1> a schema1:BioSample ;
@@ -12888,6 +12992,7 @@
     schema1:name "Non-invasive long-term fluorescence live imaging of Tribolium" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0159/#file-count> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/15160007/" ;
     rdf:seeAlso <https://doi.org/10.1242/dev.108795> .
 
 <https://idr.openmicroscopy.org/study/idr0159/#experiment-biosample-1> a schema1:BioSample ;
@@ -12943,6 +13048,7 @@
     schema1:name "A morphology and secretome map of pyroptosis" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
     schema1:size <https://idr.openmicroscopy.org/study/idr0160/#total-dataset-size> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/15173234/" ;
     rdf:seeAlso <https://doi.org/10.1091/mbc.E25-03-0119> .
 
 <https://idr.openmicroscopy.org/study/idr0160/#screen-biosample-1> a schema1:BioSample ;
@@ -13001,6 +13107,7 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "A spatial human thymus cell atlas mapped to a continuous tissue axis" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/15159248/" ;
     rdf:seeAlso <https://doi.org/10.1038/s41586-024-07944-6> .
 
 <https://idr.openmicroscopy.org/study/idr0161/#experiment-biosample-1> a schema1:BioSample ;
@@ -13042,7 +13149,8 @@
     schema1:license "https://creativecommons.org/publicdomain/zero/1.0/" ;
     schema1:name "Temporal and spatial composition of the tumor microenvironment predicts response to immune checkpoint inhibition" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
-    schema1:size <https://idr.openmicroscopy.org/study/idr0163/#file-count> .
+    schema1:size <https://idr.openmicroscopy.org/study/idr0163/#file-count> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/15159290/" .
 
 <https://idr.openmicroscopy.org/study/idr0163/#experiment-biosample-1> a schema1:BioSample ;
     schema1:description "Generated 678 FOVs across 111 patients, 294 tissues, and four timepoints (baseline, primary, pre_nivo, and on_nivo), imaged using multiplexed ion beam imaging. Images are either 1024x1024 or 2048x2048 in size." ;
@@ -13091,6 +13199,7 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "Gene expression in human embryonic and fetal development" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/15170989/" ;
     rdf:seeAlso <https://doi.org/10.1111/joa.13644> .
 
 <https://idr.openmicroscopy.org/study/idr0164/#experiment-biosample-1> a schema1:BioSample ;
@@ -13135,6 +13244,7 @@
     schema1:license "https://creativecommons.org/licenses/by/4.0/" ;
     schema1:name "Automated analysis of ultrastructure through large-scale hyperspectral electron microscopy" ;
     schema1:publisher <https://idr.openmicroscopy.org/> ;
+    schema1:thumbnailUrl "https://idr.openmicroscopy.org/webgateway/render_thumbnail/15160019/" ;
     rdf:seeAlso <https://doi.org/10.1038/s44303-024-00059-7> .
 
 <https://idr.openmicroscopy.org/study/idr0165/#experiment-biosample-1> a schema1:BioSample ;
