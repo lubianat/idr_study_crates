@@ -421,7 +421,7 @@ class ROCrateEncoder:
             copyright_holder = metadata.first_value("Study Copyright", study_rows)
             pub_year = pub_date.split("-")[0]
             if copyright_holder:
-                root["schema:copyrightNotice"] = (
+                root["copyrightNotice"] = (
                     f"{copyright_holder}, {license_id}, {pub_year}"
                 )
 
