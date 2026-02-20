@@ -5,7 +5,6 @@ __pycache__/
 # Editor
 .vscode/
 
-ro-crates/
 examples/
 
 ontologies/raw

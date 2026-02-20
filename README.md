@@ -8,6 +8,7 @@ Simple Python converter that parses an IDR metadata text file and emits a RO-Cra
 - Emits linked-data terms for ontology-backed study fields (e.g., Study Type).
 - Keeps remaining study rows as `PropertyValue` entries for completeness.
 - Includes screen/experiment sections as separate datasets in the RO-Crate output.
+- Supports optional FBBI and NCBITaxon hierarchy subset exports from the merged Turtle output.
 
 ## Requirements
 
@@ -82,6 +83,20 @@ uv run scripts/batch_generate.py --input-dir examples --output-dir ro-crates --t
 ```
 
 Relative identifiers are resolved against each crate's `<accession>-ro-crate-metadata.json` file URI.
+
+## FBBI/NCBITaxon Hierarchy Export
+
+After generating `ro-crates/idr-studies.ttl`, run:
+
+```
+python3 scripts/join_with_fbbi_and_ncbitaxon.py
+```
+
+This reads ontology inputs from `ontologies/raw/` (see `ontologies/README.md`) and writes:
+
+- `ontologies/extracted/idr_fbbi_hierarchy_subset.ttl`
+- `ontologies/extracted/idr_ncbitaxon_hierarchy_subset.ttl`
+- `ro-crates/idr-studies-with-ontology-subsets.ttl`
 
 ## Acknowledgements
 
