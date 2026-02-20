@@ -1,0 +1,251 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0064-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0064/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0064/",
+      "@type": "Dataset",
+      "name": "A live-cell screen for altered Erk dynamics reveals principles of proliferative control",
+      "description": "Complex, time-varying responses have been observed widely in cell signaling, but how specific dynamics are generated or regulated is largely unknown. One major obstacle has been that high-throughput screens for identifying pathway components are typically incompatible with the live-cell assays used to monitor dynamics. Here, we address this challenge by performing a drug screen for altered Erk signaling dynamics in primary mouse keratinocytes. We screened a library of 429 kinase inhibitors, monitoring Erk activity over 5 h in more than 80,000 single live cells. The screen revealed both known and uncharacterized modulators of Erk dynamics, including inhibitors of non-EGFR receptor tyrosine kinases (RTKs) that increased Erk pulse frequency and overall activity. Using drug treatment and direct optogenetic control, we demonstrate that drug-induced changes to Erk dynamics alter the conditions under which cells proliferate. Our work opens the door to high-throughput screens using live-cell biosensors and reveals that cell proliferation integrates information from Erk dynamics as well as additional permissive cues.",
+      "datePublished": "2020-04-27",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Goglia et al, CC-BY-4.0, 2020",
+      "identifier": "idr0064",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-1546-4030"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1016/j.cels.2020.02.005"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#screen-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#screen-protocol-1-0"
+        },
+        {
+          "@id": "#screen-protocol-1-1"
+        },
+        {
+          "@id": "#screen-protocol-1-2"
+        },
+        {
+          "@id": "#screen-protocol-1-3"
+        },
+        {
+          "@id": "#screen-protocol-1-4"
+        },
+        {
+          "@id": "#screen-protocol-1-5"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/9822058/"
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-1546-4030",
+      "@type": "Person",
+      "name": "Jared Toettcher",
+      "givenName": "Jared",
+      "familyName": "Toettcher",
+      "email": "toettcher@princeton.edu",
+      "address": "Lewis Thomas Laboratory Room 140, Washington Road, Princeton NJ 08544"
+    },
+    {
+      "@id": "https://doi.org/10.1016/j.cels.2020.02.005",
+      "@type": "ScholarlyArticle",
+      "name": "A live-cell screen for altered Erk dynamics reveals principles of proliferative control"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090",
+      "@type": "Taxon",
+      "scientificName": "Mus musculus"
+    },
+    {
+      "@id": "#screen-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "We screened a library of 429 kinase inhibitors in primary mouse keratinocytes, monitoring Erk activity over 5 h in more than 80,000 single live cells.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000253",
+      "@type": "DefinedTerm",
+      "name": "spinning disk confocal microscopy"
+    },
+    {
+      "@id": "#screen-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "spinning disk confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "description": "We screened a library of 429 kinase inhibitors in primary mouse keratinocytes, monitoring Erk activity over 5 h in more than 80,000 single live cells."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Dorsal epidermal keratinocytes derived from CD1 mice and stably expressing a retrovirally-delivered histone H2B-RFP (selected for expression with hygromycin) were obtained from the Devenport lab and were cultured as described previously (Nowak and Fuchs, 2009). Briefly, keratinocytes were given low calcium (50 uM) growth media (E media supplemented with 15% serum and 0.05 mM Ca2+) in Nunc Cell Culture Treated Flasks with filter caps (Thermo) and were maintained in a humidified incubator at 37 C with 5% CO2. Cell passage number was kept below 30.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "Imaging experiments were performed in either 384- or 96-well black-walled, 0.17mm high performance glass-bottom plates (Cellvis). Before plating, the bottom of each well was pre-treated with a solution of 10 ug/mL bovine plasma fibronectin (Thermo Fisher) in phosphate buffered saline (PBS) to support cell adherence. Two days before imaging, keratinocytes were seeded at 16,000 cells/well in 50 uL of low-calcium E media (in a 384-well plate), plates were briefly centrifuged at 100 x g to ensure even plating distribution, and cells were allowed to adhere overnight. 24 h before imaging, wells were washed 2-3X with PBS to remove non-adherent cells and were shifted to high-calcium (1.5 mM CaCl2) complete E media to promote epithelial monolayer formation. For experiments in GF-free media, cells were washed once with PBS and shifted to high-calcium P media (i.e., DMEM/F12 containing only pH buffer, penicillin/streptomycin, and 1.5 mM CaCl2) eight hours before imaging. To prevent evaporation during time-lapse imaging, a 50 uL layer of mineral oil was added to the top of each well immediately before imaging.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007571",
+      "@type": "DefinedTerm",
+      "name": "HCS library protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "An Echo acoustic liquid handler (Labcyte) was used to precisely spot plastic 96-well plates with 75 nL of either DMSO vehicle control or of individual drugs from the kinase inhibitor library (Selleck Chem). 100 uL of P media was then added to each well that had been spotted by the Echo to create 3X stock solutions that could be rapidly added to plates of cells by multi-channel pipetting. Keratinocytes were plated on glass 384-well dishes in 50 uL of media and a final drug concentration of 2.5 uM was achieved by adding 25 uL of each 3X stock solution to individual wells of keratinocytes. Imaging was carried out 30 min after drug additions.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007572",
+      "@type": "DefinedTerm",
+      "name": "HCS image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "HCS image acquisition and feature extraction protocol",
+      "description": "Imaging was performed on a Nikon Eclipse Ti confocal microscope, with a Yokogawa CSU-X1 spinning disk, a Prior Proscan III motorized stage, an Agilent MLC 400B laser launch containing 405, 488, 561, and 650 nm lasers, a cooled iXon DU897 EMCCD camera, and fitted with an environmental chamber to ensure cells were kept at a 37 C and 5% CO2 during imaging. All images were captured with either a 10X or 20X air objective and were collected at intervals of 2-3 min.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007573",
+      "@type": "DefinedTerm",
+      "name": "HCS data analysis protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-5",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "Our analysis pipeline takes as input a two-color, multi-timepoint TIFF stack that includes two fluorescent channels - KTR-BFP and H2B-RFP - for monitoring Erk activity and tracking/segmenting nuclei. These TIFF images contained metadata including the spatial scale of the data, and since our analysis pipeline incorporates true spatial units (?m rather than pixels), it can be used for images collected with any objective magnification. We first used a FIJI Jython script batch_trackmate.py to automatically run the TrackMate segmentation/tracking plugin on a folder of TIFF stacks, returning the mean nuclear intensity for each cell in both the H2B and KTR channels. Each dataset thus consisted of two paired folders: one containing all the TIFFs (with names <image_name>.tif) and one of the corresponding TrackMate tracks (with names <image_name>.txt). In addition to containing the mean nuclear intensities in all fluorescent channels, the resulting TrackMate tracks also include the X-Y locations of each nucleus at all timepoints, enabling analysis of each cell's overall displacement and velocity. All subsequent analyses were performed in MATLAB. We wrote a set of analysis tools to automatically load the TIFFs and TrackMate tracks from the paired folders and analyze them with a set of options specified in a comma-delimited parameters file that is generated for each dataset. We first exclude TrackMate-tracked nuclei on either of two conditions: (1) they do not express both H2B and KTR, or (2) if H2B intensity changes dramatically over the imaging timecourse, indicating a tracking error. We then filter and process nuclear KTR intensities using the following steps: (1) data is background-subtracted; (2) data is h-minima transformed to 'flatten' noise between consecutive timepoints; (3) data is inverted and scaled assuming that the maximum nuclear KTR intensity observed for each cell corresponds to Erk activity of 0; and (4) data is fed into a peak-finding routine that splits the trajectory into windows containing individual peaks, which are then analyzed using MATLAB's built-in findpeaks.m function. In addition to analysis of single-cell trajectories, we also perform one well-averaged measurement at each timepoint: the overall cytosol-to-nuclear ratio computed for all identified cells. To do so, we used image dilation and erosion operations to obtain an annulus of cytoplasm surrounding all segmented nuclei. We then computed the mean C/N ratio by measuring the mean intensity in all cytosolic pixels divided by the mean intensity of all nuclear pixels. We found this ratio to be an excellent proxy for well-averaged activity; as an example, it is able to accurately detect keratinocytes' graded Erk responses to increasing doses of EGF. We opted for a well-averaged C/N ratio rather than a single-cell ratio primarily because correctly assigning cytosolic regions to the appropriate nucleus can be quite tricky, especially in an epithelial monolayer. At the conclusion of our analysis routine, the user is provided with two data structures: well, which contains the raw and processed nuclear KTR and Erk activity trajectories; and PS, a structure that contains all analyses of Erk dynamics over time (e.g., frequency, pulse prominence, overall Erk activity offset, total distance moved per cell, etc.). These quantities were used for all subsequent analyses. Example runs are available on Github (github.com/toettchlab/Goglia2019).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    }
+  ]
+}

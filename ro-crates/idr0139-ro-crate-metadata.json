@@ -1,0 +1,480 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0139-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0139/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0139/",
+      "@type": "Dataset",
+      "name": "Nuclear fascin regulates cancer cell survival",
+      "description": "Fascin is an important regulator of F-actin bundling leading to enhanced filopodia assembly. Fascin is also overexpressed in most solid tumours where it supports invasion through control of F-actin structures at the periphery and nuclear envelope. Recently fascin has been identified in the nucleus of a broad range of cell types but the contributions of nuclear fascin to cancer cell behaviour remain unknown. Here we demonstrate that fascin bundles F-actin within the nucleus to support chromatin organisation and efficient DNA damage response. Fascin associates directly with phosphorylated Histone H3 leading to regulated levels of nuclear fascin to support these phenotypes. Forcing nuclear fascin accumulation through the expression of nuclear-targeted fascin-specific nanobodies or inhibition of Histone H3 kinases results in enhanced and sustained nuclear F-actin bundling leading to reduced invasion, viability and nuclear fascin-specific/driven apoptosis. These findings represent an additional important route through which fascin can support tumorigenesis and provide insight into potential pathways for targeted fascin-dependent cancer cell killing.",
+      "datePublished": "2023-08-17",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Lawson et al, CC-BY-4.0, 2023",
+      "identifier": "idr0139",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-2021-8379"
+        },
+        {
+          "@id": "https://orcid.org/0000-0001-5349-0638"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.7554/eLife.79283"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#screen-biosample-1"
+        },
+        {
+          "@id": "#screen-biosample-2"
+        },
+        {
+          "@id": "#screen-biosample-3"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#screen-protocol-1-0"
+        },
+        {
+          "@id": "#screen-protocol-2-0"
+        },
+        {
+          "@id": "#screen-protocol-3-0"
+        },
+        {
+          "@id": "#screen-protocol-1-1"
+        },
+        {
+          "@id": "#screen-protocol-1-2"
+        },
+        {
+          "@id": "#screen-protocol-1-3"
+        },
+        {
+          "@id": "#screen-protocol-1-4"
+        },
+        {
+          "@id": "#screen-protocol-1-5"
+        },
+        {
+          "@id": "#screen-protocol-2-1"
+        },
+        {
+          "@id": "#screen-protocol-2-2"
+        },
+        {
+          "@id": "#screen-protocol-2-3"
+        },
+        {
+          "@id": "#screen-protocol-2-4"
+        },
+        {
+          "@id": "#screen-protocol-2-5"
+        },
+        {
+          "@id": "#screen-protocol-3-1"
+        },
+        {
+          "@id": "#screen-protocol-3-2"
+        },
+        {
+          "@id": "#screen-protocol-3-3"
+        },
+        {
+          "@id": "#screen-protocol-3-4"
+        },
+        {
+          "@id": "#screen-protocol-3-5"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000249"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/14874940/"
+      ],
+      "size": [
+        {
+          "@id": "#file-count"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-2021-8379",
+      "@type": "Person",
+      "name": "Maddy Parsons",
+      "givenName": "Maddy",
+      "familyName": "Parsons",
+      "email": "maddy.parsons@kcl.ac.uk",
+      "address": "Randall Centre for Cell and Molecular Biophysics, KingÕs College London, GuyÕs Campus, London, SE1 1UL, United Kingdom"
+    },
+    {
+      "@id": "https://orcid.org/0000-0001-5349-0638",
+      "@type": "Person",
+      "name": "Campbell Lawson",
+      "givenName": "Campbell",
+      "familyName": "Lawson",
+      "email": "campbell.lawson@kcl.ac.uk",
+      "address": "Randall Centre for Cell and Molecular Biophysics, KingÕs College London, GuyÕs Campus, London, SE1 1UL, United Kingdom"
+    },
+    {
+      "@id": "https://doi.org/10.7554/eLife.79283",
+      "@type": "ScholarlyArticle",
+      "name": "Nuclear fascin regulates cancer cell survival"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#screen-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "To explore the pathways controlling nuclear fascin, we performed unbiased, imaging-based high-content phenotypic screening using fascin KD cells expressing mScarlet-fascin and the nuclear F-actin probe iRFP-nAC. Cells were treated with a library of ~13,000 annotated compounds, targeting multiple signalling pathways, at a single concentration (5 µm) or neutral or positive (leptomycin B) controls for 24 h, followed by fixation and imaging using high content spinning disk confocal microscopy. Resulting data were analysed using automated pipelines to define levels of nuclear fascin normalised to neutral and positive controls. The mean RZÕ of the neutral and positive controls in this screen was 0.5017, indicating excellent assay robustness. This approach identified compounds with a range of activities including those that increased or decreased nuclear fascin relative to the neutral controls. We chose to focus on those that increased nuclear fascin and identified hits based on a minimum threshold value of 30% of the neutral controls, equivalent to 3x the standard deviation of the neutral controls. Following quality control checks (e.g., to exclude images with very few cells), 231 compounds were identified as hits.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000253",
+      "@type": "DefinedTerm",
+      "name": "spinning disk confocal microscopy"
+    },
+    {
+      "@id": "#screen-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "spinning disk confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "description": "To explore the pathways controlling nuclear fascin, we performed unbiased, imaging-based high-content phenotypic screening using fascin KD cells expressing mScarlet-fascin and the nuclear F-actin probe iRFP-nAC. Cells were treated with a library of ~13,000 annotated compounds, targeting multiple signalling pathways, at a single concentration (5 µm) or neutral or positive (leptomycin B) controls for 24 h, followed by fixation and imaging using high content spinning disk confocal microscopy. Resulting data were analysed using automated pipelines to define levels of nuclear fascin normalised to neutral and positive controls. The mean RZÕ of the neutral and positive controls in this screen was 0.5017, indicating excellent assay robustness. This approach identified compounds with a range of activities including those that increased or decreased nuclear fascin relative to the neutral controls. We chose to focus on those that increased nuclear fascin and identified hits based on a minimum threshold value of 30% of the neutral controls, equivalent to 3x the standard deviation of the neutral controls. Following quality control checks (e.g., to exclude images with very few cells), 231 compounds were identified as hits."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Fascin was stably knocked down in HeLa cells, then mScarlet-fascin was stably re-expressed at physiological levels. mScarlet-fascin/fascin KD HeLa cells were cultured at 37¡C, 5% CO2 in high-glucose DMEM supplemented with 10% FBS, 1% glutamine and 1% penicillin/streptomycin. Cells were selected and maintained using puromycin, and sub-cultured using 0.05% trypsin-EDTA in PBS. In this assay, mScarlet-fascin/fascin KD HeLa cells were transfected with the nuclear actin probe iRFP-nAC, then plated in CellCarrier Ultra 384 well plates (PerkinElmer) at a concentration of 4,400 cells/well.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "24 h after transfection, 10 nM leptomycin b (positive control), vehicle control or 5 µM library compounds were added using an Echo liquid handler (Labcyte/Beckman Coulter). Cells were incubated for a further 24 h then fixed in 4% paraformaldehyde.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007571",
+      "@type": "DefinedTerm",
+      "name": "HCS library protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "Library of biologically annotated compounds.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007572",
+      "@type": "DefinedTerm",
+      "name": "HCS image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "HCS image acquisition and feature extraction protocol",
+      "description": "Cells were stained with DAPI and Alexa Fluor 488 Phalloidin then imaged using a 20x objective on a CellVoyager CV8000 High-Content Screening System (Yokogawa). Images were analysed using Columbus (PerkinElmer) and Genedata Screener (Genedata) software.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007573",
+      "@type": "DefinedTerm",
+      "name": "HCS data analysis protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-5",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "Images were analysed using automated pipelines to define levels of nuclear fascin normalised to neutral and positive controls. The nuclear and cytoplasmic compartments were determined using Columbus software (PerkinElmer) and the intensity of mScarlet-fascin in each comparment used to determine the % of nuclear-localized fascin per cell. The mean % nuclear fascin/cell/well was then calculated and values normalised relative to neutral controls (median set to 0) and positive controls (median set to 100). Hits were identified based on a normalised % nuclear fascin/cell/well of >30% of the neutral controls (equivalent to 3x the standard deviation of the neutral controls).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-biosample-2",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Compound response screen. 231 compounds identified as hits in primary screen were added to fascin KD cells expressing mScarlet-fascin and the nuclear F-actin probe iRFP-nAC, at 12 different concentrations. Assay conditions were otherwise identical to the primary screen. The mean RZÕ of the neutral and positive controls in this screen was 0.5607, indicating excellent assay robustness. Nuclear fascin and nuclear F-actin were plotted as a function of compound concentration to identify AC50 values for each compound. This compound response analysis identified 96 compounds that were active against nuclear fascin, of which 43 also increased nuclear F-actin.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-0",
+      "@type": "LabProtocol",
+      "name": "spinning disk confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "description": "Compound response screen. 231 compounds identified as hits in primary screen were added to fascin KD cells expressing mScarlet-fascin and the nuclear F-actin probe iRFP-nAC, at 12 different concentrations. Assay conditions were otherwise identical to the primary screen. The mean RZÕ of the neutral and positive controls in this screen was 0.5607, indicating excellent assay robustness. Nuclear fascin and nuclear F-actin were plotted as a function of compound concentration to identify AC50 values for each compound. This compound response analysis identified 96 compounds that were active against nuclear fascin, of which 43 also increased nuclear F-actin."
+    },
+    {
+      "@id": "#screen-protocol-2-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Fascin was stably knocked down in HeLa cells, then mScarlet-fascin was stably re-expressed at physiological levels. mScarlet-fascin/fascin KD HeLa cells were cultured at 37¡C, 5% CO2 in high-glucose DMEM supplemented with 10% FBS, 1% glutamine and 1% penicillin/streptomycin. Cells were selected and maintained using puromycin, and sub-cultured using 0.05% trypsin-EDTA in PBS. In this assay, mScarlet-fascin/fascin KD HeLa cells were transfected with the nuclear actin probe iRFP-nAC, then plated in CellCarrier Ultra 384 well plates (PerkinElmer) at a concentration of 4,400 cells/well.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "24 h after transfection, 10 nM leptomycin b (positive control), vehicle control or 0.00003-30 µM  library compounds were added using an Echo liquid handler (Labcyte/Beckman Coulter). Cells were incubated for a further 24 h then fixed in 4% paraformaldehyde.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-3",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "Library of biologically annotated compounds identified as hits in primary screen",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-4",
+      "@type": "LabProtocol",
+      "name": "HCS image acquisition and feature extraction protocol",
+      "description": "Cells were stained with DAPI and Alexa Fluor 488 Phalloidin then imaged using a 20x objective on a CellVoyager CV8000 High-Content Screening System (Yokogawa). Images were analysed using Columbus (PerkinElmer) and Genedata Screener (Genedata) software.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-5",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "Images were analysed using automated pipelines to define levels of nuclear fascin normalised to neutral and positive controls. The nuclear and cytoplasmic compartments were determined using Columbus software (PerkinElmer) and the intensity of mScarlet-fascin in each comparment used to determine the % of nuclear-localized fascin per cell. The mean % nuclear fascin/cell/well was then calculated and values normalised relative to neutral controls (median set to 0) and positive controls (median set to 100). Nuclear fascin was plotted as a function of compound concentration to identify AC50 values for each compound.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-biosample-3",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "To further refine the identified compounds and targets that enhanced nuclear fascin and F-actin in terms of functional importance, we performed an additional screen to detect apoptosis using a representative panel of 52 compounds that inhibited various pathways but all targeted fascin to the nucleus. Fascin KD HeLa cells expressing mScarlet or mScarlet-fascin were used for this analysis to identify fascin-dependent responses to compounds. Cells were treated with all compounds at a range of concentrations and imaged using automated high-content microscopy in the presence of a fluorescence-based caspase reporter (that fluoresced at 488nm only upon onset of apoptosis) over 72 h. Resulting data were quantified to produce apoptosis AC50 values for all compounds in both control and fascin KD cells. From these data, we identified 15 compounds that promoted apoptosis at lower concentrations in mScarlet-fascin expressing cells than in fascin KD cells.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000249",
+      "@type": "DefinedTerm",
+      "name": "time lapse microscopy"
+    },
+    {
+      "@id": "#screen-protocol-3-0",
+      "@type": "LabProtocol",
+      "name": "time lapse microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000249"
+        }
+      ],
+      "description": "To further refine the identified compounds and targets that enhanced nuclear fascin and F-actin in terms of functional importance, we performed an additional screen to detect apoptosis using a representative panel of 52 compounds that inhibited various pathways but all targeted fascin to the nucleus. Fascin KD HeLa cells expressing mScarlet or mScarlet-fascin were used for this analysis to identify fascin-dependent responses to compounds. Cells were treated with all compounds at a range of concentrations and imaged using automated high-content microscopy in the presence of a fluorescence-based caspase reporter (that fluoresced at 488nm only upon onset of apoptosis) over 72 h. Resulting data were quantified to produce apoptosis AC50 values for all compounds in both control and fascin KD cells. From these data, we identified 15 compounds that promoted apoptosis at lower concentrations in mScarlet-fascin expressing cells than in fascin KD cells."
+    },
+    {
+      "@id": "#screen-protocol-3-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Fascin was stably knocked down in HeLa cells, then mScarlet (KD) or mScarlet-fascin (WT) was stably expressed. Cells were cultured at 37¡C, 5% CO2 in high-glucose DMEM supplemented with 10% FBS, 1% glutamine and 1% penicillin/streptomycin. Cells were selected and maintained using puromycin, and sub-cultured using 0.05% trypsin-EDTA in PBS. In this assay, cells were plated in CellCarrier Ultra 384 well plates (PerkinElmer) at a concentration of 1,000 cells/well plus 2 mM CellEvent Caspase 3/7 Green detection reagent (ThermoFisher).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-3-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "24 h after plating, 1 µM staurosporine (positive control), vehicle control or 0.00003-30 µM compounds were added using an Echo liquid handler (Labcyte/Beckman Coulter). Cells were imaged live every 4 h for a further 72 h using an Incucyte Zoom (Sartorius).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-3-3",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "Biologically annotated compounds selected following compound response screen.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-3-4",
+      "@type": "LabProtocol",
+      "name": "HCS image acquisition and feature extraction protocol",
+      "description": "Cells were incubated in an IncuCyte Zoom (Sartorius) at 37¡C and imaged at 10x every 4 h for 72 h (first image taken 4 h after adding drugs). Channels = Phase contrast (cells), red (mScarlet) and green (CellEvent apoptosis marker). Data were analysed using IncuCyte Zoom (Sartorius) and Genedata Screener (Genedata) software.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-3-5",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "Images were acquired every 4 h and apoptosis levels calculated for each condition as the area under the curve over the total period of the experiment.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    },
+    {
+      "@id": "#file-count",
+      "@type": "QuantitativeValue",
+      "value": 105,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000189",
+      "unitText": "file count",
+      "description": "61 + 17 + 27 = 105 5D images"
+    }
+  ]
+}

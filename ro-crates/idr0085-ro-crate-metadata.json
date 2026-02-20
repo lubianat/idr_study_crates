@@ -1,0 +1,202 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0085-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0085/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0085/",
+      "@type": "Dataset",
+      "name": "Multi-fluorescence high-resolution episcopic microscopy (MF-HREM) for three dimensional imaging of adult murine organs",
+      "description": "Multi-fluorescent High Resolution Episcopic Microscopy (MF-HREM) is a serial-sectioning, block-facing, wide-field fluorescence technique. It can image large volumes (>0.5mm3) at high resolution (~2um) without the need for tissue clearing or optical sectioning. We detail developments in sample processing including stain penetration, resin embedding and imaging. In addition, we describe image post-processing methods needed to segment and further quantify these data. Finally, we demonstrate the wide applicability of MF-HREM by: 1) quantifying adult mouse glomeruli. 2) identifying injected cells and vascular networks in tumour xenograft models; 3) quantifying vascular networks and white matter track orientation in mouse brain.",
+      "datePublished": "2020-08-12",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Walsh et al., CC-BY-4.0, 2020",
+      "identifier": "idr0085",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0003-3769-3392"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "#experiment-protocol-1-4"
+        },
+        {
+          "@id": "#term"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/9846157/"
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0003-3769-3392",
+      "@type": "Person",
+      "name": "Claire Walsh",
+      "givenName": "Claire",
+      "familyName": "Walsh",
+      "email": "c.walsh.11@ucl.ac.uk",
+      "address": "UCL Centre for Advanced Biomedical Imaging, Paul O'Gorman Building,University College London,72 Huntley Street,London UK, WC1E 6DD"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090",
+      "@type": "Taxon",
+      "scientificName": "Mus musculus"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "tissue",
+      "description": "Application of MF-HREM to imaging and analysis of adult mouse: kidney glomeruli, xenograft tumour vasculature and cell migration, brain microsvasculature and white matter orientation, brain white matter orientation and cell nuclei distribution",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+        }
+      ]
+    },
+    {
+      "@id": "#term",
+      "@type": "DefinedTerm",
+      "name": "Multi-fluorescence high-resolution episcopic microscopy (MF-HREM)"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "Multi-fluorescence high-resolution episcopic microscopy (MF-HREM)",
+      "measurementTechnique": [
+        {
+          "@id": "#term"
+        }
+      ],
+      "description": "Application of MF-HREM to imaging and analysis of adult mouse: kidney glomeruli, xenograft tumour vasculature and cell migration, brain microsvasculature and white matter orientation, brain white matter orientation and cell nuclei distribution"
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "For tumour xenograft model cells from the FaDu human breast cancer cell line were cultured in complete medium (Dulbecco's minimum essential medium Eagle with L-glutamine (DMEM) (Lonza)+10% fetal  bovine serum (Invitrogen)) in the ratio 1:10 (vol/vol) and incubated at 37'C and 5% CO2.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "Tumour cells were stained with CMDiI prior to innoculation.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "In all cases vasculature was stained via tail vein i.v. with Dyelight649 conjugated to tomato Lectin (Vector), brain white matter was stained ex vivo by immersion in CMDiI, Cell nuceli were stained ex vivo by immersion in HCS CellMask."
+    },
+    {
+      "@id": "#experiment-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "Kidney glomeruil were segmented via gradient vector flow algorithm, deconvolution of datasets was performed using Richardonson-lucy algorithm, iterations and PSF details given for each image set."
+    }
+  ]
+}

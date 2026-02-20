@@ -1,0 +1,319 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0092-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0092/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0092/",
+      "@type": "Dataset",
+      "name": "A semi-automated organoid screening method demonstrates epigenetic control of intestinal epithelial differentiation",
+      "description": "Intestinal organoids are an excellent model to study epithelial biology. Yet, the selection of analytical tools to accurately quantify heterogeneous organoid cultures remains limited. Here, we developed a semi-automated organoid screening method, which we applied to a library of highly specific chemical probes to identify epigenetic regulators of intestinal epithelial biology. The role of epigenetic modifiers in adult stem cell systems, such as the intestinal epithelium, is still undefined. Based on this resource dataset, we identified several targets that affected epithelial cell differentiation, including HDACs, EP300/CREBBP, LSD1, and type I PRMTs, which were verified by complementary methods. For example, we show that inhibiting type I PRMTs, which leads enhanced epithelial differentiation, blocks the growth of adenoma but not normal organoid cultures. Thus, epigenetic probes are powerful tools to study intestinal epithelial biology and may have therapeutic potential.",
+      "datePublished": "2020-09-03",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Ostrop et al, CC-BY-4.0, 2020",
+      "identifier": "idr0092",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0003-2752-8377"
+        },
+        {
+          "@id": "https://orcid.org/0000-0003-0498-4273"
+        },
+        {
+          "@id": "https://orcid.org/0000-0002-4971-3250"
+        },
+        {
+          "@id": "https://orcid.org/0000-0002-1180-8975"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.3389/fcell.2020.618552"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#screen-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#screen-protocol-1-0"
+        },
+        {
+          "@id": "#screen-protocol-1-1"
+        },
+        {
+          "@id": "#screen-protocol-1-2"
+        },
+        {
+          "@id": "#screen-protocol-1-3"
+        },
+        {
+          "@id": "#screen-protocol-1-4"
+        },
+        {
+          "@id": "#screen-protocol-1-5"
+        },
+        {
+          "@id": "#screen-protocol-1-6"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000243"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/10340801/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0003-2752-8377",
+      "@type": "Person",
+      "name": "Jenny Ostrop",
+      "givenName": "Jenny",
+      "familyName": "Ostrop",
+      "email": "jenny.ostrop@ntnu.no",
+      "address": "CEMIR – Centre of Molecular Inflammation Research, Department of Clinical and Molecular Medicine, NTNU – Norwegian University of Science and Technology, NO-7491, Norway"
+    },
+    {
+      "@id": "https://orcid.org/0000-0003-0498-4273",
+      "@type": "Person",
+      "name": "Korbinian Bösl",
+      "givenName": "Korbinian",
+      "familyName": "Bösl",
+      "email": "korbinian.bosl@uib.no",
+      "address": "Computational Biological Unit, Department of Informatics, University of Bergen, Thormohlensgt 55, N-5008, Bergen, Norway"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-4971-3250",
+      "@type": "Person",
+      "name": "Cheryl Arrowsmith",
+      "givenName": "Cheryl",
+      "familyName": "Arrowsmith",
+      "email": "carrow@uhnres.utoronto.ca",
+      "address": "Structural Genomics Consortium, University of Toronto, M5G 1L7, Toronto, Canada"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-1180-8975",
+      "@type": "Person",
+      "name": "Menno J. Oudhoff",
+      "givenName": "Menno J.",
+      "familyName": "Oudhoff",
+      "email": "menno.oudhoff@ntnu.no",
+      "address": "CEMIR – Centre of Molecular Inflammation Research, Department of Clinical and Molecular Medicine, NTNU – Norwegian University of Science and Technology, NO-7491, Norway"
+    },
+    {
+      "@id": "https://doi.org/10.3389/fcell.2020.618552",
+      "@type": "ScholarlyArticle",
+      "name": "A semi-automated organoid screening method demonstrates epigenetic control of intestinal epithelial differentiation"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090",
+      "@type": "Taxon",
+      "scientificName": "Mus musculus"
+    },
+    {
+      "@id": "#screen-biosample-1",
+      "@type": "BioSample",
+      "name": "tissue",
+      "description": "To study the role of epigenetic regulatory enzymes in the intestinal epithelium, small intestinal organoids were treated with a library of highly specific inhibitors of epigenetic modifiers provided by the Structural Genomics Consortium (SGC). Small intestinal organoids derived from four individual C57BL/6J mice were passaged by rigourous pipetting to nearly single cells at 1:4 ratio and seeded in 40µl Matrigel droplets/well in pre-warmed 24-well plates. 250µl/well basal organoid culture medium containing EGF, Noggin, and R-Spondin-1 (\"ENR\") was added immediately after Matrigel solidification. 250µl/well ENR + probes from the SGC Epigenetics Probes library at 2x working concentration were added within 30min. For each biological replicate DMSO vehicle controls were carried out in quadruplicates and valproic acid (VPA) was included as positive control. Media was replaced after 48h. Organoid bright-field image stacks were acquired 0h, 24h, 48h, 72h, 96h after seeding on an EVOS2 microscope (Thermo Fisher Scientific).",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000243",
+      "@type": "DefinedTerm",
+      "name": "bright-field microscopy"
+    },
+    {
+      "@id": "#screen-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "bright-field microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000243"
+        }
+      ],
+      "description": "To study the role of epigenetic regulatory enzymes in the intestinal epithelium, small intestinal organoids were treated with a library of highly specific inhibitors of epigenetic modifiers provided by the Structural Genomics Consortium (SGC). Small intestinal organoids derived from four individual C57BL/6J mice were passaged by rigourous pipetting to nearly single cells at 1:4 ratio and seeded in 40µl Matrigel droplets/well in pre-warmed 24-well plates. 250µl/well basal organoid culture medium containing EGF, Noggin, and R-Spondin-1 (\"ENR\") was added immediately after Matrigel solidification. 250µl/well ENR + probes from the SGC Epigenetics Probes library at 2x working concentration were added within 30min. For each biological replicate DMSO vehicle controls were carried out in quadruplicates and valproic acid (VPA) was included as positive control. Media was replaced after 48h. Organoid bright-field image stacks were acquired 0h, 24h, 48h, 72h, 96h after seeding on an EVOS2 microscope (Thermo Fisher Scientific)."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0005519",
+      "@type": "DefinedTerm",
+      "name": "dissection protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "dissection protocol",
+      "description": "Dissection protocol. Small intestinal crypts were isolated as described in https://doi.org/10.1007/978-1-62703-125-7_19. The proximal half of the intestine was rinsed, opened longitudinally, cut to small pieces after villi and mucus were scraped off, washed with PBS until the solution was clear, and incubated in 2mM EDTA/PBS for 30 min at 4°C with gentle rocking. Fragments were subsequently washed with PBS and the crypt fraction was typically collected from wash 2-5. All centrifugation steps were carried out at 300 x g.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0005519"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Growth protocol. Organoids were generated by seeding ca. 250-500 small intestinal crypts in a 50µl droplet of cold Matrigel (Corning #734-1101) into the middle of a pre-warmed 24-well plate. Matrigel was solidified by incubation at 37°C for 5-15min and 500µl culture medium added. Basal culture medium (\"\"ENR\"\") consisted of advanced DMEM F12 (Thermo Fisher Scientific) supplemented with 1x Penicillin-Streptomycin (Sigma), 10mM HEPES (Thermo Fisher Scientific), 2mM Glutamax (Thermo Fisher Scientific), 1x B-27 (Thermo Fisher Scientific), 500mM N-Acetylcysteine (Sigma), 50ng/ml recombinant EGF (Thermo Fisher Scientific), 10% conditioned medium from a cell line producing Noggin (kind gift from Hans Clevers, Hubrecht Institute, Utrecht, The Netherlands), and 20% conditioned medium from a cell line producing R-Spondin (kind gift from Calvin Kuo, Stanford University School of Medicine, Stanford, CA, USA). ENR culture medium was replaced every 2-3 days. Organoids were passaged at 1:3-1:4 ratio by disruption with rigorous pipetting almost to single cells. Organoid fragments were centrifuged at 300 x g, resuspended in 40-50µl cold Matrigel per well, and plated on pre-warmed 24-well plates. Media was replaced after 48h.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "Compound treatment. The epigenetic modifier inhibitors were part of the Structural Genomics Consortium Epigenetic Chemical Probes Collection as of March 2016. Probes were reconstituted in DMSO and used at the recommended concentration. DMSO vehicle control was matched to the highest concentration used per experiment, maximal 10µM. 1mM valproic acid (VPA) was included as positive control. Probes were added within 30min after seeding.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007571",
+      "@type": "DefinedTerm",
+      "name": "HCS library protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "Image acquistion. Organoid brightfield 8-bit images were acquired on an Evos2 microscope (Thermo Fisher Scientific) with 2x magnification. At the starting point of the experiment, for each plate an automation setup was generated to acquire z-stacks with 50µm spacing either of a single position and most area of the Matrigel dome for each well. This automation setup was reused at consecutive timepoints.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007572",
+      "@type": "DefinedTerm",
+      "name": "HCS image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-5",
+      "@type": "LabProtocol",
+      "name": "HCS image acquisition and feature extraction protocol",
+      "description": "Image processing and quantification. A custom ImageJ/Fiji macro (https://doi.org/10.5281/zenodo.3951126) was used to collect single positions and layers for each well, to save a stack (ImageJ brightfield stack) and projections, and to perform a simple organoid segmentation (\"\"ImageJ workflow\"\"). For the segmentation, a Sobel edge detector was applied to each z-stack layer (ImageJ edge stack), a standard deviation Zprojection of the edge stack was generated, and particle analysis with optional manual correction was performed after several binary operations and thresholding. For an improved segmentation, to distinguish different organoid phenotypes, the ImageJ workflow was combined with the interactive machine learning software Ilastik. Training data was taken from the same experiment and excluded from further analysis. In a first step, pixel classification on an intensity summary projection of the ImageJ edge stack was used to separate between background and object borders. The generated pixel prediction maps were used as input in a second object classification step together with minimum projections of the ImageJ brightfield stack. The following label classes were used: Organoid, big sphere, small sphere, cluster, debris, background mislabelled as organoid, air bubble, edge of well plate.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007573",
+      "@type": "DefinedTerm",
+      "name": "HCS data analysis protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-6",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "HCS data analysis protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 218802813927,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "0.199 TB"
+    }
+  ]
+}

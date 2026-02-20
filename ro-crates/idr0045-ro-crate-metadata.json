@@ -1,0 +1,223 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0045-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0045/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0045/",
+      "@type": "Dataset",
+      "name": "Dual spindle formation in zygotes keeps parental genomes apart in early mammalian embryos",
+      "description": "At the beginning of mammalian life the genetic material from each parent meets when the fertilized egg divides. It was previously thought that a single microtubule spindle is responsible to spatially combine the two genomes and then segregate them to create the two-cell embryo. Utilizing light-sheet microscopy, we showed that two bipolar spindles form in the zygote, which independently congress the maternal and paternal genomes. These two spindles aligned their poles prior to anaphase but kept the parental genomes apart during the first cleavage. This spindle assembly mechanism provides a potential rationale for erroneous divisions into more than two blastomeric nuclei observed in mammalian zygotes and reveals the mechanism behind the observation that parental genomes occupy separate nuclear compartments in the two-cell embryo.",
+      "datePublished": "2018-08-29",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Reichmann et al, CC-BY-4.0, 2018",
+      "identifier": "idr0045",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "#person-1"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1126/science.aar7462"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_186842"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "#experiment-protocol-1-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000369"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/3509480/"
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "#person-1",
+      "@type": "Person",
+      "name": "Jan Ellenberg",
+      "givenName": "Jan",
+      "familyName": "Ellenberg",
+      "email": "jan.ellenberg@embl.de",
+      "address": "EMBL Heidelberg, Meyerhofstrasse 1, 69117 Heidelberg, Germany EMBL Heidelberg, Meyerhofstrasse 1, 69117 Heidelberg, Germany"
+    },
+    {
+      "@id": "https://doi.org/10.1126/science.aar7462",
+      "@type": "ScholarlyArticle",
+      "name": "Dual-spindle formation in zygotes keeps parental genomes apart in early mammalian embryos."
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090",
+      "@type": "Taxon",
+      "scientificName": "Mus musculus"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_186842",
+      "@type": "Taxon",
+      "scientificName": "Mus musculus x Mus spretus"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "tissue",
+      "description": "Characterization of mitotic spindle formation in live mouse zygotes by light-sheet microscopy.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_186842"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000369",
+      "@type": "DefinedTerm",
+      "name": "light sheet fluorescence microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "light sheet fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000369"
+        }
+      ],
+      "description": "Characterization of mitotic spindle formation in live mouse zygotes by light-sheet microscopy."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Mouse embryos were collected from superovulated (injection of 7.5 international units (IU) pregnant mare serum followed by injection of 7.5 IU human chorionic gonadotropin 42 to 50 hours later) 8- to 24-week-old female mice according to the guidelines of EMBL Laboratory Animal Resources. Embryos were cultured in 30-mul drops of G1 medium (Vitrolife) covered by mineral oil (Ovoil, Vitrolife) with 5% CO2 and 5% O2 atmosphere.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "treatment protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "image aquistion and feature extraction protocol",
+      "description": "image aquistion and feature extraction protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    }
+  ]
+}

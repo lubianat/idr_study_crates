@@ -1,0 +1,235 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0137-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0137/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0137/",
+      "@type": "Dataset",
+      "name": "Reference BioImaging dataset to assess the phenotypic trait diversity of bryophytes within the family Scapaniaceae",
+      "description": "A reference dataset containing macroscopic and bright-field microscopic images to integrate phenotypic data with metabolomics and sequencing for use in integrative taxonomy.",
+      "datePublished": "2023-01-17",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Peters et al, CC-BY-4.0, 2023",
+      "identifier": "idr0137",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-4321-0257"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_129944"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_122646"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_5931123"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_56931"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "#experiment-protocol-1-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000243"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/14276397/"
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-4321-0257",
+      "@type": "Person",
+      "name": "Kristian Peters",
+      "givenName": "Kristian",
+      "familyName": "Peters",
+      "email": "kristian.peters@idiv.de",
+      "address": "German Centre for Integrative Biodiversity Research (iDiv) Halle-Jena-Leipzig, Puschstrasse 4, 04103 Leipzig, Germany"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_129944",
+      "@type": "Taxon",
+      "scientificName": "Riccia glauca"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_122646",
+      "@type": "Taxon",
+      "scientificName": "Riccia sorocarpa"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_5931123",
+      "@type": "Taxon",
+      "scientificName": "Riccia warnstorfii"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_56931",
+      "@type": "Taxon",
+      "scientificName": "Lunularia cruciata"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "tissue",
+      "description": "Samples of R. glauca, R. sorocarpa, R. warnstorfii were collected by Uwe Schwarz from an arable stubble field near Aichtal Grötzingen in Baden-Württemberg, Germany on 09/13/2021 (geographic coordinates: 48.638275 N, 9.2534083 E, elevation: 376 m, precision: 10 m). To evaluate phylogenetic distances, Lunularia cruciata (L.) Dumort. ex Lindb. was additionally sampled near the lab site on 12/08/2021 at 51.494848 N, 11.942323 E. The specimens were brought to the lab at IPB in sterile petri dishes, where plant material was isolated, washed under a light microscope to remove dirt and other residues, filled into Eppendorf tubes and shock-frozen. Voucher specimens were stored in the herbarium Haussknecht Jena (voucher id’s: Riccia glauca: JE04010991, Riccia sorocarpa: JE04010990, Riccia warnstorfii: JE04010989, Lunularia cruciata: JE04010993). For image acquisition, a Zeiss Axio Scope.A1 HAL 100/HBO, 6x HD/DIC, M27, 10x/23 microscope with an achromatic-aplanatic 0.9 H D Ph DIC condenser was used for microscopy utilizing the objectives EC Plan Neofluar 2.5x/0.075 M27 (a=8.8mm), Plan-Apochromat 5x/0.16 M27 (a=12.1mm), Plan-Apochromat 10x/0.45 M27 (a=2.1mm), Plan-Apochromat 20x/0.8 M27 (a=0.55mm), and Plan-Apochromat 40x/0.95 Korr M27 (a=0.25mm) using the EC PN and the Fluar 40x/1.30 III and PA 40x/0.95 III filters for DIC. The conversion filter CB3 and the interference filter wideband green were used to improve digital reproduction of colors. The color balance was adjusted in the camera and in software accordingly. For macroscopy and for preparing microscopy slides, a binocular microscope Zeiss Stemi 2000c was used. For macroscopic images, the Venus Optics Laowa 25mm 2.5-5.0x ultra-macro for Canon EF and the Canon EF-RF adapter were used. To acquire digital images, a full-frame, high-resolution camera (Canon EOS RP, 26 megapixel) was used and adapted to the photographic objectives or to the microscopes using binocular phototubes with sliding prism 30°/23 (Axio Scope.A1) and 100:0/0:100 reversed image (Stemi 2000c) using 60-T2 camera adapter for Canon EOS and a Canon EF-RF adapter. To construct images with extended depth-of-field, images were recorded at different focal planes. This “focus stacking” approach was automatized for macroscopy by attaching the camera to a Cognisys StackShot macro rail fixed on a Novoflex macro stand, and for microscopy by adapting a Cognisys StackShot motor to the fine adjustment of the microscope using two cogged wheels, one small wheel (1 cm diameter) adapted on the motor and one large wheel (8.5 cm diameter) on the fine adjustment of the microscope. The two cogged wheels were coupled with a toothed belt to obtain fine step increments of the stepping motor for high magnifications. A Cognisys StackShot controller was used to control the amount and distance of the stepping motor with the following controller settings: Dist/Rev: 3200 stp, Backlash: 0 steps, # pics: 1, Tsettle: 100.0 ms, Toff: 450.0 ms, Auto Return: yes, Speed: 3000 st/sec, Tlapse: off, Tpulse: 800.0 ms, Tramp: 100 ms, Units: steps, Torque: 6, Hi Precision: Off, LCD Backlight: 10, Mode: Auto-Step using between 25 steps (magnification 1x) and 50 steps (magnification 25x) and 100 steps (magnification 400x) (number of steps depending on aperture settings and effective magnification). Raw images were recorded in CR3-format and pre-processed with Adobe Camera RAW. Non-destructive image processing such as corrections of the field curvature, removal of chromatic aberration, color balance, increase of contrast and brightness were performed in Adobe Camera RAW. Images were then exported to TIFF-format and any image processing steps were recorded in individual Adobe XMP-files. Multi-focus image fusion was performed on the individual images in the z-stacks using the software Helicon Focus 8.1.1 and by choosing the algorithms depth map and pyramid with different settings of radius (4, 8, 16, 24) and smoothing (2, 4). The best composite image was chosen manually and retained. When composite images contained specimen that were larger than the frame, several images were stitched together using the panorama stitching function in the software Affinity Photo 1.10.5. Images were manually segmented and interfering background removed using the flood select, brush selection and freehand selection tools in the software Affinity Photo. In order to determine the scale, a stage micrometer was photographed separately with any of the objectives and microscope combinations. The scale was calculated per pixel for each combination and scale bars were put post-hoc onto the segmented images. Meta-data including species name, taxonomic rank information (NCBI-Taxon and GBIF taxonomy identifiers), voucher specimen id, image acquisition date, an object description including the name of the captured phenotypic character(s), the used objective, microscope, and magnification were associated with any raw image based on unique respective file names. Individual file names, name within an image focus stack and name within an image stitching stack were recorded additionally to facilitate subsequent automized image processing in workflows. Python scripts were created to automatize image fusion and image stitching tasks. Image features were estimated using the R package EBImage (Pau et al., 2010) by extracting the histograms of the red, green, and blue channels of the bioimages representing the visible spectra of the thalli of the different species. To investigate relationships of the image properties and the molecular traits, distance-based ReDundancy Analyses (dbRDA) were performed using the dbrda function of the package vegan (Peters et al., 2018a). Spectral values other than pure black (all RGB channels zero) and pure white (all RGB channels one) were extracted from the histogram models and used as traits in a dbRDA model. A Euclidean distance measure was used for the ordination. The dbRDA-model with the largest explained variance was chosen using forward variable selection and the ordistep function. The goodness of fit statistic (squared correlation coefficient) was determined for the remaining variables by applying the envfit function on the dbRDA ordination model. Raw camera and pre-processed imaging data in CR3 and TIFF format, respectively, were deposited to the BioImage Archive (BioStudies) using the command line IBM Aspera software tool ascp version 3.8.1.161274 to ensure that data has been transmitted without errors. The raw bioimaging data is available under the BioStudies identifier S-BIAD443 (https://www.ebi.ac.uk/biostudies/studies/S-BIAD443). Processed images were converted to the Bio-Formats OME-TIFF format by creating intermediate ZARR-pyramid tiles using the bioformats2raw converter version 0.4.0 and then using the raw2ometiff version 0.3.0 software tool to create the final pyramid images. Processed images and the metadata were first aggregated in a TSV table and then deposited to the Image Data Resource (https://idr.openmicroscopy.org/search/?query=Name:137) under accession number idr0137 using the software Globus Connect Personal 3.1.6.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_129944"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_122646"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_5931123"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_56931"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000243",
+      "@type": "DefinedTerm",
+      "name": "bright-field microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "bright-field microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000243"
+        }
+      ],
+      "description": "Samples of R. glauca, R. sorocarpa, R. warnstorfii were collected by Uwe Schwarz from an arable stubble field near Aichtal Grötzingen in Baden-Württemberg, Germany on 09/13/2021 (geographic coordinates: 48.638275 N, 9.2534083 E, elevation: 376 m, precision: 10 m). To evaluate phylogenetic distances, Lunularia cruciata (L.) Dumort. ex Lindb. was additionally sampled near the lab site on 12/08/2021 at 51.494848 N, 11.942323 E. The specimens were brought to the lab at IPB in sterile petri dishes, where plant material was isolated, washed under a light microscope to remove dirt and other residues, filled into Eppendorf tubes and shock-frozen. Voucher specimens were stored in the herbarium Haussknecht Jena (voucher id’s: Riccia glauca: JE04010991, Riccia sorocarpa: JE04010990, Riccia warnstorfii: JE04010989, Lunularia cruciata: JE04010993). For image acquisition, a Zeiss Axio Scope.A1 HAL 100/HBO, 6x HD/DIC, M27, 10x/23 microscope with an achromatic-aplanatic 0.9 H D Ph DIC condenser was used for microscopy utilizing the objectives EC Plan Neofluar 2.5x/0.075 M27 (a=8.8mm), Plan-Apochromat 5x/0.16 M27 (a=12.1mm), Plan-Apochromat 10x/0.45 M27 (a=2.1mm), Plan-Apochromat 20x/0.8 M27 (a=0.55mm), and Plan-Apochromat 40x/0.95 Korr M27 (a=0.25mm) using the EC PN and the Fluar 40x/1.30 III and PA 40x/0.95 III filters for DIC. The conversion filter CB3 and the interference filter wideband green were used to improve digital reproduction of colors. The color balance was adjusted in the camera and in software accordingly. For macroscopy and for preparing microscopy slides, a binocular microscope Zeiss Stemi 2000c was used. For macroscopic images, the Venus Optics Laowa 25mm 2.5-5.0x ultra-macro for Canon EF and the Canon EF-RF adapter were used. To acquire digital images, a full-frame, high-resolution camera (Canon EOS RP, 26 megapixel) was used and adapted to the photographic objectives or to the microscopes using binocular phototubes with sliding prism 30°/23 (Axio Scope.A1) and 100:0/0:100 reversed image (Stemi 2000c) using 60-T2 camera adapter for Canon EOS and a Canon EF-RF adapter. To construct images with extended depth-of-field, images were recorded at different focal planes. This “focus stacking” approach was automatized for macroscopy by attaching the camera to a Cognisys StackShot macro rail fixed on a Novoflex macro stand, and for microscopy by adapting a Cognisys StackShot motor to the fine adjustment of the microscope using two cogged wheels, one small wheel (1 cm diameter) adapted on the motor and one large wheel (8.5 cm diameter) on the fine adjustment of the microscope. The two cogged wheels were coupled with a toothed belt to obtain fine step increments of the stepping motor for high magnifications. A Cognisys StackShot controller was used to control the amount and distance of the stepping motor with the following controller settings: Dist/Rev: 3200 stp, Backlash: 0 steps, # pics: 1, Tsettle: 100.0 ms, Toff: 450.0 ms, Auto Return: yes, Speed: 3000 st/sec, Tlapse: off, Tpulse: 800.0 ms, Tramp: 100 ms, Units: steps, Torque: 6, Hi Precision: Off, LCD Backlight: 10, Mode: Auto-Step using between 25 steps (magnification 1x) and 50 steps (magnification 25x) and 100 steps (magnification 400x) (number of steps depending on aperture settings and effective magnification). Raw images were recorded in CR3-format and pre-processed with Adobe Camera RAW. Non-destructive image processing such as corrections of the field curvature, removal of chromatic aberration, color balance, increase of contrast and brightness were performed in Adobe Camera RAW. Images were then exported to TIFF-format and any image processing steps were recorded in individual Adobe XMP-files. Multi-focus image fusion was performed on the individual images in the z-stacks using the software Helicon Focus 8.1.1 and by choosing the algorithms depth map and pyramid with different settings of radius (4, 8, 16, 24) and smoothing (2, 4). The best composite image was chosen manually and retained. When composite images contained specimen that were larger than the frame, several images were stitched together using the panorama stitching function in the software Affinity Photo 1.10.5. Images were manually segmented and interfering background removed using the flood select, brush selection and freehand selection tools in the software Affinity Photo. In order to determine the scale, a stage micrometer was photographed separately with any of the objectives and microscope combinations. The scale was calculated per pixel for each combination and scale bars were put post-hoc onto the segmented images. Meta-data including species name, taxonomic rank information (NCBI-Taxon and GBIF taxonomy identifiers), voucher specimen id, image acquisition date, an object description including the name of the captured phenotypic character(s), the used objective, microscope, and magnification were associated with any raw image based on unique respective file names. Individual file names, name within an image focus stack and name within an image stitching stack were recorded additionally to facilitate subsequent automized image processing in workflows. Python scripts were created to automatize image fusion and image stitching tasks. Image features were estimated using the R package EBImage (Pau et al., 2010) by extracting the histograms of the red, green, and blue channels of the bioimages representing the visible spectra of the thalli of the different species. To investigate relationships of the image properties and the molecular traits, distance-based ReDundancy Analyses (dbRDA) were performed using the dbrda function of the package vegan (Peters et al., 2018a). Spectral values other than pure black (all RGB channels zero) and pure white (all RGB channels one) were extracted from the histogram models and used as traits in a dbRDA model. A Euclidean distance measure was used for the ordination. The dbRDA-model with the largest explained variance was chosen using forward variable selection and the ordistep function. The goodness of fit statistic (squared correlation coefficient) was determined for the remaining variables by applying the envfit function on the dbRDA ordination model. Raw camera and pre-processed imaging data in CR3 and TIFF format, respectively, were deposited to the BioImage Archive (BioStudies) using the command line IBM Aspera software tool ascp version 3.8.1.161274 to ensure that data has been transmitted without errors. The raw bioimaging data is available under the BioStudies identifier S-BIAD443 (https://www.ebi.ac.uk/biostudies/studies/S-BIAD443). Processed images were converted to the Bio-Formats OME-TIFF format by creating intermediate ZARR-pyramid tiles using the bioformats2raw converter version 0.4.0 and then using the raw2ometiff version 0.3.0 software tool to create the final pyramid images. Processed images and the metadata were first aggregated in a TSV table and then deposited to the Image Data Resource (https://idr.openmicroscopy.org/search/?query=Name:137) under accession number idr0137 using the software Globus Connect Personal 3.1.6."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "growth protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "treatment protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    }
+  ]
+}

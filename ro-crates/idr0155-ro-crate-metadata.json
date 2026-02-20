@@ -1,0 +1,219 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0155-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0155/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0155/",
+      "@type": "Dataset",
+      "name": "A new method for reliably detecting single fluorescent puncta in structured backgrounds",
+      "description": "Super-resolution and single-molecule microscopy are increasingly being applied to complex biological systems. While this can lead greater insight, it also means data analysis becomes more complex: fluorescent puncta must reliably and efficiently be detected in the low signal, high noise, heterogeneous background environments of cells and tissue. We present a bioimaging-segmentation method that accomplishes this. It detects features over a broad range of spatial scales: from single proteins to complex cell phenotypes. Our method outperforms the state-of-the-art in both precision and speed, using image gradients to separate Gaussian-shaped objects from background features. We demonstrate that this approach both works robustly on simple test systems, and that it enables us to extract previously unseen correlations between Parkinson’s Disease-relevant $\\alpha$-synuclein oligomers and multiple different cells types in the human brain. This sensitive, computationally efficient approach will enable fluorescent puncta and cellular features to be distinguished in cellular and tissue environments with a sensitivity down to the level of the single protein.",
+      "datePublished": "2024-03-05",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Fu at al, CC-BY-4.0, 2024",
+      "identifier": "idr0155",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-8816-2906"
+        },
+        {
+          "@id": "https://orcid.org/0000-0003-4492-5139"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/15149681/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        },
+        {
+          "@id": "#file-count"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-8816-2906",
+      "@type": "Person",
+      "name": "Bin Fu",
+      "givenName": "Bin",
+      "familyName": "Fu",
+      "email": "bf341@cam.ac.uk",
+      "address": "Yusuf Hamied Department of Chemistry, Lensfield Road, Cambridge, CB2 1EW, UK"
+    },
+    {
+      "@id": "https://orcid.org/0000-0003-4492-5139",
+      "@type": "Person",
+      "name": "Steven Lee",
+      "givenName": "Steven",
+      "familyName": "Lee",
+      "email": "sl591@cam.ac.uk",
+      "address": "Yusuf Hamied Department of Chemistry, Lensfield Road, Cambridge, CB2 1EW, UK"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "tissue",
+      "description": "We took 5400 field of views from three Parkinson's disease (PD) cases in the anterior cingulate gyrus for microglia and neuron markers respectively, covering dimensions of 4mm x 4mm x 13µm per patient. Cells were stained in 488nm channel while alpha-synuclein protein was labelled in 561nm channel. The colocalization study was performed based on the locations of detected cells and alpha-synucleins.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000253",
+      "@type": "DefinedTerm",
+      "name": "spinning disk confocal microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "spinning disk confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "description": "We took 5400 field of views from three Parkinson's disease (PD) cases in the anterior cingulate gyrus for microglia and neuron markers respectively, covering dimensions of 4mm x 4mm x 13µm per patient. Cells were stained in 488nm channel while alpha-synuclein protein was labelled in 561nm channel. The colocalization study was performed based on the locations of detected cells and alpha-synucleins."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "Tissue sections were incubated with primary antibodies; anti-phosphorated alpha-synuclein (ab184674, 1:500; ab59264, 1:200) ; Microtubule-Associated Protein 2 (ab254143, 1:500); ionized calcium-binding adapter molecule 1 (Wako – 019-19741, 1:1000) for 1h at room temperature. The sections were then washed three times for five minutes in PBS followed by the corresponding AlexaFluor secondary antibodies (anti-mouse 568, anti-rabbit 568, anti-mouse 488, anti-rabbit 488 all at 1:200) for an additional hour at room temperature in the dark. Sections were then washed three times for five minutes again in PBS and incubated in Sudan Black (0.1% for 10 minutes). Removal of Sudan Black occurred with three washes in 30% ethanol.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "Images were taken on a spinning disk confocal microscope (3i intelligent imaging) with  a 200mW, 488nm laser (LuxX) and a 150mW, 561nm laser (OBIS). The objective lens was a Zeiss oil immersion objective (Alpha Plan-Apochromat 100x/1.46\\,NA Oil TIRF Objective, M27). The microscope was controlled using a PC (Dell-Acquisition Workstation 310R) and SlideBook software produced by the manufacturer (3i intelligent imaging). two sCMOS cameras (Prime 95B, Teledyne Photometrics) was used for the image acquistion in two colour channels seperately (488nm for cells and 561nm for alpha-synuclein aggregates). The analysis software was a self-written code that was designed for feature detection over structured backgrounds."
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "We analyzed the number of diffraction-limited alpha-synuclein per FoV, sum intensit per diffraction-limited alpha-synuclein per FoV and also their relationship to the cell position."
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 791648371998,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "0.72 TB"
+    },
+    {
+      "@id": "#file-count",
+      "@type": "QuantitativeValue",
+      "value": 5400,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000189",
+      "unitText": "file count",
+      "description": "5400 5D images"
+    }
+  ]
+}

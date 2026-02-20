@@ -1,0 +1,207 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0116-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0116/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0116/",
+      "@type": "Dataset",
+      "name": "Large-Scale electron microscopy database for human type 1 diabetes",
+      "description": "Autoimmune β-cell destruction leads to type 1 diabetes, but the pathophysiological mechanisms remain unclear. To help address this void, we created an open-access online repository composed of large-scale electron microscopy images (‘nanotomy’) of human pancreas tissue obtained from the Network for Pancreatic Organ donors with Diabetes (nPOD; www.nanotomy.org). Nanotomy allows analyses of complete donor islets with up to macromolecular resolution. Our first results of mining the database support recent findings that suggest that type 1 diabetes includes abnormalities in the exocrine pancreas that may induce endocrine cellular stress as a trigger for autoimmunity.",
+      "datePublished": "2021-09-21",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "de Boer et al, CC-BY-4.0, 2021",
+      "identifier": "idr0116",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0001-5105-5915"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1038/s41467-020-16287-5"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "#experiment-protocol-1-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000380"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/13457674/"
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0001-5105-5915",
+      "@type": "Person",
+      "name": "Ben Giepmans",
+      "givenName": "Ben",
+      "familyName": "Giepmans",
+      "email": "b.n.g.giepmans@umcg.nl",
+      "address": "Deusinglaan 1, BSCS, UMC Groningen, Netherlands"
+    },
+    {
+      "@id": "https://doi.org/10.1038/s41467-020-16287-5",
+      "@type": "ScholarlyArticle",
+      "name": "Large-scale electron microscopy database for human type 1 diabetes"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "tissue",
+      "description": "Scanning transmission electron microscopy of Islets of Langerhans.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000380",
+      "@type": "DefinedTerm",
+      "name": "scanning-transmission electron microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "scanning-transmission electron microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000380"
+        }
+      ],
+      "description": "Scanning transmission electron microscopy of Islets of Langerhans."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "growth protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "growth protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    }
+  ]
+}

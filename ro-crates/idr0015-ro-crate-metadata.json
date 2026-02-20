@@ -1,0 +1,180 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0015-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0015/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0015/",
+      "@type": "Dataset",
+      "name": "Quantitative 3D-imaging for cell biology and ecology of environmental microbial eukaryotes",
+      "description": "We present a 3D-fluorescence imaging and classification tool for high throughput analysis of microbial eukaryotes in environmental samples. It entails high-content feature extraction that permits accurate automated taxonomic classification and quantitative data about organism ultrastructures and interactions. Using plankton samples from the Tara Oceans expeditions, we validate its applicability to taxonomic profiling and ecosystem analyses, and discuss its potential for future integration of eukaryotic cell biology into evolutionary and ecological studies. This study is subject to the data release policy described here: http://www.embl.de/tara-oceans/start/Tara-Oceans-Data-Release-Policy.pdf",
+      "datePublished": "2016-04-27",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Colin et al, CC-BY-4.0, 2016",
+      "identifier": "idr0015",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "#person-1"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.7554/eLife.26066"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#screen-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_1427524"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#screen-protocol-1-0"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000251"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/1845698/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        },
+        {
+          "@id": "#file-count"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "#person-1",
+      "@type": "Person",
+      "name": "Colomban de Vargas",
+      "givenName": "Colomban",
+      "familyName": "de Vargas",
+      "email": "vargas@sb-roscoff.fr",
+      "address": "Station Biologique de Roscoff"
+    },
+    {
+      "@id": "https://doi.org/10.7554/eLife.26066",
+      "@type": "ScholarlyArticle",
+      "name": "Quantitative 3D-imaging for cell biology and ecology of environmental microbial eukaryotes."
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_1427524",
+      "@type": "Taxon",
+      "scientificName": "mixed sample"
+    },
+    {
+      "@id": "#screen-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "eHCFM: a 3D-fluorescence imaging and classification tool for high throughput analysis of microbial eukaryotes in environmental samples. The method generates for each given sample a mosaic of multi-dimentional fields of view (3D, 5 channels). We propose here the exploration of raw images of plankton samples from the Tara Oceans expeditions.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_1427524"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000251",
+      "@type": "DefinedTerm",
+      "name": "confocal microscopy"
+    },
+    {
+      "@id": "#screen-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000251"
+        }
+      ],
+      "description": "eHCFM: a 3D-fluorescence imaging and classification tool for high throughput analysis of microbial eukaryotes in environmental samples. The method generates for each given sample a mosaic of multi-dimentional fields of view (3D, 5 channels). We propose here the exploration of raw images of plankton samples from the Tara Oceans expeditions."
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 2759774185717,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "2.51 TB"
+    },
+    {
+      "@id": "#file-count",
+      "@type": "QuantitativeValue",
+      "value": 32777,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000189",
+      "unitText": "file count",
+      "description": "32777 5D images"
+    }
+  ]
+}

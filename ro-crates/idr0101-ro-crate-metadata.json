@@ -1,0 +1,214 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0101-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0101/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0101/",
+      "@type": "Dataset",
+      "name": "In situ genome sequencing resolves DNA sequence and structure in intact biological samples",
+      "description": "Understanding genome organization requires integration of DNA sequence and 3D spatial context, however, existing genome-wide methods lack either base-pair sequence resolution or direct spatial localization. Here, we describe in situ genome sequencing (IGS), a method for simultaneously sequencing and imaging genomes within intact biological samples. We applied IGS to human fibroblasts and early mouse embryos, spatially localizing thousands of genomic loci in individual nuclei. Using these data, we characterized parent-specific changes in genome structure across embryonic stages, revealed single-cell chromatin domains in zygotes, and uncovered epigenetic memory of global chromosome positioning within individual embryos. These results demonstrate how in situ genome sequencing can directly connect sequence and structure across length scales from single base pairs to whole organisms.",
+      "datePublished": "2021-09-21",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Payne et al, CC-BY-4.0, 2021",
+      "identifier": "idr0101",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-0419-3351"
+        },
+        {
+          "@id": "https://orcid.org/0000-0001-9958-3987"
+        },
+        {
+          "@id": "https://orcid.org/0000-0003-2308-3649"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1126/science.aay3446"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "#experiment-biosample-2"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-2-0"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000251"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/13457423/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        },
+        {
+          "@id": "#file-count"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-0419-3351",
+      "@type": "Person",
+      "name": "Edward Boyden",
+      "givenName": "Edward",
+      "familyName": "Boyden",
+      "email": "edboyden@mit.edu",
+      "address": "77 Massachusetts Ave., Room 46-2171C, Cambridge, MA 02139"
+    },
+    {
+      "@id": "https://orcid.org/0000-0001-9958-3987",
+      "@type": "Person",
+      "name": "Jason Buenrostro",
+      "givenName": "Jason",
+      "familyName": "Buenrostro",
+      "email": "jason_buenrostro@harvard.edu",
+      "address": "7 Divinity Ave. Cambridge MA 02138"
+    },
+    {
+      "@id": "https://orcid.org/0000-0003-2308-3649",
+      "@type": "Person",
+      "name": "Fei Chen",
+      "givenName": "Fei",
+      "familyName": "Chen",
+      "email": "chenf@broadinstitute.org",
+      "address": "415 Main St. Cambridge MA 02142"
+    },
+    {
+      "@id": "https://doi.org/10.1126/science.aay3446",
+      "@type": "ScholarlyArticle",
+      "name": "In situ genome sequencing resolves DNA sequence and structure in intact biological samples"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "In situ genome sequencing of human PGP1 fibroblasts."
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000251",
+      "@type": "DefinedTerm",
+      "name": "confocal microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000251"
+        }
+      ],
+      "description": "In situ genome sequencing of human PGP1 fibroblasts."
+    },
+    {
+      "@id": "#experiment-biosample-2",
+      "@type": "BioSample",
+      "name": "tissue",
+      "description": "In situ genome sequencing of early mouse embryos"
+    },
+    {
+      "@id": "#experiment-protocol-2-0",
+      "@type": "LabProtocol",
+      "name": "confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000251"
+        }
+      ],
+      "description": "In situ genome sequencing of early mouse embryos"
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 12094627905536,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "0.5 + 10.5 = 11.00 TB"
+    },
+    {
+      "@id": "#file-count",
+      "@type": "QuantitativeValue",
+      "value": 221,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000189",
+      "unitText": "file count",
+      "description": "50 + 171 = 221 5D images"
+    }
+  ]
+}

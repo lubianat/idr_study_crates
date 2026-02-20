@@ -1,0 +1,256 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0017-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0017/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0017/",
+      "@type": "Dataset",
+      "name": "A chemical-genetic interaction map of small molecules using high-throughput imaging in cancer cells",
+      "description": "Small molecules often affect multiple targets, elicit off-target effects and induce genotype-specific responses. Chemical genetics, the mapping of the genotype-dependence of a small molecule's effects across a broad spectrum of phenotypes can identify novel mechanisms of action. It can also reveal unanticipated effects and could thereby reduce high attrition rates of small molecule development pipelines. Here, we used high-content screening and image analysis to measure effects of 1280 pharmacologically active compounds on complex phenotypes in isogenic cancer cell lines which harbor activating or inactivating mutations in key oncogenic signaling pathways. Using multiparametric chemical-genetic interaction analysis, we observed phenotypic gene-drug interactions for more than 193 compounds, with many affecting phenotypes other than cell growth. We created a resource termed the Pharmacogenetic Phenome Compendium (PGPC), which enables exploration of drug mode-of-action, detection of potential off-target effects and the generation of hypotheses on drug combinations and synergism. For example, we demonstrate that MEK inhibitors amplify the viability effect of the clinically used anti-alcoholism drug disulfiram and show that the EGFR inhibitor tyrphostin AG555 has off-target activity on the proteasome. Taken together, this study demonstrates how combining multiparametric phenotyping in different genetic backgrounds can be used to predict additional mechanisms of action and to reposition clinically used drugs.",
+      "datePublished": "2016-04-27",
+      "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "copyrightNotice": "Breinig et al, CC-BY-NC-ND-4.0, 2016",
+      "identifier": "idr0017",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "#person-1"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.15252/msb.20156400"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#screen-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#screen-protocol-1-0"
+        },
+        {
+          "@id": "#screen-protocol-1-1"
+        },
+        {
+          "@id": "#screen-protocol-1-2"
+        },
+        {
+          "@id": "#screen-protocol-1-3"
+        },
+        {
+          "@id": "#screen-protocol-1-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/1713612/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        },
+        {
+          "@id": "#file-count"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "#person-1",
+      "@type": "Person",
+      "name": "Michael Boutros",
+      "givenName": "Michael",
+      "familyName": "Boutros",
+      "email": "m.boutros@dkfz.de",
+      "address": "German Cancer Research Center (DKFZ), INF 580, 69120 Heidelberg, Germany"
+    },
+    {
+      "@id": "https://doi.org/10.15252/msb.20156400",
+      "@type": "ScholarlyArticle",
+      "name": "A chemical-genetic interaction map of small molecules using high-throughput imaging in cancer cells."
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#screen-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "We used high-content screening and image analysis to measure effects of 1280 pharmacologically active compounds on complex phenotypes in isogenic cancer cell lines which harbor activating or inactivating mutations in key oncogenic signaling pathways. Using multiparametric chemical-genetic interaction analysis, we measured 300,000 drug-gene-phenotype interactions and observed phenotypic gene-drug interactions for more than 193 compounds, with many affecting phenotypes other than cell growth.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000246",
+      "@type": "DefinedTerm",
+      "name": "fluorescence microscopy"
+    },
+    {
+      "@id": "#screen-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "description": "We used high-content screening and image analysis to measure effects of 1280 pharmacologically active compounds on complex phenotypes in isogenic cancer cell lines which harbor activating or inactivating mutations in key oncogenic signaling pathways. Using multiparametric chemical-genetic interaction analysis, we measured 300,000 drug-gene-phenotype interactions and observed phenotypic gene-drug interactions for more than 193 compounds, with many affecting phenotypes other than cell growth."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Cell lines and cell culture. Parental HCT116 cells (HCT116, P1) were obtained from ATCC. The second parental HCT116 cell line (HCT116, P2) and all isogenic HCT116 cell lines were obtained from Horizon Discovery Ltd. The isogenic cell lines comprised following genotypes: Parental HCT116 cell lines (P1 and P2, HCT116 CTNNB1 wt +/ mt + ; KRAS wt +/ mt +; PI3KCA wt +/ mt + ); CTNNB1 wt where the oncogenic mutation of CTNNB1 (beta-catenin) was deleted leaving only the respective wild-type allele (HCT116 CTNNB1 wt +/ mt -); KRAS wt where the oncogenic mutation of KRAS was deleted leaving only the respective wild-type allele (HCT116 KRAS wt +/ mt -); PI3KCA wt where the oncogenic mutation of PI3KCA was deleted leaving only the respective wild-type allele (HCT116 PI3KCA wt +/ mt -); PTEN KO (HCT116 PTEN -/-); AKT1 KO (HCT116 AKT1 -/-); AKT1 KO and AKT2 KO (AKT1/2 KO, HCT116 AKT1 -/-; AKT2 -/- ); MAP2K1 KO (MEK1 KO, HCT116 MAP2K1 -/-), MAP2K2 KO (MEK2 KO, HCT116 MAP2K2 -/-), TP53 KO (P53 KO, HCT116 TP53 -/-); BAX KO (HCT116 BAX -/-).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "Compound treatment. Prior to screening, we prepared serial dilutions of the LOPAC compound library (Sigma) in RPMI medium (Life Technologies) to provide a final stock concentration of 50 uM. Taxol/paclitaxel, vinblastine and U0126, as well as DMSO (all from Sigma) were included as additional spike-in controls present on all plates. A list of all compounds included in this library is provided with the R/Bioconductor package PGPC (also see publication Table EV1 and the library file 'Changed_LOPAC3_384_convert96er_GeneID_updated_Selectivity'). We seeded 1,250 cells in 45 _l McCoy's medium into each well of 384-well clear-bottom microscopy plates (BD Biosciences) and incubated for 1 day at 37 C. 5 ul of compound solution was added using a Beckman Biomek FX robot with 384-well tip head to yield a final concentration of 5 uM and 0.1% DMSO. Cells were cultured for 2 days at 37 C before analysis. For screening, a single drug concentration of 5 uM was used",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007572",
+      "@type": "DefinedTerm",
+      "name": "HCS image acquistion and feature extraction protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "HCS image acquistion and feature extraction protocol",
+      "description": "Cell staining and imaging. Cell staining was performed using a Biomek FX robot with a 384-well tip head. Cells were fixed and permeabilized with 5% paraformaldehyde (Sigma) and 0.2% Triton X-100 (Sigma) for approx. 60 min at room temperature. Nuclei and actin were stained with 2 _g/ml Hoechst 33342 (Invitrogen) and 75 ng/ml phalloidin labelled with tetramethylrhodamine isothiocyanate (Sigma) for approx. 60 min at room temperature. Cells were washed four times with PBS (Invitrogen), and 0.05% sodium azide (Sigma) was added for storage. Plates were sealed with aluminum seals (Corning) and stored until imaged at 4 C while protected from light. Fluorescence images were acquired with an InCell Analyzer 2000 (GE Healthcare) at 10X magnification. Each well was fully covered by four images in each of the two color channels, resulting in approx. 295 000 images.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007573",
+      "@type": "DefinedTerm",
+      "name": "HCS data analysis protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "Images were obtained as 16-bit TIFF images with a size of 2,048 pixels x 2,048 pixels. We adapted intensity correction, image segmentation and feature extraction methods from previous studies, based on the R package EBImage (Pau et al., 2010). To remove biases due to lower illumination intensity at the image border, 150 pixels were cropped on each side. Nuclei were segmented by adaptive thresholding of the Hoechst channel images with a window size of 10 by 10 pixels. The number of segmented nuclei was used as a proxy for cell count. Using the segmented nuclei as seeds, a cell segmentation mask was generated by extending the nuclei segmentation into a threshold mask of the actin channel using a Voronoi-based propagation algorithm. Parameter and method settings are documented in the PGPC vignette. Briefly, the detected nuclei were used as seeds and expanded into masks of the cytoplasm for each cell. Morphological and texture features were extracted from the images using the segmentation masks. In total, we extracted, for each well, 385 quantitative phenotypic features (see publication Table EV3) The data were transformed using a generalized logarithm transformation (Huber et al., 2002)., 2013) and robust L1 regression to estimate the effects of the cell line and compound treatment using the medpolish function of the statistics package R (http://www.r-project.org). In this iterative approach row and column medians are subtracted alternately until the change in S, the sum of absolute residuals, divided by S, falls below the defined threshold of 0.0001. The final row and column values describe the compound and cell line effect, respectively. The residuals, either having a positive or a negative value, represent the interaction coefficients. This process was performed for each replicate and each feature individually. To account for the different proliferation rates of isogenic cell lines, the cell number values on the generalized logarithmic scale were normalized using the range defined by the median of the negative control values (1) and values of the compound taxol (0) for each cell line. Values below 0 and above 1 are possible. To detect significant interactions, the values of replicates were used to perform a moderated t-test against the null hypothesis u = 0 using the implementation of the lmFit and eBayes functions of the limma R package (Smyth, 2004) on the interaction matrix of each feature. p-values were adjusted for multiple testing by controlling for the false discovery rate (FDR) using the method of Benjamini & Hochberg (Benjamini, Y. & Hochberg, Y.) as previously described for the quantification of gene-gene interactions (Laufer et al., 2013). Significant interactions were selected by using a cutoff of 0.01 (FDR) on the adjusted p-values.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 2726788836884,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "2.48 TB"
+    },
+    {
+      "@id": "#file-count",
+      "@type": "QuantitativeValue",
+      "value": 147,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000189",
+      "unitText": "file count",
+      "description": "147 5D images"
+    }
+  ]
+}

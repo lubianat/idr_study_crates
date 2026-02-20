@@ -1,0 +1,225 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0159-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0159/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0159/",
+      "@type": "Dataset",
+      "name": "Non-invasive long-term fluorescence live imaging of Tribolium",
+      "description": "Insect development has contributed significantly to our understanding",
+      "datePublished": "2025-02-18",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Strobl et al, CC-BY-4.0, 2025",
+      "identifier": "idr0159",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-5350-0194"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1242/dev.108795"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_7070"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "#experiment-protocol-1-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000369"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/15160007/"
+      ],
+      "size": [
+        {
+          "@id": "#file-count"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-5350-0194",
+      "@type": "Person",
+      "name": "Frederic Strobl",
+      "givenName": "Frederic",
+      "familyName": "Strobl",
+      "email": "frederic.strobl@physikalischebiologie.de",
+      "address": "Goethe University, Buchmann Institute for Molecular Life Sciences, Max-von-Laue-Straße 15, 60438 Frankfurt am Main"
+    },
+    {
+      "@id": "https://doi.org/10.1242/dev.108795",
+      "@type": "ScholarlyArticle",
+      "name": "Non-invasive long-term fluorescence live imaging of Tribolium castaneum embryos"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_7070",
+      "@type": "Taxon",
+      "scientificName": "Tribolium castaneum"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "tissue",
+      "description": "Fluorescence live imaging of a Tribolium castaneum embryo.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_7070"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000369",
+      "@type": "DefinedTerm",
+      "name": "light sheet fluorescence microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "light sheet fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000369"
+        }
+      ],
+      "description": "Fluorescence live imaging of a Tribolium castaneum embryo."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "We used an advanced variant of LSFM termed monolithic digital scanned laser light sheet-based fluorescence microscopy (mDSLM), which is based on DSLM (Keller and Stelzer, 2010). Parameters are provided in supplementary material Table S1. Imaging started immediately after the embryo was inserted into the sample chamber.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "Image processing was performed with Mathematica (Wolfram). Single planes (SP) were used to calculate the maximum projections. With those projections, two processing steps were performed. (1) Background correction (BC). A brightness threshold was applied that distinguishes the specimen from the background. The background was used to calculate the mean image background and then set to zero. Then, the mean image background was subtracted from the whole image. This led to an overall intensity decrease. (2) Mean transform (MT). For the desired series of images, the brightest and the dimmest images were selected and the mean intensity was calculated. For the desired series, the image closest to that intensity was determined and designated the reference image. All images were normalized to match the intensity of the reference image. This included both increase and decrease of intensities (supplementary material Fig. S3). Images that underwent this procedure are marked as maximum projections with image processing (MP). If necessary, images underwent equal brightness adjustment. Further details of image processing can be provided upon request. Images were cropped to 600×1000 pixels (XD×YD, supplementary material Table S1), maintaining the original line and pixel pitches used during the imaging recording process. Cell tracking in Fig. 3B was performed manually. Amira (FEI Visualization Science Group, Düsseldorf, Germany) was used for volume rendering (AV) in Fig. 2D and supplementary material Movie 3. Meta information about the three long-term imaging datasets is provided in supplementary material Table S1 (the original datasets, associated figures and movies in full quality are available at www.physikalischebiologie.de/bugcube).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    },
+    {
+      "@id": "#file-count",
+      "@type": "QuantitativeValue",
+      "value": 12,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000189",
+      "unitText": "file count",
+      "description": "12 5D images"
+    }
+  ]
+}

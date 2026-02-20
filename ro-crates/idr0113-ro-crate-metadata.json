@@ -1,0 +1,218 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0113-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0113/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0113/",
+      "@type": "Dataset",
+      "name": "Live imaging of remyelination in the adult mouse corpus callosum",
+      "description": "Oligodendrocyte precursor cells (OPCs) retain the capacity to remyelinate axons in the corpus callosum (CC) upon demyelination. However, the dynamics of OPC activation, mode of cell division, migration, and differentiation on a single cell level remain poorly understood due to the lack of longitudinal observations of individual cells within the injured brain. After inducing focal demyelination with lysophosphatidylcholin (LPC) in the CC of adult mice, we used 2-photon microscopy to follow for up to 2 months OPCs and their differentiating progeny, genetically labeled through conditional recombination driven by the regulatory elements of the gene Achaete-scute homolog 1 (Ascl1). OPCs underwent several rounds of symmetric and asymmetric cell divisions, producing a subset of daughter cells that differentiates into myelinating oligodendrocytes. While OPCs continue to proliferate, differentiation into myelinating oligodendrocytes declines with time and death of OPC-derived daughter cells increases. Thus, chronic in vivo imaging delineates the cellular principles leading to remyelination in the adult brain, providing a framework for the development of novel strategies to enhance endogenous brain repair in acute and chronic demyelinating disease.",
+      "datePublished": "2021-08-03",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Bottes et al, CC-BY-4.0, 2021",
+      "identifier": "idr0113",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-0056-8275"
+        },
+        {
+          "@id": "https://orcid.org/0000-0003-1801-9247"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1073/pnas.2025795118"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000254"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/13425213/"
+      ],
+      "size": [
+        {
+          "@id": "#file-count"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-0056-8275",
+      "@type": "Person",
+      "name": "Sebastian Jessberger",
+      "givenName": "Sebastian",
+      "familyName": "Jessberger",
+      "email": "jessberger@hifo.uzh.ch",
+      "address": "Brain Research Institute, University of Zurich, Winterthurerstrasse 190, CH-8057 ZŸrich"
+    },
+    {
+      "@id": "https://orcid.org/0000-0003-1801-9247",
+      "@type": "Person",
+      "name": "Sara Bottes",
+      "givenName": "Sara",
+      "familyName": "Bottes",
+      "email": "bottes@hifo.uzh.ch",
+      "address": "Brain Research Institute, University of Zurich, Winterthurerstrasse 190, CH-8057 ZŸrich"
+    },
+    {
+      "@id": "https://doi.org/10.1073/pnas.2025795118",
+      "@type": "ScholarlyArticle",
+      "name": "Live imaging of remyelination in the adult mouse corpus callosum"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090",
+      "@type": "Taxon",
+      "scientificName": "Mus musculus"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "tissue",
+      "description": "We genetically targeted OPCs using mice expressing a tamoxifen (Tam)-inducible Cre recombinase under the control of the endogenous Achaete-scute homolog 1 (Ascl1) promoter crossed with a tdTomato reporter mouse line (Ascl1-tdTomato mice). To induce focal demyelination in the CC, mice were injected with LPC in the posterior CC. Mice were implanted with a transcortical window allowing for optical access using 2-photon microscopy. Tamoxifen (TAM) was injected 2 and 3 days after LPC injection to induce sparse labeling of Ascl1-targeted OPCs. Labeled OPC clones were imaged every day up to two months.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000254",
+      "@type": "DefinedTerm",
+      "name": "two-photon laser scanning microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "two-photon laser scanning microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000254"
+        }
+      ],
+      "description": "We genetically targeted OPCs using mice expressing a tamoxifen (Tam)-inducible Cre recombinase under the control of the endogenous Achaete-scute homolog 1 (Ascl1) promoter crossed with a tdTomato reporter mouse line (Ascl1-tdTomato mice). To induce focal demyelination in the CC, mice were injected with LPC in the posterior CC. Mice were implanted with a transcortical window allowing for optical access using 2-photon microscopy. Tamoxifen (TAM) was injected 2 and 3 days after LPC injection to induce sparse labeling of Ascl1-targeted OPCs. Labeled OPC clones were imaged every day up to two months."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "demyelination procedure and chronic transcortical window implantation"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "Demyelination procedure and chronic transcortical window implantation",
+      "description": "The surgical intervention for demyelinating an area of the CC and placing the transcortical window was carried out in Ascl1CreERT2/tdTom mice aged ok 9- 12 weeks. A stereotaxic injection of 2 _l of a solution of 1% lysolecithin (LPc) in 0.9% NaCl was performed in deeply anaesthetized mice. LPC was injected unilaterally into the CC at -1.3 mm dorso/ventral from brain surface and -2.5 12 mm anterior/posterior, -0.9mm lateral from Bregma. After 30 minutes, the implantation of the window was started. above the demyelinated CC (-2.5 anterior/posterior / Ð1.5 mediolateral mm from Bregma) the cranial bone is locally removed (circle 3mm ¯). A cylinder (3mm ¯) of cortical tissue that has been punched out using biopsy punches until a defined depth (1.5mm deep from skull, level of the corpus callosum) was aspirated using a blunt needle (22g) connected to an air pump until white matter tracks were visible. The area was cleaned and the window (3mm ¯ stainless steel cannula, 1.5mm height, covered by a 3mm ¯ glass coverslip) was inserted, secured in place using the stereotactic arm and stably fixed to the cranial bone with UV curable dental cement.\"",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "image acquistion and feature extraction protocol",
+      "description": "\"Two and three days after surgery, sparse labeling of OPCs was achieved by i.p. injection of Tamoxifen (Tam; 180mg/kg bodyweight). Imaging fields of view containing identified OPCs were selected to obtain 10-20 SPOTs per mouse. Chronic 2-photon imaging was performed starting 3 days after surgery. All SPOTs were checked on a daily basis and no z-stack was acquired if no changes occurred. The imaging was performed on custom-built 2-photon microscope (Sutter Instrument Movable Objective Microscope type) using a long-working distance objective (water immersion, 16x magnification, 0.8NA, Nikon) and equipped with a ytterbium-doped laser system at 1045nm and 200fs (Femtotrain, High-Q lasers) or a fiber oscillator 45 laser at 1070nm (Fidelity-2, Coherent) to excite tdTomato labeled cells in the CC. Emission light was detected using a photomultiplier tube (Hamamatsu) after passing a red emission filter (610/75 nm; AHF)."
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "Every cell of each lineage was annotated with a code. The coding parameters were: Cell ID, Cell Type, Uncertainty Cell Type, Time point, Mother ID, Uncertainty Mother Cell, Sister ID, Uncertainty Sister Cell and Cell Death. For details see document \"\"ROIs code explanation\"\"."
+    },
+    {
+      "@id": "#file-count",
+      "@type": "QuantitativeValue",
+      "value": 110,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000189",
+      "unitText": "file count",
+      "description": "110 5D images"
+    }
+  ]
+}

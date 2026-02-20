@@ -1,0 +1,275 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0003-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0003/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0003/",
+      "@type": "Dataset",
+      "name": "A novel single-cell screening platform reveals proteome plasticity during yeast stress responses.",
+      "description": "Uncovering the mechanisms underlying robust responses of cells to stress is crucial for our understanding of cellular physiology. Indeed, vast amounts of data have been collected on transcriptional responses in Saccharomyces cerevisiae. However, only a handful of pioneering studies describe the dynamics of proteins in response to external stimuli, despite the fact that regulation of protein levels and localization is an essential part of such responses. Here we characterized unprecedented proteome plasticity by systematically tracking the localization and abundance of 5,330 yeast proteins at single-cell resolution under three different stress conditions (DTT, H2O2, and nitrogen starvation) using the GFP-tagged yeast library. We uncovered a unique 'fingerprint' of changes for each stress and elucidated a new response arsenal for adapting to radical environments. These include bet-hedging strategies, organelle rearrangement, and redistribution of protein localizations. All data are available for download through our online database, LOQATE (localization and quantitation atlas of yeast proteome).",
+      "datePublished": "2016-04-27",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "copyrightNotice": "Breker et al, CC-BY-NC-SA-3.0, 2016",
+      "identifier": "idr0003",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "#person-1"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1083/jcb.201301120"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#screen-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_4932"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#screen-protocol-1-0"
+        },
+        {
+          "@id": "#screen-protocol-1-1"
+        },
+        {
+          "@id": "#screen-protocol-1-2"
+        },
+        {
+          "@id": "#screen-protocol-1-3"
+        },
+        {
+          "@id": "#screen-protocol-1-4"
+        },
+        {
+          "@id": "#screen-protocol-1-5"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/14269/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        },
+        {
+          "@id": "#file-count"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "#person-1",
+      "@type": "Person",
+      "name": "Michal Breker",
+      "givenName": "Michal",
+      "familyName": "Breker",
+      "email": "michalbreker@gmail.com",
+      "address": "Department of Molecular Genetics, Weizmann Institute of Science, Rehovot 7610001, Israel."
+    },
+    {
+      "@id": "https://doi.org/10.1083/jcb.201301120",
+      "@type": "ScholarlyArticle",
+      "name": "A novel single-cell screening platform reveals proteome plasticity during yeast stress responses."
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_4932",
+      "@type": "Taxon",
+      "scientificName": "Saccharomyces cerevisiae"
+    },
+    {
+      "@id": "#screen-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Screen to characterize yeast stress responses at the protein level, focusing on two key properties: protein localization and abundance, at a single-cell resolution. It measures the levels of 5,330 yeast proteins and manually assign their localization using strains from a GFP fusion library.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_4932"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000246",
+      "@type": "DefinedTerm",
+      "name": "fluorescence microscopy"
+    },
+    {
+      "@id": "#screen-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "description": "Screen to characterize yeast stress responses at the protein level, focusing on two key properties: protein localization and abundance, at a single-cell resolution. It measures the levels of 5,330 yeast proteins and manually assign their localization using strains from a GFP fusion library."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "The manipulated 5,330 strains were grown in 50 _l SD (0.67% yeast nitrogen base without amino acids [Conda Pronadisa] and 2% dextrose) containing the appropriate supplements for selection in 384-well plates (catalogue No. 781162; Greiner Bio-One).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "For hydrogen peroxide (H2O2) treatment, cells were grown to early-log phase, at which point H2O2 (catalogue No. 2186-01; J.T.Baker) was added at a final concentration of 1 mM. After 60 min of incubation, plates were taken for microscopic imaging.  For nitrogen starvation, cells were grown to early log phase and centrifuged mildly (1,000 g), then fresh SD (0.67% yeast nitrogen base without amino acids and without ammonium sulfate [Conda Pronadisa] and 2% dextrose) was added. After 15 h of incubation, plates were taken to microscopy imaging. For DTT treatment, cells grown overnight were back diluted into 2 mM DTT containing SD medium. After 3 h of incubation, plates were taken for microscopic imaging.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007571",
+      "@type": "DefinedTerm",
+      "name": "HCS library protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "Synthetic genetic array (SGA) technique was performed between a MAT_ haploid strain harboring TEF2pr- mCherry::URA3 integrated into the URA3 locus (plasmid for creation of the strain was a kind gift from D. Breslow, Stanford University, Stanford, CA; Breslow et al., 2008) against the GFP collection (::HIS3; the library was a kind gift from J. Weissman, University of California, San Francisco, San Francisco, CA; Huh et al., 2003). Mating was performed on rich media plates, and selection for diploid cells was performed on plates lacking both HIS and URA. Sporulation was then induced by transferring cells to nitrogen starvation plates for 5 d. Haploid cells containing all desired mu- tations were selected for by transferring cells to plates containing all selec- tion markers alongside the toxic amino acid derivatives Canavanine and Thialysine (Sigma-Aldrich) to select against remaining diploids and lacking Leucine to select for only spores with an 'a' mating type (Tong et al., 2001; Cohen and Schuldiner, 2011). SGA procedure was validated by inspect- ing representative strains for the presence of the GFP-tagged strains and for the cytosolic mCherry expression. To manipulate the collection in high-density format (384), we used a RoToR bench top colony arrayer (Singer Instru- ments).  Plasmids and deletions. Deletion strains were prepared by replace- ment of the ORFs with a pCgMET15 cassette using homologous recom- bination with 40 bp of homology (Kitada et al., 1995). pRS416 plasmid expressing MTS-dsRed under the ADH1 promoter was provided by J. Nunnari (University of California, Davis, Davis, CA; Meeusen and Nunnari, 2003). pRS426 plasmid expressing NLS-tdTomato under the GPD1 promoter was provided by D. Kaganovich (Hebrew University, Jerusalem, Israel; Kaganovich et al., 2008).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007572",
+      "@type": "DefinedTerm",
+      "name": "HCS image acquistion and feature extraction protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "HCS image acquistion and feature extraction protocol",
+      "description": "High-throughput fluorescence microscopy. Microscopic screening was per- formed using an automated microscopy setup as described previously (Cohen and Schuldiner, 2011). Cells were moved from agar plates into liquid 384-well polystyrene growth plates using the RoToR arrayer. Liquid cultures were grown overnight in SD medium in a shaking incubator (LiCONiC Instruments) at 30C. A JANUS liquid handler (PerkinElmer), which is connected to the incubator, was used to back-dilute the strains to _0.25 OD into plates containing the same medium. Plates were then transferred back to the incubator and were allowed to grow for 3.5 h at 30C to reach logarithmic growth phase, as was validated in prelimi- nary calibration. The liquid handler was then used to transfer strains into glass-bottom 384-well microscope plates (Matrical Bioscience) coated with Concanavalin A (Sigma-Aldrich) to allow cell adhesion. Wells were washed twice in medium to remove floating cells and reach cell mono- layer. Plates were then transferred into an automated inverted fluorescent microscopic ScanR system (Olympus) using a swap robotic arm (Hamil- ton). Imaging of plates was performed in 384-well format using a 60_ air lens (NA 0.9) in SD medium at 24C with a cooled charge-coupled device camera (ORCA-ER; Hamamatsu). Images were acquired at GFP (excitation at 490/20 nm, emission at 535/50 nm) and mCherry (excita- tion at 572/35 nm, emission at 632/60 nm) channels.  Image analysis. Our screening assay was designed to explore yeast cell biology by assessing two cellular key features of interest: subcellu- lar localization and fluorescence intensity. To analyze these images we have used an in-house script to browse manually and assign localization rapidly and efficiently. To extract proteomic abundance from images, we used the Olympus ScanR analysis software. This allows for the preprocess- ing of images by background subtraction, and segmentation of images to identify individual cells as separate objects. Specifically, we performed the following steps: (a) Segmentation on the basis of the edge module of the cytosolic mCherry protein expression. (b) Background correction using the rolling ball algorithm. (c) Definition of measured populations. Because several measure- ments are collected for each cell (e.g., fluorescence intensity, area, shape), we have created a multiparameter gate to ensure that our population was homogenous and that data arise from clearly defined cells only. The mean GFP intensity for each object (cell) of each strain was extracted to Excel files (Microsoft), allowing data processing for single-cell resolution from within a given population.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007573",
+      "@type": "DefinedTerm",
+      "name": "HCS data analysis protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-5",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "Median measurement. The median GFP intensity for each strain was mea- sured from the remaining objects for each strain under each condition after removing dead cells. Because we performed two independent measurements under reference conditions (SD), we combined scores from both measurements to get one median and standard deviation value for each strain under reference conditions (summarized in Table S1).For each condition, we determined which strains are significantly up- or down-regulated compared with their reference abundance levels.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 219902325555,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "0.2 TB"
+    },
+    {
+      "@id": "#file-count",
+      "@type": "QuantitativeValue",
+      "value": 97920,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000189",
+      "unitText": "file count",
+      "description": "97920 5D images"
+    }
+  ]
+}

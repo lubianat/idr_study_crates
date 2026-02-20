@@ -1,0 +1,289 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0079-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0079/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0079/",
+      "@type": "Dataset",
+      "name": "An Image-Based Data-Driven Analysis of Cellular Architecture in a Developing Tissue",
+      "description": "A data-driven analysis of cell morphology and intracellular organization in the developing zebrafish posterior lateral line primordium, a model tissue for the study of self-organized morphogenesis. 3D image stacks were acquired using AiryScan FAST-mode confocal fluorescence microscopy. Automated single-cell segmentation and point cloud-based morphometry were developed to extract numerical features representing cell morphology and intracellular protein distributions. Machine learning was used with the extracted numerical features to perform data integration across experiments and context-guided data visualization. The resulting data was analyzed to discover biologically meaningful patterns at the cell and tissue scale.",
+      "datePublished": "2020-06-30",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Hartmann et al, CC-BY-4.0, 2020",
+      "identifier": "idr0079",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-5600-8285"
+        },
+        {
+          "@id": "#person-2"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.7554/eLife.55913"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "#experiment-biosample-2"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_7955"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-2-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "#experiment-protocol-2-1"
+        },
+        {
+          "@id": "#experiment-protocol-2-2"
+        },
+        {
+          "@id": "#experiment-protocol-2-3"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000393"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/9837354/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        },
+        {
+          "@id": "#file-count"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-5600-8285",
+      "@type": "Person",
+      "name": "Jonas Hartmann",
+      "givenName": "Jonas",
+      "familyName": "Hartmann",
+      "email": "jonas.m.hartmann@protonmail.com",
+      "address": "Developmental Biology Unit, European Molecular Biology Laboratory (EMBL), Heidelberg, Germany"
+    },
+    {
+      "@id": "#person-2",
+      "@type": "Person",
+      "name": "Darren Gilmour",
+      "givenName": "Darren",
+      "familyName": "Gilmour",
+      "email": "darren.gilmour@imls.uzh.ch",
+      "address": "Institute of Molecular Life Sciences, University of Zurich (UZH), Zurich, Switzerland"
+    },
+    {
+      "@id": "https://doi.org/10.7554/eLife.55913",
+      "@type": "ScholarlyArticle",
+      "name": "An Image-Based Data-Driven Analysis of Cellular Architecture in a Developing Tissue"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_7955",
+      "@type": "Taxon",
+      "scientificName": "Danio rerio"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "tissue",
+      "description": "3D confocal live imaging of the zebrafish posterior lateral line primordium labeled with the membrane marker cldnB:lyn-EGFP for segmentation and optionally with one of several additional labels.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_7955"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000393",
+      "@type": "DefinedTerm",
+      "name": "array-scan confocal microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "array-scan confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000393"
+        }
+      ],
+      "description": "3D confocal live imaging of the zebrafish posterior lateral line primordium labeled with the membrane marker cldnB:lyn-EGFP for segmentation and optionally with one of several additional labels."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Zebrafish embryos were grown in E3 buffer at 27-30C according to standard procedures (see zfin.org/zf_info/zfbook/zfbk.html). Where applicable, mRNA for reporter gene expression was injected at the 1-cell stage. Pigmentation was prevented by treating embryos with 0.002% N-phenylthiourea (PTU) starting at 25hpf.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "Embryos expressed the transgenic membrane label cldnb:lyn-EGFPR (see doi.org/10.1016/j.devcel.2006.02.019) and in most cases one of several additional red fluorescence markers (see Experiment Assay File). Where applicable, lysosomes were stained by treating embryos with 1?M LysoTracker Deep Red in E3 medium with 1% DMSO for 90 minutes prior to mounting. For imaging, embryos were dechorionated manually, anaesthetized with 0.01% Tricaine and mounted in 1% peqGOLD Low Melt Agarose in E3 containing 0.01% Tricaine in a MatTek Glass Bottom Microwell Dish (35mm Petri dish, 10mm microwell, 0.16-0.19mm coverglass). Imaging was performed on the Zeiss LSM880 AiryScan confocal microscope in FAST mode with a 40X 1.2NA water objective with Immersol W immersion fluid. Deconvolution was performed using the ZEN Black Software's 3D AiryScan deconvolution with 'auto' settings. Where appropriate, linear unmixing of channel bleed-through was performed as described in the Study Publication. Automated single-cell segmentation was performed using a custom python pipeline based on thresholding and watershed expansion, described in detail in the Study Publication."
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "Numerical features describing cell morphology and subcellular protein distributions were computed for each segmented cell using a point cloud-based morphometry approach. Protein distribution features were then cross-predicted between datasets using machine learning based on cell shape features as input. RNA spot counts from pea3 single molecule Fluorescence In-Situ Hybridization (see experiment B) were similarly predicted for each cell in all other samples. To provide biological context for analysis and visualization, specific biologically relevant cellular archetypes were manually annotated in some samples and then again cross-predicted for all cells based on cell shape features. Custom pipelines and algorithms for these analyses were implemented in python and are described in detail in the Study Publication."
+    },
+    {
+      "@id": "#experiment-biosample-2",
+      "@type": "BioSample",
+      "name": "tissue",
+      "description": "3D confocal imaging of fixed samples of the zebrafish posterior lateral line primordium labeled with the membrane marker cldnB:lyn-EGFP and stained for pea3 mRNA using single molecule Fluorescence In-Situ Hybridization (smFISH).",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_7955"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-2-0",
+      "@type": "LabProtocol",
+      "name": "array-scan confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000393"
+        }
+      ],
+      "description": "3D confocal imaging of fixed samples of the zebrafish posterior lateral line primordium labeled with the membrane marker cldnB:lyn-EGFP and stained for pea3 mRNA using single molecule Fluorescence In-Situ Hybridization (smFISH)."
+    },
+    {
+      "@id": "#experiment-protocol-2-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Zebrafish embryos were grown in E3 buffer at 27-30C according to standard procedures (see zfin.org/zf_info/zfbook/zfbk.html). Pigmentation was prevented by treating embryos with 0.002% N-phenylthiourea (PTU) starting at 25hpf.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-2-2",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "Embryos expressed the transgenic membrane label cldnb:lyn-EGFPR (see doi.org/10.1016/j.devcel.2006.02.019) and were stained for pea3 mRNA with smFISH. For smFISH staining, embryos were fixed in 4% PFA in PBS-T, permeabilized in 100% methanol overnight, rehydrated with a methanol series and finally hybridized with pea3 probe solution overnight. See the Study Publication for further details, including washing steps, buffer compositions and probe sequences. For imaging, embryos were mounted on glass slides using VECTASHIELD HardSet Antifade Mounting Medium. Imaging was performed on the Zeiss LSM880 AiryScan confocal microscope in FAST mode with a 63x 1.4NA oil immersion objective. 8x averaging was used specifically for the smFISH channel. Deconvolution was performed using the ZEN Black Software's 3D AiryScan deconvolution with 'auto' settings. Automated single-cell segmentation was performed using a custom python pipeline based on thresholding and watershed expansion, described in detail in the Study Publication."
+    },
+    {
+      "@id": "#experiment-protocol-2-3",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "Numerical features describing cell morphology were computed for each segmented cell using a point cloud-based morphometry approach. smFISH spots were identified using the `blob_log` spot detector from the scikit-image library for python. Protein distribution features were cross-predicted from other datasets (see experiment A) using machine learning based on cell shape features as input. Custom pipelines and algorithms for these analyses were implemented in python and are described in detail in the Study Publication."
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 142496706959,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "0.113 + 0.0166 = 0.13 TB"
+    },
+    {
+      "@id": "#file-count",
+      "@type": "QuantitativeValue",
+      "value": 196,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000189",
+      "unitText": "file count",
+      "description": "165 + 31 = 196 5D images"
+    }
+  ]
+}

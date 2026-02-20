@@ -1,0 +1,239 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0044-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0044/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0044/",
+      "@type": "Dataset",
+      "name": "In Toto Imaging and Reconstruction of Post-Implantation Mouse Development at the Single-Cell Level",
+      "description": "The mouse embryo has long been central to the study of mammalian development; however, elucidating the cell behaviors governing gastrulation and the formation of tissues and organs remains a fundamental challenge. A major obstacle is the lack of live imaging and image analysis technologies capable of systematically following cellular dynamics across the developing embryo. We developed a light-sheet microscope that adapts itself to the dramatic changes in size, shape and optical properties of the post-implantation mouse embryo and captures its development from gastrulation to early organogenesis at the cellular level. We furthermore developed a computational framework for reconstructing long-term cell tracks, cell divisions, dynamic fate maps and maps of tissue morphogenesis across the entire embryo. By jointly analyzing cellular dynamics in multiple embryos registered in space and time, we built a dynamic atlas of post-implantation mouse development that, together with our microscopy and computational methods, is provided as a resource.",
+      "datePublished": "2018-11-29",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "McDole et al., CC-BY-4.0, 2018",
+      "identifier": "idr0044",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "#person-1"
+        },
+        {
+          "@id": "#person-2"
+        },
+        {
+          "@id": "#person-3"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1016/j.cell.2018.09.031"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "#experiment-protocol-1-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000369"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/4007802/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "#person-1",
+      "@type": "Person",
+      "name": "Philipp Keller",
+      "givenName": "Philipp",
+      "familyName": "Keller",
+      "email": "kellerp@janelia.hhmi.org",
+      "address": "19700 Helix Dr. Ashburn Va 20147 USA"
+    },
+    {
+      "@id": "#person-2",
+      "@type": "Person",
+      "name": "McDole Kate",
+      "givenName": "McDole",
+      "familyName": "Kate",
+      "email": "mcdolek@janelia.hhmi.org",
+      "address": "19700 Helix Dr. Ashburn Va 20147 USA"
+    },
+    {
+      "@id": "#person-3",
+      "@type": "Person",
+      "name": "Guignard Leo",
+      "givenName": "Guignard",
+      "familyName": "Leo",
+      "email": "guignardl@janelia.hhmi.org",
+      "address": "19700 Helix Dr. Ashburn Va 20147 USA"
+    },
+    {
+      "@id": "https://doi.org/10.1016/j.cell.2018.09.031",
+      "@type": "ScholarlyArticle",
+      "name": "In Toto Imaging and Reconstruction of Post-Implantation Mouse Development at the Single-Cell Level."
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090",
+      "@type": "Taxon",
+      "scientificName": "Mus musculus"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "tissue",
+      "description": "Light-sheet imaging of post-implantation mouse development from E6.5 to E8.5",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000369",
+      "@type": "DefinedTerm",
+      "name": "light sheet fluorescence microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "light sheet fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000369"
+        }
+      ],
+      "description": "Light-sheet imaging of post-implantation mouse development from E6.5 to E8.5"
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0001746",
+      "@type": "DefinedTerm",
+      "name": "development or differentiation design"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "See attached methods",
+      "description": "See attached methods",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0001746"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "N/A",
+      "description": "N/A"
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "See attached methods",
+      "description": "See attached methods"
+    },
+    {
+      "@id": "#experiment-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "See attached methods",
+      "description": "See attached methods"
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 356241767399,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "0.324 TB"
+    }
+  ]
+}

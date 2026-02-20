@@ -1,0 +1,211 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0068-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0068/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0068/",
+      "@type": "Dataset",
+      "name": "Multi-scale imaging and analysis identifies pan-embryo cell dynamics of germlayer formation in zebrafish",
+      "description": "The coordination of cell movements across spatio-temporal scales ensures precise positioning of organs during vertebrate gastrulation. Mechanisms governing such morphogenetic movements have been studied only within a local region, a single germlayer or in whole embryos without cell identity. Scale-bridging imaging and automated analysis of cell dynamics are needed for a deeper understanding of tissue formation during gastrulation. Here we report pan-embryo analyses of formation and dynamics of all three germlayers simultaneously within a developing zebrafish embryo. We show that a distinct distribution of cells in each germlayer is established during early gastrulation via cell movement characteristics that are predominantly determined by their position in the embryo. The differences in initial germlayer distributions are subsequently amplified by a global movement, which organizes the organ precursors along the embryonic body axis, giving rise to the blueprint of organ formation. The tools and data are available as a resource for the community.",
+      "datePublished": "2021-12-07",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Shah et al, CC-BY-4.0, 2021",
+      "identifier": "idr0068",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-0154-9455"
+        },
+        {
+          "@id": "https://orcid.org/0000-0003-4003-9121"
+        },
+        {
+          "@id": "https://orcid.org/0000-0001-7250-3756"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1038/s41467-019-13625-0"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_7955"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000369"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/13462847/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-0154-9455",
+      "@type": "Person",
+      "name": "Gopi Shah",
+      "givenName": "Gopi",
+      "familyName": "Shah",
+      "email": "gopi.shah@embl.es",
+      "address": "EMBL, Carrer del Dr. Aiguader, 88, 08003 Barcelona, Spain"
+    },
+    {
+      "@id": "https://orcid.org/0000-0003-4003-9121",
+      "@type": "Person",
+      "name": "Nico Scherf",
+      "givenName": "Nico",
+      "familyName": "Scherf",
+      "email": "nico.scherf@tu-dresden.de",
+      "address": "Institute for Medical Informatics and Biometry, Fetscherstr. 74, 01307 Dresden, Germany"
+    },
+    {
+      "@id": "https://orcid.org/0000-0001-7250-3756",
+      "@type": "Person",
+      "name": "Jan Huisken",
+      "givenName": "Jan",
+      "familyName": "Huisken",
+      "email": "jhuisken@morgridge.org",
+      "address": "Morgridge Institute for Research, Madison, Wisconsin 53715, USA"
+    },
+    {
+      "@id": "https://doi.org/10.1038/s41467-019-13625-0",
+      "@type": "ScholarlyArticle",
+      "name": "Multi-scale imaging and analysis identifies pan-embryo cell dynamics of germlayer formation in zebrafish"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_7955",
+      "@type": "Taxon",
+      "scientificName": "Danio rerio"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "tissue",
+      "description": "Light-sheet imaging of all three germ layers during early zebrafish development (4 - 18 hpf).",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_7955"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000369",
+      "@type": "DefinedTerm",
+      "name": "light sheet fluorescence microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "light sheet fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000369"
+        }
+      ],
+      "description": "Light-sheet imaging of all three germ layers during early zebrafish development (4 - 18 hpf)."
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "Light-sheet imaging",
+      "description": "All experimental and data analysis protocols are described in Shah et al., 2019, Nature Communications"
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "Cell tracking with TGMM software",
+      "description": "Cell tracking with TGMM software"
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 219902325555,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "0.2 TB"
+    }
+  ]
+}

@@ -1,0 +1,320 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0098-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0098/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0098/",
+      "@type": "Dataset",
+      "name": "OCT-MoS, a dataset of mouse skin squamous cell carcinoma stages by full-field optical coherence tomography",
+      "description": "The incidence of cutaneous squamous cell carcinoma (SCC) has increased in recent years, while it remains as an understudied subject. Current methods for the diagnose of skin cancer are either invasive, present a low resolution, or images that are difficult to interpret. Full-field optical coherence tomography (FF-OCT) has proven its potential as a non-invasive imaging technique of epithelial tissue. The sub-micrometer resolution offered by FF-OCT is able to show fine features such as cell nuclei, blood vessels, and fibrous structures in the dermis. However, not many physicians are familiar with the images derived from this technique. Using a well-known mouse model of SCC, we acquired volumetric data from skin samples at different stages of the disease using our home-made FF-OCT system. We present OCT-Mouse Skin (OCT-MoS) dataset, a curated dataset of 3400 annotated tomograms distributed into four classes, representing different stages in the development of SCC: normal, dysplasia, papilloma, and SCC. This dataset has a high potential for reuse in areas such as cancer research, medical training, image processing, and deep learning.",
+      "datePublished": "2021-02-11",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Calderon-Delgado et al, CC-BY-4.0, 2021",
+      "identifier": "idr0098",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-4864-1670"
+        },
+        {
+          "@id": "https://orcid.org/0000-0001-6244-1555"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "#experiment-biosample-2"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-2-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "#experiment-protocol-1-4"
+        },
+        {
+          "@id": "#experiment-protocol-2-1"
+        },
+        {
+          "@id": "#experiment-protocol-2-2"
+        },
+        {
+          "@id": "#experiment-protocol-2-3"
+        },
+        {
+          "@id": "#experiment-protocol-2-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000371"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000345"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/12539666/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        },
+        {
+          "@id": "#file-count"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-4864-1670",
+      "@type": "Person",
+      "name": "Manuel Calderon-Delgado",
+      "givenName": "Manuel",
+      "familyName": "Calderon-Delgado",
+      "email": "manuel.caldelgado@gmail.com",
+      "address": "Graduate Institute of Photonics and Optoelectronics, National Taiwan University, Taipei, 10617, Taiwan"
+    },
+    {
+      "@id": "https://orcid.org/0000-0001-6244-1555",
+      "@type": "Person",
+      "name": "Sheng-Lung Huang",
+      "givenName": "Sheng-Lung",
+      "familyName": "Huang",
+      "email": "shuang@ntu.edu.tw",
+      "address": "Graduate Institute of Photonics and Optoelectronics, National Taiwan University, Taipei, 10617, Taiwan"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090",
+      "@type": "Taxon",
+      "scientificName": "Mus musculus"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "tissue",
+      "description": "Abdominal skin from FVB/N mice was untreated to serve as control samples for the normal class. Back skin from FVB/N mice was treated with immunosupresant and tumor promoter solutions to study different stages of cutaneous squamous cell carcinoma. All samples were excised and imaged by full-field optical coherence tomography.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000371",
+      "@type": "DefinedTerm",
+      "name": "OCT"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "OCT",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000371"
+        }
+      ],
+      "description": "Abdominal skin from FVB/N mice was untreated to serve as control samples for the normal class. Back skin from FVB/N mice was treated with immunosupresant and tumor promoter solutions to study different stages of cutaneous squamous cell carcinoma. All samples were excised and imaged by full-field optical coherence tomography."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Mice were kept in cages and fed regularly.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "The abdominal skin of the mice was left untreated. The back skin of the mice were treated with an immunosupressant solution (100ug of Dimethylbenz[a]anthracene (DMBA) dissolved into 0.2mL of acetone) at the beginning of the experiment and a tumor promoter (25mg of 12-OTetradecanoylphorbol-13-acetate (TPA) in 100mL of ethanol) was applied every week",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "All images corresponding to normal tissue come from abdominal skin. Tissue from the back skin was classified as dysplasia if it looked inflamed, but not comming from warts. Tissue from wrats on the back skin was classified as papilloma. Tissue coming from warts bigger than 5mm on the back skin was classified as squamous cell carcinoma."
+    },
+    {
+      "@id": "#experiment-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    },
+    {
+      "@id": "#experiment-biosample-2",
+      "@type": "BioSample",
+      "name": "tissue",
+      "description": "Microscopy images of 9 H&E stain samples from mouse skin. Each slide contains different tissue samples corresponding to four different classes: normal, dysplasia, papilloma, and scc.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000345",
+      "@type": "DefinedTerm",
+      "name": "light microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-2-0",
+      "@type": "LabProtocol",
+      "name": "light microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000345"
+        }
+      ],
+      "description": "Microscopy images of 9 H&E stain samples from mouse skin. Each slide contains different tissue samples corresponding to four different classes: normal, dysplasia, papilloma, and scc."
+    },
+    {
+      "@id": "#experiment-protocol-2-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Mice were kept in cages and fed regularly.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-2-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "The abdominal skin of the mice was left untreated. The back skin of the mice were treated with an immunosupressant solution (100ug of Dimethylbenz[a]anthracene (DMBA) dissolved into 0.2mL of acetone) at the beginning of the experiment and a tumor promoter (25mg of 12-OTetradecanoylphorbol-13-acetate (TPA) in 100mL of ethanol) was applied every week",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-2-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "All images corresponding to normal tissue come from abdominal skin. Tissue from the back skin was classified as dysplasia if it looked inflamed, but not comming from warts. Tissue from wrats on the back skin was classified as papilloma. Tissue coming from warts bigger than 5mm on the back skin was classified as squamous cell carcinoma."
+    },
+    {
+      "@id": "#experiment-protocol-2-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 22979793020518,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "2.0 + 18.9 = 20.90 TB"
+    },
+    {
+      "@id": "#file-count",
+      "@type": "QuantitativeValue",
+      "value": 3406,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000189",
+      "unitText": "file count",
+      "description": "3400 + 6 = 3406 5D images"
+    }
+  ]
+}

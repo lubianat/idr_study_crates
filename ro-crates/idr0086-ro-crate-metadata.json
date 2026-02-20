@@ -1,0 +1,403 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0086-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0086/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0086/",
+      "@type": "Dataset",
+      "name": "Chromatin arranges in chains of mesoscale domains with nanoscale functional topography independent of cohesin",
+      "description": "Three-dimensional (3D) chromatin organization plays a key role in regulating mammalian genome function, however many of its physical features at the single-cell level remain underexplored. Here we use 3D super-resolution and scanning electron microscopy to analyze structural and functional nuclear organization in somatic cells. We identify linked chromatin domains (CDs) composed of irregular ~200-300-nm-wide aggregates of nucleosomes that can overlap with individual topologically associating domains and are distinct from a surrounding RNA-populated interchromatin region. High-content mapping uncovers confinement of cohesin and active histone modifications to surfaces and enrichment of repressive modifications towards the core of CDs in both hetero- and euchromatic regions. This nanoscale functional topography is temporarily relaxed in postreplicative chromatin, but remarkably persists after ablation of cohesin. Our findings establish CDs as physical and functional modules of mesoscale genome organization.",
+      "datePublished": "2020-07-22",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Lothar Schermelleh and Ezequiel Miron, CC-BY-4.0, 2020",
+      "identifier": "idr0086",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0001-9689-8342"
+        },
+        {
+          "@id": "https://orcid.org/0000-0002-1612-9699"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1126/sciadv.aba8811"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "#experiment-biosample-2"
+        },
+        {
+          "@id": "#experiment-biosample-3"
+        },
+        {
+          "@id": "#experiment-biosample-4"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-2-0"
+        },
+        {
+          "@id": "#experiment-protocol-3-0"
+        },
+        {
+          "@id": "#experiment-protocol-4-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "#experiment-protocol-2-1"
+        },
+        {
+          "@id": "#experiment-protocol-2-2"
+        },
+        {
+          "@id": "#experiment-protocol-2-3"
+        },
+        {
+          "@id": "#experiment-protocol-3-1"
+        },
+        {
+          "@id": "#experiment-protocol-3-2"
+        },
+        {
+          "@id": "#experiment-protocol-3-3"
+        },
+        {
+          "@id": "#experiment-protocol-4-1"
+        },
+        {
+          "@id": "#experiment-protocol-4-2"
+        },
+        {
+          "@id": "#experiment-protocol-4-3"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000332"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000257"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/9846131/"
+      ],
+      "size": [
+        {
+          "@id": "#file-count"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0001-9689-8342",
+      "@type": "Person",
+      "name": "Ezequiel Miron",
+      "givenName": "Ezequiel",
+      "familyName": "Miron",
+      "email": "e.miron@nki.nl",
+      "address": "Netherlands Cancer Institute (NKI) Dept B4 - Gene Regulation. Plesmanlaan 121, 1066 CX Amsterdam, The Netherlands"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-1612-9699",
+      "@type": "Person",
+      "name": "Lothar Schermelleh",
+      "givenName": "Lothar",
+      "familyName": "Schermelleh",
+      "email": "lothar.schermelleh@bioch.ox.ac.uk",
+      "address": "Department of Biochemistry, University of Oxford, Oxford OX1 3QU, United Kingdom"
+    },
+    {
+      "@id": "https://doi.org/10.1126/sciadv.aba8811",
+      "@type": "ScholarlyArticle",
+      "name": "Chromatin arranges in chains of mesoscale domains with nanoscale functional topography independent of cohesin"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Micrographs of G1 interphase chromatin of C127 cells with super resolved immunofluorescence (IF) signals of over 16 epigenetic markers (Nascent RNA, Elongating RNAPolII, CTCF, Cohesin subunits, SAF-A and histone modifications such as H3K4me3, H3K27me3, H3K9me3, etc), all from commercially available antibodies."
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000332",
+      "@type": "DefinedTerm",
+      "name": "structured illumination microscopy (SIM)"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "structured illumination microscopy (SIM)",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000332"
+        }
+      ],
+      "description": "Micrographs of G1 interphase chromatin of C127 cells with super resolved immunofluorescence (IF) signals of over 16 epigenetic markers (Nascent RNA, Elongating RNAPolII, CTCF, Cohesin subunits, SAF-A and histone modifications such as H3K4me3, H3K27me3, H3K9me3, etc), all from commercially available antibodies."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Mouse mammary gland C127 and human cervical cancer HeLa H2B-GFP cells were grown in Dulbecco's Modified Eagle Medium (DMEM) supplemented with 10% FBS, 1% penicillin and streptomycin. Cells were incubated at 37C, 5% CO2 in a humidified incubator. At 90% confluence cells were trypsinized with 0.05-0.25% Trypsin in PBS or 1x trypsin replacement solution (TrypLE express, Gibco) and passaged to a new culture dish at appropriate dilutions (1:5-1:12 every 2-3 days).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "Cells were fixed in 2% formaldehyde/PBS (Sigma, #cat F8775) for 10 min, washed with 0.02% Tween-20/PBS (PBST) and permeabilized in 0.1- 0.5% Triton-X-100/PBS. Coverslips were washed three times with PBST and incubated for 30 min in MaxBlock (Active Motif, cat# 15252). Cells were stained with primary antibodies against the protein of interest, washed three times with PBST and stained with fluorescently-labelled secondary antibodies. After washing, cells were post-fixed in 4% formaldehyde/PBS for 10 min and counterstained using 1-2 ug/?L DAPI or 1 ?M SYTOX Green for 10 min. (Incubation with 1-10 U RNAse I/PBS prior to SYTOX counterstaining was Performed).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "3D-SIM images were acquired with a DeltaVision OMX V3 Blaze system (GE Healthcare) equipped with a 60x/1.42 NA PlanApo oil immersion objective (Olympus), pco.edge 5.5 sCMOS cameras (PCO) and 405, 488, 593 and 640 nm lasers. Spherical aberration was minimized using immersion oil with RI 1.514 for sample acquisition. The raw data was computationally reconstructed with SoftWoRx 6.5.2 (GE Healthcare) using channel-specific OTFs recorded using immersion oil with RI 1.512, and Wiener filter settings between 0.002-0.006 to generate 3D stacks of 115 nm (488 nm) or 130 nm (592 nm) lateral and approximately 350 nm axial resolution."
+    },
+    {
+      "@id": "#experiment-biosample-2",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Micrographs of a subset of the markers in experiment A with chromatin of different phenotype due to different stages of cell cycle: early, mid and late S phase as identified by EdU incorporation in nascent replicating regions."
+    },
+    {
+      "@id": "#experiment-protocol-2-0",
+      "@type": "LabProtocol",
+      "name": "structured illumination microscopy (SIM)",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000332"
+        }
+      ],
+      "description": "Micrographs of a subset of the markers in experiment A with chromatin of different phenotype due to different stages of cell cycle: early, mid and late S phase as identified by EdU incorporation in nascent replicating regions."
+    },
+    {
+      "@id": "#experiment-protocol-2-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Mouse mammary gland C127 cells were grown in Dulbecco's Modified Eagle Medium (DMEM) supplemented with 10% FBS, 1% penicillin and streptomycin. Cells were incubated at 37C, 5% CO2 in a humidified incubator. At 90% confluence cells were trypsinized with 0.05-0.25% Trypsin in PBS or 1x trypsin replacement solution (TrypLE express, Gibco) and passaged to a new culture dish at appropriate dilutions (1:5-1:12 every 2-3 days).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-2-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "Cells were fixed in 2% formaldehyde/PBS (Sigma, #cat F8775) for 10 min, washed with 0.02% Tween-20/PBS (PBST) and permeabilized in 0.1- 0.5% Triton-X-100/PBS. Coverslips were washed three times with PBST and incubated for 30 min in MaxBlock (Active Motif, cat# 15252). Cells were stained with primary antibodies against the protein of interest, washed three times with PBST and stained with fluorescently-labelled secondary antibodies. After washing, cells were post-fixed in 4% formaldehyde/PBS for 10 min and counterstained using 1-2 ug/?L DAPI or 1 ?M SYTOX Green for 10 min. (Incubation with 1-10 U RNAse I/PBS prior to SYTOX counterstaining was Performed).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-2-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "3D-SIM images were acquired with a DeltaVision OMX V3 Blaze system (GE Healthcare) equipped with a 60x/1.42 NA PlanApo oil immersion objective (Olympus), pco.edge 5.5 sCMOS cameras (PCO) and 405, 488, 593 and 640 nm lasers. Spherical aberration was minimized using immersion oil with RI 1.514 for sample acquisition. The raw data was computationally reconstructed with SoftWoRx 6.5.2 (GE Healthcare) using channel-specific OTFs recorded using immersion oil with RI 1.512, and Wiener filter settings between 0.002-0.006 to generate 3D stacks of 115 nm (488 nm) or 130 nm (592 nm) lateral and approximately 350 nm axial resolution."
+    },
+    {
+      "@id": "#experiment-biosample-3",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Micrographs of G1 interphase chromatin of HCT116 cells with and without auxin inducible degradation (AID) of a cohesin subunit with IF on a subset of the previous markers to compare the way the epigenetic regulatory landscape changes when cells are not able to use the cohesin complex to sculpt the 3D chromatin landscape."
+    },
+    {
+      "@id": "#experiment-protocol-3-0",
+      "@type": "LabProtocol",
+      "name": "structured illumination microscopy (SIM)",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000332"
+        }
+      ],
+      "description": "Micrographs of G1 interphase chromatin of HCT116 cells with and without auxin inducible degradation (AID) of a cohesin subunit with IF on a subset of the previous markers to compare the way the epigenetic regulatory landscape changes when cells are not able to use the cohesin complex to sculpt the 3D chromatin landscape."
+    },
+    {
+      "@id": "#experiment-protocol-3-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Human colon carcinoma HCT116 Tet-OsTIR1 cells were cultivated in McCoy's 5A medium supplemented with 10% FBS, 2 mM L glutamine and 1% penicillin and",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-3-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "treatment protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-3-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#experiment-biosample-4",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Electron Micrographs of the nucleus"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000257",
+      "@type": "DefinedTerm",
+      "name": "scanning electron microscopy (SEM)"
+    },
+    {
+      "@id": "#experiment-protocol-4-0",
+      "@type": "LabProtocol",
+      "name": "scanning electron microscopy (SEM)",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000257"
+        }
+      ],
+      "description": "Electron Micrographs of the nucleus"
+    },
+    {
+      "@id": "#experiment-protocol-4-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Human epithelial cancer U2OS and cervical cancer HeLa H2B-GFP cells were grown in Dulbecco's Modified Eagle Medium (DMEM) supplemented with 10% FBS, 1% penicillin and streptomycin. Cells were incubated at 37C, 5% CO2 in a humidified incubator. At 90% confluence cells were trypsinized with 0.05-0.25% Trypsin in PBS or 1x trypsin replacement solution (TrypLE express, Gibco) and passaged to a new culture dish at appropriate dilutions (1:5-1:12 every 2-3 days).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-4-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "Cells grown on sapphire coverslips (3-mm diameter, 0.05-mm thickness; Nanjing Co-Energy Optical Crystal Co.) were subjected to high-pressure freezing using a Compact 01 high-pressure freezer (Wohlwend), followed by freeze-substitution (FS) under liquid N2 in FS medium (2% OsO4, 0.1% uranyl acetate, and 3% water in acetone) using an automated AFS2 machine (Leica Microsystems). Samples were washed immediately after FS three times in anhydrous acetone for a total of 10 min, and embedded in Eponate 12.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-4-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "FIB-SEM imaging was performed using a customized Zeiss Gemini 500 (HeLa) or Zeiss Merlin (U2-OS) crossbeam system previously described (32). The Zeiss Capella FIB column was repositioned at a 90deg angle to the SEM column. The block face was imaged by a 240 pA electron beam with 1.0 keV landing energy at 200 kHz (HeLa) or by a 2 nA electron beam with 1.2 keV landing energy at 500 kHz (U2-OS). The x-y pixel resolution was set at 4 nm (HeLa) and 8 nm (U2-OS). A focused Ga ion beam of 15 nA at 30 keV milled away ~3 nm (HeLa 'G1'), ~5.6 nm (HeLa 'G2'), and ~5 nm (U2-OS) of material from the block face for each section (thickness estimated based on the average of SEM working distance and FIB milling voltage). The newly exposed surface was then imaged again. The milling / imaging cycle continued about once every 150 s for one month to capture an entire cell (50 x 8 x 68 ?m3) at 4 nm voxel (HeLa) or every 40 s for 6 days to capture an entire cell (104 x 8 x 42 ?m3) at 8 nm voxel (U2-OS). Each raw image stack was aligned and registered using a scale invariant feature transform (SIFT) plug-in through Fiji, the U2-OS cell volume was further binned by a factor of 2 along the milling axis. A subvolume containing the nucleus was cropped from the whole cell stack for further processing and analysis. Machine learning based segmentation of FIB-SEM data was performed using Ilastik 1.3.3."
+    },
+    {
+      "@id": "#file-count",
+      "@type": "QuantitativeValue",
+      "value": 1623,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000189",
+      "unitText": "file count",
+      "description": "575 + 945 + 92 + 11 = 1623 5D images"
+    }
+  ]
+}

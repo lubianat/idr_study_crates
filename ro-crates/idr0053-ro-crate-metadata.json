@@ -1,0 +1,213 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0053-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0053/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0053/",
+      "@type": "Dataset",
+      "name": "Virtual nanoscopy of the mouse glomerulus, mouse embryonic fibroblasts, human dendritic cells and a zebrafish embryo slice.",
+      "description": "A key obstacle in uncovering the orchestration between molecular and cellular events is the vastly different length scales on which they occur. We describe here a methodology for ultrastructurally mapping regions of cells and tissue as large as 1 mm(2) at nanometer resolution. Our approach employs standard transmission electron microscopy, rapid automated data collection, and stitching to create large virtual slides. It greatly facilitates correlative light-electron microscopy studies to relate structure and function and provides a genuine representation of ultrastructural events. The method is scalable as illustrated by slides up to 281 gigapixels in size. Here, we applied virtual nanoscopy in a correlative light-electron microscopy study to address the role of the endothelial glycocalyx in protein leakage over the glomerular filtration barrier, in an immunogold labeling study of internalization of oncolytic reovirus in human dendritic cells, in a cryo-electron microscopy study of intact vitrified mouse embryonic cells, and in an ultrastructural mapping of a complete zebrafish embryo slice.",
+      "datePublished": "2019-01-16",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "copyrightNotice": "Faas et al., CC-BY-NC-SA-3.0, 2019",
+      "identifier": "idr0053",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "#person-1"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1083/jcb.201201140"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_7955"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "#experiment-protocol-1-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000258"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/4495402/"
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "#person-1",
+      "@type": "Person",
+      "name": "Raimond Ravelli",
+      "givenName": "Raimond",
+      "familyName": "Ravelli",
+      "email": "raimond.nl@gmail.com"
+    },
+    {
+      "@id": "https://doi.org/10.1083/jcb.201201140",
+      "@type": "ScholarlyArticle",
+      "name": "Virtual nanoscopy: generation of ultra-large high resolution electron microscopy maps."
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_7955",
+      "@type": "Taxon",
+      "scientificName": "Danio rerio"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090",
+      "@type": "Taxon",
+      "scientificName": "Mus musculus"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "tissue",
+      "description": "Ultra-large high resolution electron microscopy maps of the mouse glomerulus, mouse embryonic fibroblasts, human dendritic cells and a zebrafish embryo slice were generated using virtual nanoscopy.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_7955"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000258",
+      "@type": "DefinedTerm",
+      "name": "Transmission electron microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "Transmission electron microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000258"
+        }
+      ],
+      "description": "Ultra-large high resolution electron microscopy maps of the mouse glomerulus, mouse embryonic fibroblasts, human dendritic cells and a zebrafish embryo slice were generated using virtual nanoscopy."
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "growth protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "treatment protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "image aquistion and feature extraction protocol",
+      "description": "image aquistion and feature extraction protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    }
+  ]
+}

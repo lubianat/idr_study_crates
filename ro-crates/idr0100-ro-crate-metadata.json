@@ -1,0 +1,227 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0100-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0100/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0100/",
+      "@type": "Dataset",
+      "name": "A Multi-Spectral Myelin Annotation Tool for Machine Learning Based Myelin Quantification",
+      "description": "Myelin is an essential component of the nervous system and myelin damage causes demyelination diseases. Myelin is a sheet of oligodendrocyte membrane wrapped around the neuronal axon. In the fluorescent images, experts manually identify myelin by co-localization of oligodendrocyte and axonal membranes that fit certain shape and size criteria. Because myelin wriggles along x-y-z axes, machine learning is ideal for its segmentation. However, machine-learning methods, especially convolutional neural networks (CNNs), require a high number of annotated images, which necessitate expert labor. To facilitate myelin annotation, we developed a workflow and a software for myelin ground truth extraction from multi-spectral fluorescent images. Additionally, we shared a set of myelin ground truths annotated using this workflow.",
+      "datePublished": "2020-12-10",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Capar et al, CC-BY-4.0, 2020",
+      "identifier": "idr0100",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0003-1106-3288"
+        },
+        {
+          "@id": "https://orcid.org/0000-0003-4406-2783"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "#experiment-protocol-1-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000251"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/11576516/"
+      ],
+      "size": [
+        {
+          "@id": "#file-count"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0003-1106-3288",
+      "@type": "Person",
+      "name": "Bilal Kerman",
+      "givenName": "Bilal",
+      "familyName": "Kerman",
+      "email": "bkerman@gmail.com",
+      "address": "Istanbul Medipol University, Kavacık Mah. Ekinciler Cd. No:19 Beykoz, Istanbul, Turkey"
+    },
+    {
+      "@id": "https://orcid.org/0000-0003-4406-2783",
+      "@type": "Person",
+      "name": "Behcet Toreyin",
+      "givenName": "Behcet",
+      "familyName": "Toreyin",
+      "email": "toreyin@itu.edu.tr",
+      "address": "Istanbul Technical University,  Informatics Institute, Istanbul, 34469, Turkey"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090",
+      "@type": "Taxon",
+      "scientificName": "Mus musculus"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Immunolabeling of mouse embryonic stem cell derived neurons (TUJ1) and oligodendrocytes (MBP) and their nuclei (DAPI). Cells were grown in microfluidic chambers. Myelin is annotated on images.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000251",
+      "@type": "DefinedTerm",
+      "name": "confocal microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000251"
+        }
+      ],
+      "description": "Immunolabeling of mouse embryonic stem cell derived neurons (TUJ1) and oligodendrocytes (MBP) and their nuclei (DAPI). Cells were grown in microfluidic chambers. Myelin is annotated on images."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Cell differentiation and growth protocols can be accessed at Kerman et al. 2015 Development 142(12):2213-25. DOI: 10.1242/dev.116517",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "Cells were grown in microfluidic chambers.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "Myelinating co-cultures of oligodendrocytes and neurons were fixed in 4% paraformaldehyde. Cells were incubated overnight with anti-TUJ1 and anti-MBP primary antibodies. DAPI (Sigma) was used to visualize nuclei."
+    },
+    {
+      "@id": "#experiment-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "Myelin was annotated using 3D Myelin Marking (CEM3D) software by 3 experts."
+    },
+    {
+      "@id": "#file-count",
+      "@type": "QuantitativeValue",
+      "value": 24,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000189",
+      "unitText": "file count",
+      "description": "24 5D images"
+    }
+  ]
+}

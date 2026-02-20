@@ -1,0 +1,322 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0111-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0111/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0111/",
+      "@type": "Dataset",
+      "name": "Distinct Roles of Tumor Associated Mutations in Collective Cell Migration",
+      "description": "Recent evidence suggests that groups of cells are more likely to form clinically dangerous metastatic tumors, emphasizing the importance of understanding mechanisms underlying collective behavior. The emergent collective behavior of migrating cell sheets in vitro has been shown to be disrupted in tumorigenic cells but the connection between this behavior and in vivo tumorigenicity remains unclear. We use particle image velocimetry to measure a multidimensional migration phenotype for genetically defined human breast epithelial cell lines that range in their in vivo behavior from non-tumorigenic to aggressively metastatic. By using cells with controlled mutations, we show that PTEN deletion enhances collective migration, while Ras activation suppresses it, even when combined with PTEN deletion. These opposing effects on collective migration of two mutations that are frequently found in patient tumors could be exploited in the development of novel treatments for metastatic disease. Our methods are based on label-free phase contrast imaging, and thus could easily be applied to patient tumor cells. The short time scales of our approach do not require potentially selective growth, and thus in combination with label-free imaging would allow multidimensional collective migration phenotypes to be utilized in clinical assessments of metastatic potential.",
+      "datePublished": "2021-06-30",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Lee et al, CC-BY-4.0, 2021",
+      "identifier": "idr0111",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0001-9359-0422"
+        },
+        {
+          "@id": "https://orcid.org/0000-0002-4378-4381"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1038/s41598-021-89130-6"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "#experiment-biosample-2"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-2-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "#experiment-protocol-1-4"
+        },
+        {
+          "@id": "#experiment-protocol-2-1"
+        },
+        {
+          "@id": "#experiment-protocol-2-2"
+        },
+        {
+          "@id": "#experiment-protocol-2-3"
+        },
+        {
+          "@id": "#experiment-protocol-2-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000247"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/13416991/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        },
+        {
+          "@id": "#file-count"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0001-9359-0422",
+      "@type": "Person",
+      "name": "Rachel Lee",
+      "givenName": "Rachel",
+      "familyName": "Lee",
+      "email": "RaLee@som.umaryland.edu",
+      "address": "Marlene and Stewart Greenebaum NCI Comprehensive Cancer Center, University of Maryland School of Medicine, 655 W. Baltimore St., Bressler Bldg., Rm 10-29, Baltimore, MD 21201"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-4378-4381",
+      "@type": "Person",
+      "name": "Stuart Martin",
+      "givenName": "Stuart",
+      "familyName": "Martin",
+      "email": "SSMartin@som.umaryland.edu",
+      "address": "Marlene and Stewart Greenebaum NCI Comprehensive Cancer Center, University of Maryland School of Medicine, 655 W. Baltimore St., Bressler Bldg., Rm 10-29, Baltimore, MD 21201"
+    },
+    {
+      "@id": "https://doi.org/10.1038/s41598-021-89130-6",
+      "@type": "ScholarlyArticle",
+      "name": "Distinct Roles of Tumor Associated Mutations in Collective Cell Migration"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "MCF10A, PTEN-/-, KRas, and KRas/PTEN-/- cell lines or the MCF10A and MDA-MB-231 cell lines were plated in a collective migration assay that uses circular cell sheets.  Tiled images of each full cell sheet were taken before and after a set of time lapse images was taken of two ROIs in each cell sheet.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000247",
+      "@type": "DefinedTerm",
+      "name": "phase contrast microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "phase contrast microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000247"
+        }
+      ],
+      "description": "MCF10A, PTEN-/-, KRas, and KRas/PTEN-/- cell lines or the MCF10A and MDA-MB-231 cell lines were plated in a collective migration assay that uses circular cell sheets.  Tiled images of each full cell sheet were taken before and after a set of time lapse images was taken of two ROIs in each cell sheet."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "For comparisons between the MCF10A, PTEN-/-, KRas, and KRas/PTEN-/- cell lines, the cells were were maintained in DMEM/F12 medium with 5% horse serum, 10 µg/ml insulin, 10 ng/ml EGF, 0.5 µg/ml hydrocortison, 100 ng/ml cholera toxin and 0.5 µg/ml puromycin at 37 C and 5% CO2.  For comparisons between the MCF10A and MDA-MB-231 cell lines, the MCF10A were mainted in DMEM/F12 medium with 5% horse serum, 10 µg/ml insulin, 10 ng/ml EGF, 0.5 µg/ml hydrocortison, and 100 ng/ml cholera toxin. MDA-MB-231 cells were maintained in DMEM with 10% fetal bovine serum.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "Cells were plated as a circular monolayer on collagen IV coated (3.25 µg/cm^2) glass coverslips in a 12 well plate.  Cells were allowed to adhere overnight before imaging.  Additional details are available in the study publication.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "Cells were imaged overnight on a PerkinElmer UltraView VoX spinning-disk confocal microscope. Before time-lapse imaging, a single snapshot of the entire cell sheet was recorded by tiling multiple phase contrast images. A motorized x-y stage and Nikon Perfect Focus System were used to acquire images at multiple positions over time. The microscope was equipped with a Tokai Hit environmental chamber with a humidity reservoir and was set to 37 °C and 5% CO2. Images were taken using a 10× phase-contrast objective (Nikon CFl Plan Fluor, NA 0.3). Images were collected using PerkinElmer’s Volocity software (version 6.4.0) with a Hamamatsu C10600-10B ORCA-R2 camera that recorded 12-bit images (1024 pixels × 1344 pixels, 0.582 µm/pixel). Images were recorded every 3 min for 12 h."
+    },
+    {
+      "@id": "#experiment-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "Images were analyzed using the workflow described at https://github.com/ScientistRachel/multiScalePIVanalysis"
+    },
+    {
+      "@id": "#experiment-biosample-2",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "MCF10A, PTEN-/-, KRas, and KRas/PTEN-/- cell lines were plated in a collective migration assay that uses circular cell sheets.  Duplicates plates were used to create fixed samples at t=0 (plate 1) and t=15 h (plate 2).  The fixed samples were stained with DAPI.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-2-0",
+      "@type": "LabProtocol",
+      "name": "phase contrast microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000247"
+        }
+      ],
+      "description": "MCF10A, PTEN-/-, KRas, and KRas/PTEN-/- cell lines were plated in a collective migration assay that uses circular cell sheets.  Duplicates plates were used to create fixed samples at t=0 (plate 1) and t=15 h (plate 2).  The fixed samples were stained with DAPI."
+    },
+    {
+      "@id": "#experiment-protocol-2-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Cells were maintained in DMEM/F12 medium with 5% horse serum, 10 µg/ml insulin, 10 ng/ml EGF, 0.5 µg/ml hydrocortison, 100 ng/ml cholera toxin and 0.5 µg/ml puromycin at 37 C and 5% CO2.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-2-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "Cells were plated as a circular monolayer on collagen IV coated (3.25 µg/cm^2) glass coverslips in a 12 well plate.  Cells were allowed to adhere overnight before imaging.  Additional details are available in the study publication.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-2-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "Cells were imaged on a PerkinElmer UltraView VoX spinning-disk confocal microscope. A single snapshot of the entire cell sheet was recorded by tiling multiple images of both phase contrast and 405 nm imaging (for the DAPI stain). Images were taken using a 10× phase-contrast objective (Nikon CFl Plan Fluor, NA 0.3). Images were collected using PerkinElmer’s Volocity software (version 6.4.0) with a Hamamatsu C10600-10B ORCA-R2 camera that recorded 12-bit images (1024 pixels × 1344 pixels, 0.582 µm/pixel)."
+    },
+    {
+      "@id": "#experiment-protocol-2-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "Nuclei were found and counted using functions from the Crocker-Grier tracking algorithm, available at http://site.physics.georgetown.edu/matlab/code.html"
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 115448720916,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "0.093 + 0.012 = 0.10 TB"
+    },
+    {
+      "@id": "#file-count",
+      "@type": "QuantitativeValue",
+      "value": 420,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000189",
+      "unitText": "file count",
+      "description": "396 + 24 = 420 5D images"
+    }
+  ]
+}

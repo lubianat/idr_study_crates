@@ -1,0 +1,275 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0069-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0069/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0069/",
+      "@type": "Dataset",
+      "name": "Mapping the perturbome network of cellular perturbations",
+      "description": "Drug combinations provide effective treatments for diverse diseases, but also represent a major cause of adverse reactions. Currently there is no systematic understanding of how the complex cellular perturbations induced by individual drugs influence each other when used in combination. Here, we introduce a mathematical framework for mapping out precisely, how perturbations with high-dimensional effects interact with each other in terms of 12 distinct interaction types. We applied our framework to a large-scale imaging screen of cell morphology changes induced by diverse drugs and their combination, resulting in a perturbome network of 242 drugs and 1832 interactions. Our analysis of the chemical and biological features of the drug compounds reveals distinct molecular fingerprints for each interaction type. We found a direct link between drug similarities on the cell morphology level and the distance of their respective protein targets within the cellular interactome of molecular interactions. The interactome distance was also predictive for different types of drug interactions. Our framework can be applied to other key challenges, such as dissecting the combined impact of genetic variations or predicting the effect of a drug on a particular disease phenotype.",
+      "datePublished": "2019-11-05",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "copyrightNotice": "Caldera et al., CC-BY-NC-4.0, 2019",
+      "identifier": "idr0069",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-1583-6404"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1038/s41467-019-13058-9"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#screen-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#screen-protocol-1-0"
+        },
+        {
+          "@id": "#screen-protocol-1-1"
+        },
+        {
+          "@id": "#screen-protocol-1-2"
+        },
+        {
+          "@id": "#screen-protocol-1-3"
+        },
+        {
+          "@id": "#screen-protocol-1-4"
+        },
+        {
+          "@id": "#screen-protocol-1-5"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/8833072/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        },
+        {
+          "@id": "#file-count"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-1583-6404",
+      "@type": "Person",
+      "name": "Jörg Menche",
+      "givenName": "Jörg",
+      "familyName": "Menche",
+      "email": "JMenche@cemm.oeaw.ac.at",
+      "address": "Lazarettgasse 14, AKH BT 25.3, 1090 Vienna, Austria"
+    },
+    {
+      "@id": "https://doi.org/10.1038/s41467-019-13058-9",
+      "@type": "ScholarlyArticle",
+      "name": "Mapping the perturbome network of cellular perturbations"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#screen-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "We used high-content screening and image analysis to measure the effect of 267 well described drugs as well as all possible 35,511 pairwise combinations. We applied a novel mathematical framework that uses the complex high-dimensional morphological space of drug induced phenotypes, to detect 1832 interactions between two drug perturbations. In contrast to previous methodologies our novel framework not only detects the type of interaction (e.g. positive/negative) but also its directionality. Subsequent analysis of the chemical and biological features of the drug compounds reveals distinct molecular fingerprints for each interaction type.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000246",
+      "@type": "DefinedTerm",
+      "name": "fluorescence microscopy"
+    },
+    {
+      "@id": "#screen-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "description": "We used high-content screening and image analysis to measure the effect of 267 well described drugs as well as all possible 35,511 pairwise combinations. We applied a novel mathematical framework that uses the complex high-dimensional morphological space of drug induced phenotypes, to detect 1832 interactions between two drug perturbations. In contrast to previous methodologies our novel framework not only detects the type of interaction (e.g. positive/negative) but also its directionality. Subsequent analysis of the chemical and biological features of the drug compounds reveals distinct molecular fingerprints for each interaction type."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Cell culture: MCF-10A cells were grown under standard cell culture conditions (37°C for 72h and 5% CO2 in DMEM-F12 cell media).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "Compound library: The CLOUD library (267 drugs) was selected to capture as much as possible of the chemical and biological diversity of all US Food and Drug Administration (FDA) approved drugs. The compact size of the library was important due to the phenomenon of combinatorial explosion when screening all pairwise combinations.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007571",
+      "@type": "DefinedTerm",
+      "name": "HCS library protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "Cell staining and imaging: For fluorescence staining, the medium was removed and living cells were first stained for mitochondria using MitoTracker Orange (1µM in 1xPBS, 30min at 37°C). Next, the cells were 3x washed with PBS and fixed with cold methanol at -20°C overnight. Methanol was removed and 3% BSA, 0.1% Triton-X in PBS were added for permeabilization/blocking (2h  at room temperature, RT). The blocking solution was removed and the cells were incubated with the first antibody (anti-Tubulin, 1:500 in 3% BSA, 0.1% Triton-X in PBS) overnight at 4°C in the cold room. The following day, the Alexa Fluor 488 secondary antibody (1:1000) for visualizing the cytoskeleton and 4’,6-Diamidin-2-phenylindol/DAPI (1:500) for staining the DNA in 3% BSA, 0.1% Triton-X in PBS were added (2h at RT). In a final step, cells were washed 3x with PBS. 4 images (foci) (20x) per well were acquired in a high throughput manner using the Operetta High-Content Imaging System (PerkinElmer) in 3 fluorescent channels, DAPI (405/470 nm), BetaTubulin (488/525 nm) and MitoTracker (554/576 nm).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007572",
+      "@type": "DefinedTerm",
+      "name": "HCS image acquistion and feature extraction protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "HCS image acquistion and feature extraction protocol",
+      "description": "Image Analysis: The 1360 x 1024 x 1 x 3 x 1 TIFF images were analysed using the widely-adopted image analysis software CellProfiler (version 3.0.0). Some parameters of the pipeline were adjusted between the two batches [Plates 1-64 and Plates 65-124]of the screen, e.g., minimum intensity thresholds for segmentation, to account for slight differences, such as different exposure times. The pipeline first corrected the image channels for uneven illumination before performing image segmentation and feature measurements. We next applied an image quality workflow to exclude for example images that are out of focus or have problems with saturation. The quality control workflow used 45 quality image measurements provided by CellProfiler, in combination with an isolation forest method to detect outliers as implemented in the Python package Scikit-learn (v0.2.1) 27. Isolation forest is an ensemble method based on decision trees. Since outliers are less frequent than regular observations, they can be detected by being closer to the root of decision trees, i.e., they require less splits to be uniquely characterized. Using the parameters [estimators=500, max_samples='auto', behaviour='new', contamination='auto'], we detected around 3% of all images (ca. 6000) as outliers. For our subsequent analysis, we included only wells with more than 50% valid images, i.e., at least 3 out of 4. After image segmentation we extracted 438 morphological features.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007573",
+      "@type": "DefinedTerm",
+      "name": "HCS data analysis protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-5",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "Feature Analysis: The features were normalized as follows: We first calculated the median of the cellular features over all cells in a given well. It has been shown that small molecule effects are well characterized by the shift of measures-of-centers (mean or median)  of their phenotypic response. Next, we performed a Tukey’s median polish to reduce the impact of plate effects, such as evaporation towards the borders of a plate. This procedure fits an additive model for data in a two-way layout table of the form row effect + column effect + overall median. Finally, we scale all values to the range between 0 and 1, considering values outside the 99.5/0.05 percentiles as outliers. To include only robust and informative features, we applied the following filtering pipeline: (i) For each feature, we calculate the coefficient of variation (CV) among the DMSO controls of the same plate. The coefficient of variation is a stable measure for the variation among samples normalized by their mean. This CV is calculated both within replicates on the same plate (intra-plate CV), as well as between plates (inter-plate CV). Only features whose inter- and intra-plate CV are smaller than 0.2 were included in the further analysis. (ii) We removed features that show too little correlation between drug treatment replicates (cutoff: Pearson’s ρ < 0.2). (iii) We evaluated the effect size of each feature Z-scores, and removed all features without significant effect in any single or combinatorial perturbation by transforming the Z-scores to p-values and applying a cutoff of p-value < 0.05 after Bonferroni correction for multiple hypotheses. (iv) Finally, we removed redundant features. We first calculated all pairwise feature correlations. For any feature pair with a correlation of r > 0.8, we then removed the one with the smaller effect size using an iterative minimal cut approach. This step is particularly important not only to reduce redundant information, but also to ensure approximate orthogonality for our vector-based approach below. Steps (i) through (iii) are applied separately to the two batches. At step (iv), all features that fulfilled all requirements for both batches before removing correlating features were included. In total, 78 out of 438 (17.8%) features fulfilled all requirements and were included for the subsequent analyses.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 1253443255664,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "1.14 TB"
+    },
+    {
+      "@id": "#file-count",
+      "@type": "QuantitativeValue",
+      "value": 190,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000189",
+      "unitText": "file count",
+      "description": "190 5D images"
+    }
+  ]
+}

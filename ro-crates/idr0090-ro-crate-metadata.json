@@ -1,0 +1,287 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0090-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0090/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0090/",
+      "@type": "Dataset",
+      "name": "A machine learning approach to define antimalarial drug action from heterogeneous cell-based screens",
+      "description": "Drug resistance threatens the effective prevention and treatment of an ever-increasing range of human infections. This highlights an urgent need for new and improved drugs with novel mechanisms of action to avoid cross-resistance. Current cell-based drug screens are, however, restricted to binary live/dead readouts with no provision for mechanism of action prediction. Machine learning methods are increasingly being used to improve information extraction from imaging data. Such methods, however, work poorly with heterogeneous cellular phenotypes and generally require time-consuming human-led training. We have developed a semi-supervised machine learning approach, combining human- and machine-labelled training data from mixed human malaria parasite cultures. Designed for high-throughput and high-resolution screening, our semi-supervised approach is robust to natural parasite morphological heterogeneity and correctly orders parasite developmental stages. Our approach also reproducibly detects and clusters drug-induced morphological outliers by mechanism of action, demonstrating the potential power of machine learning for accelerating cell-based drug discovery.",
+      "datePublished": "2021-03-02",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Imperial College London, CC-BY-4.0, 2021",
+      "identifier": "idr0090",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0001-9022-8444"
+        },
+        {
+          "@id": "https://orcid.org/0000-0002-0275-352X"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1126/sciadv.aba9338"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#screen-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_36329"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#screen-protocol-1-0"
+        },
+        {
+          "@id": "#screen-protocol-1-1"
+        },
+        {
+          "@id": "#screen-protocol-1-2"
+        },
+        {
+          "@id": "#screen-protocol-1-3"
+        },
+        {
+          "@id": "#screen-protocol-1-4"
+        },
+        {
+          "@id": "#screen-protocol-1-5"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/12540310/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        },
+        {
+          "@id": "#file-count"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0001-9022-8444",
+      "@type": "Person",
+      "name": "D. Michael Ando",
+      "givenName": "D. Michael",
+      "familyName": "Ando",
+      "email": "mando@google.com",
+      "address": "1600 Amphitheatre Pkwy, Mountain View, CA 94043"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-0275-352X",
+      "@type": "Person",
+      "name": "Jake Baum",
+      "givenName": "Jake",
+      "familyName": "Baum",
+      "email": "jake.baum@imperial.ac.uk",
+      "address": "Life Sciences/Sir Alexander Fleming Building, Exhibition Road, South Kensington, London SW7 2AZ, UK"
+    },
+    {
+      "@id": "https://doi.org/10.1126/sciadv.aba9338",
+      "@type": "ScholarlyArticle",
+      "name": "A machine learning approach to define antimalarial drug action from heterogeneous cell-based screens"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_36329",
+      "@type": "Taxon",
+      "scientificName": "Plasmodium falciparum 3D7"
+    },
+    {
+      "@id": "#screen-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "High-content imaging of P. falciparum in red blood cells over multiple weeks under both control and drug-treatment conditions.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_36329"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000246",
+      "@type": "DefinedTerm",
+      "name": "fluorescence microscopy"
+    },
+    {
+      "@id": "#screen-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "description": "High-content imaging of P. falciparum in red blood cells over multiple weeks under both control and drug-treatment conditions."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "The transgenic 3D7/sfGFP P. falciparum asexual parasites were cultured at 37 °C [with a gas mixture of 90 % N2, 5 % O2 and 5 % CO2] in human O+ erythrocytes under standard conditions, with RMPI-HEPES medium supplemented with 0.5 % AlbuMAX-II. Two independent stocks of 3D7/sfGFP parasites were maintained in culture and synchronized separately with 5 % D-Sorbitol on consecutive days to ensure acquisition of all stages of the asexual cycle on the day of sample preparation. Samples used for imaging derived from cultures harbouring an approximate 1:1:1 ratio of rings, trophozoites and schizonts, with a parasitaemia around 10 %.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "Asexual cultures were diluted 50:50 in fresh media before 50 nM MitoTrackerTM CMXRos (ThermoFisher) was added for 20 mins at 37°C. Samples were then fixed in PBS containing 4 % formaldehyde and 0.25 % glutaraldehyde and placed on a roller at room temperature, protected from light for 20 mins. The sample was then washed 3× in PBS before 10 nM DAPI (4′,6-diamidino-2-phenylindole) and 5 µg/ml wheat germ agglutinin (WGA) conjugated to AlexaFluor633 was added for 10 mins and protected from light. The sample was then washed 1x in PBS and diluted 1 in 30 in PBS before pipetting 100 µL into each well of a CellVis (Mountain View, CA) 96-well plate. Samples were imaged using a Nikon Ti-Eclipse widefield microscope and Hamamatsu EMCCD camera, with a 100× Plan Apo 1.4NA oil objective lens (Nikon), the NIS-Elements JOBS software package (Nikon) was used to automate the plate-based imaging. The five channels (brightfield, DNA (DAPI), cytoplasm (sfGFP-labeled), mitochondria (MitoTrackerTM), and RBC (WGA-633)) were collected serially at Nyquist sampling as a 6 µm z-stack, with fluorescent excitation from the CoolLED light source. To collect enough parasite numbers per treatment, 32 fields of view (sites) were randomly generated and collected within each well, with treatments run in technical triplicate. Data was saved directly onto an external hard-drive for short-term storage and processing.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007571",
+      "@type": "DefinedTerm",
+      "name": "HCS library protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "HCS library protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007572",
+      "@type": "DefinedTerm",
+      "name": "HCS image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "HCS image acquisition and feature extraction protocol",
+      "description": "HCS image acquisition and feature extraction protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007573",
+      "@type": "DefinedTerm",
+      "name": "HCS data analysis protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-5",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "HCS data analysis protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 24189255811072,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "22.0 TB"
+    },
+    {
+      "@id": "#file-count",
+      "@type": "QuantitativeValue",
+      "value": 17408,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000189",
+      "unitText": "file count",
+      "description": "17408 5D images"
+    }
+  ]
+}

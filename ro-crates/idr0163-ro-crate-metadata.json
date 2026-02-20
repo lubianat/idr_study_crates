@@ -1,0 +1,213 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0163-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0163/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0163/",
+      "@type": "Dataset",
+      "name": "Temporal and spatial composition of the tumor microenvironment predicts response to immune checkpoint inhibition",
+      "description": "Immune checkpoint inhibition (ICI) has fundamentally changed cancer treatment. However, only a minority of patients with metastatic triple negative breast cancer (TNBC) benefit from ICI, and our understanding of the determinants of response is limited. To better understand the factors influencing patient outcome, we assembled a longitudinal cohort with tissue from the primary tumor, pre-treatment metastatic tumor, and on-treatment metastatic tumor from 117 patients treated with ICI (nivolumab) in the phase II TONIC trial. We used highly multiplexed imaging to quantify the subcellular localization of 37 proteins in each tumor. To extract meaningful information from the imaging data, we developed SpaceCat, a computational pipeline that quantifies features from imaging data such as cell density, cell diversity, spatial structure, and functional marker expression. We applied SpaceCat to 678 images from 294 tumors, generating more than 800 distinct features. Numerous spatial features were associated with patient outcome, including the degree of mixing between cancer and immune cells, the diversity of the neighboring immune cells surrounding cancer cells, and the degree of T cell infiltration at the cancer border. Non-spatial features, including the ratio between T cells and cancer cells and PDL1 levels on myeloid cells, were associated with ICI benefit. We did not identify robust predictors of response in the primary tumors. In contrast, the metastatic tumors had numerous features which predicted response. Some of these features, such as the cellular diversity at the cancer border, were shared across distinct timepoints, but many of the features were predictive at only a single timepoint. Multivariate models accurately predicted patient outcome from the pre-treatment metastatic tumors, with improved performance in the on-treatment tumor. We validated our findings in matched bulk RNA-seq data, observing similar longitudinal trends in the predictive power, but were not able to robustly predict outcome using matched pre-treatment exome sequencing data. Our study highlights the importance of profiling sequential tumor biopsies to understand the evolution of the tumor microenvironment, elucidating the temporal and spatial dynamics underlying patient responses to ICI.",
+      "datePublished": "2024-12-12",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "copyrightNotice": "Greenwald et al, CC0-1.0, 2024",
+      "identifier": "idr0163",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-7836-4379"
+        },
+        {
+          "@id": "https://orcid.org/0009-0003-2650-1428"
+        },
+        {
+          "@id": "https://orcid.org/0009-0000-5757-6818"
+        },
+        {
+          "@id": "#person-4"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#NCIT_C181930"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/15159290/"
+      ],
+      "size": [
+        {
+          "@id": "#file-count"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-7836-4379",
+      "@type": "Person",
+      "name": "Noah Greenwald",
+      "givenName": "Noah",
+      "familyName": "Greenwald",
+      "email": "nfgreen@stanford.edu",
+      "address": "1291 Welch Road, Edwards Building, Palo Alto, CA 94305"
+    },
+    {
+      "@id": "https://orcid.org/0009-0003-2650-1428",
+      "@type": "Person",
+      "name": "Alex Kong",
+      "givenName": "Alex",
+      "familyName": "Kong",
+      "email": "alkong@stanford.edu",
+      "address": "1291 Welch Road, Edwards Building, Palo Alto, CA 94305"
+    },
+    {
+      "@id": "https://orcid.org/0009-0000-5757-6818",
+      "@type": "Person",
+      "name": "Sricharan Reddy Varra",
+      "givenName": "Sricharan Reddy",
+      "familyName": "Varra",
+      "email": "srivarra@stanford.edu",
+      "address": "1291 Welch Road, Edwards Building, Palo Alto, CA 94305"
+    },
+    {
+      "@id": "#person-4",
+      "@type": "Person",
+      "name": "Cameron Sowers",
+      "givenName": "Cameron",
+      "familyName": "Sowers",
+      "email": "csowers@stanford.edu",
+      "address": "1291 Welch Road, Edwards Building, Palo Alto, CA 94305"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "tissue",
+      "description": "Generated 678 FOVs across 111 patients, 294 tissues, and four timepoints (baseline, primary, pre_nivo, and on_nivo), imaged using multiplexed ion beam imaging. Images are either 1024x1024 or 2048x2048 in size.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "#NCIT_C181930",
+      "@type": "DefinedTerm",
+      "name": "Multiplexed Ion Beam Imaging (MIBI)"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "Multiplexed Ion Beam Imaging (MIBI)",
+      "measurementTechnique": [
+        {
+          "@id": "#NCIT_C181930"
+        }
+      ],
+      "description": "Generated 678 FOVs across 111 patients, 294 tissues, and four timepoints (baseline, primary, pre_nivo, and on_nivo), imaged using multiplexed ion beam imaging. Images are either 1024x1024 or 2048x2048 in size."
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "Images were acquired using the Multiplexed Ion Bean Imagine (MIBI) technique. Prior to analysis, images were denoised to remove channel cross-talk and normalized to account for detector drift over the course of a run. Segmentation was run using the Mesmer algorithm, with corresponding channel signal extracted alongside."
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "To assign cluster labels to cells, the FlowSOM algorithm was first used at a pixel level to identify high-level pixel SOM clusters, then consensus (meta) clustering was used to broaden these assignments. The expression of pixel meta clusters across cells was then passed through FlowSOM to determine high-level cell SOM clusters, then consensus (meta) clustering was used to broaden these assignments. The cell clusters were then further broadened twice by manual inspection."
+    },
+    {
+      "@id": "#file-count",
+      "@type": "QuantitativeValue",
+      "value": 678,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000189",
+      "unitText": "file count",
+      "description": "678 5D images"
+    }
+  ]
+}

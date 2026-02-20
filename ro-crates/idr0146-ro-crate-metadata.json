@@ -1,0 +1,224 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0146-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0146/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0146/",
+      "@type": "Dataset",
+      "name": "Time lapse imaging of mesoderm and early cardiac progenitors in mouse embryos",
+      "description": "Using four-dimensional whole-embryo light sheet imaging with improved and accessible computational tools, we longitudinally reconstruct early murine cardiac development at single-cell resolution. Nascent mesoderm progenitors form opposing density and motility gradients, converting the temporal birth sequence of gastrulation into a spatial anterolateral-to-posteromedial arrangement. Migrating precardiac mesoderm doesn’t strictly preserve cellular neighbor relationships; spatial patterns only become solidified as the cardiac crescent emerges. Progenitors undergo a heretofore unknown mesenchymal-to-epithelial transition, with an anchored first heart field (FHF) ridge apposing a motile juxtacardiac field (JCF). The nascent heart tube forms as the JCF rotates forward, due to push-pull morphodynamics of the second heart field transmitted through the FHF epithelium. In Mesp1 mutants that fail to make a cardiac crescent, mesoderm remains highly motile but directionally incoherent, resulting in density gradient inversion. Our practicable live embryo imaging approach defines spatial origins and behaviors of cardiac progenitors, and identifies their unanticipated morphological transitions.",
+      "datePublished": "2023-02-06",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Dominguez et al, CC-BY-4.0, 2023",
+      "identifier": "idr0146",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-0804-7597"
+        },
+        {
+          "@id": "https://orcid.org/0000-0002-1960-7190"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1016/j.cell.2023.01.001"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "#experiment-protocol-1-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000369"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/14788631/"
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-0804-7597",
+      "@type": "Person",
+      "name": "Benoit Bruneau",
+      "givenName": "Benoit",
+      "familyName": "Bruneau",
+      "email": "benoit.bruneau@gladstone.ucsf.edu",
+      "address": "1650 Owens Street, San Francisco, CA 94158"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-1960-7190",
+      "@type": "Person",
+      "name": "Martin Dominguez",
+      "givenName": "Martin",
+      "familyName": "Dominguez",
+      "email": "martin.dominguez@pennmedicine.upenn.edu",
+      "address": "1650 Owens Street, San Francisco, CA 94158"
+    },
+    {
+      "@id": "https://doi.org/10.1016/j.cell.2023.01.001",
+      "@type": "ScholarlyArticle",
+      "name": "Graded mesoderm assembly governs cell fate and morphogenesis of the early mammalian heart"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090",
+      "@type": "Taxon",
+      "scientificName": "Mus musculus"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "tissue",
+      "description": "Light-sheet imaging of post-implantation mouse development from E6.5 to E8.5.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000369",
+      "@type": "DefinedTerm",
+      "name": "light sheet fluorescence microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "light sheet fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000369"
+        }
+      ],
+      "description": "Light-sheet imaging of post-implantation mouse development from E6.5 to E8.5."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "culture protocol",
+      "description": "see attached DominguezMH Embryo Culture.pdf",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "embedding protocol",
+      "description": "see attached DominguezMH Embryo Mounting.pdf",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "Zeiss Z.1 microscope setup",
+      "description": "see attached DominguezMH Zeiss Z.1 Setup.pdf"
+    },
+    {
+      "@id": "#experiment-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "live imaging checklist",
+      "description": "see attached DominguezMH Zeiss Z.1 Checklist.pdf"
+    }
+  ]
+}

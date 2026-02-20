@@ -1,0 +1,686 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0156-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0156/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0156/",
+      "@type": "Dataset",
+      "name": "Regulation of single-cell genome organization into TADs and chromatin nanodomains",
+      "description": "The genome folds into a hierarchy of three-dimensional structures within the nucleus. At the sub-megabase scale, chromosomes form topologically associating domains (TADs). However, how TADs fold in single cells is elusive. Here, we reveal TAD features inaccessible to cell population analysis by using super-resolution microscopy. TAD structures and physical insulation associated with their borders are variable between individual cells,  yet chromatin intermingling is enriched within TADs compared to adjacent TADs in most cells. The spatial segregation of TADs is further exacerbated during cell differentiation.  Favored interactions within TADs are regulated by cohesin and CTCF through distinct mechanisms:  cohesin generates chromatin contacts and intermingling while CTCF prevents inter-TAD contacts.  Furthermore, TADs are subdivided into discrete nanodomains, which persist in cells depleted of CTCF or cohesin,  whereas disruption of nucleosome contacts alters their structural organization. Altogether, these results provide a physical basis for the fold\u0002ing of individual chromosomes at the nanoscale.",
+      "datePublished": "2025-05-08",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Szabo et al, CC-BY-4.0, 2025",
+      "identifier": "idr0156",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-3539-7875"
+        },
+        {
+          "@id": "https://orcid.org/0000-0003-4063-7324"
+        },
+        {
+          "@id": "https://orcid.org/0000-0003-3709-3469"
+        },
+        {
+          "@id": "https://orcid.org/0000-0003-1579-0773"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1038/s41588-020-00716-8"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "#experiment-biosample-2"
+        },
+        {
+          "@id": "#experiment-biosample-3"
+        },
+        {
+          "@id": "#experiment-biosample-4"
+        },
+        {
+          "@id": "#experiment-biosample-5"
+        },
+        {
+          "@id": "#experiment-biosample-6"
+        },
+        {
+          "@id": "#experiment-biosample-7"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-2-0"
+        },
+        {
+          "@id": "#experiment-protocol-3-0"
+        },
+        {
+          "@id": "#experiment-protocol-4-0"
+        },
+        {
+          "@id": "#experiment-protocol-5-0"
+        },
+        {
+          "@id": "#experiment-protocol-6-0"
+        },
+        {
+          "@id": "#experiment-protocol-7-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "#experiment-protocol-1-4"
+        },
+        {
+          "@id": "#experiment-protocol-2-1"
+        },
+        {
+          "@id": "#experiment-protocol-2-2"
+        },
+        {
+          "@id": "#experiment-protocol-2-3"
+        },
+        {
+          "@id": "#experiment-protocol-2-4"
+        },
+        {
+          "@id": "#experiment-protocol-3-1"
+        },
+        {
+          "@id": "#experiment-protocol-3-2"
+        },
+        {
+          "@id": "#experiment-protocol-3-3"
+        },
+        {
+          "@id": "#experiment-protocol-3-4"
+        },
+        {
+          "@id": "#experiment-protocol-4-1"
+        },
+        {
+          "@id": "#experiment-protocol-4-2"
+        },
+        {
+          "@id": "#experiment-protocol-4-3"
+        },
+        {
+          "@id": "#experiment-protocol-4-4"
+        },
+        {
+          "@id": "#experiment-protocol-5-1"
+        },
+        {
+          "@id": "#experiment-protocol-5-2"
+        },
+        {
+          "@id": "#experiment-protocol-5-3"
+        },
+        {
+          "@id": "#experiment-protocol-5-4"
+        },
+        {
+          "@id": "#experiment-protocol-6-1"
+        },
+        {
+          "@id": "#experiment-protocol-6-2"
+        },
+        {
+          "@id": "#experiment-protocol-6-3"
+        },
+        {
+          "@id": "#experiment-protocol-6-4"
+        },
+        {
+          "@id": "#experiment-protocol-7-1"
+        },
+        {
+          "@id": "#experiment-protocol-7-2"
+        },
+        {
+          "@id": "#experiment-protocol-7-3"
+        },
+        {
+          "@id": "#experiment-protocol-7-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000332"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/15170695/"
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-3539-7875",
+      "@type": "Person",
+      "name": "Quentin Szabo",
+      "givenName": "Quentin",
+      "familyName": "Szabo",
+      "email": "quentin.szabo@uzh.ch",
+      "address": "University of Zurich, Department of Molecular Life Sciences"
+    },
+    {
+      "@id": "https://orcid.org/0000-0003-4063-7324",
+      "@type": "Person",
+      "name": "Frédéric Bantignies",
+      "givenName": "Frédéric",
+      "familyName": "Bantignies",
+      "email": "frederic.bantignies@igh.cnrs.fr"
+    },
+    {
+      "@id": "https://orcid.org/0000-0003-3709-3469",
+      "@type": "Person",
+      "name": "Giacomo Cavalli",
+      "givenName": "Giacomo",
+      "familyName": "Cavalli",
+      "email": "giacomo.cavalli@igh.cnrs.fr"
+    },
+    {
+      "@id": "https://orcid.org/0000-0003-1579-0773",
+      "@type": "Person",
+      "name": "Julio Mateos-Langerak",
+      "givenName": "Julio",
+      "familyName": "Mateos-Langerak",
+      "email": "julio.mateos-langerak@igh.cnrs.fr"
+    },
+    {
+      "@id": "https://doi.org/10.1038/s41588-020-00716-8",
+      "@type": "ScholarlyArticle",
+      "name": "Regulation of single-cell genome organization into TADs and chromatin nanodomains"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Mouse embryonic stem cells (ESCs) were cultured in the conditions described below (see Protocol Description) and they were fixed on coverslips prior to the Fluorescent in situ Hybridization (DNA FISH) procedure. A large set of Oligopaint probes covering Topologically Associating Domains (TADs) of various size and various epigenetic signatures were used for the DNA FISH. Coverslips with hybridized cells were then observed with Structured Illumination Microscopy (3D-SIM). This approach allows for the description of TAD organization in mouse ESCs (Overlap Fractions (OFs) and 3D distances with consecutive Oligopaint probes within TADs or between TADs, see the article) and the identification of TAD sub-structures, dubbed Chromatin NanoDomains (CNDs), by applying watershed-segmentation on the Oligopaint probe fluorescent signal. Assays TSA and TSA-CTL (control) were performed in parallel with and without trichostatin-A (TSA), respectively. TSA is a potent inhibitor of histone deacetylases that induces histone hyperacetylation."
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000332",
+      "@type": "DefinedTerm",
+      "name": "structured illumination microscopy (SIM)"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "structured illumination microscopy (SIM)",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000332"
+        }
+      ],
+      "description": "Mouse embryonic stem cells (ESCs) were cultured in the conditions described below (see Protocol Description) and they were fixed on coverslips prior to the Fluorescent in situ Hybridization (DNA FISH) procedure. A large set of Oligopaint probes covering Topologically Associating Domains (TADs) of various size and various epigenetic signatures were used for the DNA FISH. Coverslips with hybridized cells were then observed with Structured Illumination Microscopy (3D-SIM). This approach allows for the description of TAD organization in mouse ESCs (Overlap Fractions (OFs) and 3D distances with consecutive Oligopaint probes within TADs or between TADs, see the article) and the identification of TAD sub-structures, dubbed Chromatin NanoDomains (CNDs), by applying watershed-segmentation on the Oligopaint probe fluorescent signal. Assays TSA and TSA-CTL (control) were performed in parallel with and without trichostatin-A (TSA), respectively. TSA is a potent inhibitor of histone deacetylases that induces histone hyperacetylation."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "fly egg laying and staged embryos"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "Mouse ESCs standard culture",
+      "description": "Mouse ESCs (E14Tg2a.4 cell line, MMRRC, UC Davis) were cultured on 0.1% gelatin-coated (catalog no.G1890-100G; Sigma-Aldrich) dishes in Glasgow's MEM (catalog no. 21710025; Gibco), supplemented with 15% FCS qualified serum (catalog no. 26140079, US origin; Thermo Fisher Scientific), 1x GlutaMAX (catalog no. 35050038; Thermo Fisher Scientific), 1x MEM non-essential amino acids solution (catalog no.11140035; Thermo Fisher Scientific), 50 U penicillin-streptomycin (catalog no.15140122; Gibco), 0.1 mM sodium pyruvate (catalog no. 11360070; Gibco), 0.1 mM 2-mercaptoethanol (catalog no. 31350010; Gibco) and 1,000 U ml-1 recombinant mouse LIF protein (catalog no. ESG1107; Sigma-Aldrich). The medium was changed every day and cells were passaged every 2 days using the TrypLE express enzyme (catalog no. 12604013; Gibco). Two days before the FISH, approximately 150.000 cells were plated in a 6-well plate containing an autoclaved glass coverslip (170 ± 5 μm (ZEISS)) coated with 0.1% gelatin, with fresh medium replacement after one day. Mouse ESCs were grown on the coverslip for a total of 2 days and washed once with PBS before fixation prior to the FISH procedure. For TSA treatment, the day of the collection, medium was replaced with fresh medium containing TSA (final concentration at 100 ng/ml) (catalog no. T-8552; Sigma-Aldrich) for 6h before collecting cells for the FISH procedure.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "No treatment"
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "No treatment or TSA treatment",
+      "description": "Standard growth conditions. If no specific treatment, use as the control condition. TSA treatment for 6h (see details of the protocol on the left column).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0011016",
+      "@type": "DefinedTerm",
+      "name": "DNA FISH"
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "Oligopaint FISH",
+      "description": "Cells were hybridized with the Oligopaint fluorescent probes using a DNA FISH protocol, which is briefly described in the article and a detailed protocol can be found in Szabo et al. (PMID: 32820407; DOI: 10.1007/978-1-0716-0664-3_13). Here, pairs of Oligopaint probes labeled with Alexa Fluor 488 and ATTO 565 fluorophores were used for OFs and 3D distance measurements, only Oligopaint probes labeled with ATTO 565 were used to count the number of  CNDs inside TADs. The number of oligos per Oligopaint probe depends on its genomic size and the density of oligos found in that region. The coordinates, the size and the number of oligos for each Oligopaint probe can be found in the Extended Data Fig.9 of the article. Each oligo carryies 3 fluorophores allowing a robust fluorescent signal of each Oligopaint probe. Nuclei were counterstained with DAPI. Coverslips containing cells were mounted on slides with VECTASHIELD and sealed with nail polish. 3D-SIM imaging was performed with a DeltaVision OMX V4 microscope equipped with a x100/1.4 numerical aperture (NA) Plan Super Apochromat oil immersion objective (Olympus) and electron-multiplying charge-coupled device (Evolve 512B; Photometrics) camera for a pixel size of 80 nm. Diode lasers at 405, 488, 561 and 647 nm were used with the standard corresponding emission filters. Z-stacks were acquired by scanning the sample in the axial direction (z-step of 125 nm) using 5 phases and 3 angles per image plane. Raw images were reconstructed using SoftWorx v.6.5 (GE Healthcare Systems) using channel-specific optical transfer functions (pixel size of reconstructed images = 40 nm). The quality of reconstructed images was assessed using the SIMcheck plugin (doi: 10.1038/srep15915) of ImageJ v.1.52i.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0011016"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "Otsu's method and watershed segmentation",
+      "description": "Multiple channel images were aligned using Chromagnon (doi: 10.1038/s41598-018-25922-7). Images were smoothed using 3D Gaussian filters (σ = 0.5), and FISH probes were segmented in 3D using Otsu’s method. Segmented objects smaller than 0.04 μm3 or in contact to the image border were discarded. Images with more than one segmented object per channel were discarded. For CND quantification, the watershed function was applied to the complement of the scaled intensity values (0 to 1, without Gaussian filter) within ROIs defined by the full probe segmentations described above. Watershed segmented objects smaller than 0.0072 μm3 were discarded."
+    },
+    {
+      "@id": "#experiment-biosample-2",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Mouse neural progenitor cells (NPCs) were obtained in the conditions described below (see Protocol Description) and they were fixed on coverslips prior to the Fluorescent in situ Hybridization (DNA FISH) procedure. A large set of Oligopaint probes covering Topologically Associating Domains (TADs) of various size and various epigenetic signatures were used for the DNA FISH. Coverslips with hybridized cells were then observed with Structured Illumination Microscopy (3D-SIM). This approach allows for the description of TAD organization in mouse NPCs (Overlap Fractions (OFs) and 3D distances with consecutive Oligopaint probes within TADs or between TADs, see the article) and the identification of TAD sub-structures, dubbed Chromatin NanoDomains (CNDs), by applying watershed-segmentation on the Oligopaint probe fluorescent signal. These data were compared to the ESC conditions from Experiment Mouse_ESC_TADs. NPC from cryo-section of mouse brain neocortex of  E14.5 C57BL/6J embryos (ncxNPC) were subjected to the DNA FISH procedure as in Experiment Mouse_ESC_TADs. Two pairs of TAD probes were observed and were monitored by pair to compare their degree of intermingling (Overlap Fractions (OFs) and 3D distances with consecutive Oligopaint probes between adjacent TADs, see the article) with ESCs from Experiment Mouse_ESC_TADs and this experiment. Slides with hybridized cells were observed with 3D-SIM."
+    },
+    {
+      "@id": "#experiment-protocol-2-0",
+      "@type": "LabProtocol",
+      "name": "structured illumination microscopy (SIM)",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000332"
+        }
+      ],
+      "description": "Mouse neural progenitor cells (NPCs) were obtained in the conditions described below (see Protocol Description) and they were fixed on coverslips prior to the Fluorescent in situ Hybridization (DNA FISH) procedure. A large set of Oligopaint probes covering Topologically Associating Domains (TADs) of various size and various epigenetic signatures were used for the DNA FISH. Coverslips with hybridized cells were then observed with Structured Illumination Microscopy (3D-SIM). This approach allows for the description of TAD organization in mouse NPCs (Overlap Fractions (OFs) and 3D distances with consecutive Oligopaint probes within TADs or between TADs, see the article) and the identification of TAD sub-structures, dubbed Chromatin NanoDomains (CNDs), by applying watershed-segmentation on the Oligopaint probe fluorescent signal. These data were compared to the ESC conditions from Experiment Mouse_ESC_TADs. NPC from cryo-section of mouse brain neocortex of  E14.5 C57BL/6J embryos (ncxNPC) were subjected to the DNA FISH procedure as in Experiment Mouse_ESC_TADs. Two pairs of TAD probes were observed and were monitored by pair to compare their degree of intermingling (Overlap Fractions (OFs) and 3D distances with consecutive Oligopaint probes between adjacent TADs, see the article) with ESCs from Experiment Mouse_ESC_TADs and this experiment. Slides with hybridized cells were observed with 3D-SIM."
+    },
+    {
+      "@id": "#experiment-protocol-2-1",
+      "@type": "LabProtocol",
+      "name": "Mouse ESCs standard culture and differentiation into NPCs",
+      "description": "In the NPC dataset, mouse ESCs described in Experiment Mouse_ESC_TADs were differentiated into NPCs as described by Gaspard et al. (doi: 10.1038/nprot.2009.157) with the following changes. Cells were plated (2.5 x 10e5 cells per 10-cm dish) on 0.1% gelatin-coated dishes in the ESC medium described in Experiment Mouse_ESC_TADs. After 1 day, cells were cultured in DDM medium (DMEM/F-12, GlutaMAX supplement; catalog no. 31331028; Gibco), supplemented with 0.05% bovine albumin fraction (catalog no. 15260037; Gibco), 1x MEM non-essential amino acids, 50 U penicillin-streptomycin, 1x N-2 supplement (catalog no. 17502048; Gibco), 1 mM sodium pyruvate and 0.1 mM 2-mercaptoethanol. From day 2 to day 10, medium was changed every 2 days and cyclopamine V. californicum (catalog no. 239803; Merck Millipore) was added to the medium (final concentration of 0.4ug/ml). After 12 days of differentiation, cells were dissociated with StemPro Accutase (catalog no. A1110501; Gibco), plated on 6-well plates (containing an autoclaved glass coverslip (170 ± 5 μm (ZEISS)) coated with poly-L-lysine (catalog no. P2636; Sigma-Aldrich)/laminin (catalog no. 11243217001; Sigma-Aldrich) and cultured in a 1:1 mixture of DDM and neurobasal medium (catalog no. 21103049; Gibco) supplemented with 1X B-27 supplement minus vitamin A (catalog no. 12587010; Gibco) and 1x GlutaMAX supplement and 50 U penicillin-streptomycin for an additional 2 days (day 12 + 2) to obtain NPCs. Coverslips containing NPCs were then washed once with PBS before fixation prior to the FISH procedure. For the ncxNPC dataset, Mouse brains from E14.5 C57BL/6J embryos were dissected and fixed in 4% paraformaldehyde (PFA) overnight at 4°C. They were then cryopreserved for 24 h at 4°C in a PBS-20% sucrose solution. After embedding in optimal cutting temperature compound and rapid freezing in isopentane, brains were sectioned at 10-um width on glass slides with a cryostat (Leica Biosystems). Slides containing fixed mouse brain neocortex were then submitted to the FISH procedure.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-2-2",
+      "@type": "LabProtocol",
+      "name": "NPC differentiation",
+      "description": "For NPC differentiation conditions and ncxNPC preparation (see details of the protocol on the left column).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-2-3",
+      "@type": "LabProtocol",
+      "name": "Oligopaint FISH",
+      "description": "Cells were hybridized with the Oligopaint fluorescent probes using a DNA FISH protocol, which is briefly described in the article and a detailed protocol can be found in Szabo et al. (PMID: 32820407; DOI: 10.1007/978-1-0716-0664-3_13). Here, pairs of Oligopaint probes labeled with Alexa Fluor 488 and ATTO 565 fluorophores were used for OFs  and 3D distance measurements, only Oligopaint probes labeled with ATTO 565 were used to count the number of  CNDs inside TADs. The number of oligos per Oligopaint probe depends on its genomic size and the density of oligos found in that region. The coordinates, the size and the number of oligos for each Oligopaint probe can be found in the Extended Data Fig.9 of the article. Each oligo carryies 3 fluorophores allowing a robust fluorescent signal of each Oligopaint probe. Nuclei were counterstained with DAPI. Coverslips containing cells were mounted on slides with VECTASHIELD and sealed with nail polish. 3D-SIM imaging was performed with a DeltaVision OMX V4 microscope equipped with a x100/1.4 numerical aperture (NA) Plan Super Apochromat oil immersion objective (Olympus) and electron-multiplying charge-coupled device (Evolve 512B; Photometrics) camera for a pixel size of 80 nm. Diode lasers at 405, 488, 561 and 647 nm were used with the standard corresponding emission filters. Z-stacks were acquired by scanning the sample in the axial direction (z-step of 125 nm) using 5 phases and 3 angles per image plane. Raw images were reconstructed using SoftWorx v.6.5 (GE Healthcare Systems) using channel-specific optical transfer functions (pixel size of reconstructed images = 40 nm). The quality of reconstructed images was assessed using the SIMcheck plugin (doi: 10.1038/srep15915) of ImageJ v.1.52i.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0011016"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-2-4",
+      "@type": "LabProtocol",
+      "name": "Otsu's method and watershed segmentation",
+      "description": "Multiple channel images were aligned using Chromagnon (doi: 10.1038/s41598-018-25922-7). Images were smoothed using 3D Gaussian filters (σ = 0.5), and FISH probes were segmented in 3D using Otsu’s method. Segmented objects smaller than 0.04 μm3 or in contact to the image border were discarded. Images with more than one segmented object per channel were discarded. For CND quantification, the watershed function was applied to the complement of the scaled intensity values (0 to 1, without Gaussian filter) within ROIs defined by the full probe segmentations described above. Watershed segmented objects smaller than 0.0072 μm3 were discarded."
+    },
+    {
+      "@id": "#experiment-biosample-3",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Same experience as in Mouse_ESC_TADs, but with mouse CTCF-AID ES cells allowing for the rapid degradation of the CTCF factor. Assays CTCF-AID_AUX and CTCF-AID_AUX-CTL (control) were performed in parallel with and without Auxin, respectively. Auxin treatment induces the rapid degradation of CTCF."
+    },
+    {
+      "@id": "#experiment-protocol-3-0",
+      "@type": "LabProtocol",
+      "name": "structured illumination microscopy (SIM)",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000332"
+        }
+      ],
+      "description": "Same experience as in Mouse_ESC_TADs, but with mouse CTCF-AID ES cells allowing for the rapid degradation of the CTCF factor. Assays CTCF-AID_AUX and CTCF-AID_AUX-CTL (control) were performed in parallel with and without Auxin, respectively. Auxin treatment induces the rapid degradation of CTCF."
+    },
+    {
+      "@id": "#experiment-protocol-3-1",
+      "@type": "LabProtocol",
+      "name": "Mouse ESCs standard culture",
+      "description": "Mouse CTCF-AID ES cells (ID no. EN204.3; doi: 10.1016/j.molcel.2019.08.015) were cultured in the same condition as in Experiment Mouse_ESC_TADs. The induction of CTCF degradation by the Auxin-inducible degron (AID) system (referred to as AUX) was performed as described in Nora et al. (doi: 10.1016/j.cell.2017.05.004). Two days before the FISH, approximately 150.000 cells were plated in a 6-well plate containing an autoclaved glass coverslip (170 ± 5 μm (ZEISS)) coated with 0.1% gelatin, with medium containing indole-3-acetic acid sodium salt (final concentration at 500 µM) (auxin analog; catalog no. 16954; Cayman Chemical), and fresh medium-containing Auxin replacement after one day. Mouse ESCs were grown on the coverslip for a total of 2 days in the presence of Auxin and washed once with PBS before fixation prior to the FISH procedure.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-3-2",
+      "@type": "LabProtocol",
+      "name": "No treatment or Auxin treatment",
+      "description": "No specific treatment or Auxin treatment for 2 days for CTCF degradation (see details on the left column).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-3-3",
+      "@type": "LabProtocol",
+      "name": "Oligopaint FISH",
+      "description": "Cells were hybridized with the Oligopaint fluorescent probes using a DNA FISH protocol, which is briefly described in the article and a detailed protocol can be found in Szabo et al. (PMID: 32820407; DOI: 10.1007/978-1-0716-0664-3_13). Here, pairs of Oligopaint probes labeled with ATTO 565 and ATTO 647 fluorophores were used for OFs  and 3D distance measurements, only Oligopaint probes labeled with ATTO 565 were used to count the number of  CNDs inside TADs. The number of oligos per Oligopaint probe depends on its genomic size and the density of oligos found in that region. The coordinates, the size and the number of oligos for each Oligopaint probe can be found in the Extended Data Fig.9 of the article. Each oligo carryies 3 fluorophores allowing a robust fluorescent signal of each Oligopaint probe. Nuclei were counterstained with DAPI. Coverslips containing cells were mounted on slides with VECTASHIELD and sealed with nail polish. 3D-SIM imaging was performed with a DeltaVision OMX V4 microscope equipped with a x100/1.4 numerical aperture (NA) Plan Super Apochromat oil immersion objective (Olympus) and electron-multiplying charge-coupled device (Evolve 512B; Photometrics) camera for a pixel size of 80 nm. Diode lasers at 405, 488, 561 and 647 nm were used with the standard corresponding emission filters. Z-stacks were acquired by scanning the sample in the axial direction (z-step of 125 nm) using 5 phases and 3 angles per image plane. Raw images were reconstructed using SoftWorx v.6.5 (GE Healthcare Systems) using channel-specific optical transfer functions (pixel size of reconstructed images = 40 nm). The quality of reconstructed images was assessed using the SIMcheck plugin (doi: 10.1038/srep15915) of ImageJ v.1.52i.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0011016"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-3-4",
+      "@type": "LabProtocol",
+      "name": "Otsu's method and watershed segmentation",
+      "description": "Multiple channel images were aligned using Chromagnon (doi: 10.1038/s41598-018-25922-7). Images were smoothed using 3D Gaussian filters (σ = 0.5), and FISH probes were segmented in 3D using Otsu’s method. Segmented objects smaller than 0.04 μm3 or in contact to the image border were discarded. Images with more than one segmented object per channel were discarded. For CND quantification, the watershed function was applied to the complement of the scaled intensity values (0 to 1, without Gaussian filter) within ROIs defined by the full probe segmentations described above. Watershed segmented objects smaller than 0.0072 μm3 were discarded."
+    },
+    {
+      "@id": "#experiment-biosample-4",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Same experience as in  Mouse_ESC_TADs, but with mouse RAD21-AID ES cells allowing for the rapid degradation of RAD21, a cohesin complex subunit. Assays RAD21-AID_AUX and RAD21-AID_AUX-CTL (control) were performed in parallel with and without Auxin, respectively. Auxin treatment induces the rapid degradation of RAD21."
+    },
+    {
+      "@id": "#experiment-protocol-4-0",
+      "@type": "LabProtocol",
+      "name": "structured illumination microscopy (SIM)",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000332"
+        }
+      ],
+      "description": "Same experience as in  Mouse_ESC_TADs, but with mouse RAD21-AID ES cells allowing for the rapid degradation of RAD21, a cohesin complex subunit. Assays RAD21-AID_AUX and RAD21-AID_AUX-CTL (control) were performed in parallel with and without Auxin, respectively. Auxin treatment induces the rapid degradation of RAD21."
+    },
+    {
+      "@id": "#experiment-protocol-4-1",
+      "@type": "LabProtocol",
+      "name": "Mouse ESCs standard culture",
+      "description": "Mouse RAD21-AID cells (EN272.2 cell line, this study) were cultured in the same condition as in Experiment Mouse_ESC_TADs. The induction of RAD21 degradation by the Auxin-inducible degron (AID) system (referred to as AUX) was performed as described in this study. Two days before the FISH, approximately 150.000 cells were plated in a 6-well plate containing an autoclaved glass coverslip (170 ± 5 μm (ZEISS)) coated with 0.1% gelatin, with fresh medium replacement after one day. The day of the collection, medium was replaced with fresh medium containing indole-3-acetic acid sodium salt (final concentration at 500 µM) (auxin analog; catalog no. 16954; Cayman Chemical) for 6h. Mouse ESCs were grown on the coverslip for a total of 2 days, induced the last 6 hours with Auxin and washed once with PBS before fixation prior to the FISH procedure.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-4-2",
+      "@type": "LabProtocol",
+      "name": "No treatment or Auxin treatment",
+      "description": "No specific treatment or Auxin treatment for 6 hours for RAD21 degradation (see details on the left column).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-4-3",
+      "@type": "LabProtocol",
+      "name": "Oligopaint FISH",
+      "description": "Cells were hybridized with the Oligopaint fluorescent probes using a DNA FISH protocol, which is briefly described in the article and a detailed protocol can be found in Szabo et al. (PMID: 32820407; DOI: 10.1007/978-1-0716-0664-3_13). Here, pairs of Oligopaint probes labeled with ATTO 565 and ATTO 647 fluorophores were used for OFs  and 3D distance measurements, only Oligopaint probes labeled with ATTO 565 were used to count the number of  CNDs inside TADs. The number of oligos per Oligopaint probe depends on its genomic size and the density of oligos found in that region. The coordinates, the size and the number of oligos for each Oligopaint probe can be found in the Extended Data Fig.9 of the article. Each oligo carryies 3 fluorophores allowing a robust fluorescent signal of each Oligopaint probe. Nuclei were counterstained with DAPI. Coverslips containing cells were mounted on slides with VECTASHIELD and sealed with nail polish. 3D-SIM imaging was performed with a DeltaVision OMX V4 microscope equipped with a x100/1.4 numerical aperture (NA) Plan Super Apochromat oil immersion objective (Olympus) and electron-multiplying charge-coupled device (Evolve 512B; Photometrics) camera for a pixel size of 80 nm. Diode lasers at 405, 488, 561 and 647 nm were used with the standard corresponding emission filters. Z-stacks were acquired by scanning the sample in the axial direction (z-step of 125 nm) using 5 phases and 3 angles per image plane. Raw images were reconstructed using SoftWorx v.6.5 (GE Healthcare Systems) using channel-specific optical transfer functions (pixel size of reconstructed images = 40 nm). The quality of reconstructed images was assessed using the SIMcheck plugin (doi: 10.1038/srep15915) of ImageJ v.1.52i.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0011016"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-4-4",
+      "@type": "LabProtocol",
+      "name": "Otsu's method and watershed segmentation",
+      "description": "Multiple channel images were aligned using Chromagnon (doi: 10.1038/s41598-018-25922-7). Images were smoothed using 3D Gaussian filters (σ = 0.5), and FISH probes were segmented in 3D using Otsu’s method. Segmented objects smaller than 0.04 μm3 or in contact to the image border were discarded. Images with more than one segmented object per channel were discarded. For CND quantification, the watershed function was applied to the complement of the scaled intensity values (0 to 1, without Gaussian filter) within ROIs defined by the full probe segmentations described above. Watershed segmented objects smaller than 0.0072 μm3 were discarded."
+    },
+    {
+      "@id": "#experiment-biosample-5",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Using the same cells as in Mouse_ESC_TADs, immobilized cells on a coverslip were fixed and nuclei were counterstained with DAPI for CND segmentation without the FISH procedure. DAPI stained nuclei were then observed with Structured Illumination Microscopy (3D-SIM)."
+    },
+    {
+      "@id": "#experiment-protocol-5-0",
+      "@type": "LabProtocol",
+      "name": "structured illumination microscopy (SIM)",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000332"
+        }
+      ],
+      "description": "Using the same cells as in Mouse_ESC_TADs, immobilized cells on a coverslip were fixed and nuclei were counterstained with DAPI for CND segmentation without the FISH procedure. DAPI stained nuclei were then observed with Structured Illumination Microscopy (3D-SIM)."
+    },
+    {
+      "@id": "#experiment-protocol-5-1",
+      "@type": "LabProtocol",
+      "name": "Mouse ESCs standard culture",
+      "description": "Standard E14 cell line (E14Tg2a.4) from MMRRC, UC Davis, were cultured in the same condition as in Experiment Mouse_ESC_TADs. Two days before the labeling, approximately 150.000 cells were plated in a 6-well plate containing an autoclaved glass coverslip (170 ± 5 μm (ZEISS)) coated with 0.1% gelatin, with fresh medium replacement after one day. Mouse ESCs were grown on the coverslip for a total of 2 days and washed once with PBS before fixation.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-5-2",
+      "@type": "LabProtocol",
+      "name": "No treatment",
+      "description": "No specific treatment",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-5-3",
+      "@type": "LabProtocol",
+      "name": "DAPI staining without FISH",
+      "description": "Cells were fixed, permeabilized for 10 min in PBS/0.5% Triton X-100, rinsed in PBS, and incubated for 10 min in PBS  with DAPI (final concentration at 1 μg ml−1) and washed again at least 3 times for 5 min each in PBS. Coverslips containing cells were mounted on slides with VECTASHIELD and sealed with nail polish. 3D-SIM imaging was performed with a DeltaVision OMX V4 microscope equipped with a x100/1.4 numerical aperture (NA) Plan Super Apochromat oil immersion objective (Olympus) and electron-multiplying charge-coupled device (Evolve 512B; Photometrics) camera for a pixel size of 80 nm. Diode lasers at 405, 488, 561 and 647 nm were used with the standard corresponding emission filters. Z-stacks were acquired by scanning the sample in the axial direction (z-step of 125 nm) using 5 phases and 3 angles per image plane. Raw images were reconstructed using SoftWorx v.6.5 (GE Healthcare Systems) using channel-specific optical transfer functions (pixel size of reconstructed images = 40 nm). The quality of reconstructed images was assessed using the SIMcheck plugin (doi: 10.1038/srep15915) of ImageJ v.1.52i.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0011016"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-5-4",
+      "@type": "LabProtocol",
+      "name": "Otsu's method and watershed segmentation",
+      "description": "A single z-slice was extracted and DAPI was segmented using Otsu’s method; objects smaller than 0.0144 μm2 were discarded. Watershed was applied to the complement of the scaled intensity values (0 to 1, without Gaussian filter) within ROIs defined by the DAPI segmentation."
+    },
+    {
+      "@id": "#experiment-biosample-6",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Using staged 15-16 Drosophila embryos (Drosophila melanogaster), derived cells were immobilized on a coverslip, fixed and  nuclei were counterstained with DAPI for CND segmentation without the FISH procedure. DAPI stained nuclei were then observed with Structured Illumination Microscopy (3D-SIM)."
+    },
+    {
+      "@id": "#experiment-protocol-6-0",
+      "@type": "LabProtocol",
+      "name": "structured illumination microscopy (SIM)",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000332"
+        }
+      ],
+      "description": "Using staged 15-16 Drosophila embryos (Drosophila melanogaster), derived cells were immobilized on a coverslip, fixed and  nuclei were counterstained with DAPI for CND segmentation without the FISH procedure. DAPI stained nuclei were then observed with Structured Illumination Microscopy (3D-SIM)."
+    },
+    {
+      "@id": "#experiment-protocol-6-1",
+      "@type": "LabProtocol",
+      "name": "Drosophila culture",
+      "description": "Flies (Drosophila melanogaster) were raised in standard cornmeal yeast extract medium at 21°C. Embryos were collected on agar/vinegar plates at stages 15-16 after egg laying, equivalent to a development of 12-16 h at 25°C. Embryos were manually dechorionated on a double-sided adhesive tape and displayed on an agar/vinegar plate to avoid drying during manual selection under a GFP binocular. A Y-GFP reporter line was used to select WT GFP+ male embryos (Szabo et al., doi: 10.1126/sciadv.aar8082).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-6-2",
+      "@type": "LabProtocol",
+      "name": "No treatment",
+      "description": "4-5 selected dechorionated male embryos were disposed in the center of a glass coverslip (170 ± 5 μm (ZEISS)) coated with 1:10 poly-L-lysine (catalog no. P8920; Sigma-Aldrich) and squeezed directly on the coverslip with a Dumont #55 tweezer to produce a monolayer of cells.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-6-3",
+      "@type": "LabProtocol",
+      "name": "DAPI staining without FISH",
+      "description": "Cells were fixed, permeabilized for 10 min in PBS/0.5% Triton X-100, rinsed in PBS, and incubated for 10 min in PBS  with DAPI (final concentration at 1 μg ml−1) and washed again at least 3 times for 5 min each in PBS. Coverslips containing cells were mounted on slides with VECTASHIELD and sealed with nail polish. 3D-SIM imaging was performed with a DeltaVision OMX V4 microscope equipped with a x100/1.4 numerical aperture (NA) Plan Super Apochromat oil immersion objective (Olympus) and electron-multiplying charge-coupled device (Evolve 512B; Photometrics) camera for a pixel size of 80 nm. Diode lasers at 405, 488, 561 and 647 nm were used with the standard corresponding emission filters. Z-stacks were acquired by scanning the sample in the axial direction (z-step of 125 nm) using 5 phases and 3 angles per image plane. Raw images were reconstructed using SoftWorx v.6.5 (GE Healthcare Systems) using channel-specific optical transfer functions (pixel size of reconstructed images = 40 nm). The quality of reconstructed images was assessed using the SIMcheck plugin (doi: 10.1038/srep15915) of ImageJ v.1.52i.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0011016"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-6-4",
+      "@type": "LabProtocol",
+      "name": "Otsu's method and watershed segmentation",
+      "description": "A single z-slice was extracted and DAPI was segmented using Otsu’s method; objects smaller than 0.0144 μm2 were discarded. Watershed was applied to the complement of the scaled intensity values (0 to 1, without Gaussian filter) within ROIs defined by the DAPI segmentation."
+    },
+    {
+      "@id": "#experiment-biosample-7",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Using staged 15-16 Drosophila embryos (Drosophila melanogaster), derived cells were immobilized on a coverslip, fixed and submitted to the DNA FISH procedure using an Oligopaint probe targetting a drosophila TAD of 110 kb located on the X Chromosome. Coverslips with hybridized cells were then observed with Structured Illumination Microscopy (3D-SIM). This approach allows for the description of TAD organization in Drosphila cells. In this species, TADs ressemble CNDs in term of genomic size, diameter and volume."
+    },
+    {
+      "@id": "#experiment-protocol-7-0",
+      "@type": "LabProtocol",
+      "name": "structured illumination microscopy (SIM)",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000332"
+        }
+      ],
+      "description": "Using staged 15-16 Drosophila embryos (Drosophila melanogaster), derived cells were immobilized on a coverslip, fixed and submitted to the DNA FISH procedure using an Oligopaint probe targetting a drosophila TAD of 110 kb located on the X Chromosome. Coverslips with hybridized cells were then observed with Structured Illumination Microscopy (3D-SIM). This approach allows for the description of TAD organization in Drosphila cells. In this species, TADs ressemble CNDs in term of genomic size, diameter and volume."
+    },
+    {
+      "@id": "#experiment-protocol-7-1",
+      "@type": "LabProtocol",
+      "name": "Drosophila culture",
+      "description": "Flies (Drosophila melanogaster) were raised and embryos were processed as described in Experiment Drosophila_DAPI. To analyze the 110 kb Drosophila TAD in an haploid context, that is, on chromosome X in male embryos, a Y-GFP reporter line (see genotype above) was used to select WT GFP+ male embryos (Szabo et al., doi: 10.1126/sciadv.aar8082). For the sake of homogeneity and simplicity, the same Drosophila line was used in Experiment Drosophila_DAPI.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-7-2",
+      "@type": "LabProtocol",
+      "name": "No treatment",
+      "description": "4-5 selected dechorionated male embryos were disposed in the center of a glass coverslip (170 ± 5 μm (ZEISS)) coated with 1:10 poly-L-lysine (catalog no. P8920; Sigma-Aldrich) and squeezed directly on the coverslip with a Dumont #55 tweezer to produce a monolayer of cells.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-7-3",
+      "@type": "LabProtocol",
+      "name": "Oligopaint FISH",
+      "description": "Cells were hybridized with the Oligopaint fluorescent probe using a DNA FISH protocol, which is briefly described in the article and a detailed protocol can be found in Szabo et al. (PMID: 32820407; DOI: 10.1007/978-1-0716-0664-3_13). Here, the Oligopaint probe was labeled with ATTO 565 fluorophore. The coordinates, the size and the number of oligos for the Drosophila TAD probe can be found in the Extended Data Fig.9 of the article. Each oligo of the probe carries 3 fluorophores. Nuclei were counterstained with DAPI. Coverslips containing cells were mounted on slides with VECTASHIELD and sealed with nail polish. 3D-SIM imaging was performed with a DeltaVision OMX V4 microscope equipped with a x100/1.4 numerical aperture (NA) Plan Super Apochromat oil immersion objective (Olympus) and electron-multiplying charge-coupled device (Evolve 512B; Photometrics) camera for a pixel size of 80 nm. Diode lasers at 405, 488, 561 and 647 nm were used with the standard corresponding emission filters. Z-stacks were acquired by scanning the sample in the axial direction (z-step of 125 nm) using 5 phases and 3 angles per image plane. Raw images were reconstructed using SoftWorx v.6.5 (GE Healthcare Systems) using channel-specific optical transfer functions (pixel size of reconstructed images = 40 nm). The quality of reconstructed images was assessed using the SIMcheck plugin (doi: 10.1038/srep15915) of ImageJ v.1.52i.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0011016"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-7-4",
+      "@type": "LabProtocol",
+      "name": "Otsu's method and watershed segmentation",
+      "description": "For comparison with DAPI  (Experiment F), a single z-slice was randomly selected between the minimum and maximum z coordinate of the FISH-segmented object. Watershed was then applied as for DAPI, within ROIs defined by the probe segmentation."
+    }
+  ]
+}

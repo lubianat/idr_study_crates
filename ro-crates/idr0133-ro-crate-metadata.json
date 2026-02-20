@@ -1,0 +1,251 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0133-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0133/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0133/",
+      "@type": "Dataset",
+      "name": "Reference compounds for characterizing cellular injury in high-content cellular morphology assays",
+      "description": "Robust, generalizable approaches to efficiently identify compounds with undesirable mechanisms of action in complex cellular assays remain elusive. Such a process would be useful for hit triage during high-throughput screening and, ultimately, predictive toxicology during drug development. Here, we report on the generation of Cell Painting and cellular health profiles for 218 prototypical cytotoxic and nuisance compounds in U-2 OS cells in a concentration-response format. Compounds causing cellular damage such as cytoskeletal poisons, genotoxins, nonspecific electrophiles, and redox-active compounds produced bioactive Cell Painting morphologies. Further, we show that lower-quality lysine acetyltransferase inhibitors and nonspecific electrophiles can be distinguished from more selective counter-parts. We propose that the purposeful inclusion of cytotoxic and nuisance reference compounds such as those profiled in this Resource will help with assay optimization and compound prioritization in complex cellular assays like Cell Painting.",
+      "datePublished": "2022-07-05",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Dahlin & Hua et al, CC-BY-4.0, 2022",
+      "identifier": "idr0133",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0003-4151-9944"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1038/s41467-023-36829-x"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#screen-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#screen-protocol-1-0"
+        },
+        {
+          "@id": "#screen-protocol-1-1"
+        },
+        {
+          "@id": "#screen-protocol-1-2"
+        },
+        {
+          "@id": "#screen-protocol-1-3"
+        },
+        {
+          "@id": "#screen-protocol-1-4"
+        },
+        {
+          "@id": "#screen-protocol-1-5"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/14002649/"
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0003-4151-9944",
+      "@type": "Person",
+      "name": "Jayme Dahlin",
+      "givenName": "Jayme",
+      "familyName": "Dahlin",
+      "email": "dahlinjl@mail.nih.gov",
+      "address": "NCATS, 9800 Medical Center Drive, Rockville, Maryland, 20850, USA"
+    },
+    {
+      "@id": "https://doi.org/10.1038/s41467-023-36829-x",
+      "@type": "ScholarlyArticle",
+      "name": "Reference compounds for characterizing cellular injury in high-content cellular morphology assays"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#screen-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "We screened 218 prototypical cytotoxic and nuisance compounds in U-2 OS cells in concentration-response format using the Cell Painting assay. From a previous Cell Painting experiment, an additional 283 compounds with either high or no correlation to a gross cell injury morphology were re-tested in single-concentration format.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000246",
+      "@type": "DefinedTerm",
+      "name": "fluorescence microscopy"
+    },
+    {
+      "@id": "#screen-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "description": "We screened 218 prototypical cytotoxic and nuisance compounds in U-2 OS cells in concentration-response format using the Cell Painting assay. From a previous Cell Painting experiment, an additional 283 compounds with either high or no correlation to a gross cell injury morphology were re-tested in single-concentration format."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Please see study publication for details regarding cell culture conditions.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "Please see study publication for details regarding cell treatment conditions.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007571",
+      "@type": "DefinedTerm",
+      "name": "HCS library protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "Prototypical cytotoxic and nuisance compounds were chosen based on literature review, institutional experience, and author experience.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007572",
+      "@type": "DefinedTerm",
+      "name": "HCS image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "HCS image acquisition and feature extraction protocol",
+      "description": "Please see study publication for details regarding labeling, imaging hardware and software, and feature extraction methods.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007573",
+      "@type": "DefinedTerm",
+      "name": "HCS data analysis protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-5",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "Please see study publication for details regarding analysis of the images and features.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    }
+  ]
+}

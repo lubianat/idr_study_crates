@@ -1,0 +1,209 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0096-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0096/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0096/",
+      "@type": "Dataset",
+      "name": "Quantification of Bone Marrow Compartments in Histological Sections",
+      "description": "We report the development of a semi-automated image analysis plug-in, MarrowQuant, which employs the open-source software QuPath, to systematically quantify multiple bone components in H&E sections in an unbiased manner. MarrowQuant discerns and quantifies the areas occupied by bone, adipocyte ghosts, hematopoietic cells and the interstitial/microvascular compartment. A separate feature, AdipoQuant, fragments adipocyte ghosts in H&E-stained sections of extramedullary adipose tissue sections to render adipocyte area and size distribution. Quantification of BM hematopoietic cellularity with MarrowQuant lies within the range of scoring by four independent pathologists, while quantification of the total adipocyte area in whole bone sections compares with volumetric measurements.",
+      "datePublished": "2021-11-10",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Tratwal et al, CC-BY-4.0, 2021",
+      "identifier": "idr0096",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0003-3434-0022"
+        },
+        {
+          "@id": "https://orcid.org/0000-0003-2136-0462"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.3389/fendo.2020.00480"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "#experiment-biosample-2"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-2-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-2-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000243"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/13461816/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0003-3434-0022",
+      "@type": "Person",
+      "name": "Olaia Naveiras",
+      "givenName": "Olaia",
+      "familyName": "Naveiras",
+      "email": "Olaia.Naveiras@unil.ch, olaia.naveiras@epfl.ch",
+      "address": "EPFL SV ISREC, Station 19, CH-1015 Lausanne and Department des Sciences Biomédicales, UNIL – Université de Lausanne, Rue du Bugnon 27, CH-1011 Lausanne"
+    },
+    {
+      "@id": "https://orcid.org/0000-0003-2136-0462",
+      "@type": "Person",
+      "name": "Josefine Tratwal",
+      "givenName": "Josefine",
+      "familyName": "Tratwal",
+      "email": "Josefine.Tratwal@unil.ch",
+      "address": "Quartier UNIL-CHUV, Rue du Bugnon 7, 1005 Lausanne"
+    },
+    {
+      "@id": "https://doi.org/10.3389/fendo.2020.00480",
+      "@type": "ScholarlyArticle",
+      "name": "MarrowQuant in Aging and Aplasia: A Digital Pathology Workflow For Quantification of Bone Marrow Compartments in Histological Sections"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "tissue",
+      "description": "MarrowQuant, a digital and quantitative pathology tool was used to quantify the different compartments within the bone marrow at different conditions, mainly aplasia and aging conditions. By using our tool, we can compare the skeletal map induced by lethal irradiation(aplasia), with longitudinal quantification of the “red-to-yellow-to-red” transition over 2 months (aging) in C57BL/6 mouse femurs and tibiae."
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000243",
+      "@type": "DefinedTerm",
+      "name": "bright-field microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "bright-field microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000243"
+        }
+      ],
+      "description": "MarrowQuant, a digital and quantitative pathology tool was used to quantify the different compartments within the bone marrow at different conditions, mainly aplasia and aging conditions. By using our tool, we can compare the skeletal map induced by lethal irradiation(aplasia), with longitudinal quantification of the “red-to-yellow-to-red” transition over 2 months (aging) in C57BL/6 mouse femurs and tibiae."
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol    treatment protocol    image acquisition and feature extraction protocol    data analysis protocol",
+      "description": "growth protocol    treatment protocol    image acquisition and feature extraction protocol    data analysis protocol"
+    },
+    {
+      "@id": "#experiment-biosample-2",
+      "@type": "BioSample",
+      "name": "tissue",
+      "description": "Away from the Mouse H&E quantification, the current version of MarrowQuant was tested on a small set of H&E bone marrow biopsies from anonymised patients. The tool performs in a comparable way as compared to the gold standard (Pathologists’ scorings), but it needs many optimisations before validating at the level of the human bone marrow biopsies quantifications and in clinical context."
+    },
+    {
+      "@id": "#experiment-protocol-2-0",
+      "@type": "LabProtocol",
+      "name": "bright-field microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000243"
+        }
+      ],
+      "description": "Away from the Mouse H&E quantification, the current version of MarrowQuant was tested on a small set of H&E bone marrow biopsies from anonymised patients. The tool performs in a comparable way as compared to the gold standard (Pathologists’ scorings), but it needs many optimisations before validating at the level of the human bone marrow biopsies quantifications and in clinical context."
+    },
+    {
+      "@id": "#experiment-protocol-2-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol    treatment protocol    image acquisition and feature extraction protocol    data analysis protocol",
+      "description": "growth protocol    treatment protocol    image acquisition and feature extraction protocol    data analysis protocol"
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 989560464998,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "0.9 TB"
+    }
+  ]
+}

@@ -1,0 +1,372 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0080-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0080/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0080/",
+      "@type": "Dataset",
+      "name": "Cell health phenotypes can be predicted from unbiased image-based morphology readouts",
+      "description": "Genetic and chemical perturbations impact diverse cellular phenotypes, including multiple indicators of cell health. These readouts reveal toxicity and antitumorigenic effects relevant to drug discovery and personalized medicine. We present an approach to predict multiple cell health phenotypes using Cell Painting, an inexpensive and scalable image-based morphology assay. In matched CRISPR perturbations of three cancer cell lines, we collected both Cell Painting data and targeted assay readouts from seven reagents that measure specific cell health phenotypes including proliferation, apoptosis, reactive oxygen species (ROS), DNA damage, and aberrant cell cycle stage progression. We showed many of these targeted readouts, which are expensive and tedious to acquire and measure, can be predicted directly from Cell Painting images by simple machine learning algorithms. We hypothesized that these trained models can be applied to accurately predict cell health assay outcomes for any future or existing Cell Painting dataset. We applied the models to a set of 1,500+ compound perturbations across multiple doses and validated the predictions by orthogonal assay readouts, and by confirming mitotic arrest and ROS phenotypes via PLK and proteasome inhibition, respectively. We provide an intuitive web app to browse all predictions at http://broad.io/cell-health-app. Our approach can be extended to other morphology data collected in other batches or by other labs to enable rapid and inexpensive cell health predictions from images.",
+      "datePublished": "2020-12-10",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "copyrightNotice": "Broad Institute of MIT and Harvard, CC0-1.0, 2020",
+      "identifier": "idr0080",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-0503-9348"
+        },
+        {
+          "@id": "https://orcid.org/0000-0003-1555-8261"
+        },
+        {
+          "@id": "https://orcid.org/0000-0002-2857-4685"
+        },
+        {
+          "@id": "https://orcid.org/0000-0003-3150-3025"
+        },
+        {
+          "@id": "#person-5"
+        },
+        {
+          "@id": "#person-6"
+        },
+        {
+          "@id": "#person-7"
+        },
+        {
+          "@id": "#person-8"
+        },
+        {
+          "@id": "#person-9"
+        },
+        {
+          "@id": "#person-10"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1091/mbc.E20-12-0784"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#screen-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#screen-protocol-1-0"
+        },
+        {
+          "@id": "#screen-protocol-1-1"
+        },
+        {
+          "@id": "#screen-protocol-1-2"
+        },
+        {
+          "@id": "#screen-protocol-1-3"
+        },
+        {
+          "@id": "#screen-protocol-1-4"
+        },
+        {
+          "@id": "#screen-protocol-1-5"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/11550334/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-0503-9348",
+      "@type": "Person",
+      "name": "Gregory Way",
+      "givenName": "Gregory",
+      "familyName": "Way",
+      "email": "gregory.way@gmail.com",
+      "address": "415 Main Street, Cambridge, MA 02142"
+    },
+    {
+      "@id": "https://orcid.org/0000-0003-1555-8261",
+      "@type": "Person",
+      "name": "Maria Kost-Alimova",
+      "givenName": "Maria",
+      "familyName": "Kost-Alimova",
+      "email": "malimova@broadinstitute.org",
+      "address": "415 Main Street, Cambridge, MA 02142"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-2857-4685",
+      "@type": "Person",
+      "name": "William Harrington",
+      "givenName": "William",
+      "familyName": "Harrington",
+      "email": "willfharrington@gmail.com",
+      "address": "415 Main Street, Cambridge, MA 02142"
+    },
+    {
+      "@id": "https://orcid.org/0000-0003-3150-3025",
+      "@type": "Person",
+      "name": "Tsukasa Shibue",
+      "givenName": "Tsukasa",
+      "familyName": "Shibue",
+      "email": "tshibue@broadinstitute.org",
+      "address": "415 Main Street, Cambridge, MA 02142"
+    },
+    {
+      "@id": "#person-5",
+      "@type": "Person",
+      "name": "Stanley Gill",
+      "givenName": "Stanley",
+      "familyName": "Gill",
+      "email": "spgill@g.harvard.edu",
+      "address": "415 Main Street, Cambridge, MA 02142"
+    },
+    {
+      "@id": "#person-6",
+      "@type": "Person",
+      "name": "Tim Becker",
+      "givenName": "Tim",
+      "familyName": "Becker",
+      "email": "tim.becker.83@gmail.com",
+      "address": "415 Main Street, Cambridge, MA 02142"
+    },
+    {
+      "@id": "#person-7",
+      "@type": "Person",
+      "name": "William Hahn",
+      "givenName": "William",
+      "familyName": "Hahn",
+      "email": "william_hahn@dfci.harvard.edu",
+      "address": "415 Main Street, Cambridge, MA 02142"
+    },
+    {
+      "@id": "#person-8",
+      "@type": "Person",
+      "name": "Anne Carpenter",
+      "givenName": "Anne",
+      "familyName": "Carpenter",
+      "email": "anne@broadinstitute.org",
+      "address": "415 Main Street, Cambridge, MA 02142"
+    },
+    {
+      "@id": "#person-9",
+      "@type": "Person",
+      "name": "Francisca Vazquez",
+      "givenName": "Francisca",
+      "familyName": "Vazquez",
+      "email": "paquita@broadinstitute.org",
+      "address": "415 Main Street, Cambridge, MA 02142"
+    },
+    {
+      "@id": "#person-10",
+      "@type": "Person",
+      "name": "Shantanu Singh",
+      "givenName": "Shantanu",
+      "familyName": "Singh",
+      "email": "shsingh@broadinstitute.org",
+      "address": "415 Main Street, Cambridge, MA 02142"
+    },
+    {
+      "@id": "https://doi.org/10.1091/mbc.E20-12-0784",
+      "@type": "ScholarlyArticle",
+      "name": "Predicting cell health phenotypes using image-based morphology profiling"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#screen-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "CRISPR perturbations targeting 59 genes",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000246",
+      "@type": "DefinedTerm",
+      "name": "fluorescence microscopy"
+    },
+    {
+      "@id": "#screen-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "description": "CRISPR perturbations targeting 59 genes"
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "We determined growth conditions for each Cas9- expressing cell line independently to achieve 90% confluence after five days of lentiviral infection at CRISPR infection day five.  Starting cell densities per well: A549 - 350,  ES2 - 375, and HCC44 - 150 cells.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "We optimized sgRNA lentivirus volume and polybrene concentration for each plate independently.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007571",
+      "@type": "DefinedTerm",
+      "name": "HCS library protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "We selected genes that are known to induce viability differences in cancer cell lines, and to span multiple biological pathways.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007572",
+      "@type": "DefinedTerm",
+      "name": "HCS image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "HCS image acquisition and feature extraction protocol",
+      "description": "We used CellProfiler to extract morphology features,Complete downstream processing details are available at https://github.com/broadinstitute/cell-health",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007573",
+      "@type": "DefinedTerm",
+      "name": "HCS data analysis protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-5",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "HCS data analysis protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 2199023255552,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "2.0 TB"
+    }
+  ]
+}

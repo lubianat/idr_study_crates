@@ -1,0 +1,320 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0127-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0127/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0127/",
+      "@type": "Dataset",
+      "name": "Quantification of within patient Staphylococcus aureus phenotypic heterogeneity as a proxy for presence of persisters across clinical presentations",
+      "description": "Staphylococcus aureus was isolated from patients suffering cardiovascular, prosthetic joint or other infections and plated on Columbia sheep blood agar. Macroscopic time-lapse imaging was performed to quantify colony appearance-time and growth-rate. As a baseline reference, the same time-lapse imaging protocol was used after subculturing clinical isolates in tryptic soy broth until bacteria reached exponential growth phase.",
+      "datePublished": "2022-02-28",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Baer et al, CC-BY-4.0, 2022",
+      "identifier": "idr0127",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0003-1929-0338"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1016/j.cmi.2022.01.021"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "#experiment-biosample-2"
+        },
+        {
+          "@id": "#experiment-biosample-3"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_1280"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-2-0"
+        },
+        {
+          "@id": "#experiment-protocol-3-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "#experiment-protocol-1-4"
+        },
+        {
+          "@id": "#experiment-protocol-2-1"
+        },
+        {
+          "@id": "#experiment-protocol-2-2"
+        },
+        {
+          "@id": "#experiment-protocol-2-3"
+        },
+        {
+          "@id": "#experiment-protocol-2-4"
+        },
+        {
+          "@id": "#experiment-protocol-3-1"
+        },
+        {
+          "@id": "#experiment-protocol-3-2"
+        },
+        {
+          "@id": "#experiment-protocol-3-3"
+        },
+        {
+          "@id": "#experiment-protocol-3-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000240"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/13966192/"
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0003-1929-0338",
+      "@type": "Person",
+      "name": "Julian Baer",
+      "givenName": "Julian",
+      "familyName": "Baer",
+      "email": "julian.baer@usz.ch",
+      "address": "Raemistrasse 100, 8091 Zurich, Switzerland"
+    },
+    {
+      "@id": "https://doi.org/10.1016/j.cmi.2022.01.021",
+      "@type": "ScholarlyArticle",
+      "name": "Quantification of within patient Staphylococcus aureus phenotypic heterogeneity as a proxy for presence of persisters across clinical presentations"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_1280",
+      "@type": "Taxon",
+      "scientificName": "Staphylococcus aureus"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Bacteria were directly isolated from patient material and then spread-plated on Columbia Sheep Blood agar plates. Samples were time-lapse imaged.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_1280"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000240",
+      "@type": "DefinedTerm",
+      "name": "macroscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "macroscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000240"
+        }
+      ],
+      "description": "Bacteria were directly isolated from patient material and then spread-plated on Columbia Sheep Blood agar plates. Samples were time-lapse imaged."
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "To monitor growth of bacterial colonies, Columbia Sheep Blood agar plates were incubated at 37° C directly upon isolation from patient material imaged automatically every ten minutes Canon EOS 1200D (raw RGB images, only G channel uploaded) or a Basler acA5472-17um 20MP camera with a Fujinon Objective CF16ZA-1S 16 mm/1.8M37.5 A-0.5 (grayscale images)."
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "Analysed with ColTapp (https://doi.org/10.1038/s41598-020-72979-4)."
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    },
+    {
+      "@id": "#experiment-biosample-2",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Bacteria were directly isolated from patient material and then spread-plated on Columbia Sheep Blood agar plates. Samples were endpoint (single isolated timepoint, usually 24h and 48h) imaged.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_1280"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-2-0",
+      "@type": "LabProtocol",
+      "name": "macroscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000240"
+        }
+      ],
+      "description": "Bacteria were directly isolated from patient material and then spread-plated on Columbia Sheep Blood agar plates. Samples were endpoint (single isolated timepoint, usually 24h and 48h) imaged."
+    },
+    {
+      "@id": "#experiment-protocol-2-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "To monitor growth of bacterial colonies, Columbia Sheep Blood agar plates were incubated at 37° C directly upon isolation from patient material and images were manually acquired with a Canon EOS 1200D (raw RGB images, only G channel uploaded)."
+    },
+    {
+      "@id": "#experiment-protocol-2-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "Analysed with ColTapp (https://doi.org/10.1038/s41598-020-72979-4)."
+    },
+    {
+      "@id": "#experiment-protocol-2-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#experiment-protocol-2-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    },
+    {
+      "@id": "#experiment-biosample-3",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "After Experiment A or B, bacteria were stored at -80°C. Bacteria were restreaked on columbia sheep blood agar and single colonies inoculated in tryptic soy broth for overnight growth. These cultures were dilute 1:10 and incubated for 2h. From these exponential cultures, time-lapse imaging was started.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_1280"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-3-0",
+      "@type": "LabProtocol",
+      "name": "macroscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000240"
+        }
+      ],
+      "description": "After Experiment A or B, bacteria were stored at -80°C. Bacteria were restreaked on columbia sheep blood agar and single colonies inoculated in tryptic soy broth for overnight growth. These cultures were dilute 1:10 and incubated for 2h. From these exponential cultures, time-lapse imaging was started."
+    },
+    {
+      "@id": "#experiment-protocol-3-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Bacteria were restreaked on columbia sheep blood agar and single colonies inoculated in tryptic soy broth for overnight growth. These cultures were dilute 1:10 and incubated for 2h. From these exponential cultures, time-lapse imaging was started with a Canon EOS 1200D (raw RGB images, only G channel uploaded) or a Basler acA5472-17um 20MP camera with a Fujinon Objective CF16ZA-1S 16 mm/1.8M37.5 A-0.5 (grayscale images)."
+    },
+    {
+      "@id": "#experiment-protocol-3-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "Analysed with ColTapp (https://doi.org/10.1038/s41598-020-72979-4)."
+    },
+    {
+      "@id": "#experiment-protocol-3-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#experiment-protocol-3-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    }
+  ]
+}

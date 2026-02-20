@@ -1,0 +1,318 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0089-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0089/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0089/",
+      "@type": "Dataset",
+      "name": "Cold-induced chromatin compaction and nuclear retention of clock mRNAs resets the circadian rhythm",
+      "description": "Cooling patients to sub-physiological temperatures is an integral part of modern medicine. We show that cold exposure induces temperature-specific changes to the higher-order chromatin and gene expression profiles of human cells. These changes are particularly dramatic at 18°C, a temperature synonymous with that experienced by patients undergoing controlled deep-hypothermia during surgery. Cells exposed to 18°C exhibit largely nuclear-restricted transcriptome changes. These include the nuclear accumulation of core circadian clock suppressor gene transcripts, most notably REV-ERBα. This response is accompanied by compaction of higher-order chromatin and hindrance of mRNPs from engaging nuclear pores. Rewarming reverses chromatin compaction and releases the transcripts into the cytoplasm, triggering a pulse of suppressor gene proteins that resets the circadian clock. We show that cold-induced upregulation of REV-ERBα alone is sufficient to trigger this resetting. Our findings uncover principles of the cellular cold-response that must be considered for current and future applications involving therapeutic deep-hypothermia.",
+      "datePublished": "2020-09-29",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Harry Fischl, Andre Furger, CC-BY-4.0, 2020",
+      "identifier": "idr0089",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-1161-2841"
+        },
+        {
+          "@id": "#person-2"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.15252/embj.2020105604"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "#experiment-biosample-2"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-2-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "#experiment-protocol-1-4"
+        },
+        {
+          "@id": "#experiment-protocol-2-1"
+        },
+        {
+          "@id": "#experiment-protocol-2-2"
+        },
+        {
+          "@id": "#experiment-protocol-2-3"
+        },
+        {
+          "@id": "#experiment-protocol-2-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000332"
+        },
+        {
+          "@id": "#term"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/10502961/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-1161-2841",
+      "@type": "Person",
+      "name": "Andre Furger",
+      "givenName": "Andre",
+      "familyName": "Furger",
+      "email": "andre.furger@bioch.ox.ac.uk",
+      "address": "Department of Biochemistry, University of Oxford, South Parks Road, OX1 3QU"
+    },
+    {
+      "@id": "#person-2",
+      "@type": "Person",
+      "name": "Harry Fischl",
+      "givenName": "Harry",
+      "familyName": "Fischl",
+      "email": "harry.fischl@bioch.ox.ac.uk"
+    },
+    {
+      "@id": "https://doi.org/10.15252/embj.2020105604",
+      "@type": "ScholarlyArticle",
+      "name": "Cold-induced chromatin compaction and nuclear retention of clock mRNAs resets the circadian rhythm"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "3D-SIM of human cardiomyocyte cells (AC16s) exposed to different cold temperatures stained with markers for nuclear features (chromatin modifications: H3K4me3, H3K27me3, H3K9me3; Ser2-phosphorylated C-terminal domain of RNA polymerase II; hnRNPC; Nuclear pore complex) and DAPI. Cells were grown in 6 different temperature conditions prior to fixation: 37 degrees centigrade; 28 degrees centigrade for 24 h; 18 degrees centigrade for 5 h; 18 degrees centigrade for 24 h; 18 degrees centigrade for 24 h then returned to 37 degrees centigrade for 2 h; 8 degrees centigrade for 24 h.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000332",
+      "@type": "DefinedTerm",
+      "name": "structured illumination microscopy (SIM)"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "structured illumination microscopy (SIM)",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000332"
+        }
+      ],
+      "description": "3D-SIM of human cardiomyocyte cells (AC16s) exposed to different cold temperatures stained with markers for nuclear features (chromatin modifications: H3K4me3, H3K27me3, H3K9me3; Ser2-phosphorylated C-terminal domain of RNA polymerase II; hnRNPC; Nuclear pore complex) and DAPI. Cells were grown in 6 different temperature conditions prior to fixation: 37 degrees centigrade; 28 degrees centigrade for 24 h; 18 degrees centigrade for 5 h; 18 degrees centigrade for 24 h; 18 degrees centigrade for 24 h then returned to 37 degrees centigrade for 2 h; 8 degrees centigrade for 24 h."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "3D-SIM slide preparation.  AC16 cells were cultured on 22x22 mm #1.5H high precision 170 μm ± 5 μm poly-L-lysine treated coverslips (Marienfeld Superior). After exposure to a particular temperature condition, culture media was aspirated, and coverslips were washed once with PBS. Cells were fixed by incubating for 10 min in 2% formaldehyde/PBS, then washed with 0.05 % Tween-20/PBS (PBST), permeabilized by incubating for 10 min in 0.2 % Triton-X-100/PBS, and then washed again with PBST. Coverslips were incubated (30 min, RT) in MaxBlock (ActiveMotif, cat#15252), then (overnight, 4°C) in MaxBlock containing primary antibodies against the proteins of interest (primary antibody details and dilutions are shown in Table S8), washed 4 times with PBST, then incubated (30 min, RT) in MaxBlock containing fluorescently labelled secondary antibodies (secondary antibody details and dilutions are shown in Table S8), washed again 4 times with PBST. Cells were post-fixed by incubating for 10 min in 4% formaldehyde/PBS and washed with PBST. Coverslips were incubated in PBST containing 2 μg/ml DAPI, washed with PBST, mounted in non-hardening Vectashield (Vector Laboratories, cat#H-1000) and stored at 4°C.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "treatment protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    },
+    {
+      "@id": "#experiment-biosample-2",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "RNA-FISH of human cardiomyocyte cells (AC16s), U2OS cells or U2OS cells with Nr1d1 knocked-out exposed to different cold temperatures stained with RNA-FISH probes for Cry2, Tp53 or Nr1d1 and DAPI. Cells were grown in 5 different temperature conditions prior to fixation: 37 degrees centigrade; 18 degrees centigrade for 5 h; 18 degrees centigrade for 5 h then returned to 37 degrees centigrade for 2h; 18 degrees centigrade for 24 h; 18 degrees centigrade for 24 h then returned to 37 degrees centigrade for 2 h.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "#term",
+      "@type": "DefinedTerm",
+      "name": "wide field fluorescence deconvolution microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-2-0",
+      "@type": "LabProtocol",
+      "name": "wide field fluorescence deconvolution microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "#term"
+        }
+      ],
+      "description": "RNA-FISH of human cardiomyocyte cells (AC16s), U2OS cells or U2OS cells with Nr1d1 knocked-out exposed to different cold temperatures stained with RNA-FISH probes for Cry2, Tp53 or Nr1d1 and DAPI. Cells were grown in 5 different temperature conditions prior to fixation: 37 degrees centigrade; 18 degrees centigrade for 5 h; 18 degrees centigrade for 5 h then returned to 37 degrees centigrade for 2h; 18 degrees centigrade for 24 h; 18 degrees centigrade for 24 h then returned to 37 degrees centigrade for 2 h."
+    },
+    {
+      "@id": "#experiment-protocol-2-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "RNA-FISH slide preparation.  Cells were cultured on poly-L-lysine treated coverslips. Culture media was aspirated, and coverslips were washed once with PBS. Cells were fixed by incubating for 10 min with 4 % formaldehyde/PBS, washed twice with PBS, and permeabilized by incubating (>3 h, -20°C) in 70 % ethanol. Cells were rehydrated by incubating (5 min, RT) with FISH wash buffer (10 % formamide, 2x SSC). For hybridization, coverslips were placed cell-coated side down on a 48μl drop containing 100 nM Quasar570-labelled probes complementary to one of REV-ERBα, CRY2, or TP53 transcripts (Biosearch Technologies) (see Table S6 for probe sequences), 0.1 g/ml dextran sulfate, 1 mg/ml E. coli tRNA, 2 mM VRC, 20 μg/ml BSA, 2x SSC, 10 % formamide and incubated (37°C, 20 h) in a sealed parafilm chamber. Coverslips were twice incubated (37°C, 30 min) in pre-warmed FISH wash buffer, then in PBS containing 0.5 μg/ml 4’,6-diamidino-2-phenylindole (DAPI) (5 min, RT), washed twice with PBS, dipped in water, air-dried, placed cell-coated side down on a drop of ProLong Diamond Antifade Mountant (Life Technologies), allowed to polymerize for 24 h in the dark and then sealed with nail varnish.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-2-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "treatment protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-2-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#experiment-protocol-2-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 32985348833,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "0.03 TB"
+    }
+  ]
+}

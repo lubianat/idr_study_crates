@@ -1,0 +1,268 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0112-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0112/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0112/",
+      "@type": "Dataset",
+      "name": "Image-based deep learning reveals the responses of human motor neurons to stress and VCP-related ALS",
+      "description": "The aim of the study was to investigate relationships between ALS-related RNA-binding proteins and ALS, under different stress conditions.",
+      "datePublished": "2021-09-01",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "The Francis Crick Institute, Idiap Research Institute, CC-BY-4.0, 2021",
+      "identifier": "idr0112",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-3825-7675"
+        },
+        {
+          "@id": "https://orcid.org/0000-0002-5657-2943"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1111/nan.12770"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#screen-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#screen-protocol-1-0"
+        },
+        {
+          "@id": "#screen-protocol-1-1"
+        },
+        {
+          "@id": "#screen-protocol-1-2"
+        },
+        {
+          "@id": "#screen-protocol-1-3"
+        },
+        {
+          "@id": "#screen-protocol-1-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/13444729/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        },
+        {
+          "@id": "#file-count"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-3825-7675",
+      "@type": "Person",
+      "name": "Rickie Patani",
+      "givenName": "Rickie",
+      "familyName": "Patani",
+      "email": "rickie.patani@ucl.ac.uk",
+      "address": "The Francis Crick Institute, 1 Midland Road, London, NW1 1A"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-5657-2943",
+      "@type": "Person",
+      "name": "Raphaëlle Luisier",
+      "givenName": "Raphaëlle",
+      "familyName": "Luisier",
+      "email": "raphaelle.luisier@idiap.ch",
+      "address": "Idiap Research Institute, Rue marconi 19, 1920 Martigny, Switzerland"
+    },
+    {
+      "@id": "https://doi.org/10.1111/nan.12770",
+      "@type": "ScholarlyArticle",
+      "name": "Image-based deep learning reveals the responses of human motor neurons to stress and VCP-related ALS"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#screen-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Motor neurons with different markers and different stress conditions.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000253",
+      "@type": "DefinedTerm",
+      "name": "spinning disk confocal microscopy"
+    },
+    {
+      "@id": "#screen-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "spinning disk confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "description": "Motor neurons with different markers and different stress conditions."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Human induced pluripotent stem cells (HiPSCs) underwent differentiation into spinal cord motor neurons as described in Hall et al, 2017 (doi: 10.1016/j.celrep.2017.05.024).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "For the stress treatments; to induce osmotic stress, sorbitol was added to the medium to add an additional osmolarity of 0.4M. To account for recovery, the sorbitol medium was replaced with fresh untreated medium for the set period of time. To induce oxidative stress, 0.5mM of sodium arsenite (Sigma) was added to the medium. To induce heat stress, cells were placed in an incubator at 42°C and 5% carbon dioxide for 1hr. For heat stress recovery, cells were returned to an incubator at 37°C and 5% carbon dioxide for the determined time. For immunocytochemistry, cells were fixed in 4% paraformaldehyde in PBS for 15 minutes at room temperature (RT). Cells were permeabilised and non-specific antibody binding was blocked using 0.3% Triton-X containing 5% bovine serum albumin (BSA) (Sigma) in PBS for 60 minutes. Primary antibodies used are β-III-tubulin (abcam; ab41489; chicken; 1:1000), TDP-43 (ProteinTech; 12892-1-AP; rabbit; 1:400), SFPQ (abcam; ab11825; mouse; 1:400), FUS (Santa Cruz; sc-47711; mouse; 1:200), hnRNPA1 (Cell Signaling; 8443S; rabbit; 1:500), hnRNPK (Santa Cruz; sc-28380; mouse; 1:500) hnRNPM (Santa Cruz; sc-134360, mouse, 1:500), PABP (abcam; ab21060; rabbit; 1:400), Cleaved-Caspase 3 (Cell Signaling; Asp175; rabbit; 1:300).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007572",
+      "@type": "DefinedTerm",
+      "name": "HCS image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "HCS image acquisition and feature extraction protocol",
+      "description": "Primary antibodies were made up in 5% BSA and then applied overnight at 4°C. Cells were washed and secondary antibody was added using a species-specific Alexa Fluor-conjugated secondary antibody (Life Technologies) at 1:1000 dilution in 5% BSA for 90 minutes at RT in the dark. Cells were washed once in PBS containing DAPI, 4′,6-diamidino-2-phenylindole nuclear stain (1:1000) for 10 minutes. Following a second wash in PBS, cells were left in PBS in the dark. Images were acquired using the Perkin Elmer Opera Phenix™ High Content Screening System with a x63 or x40 water objective as confocal z-stacks with a z-step of 1μm.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007573",
+      "@type": "DefinedTerm",
+      "name": "HCS data analysis protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "HCS data analysis protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 688294278987,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "0.626 TB"
+    },
+    {
+      "@id": "#file-count",
+      "@type": "QuantitativeValue",
+      "value": 59468,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000189",
+      "unitText": "file count",
+      "description": "59468 5D images"
+    }
+  ]
+}

@@ -1,0 +1,374 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0078-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0078/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0078/",
+      "@type": "Dataset",
+      "name": "Systematic genetics and single-cell imaging reveal widespread morphological pleiotropy and cell-to-cell variability",
+      "description": "Our ability to understand the genotype-to-phenotype relationship is hindered by the lack of detailed understanding of phenotypes at a single-cell level. To systematically assess cell-to-cell phenotypic variability, we combined automated yeast genetics, high-content screening and neural network-based image analysis of single cells, focussing on genes that influence the architecture of four subcellular compartments of the endocytic pathway as a model system. Our unbiased assessment of the morphology of these compartments — endocytic patch, actin patch, late endosome and vacuole — identified 17 distinct mutant phenotypes associated with ~1,600 genes (~30% of all yeast genes). Approximately half of these mutants exhibited multiple phenotypes, highlighting the extent of morphological pleiotropy. Quantitative analysis also revealed that incomplete penetrance was prevalent, with the majority of mutants exhibiting substantial variability in phenotype at the single-cell level. Our single-cell analysis enabled exploration of factors that contribute to incomplete penetrance and cellular heterogeneity, including replicative age, organelle inheritance and response to stress.",
+      "datePublished": "2020-09-29",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Mattiazzi Usaj et al, CC-BY-4.0, 2020",
+      "identifier": "idr0078",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0001-6427-6493"
+        },
+        {
+          "@id": "https://orcid.org/0000-0002-7389-8478"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.15252/msb.20199243"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#screen-biosample-1"
+        },
+        {
+          "@id": "#screen-biosample-2"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_4932"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#screen-protocol-1-0"
+        },
+        {
+          "@id": "#screen-protocol-2-0"
+        },
+        {
+          "@id": "#screen-protocol-1-1"
+        },
+        {
+          "@id": "#screen-protocol-1-2"
+        },
+        {
+          "@id": "#screen-protocol-1-3"
+        },
+        {
+          "@id": "#screen-protocol-1-4"
+        },
+        {
+          "@id": "#screen-protocol-1-5"
+        },
+        {
+          "@id": "#screen-protocol-2-1"
+        },
+        {
+          "@id": "#screen-protocol-2-2"
+        },
+        {
+          "@id": "#screen-protocol-2-3"
+        },
+        {
+          "@id": "#screen-protocol-2-4"
+        },
+        {
+          "@id": "#screen-protocol-2-5"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/10496304/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0001-6427-6493",
+      "@type": "Person",
+      "name": "Brenda Andrews",
+      "givenName": "Brenda",
+      "familyName": "Andrews",
+      "email": "brenda.andrews@utoronto.ca",
+      "address": "The Donnelly Centre, University of Toronto, 160 College St, Toronto, ON, Canada"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-7389-8478",
+      "@type": "Person",
+      "name": "Mojca Mattiazzi Usaj",
+      "givenName": "Mojca",
+      "familyName": "Mattiazzi Usaj",
+      "email": "m.mattiazziusaj@utoronto.ca",
+      "address": "The Donnelly Centre, University of Toronto, 160 College St, Toronto, ON, Canada"
+    },
+    {
+      "@id": "https://doi.org/10.15252/msb.20199243",
+      "@type": "ScholarlyArticle",
+      "name": "Systematic genetics and single-cell imaging reveal widespread morphological pleiotropy and cell-to-cell variability"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_4932",
+      "@type": "Taxon",
+      "scientificName": "Saccharomyces cerevisiae"
+    },
+    {
+      "@id": "#screen-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "primary screens (genome wide)",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_4932"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000253",
+      "@type": "DefinedTerm",
+      "name": "spinning disk confocal microscopy"
+    },
+    {
+      "@id": "#screen-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "spinning disk confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "description": "primary screens (genome wide)"
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Briefly, haploid mutant MATa strains expressing tagged FPs derived from SGA were grown and imaged in low fluorescence synthetic minimal medium64 supplemented with antibiotics and 2% glucose. Nonessential gene deletion mutants were grown and imaged in logarithmic phase at 30°C, and TS mutants of essential genes were first grown to mid-logarithmic phase and imaged at 26°C, and then incubated for three hours at 37°C and imaged at 37°C. Cells were transferred to a Concanavalin A (ConA) coated 384-well PerkinElmer CellCarrier Ultra imaging plate and centrifuged for 45 seconds at 500 rpm before imaging. To aid in cell segmentation, Dextran Alexa Fluor 647 (Molecular Probes) was added to cells in low fluorescence medium to a final concentration of 10 μg/ml before imaging.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "For genome wide screens, micrographs were obtained on the Opera (PerkinElmer) automated spinning disk confocal microscope. Three fields with Z-stacks of 5 optical sections with 0.8 μm spacing were collected per well, with each field of view containing 50 - 150 cells. Secondary screens were imaged on an Opera Phenix (PerkinElmer) automated microscope. All imaging was done with a 60x water- immersion objective. Acquisition settings included using a 405/488/561/640 nm primary dichroic mirror. yEGFP was excited using a 488 nm laser, and emission collected through a 520/35 nm filter. tdTomato was excited using a 561 nm laser, and emission collected through a 600/40 nm filter. Dextran Alexa Fluor 647 was excited using a 640 nm laser, and emission collected through a 690/50 nm filter.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007571",
+      "@type": "DefinedTerm",
+      "name": "HCS library protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "See paper Methods section for full description.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007572",
+      "@type": "DefinedTerm",
+      "name": "HCS image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "HCS image acquisition and feature extraction protocol",
+      "description": "HCS image acquisition and feature extraction protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007573",
+      "@type": "DefinedTerm",
+      "name": "HCS data analysis protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-5",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "HCS data analysis protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-biosample-2",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "secondary screens (mini-array)",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_4932"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-0",
+      "@type": "LabProtocol",
+      "name": "spinning disk confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "description": "secondary screens (mini-array)"
+    },
+    {
+      "@id": "#screen-protocol-2-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Briefly, haploid mutant MATa strains expressing tagged FPs derived from SGA were grown and imaged in low fluorescence synthetic minimal medium64 supplemented with antibiotics and 2% glucose. Nonessential gene deletion mutants were grown and imaged in logarithmic phase at 30°C, and TS mutants of essential genes were first grown to mid-logarithmic phase and imaged at 26°C, and then incubated for three hours at 37°C and imaged at 37°C. Cells were transferred to a Concanavalin A (ConA) coated 384-well PerkinElmer CellCarrier Ultra imaging plate and centrifuged for 45 seconds at 500 rpm before imaging. To aid in cell segmentation, Dextran Alexa Fluor 647 (Molecular Probes) was added to cells in low fluorescence medium to a final concentration of 10 μg/ml before imaging.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "For genome wide screens, micrographs were obtained on the Opera (PerkinElmer) automated spinning disk confocal microscope. Three fields with Z-stacks of 5 optical sections with 0.8 μm spacing were collected per well, with each field of view containing 50 - 150 cells. Secondary screens were imaged on an Opera Phenix (PerkinElmer) automated microscope. All imaging was done with a 60x water- immersion objective. Acquisition settings included using a 405/488/561/640 nm primary dichroic mirror. yEGFP was excited using a 488 nm laser, and emission collected through a 520/35 nm filter. tdTomato was excited using a 561 nm laser, and emission collected through a 600/40 nm filter. Dextran Alexa Fluor 647 was excited using a 640 nm laser, and emission collected through a 690/50 nm filter.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-3",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "See paper Methods section for full description.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-4",
+      "@type": "LabProtocol",
+      "name": "HCS image acquisition and feature extraction protocol",
+      "description": "HCS image acquisition and feature extraction protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-5",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "HCS data analysis protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 873671939430809,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "3.6 + 791.0 = 794.60 TB"
+    }
+  ]
+}

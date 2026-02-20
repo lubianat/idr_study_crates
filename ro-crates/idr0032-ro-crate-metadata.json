@@ -1,0 +1,204 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0032-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0032/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0032/",
+      "@type": "Dataset",
+      "name": "Regulation of Meristem Morphogenesis by Cell Wall Synthases in Arabidopsis.",
+      "description": "The cell walls of the shoot apical meristem (SAM), containing the stem cell niche that gives rise to the above-ground tissues, are crucially involved in regulating differentiation. It is currently unknown how these walls are built and refined or their role, if any, in influencing meristem developmental dynamics. We have combined polysaccharide linkage analysis, immuno-labeling, and transcriptome profiling of the SAM to provide a spatiotemporal plan of the walls of this dynamic structure. We find that meristematic cells express only a core subset of 152 genes encoding cell wall glycosyltransferases (GTs). Systemic localization of all these GT mRNAs by in situ hybridization reveals members with either enrichment in or specificity to apical subdomains such as emerging flower primordia, and a large class with high expression in dividing cells. The highly localized and coordinated expression of GTs in the SAM suggests distinct wall properties of meristematic cells and specific differences between newly forming walls and their mature descendants. Functional analysis demonstrates that a subset of CSLD genes is essential for proper meristem maintenance, confirming the key role of walls in developmental pathways.",
+      "datePublished": "2017-01-18",
+      "identifier": "idr0032",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "#person-1"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1016/j.cub.2016.04.026"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_3702"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/3125701/"
+      ],
+      "size": [
+        {
+          "@id": "#file-count"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "#person-1",
+      "@type": "Person",
+      "name": "Raymond Wightman",
+      "givenName": "Raymond",
+      "familyName": "Wightman",
+      "email": "raymond.wightman@slcu.cam.ac.uk",
+      "address": "University of Cambridge, UK"
+    },
+    {
+      "@id": "https://doi.org/10.1016/j.cub.2016.04.026",
+      "@type": "ScholarlyArticle",
+      "name": "Regulation of Meristem Morphogenesis by Cell Wall Synthases in Arabidopsis."
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_3702",
+      "@type": "Taxon",
+      "scientificName": "Arabidopsis thaliana"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "tissue",
+      "description": "We performed systematic RNA in situ hybridization assays to examine the expression patterns of the SAM-expressed GTs at single-cell spatial resolution, including those transcripts that show either relative increases, reductions, or no change between SAM and flower samples.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_3702"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000246",
+      "@type": "DefinedTerm",
+      "name": "fluorescence microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "description": "We performed systematic RNA in situ hybridization assays to examine the expression patterns of the SAM-expressed GTs at single-cell spatial resolution, including those transcripts that show either relative increases, reductions, or no change between SAM and flower samples."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "\"RNA In Situ Hybridization of Wax-Embedded SAM Sections. For generation of gene-specific probes, cDNA fragments corresponding to each GT gene were amplified using gene-specific primers (Table S3) and ligated into the pGEM-T Easy vector (Promega). The constructs were verified by sequencing and then used as templates for in vitro transcription using the DIG RNA labeling kit (Roche). Shoot apices of Arabidopsis wild-type Col-0 or clv3-9 (a gift from Rudiger Simon, Heinrich Heine University) were fixed in FAA (formaldehyde, acetic acid, ethanol), embedded in wax, and cut into 8-mm sections. The sections were processed as described (http://www.its.caltech.edu/~7Eplantlab/protocols/insitu.pdf). In brief, after dewaxing, rehydration, and dehydration, the sections were hybridized with gene-specific probes and then incubated with anti-digoxigenin antibody (Roche).\"",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "image aquistion and feature extraction protocol",
+      "description": "Signals were detected by the color reaction after application of NBT/BCIP (nitro blue tetrazo- lium/5-bromo-4-chloro-3-indolyl-phosphate; Roche)."
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "\"Based on the expression pattern, genes were divided into five categories.\""
+    },
+    {
+      "@id": "#file-count",
+      "@type": "QuantitativeValue",
+      "value": 456,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000189",
+      "unitText": "file count",
+      "description": "456 5D images"
+    }
+  ]
+}

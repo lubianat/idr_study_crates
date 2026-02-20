@@ -1,0 +1,373 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0052-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0052/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0052/",
+      "@type": "Dataset",
+      "name": "A quantitative map of human Condensins provides new insights into mitotic chromosome architecture.",
+      "description": "Homozygous genome editing was used to fluorescently tag subunits of Condensin I and II in HeLa cells. Absolute abundance, spacing, and dynamic localization of the tagged proteins during mitosis was recorded by fluorescence correlation spectroscopy (FSC)-calibrated live-cell imaging and superresolution microscopy.",
+      "datePublished": "2019-04-15",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Walther et al., CC-BY-4.0, 2019",
+      "identifier": "idr0052",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "#person-1"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1083/jcb.201801048"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "#experiment-biosample-2"
+        },
+        {
+          "@id": "#experiment-biosample-3"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-2-0"
+        },
+        {
+          "@id": "#experiment-protocol-3-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "#experiment-protocol-1-4"
+        },
+        {
+          "@id": "#experiment-protocol-2-1"
+        },
+        {
+          "@id": "#experiment-protocol-2-2"
+        },
+        {
+          "@id": "#experiment-protocol-2-3"
+        },
+        {
+          "@id": "#experiment-protocol-2-4"
+        },
+        {
+          "@id": "#experiment-protocol-3-1"
+        },
+        {
+          "@id": "#experiment-protocol-3-2"
+        },
+        {
+          "@id": "#experiment-protocol-3-3"
+        },
+        {
+          "@id": "#experiment-protocol-3-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000251"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/5514131/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "#person-1",
+      "@type": "Person",
+      "name": "Jan Ellenberg",
+      "givenName": "Jan",
+      "familyName": "Ellenberg",
+      "email": "jan.ellenberg@embl.de",
+      "address": "EMBL Heidelberg, Meyerhofstrabe 1, 69117 Heidelberg, Germany EMBL Heidelberg, Meyerhofstrabe 1, 69117 Heidelberg, Germany"
+    },
+    {
+      "@id": "https://doi.org/10.1083/jcb.201801048",
+      "@type": "ScholarlyArticle",
+      "name": "A quantitative map of human Condensins provides new insights into mitotic chromosome architecture."
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Genome-edited cells with homozygously mEGFP-tagged Condensin subunits and chromosomes stained by SiR-DNA were imaged every 90 s for a total of 60 min by 3D confocal microscopy, which was automatically triggered after prophase onset. Images were calibrated by FCS to convert fluorescence intensities into cellular protein concentration maps and cellular protein number maps.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000251",
+      "@type": "DefinedTerm",
+      "name": "confocal microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000251"
+        }
+      ],
+      "description": "Genome-edited cells with homozygously mEGFP-tagged Condensin subunits and chromosomes stained by SiR-DNA were imaged every 90 s for a total of 60 min by 3D confocal microscopy, which was automatically triggered after prophase onset. Images were calibrated by FCS to convert fluorescence intensities into cellular protein concentration maps and cellular protein number maps."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "HeLa Kyoto cells were cultured in high glucose Dulbecco's modified Eagle's medium supplemented with 10% (v/v) fetal bovine serum, 100 units/ml penicillin, 0.1 mg/ml streptomycin, 2 mM Glutamine and 1 mM (v/v) Sodium pyruvate at 37 °C and 5% CO2. Depending on the genetic modification, one or more of the following antibiotics were supplied to the culture at the stated final concentration: Geneticin 500 μg/ml, Hygromycin B 200 μg/ml or Puromycin 0.5 μg/ml. Once the cells reached 80-90% confluence, they were passaged and only a fraction of the cells were cultured in a fresh dish. All cells tested negative for mycoplasma contamination.  Proteins of interests were expressed as GFP fusions from homozygously-edited genomic loci or in a few cases from a stably-integrated BAC.  Confocal microscopy was performed on Zeiss LSM780, Confocor 3, laser scanning microscopes using 40x, NA 1.2 water DIC Plan-Apochromat objectives and the GaAsP detectors equipped with an incubation chamber. Time-lapse imaging was performed using the ZEN 2012 software combined with custom software. Mitotic cells were imaged live every 90 seconds for 60 minutes, taking 31 z-planes with a spatial resolution of 0.25 μm in x-y and 0.75 μm in z. At the end of acquisition, FCS measurements were performed at two positions in and four around the nucleus with a distance of 2 μm to the ellipse boundary for 30 seconds each.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "treatment protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "image acquistion and feature extraction protocol",
+      "description": "image acquistion and feature extraction protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    },
+    {
+      "@id": "#experiment-biosample-2",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "FRAP experiments of Condensin-mEGFP subunits on the metaphase plate.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-2-0",
+      "@type": "LabProtocol",
+      "name": "confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000251"
+        }
+      ],
+      "description": "FRAP experiments of Condensin-mEGFP subunits on the metaphase plate."
+    },
+    {
+      "@id": "#experiment-protocol-2-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Imaging was done on an LSM780 laser-scanning microscope with an inverted Axio Observer operated by the ZEN 2012 Black software, with an temperature-controlled incubation chamber set to 37°C. Images were acquired using a C-Apochromat 40× 1.20 W Korr FCS M27 water-immersion objective (ZEISS) with an in house–built objective cap connected to an automated pump control system and spectral gallium arsenide phosphide (GaAsP) detectors (ZEISS). Cells in metaphase were manually selected and imaged every 20 s for 30–45 frames (xyz pixel size: 0.25 × 0.25 × 0.75 µm). mEGFP was excited with 488 nm (argon laser at 2%) and detected with GaAsP detectors at 500–535 nm. SiR-DNA was excited with 633 nm (HeNe laser at 0.3%) and detected with GaAsP detectors at 642–695 nm. After one prebleach image, a region of interest covering approximately half of the chromatin in the fifth z plane was bleached using a squared region of 40 × 30 pixels (488 nm laser at 100%; 100 repetitions), and time-lapse videos were recorded.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-2-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "treatment protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-2-3",
+      "@type": "LabProtocol",
+      "name": "image acquistion and feature extraction protocol",
+      "description": "image acquistion and feature extraction protocol"
+    },
+    {
+      "@id": "#experiment-protocol-2-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    },
+    {
+      "@id": "#experiment-biosample-3",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Single Colour - Condensin subunits were immunostained (with an anti-GFP antibody), and mitotic cells with chromatids oriented in parallel to the focal plane were selected for imaging. DNA (Hoechst) and Condensins (mEGFP tag and anti-GFP immunostaining) were imaged by diffraction-limited microscopy, whereas immunostained Condensin was also imaged by STED microscopy.  Double Colour -  NCAPH2-mEGFP and NCAPH-Halo were immunostained respectively with anti-GFP (1:500; ab13970; Abcam) + goat secondary anti-chicken Alexa Fluor 594 (1;500; A-11042; Thermo Fisher Scientific) and anti-Halo (1:500; G9281; Promega) + anti-rabbit Abberior STAR RED then imaged by STED microscopy.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-3-0",
+      "@type": "LabProtocol",
+      "name": "confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000251"
+        }
+      ],
+      "description": "Single Colour - Condensin subunits were immunostained (with an anti-GFP antibody), and mitotic cells with chromatids oriented in parallel to the focal plane were selected for imaging. DNA (Hoechst) and Condensins (mEGFP tag and anti-GFP immunostaining) were imaged by diffraction-limited microscopy, whereas immunostained Condensin was also imaged by STED microscopy.  Double Colour -  NCAPH2-mEGFP and NCAPH-Halo were immunostained respectively with anti-GFP (1:500; ab13970; Abcam) + goat secondary anti-chicken Alexa Fluor 594 (1;500; A-11042; Thermo Fisher Scientific) and anti-Halo (1:500; G9281; Promega) + anti-rabbit Abberior STAR RED then imaged by STED microscopy."
+    },
+    {
+      "@id": "#experiment-protocol-3-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Single Colour - Imaging was performed on a combined Abberior STED and RESOLFT system (Expert line; Abberior) operated by Imspector software (v0.13.11885; Abberior). Samples were imaged with a UPlan-S Apochromat 100× 1.4 NA oil-immersion objective on an IX83 stand (Olympus). The microscope was equipped with an incubation chamber and a temperature of 22.5°C was ensured by constant cooling to minimize sample drift and optimize optical performance. For STED imaging, a 775-nm pulsed depletion laser (1.25 W total power; attenuated for actual imaging; acoustooptic tunable filter set to 40%; MPBC) was used. Z stacks were acquired using the focus stabilizer/z drift control ZDC2 (custom-modified for STED use; Olympus).  Double colour - Eight line accumulations of the following sequence were performed: NCAPH2–mEGFP (Alexa Fluor 594; 594-nm excitation laser, 30% [3.6 µW]) and NCAPH–Halo (Abberior STAR RED; 640-nm excitation laser, 40% [95.6 µW]) were accumulated five times and superresolved (775-nm depletion laser, 40% [166.3 mW]) in line-sequential mode using 605–625-nm and 650–720-nm band pass filters, respectively, for detection on separate APDs. The pinhole was set to 1.2 airy units, and the pixel dwell time was set to 2 µs.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-3-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "treatment protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-3-3",
+      "@type": "LabProtocol",
+      "name": "image acquistion and feature extraction protocol",
+      "description": "image acquistion and feature extraction protocol"
+    },
+    {
+      "@id": "#experiment-protocol-3-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 138538465099,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "0.126 TB"
+    }
+  ]
+}

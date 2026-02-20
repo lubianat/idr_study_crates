@@ -1,0 +1,212 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0082-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0082/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0082/",
+      "@type": "Dataset",
+      "name": "Immune surveillance in clinical regression of pre-invasive squamous cell lung cancer",
+      "description": "Before squamous cell lung cancer develops, pre-cancerous lesions can be found in the airways. From longitudinal monitoring, we know that only half of such lesions become cancer, whereas a third spontaneously regress. While recent studies have described the presence of an active immune response in high-grade lesions, the mechanisms underpinning clinical regression of pre-cancerous lesions remain unknown. Here, we show that host immune surveillance is strongly implicated in lesion regression. Using bronchoscopic biopsies from human subjects, we find that regressive carcinoma in-situ lesions harbour more infiltrating immune cells than those that progress to cancer. Moreover, molecular profiling of these lesions identifies potential immune escape mechanisms specifically in those that progress to cancer: antigen presentation is impaired by genomic and epigenetic changes, CCL27/CCR10 signalling is overactive, and the immunomodulator TNFSF9 is downregulated. Changes appear intrinsic to the CIS lesions as the adjacent stroma of progressive and regressive lesions are transcriptomically similar.",
+      "datePublished": "2020-09-03",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Pennycuick et al, CC-BY-4.0, 2020",
+      "identifier": "idr0082",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0001-5836-0250"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1158/2159-8290.CD-19-1366"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "#experiment-protocol-1-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000243"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/9846228/"
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0001-5836-0250",
+      "@type": "Person",
+      "name": "Adam Pennycuick",
+      "givenName": "Adam",
+      "familyName": "Pennycuick",
+      "email": "a.pennycuick@ucl.ac.uk",
+      "address": "UCL Respiratory, 5 University Street, London, WC1E 6JF"
+    },
+    {
+      "@id": "https://doi.org/10.1158/2159-8290.CD-19-1366",
+      "@type": "ScholarlyArticle",
+      "name": "Immune surveillance in clinical regression of pre-invasive squamous cell lung cancer"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "tissue",
+      "description": "H&E Imaging of 112 lung carcinoma in-situ lesions, with CIS and stromal regions annotated, and quantification of infiltrating lymphocytes.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000243",
+      "@type": "DefinedTerm",
+      "name": "bright-field microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "bright-field microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000243"
+        }
+      ],
+      "description": "H&E Imaging of 112 lung carcinoma in-situ lesions, with CIS and stromal regions annotated, and quantification of infiltrating lymphocytes."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Bronchoscopic biopsy samples fixed in FFPE",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "H&E staining performed",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "Images acquired using Nanozoomer"
+    },
+    {
+      "@id": "#experiment-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "Multiple assays performed; data presented here relates to infiltrating lymphocyte quantification from H&E images using machine learning."
+    }
+  ]
+}

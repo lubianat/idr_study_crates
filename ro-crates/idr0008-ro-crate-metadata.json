@@ -1,0 +1,278 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0008-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0008/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0008/",
+      "@type": "Dataset",
+      "name": "Comparative RNAi screening identifies a conserved core metazoan actinome by phenotype",
+      "description": "Although a large number of actin-binding proteins and their regulators have been identified through classical approaches, gaps in our knowledge remain. Here, we used genome-wide RNA interference as a systematic method to define metazoan actin regulators based on visual phenotype. Using comparative screens in cultured Drosophila and human cells, we generated phenotypic profiles for annotated actin regulators together with proteins bearing predicted actin-binding domains. These phenotypic clusters for the known metazoan \"actinome\" were used to identify putative new core actin regulators, together with a number of genes with conserved but poorly studied roles in the regulation of the actin cytoskeleton, several of which we studied in detail. This work suggests that although our search for new components of the core actin machinery is nearing saturation, regulation at the level of nuclear actin export, RNA splicing, ubiquitination, and other upstream processes remains an important but unexplored frontier of actin biology.",
+      "datePublished": "2016-04-27",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "copyrightNotice": "Rohn et al, CC-BY-NC-SA-3.0, 2016",
+      "identifier": "idr0008",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "#person-1"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1083/jcb.201103168"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#screen-biosample-1"
+        },
+        {
+          "@id": "#screen-biosample-2"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#screen-protocol-1-0"
+        },
+        {
+          "@id": "#screen-protocol-2-0"
+        },
+        {
+          "@id": "#screen-protocol-1-1"
+        },
+        {
+          "@id": "#screen-protocol-1-2"
+        },
+        {
+          "@id": "#screen-protocol-1-3"
+        },
+        {
+          "@id": "#screen-protocol-1-4"
+        },
+        {
+          "@id": "#screen-protocol-2-1"
+        },
+        {
+          "@id": "#screen-protocol-2-2"
+        },
+        {
+          "@id": "#screen-protocol-2-3"
+        },
+        {
+          "@id": "#screen-protocol-2-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/37747/",
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/107025/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        },
+        {
+          "@id": "#file-count"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "#person-1",
+      "@type": "Person",
+      "name": "Jennifer Rohn",
+      "givenName": "Jennifer",
+      "familyName": "Rohn",
+      "email": "j.rohn@ucl.ac.uk",
+      "address": "Division of Medicine, University College London, UK"
+    },
+    {
+      "@id": "https://doi.org/10.1083/jcb.201103168",
+      "@type": "ScholarlyArticle",
+      "name": "Comparative RNAi screening identifies a conserved core metazoan actinome by phenotype."
+    },
+    {
+      "@id": "#screen-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "A genome-wide, high-content RNAi screen in the hemocyte-derived adherent Drosophila cell line S2R+  whose read-out was a visual inspection of images of fixed cells stained with alpha-tubulin, F-actin, and DNA. After filtering and annotating hits with a controlled vocabulary, we identified a number of broad phenotypic categories."
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000246",
+      "@type": "DefinedTerm",
+      "name": "fluorescence microscopy"
+    },
+    {
+      "@id": "#screen-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "description": "A genome-wide, high-content RNAi screen in the hemocyte-derived adherent Drosophila cell line S2R+  whose read-out was a visual inspection of images of fixed cells stained with alpha-tubulin, F-actin, and DNA. After filtering and annotating hits with a controlled vocabulary, we identified a number of broad phenotypic categories."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Adherent S2R+ Drosophila cells were cultured at 24C in a humidified incubator in T25 flasks in Shields and Sang M3 insect medium (Sigma-Aldrich) supplemented with FBS and antibiotics as for HeLa cells.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "The genome-wide screen was performed at the Drosophila RNAi Screening Center (Harvard Medical School, Boston, MA) using a library of 21,306 distinct dsRNAs (See Table S1 for primer details) targeting 12,061 protein-coding genes.  In brief, a semi-automated method was used to seed 10 ul of a trypsinized suspension of S2R+ cells at a concentration of 2 x 106 cells/ml in serum-free M3 medium into black, thin-bottomed 384-well tissue culture plates (Corning) already containing a 3-ul droplet of dsRNA (_0.3 ug). After a 30-min incubation at room temperature, wells were supplemented with 30 ul of complete M3 medium. All manipulations were performed with an alcohol-sterilized WellMate liquid-handling robot inside a tissue culture hood. Plates were spun briefly, sealed with parafilm, and incubated in a 25C humidified incubator for 5 d before being processed: using a semi-automated method with the WellMate robot, cells were fixed with freshly prepared 4% formaldehyde in PBS for 20 min at room temperature, permeabilized with 0.2% Triton X-100 in PBS for 5 min, then blocked with 5% BSA in PBS for 30 min. Next, cells were stained with a mixture of FITC-conjugated anti-alpha-tubulin antibody (clone DM1A at 1:400; Sigma-Aldrich), TRITC-conjugated phalloidin (0.125 ug/ml; Sigma-Aldrich), and DAPI (1 ug/ml; Sigma-Aldrich) in a PBS solution containing 1% BSA for 1 h. After 4x washing with PBS, plates were sealed with adhesive foil and stored in PBS containing 0.1% sodium azide (Sigma-Aldrich)."
+    },
+    {
+      "@id": "#screen-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "HCS image acquistion and feature extraction protocol",
+      "description": "Images were acquired using a 20x objective lens (NA 0.45) on a modified Eclipse TE-2000E microscope (Nikon) equipped with a Prior Proscan motorized stage and MetaMorph software (Molecular Devices), autofocusing on the DAPI channel. Images were screened visually using the MetaMorph 'Review Screen Data' application. The uploaded .tif files were converted from 16-bit to 8-bit but were otherwise unprocessed."
+    },
+    {
+      "@id": "#screen-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "The fly cell screen was performed once, and three independent researchers visually inspected images captured from two sites per well to nominate potential hits with morphology phenotypes of any description. We filtered the set of nominated hits to exclude dsRNAs with (1) >1 predicted amplicon; (2) one or more CAN repeats (a stretch of a particular trinucleotide sequence [CAn] repeated five or more times, which is known to cause nonspecific effects (Echeverri et al., 2006)); (3) >5 predicted off-target effects (19 bp; Echeverri et al., 2006); and (4) no known protein-encoding gene target according to FlyBase version 5.23 (http://flybase.org; Table S1). Images from the remaining dsRNAs were then annotated using a controlled vocabulary to describe phenotypes affecting cell number, cell size, and all aspects of nuclear and cytoskeletal morphology. DsRNAs with weak or inconsistent phenotypes (defined as present in only one of the two sites) were excluded from this analysis. In inspecting this refined list of dsRNAs associated with morphological phenotypes (see hit annotation details in Table S2), we found that when multiple dsRNAs targeting the same gene were annotated as hits, a similar range of phenotypes was recorded, demonstrating the robustness of the method."
+    },
+    {
+      "@id": "#screen-biosample-2",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "This screen consists of siRNAs targetting 516 known or predicted actin and Rho-GTPase family regulators (the 'actinome';) in human HeLa cells and in addition tests representative close human orthologues of the set of putative novel actin regulators identified in the fly screen.  This screen was performed in duplicate (screens B and C). Screen B is also known as Actinome 1 and screen C as Actinome 2. Only screen B is available at present."
+    },
+    {
+      "@id": "#screen-protocol-2-0",
+      "@type": "LabProtocol",
+      "name": "fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "description": "This screen consists of siRNAs targetting 516 known or predicted actin and Rho-GTPase family regulators (the 'actinome';) in human HeLa cells and in addition tests representative close human orthologues of the set of putative novel actin regulators identified in the fly screen.  This screen was performed in duplicate (screens B and C). Screen B is also known as Actinome 1 and screen C as Actinome 2. Only screen B is available at present."
+    },
+    {
+      "@id": "#screen-protocol-2-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "HeLa-Kyoto human carcinoma cells were cultured at 37C in a humidified incubator under 5% CO2 in 9-cm dishes in DME (Invitrogen) supplemented with 10% fetal bovine serum (FBS, PAA) and antibiotics (50 U/ml penicillin and 50 ug/ml streptomycin; Invitrogen).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-2",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "For the human screens, we used a computational approach to nominate actin- and Rho GTPase-related genes to create the 'actinome' library. The actinome library contained (1) genes with known actin cytoskeleton association; (2) genes with predicted actin-binding domains; and (3) Rho family GTPases, GAPs, and GEFs. We also determined the human orthologues of Drosophila actin morphology hits by comparing orthologue assignments from Homologene (http://www.ncbi.nlm.nih.gov/homologene), Inparanoid (http://inparanoid.sbc.su.se/cgi-bin/index.cgi), and Ensembl (http://www.ensembl.org/index.html). Synthetic siRNAs for all target genes were obtained from Thermo Fisher Scientific/Dharmacon (Table S3). For controls, we included multiple instances of the following four Thermo Fisher Scientific controls: siCONTROL (a scrambled negative-control siRNA sequence); INCENP and KIF11, which give strong and distinctive phenotypes; and siTOX, an siRNA reagent that induces cell death. All siRNAs were reconstituted in nuclease-free water in 1x buffer provided by the manufacturer. Each human gene was targeted using four independent siRNAs, each individually assessed in four separate wells, and, for genes in the actinome, with the addition of a fifth well containing those four siRNAs pooled together.The entire screen was performed in duplicate. For HeLa cell screens, siRNAs were arrayed into the Corning screening plates at a final concentration of 0.5 uM (3 ul) using both individual siGENOME duplexes and SmartPools (Thermo Fisher Scientific) using a Biomek Fx robotic liquid-handling robot (Beckman Coulter), sealed with foil adhesives and stored at -40C until use. Trypsinized HeLa cells (2,000 cells per well) without antibiotics were reverse transfected with Lipofectamine 2000 (Invitrogen) according to the manufacturer's instructions at a final volume of 80 ul (final siRNA concentration of 25 nM). All transfection manipulations were performed sterilely as described for S2R+ cells, and the plates were spun briefly to eliminate any bubbles and incubated at 37C in a humidified incubator under 5% CO2 for 3 d before processing as for the fly screen"
+    },
+    {
+      "@id": "#screen-protocol-2-3",
+      "@type": "LabProtocol",
+      "name": "HCS image acquistion and feature extraction protocol",
+      "description": "Images were acquired using a 20x objective lens (NA 0.45) on a modified Eclipse TE-2000E microscope (Nikon) equipped with a Prior Proscan motorized stage and MetaMorph software (Molecular Devices), autofocusing on the DAPI channel. Images were screened visually using the MetaMorph 'Review Screen Data' application. The uploaded .tif files were converted from 16-bit to 8-bit but were otherwise unprocessed."
+    },
+    {
+      "@id": "#screen-protocol-2-4",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "The entire screen was performed in duplicate, and images (three sites per well) from both screens were loaded into FLIGHT. Images were annotated by two independent researchers blinded to well designations; although we assessed the same general phenotypic categories as with the fly screen, we used more extensive sub-descriptions to reflect the greater detail visible in these cells. Genes were considered hits if at least two independent siRNA constructs were identified as strong morphological hits with similar phenotypes in both screen replicates by both researchers."
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 131941395333,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "0.09 + 0.03 = 0.12 TB"
+    },
+    {
+      "@id": "#file-count",
+      "@type": "QuantitativeValue",
+      "value": 55944,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000189",
+      "unitText": "file count",
+      "description": "44538 + 11406 = 55944 5D images"
+    }
+  ]
+}

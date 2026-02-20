@@ -1,0 +1,256 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0030-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0030/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0030/",
+      "@type": "Dataset",
+      "name": "Multiparametric analysis of cell shape demonstrates that b-PIX directly couples YAP activation to extracellular matrix adhesion",
+      "description": "Mechanical signals from the extracellular matrix and cellular geometry regulate the nuclear translocation of transcriptional regulators such as Yes-Associated Protein (YAP). Elucidating how physical signals control the activity of mechanosensitive proteins poses a technical challenge, because perturbations that affect cell shape may also affect protein localization indirectly. Here we present an approach that mitigates confounding effects of cell shape changes, allowing us to identify direct regulators of YAP localization. This method uses single cell image analysis and statistical models that exploit the naturally occurring heterogeneity of cellular populations. Through systematic depletion of all human kinases, Rho family GTPases, GEFs, and GAPs, and targeted chemical perturbations we found that _-PIX, a Rac1/Ccd42 GEF, and PAK2, a Rac1/Cdc42 effector, drive both YAP activation and cell-ECM adhesion turnover during cell spreading. Our observations suggest that coupling YAP to adhesion dynamics acts as a mechano-timer, allowing cells to rapidly tune gene expression in response to physical signals.",
+      "datePublished": "2017-03-16",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Sero et al, CC-BY-4.0, 2017",
+      "identifier": "idr0030",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "#person-1"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1016/j.cels.2016.11.015"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#screen-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#screen-protocol-1-0"
+        },
+        {
+          "@id": "#screen-protocol-1-1"
+        },
+        {
+          "@id": "#screen-protocol-1-2"
+        },
+        {
+          "@id": "#screen-protocol-1-3"
+        },
+        {
+          "@id": "#screen-protocol-1-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/3134322/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        },
+        {
+          "@id": "#file-count"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "#person-1",
+      "@type": "Person",
+      "name": "Julia Sero",
+      "givenName": "Julia",
+      "familyName": "Sero",
+      "email": "juliasero@post.harvard.edu",
+      "address": "Institute of Cancer Research, London, Umited Kingdom."
+    },
+    {
+      "@id": "https://doi.org/10.1016/j.cels.2016.11.015",
+      "@type": "ScholarlyArticle",
+      "name": "Multiparametric Analysis of Cell Shape Demonstrates that β-PIX Directly Couples YAP Activation to Extracellular Matrix Adhesion."
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#screen-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Pooled siRNA targeting human kinome and Rho family GTPases/GEFs/GAPs in MCF10A breast myoepithelial cells stained for YAP/TAZ, F-actin, CD44",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000253",
+      "@type": "DefinedTerm",
+      "name": "spinning disk confocal microscopy"
+    },
+    {
+      "@id": "#screen-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "spinning disk confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "description": "Pooled siRNA targeting human kinome and Rho family GTPases/GEFs/GAPs in MCF10A breast myoepithelial cells stained for YAP/TAZ, F-actin, CD44"
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "MCF10A cells obtained from ATCC were cultured in DMEM:F12 (GIBCO) containing 5% heat-inactivated fetal bovine serum (HI-FBS; GIBCO), 20 ng/ml EGF (Sigma), 10 μg/ml insulin (Sigma), 0.5 μg/ml hydrocortisone (Sigma) and 100 ng/ml cholera toxin (Sigma) at 37°C and 5% CO2, and cells used between passages 3 and 8.\"",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007571",
+      "@type": "DefinedTerm",
+      "name": "HCS library protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "\"MCF10A cells were reverse-transfected with Dharmacon siGenome pooled siRNA (Lipofectamine RNAiMAX, 40 ng siRNA/well). All siRNA-contaning wells and a subset of mock-transfected wells were seeded with 600 cells/well. Each plate also contained mock-transfected wells seeded with 450, 300, or 150 cells/well. Cells were cultured for 72 hours in DMEM:F12 plus EGF, insulin, hydrocortisone, cholera toxin, 5% heat-inactivated bovine serum. Fixed in 4% formaldehyde (PBS).\"",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007572",
+      "@type": "DefinedTerm",
+      "name": "HCS image acquistion and feature extraction protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "HCS image acquistion and feature extraction protocol",
+      "description": "\"Image acquisition was performed using Opera Cell::Explorer automated spinning disk confocal microscopes. Screens were performed using a 20X air objective lens (NA = 0.45) (PerkinElmer) and 30 fields of view (checkerboard pattern) were imaged in each well. Cells were stained with Hoechst (Channel 1), mouse anti-YAP/TAZ plus Alexa488 anti-mouse (Channel 2), Alexa647 phalloidin (Channel 3), rabbit anti-YAP/TAZ (C-term epitope) OR anti-CD44 plus Alexa568 anti-rabbit (Channel 4).\"",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007573",
+      "@type": "DefinedTerm",
+      "name": "HCS data analysis protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "\"Automated segmentation was performed using Acapella (PerkinElmer). Nuclei were segmented using the Hoechst channel and the  “nucleus region” was eroded by one pixel in order to compensate for segmentation errors. Predicted YAP/TAZ ratios (nuclear/perinuclear fluorescence intensity) were determined from morphologically diverse mock-transfected control cells by multiparametric linear regression using six shape features (cell area, nucleus area, neighbor fraction, local cell density, protrusion area, protrusion extent). Regression equations were applied to each single cell and the difference between observed and predicted YAP/TAZ ratios were determined to \"\"normalize\"\" YAP/TAZ localization for differences in cell shape. The average difference for each well was used to score hits. Note: ten-fold differences in total YAP/TAZ intensity were observed across the screen. \"\"High YAP/TAZ ratio\"\" does not necessarily correspond to target gene expression where total protein levels are low.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 153931627888,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "0.14 TB"
+    },
+    {
+      "@id": "#file-count",
+      "@type": "QuantitativeValue",
+      "value": 92400,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000189",
+      "unitText": "file count",
+      "description": "92400 5D images"
+    }
+  ]
+}

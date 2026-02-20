@@ -1,0 +1,561 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0149-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0149/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0149/",
+      "@type": "Dataset",
+      "name": "Cohesin-mediated DNA loop extrusion resolves sister chromatids in G2 phase",
+      "description": "Genetic information is stored in linear DNA molecules, which fold extensively inside cells. DNA replication along the folded template path yields two sister chromatids that initially occupy the same nuclear region in a highly intertwined arrangement. Dividing cells must disentangle and condense the sister chromatids into separate bodies such that a microtubule-based spindle can move them to opposite poles. While the spindle-mediated transport of sister chromatids has been studied in detail, the chromosome-intrinsic mechanics pre-segregating sister chromatids have remained elusive. Here, we show that human sister chromatids resolve extensively already during interphase, in a process dependent on the loop-extruding activity of cohesin, but not that of condensins. Increasing cohesin’s looping capability increases sister DNA resolution in interphase nuclei to an extent normally seen only during mitosis, despite the presence of abundant arm cohesion. That cohesin can resolve sister chromatids so extensively in the absence of mitosis-specific activities indicates that DNA loop extrusion is a generic mechanism for segregating replicated genomes, shared across different Structural Maintenance of Chromosomes (SMC) protein complexes in all kingdoms of life.",
+      "datePublished": "2023-08-17",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Batty et al, CC-BY-4.0, 2023",
+      "identifier": "idr0149",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-9807-5099"
+        },
+        {
+          "@id": "https://orcid.org/0000-0003-1637-3365"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.15252/embj.2023113475"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "#experiment-biosample-2"
+        },
+        {
+          "@id": "#experiment-biosample-3"
+        },
+        {
+          "@id": "#experiment-biosample-4"
+        },
+        {
+          "@id": "#experiment-biosample-5"
+        },
+        {
+          "@id": "#experiment-biosample-6"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-2-0"
+        },
+        {
+          "@id": "#experiment-protocol-3-0"
+        },
+        {
+          "@id": "#experiment-protocol-4-0"
+        },
+        {
+          "@id": "#experiment-protocol-5-0"
+        },
+        {
+          "@id": "#experiment-protocol-6-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "#experiment-protocol-2-1"
+        },
+        {
+          "@id": "#experiment-protocol-2-2"
+        },
+        {
+          "@id": "#experiment-protocol-2-3"
+        },
+        {
+          "@id": "#experiment-protocol-3-1"
+        },
+        {
+          "@id": "#experiment-protocol-3-2"
+        },
+        {
+          "@id": "#experiment-protocol-3-3"
+        },
+        {
+          "@id": "#experiment-protocol-4-1"
+        },
+        {
+          "@id": "#experiment-protocol-4-2"
+        },
+        {
+          "@id": "#experiment-protocol-4-3"
+        },
+        {
+          "@id": "#experiment-protocol-5-1"
+        },
+        {
+          "@id": "#experiment-protocol-5-2"
+        },
+        {
+          "@id": "#experiment-protocol-5-3"
+        },
+        {
+          "@id": "#experiment-protocol-6-1"
+        },
+        {
+          "@id": "#experiment-protocol-6-2"
+        },
+        {
+          "@id": "#experiment-protocol-6-3"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000393"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000251"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/14874730/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-9807-5099",
+      "@type": "Person",
+      "name": "Paul Batty",
+      "givenName": "Paul",
+      "familyName": "Batty",
+      "email": "paul.batty@imba.oeaw.ac.at",
+      "address": "Institute of Molecular Biotechnology (IMBA), Dr Bohr-Gasse 3, 1030 Vienna, Austria"
+    },
+    {
+      "@id": "https://orcid.org/0000-0003-1637-3365",
+      "@type": "Person",
+      "name": "Daniel Gerlich",
+      "givenName": "Daniel",
+      "familyName": "Gerlich",
+      "email": "daniel.gerlich@imba.oeaw.ac.at",
+      "address": "Institute of Molecular Biotechnology (IMBA), Dr Bohr-Gasse 3, 1030 Vienna, Austria"
+    },
+    {
+      "@id": "https://doi.org/10.15252/embj.2023113475",
+      "@type": "ScholarlyArticle",
+      "name": "Cohesin-mediated DNA loop extrusion resolves sister chromatids in G2 phase"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Visualisation of wild type, SMC4 depleted, and NIPBL depleted HeLa Kyoto cells synchronised to prometaphase or G2 phase, where sister chromatids were labelled on either one or two sister chromatids by F-ara-EdU (as specified), with DNA counterstained using Hoechst 33342, as in Fig. 1, Fig. EV2F, Fig. EV3, Fig. EV4 of Batty et al, 2023.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000393",
+      "@type": "DefinedTerm",
+      "name": "array-scan confocal microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "array-scan confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000393"
+        }
+      ],
+      "description": "Visualisation of wild type, SMC4 depleted, and NIPBL depleted HeLa Kyoto cells synchronised to prometaphase or G2 phase, where sister chromatids were labelled on either one or two sister chromatids by F-ara-EdU (as specified), with DNA counterstained using Hoechst 33342, as in Fig. 1, Fig. EV2F, Fig. EV3, Fig. EV4 of Batty et al, 2023."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Cells were pre-synchronised to the G1/S boundary by incubation with 2 mM thymidine (Sigma Aldrich, T1895) in wild type medium for 16 – 18 h. Cells were then washed twice with pre-warmed PBS and released into fresh medium. 10 – 12 h after release, cells were blocked again using 3 μg mL-1 aphidicolin (Sigma Aldrich, A0781) for 16 – 18 h. To generate one-sister chromatid labelled cells, 10 μM F-ara-EdU (Sigma Aldrich, T511293) was added to cells 15 h after the second release into S phase (after the first release for the NIPBL-AID cell line) to generate a pool of the compound within the cell, while the cells were in aphidicolin. The following day, cells were washed twice with pre-warmed PBS and released into fresh medium containing 10 μM F-ara-EdU. A final block with aphidicolin was then performed as described above. The following day, cells were washed twice with pre-warmed PBS and released into fresh nucleotide-free medium, such that the cells became labelled on only one sister chromatid. To generate sister chromatids labelled on two chromatids, 10 μM F-ara-EdU was added at the time of the final aphidicolin block. For the final S phase release, cells were then released into medium containing 10 μM F-ara-EdU. After labelling of one or two sister chromatids, cells were synchronised to G2 using the CDK1 inhibitor RO-3306 (Sigma Aldrich, SML0569). RO-3306 was added 5 – 6 h after the release from the final aphidicolin block. To generate prometaphase samples, 7 μM RO-3306 was added to cells as described above. 15 h after release from the final aphidicolin block, cells were washed three times with pre-warmed wild ype medium. After the final wash, cells were released into wild type medium containing 5 μM STLC (Enzo Life Sciences, ALX-105-011-M500), and fixed 30 - 60 minutes later.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol  image acquisition and feature extraction protocol",
+      "description": "To generate G2 samples, 8 μM RO-3306 was added and cells were fixed 15 h after the final S-phase release. SMC4 was depleted through the addition of 1 μM 5-Ph-IAA 1 h before the final S phase release. NIPBL was depleted through the addition of 1 μM 5-Ph-IAA 10 h after the final release into S phase.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    },
+    {
+      "@id": "#experiment-biosample-2",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Wild type late prophase HeLa Kyoto cells labelled on one sister chromatid. Control, WAPL depleted, Sororin depleted, WAPL + Sororin depleted, or WAPL +SMC4 depleted G2 HeLa Kyoto cells labelled on one sister chromatid with F-ara-EdU, and synchronised to G2 by RO-3306, as in Fig. 2, 3, EV5 of Batty et al, 2023.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-2-0",
+      "@type": "LabProtocol",
+      "name": "array-scan confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000393"
+        }
+      ],
+      "description": "Wild type late prophase HeLa Kyoto cells labelled on one sister chromatid. Control, WAPL depleted, Sororin depleted, WAPL + Sororin depleted, or WAPL +SMC4 depleted G2 HeLa Kyoto cells labelled on one sister chromatid with F-ara-EdU, and synchronised to G2 by RO-3306, as in Fig. 2, 3, EV5 of Batty et al, 2023."
+    },
+    {
+      "@id": "#experiment-protocol-2-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Cells were pre-synchronised to the G1/S boundary by incubation with 2 mM thymidine (Sigma Aldrich, T1895) in wild type medium for 16 – 18 h. Cells were then washed twice with pre-warmed PBS and released into fresh medium. 10 – 12 h after release, cells were blocked again using 3 μg mL-1 aphidicolin (Sigma Aldrich, A0781) for 16 – 18 h. To generate one-sister chromatid labelled cells, 10 μM F-ara-EdU (Sigma Aldrich, T511293) was added to cells 15 h after the second release into S phase (after the first release for the NIPBL-AID cell line) to generate a pool of the compound within the cell, while the cells were in aphidicolin. The following day, cells were washed twice with pre-warmed PBS and released into fresh medium containing 10 μM F-ara-EdU. A final block with aphidicolin was then performed as described above. The following day, cells were washed twice with pre-warmed PBS and released into fresh nucleotide-free medium, such that the cells became labelled on only one sister chromatid.After labelling of sister chromatids, cells were synchronised to G2 using the CDK1 inhibitor RO-3306 (Sigma Aldrich, SML0569). For G2 samples 10 μM RO-3306 was added 5 – 6 h after the release from the final aphidicolin block. WAPL was depleted through the addition of 1 μM dTAG-7 14 h after the final S phase release. SMC4 was depleted through the addition of 1 μM 5-Ph-IAA 1 h before the final release into S phase. Sororin was depleted using siRNA. Control, WAPL depleted, Sororin depleted, WAPL/Sororin depleted, and WAPL/SMC4 depleted cells were fixed 24 h after the final S-phase release. To generate prophase samples, 7 μM RO-3306 was added as described above, after 15 h S-phase release, cells were washed 3 times with wild type medium and released into 5 μM STLC-containig medium.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-2-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol  image acquisition and feature extraction protocol",
+      "description": "treatment protocol  image acquisition and feature extraction protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-2-3",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    },
+    {
+      "@id": "#experiment-biosample-3",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "WAPL depleted, WAPL/SMC4 depleted, and WAPL/SMC4/Sororin HeLa Kyoto cells labelled on one sister chromatid with F-ara-EdU, and synchronised to prometaphase by STLC, as in Fig. 4A, B of Batty et al, 2023. Control prometaphase chromosomes acutely depleted of condensins for either 120 or 240 min, as in Fig. 4C-E of Batty et al, 2023.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-3-0",
+      "@type": "LabProtocol",
+      "name": "array-scan confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000393"
+        }
+      ],
+      "description": "WAPL depleted, WAPL/SMC4 depleted, and WAPL/SMC4/Sororin HeLa Kyoto cells labelled on one sister chromatid with F-ara-EdU, and synchronised to prometaphase by STLC, as in Fig. 4A, B of Batty et al, 2023. Control prometaphase chromosomes acutely depleted of condensins for either 120 or 240 min, as in Fig. 4C-E of Batty et al, 2023."
+    },
+    {
+      "@id": "#experiment-protocol-3-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Cells were pre-synchronised to the G1/S boundary by incubation with 2 mM thymidine (Sigma Aldrich, T1895) in wild type medium for 16 – 18 h. Cells were then washed twice with pre-warmed PBS and released into fresh medium. 10 – 12 h after release, cells were blocked again using 3 μg mL-1 aphidicolin (Sigma Aldrich, A0781) for 16 – 18 h. To generate one-sister chromatid labelled cells, 10 μM F-ara-EdU (Sigma Aldrich, T511293) was added to cells 15 h after the second release into S phase (after the first release for the NIPBL-AID cell line) to generate a pool of the compound within the cell, while the cells were in aphidicolin. The following day, cells were washed twice with pre-warmed PBS and released into fresh medium containing 10 μM F-ara-EdU. A final block with aphidicolin was then performed as described above. The following day, cells were washed twice with pre-warmed PBS and released into fresh nucleotide-free medium, such that the cells became labelled on only one sister chromatid.After labelling of sister chromatids, cells were synchronised to G2 using the CDK1 inhibitor RO-3306 (Sigma Aldrich, SML0569). For G2 samples 10 μM RO-3306 was added 5 – 6 h after the release from the final aphidicolin block. WAPL was depleted through the addition of 1 μM dTAG-7 14 h after the final S phase release. SMC4 was depleted through the addition of 1 μM 5-Ph-IAA 1 h before the final release into S phase. Sororin was depleted using siRNA. To generate prometaphase samples in the SMC4-AID_WAPL-dTAG cell line, 10 μM RO-3306 was added to cells as described above. In Fig. 4A, B, 24 h after the release from the final aphidicolin block, cells were washed three times with pre-warmed wild type medium and fixed 30 – 60 minutes later. In Fig. 4C-E, cells were washed three times with pre-warmed wild type medium, before release into wild type medium containing 5 μM STLC for 60 minutes. After 60 minutes release, STLC-containing medium supplemented with 1 μM 5-Ph-IAA was added to the cells to deplete SMC4. Cells were then fixed after either 120 min or 240 min of treatment with 5-Ph-IAA. Control samples were fixed 60 min after washout into STLC-containing medium.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-3-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol  image acquisition and feature extraction protocol",
+      "description": "treatment protocol  image acquisition and feature extraction protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-3-3",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    },
+    {
+      "@id": "#experiment-biosample-4",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Measurement of mean intensity in central slice of 3D stack. Validation of cell cycle stage for wild type and WAPL depleted cells as in Fig. EV2, EV5 of Batty et al, 2023. Measurement of mean SMC4 intensity in Fig. 4D of Batty et al, 2023.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-4-0",
+      "@type": "LabProtocol",
+      "name": "array-scan confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000393"
+        }
+      ],
+      "description": "Measurement of mean intensity in central slice of 3D stack. Validation of cell cycle stage for wild type and WAPL depleted cells as in Fig. EV2, EV5 of Batty et al, 2023. Measurement of mean SMC4 intensity in Fig. 4D of Batty et al, 2023."
+    },
+    {
+      "@id": "#experiment-protocol-4-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Cells were pre-synchronised to the G1/S boundary by incubation with 2 mM thymidine (Sigma Aldrich, T1895) in wild type medium for 16 – 18 h. Cells were then washed twice with pre-warmed PBS and released into fresh medium. 10 – 12 h after release, cells were blocked again using 3 μg mL-1 aphidicolin (Sigma Aldrich, A0781) for 16 – 18 h. To generate one-sister chromatid labelled cells, 10 μM F-ara-EdU (Sigma Aldrich, T511293) was added to cells 15 h after the second release into S phase (after the first release for the NIPBL-AID cell line) to generate a pool of the compound within the cell, while the cells were in aphidicolin. The following day, cells were washed twice with pre-warmed PBS and released into fresh medium containing 10 μM F-ara-EdU. A final block with aphidicolin was then performed as described above. The following day, cells were washed twice with pre-warmed PBS and released into fresh nucleotide-free medium, such that the cells became labelled on only one sister chromatid.After labelling of sister chromatids, cells were synchronised to G2 using the CDK1 inhibitor RO-3306 (Sigma Aldrich, SML0569). For G2 samples 10 μM RO-3306 was added 5 – 6 h after the release from the final aphidicolin block. WAPL was depleted through the addition of 1 μM dTAG-7 14 h after the final S phase release. Wild type G2 cells were fixed after 15 h S phase release. WAPL depleted G2 cells were fixed 24 h after the final S-phase release. To generate prophase samples, 7 μM RO-3306 was added as described above, after 15 h S-phase release, cells were washed 3 times with wild type medium and released into 5 μM STLC-containig medium.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-4-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol  image acquisition and feature extraction protocol",
+      "description": "treatment protocol  image acquisition and feature extraction protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-4-3",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    },
+    {
+      "@id": "#experiment-biosample-5",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Validation of protein depletion across different cell lines by measurement of mean nuclear intensities of proteins of interest, as in Fig. EV3, EV4, Appendix Fig. S1, S2, S4 of Batty et al, 2023.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000251",
+      "@type": "DefinedTerm",
+      "name": "confocal microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-5-0",
+      "@type": "LabProtocol",
+      "name": "confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000251"
+        }
+      ],
+      "description": "Validation of protein depletion across different cell lines by measurement of mean nuclear intensities of proteins of interest, as in Fig. EV3, EV4, Appendix Fig. S1, S2, S4 of Batty et al, 2023."
+    },
+    {
+      "@id": "#experiment-protocol-5-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "DNA was stained with Hoechst 33342 in all cases. SMC4-AID cells were incubated for 3 h with (ΔSMC4) or without (Control) 1 μM 5-Ph-IAA before subsequently staining of SMC4 with TMR-HaloTag ligand. NIPBL-AID cells were incubated for 2 h with (ΔNIPBL) or without (Control) 1 μM 5-Ph-IAA before subsequently fixing and staining for mEGFP with an anti-GFP nanobody. WAPL-dTAG cells were incubated for 3 h with (ΔWAPL) or without (Control) 1 μM dTAG-7 before subsequently fixing and staining for HA-WAPL and SCC1, with anti-HA and anti-SCC1 antibodies respectively. WAPL-dTAG_SMC4-AID cells were incubated with 5-Ph-IAA or dTAG-7 in the following combinations: untreated (Control), 3 h 5-Ph-IAA (ΔSMC4), 3 h dTAG-7 (ΔWAPL), 3 h 5-Ph-IAA + dTAG-7 (ΔSMC4 ΔWAPL). SMC4 was stained with TMR-HaloTag ligand and HA-WAPL and SCC1 were stained using antibodies. WAPL-AID cells were incubated for 2 h with (ΔWAPL) or without (Control) 500 μM auxin before subsequently staining of WAPL with TMR-HaloTag ligand. To stain Sororin in HeLa cells homozygously tagged for Halo-mAID-WAPL (ΔWAPL) or Sororin-mAID-mEGFP (ΔSororin), cells were synchronised to G2 phase by RO-3306. WAPL and Sororin were depleted through the addition of 500 μM auxin (IAA) for 10 h. ΔWAPL cells were treated with 16 nM Control (siControl) or Sororin (siSororin) siRNAs as indicated. Sororin was stained using an anti-Sororin antibody.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-5-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol  image acquisition and feature extraction protocol",
+      "description": "treatment protocol  image acquisition and feature extraction protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-5-3",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    },
+    {
+      "@id": "#experiment-biosample-6",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Immunofluorescence of nuclear Sororin fluorescence and SCC1 axis formation in WAPL depleted G2 cells, as in Appendix Fig. S2D of Batty et al, 2023.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-6-0",
+      "@type": "LabProtocol",
+      "name": "array-scan confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000393"
+        }
+      ],
+      "description": "Immunofluorescence of nuclear Sororin fluorescence and SCC1 axis formation in WAPL depleted G2 cells, as in Appendix Fig. S2D of Batty et al, 2023."
+    },
+    {
+      "@id": "#experiment-protocol-6-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "To assess nuclear Sororin fluorescence in Sororin depleted, WAPL depleted and WAPL/Sororin depleted G2 cells, cells were first pre-synchronised to the G1/S boundary by incubation with 2 mM thymidine (Sigma Aldrich, T1895) in wild type medium for 16 – 18 h. Cells were then washed twice with pre-warmed PBS and released into fresh wild type medium. 6 h after the first release, WAPL-AID cells were treated with Control (16 nM) or Sororin (0.75 nM or 16 nM, as specified) siRNAs as described below (section: siRNA transfection). 10 – 12 h after the first release, cells were blocked for the second time using 3 μg mL-1 aphidicolin (Sigma Aldrich, A0781) for 16 – 18 h. The following day, cells were washed twice with pre-warmed PBS and released into fresh wild type medium. 6 h after the second release, RO-3306 was added to a final concentration of 10 μM to arrest cells in G2 phase. 14 h after the second release, 500 μM auxin was added to the cells to deplete WAPL (WAPL-AID) or Sororin (Sororin-AID) respectively. After 10 h depletion, cells were fixed and stained for immunofluorescence.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-6-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol  image acquisition and feature extraction protocol",
+      "description": "treatment protocol  image acquisition and feature extraction protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-6-3",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 538980599935,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "0.237 + 0.102 + 0.0565 + 0.0675 + 0.0128 + 0.0144 = 0.49 TB"
+    }
+  ]
+}

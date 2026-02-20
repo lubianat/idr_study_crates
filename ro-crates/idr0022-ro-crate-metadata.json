@@ -1,0 +1,238 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0022-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0022/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0022/",
+      "@type": "Dataset",
+      "name": "Uncovering the signaling landscape controlling breast cancer cell migration identifies novel metastasis driver genes.",
+      "description": "Triple-negative breast cancer (TNBC) is an aggressive and highly metastatic breast cancer subtype. Enhanced TNBC cell motility is a prerequisite of TNBC cell dissemination. Here, we apply an imaging-based RNAi phenotypic cell migration screen using two highly motile TNBC cell lines (Hs578T and MDA-MB-231) to provide a repository of signaling determinants that functionally drive TNBC cell motility.",
+      "datePublished": "2019-09-17",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Koedoot et al., CC-BY-4.0, 2019",
+      "identifier": "idr0022",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-9041-0075"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1038/s41467-019-11020-3"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#screen-biosample-1"
+        },
+        {
+          "@id": "#screen-biosample-2"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#screen-protocol-1-0"
+        },
+        {
+          "@id": "#screen-protocol-2-0"
+        },
+        {
+          "@id": "#screen-protocol-1-1"
+        },
+        {
+          "@id": "#screen-protocol-1-2"
+        },
+        {
+          "@id": "#screen-protocol-1-3"
+        },
+        {
+          "@id": "#screen-protocol-2-1"
+        },
+        {
+          "@id": "#screen-protocol-2-2"
+        },
+        {
+          "@id": "#screen-protocol-2-3"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/7948817/"
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-9041-0075",
+      "@type": "Person",
+      "name": "Esmee Koedoot",
+      "givenName": "Esmee",
+      "familyName": "Koedoot",
+      "email": "e.koedoot@lacdr.leidenuniv.nl",
+      "address": "Division of Drug Discovery and Safety, LACDR, Leiden University, Einsteinweg 55, 2333 CC, Netherlands"
+    },
+    {
+      "@id": "https://doi.org/10.1038/s41467-019-11020-3",
+      "@type": "ScholarlyArticle",
+      "name": "Uncovering the signaling landscape controlling breast cancer cell migration identifies novel metastasis driver genes."
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#screen-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Primary RNAi screen using 4198 smartpool siRNAs to identify cell migratory regulators in Hs578T and MDA-MB-231 triple-negative breast cancer cells.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000253",
+      "@type": "DefinedTerm",
+      "name": "spinning disk confocal microscopy"
+    },
+    {
+      "@id": "#screen-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "spinning disk confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "description": "Primary RNAi screen using 4198 smartpool siRNAs to identify cell migratory regulators in Hs578T and MDA-MB-231 triple-negative breast cancer cells."
+    },
+    {
+      "@id": "#screen-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "Transfection",
+      "description": "Reverse transfections were performed at 50nM concentration using 0.3 µl INTERFERin (Polyplus) per well.  Transfection reagent and siRNA were incubated for 20 minutes, after which 2500 cells per well were added.  Plates were placed in the incubator.  After 20h, the medium was refreshed.  PKT plates were prepared according to protocol.  After 65h, transfected cells were washed twice with PBS/EDTA, treated with trypsin/EDTA (Invitrogen) and subsequently resuspended into a single cell suspension.  One part of the cell suspension was further diluted in culture medium, then plated on the bead-coated plates and returned to the incubator.  After 7 hr migration time, cells were fixed using a 4% formaldehyde solution and washed twice in PBS.  Plates were then stored at 4 degrees C for later imaging.  For each transfection, technical duplicate bead plates were generated and the screening of the siRNA libraries was done in duplo.  The preparation of PKT plates, the automated microscopy and image analysis has been described in the following protocol: Fokkelman, M., Roosmalen, W. v., Rogkoti, V., Le Dévédec, S. E., Geiger, B. and Water, B. v. (2016).  PhagoKinetic Track Assay: Imaging and Analysis of Single Cell Migration. Bio-protocol 6(1): e1699. http://www.bio-protocol.org/e1699.  To visualize the bead-free tracks, a 6x6 montage of the well was obtained using a BD Pathway 855 BioImager.  Images were analysed as described in the PKT assay protocol.  Images with less than 10 accepted tracks were discarded.  Average values of accepted tracks per well were normalized to mock control condition (robust Z-score) per experiment.  After normalization, the average Z-score of all replicates (max 4) was calculated.  A minimum of 3 replicates with at least 60 accepted tracks was required for further analysis.  Visual inspection of the images revealed different phenotypes, such as small and round migratory tracks, as well as long tracks, indicating a decrease and increase in cell migration, respectively.  Five different phenotypic classes were manually defined and confirmed by supervised machine learning.  Hits were selected from these 5 phenotypic classes by setting thresholds on Z-score of multiple parameters.  First, we selected hits based on the overlap with MDA-MB-231 for each phenotype.  Secondly, we selected the top ~150 hits for the Hs578T and the top ~150 hits for the MDA-MB-231 to be validated by single siRNAs."
+    },
+    {
+      "@id": "#screen-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "Phagokinetic track assay",
+      "description": "Phagokinetic track assay"
+    },
+    {
+      "@id": "#screen-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "Data analysis",
+      "description": "Data analysis"
+    },
+    {
+      "@id": "#screen-biosample-2",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Validation RNAi screen using smartpool and single siRNAs to validate cell migratory regulators in Hs578T and MDA-MB-231 cells that were identified in the primary screen.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-0",
+      "@type": "LabProtocol",
+      "name": "spinning disk confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "description": "Validation RNAi screen using smartpool and single siRNAs to validate cell migratory regulators in Hs578T and MDA-MB-231 cells that were identified in the primary screen."
+    },
+    {
+      "@id": "#screen-protocol-2-1",
+      "@type": "LabProtocol",
+      "name": "Transfection",
+      "description": "Reverse transfections were performed at 50nM concentration using 0.3 µl INTERFERin (Polyplus) per well.  Transfection reagent and siRNA were incubated for 20 minutes, after which 2500 cells per well were added.  Plates were placed in the incubator.  After 20h, the medium was refreshed.  PKT plates were prepared according to protocol.  After 65h, transfected cells were washed twice with PBS/EDTA, treated with trypsin/EDTA (Invitrogen) and subsequently resuspended into a single cell suspension.  One part of the cell suspension was further diluted in culture medium, then plated on the bead-coated plates and returned to the incubator.  After 7 hr migration time, cells were fixed using a 4% formaldehyde solution and washed twice in PBS.  Plates were then stored at 4 degrees C for later imaging.  For each transfection, technical duplicate bead plates were generated and the screening of the siRNA libraries was done in duplo.  The preparation of PKT plates, the automated microscopy and image analysis has been described in the following protocol: Fokkelman, M., Roosmalen, W. v., Rogkoti, V., Le Dévédec, S. E., Geiger, B. and Water, B. v. (2016).  PhagoKinetic Track Assay: Imaging and Analysis of Single Cell Migration. Bio-protocol 6(1): e1699. http://www.bio-protocol.org/e1699.  To visualize the bead-free tracks, a 6x6 montage of the well was obtained using a BD Pathway 855 BioImager.  Images were analysed as described in the PKT assay protocol.  Images with less than 10 accepted tracks were discarded.  Average values of accepted tracks per well were normalized to mock control condition (robust Z-score) per experiment.  After normalization, the average Z-score of all replicates (max 4) was calculated.  A minimum of 3 replicates with at least 150 accepted tracks was required for further analysis.  Visual inspection of the images revealed different phenotypes, such as small and round migratory tracks, as well as long tracks, indicating a decrease and increase in cell migration, respectively.  Five different phenotypic classes were manually defined and confirmed by supervised machine learning.  Hits were selected from these 5 phenotypic classes by setting thresholds on Z-score of multiple parameters.  First, we selected hits based on the overlap with Hs578T for each phenotype.  Secondly, we selected the top ~150 hits for the MDA-MB-231 and the top ~150 hits for the Hs578T to be validated by single siRNAs."
+    },
+    {
+      "@id": "#screen-protocol-2-2",
+      "@type": "LabProtocol",
+      "name": "Phagokinetic track assay",
+      "description": "Phagokinetic track assay"
+    },
+    {
+      "@id": "#screen-protocol-2-3",
+      "@type": "LabProtocol",
+      "name": "Data analysis",
+      "description": "Data analysis"
+    }
+  ]
+}

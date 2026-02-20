@@ -1,0 +1,212 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0067-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0067/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0067/",
+      "@type": "Dataset",
+      "name": "Meiotic cellular rejuvenation is coupled to nuclear remodeling in budding yeast",
+      "description": "Production of healthy gametes in meiosis relies on the quality control and proper distribution of both nuclear and cytoplasmic contents. Meiotic differentiation naturally eliminates age-induced cellular damage by an unknown mechanism. Using time-lapse fluorescence microscopy in budding yeast, we found that nuclear senescence factors - including protein aggregates, extrachromosomal ribosomal DNA circles, and abnormal nucleolar material - are sequestered away from chromosomes during meiosis II and subsequently eliminated. A similar sequestration and elimination process occurs for the core subunits of the nuclear pore complex in both young and aged cells. Nuclear envelope remodeling drives the formation of a membranous compartment containing the sequestered material. Importantly, de novo generation of plasma membrane is required for the sequestration event, preventing the inheritance of long-lived nucleoporins and senescence factors into the newly formed gametes. Our study uncovers a new mechanism of nuclear quality control and provides insight into its function in meiotic cellular rejuvenation.",
+      "datePublished": "2019-12-10",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "King et al., CC-BY-4.0, 2019",
+      "identifier": "idr0067",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-6768-609X"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.7554/eLife.47156"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_4932"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "#experiment-protocol-1-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/9036345/"
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-6768-609X",
+      "@type": "Person",
+      "name": "Elçin Ünal",
+      "givenName": "Elçin",
+      "familyName": "Ünal",
+      "email": "elcin@berkeley.edu",
+      "address": "622 Barker Hall, UC-Berkeley, Berkeley, CA, 94720"
+    },
+    {
+      "@id": "https://doi.org/10.7554/eLife.47156",
+      "@type": "ScholarlyArticle",
+      "name": "Meiotic cellular rejuvenation is coupled to nuclear remodeling in budding yeast"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_4932",
+      "@type": "Taxon",
+      "scientificName": "Saccharomyces cerevisiae"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Time-lapse and fixed cell fluorescence microscopy or transmission electron microscopy images depicting budding yeast cells progressing through meiosis. The goal of this study was to characterize nuclear remodeling during budding yeast meiosis, with a focus on determining how various nuclear senescence factors are eliminated.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_4932"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000246",
+      "@type": "DefinedTerm",
+      "name": "fluorescence microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "description": "Time-lapse and fixed cell fluorescence microscopy or transmission electron microscopy images depicting budding yeast cells progressing through meiosis. The goal of this study was to characterize nuclear remodeling during budding yeast meiosis, with a focus on determining how various nuclear senescence factors are eliminated."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "growth protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "treatment protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    }
+  ]
+}

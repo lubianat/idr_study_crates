@@ -1,0 +1,357 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0094-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0094/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0094/",
+      "@type": "Dataset",
+      "name": "SARS-COV-2 drug repurposing - Caco2 cell line",
+      "description": "To identify possible candidates for progression towards clinical studies against SARS-CoV-2, we screened a well-defined collection of 5632 compounds including 3488 compounds which have undergone clinical investigations (marketed drugs, phases 1 -3, and withdrawn) across 600 indications. Compounds were screened for their inhibition of viral induced cytotoxicity using the human epithelial colorectal adenocarcinoma cell line Caco-2 and a SARS-CoV-2 isolate. The primary screen of 5632 compounds gave 271 hits. A total of 64 compounds with IC50 <20 μM were identified, including 19 compounds with IC50 < 1 μM. Of this confirmed hit population, 90% have not yet been previously reported as active against SARS-CoV-2 in-vitro cell assays. Some 37 of the actives are launched drugs, 19 are in phases 1-3 and 10 pre-clinical. Several inhibitors were associated with modulation of host pathways including kinase signaling P53 activation, ubiquitin pathways and PDE activity modulation, with long chain acyl transferases were effective viral inhibitors.",
+      "datePublished": "2020-10-06",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "copyrightNotice": "Ellinger et al., CC0-1.0, 2020",
+      "identifier": "idr0094",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0001-5703-3901"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1038/s41597-021-00848-4"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#screen-biosample-1"
+        },
+        {
+          "@id": "#screen-biosample-2"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_2697049"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#screen-protocol-1-0"
+        },
+        {
+          "@id": "#screen-protocol-2-0"
+        },
+        {
+          "@id": "#screen-protocol-1-1"
+        },
+        {
+          "@id": "#screen-protocol-1-2"
+        },
+        {
+          "@id": "#screen-protocol-1-3"
+        },
+        {
+          "@id": "#screen-protocol-1-4"
+        },
+        {
+          "@id": "#screen-protocol-2-1"
+        },
+        {
+          "@id": "#screen-protocol-2-2"
+        },
+        {
+          "@id": "#screen-protocol-2-3"
+        },
+        {
+          "@id": "#screen-protocol-2-4"
+        },
+        {
+          "@id": "#screen-protocol-2-5"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000247"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/10560362/"
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0001-5703-3901",
+      "@type": "Person",
+      "name": "Bernhard Ellinger",
+      "givenName": "Bernhard",
+      "familyName": "Ellinger",
+      "email": "bernhard.ellinger@ime.fraunhofer.de",
+      "address": "Schnackenburgallee 114, 22525 Hamburg, Germany"
+    },
+    {
+      "@id": "https://doi.org/10.1038/s41597-021-00848-4",
+      "@type": "ScholarlyArticle",
+      "name": "A SARS-CoV-2 cytopathicity dataset generated by high-content screening of a large drug repurposing collection"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_2697049",
+      "@type": "Taxon",
+      "scientificName": "Severe acute respiratory syndrome coronavirus 2"
+    },
+    {
+      "@id": "#screen-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Primary Screen",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_2697049"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000253",
+      "@type": "DefinedTerm",
+      "name": "spinning disk confocal microscopy"
+    },
+    {
+      "@id": "#screen-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "spinning disk confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "description": "Primary Screen"
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Cell culture: Caco-2 cells (Human epithelial cell line derived from colon carcinoma) were obtained from the Deutsche Sammlung von Mikroorganismen und Zellkulturen (DSMZ). Cells were grown in Minimal Essential Medium (MEM) supplemented with 10% fetal bovine serum (FBS) and containing 100 IU/ml penicillin and 100 μg/ml streptomycin at 37 °C. All culture reagents were purchased from Sigma. Virus culture: SARS-CoV-2 was isolated from samples of travelers returning from Wuhan (China) to Frankfurt (Germany) using Caco-2 cells. SARS-CoV-2 stocks used in the experiments had undergone one passage on Caco-2 cells and were stored at -80° C. Virus titers were determined as TCID50/ml in confluent cells in 96-well microtiter plates.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007571",
+      "@type": "DefinedTerm",
+      "name": "HCS library protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "Compounds were added to confluent layers of Caco–2 cells in MEM supplemented with 1% FBS in 96-well plates. For the primary screen final compound concentration was 10 μM (0.1 % DMSO final) in singlicate. Following the addition of compounds, cells were immediately infected with SARS-CoV-2 at MOI 0.01. Control wells (+ virus and - virus) also contained DMSO at 0.1 % DMSO final. After 48 hours, cells were fixed using 3 % PFA in PBS, and the plates sealed and disinfected to inactivate SARS-CoV-2",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007572",
+      "@type": "DefinedTerm",
+      "name": "HCS image acquistion and feature extraction protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "HCS image acquisition and feature extraction protocol",
+      "description": "The collection of 5641 compounds was assembled by an external partner (SPECS) in a manner aligned to the recommendations from the Broad Institute (Cambridge Mass., USA). In assembling this “mirror” collection, compounds were purchased from the same set of >70 high quality suppliers identified by the Broad, (personal communication Dr Joshua Bitker), and quality controlled by LC/MS for purity and identity (minimum purity > 90%). Compounds were stored at 10mM in 100% DMSO at -20 °C. A curated database is available containing the compound, indication, primary target (where known) and mechanism of action, as well as analysis tools which can assist in mechanism of action determination and target elucidation.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007573",
+      "@type": "DefinedTerm",
+      "name": "HCS data analysis protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "Quantification of viral inhibition (based upon Caco-2 cell viability relative to controls) was performed using high content imaging of unlabeled cells. For high content imaging an Operetta CLS microscope from PerkinElmer was used. Cells were analysed in label free mode using digital phase contrast, with maximum contrast as a read out. Images were acquired using 10x objective with nine imaged fields per well and analysed using the manufacturer's software (PerkinElmer, Columbus v.2.9.0.1546).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-biosample-2",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Dose response screen",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_2697049"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000247",
+      "@type": "DefinedTerm",
+      "name": "phase contrast microscopy"
+    },
+    {
+      "@id": "#screen-protocol-2-0",
+      "@type": "LabProtocol",
+      "name": "phase contrast microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000247"
+        }
+      ],
+      "description": "Dose response screen"
+    },
+    {
+      "@id": "#screen-protocol-2-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Cell culture: Caco-2 cells (Human epithelial cell line derived from colon carcinoma) were obtained from the Deutsche Sammlung von Mikroorganismen und Zellkulturen (DSMZ). Cells were grown in Minimal Essential Medium (MEM) supplemented with 10% fetal bovine serum (FBS) and containing 100 IU/ml penicillin and 100 μg/ml streptomycin at 37 °C. All culture reagents were purchased from Sigma. Virus culture: SARS-CoV-2 was isolated from samples of travelers returning from Wuhan (China) to Frankfurt (Germany) using Caco-2 cells. SARS-CoV-2 stocks used in the experiments had undergone one passage on Caco-2 cells and were stored at -80° C. Virus titers were determined as TCID50/ml in confluent cells in 96-well microtiter plates.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#screen-protocol-2-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "Compounds were added to confluent layers of Caco–2 cells in MEM supplemented with 1% FBS in 96-well plates. Dose response profiling of selected priority compounds was performed with a range of eight different concentrations in three independent replicates (maximum 20 μM, minimum 20 nM, half log dilution factor, 0.1 % DMSO final). Following the addition of compounds, cells were immediately infected with SARS-CoV-2 at MOI 0.01. Control wells (+ virus and - virus) also contained DMSO at 0.1 % DMSO final. After 48 hours, cells were fixed using 3 % PFA in PBS, and the plates sealed and disinfected to inactivate SARS-CoV-2",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-3",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "The collection of 5641 compounds was assembled by an external partner (SPECS) in a manner aligned to the recommendations from the Broad Institute (Cambridge Mass., USA). In assembling this “mirror” collection, compounds were purchased from the same set of >70 high quality suppliers identified by the Broad, (personal communication Dr Joshua Bitker), and quality controlled by LC/MS for purity and identity (minimum purity > 90%). Compounds were stored at 10mM in 100% DMSO at -20 °C. A curated database is available containing the compound, indication, primary target (where known) and mechanism of action, as well as analysis tools which can assist in mechanism of action determination and target elucidation.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-4",
+      "@type": "LabProtocol",
+      "name": "HCS image acquistion and feature extraction protocol",
+      "description": "Quantification of viral inhibition (based upon Caco-2 cell viability relative to controls) was performed using high content imaging of unlabeled cells. For high content imaging an Operetta CLS microscope from PerkinElmer was used. Cells were analysed in label free mode using digital phase contrast, with maximum contrast as a read out. Images were acquired using 10x objective with nine imaged fields per well and analysed using the manufacturer's software (PerkinElmer, Columbus v.2.9.0.1546).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-5",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "The analysis sequence started with cell detection (method: c, common threshold: 0.05, area >100 μm, splitting coefficient: 6.5, individual threshold: 0.05, contrast >0.05) and was followed by calculating morphology, intensity and position properties as well as cell confluence. Well level data were analysed using ActivityBase (IDBS) and R (v.3.6.1). Test well results were normalized relative to the corresponding intra-plate control (no virus assigned as 100% inhibition of cellular toxicity, with virus assigned as 0% inhibition of cellular toxicity). Outliers were eliminated according to 3-sigma method. Plate level statistical performance was assessed using the standard Z’ calculation5. Dose response curves fitted in GraphPad Prism v.8.0.0 (GraphPad Software) using a 4-parameter logarithmic (least squares fit). Hits were further selected for dose response studies based on the progression of the compounds in clinical development. Therefore drugs in clinical use were priorised over phase 2 compounds, which were priorized over phase 1 or phase 1/phase 2 compounds.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    }
+  ]
+}

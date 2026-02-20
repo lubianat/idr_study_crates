@@ -1,0 +1,256 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0010-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0010/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0010/",
+      "@type": "Dataset",
+      "name": "High content screen for genes whose downregulation by RNAi affects acccumulation of p53-binding protein 1 (53BP1) at sites of double strand breaks",
+      "description": "DNA double-strand breaks (DSBs) not only interrupt the genetic information, but also disrupt the chromatin structure, and both impairments require repair mechanisms to ensure genome integrity. We showed previously that RNF8-mediated chromatin ubiquitylation protects genome integrity by promoting the accumulation of repair factors at DSBs. Here, we provide evidence that, while RNF8 is necessary to trigger the DSB-associated ubiquitylations, it is not sufficient to sustain conjugated ubiquitin in this compartment. We identified RNF168 as a novel chromatin-associated ubiquitin ligase with an ability to bind ubiquitin. We show that RNF168 interacts with ubiquitylated H2A, assembles at DSBs in an RNF8-dependent manner, and, by targeting H2A and H2AX, amplifies local concentration of lysine 63-linked ubiquitin conjugates to the threshold required for retention of 53BP1 and BRCA1. Thus, RNF168 defines a new pathway involving sequential ubiquitylations on damaged chromosomes and uncovers a functional cooperation between E3 ligases in genome maintenance.",
+      "datePublished": "2016-05-26",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Doil et al, CC-BY-4.0, 2016",
+      "identifier": "idr0010",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "#person-1"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1016/j.cell.2008.12.041"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#screen-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#screen-protocol-1-0"
+        },
+        {
+          "@id": "#screen-protocol-1-1"
+        },
+        {
+          "@id": "#screen-protocol-1-2"
+        },
+        {
+          "@id": "#screen-protocol-1-3"
+        },
+        {
+          "@id": "#screen-protocol-1-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/3054590/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        },
+        {
+          "@id": "#file-count"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "#person-1",
+      "@type": "Person",
+      "name": "Claudia Lukas",
+      "givenName": "Claudia",
+      "familyName": "Lukas",
+      "email": "claudia.lukas@cpr.ku.dk",
+      "address": "Protein Signaling Program, Panum Instituttet, Blegdamsvej 3, 2200 Kobenhavn N, 6.1, Denmark"
+    },
+    {
+      "@id": "https://doi.org/10.1016/j.cell.2008.12.041",
+      "@type": "ScholarlyArticle",
+      "name": "RNF168 binds and amplifies ubiquitin conjugates on damaged chromosomes to allow accumulation of repair proteins."
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#screen-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "A high-content microscopy screen for genes whose downregulation by RNA interference (RNAi) prevents accumulation of 53BP1 at the sites of DSBs.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000246",
+      "@type": "DefinedTerm",
+      "name": "fluorescence microscopy"
+    },
+    {
+      "@id": "#screen-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "description": "A high-content microscopy screen for genes whose downregulation by RNA interference (RNAi) prevents accumulation of 53BP1 at the sites of DSBs."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "U-2-OS cells (ATCC-HTB-96; a strain routinely used in our laboratory and proficient in the key aspects of the DNA damage response) were seeded in LabTek chambers (Nalge Nunc International; 1.15x105 cells per chamber), each containing 384 siRNA spots (Fig. S1F, left). Each spot contained 5 ng of a single siRNA oligonucleotide (Ambion) embedded in the optimized transfection mixture (Erfle et al., 2007). The average spot diameter was 400 um, and after three days of cultivation, the central area of the spot acquired by the microscope typically contained about 150 U-2-OS cells (Fig. S1F, right). The spot-to-spot distance was 1125 um, which, together with the relatively restricted mobility of the U-2-OS strain used in the screen, was sufficient to avoid cross-contamination between the neighbouring spots.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007571",
+      "@type": "DefinedTerm",
+      "name": "HCS library protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "Each gene was targeted by 2 to 3 independent siRNA oligonuclotides, and the complete genome-wide set of arrays contained over 50.000 siRNA oligonucleotides targeting in total 21.541 human genes (Erfle et al., 2007). At the time of evaluation (3 days after plating), the cells were typically 80% confluent. The cells were fixed with 3% buffered formaldehyde (12 min at room temperature), permeabilized in 0.2% Triton X100 in PBS (5 min), and immunostained with rabbit polyclonal antibody to 53BP1 (Santa Cruz, 22760; diluted 1:1000) for 1 h at room temperature, followed by the secondary anti-rabbit antibody (Alexa Fluor 488; A11034, Invitrogen) for 30 min at room temperature). The DNA was counter-stained by Hoechst 33258; Invitrogen; 1 ug/ml final concentration) and, as the last final step before image acquisition (see the following section), the cell monolayers were overlaid by PBS (2 ml per LabTek dish).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007572",
+      "@type": "DefinedTerm",
+      "name": "HCS image acquistion and feature extraction protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "HCS image acquistion and feature extraction protocol",
+      "description": "Image acquisition was performed on a wide-field fluorescence microscope (Zeiss Axiovert 200) equipped with motorized stage, 20x air objective (PlanApochromat 20x/0.8), CCD camera (Coolsnap HQ, Roper Scientific) operated by Metamorph software (version 6.2r6; Molecular Devices), fluorescent light source X-Cite 120 (Exfo Photonic Solutions, Inc), and Uniblitz shutters (Vincent Associates). Images were acquired with optical resolution of 0.465 ?m/pixel. Before plating the cells, the first spot on each array was manually marked and the entire array was scanned in a DIC transmission light to assess the quality of the siRNA spots and to adjust their correct position in the centre of the acquired field. After passing this quality check, the cells were seeded in the chamber and processed as described in the previous section. The marked first siRNA spot was then re-found and the arrays were acquired with appropriate excitation and emission Zeiss filter sets (#1, 365/12 excitation - LP397 emission for Hoechst; and #38HE, 470/40 excitation  525/50 emission for Alexa Fluor 488). The Hoechst-associated fluorescence (exposure time 10 ms) was used for automated identification of the focal plane. The exposure time to record the 53BP1-associated fluorescence was 30 ms. (Note:file names contain the word dapi but Hoechst was used).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007573",
+      "@type": "DefinedTerm",
+      "name": "HCS data analysis protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "The number and intensity of 53BP1 foci per nucleus were determined by an in-house developed automated routine using the public domain, free software ImageJ (Image processing and analysis in Java, http://rsb.info.nih.gov/ij/). Image processing was performed for the whole dataset using standard ImageJ features for noise reduction, segmentation, filtering and thresholding. In all acquired frames, the nuclei were detected using the Hoechst signal. Within the detected nuclei, 53BP1 foci number and intensity were measured using the Alexa 488 fluorescent signal. After recording these data, the average number of 53BP1 foci per nucleus was determined for each frame, and the resulting values were normalized to the mean number of foci in nuclei exposed to the non-targeting controls within the given siRNA microarray.  Prior to statistical analysis, out-of-focus images, images showing nuclear aberrations, or fields with excessive cell death were manually excluded from the dataset. To display the impact of each siRNA on 53BP1 focus formation, we ranked the resulting data according to their z-score: Z = (X - u) / sigma where X is the raw score, sigma is the standard deviation of the population and u the mean of the population. In addition to the automated image analysis, each acquired frame was seen by two independent investigators to validate the results from the automated readout. If at least one siRNA scored positively by these criteria, we considered it as a potential 'hit' and put it aside for secondary screens and in depth characterization.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 87960930222,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "0.08 TB"
+    },
+    {
+      "@id": "#file-count",
+      "@type": "QuantitativeValue",
+      "value": 56,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000189",
+      "unitText": "file count",
+      "description": "56 5D images"
+    }
+  ]
+}

@@ -1,0 +1,226 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0006-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0006/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0006/",
+      "@type": "Dataset",
+      "name": "Whole-genome screening identifies proteins localized to distinct nuclear bodies",
+      "description": "The nucleus is a unique organelle that contains essential genetic materials in chromosome territories. The interchromatin space is composed of nuclear subcompartments, which are defined by several distinctive nuclear bodies believed to be factories of DNA or RNA processing and sites of transcriptional and/or posttranscriptional regulation. In this paper, we performed a genome-wide microscopy-based screening for proteins that form nuclear foci and characterized their localizations using markers of known nuclear bodies. In total, we identified 325 proteins localized to distinct nuclear bodies, including nucleoli (148), promyelocytic leukemia nuclear bodies (38), nuclear speckles (27), paraspeckles (24), Cajal bodies (17), Sam68 nuclear bodies (5), Polycomb bodies (2), and uncharacterized nuclear bodies (64). Functional validation revealed several proteins potentially involved in the assembly of Cajal bodies and paraspeckles. Together, these data establish the first atlas of human proteins in different nuclear bodies and provide key information for research on nuclear bodies.",
+      "datePublished": "2016-04-27",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "copyrightNotice": "Fong et al, CC-BY-NC-SA-3.0, 2016",
+      "identifier": "idr0006",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "#person-1"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1083/jcb.201303145"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#screen-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#screen-protocol-1-0"
+        },
+        {
+          "@id": "#screen-protocol-1-1"
+        },
+        {
+          "@id": "#screen-protocol-1-2"
+        },
+        {
+          "@id": "#screen-protocol-1-3"
+        },
+        {
+          "@id": "#screen-protocol-1-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/353185/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        },
+        {
+          "@id": "#file-count"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "#person-1",
+      "@type": "Person",
+      "name": "Junjie Chen",
+      "givenName": "Junjie",
+      "familyName": "Chen",
+      "email": "jchen8@mdanderson.org",
+      "address": "Department of Experimental Radiation Oncology, Division of Radiation Oncology, The University of Texas MD Anderson Cancer Center, Houston, Texas, USA"
+    },
+    {
+      "@id": "https://doi.org/10.1083/jcb.201303145",
+      "@type": "ScholarlyArticle",
+      "name": "Whole-genome screening identifies proteins localized to distinct nuclear bodies."
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#screen-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "A whole-genome screening for proteins localized to distinct nuclear bodies using 15,483 ORFs in the Human ORFeome Library.  A total of 325 proteins were identified in various nuclear bodies, which include 148 nucleolar proteins, 38 proteins in PML bodies, 27 proteins in nuclear speckles, 24 proteins in paraspeckles, 17 proteins in Cajal bodies, 5 proteins in Sam68 nuclear bodies, 2 proteins in Polycomb bodies, and 64 proteins in uncharacterized nuclear subcompartments. An additional 48 proteins were identified that are targeted to the nuclear envelope.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000246",
+      "@type": "DefinedTerm",
+      "name": "fluorescence microscopy"
+    },
+    {
+      "@id": "#screen-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "description": "A whole-genome screening for proteins localized to distinct nuclear bodies using 15,483 ORFs in the Human ORFeome Library.  A total of 325 proteins were identified in various nuclear bodies, which include 148 nucleolar proteins, 38 proteins in PML bodies, 27 proteins in nuclear speckles, 24 proteins in paraspeckles, 17 proteins in Cajal bodies, 5 proteins in Sam68 nuclear bodies, 2 proteins in Polycomb bodies, and 64 proteins in uncharacterized nuclear subcompartments. An additional 48 proteins were identified that are targeted to the nuclear envelope."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "HeLa cells were obtained from ATCC and were maintained in DMEM supplemented with 10% fetal bovine serum and 1% penicillin/streptomycin. Plasmid transfection was performed using polyeth_ ylenimine reagent.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "A total of 15,483 human ORFs (Human ORFeome v5.1) already in pDONR223 vectors were first transferred into a Gateway_compatible destination vector containing the HA_Flag tag by LR reaction according to the manufacturer's protocol (Invitrogen). The products were transformed into DH5-alpha and the transformants were positively selected with Luria broth medium containing 100 _g/ml ampicillin. The plasmid DNAs were purified using a high quality 96_plasmid DNA purification kit (PureLink; Invitrogen). A day before transfection, 6 x 103 HeLa cells were seeded on 96_ well optical bottom plates (Thermo Fisher Scientific). Plasmid transfection was performed with the use of Lipofectamine 2000 (Invitrogen). 24 h after transfection, cells were subjected to ionizing radiation (IR; 10 Gy) and fixed with 3% paraformaldehyde 6 h later. Next, the cells were permeabilized with a 0.5% Triton X_100 solution and blocked with 3% BSA. Cells were then subjected to incubation with anti_Flag antibodies (1:5,000 dilution) for 2 h, after which they were washed extensively with PBS and incubated with rhodamine_conjugated secondary antibodies (Jackson ImmunoResearch Laboratories, Inc.) at room temperature for 1 h. Nuclei were counterstained with DAPI."
+    },
+    {
+      "@id": "#screen-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "HCS image acquistion and feature extraction protocol",
+      "description": "Cells were subjected to automated imaging with the use of ImageXpress Micro (Molecular Devices) equipped with a 20x air objective lens (NA 0.75; Nikon) and a megapixel cooled charge?coupled device camera (CoolSNAP HQ 1.4; Photometrics). The fluorescence images were captured and analyzed using MetaXpress software."
+    },
+    {
+      "@id": "#screen-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "After capturing and analyzing all the images, we selected proteins forming nuclear foci from those that do not form nuclear foci for further characterization.  The secondary screen of proteins forming nuclear foci was conducted in untreated or IR_treated cells. Because 325 proteins con_ stitutively form nuclear foci in untreated or IR_treated cells, the validation of 325 proteins with nuclear foci localization was conducted manually using various markers of nuclear bodies or distinct nucleolus morphology in un_ treated cells. Considering that subcellular localizations of the various nuclear body markers we used are largely distinct from each other, we have not assessed colocalization of each gene with all six marker proteins se_ quentially. Instead, we scored a protein as positive for a particular nuclear body component in the case of it showing >70% overlapping with any marker protein. During the course of the analysis, we were aware that some proteins colocalize with both PML and paraspeckles, and therefore, we examined whether the identified PML proteins also localize to para_ speckles or vice versa. Eventually, eight proteins were found to localize in both nuclear subcompartments."
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 1539316278886,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "1.4 TB"
+    },
+    {
+      "@id": "#file-count",
+      "@type": "QuantitativeValue",
+      "value": 240848,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000189",
+      "unitText": "file count",
+      "description": "240848 5D images"
+    }
+  ]
+}

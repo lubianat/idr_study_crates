@@ -1,0 +1,225 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0087-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0087/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0087/",
+      "@type": "Dataset",
+      "name": "Molecular determinants of large cargo transport into the nucleus",
+      "description": "Nucleocytoplasmic transport is tightly regulated by the nuclear pore complex (NPC). Even very large cargoes such as many pathogens, mRNAs and pre-ribosomal subunits can pass the NPC intact. Compared to small import complexes, for such large cargoes >15 nm there is very little quantitative understanding of the mechanism for efficient transport, the role of multivalent binding to nuclear transport receptors via nuclear localisation sequences (NLSs) and effects of size differences. Here, we assayed nuclear import kinetics in cells for a total of 30 large cargo models based on four capsid-like particles in the size range of 17-36 nm, with tuneable numbers of up to 240 NLSs. We show that the requirements for transport can be recapitulated by a simple two-parameter biophysical model that allow us to correlate the import flux to the energetic requirements for nuclear transport. Together, our results reveal key molecular determinants of large cargo import in cells.",
+      "datePublished": "2020-07-22",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Paci et al, CC-BY-4.0, 2020",
+      "identifier": "idr0087",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-8791-4766"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.7554/eLife.55963"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "#experiment-protocol-1-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000251"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/9844391/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-8791-4766",
+      "@type": "Person",
+      "name": "Joana Caria",
+      "givenName": "Joana",
+      "familyName": "Caria",
+      "email": "jcaria@uni-mainz.de",
+      "address": "Johannes Gutenberg-University Mainz, Hanns-Dieter-Huesch-Weg 15, Mainz 55128"
+    },
+    {
+      "@id": "https://doi.org/10.7554/eLife.55963",
+      "@type": "ScholarlyArticle",
+      "name": "Molecular determinants of large cargo transport into the nucleus"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Confocal time-lapse images of nuclear import into permeabilised  cells. All experiments are labelled according to the different cargo used: capsid MS2_S37P, I53-47 and MS2, and number of NLSs on the capsid surface. For each experiment, 12 areas containing approximately 10 cells were imaged at the same time. Where independent biological replicates of the same sample are available, these are labelled as R1, R2 etc.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000251",
+      "@type": "DefinedTerm",
+      "name": "confocal microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000251"
+        }
+      ],
+      "description": "Confocal time-lapse images of nuclear import into permeabilised  cells. All experiments are labelled according to the different cargo used: capsid MS2_S37P, I53-47 and MS2, and number of NLSs on the capsid surface. For each experiment, 12 areas containing approximately 10 cells were imaged at the same time. Where independent biological replicates of the same sample are available, these are labelled as R1, R2 etc."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "HeLa Kyoto cells were cultured at 37C, 5% CO2 atmosphere in Dulbecco's modified Eagle's medium with 1 g/mL glucose (Gibco 31885023) supplemented with 1% penicillin-streptomycin (Sigma P0781), 1% L-Glutamine (Sigma G7513) and 9% FBS (Sigma F7524). The cells were regularly tested for mycoplasma contamination and found to be mycoplasma-negative. The cells were passaged every 2-3 days up to maximum of 15-17 passages.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "Cells were seeded 1 or 2 days prior the experiment at low density (10000-12000 cells per well) in a glass bottom 8-well Lab-Tek II chambered coverglass (Thermo Scientific Nunc, 155383). Cells for transport assays were stained with 100 nM MitoTracker green (Invitrogen, M7514) in growth medium for 30 min, at 37C, 5% CO2. For nuclear staining, cells were rinsed once with PBS and incubated for 10 min, at room temperature with 20 nM Hoechst 33342 (Sigma, B2261). Cells were then washed once with transport buffer (1XTB: 20 mM Hepes, 110 mM KOAc, 5 mM NaOAc, 2 mM MgOAc, 1 mM EGTA, pH 7.3 adjusted with KOH) and permeabilised by incubation for 10 min, at room temperature with digitonin (40 ug/mL). Cells were then washed 3 times with 1XTB supplied with 5 mg/mL PEG 6000 to avoid osmotic shock. After the final wash, excess buffer was removed and the transport mix was quickly added to the cells to start the experiment. The final transport mix was composed of 1 uM Importin-alpha, 1 uM Importin-beta, 4 uM RanGDP, 2 uM NTF2, 2 mM GTP and 8 nM capsid cargo. In order to allow the import complex to form, the cargo was first pre-incubated with Importin-beta and Importin-alpha on ice for at least 10 minutes, then the rest of the transport mix was added and the solution was spun down for 10 min at 10000 rpm to remove any aggregates.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "Time-lapse confocal imaging of nuclear import was performed on an Olympus FLUOVIEW FV3000 scanning confocal microscope, using a 40x air objective (NA = 0.95). An automated multi-position acquisition was carried out, where 12 different regions (typically containing 10 cells each) were imaged in two different wells. Three channels were recorded at each time step, using the 405 nm (Hoechst), 488 nm (Mitotracker) and 640 nm (cargo) laser lines for excitation. Images were acquired every 2 minutes for 80 minutes, using continuous autofocusing with Z-drift compensation to ensure imaging stability."
+    },
+    {
+      "@id": "#experiment-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "The Hoechst and Mitotracker channels were used to generate reference masks for the nucleus, nuclear envelope and cytoplasm at each time point. Briefly, the two images were pre-processed with Gaussian blur to aid in area segmentation, and then thresholded. The nuclear mask was eroded three times to remove contributions coming from the nuclear envelope, and the envelope mask was generated by subtracting the eroded mask from the non-eroded one. The final masks were then used to extract the average intensity of cargo signal in the different areas of interest. Final data analysis and plotting was performed in IgorPro (Wavemetrics)."
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 49587974412,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "0.0451 TB"
+    }
+  ]
+}

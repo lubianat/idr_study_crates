@@ -1,0 +1,237 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0099-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0099/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0099/",
+      "@type": "Dataset",
+      "name": "Regionalized tissue fluidization is required for epithelial gap closure during insect gastrulation",
+      "description": "Many animal embryos pull and close an epithelial sheet around the ellipsoidal egg surface during a gastrulation process known as epiboly. The ovoidal geometry dictates that the epithelial sheet first expands and subsequently compacts. Moreover, the spreading epithelium is mechanically stressed and this stress needs to be released. We show that during extraembryonic tissue (serosa) epiboly in the insect Tribolium castaneum, the non-proliferative serosa becomes regionalized into a solid-like dorsal region with larger non-rearranging cells, and a more fluid-like ventral region surrounding the leading edge with smaller cells undergoing intercalations. Our results suggest that a heterogeneous actomyosin cable contributes to the fluidization of the leading edge by driving sequential eviction and intercalation of individual cells away from the serosa margin. Since this developmental solution utilized during epiboly resembles the mechanism of wound healing, we propose actomyosin cable-driven local tissue fluidization as a conserved morphogenetic module for closure of epithelial gaps.",
+      "datePublished": "2021-03-02",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Pavel Tomancak, Akanksha Jain, CC-BY-4.0, 2021",
+      "identifier": "idr0099",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-2222-9370"
+        },
+        {
+          "@id": "https://orcid.org/0000-0003-4704-7992"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1038/s41467-020-19356-x"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_7070"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "#experiment-protocol-1-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000369"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/12557110/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-2222-9370",
+      "@type": "Person",
+      "name": "Pavel Tomancak",
+      "givenName": "Pavel",
+      "familyName": "Tomancak",
+      "email": "tomancak@mpi-cbg.de",
+      "address": "Max-Planck-Institute of Molecular Cell Biology and Genetics, Dresden, Germany"
+    },
+    {
+      "@id": "https://orcid.org/0000-0003-4704-7992",
+      "@type": "Person",
+      "name": "Akanksha Jain",
+      "givenName": "Akanksha",
+      "familyName": "Jain",
+      "email": "akanksha.jain@bsse.ethz.ch",
+      "address": "D-BSSE, ETH Zurich, Basel, Switzerland"
+    },
+    {
+      "@id": "https://doi.org/10.1038/s41467-020-19356-x",
+      "@type": "ScholarlyArticle",
+      "name": "Regionalized tissue fluidization is required for epithelial gap closure during insect gastrulation"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_7070",
+      "@type": "Taxon",
+      "scientificName": "Tribolium castaneum"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "tissue",
+      "description": "This dataset contains multiview fused images of Tribolium castaneum embryos labelled with a uniform nuclear localized eGFP signal, a uniform Histone-eGFP signal, a uniform LifeAct-eGFP signal, a uniform Tc-Squash-eGFP signal and a Gap43-eYFP signal. Selective Plane Illumination Microscopy (SPIM), was carried out on a Zeiss Lightsheet Z.1 microscope equipped with a 20x/1.0 NA Plan Apochromat water-immersion detection objective and two 10x/0.2 NA dry illumination objectives. Individual views were registered using bead-based registration and then fused to form combined 3D Tiff stacks using the Multiview reconstruction plugin in Fiji.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_7070"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000369",
+      "@type": "DefinedTerm",
+      "name": "light sheet fluorescence microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "light sheet fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000369"
+        }
+      ],
+      "description": "This dataset contains multiview fused images of Tribolium castaneum embryos labelled with a uniform nuclear localized eGFP signal, a uniform Histone-eGFP signal, a uniform LifeAct-eGFP signal, a uniform Tc-Squash-eGFP signal and a Gap43-eYFP signal. Selective Plane Illumination Microscopy (SPIM), was carried out on a Zeiss Lightsheet Z.1 microscope equipped with a 20x/1.0 NA Plan Apochromat water-immersion detection objective and two 10x/0.2 NA dry illumination objectives. Individual views were registered using bead-based registration and then fused to form combined 3D Tiff stacks using the Multiview reconstruction plugin in Fiji."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "The embryo was mounted in 1% low melting agarose dissolved in 1xPBS together with fluorescent beads in glass capillaries by using a metallic plunger. The time interval for the data is 90 seconds or 5 minutes. The imaging was performed at 22 Celsius, 25 Celsius or 30 Celsius.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "treatment protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 9235897673318,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "8.4 TB"
+    }
+  ]
+}

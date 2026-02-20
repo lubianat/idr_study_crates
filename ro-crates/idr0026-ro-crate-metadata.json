@@ -1,0 +1,217 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0026-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0026/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0026/",
+      "@type": "Dataset",
+      "name": "Focusing and sustaining the antitumor CTL effector killer response by agonist anti-CD137 mAb",
+      "description": "Cancer immunotherapy is undergoing significant progress due to recent clinical successes by refined adoptive T-cell transfer and immunostimulatory monoclonal Ab (mAbs). B16F10-derived OVA-expressing mouse melanomas resist curative immunotherapy with either adoptive transfer of activated anti-OVA OT1 CTLs or agonist anti-CD137 (4-1BB) mAb. However, when acting in synergistic combination, these treatments consistently achieve tumor eradication. Tumor-infiltrating lymphocytes that accomplish tumor rejection exhibit enhanced effector functions in both transferred OT-1 and endogenous cytotoxic T lymphocytes (CTLs). This is consistent with higher levels of expression of eomesodermin in transferred and endogenous CTLs and with intravital live-cell two-photon microscopy evidence for more efficacious CTL-mediated tumor cell killing. Anti-CD137 mAb treatment resulted in prolonged intratumor persistence of the OT1 CTL-effector cells and improved function with focused and confined interaction kinetics of OT-1 CTL with target cells and increased apoptosis induction lasting up to six days postadoptive transfer. The synergy of adoptive T-cell therapy and agonist anti-CD137 mAb thus results from in vivo enhancement and sustainment of effector functions.",
+      "datePublished": "2017-04-17",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Weigelin et al, CC-BY-4.0, 2017",
+      "identifier": "idr0026",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "#person-1"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1073/pnas.1506357112"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000255"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/3261855/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        },
+        {
+          "@id": "#file-count"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "#person-1",
+      "@type": "Person",
+      "name": "Bettina Weigelin",
+      "givenName": "Bettina",
+      "familyName": "Weigelin",
+      "email": "bweigelin@mdanderson.org",
+      "address": "The University of Texas MD Anderson Cancer Center"
+    },
+    {
+      "@id": "https://doi.org/10.1073/pnas.1506357112",
+      "@type": "ScholarlyArticle",
+      "name": "Focusing and sustaining the antitumor CTL effector killer response by agonist anti-CD137 mAb."
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090",
+      "@type": "Taxon",
+      "scientificName": "Mus musculus"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "tissue",
+      "description": "Combination therapy of adoptive CTL transfer and anti-CD137 monoclonal antibody. Mice were injected with B16F10/OVA melanoma cells and after 3 or 7 days were treated with OVA-specific CD8+ T cells (Cytotoxic T lymphocytes CTL) plus 1D8 antibody (anti-CD137).  4D timelapse images were taken at either 3 or 6 days after CTL + antibody treatment.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000255",
+      "@type": "DefinedTerm",
+      "name": "multi-photon microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "multi-photon microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000255"
+        }
+      ],
+      "description": "Combination therapy of adoptive CTL transfer and anti-CD137 monoclonal antibody. Mice were injected with B16F10/OVA melanoma cells and after 3 or 7 days were treated with OVA-specific CD8+ T cells (Cytotoxic T lymphocytes CTL) plus 1D8 antibody (anti-CD137).  4D timelapse images were taken at either 3 or 6 days after CTL + antibody treatment."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "Dorsal skin-fold chambers were transplanted onto 8- to 14-wk-old male C57/Bl6 J mice (Charles River), as described (5). After one epidermal side of the skin flap was surgically removed, the chamber was mounted and a cover glass was added to shield the imaging field. One day post surgery, one or two small tumors per chamber were implanted into the deep dermis near the deep dermal vascular plexus by injecting a cell pellet of histone-2B/mCherry expressing B16F10/OVA (6) cells (5 x10^4 to 2 x10^5 cells) with a 30G needle. Tumor growth was monitored for up to 15 d by epifluorescence and multiphoton microscopy. For intravital microscopy, mice were anesthetized with isoflurane (1-3% in oxygen) and the skin-fold chamber was stably mounted on a temperature-controlled stage (37 C). Blood vessels were visualized by i.v. injection of AlexaFluor750- labeled 70-kDa dextran (2 mg per mouse). Three days after tumor implantation, 0.5-1 x 10^6 in vitro activated eGFP OT1 CTL were i.v. administered.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "image aquistion and feature extraction protocol",
+      "description": "Multiphoton Microscopy and Image Processing.  Imaging was performed on a customized multiphoton microscope (TriMScope-II, LaVision BioTec), equipped with three tunable Ti:Sa (Coherent Ultra II Titanium:Sapphire) lasers and an Optical Parametric Oscillator (OPO) (PP automaticequipped with a PP800 crystal; Coherent APE; typical pulse width, 200 fs; repetition rate, 80 MHz; peak output power of 500-650 mW at 1,180 nm). Three-dimensional time-lapse recordings were acquired by sequential scanning with 1,090 nm (mCherry and SHG) using 60 mW under the ob- jective, and with 910 nm (eGFP and Alexa750) using 20 mW under the objective with a sampling rate of 1 frame/2 min over a maximum period of 4 h. Images were processed using Fiji (pacific.mpi-cbg.de/wiki/index.php/Fiji). Drifts in time-lapse record- ings were corrected using the StackReg plugin (7), and CTL tracking was performed manually using the Manual Tracking plugin. All intravital imaging experiments were approved by the Ethical Committee on Animal Experiments and performed in the Central Animal Laboratory of the Radboud University, Nijmegen (protocol no. RU-DEC 2010-259), in accordance with the Dutch Animal Experimentation Act and the European FELASA pro- tocol (www.felasa.eu/recommendations)."
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "Tumor size - overview images of the entire tumor were taken by epifluorescence microscopy and the volume was calculated with the following formula: Tumor volume = (tumor width) * (tumor length) * pi / 6 / 2. CTL density - a volume of 300 x 300 x 100 um of the tumor was scanned by 2-photon microscopy with a z-resolution of 5 um. DsRed positive cells were segmented and counted after exclusion of objects smaller than 25 um^2 and larger than 200 um^2 (cell debris and clusters). CTL migration speed and confinement - time lapse sequences of at least 2 hrs total duration and with a frame rate of 2 min were recorded and CTL migration was tracked manually. The confinement ratio was calculated by dividing the distance from start and endpoint of the migration track by the total lenght of the track.  CTL and tumor cell proliferation and apoptosis rates - the same movies were analysed manually to determine the amount of CTL and tumor cell mitosis and apoptosis per hour based on (nuclear or cell) fragmentation and division visualized by fluorescent histone-2B (tumor cells) and cytoplasmic dsRed (CTL). CTL-tumor cell interaction times - again, the movies were analyzed manually to determine the dwell time of individual CTL in contact with individual tumor cells.  CTL-mediated killing - if apoptosis was preceded by a CTL contact, it was classified as \"\"CTL-mediated\"\"/\"\"CTL-related\"\"."
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 527765581332,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "0.48 TB"
+    },
+    {
+      "@id": "#file-count",
+      "@type": "QuantitativeValue",
+      "value": 227,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000189",
+      "unitText": "file count",
+      "description": "227 5D images"
+    }
+  ]
+}

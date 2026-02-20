@@ -1,0 +1,222 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0103-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0103/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0103/",
+      "@type": "Dataset",
+      "name": "HIV-1 fusion is disrupted by addition of deoxygluose and is rescued with addition of cholesterol",
+      "description": "There has been resurgence in determining the role of host metabolism in viral infection yet deciphering how the metabolic state of single cells affects viral entry and fusion remains unknown. Here, we have developed a novel assay multiplexing genetically-encoded biosensors with single virus tracking (SVT) to evaluate the influence of global metabolic processes on the success rate of virus entry in single cells. We found that cells with a lower ATP:ADP ratio prior to virus addition were less permissive to virus fusion and infection. These results indicated a relationship between host metabolic state and the likelihood for virus-cell fusion to occur. SVT revealed that HIV-1 virions were arrested at hemifusion in glycolytically-inactive cells. Interestingly, cells acutely treated with glycolysis inhibitor 2-deoxyglucose (2-DG) become resistant to virus infection and also display less surface membrane cholesterol. Addition of cholesterol in these in glycolytically-inactive cells rescued the virus entry block at hemifusion and enabled completion of HIV-1 fusion. Further investigation with FRET-based membrane tension and membrane order reporters revealed a link between host cell glycolytic activity and host membrane order and tension. Indeed, cells treated with 2-DG possessed lower plasma membrane lipid order and higher tension values, respectively. Our novel imaging approach that combines lifetime imaging (FLIM) and SVT revealed not only changes in plasma membrane tension at the point of viral fusion, but also that HIV is less likely to enter cells at areas of higher membrane tension. We therefore have identified a connection between host cell glycolytic activity and membrane tension that influences HIV-1 fusion in real-time at the single-virus fusion level in live cells.",
+      "datePublished": "2021-01-27",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Coomer et al, CC-BY-4.0, 2021",
+      "identifier": "idr0103",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-8010-9481"
+        },
+        {
+          "@id": "#person-2"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1371/journal.ppat.1008359"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "#experiment-protocol-1-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000368"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/12074276/"
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-8010-9481",
+      "@type": "Person",
+      "name": "Sergi Padilla-Parra",
+      "givenName": "Sergi",
+      "familyName": "Padilla-Parra",
+      "email": "sergi@well.ac.uk or Sergio.padilla_parra@kcl.ac.uk",
+      "address": "King’s College London Floor 2 Borough Wing Guy’s Hospital London SE1 9RT"
+    },
+    {
+      "@id": "#person-2",
+      "@type": "Person",
+      "name": "Charles Coomer",
+      "givenName": "Charles",
+      "familyName": "Coomer"
+    },
+    {
+      "@id": "https://doi.org/10.1371/journal.ppat.1008359",
+      "@type": "ScholarlyArticle",
+      "name": "Single-cell glycolytic activity regulates membrane tension and HIV-1 fusion"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "TZM-bl cells stably expressing CD4 and CCR5 receptors and charged with CCF2, were exposed to HIV-1 pseudoparticles where the Vpr is cloned with BlaM (Vpr-Blam) at MOI = 1. When treating the cells with 100 mM 2-Deoxyglucose (2DG), HIV-1 fusion is blocked. Successive treatment of these cells with 100, 200 and 400 ug/mL of Cholesterol rescues HIV-1 fusion. This experiment shows that cholesterol is key for HIV-1 fusion and that 2DG might downregulate the concentration of cholesterol in the plasma membrane of the host, impeding HIV-1 to effectively fuse in the host.  There are 3 different repeats and in each repeat 6 different experiments (images acquired in different conditions).",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000368",
+      "@type": "DefinedTerm",
+      "name": "FLIM"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "FLIM",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000368"
+        }
+      ],
+      "description": "TZM-bl cells stably expressing CD4 and CCR5 receptors and charged with CCF2, were exposed to HIV-1 pseudoparticles where the Vpr is cloned with BlaM (Vpr-Blam) at MOI = 1. When treating the cells with 100 mM 2-Deoxyglucose (2DG), HIV-1 fusion is blocked. Successive treatment of these cells with 100, 200 and 400 ug/mL of Cholesterol rescues HIV-1 fusion. This experiment shows that cholesterol is key for HIV-1 fusion and that 2DG might downregulate the concentration of cholesterol in the plasma membrane of the host, impeding HIV-1 to effectively fuse in the host.  There are 3 different repeats and in each repeat 6 different experiments (images acquired in different conditions)."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "CCF2-loaded TZM-bl cells were excited with a 405nm continuous laser (Leica, Manheim) while recording the emission spectra with a 430-560nm window, pixel by pixel (512 x 512) using a Leica SP8 X-SMD microscope with a lambda resolution of 12 nm. Utilising ImageJ (http://imagej.nih.gov/ij/), the ratio of the blue (440-480nm, cleaved CCF2) to green (500-540nm, uncleaved CCF2) emission was calculated pixel by-pixel using 20X objective. Statistical analyses of the BlaM data were performed using a two-tailed Fishers Exact Test (SigmaPlot, San Jose, CA). Cells were then removed of the CCF2 mixture and allowed to incubate for 24 hours in complete DMEM if they were to be analysed for infection by the B-Gal assay (below) for infection.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "treatment protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    }
+  ]
+}

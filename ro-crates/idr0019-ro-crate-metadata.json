@@ -1,0 +1,256 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0019-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0019/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0019/",
+      "@type": "Dataset",
+      "name": "Protein localisation and morphological comparison of normal and cancer cell lines in various media, treated with TNF-alpha or cytoskeleton-modifying small molecules",
+      "description": "The aim of the study was to investigate relationships between NF-kappaB nuclear localisation and cell morphology in breast cancer cells.",
+      "datePublished": "2017-01-18",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Sero et al, CC-BY-4.0, 2017",
+      "identifier": "idr0019",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "#person-1"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.15252/msb.20145644"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#screen-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#screen-protocol-1-0"
+        },
+        {
+          "@id": "#screen-protocol-1-1"
+        },
+        {
+          "@id": "#screen-protocol-1-2"
+        },
+        {
+          "@id": "#screen-protocol-1-3"
+        },
+        {
+          "@id": "#screen-protocol-1-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/1851832/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        },
+        {
+          "@id": "#file-count"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "#person-1",
+      "@type": "Person",
+      "name": "Julia Sero",
+      "givenName": "Julia",
+      "familyName": "Sero",
+      "email": "Julia.Sero@icr.ac.uk",
+      "address": "Institute of Cancer Research, 237 Fulham Rd, London SW3 6JB"
+    },
+    {
+      "@id": "https://doi.org/10.15252/msb.20145644",
+      "@type": "ScholarlyArticle",
+      "name": "Cell shape and the microenvironment regulate   nuclear translocation of NF-κB in breast epithelial   and tumor cells."
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#screen-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "High Content Analysis was used to quantitatively profile the morphology and NF-kappaB nuclear localization (which serves as a proxy for its activation), in 17 breast cancer and two non_tumor cell lines. Cells were treated with or without TNFa for 1 h or 5 h to capture the first peak and later steady state of NF-kappaB activation.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000253",
+      "@type": "DefinedTerm",
+      "name": "spinning disk confocal microscopy"
+    },
+    {
+      "@id": "#screen-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "spinning disk confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "description": "High Content Analysis was used to quantitatively profile the morphology and NF-kappaB nuclear localization (which serves as a proxy for its activation), in 17 breast cancer and two non_tumor cell lines. Cells were treated with or without TNFa for 1 h or 5 h to capture the first peak and later steady state of NF-kappaB activation."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "All cell lines were plated by columns in replicate 384-well plates using a Multidrop liquid handler in DMEM:F12 medium supplemented with 5% heat-inactivated fetal bovine serum (HI-FBS). Approximately 1000 cells per well were seeded in 20 _l of medium and cultured for 72 h. Supplements and treatments were added to each plate, or to top/bottom halves of plates, at the final concentrations and times (h before fixation). Complete MCF10A medium was supplemented with 20 ng/ml EGF, 10 ug/ml insulin, 0.5 mg/ml hydrocortisone, and 100 ng/ml cholera toxin.  MCF10A breast epithelial and AU565 breast tumour cells were obtained from ATCC (LCG Standards). MDAMB231, HCC70, HCC1143, HCC1954, MCF7, T47D, BT474, CAMA1, MDAMB453, and hs578T breast tumour and MCF10A non-tumour cells were obtained from the laboratory of Alan Ashworth (Breakthrough Breast Cancer, ICR). SUM149, SUM159, MDAMB157, JIMT1, SKBR3, and ZR75.1 breast tumour cells were given by the laboratory of Jorge Reis-Filho (Breakthrough Breast Cancer, ICR). Non-breast tumour cell lines HeLa (cervical carcinoma) and Hep3B (hepatocarcinoma), and primary human fibroblasts (AG15730) were included for comparison.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "Human recombinant TNF_ (Life Technologies) was added to a final concentration of 10 ng/ml. Y_27632 (Sigma) was used at 10 uM unless otherwise specified, and nocodazole was used at 0.1 ug/ml unless otherwise specified. Blebbistatin, taxol, and DMSO were obtained from Sigma. H1152 was from Tocris Bioscience. Plasmid transfection with GFPup65/RelA (Addgene; plasmid ID 23255; (Chen et al, 2001)) was performed using Lipofectamine 2000 (Invitrogen), and GFP_positive cells were harvested by FACS 24 h before imaging",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007572",
+      "@type": "DefinedTerm",
+      "name": "HCA image acquistion and feature extraction protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "HCA image acquistion and feature extraction protocol",
+      "description": "One hour prior to fixation, a final concentration of 10 uM dihydroethidium (2-hydroethidine, DHE; Invitrogen) was added to all wells to label cell bodies. Cells were fixed with 4% paraformaldehyde for 10 min, washed with PBS, and permeabilised with 0.1% Triton X-100. NF-_B was labelled using anti-p65 rabbit polyclonal antibody (Abcam ab16502; 1:500), followed by Alexa-488 anti-rabbit secondary antibody (Invitrogen, 1:1000). DAPI (1:1000) was used to label nuclei. Image acquisition was performed using an Opera Cell::Explorer_automated spinning disk confocal microscope. The initial screen was performed using a 20x air objective lens (NA = 0.45) (PerkinElmer), and 12-30 fields of view were imaged in each well. Subsequent experiments were imaged using a 20_ water objective lens (NA = 0.6). Cell segmentation was performed using Acapella software (PerkinElmer).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007573",
+      "@type": "DefinedTerm",
+      "name": "HCA data analysis protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "HCA data analysis protocol",
+      "description": "Segmentation and feature measurements were performed using Columbus (PerkinElmer) automated analysis software. Nuclei were segmented using DAPI (Channel 1) and cell bodies were detected by DHE (Channel 3). Subcellular regions include: \"nucleus\", \"ring region\" (-2 to -7 pixels from nucleus border), \"nucleus region\" (1 pixel erosion of nucleus), \"cytoplasm\", and \"membrane region\" (0 to 5 pixels inward from cell border).  The following morphological features were calculated: area, roundness (form factor), length, width, and length/width were determined for nucleus and cell regions, the ratio of nuclear area:cell area (\"Nuc/Cell Area\") and areas of ring and membrane regions. The extent of cell-cell contact, i.e. \"Neighbor Fraction\", was calculated as follows: 1 - ((Outer Membrane Region area * 2) / (Inner Membrane Region area * 2)), where the \"Outer Membrane Region\" is a 1-pixel dilation from the cell edge and the \"Inner Membrane Region\" is a 1-pixel erosion from the cell edge. Intensities were measured for each channel in each region and regional mean values are reported. The amount of NF-kappaB in the nucleus of each cell was calculated as the log of the ratio of nuclear:ring region intensities (Channel 2). Two measures of edge ruffling (\"Ruffliness-Edge\" and \"Ruffliness-Ridge\") were calculated from the \"membrane region\" texture features SER-Edge and SER-Ridge (scale = 4 px, normalisation by kernel) divided by cell roundness. Nucleoli were visible in the DHE channel and the Spot finder module was used to measured the number, area, and intensity of each nucleolus (\"spot\"). Texture features were calculated for nuclear DNA using the DAPI channel: Haralick distance = 1 px, \"nucleus\"; SER (Spot, Hole, Edge, Ridge, Valley, Saddle, Bright, Dark) scale =  0 px, normalisation by region, \"nucleus\"; and SER-Dark scale = 3 px, normalisation by region, \"nucleus region\". Border objects were removed and dead or poorly-segmented cells were removed by applying the filter: \"Nuc/Cell Area\" > 0.02 AND \"Ring NFkB Intensity\" > 100 Mitotic cells were binned using the following criteria: \"Nucleus Roundness\" < 0.9 AND \"DAPI Nucleus Haralick Sum Variance 1 px\" > 0.04 AND \"DAPI nucleus Haralick Homogeneity 1 px\" < 0.32 AND \"Nucleus Region Channel1 SER-Dark 3 px\" < 0.001. Interphase cells were further binned using the following criteria: \"Nucleus Roundness\" > 0.7 AND \"DAPI nucleus Haralick Sum Variance 1 px\" < 0.1 AND \"DAPI nucleus Haralick Homogeneity 1 px\" > 0.05. Mean, SD, CV, Median, Max, and Min feature values and counts for all filtered cells, interphase cells only, and mitotic cells only are included for each plate. PCA, clustering, and statistical tests. Principal component analysis was carried out using Cluster 3.0 and MATLAB software based on Z-scores [(value-mean)/SD]. Hierarchi- cal clustering was performed with Cluster 3.0 and visualized using Java Tree View. P values were determined using Student's t-test and ANOVA (Excel and MATLAB). R and R2 values were determined using Excel or MATLAB (Pearson correlation unless otherwise specified).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 32985348833,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "0.03 TB"
+    },
+    {
+      "@id": "#file-count",
+      "@type": "QuantitativeValue",
+      "value": 25,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000189",
+      "unitText": "file count",
+      "description": "25 5D images"
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0107-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0107/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0107/",
+      "@type": "Dataset",
+      "name": "Diffusion-mediated HEI10 coarsening can explain meiotic crossover positioning in Arabidopsis",
+      "description": "In most organisms, the number and distribution of crossovers that occur during meiosis are tightly controlled. All chromosomes must receive at least one Òobligatory crossoverÓ and crossovers are prevented from occurring near one another by Òcrossover interferenceÓ. However, the mechanistic basis of this phenomenon of crossover interference has remained mostly mysterious. Using quantitative super-resolution cytogenetics and mathematical modelling, we investigated crossover positioning in the Arabidopsis thaliana wild-type, an over-expressor of the conserved E3 ligase HEI10, and a hei10 heterozygous line5. We show that crossover positions can be explained by a predictive, diffusion-mediated coarsening model, in which large, approximately evenly-spaced HEI10 foci grow at the expense of smaller, closely-spaced clusters. We propose this coarsening process explains many aspects of Arabidopsis crossover positioning, including crossover interference. Consistent with this model, we also demonstrate that crossover positioning can be predictably modified in vivo simply by altering HEI10 dosage, with higher and lower dosage leading to weaker and stronger crossover interference, respectively. As HEI10 is a conserved member of the RING finger protein family that functions in the interference-sensitive pathway for crossover formation, we anticipate that similar mechanisms may regulate crossover positioning in diverse eukaryotes.",
+      "datePublished": "2021-06-30",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Morgan et al, CC-BY-4.0, 2021",
+      "identifier": "idr0107",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-7475-2155"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_3702"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "#experiment-protocol-1-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000332"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/13417058/"
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-7475-2155",
+      "@type": "Person",
+      "name": "Chris Morgan",
+      "givenName": "Chris",
+      "familyName": "Morgan",
+      "email": "Chris.Morgan@JIC.ac.uk",
+      "address": "John Innes Centre, Norwich, UK, NR4 7UH"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_3702",
+      "@type": "Taxon",
+      "scientificName": "Arabidopsis thaliana"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Images used for HEI10 focus patterning and intensity measurements in Morgan et al., 2021. These are multichannel 3D-SIM reconstructed images of Arabidopsis pachytene cells labelled for ZYP1 and HEI10 and stained with DAPI. 3D skeleton traces of each of the 5 bivalent paths for each cell are also included to facilitate downstream image analysis.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_3702"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000332",
+      "@type": "DefinedTerm",
+      "name": "structured illumination microscopy (SIM)"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "structured illumination microscopy (SIM)",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000332"
+        }
+      ],
+      "description": "Images used for HEI10 focus patterning and intensity measurements in Morgan et al., 2021. These are multichannel 3D-SIM reconstructed images of Arabidopsis pachytene cells labelled for ZYP1 and HEI10 and stained with DAPI. 3D skeleton traces of each of the 5 bivalent paths for each cell are also included to facilitate downstream image analysis."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Arabidopsis thaliana lines used in this study were wild-type Col-0, the HEI10 overexpressor-line C2 and heterozygotes of the hei10-2 T-DNA insertion line (Salk_014624). Plants were grown in controlled environment rooms with 16 h of light (125 mMol cool white) at 20 ¡C and 8 h of darkness at 16 ¡C.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "Immunostained spreads of Arabidopsis pachytene cells were prepared for 3D-SIM imaging as follows.To roughly stage the meiocytes, a single anther from a floral bud was removed and squashed in a drop of water on a clean slide under a coverslip and inspected using brightfield microscopy. Early- and mid-pachytene meiocytes were still stuck together within a meiocyte column, whilst lateÑpachytene meiocytes had begun to break apart from one-another. More precise staging of early and late pachytene meiocytes was also based on previously defined HEI10 behaviour, with mid pachytene meiocytes exhibiting an intermediate phenotype.  The remaining 5 anthers containing meiocytes of the desired stage were dissected from the staged buds. They were then macerated using a brass rod on a No. 1.5H coverslip (Marienfeld) in 10 µl digestion medium (0.4% cytohelicase, 1.5% sucrose, 1% polyvinylpyrolidone in sterile water) for 1 minute. Coverslips were then incubated in a moist chamber at 37 ¡C for 4 minutes before adding 10 µl of 2% lipsol solution followed by 20 µl 4% paraformaldehyde (pH 8). Coverslips were dried in the fumehood for 3 hours, blocked in 0.3% bovine serum albumin in 1X phosphate buffered saline (PBS) solution and then incubated with primary antibody at 4 ¡C overnight and secondary antibody at 37 ¡C for 2 hours. In between antibody incubations, coverslips were washed 3 times for 5 minutes in 1X PBS plus 0.1% Triton X-100. Coverslips were then incubated in 10 µl DAPI (10 µg/ml) for 5 minutes , washed and mounted on a slide in 7 µl Vectashield. The following primary antibodies were used at 1:500 dilutions: anti-HEI10 (rabbit), anti-ZYP1 (rat) and anti-ASY1 (guinea-pig). The following secondary antibodies were used at 1:200 dilutions: anti-rat Alexa Fluor 488, anti-rabbit Alexa Fluor 555 and anti-guinea pig Alexa Fluor 647.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "Immunostained cells were imaged using 3D structured illumination microscopy (3D-SIM) on a Zeiss Elyra PS1 microscope equipped with an EM-CCD camera, a Plan-Apochromat 63x, NA 1.40 oil objective and 405, 488, 561 and 642 nm solid state laser diodes. Slides were imaged in 3D SIM mode with three stripe angles and five phases according to the microscope manufacturerÕs instructions. Z-stacks were captured at an interval size of 0.0909 um, with the size of each stack being sufficiently large for the cell to be out of focus at both ends. An immersion oil with a refractive index of 1.515 was used that was optimised for the green/red (ZYP1/HEI10) channels of our system. To determine the best refractive index, 200 nm TetraSpeck microspheres (Invitrogen) were dried on a coverslip at 1/100 dilution, mounted on a slide in 7ul Vectashield, imaged using the same microscope settings as used for the experiments and then the symmetry of the point spread function for each channel was assessed in orthogonal sections through the stack. Channel alignment was performed using the same Tetraspeck beads and the ÔaffineÕ alignment algorithm that is included in the Zeiss Elyra software. Occasional post-processing mismatches in z-alignment were manually adjusted in some cells by trimming the top or bottom stacks to ensure maximal co-localisation of ZYP1 and HEI10 signals to facilitate downstream image analysis. For optimal image quality and to minimise the introduction of reconstruction artefacts, microscope laser power and camera gain values were adjusted for the red (HEI10) and green (ZYP1) channels within a range of 10-30% and 1-3 units, respectively, for each cell to improve contrast and reduce fluorophore bleaching. Bleaching and contrast of raw images was assessed using the SIMcheck plugin to FIJI."
+    },
+    {
+      "@id": "#experiment-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "Each 3D-SIM image contained one nucleus (in a small number of cases multiple nuclei were present, which did not affect the analysis). The image analysis pipeline contained six main steps: bivalent skeleton tracing, trace fluorescence intensity quantification, HEI10 peak detection, HEI10 foci identification, HEI10 foci intensity quantification, and total bivalent intensity quantification. Note that the normalization steps used for foci identification differ from those used for foci intensity quantification; the former was intended to robustly identify foci from noisy traces, whilst the latter was used to carefully quantify foci HEI10 levels."
+    }
+  ]
+}

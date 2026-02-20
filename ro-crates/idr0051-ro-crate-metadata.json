@@ -1,0 +1,212 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0051-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0051/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0051/",
+      "@type": "Dataset",
+      "name": "In Toto Cell Tracking using Lightsheet Microscopy of the Neuromesodermal Progenitor Zone of the Zebrafish Tailbud from the 21st Somite Stage",
+      "description": "Lightsheet microscopy has been previously used to image and directly study the process of gastrulation in a zebrafish embryo. Before now it was not possible to use this method to study late-stage somatogenesis, due to the movement of the embryo, resulting in displacement from the field of view. Here we achieve 4D lightsheet imaging with online, image based registration to maintain the field of view during long timelapses, with emphasis on the tailbud. The zebrafish tailbud is of special interest as it contains a population of bipotent progenitor cells, neuromesodermal progenitors (NMps), competent to enter either the mesodermal or neural lineages. This dataset provides in toto tracking of the tailbud of the developing zebrafish whilst also demonstrating the potential of online tracking during developing to maintain high magnification images whilst tracking a growing object.",
+      "datePublished": "2018-11-29",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Steventon et al., CC-BY-4.0, 2018",
+      "identifier": "idr0051",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0001-7838-839X"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1242/dev.166728"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_7955"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "#experiment-protocol-1-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000369"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/4007817/"
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0001-7838-839X",
+      "@type": "Person",
+      "name": "Benjamin Steventon",
+      "givenName": "Benjamin",
+      "familyName": "Steventon",
+      "email": "bjs57@cam.ac.uk",
+      "address": "Department of Genetics University of Cambridge"
+    },
+    {
+      "@id": "https://doi.org/10.1242/dev.166728",
+      "@type": "ScholarlyArticle",
+      "name": "Neuromesodermal progenitors are a conserved source of spinal cord with divergent growth dynamics."
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_7955",
+      "@type": "Taxon",
+      "scientificName": "Danio rerio"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "tissue",
+      "description": "Lightsheet imaging of tailbud from 18 somite stage with one frame per 2 minutes",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_7955"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000369",
+      "@type": "DefinedTerm",
+      "name": "light sheet fluorescence microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "light sheet fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000369"
+        }
+      ],
+      "description": "Lightsheet imaging of tailbud from 18 somite stage with one frame per 2 minutes"
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Detailed annotation of the mounting and imaging technique used in production of this dataset is avalible from Development (doi: 10.1242/dev.166728) and Wellcome Trust Open Research (DOIXXXXXXXXXXXX)",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "TGMM Tracking on nuclei with manual validaition using FIJI plugin Mamut",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "image aquistion and feature extraction protocol",
+      "description": "image aquistion and feature extraction protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    }
+  ]
+}

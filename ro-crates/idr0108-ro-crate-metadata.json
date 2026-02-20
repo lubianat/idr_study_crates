@@ -1,0 +1,212 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0108-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0108/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0108/",
+      "@type": "Dataset",
+      "name": "3D super-resolution fluorescence microscopy maps the variable molecular architecture of the Nuclear Pore Complex",
+      "description": "We explored the power of 3D super-resolution microscopy combined with computational classification and averaging to explore the 3D structure of the NPC in single human cells. We show that this approach can build the first integrated 3D structural map containing both central as well as peripheral NPC subunits with molecular specificity and nanoscale resolution. Our unbiased classification of over ten thousand individual NPCs indicates that the nuclear ring and the nuclear basket can adopt different conformations. Our approach opens up the exciting possibility to relate different structural states of the NPC to function in situ.",
+      "datePublished": "2021-09-01",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Sabinina et al, CC-BY-4.0, 2021",
+      "identifier": "idr0108",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0001-5909-701X"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1091/mbc.E20-11-0728"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "#experiment-protocol-1-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/MI_2213"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/13425351/"
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0001-5909-701X",
+      "@type": "Person",
+      "name": "Jan Ellenberg",
+      "givenName": "Jan",
+      "familyName": "Ellenberg",
+      "email": "ellenberg@embl.de",
+      "address": "EMBL Heidelberg, Meyerhofstrabe 1, 69117 Heidelberg, Germany EMBL Heidelberg, Meyerhofstrabe 1, 69117 Heidelberg, Germany"
+    },
+    {
+      "@id": "https://doi.org/10.1091/mbc.E20-11-0728",
+      "@type": "ScholarlyArticle",
+      "name": "3D super-resolution fluorescence microscopy maps the variable molecular architecture of the Nuclear Pore Complex"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Dual color super-resolution imaging of ELYS and NUP107, NUP133, RANBP2, SEH1, TPR.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/MI_2213",
+      "@type": "DefinedTerm",
+      "name": "super-resolution microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "super-resolution microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/MI_2213"
+        }
+      ],
+      "description": "Dual color super-resolution imaging of ELYS and NUP107, NUP133, RANBP2, SEH1, TPR."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "U2OS cells were cultured at 37C and 5% CO2 in 1x high glucose McCoy's 5A modified medium with 10% (v/v) fetal bovine serum, 100 U/ml penicillin-streptomycin, 2 mM L-glutamin, 1 mM sodium pyruvate and 1% MEM nonessential amino acid. Tests confirming the absence of mycoplasma were performed every 2 months.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "The nucleoporin gene of interest was edited with the SNAPf-tag Zinc finger nucleases to add a SNAP tag at the N-terminus of the protein. Tagged proteins were detected using benzylguanine-conjugated AF647 and ELYS with a polyclonal rabbit antibody followed by a secondary antibody coupled to CF680. Data was acquired on a custom-built wide-field setup described in Deschamps et al., 2016 using a cylindrical lens (f = 1000 mm) to introduce astigmatism.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "Blinking event data (files with names MMStack*.ome.tif)  was processed to generate localization data (in csv files) which was further processed to produce the final images (files with names sml_3Dvolume*.tif). Processing was done with the SMAP software (https://github.com/jries/SMAP)"
+    },
+    {
+      "@id": "#experiment-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    }
+  ]
+}

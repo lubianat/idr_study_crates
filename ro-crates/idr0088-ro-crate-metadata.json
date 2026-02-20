@@ -1,0 +1,264 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0088-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0088/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0088/",
+      "@type": "Dataset",
+      "name": "Tales of 1,008 Small Molecules: Phenomic Profiling through Live-cell Imaging in a Panel of Reporter Cell Lines",
+      "description": "To devise an economical set of phenomic profiling assays, we assembled a library of 1,008 approved drugs and tool compounds manually annotated to 218 unique MoAs and an addtional 169 natural products, and we profiled each compound at four concentrations in live-cell, high-content imaging screens against a panel of 15 reporter cell lines, which expressed a diverse set of fluorescent organelle and pathway markers in three distinct cell lineages. Phenomic profiling can be used for compound target identification or mechanism of action (MoA) prediction and other applications in drug discovery. For 41 of 83 MoAs with sufficiently many active compounds, phenomic profiles accurately ranked the reference compounds (AUC-ROC ³0.9) in at least one of our cell lines.",
+      "datePublished": "2020-11-19",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "copyrightNotice": "Cox et al, CC-BY-NC-4.0, 2020",
+      "identifier": "idr0088",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0001-5637-3154"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1038/s41598-020-69354-8"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#screen-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#screen-protocol-1-0"
+        },
+        {
+          "@id": "#screen-protocol-1-1"
+        },
+        {
+          "@id": "#screen-protocol-1-2"
+        },
+        {
+          "@id": "#screen-protocol-1-3"
+        },
+        {
+          "@id": "#screen-protocol-1-4"
+        },
+        {
+          "@id": "#screen-protocol-1-5"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/11407784/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0001-5637-3154",
+      "@type": "Person",
+      "name": "Steffen Jaensch",
+      "givenName": "Steffen",
+      "familyName": "Jaensch",
+      "email": "sjaensch@its.jnj.com",
+      "address": "Turnhoutseweg 30, 2340 Beerse, Belgium"
+    },
+    {
+      "@id": "https://doi.org/10.1038/s41598-020-69354-8",
+      "@type": "ScholarlyArticle",
+      "name": "Tales of 1,008 Small Molecules: Phenomic Profiling through Live-cell Imaging in a Panel of Reporter Cell Lines"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#screen-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "We screened a library of 1,008 approved drugs and well-characterized tool compounds manually annotated to 218 unique mechanisms-of-action (MoA) and 169 natural products at four concentrations with four replicates each in live-cell, high-content imaging screens against a panel of 15 reporter cell lines, which expressed a diverse set of fluorescent organelle and pathway markers in three distinct cell lineages. Each reporter cell line carried a BFP segmentation cassette that enabled detection of the nuclear and cell boundaries. In addition, each reporter cell line expressed a GFP- and a RFP/FusionRed-tagged organelle or pathway marker from its endogenous chromosomal locus. These markers were selected to cover a broad array of organelles, cellular structures and regulatory pathways for the generation of information-rich image-based compound descriptors.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000253",
+      "@type": "DefinedTerm",
+      "name": "spinning disk confocal microscopy"
+    },
+    {
+      "@id": "#screen-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "spinning disk confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "description": "We screened a library of 1,008 approved drugs and well-characterized tool compounds manually annotated to 218 unique mechanisms-of-action (MoA) and 169 natural products at four concentrations with four replicates each in live-cell, high-content imaging screens against a panel of 15 reporter cell lines, which expressed a diverse set of fluorescent organelle and pathway markers in three distinct cell lineages. Each reporter cell line carried a BFP segmentation cassette that enabled detection of the nuclear and cell boundaries. In addition, each reporter cell line expressed a GFP- and a RFP/FusionRed-tagged organelle or pathway marker from its endogenous chromosomal locus. These markers were selected to cover a broad array of organelles, cellular structures and regulatory pathways for the generation of information-rich image-based compound descriptors."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Cells were maintained using standard laboratory techniques at 37°C and 5% CO2. During cell line maintenance and propagation, cells were cultured in the presence of phenol red; but, this was omitted during imaging as it obscures the signal from RFP/fusionRed-tagged proteins. HepG2 cells were cultured in MEM, 10% FBS, 2 mM L-glutamine, 100 U/ml Pen-Strep. A549 cells were cultured in RPMI-1640, 10% FBS, 2 mM L-glutamine, 100 U/ml Pen-Strep. WPMY1 cells were cultured in DMEM, 5% FBS, 4 mM L-glutamine, 1 mM sodium pyruvate, 100 U/ml Pen-Strep.\"",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "\"Cells were seeded in medium containing no phenol red on to 384-well poly-D-lysine-coated microClear plates at the appropriate density and grown for 20 to 40 hours before treatment with compound at 0.3, 1, 3, or 9 ?M. To control for experimental variation, two technical replicates were included for each compound treatment in each imaging batch and two batches were prepared for each reporter cell line. Cells were grown for an additional 24 hours before imaging. As cells were actively growing during imaging (doubling time 18-24 hours), the last 10 plates in a batch were seeded at a lower cell density than the first 10 plates to compensate for the additional growth period they would encounter before imaging. The exact seeding densities were optimized for each cell line so that cells in control wells were 50% to 80% confluent at the time of imaging.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007571",
+      "@type": "DefinedTerm",
+      "name": "HCS library protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "We assembled a library of 1,008 approved drugs and tool compounds manually annotated to 218 unique MoAs and included an additional 169 natural products from the Prestwick library in our screen.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007572",
+      "@type": "DefinedTerm",
+      "name": "HCS image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "HCS image acquisition and feature extraction protocol",
+      "description": "Each of the 15 reporter cell lines carried a BFP segmentation cassette that enabled detection of the nuclear and cell boundaries. In addition, each reporter cell line expressed a GFP- and RFP/fusionRed-tagged organelle or pathway marker from its endogenous chromosomal locus. Five different combinations of organelle and pathway markers were introduced into each cell type. Cells were imaged on a Cell Voyager 7000 (Yokogawa, Tokyo, Japan) high-throughput microscope equipped with a climate control chamber (37°C, 5% CO2). Images of BFP (ex: 405 nm, em: 445/45), GFP (ex: 488 nm, em: 525/50), and RFP/fusionRed (ex:561 nm, em: 593/46) were acquired at two to three sites per well using a 20× objective lens (Olympus, Tokyo, Japan; NA 0.75). All liquid dispensation, compound treatment, and imaging steps were conducted on an automated platform designed specifically for live-cell microscopy screens. Typically, twenty 384-well plates were imaged per day over a 20-hour period.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007573",
+      "@type": "DefinedTerm",
+      "name": "HCS data analysis protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-5",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "Please see study publication for details.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 5937362789990,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "5.4 TB"
+    }
+  ]
+}

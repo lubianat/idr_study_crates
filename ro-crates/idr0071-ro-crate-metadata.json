@@ -1,0 +1,582 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0071-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0071/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0071/",
+      "@type": "Dataset",
+      "name": "Optical pooled screens in human cells",
+      "description": "Genetic screens are critical for the systematic identification of genes underlying cellular phenotypes. Pooling gene perturbations greatly improves scalability, but is not compatible with imaging of complex and dynamic cellular phenotypes. Here, we introduce a pooled approach for optical genetic screens in mammalian cells. We use targeted in situ sequencing to demultiplex a library of genetic perturbations following image-based phenotyping. We screened a set of 952 genes across millions of cells for involvement in NF-κB signaling by imaging the translocation of RelA (p65) to the nucleus. Screening at a single time point across 3 cell lines recovered 15 known pathway components, while repeating the screen with live-cell imaging revealed a novel role for Mediator complex subunits in regulating the duration of p65 nuclear retention. These results establish a new approach to perform highly multiplexed, image-based screens of spatially and temporally defined phenotypes with pooled libraries.",
+      "datePublished": "2021-01-27",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Feldman et al, CC-BY-4.0, 2021",
+      "identifier": "idr0071",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-4889-8783"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1016/j.cell.2019.09.016"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "#experiment-biosample-2"
+        },
+        {
+          "@id": "#experiment-biosample-3"
+        },
+        {
+          "@id": "#experiment-biosample-4"
+        },
+        {
+          "@id": "#experiment-biosample-5"
+        },
+        {
+          "@id": "#experiment-biosample-6"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-2-0"
+        },
+        {
+          "@id": "#experiment-protocol-3-0"
+        },
+        {
+          "@id": "#experiment-protocol-4-0"
+        },
+        {
+          "@id": "#experiment-protocol-5-0"
+        },
+        {
+          "@id": "#experiment-protocol-6-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "#experiment-protocol-1-4"
+        },
+        {
+          "@id": "#experiment-protocol-2-1"
+        },
+        {
+          "@id": "#experiment-protocol-2-2"
+        },
+        {
+          "@id": "#experiment-protocol-2-3"
+        },
+        {
+          "@id": "#experiment-protocol-2-4"
+        },
+        {
+          "@id": "#experiment-protocol-3-1"
+        },
+        {
+          "@id": "#experiment-protocol-3-2"
+        },
+        {
+          "@id": "#experiment-protocol-3-3"
+        },
+        {
+          "@id": "#experiment-protocol-3-4"
+        },
+        {
+          "@id": "#experiment-protocol-4-1"
+        },
+        {
+          "@id": "#experiment-protocol-4-2"
+        },
+        {
+          "@id": "#experiment-protocol-4-3"
+        },
+        {
+          "@id": "#experiment-protocol-4-4"
+        },
+        {
+          "@id": "#experiment-protocol-5-1"
+        },
+        {
+          "@id": "#experiment-protocol-5-2"
+        },
+        {
+          "@id": "#experiment-protocol-5-3"
+        },
+        {
+          "@id": "#experiment-protocol-5-4"
+        },
+        {
+          "@id": "#experiment-protocol-6-1"
+        },
+        {
+          "@id": "#experiment-protocol-6-2"
+        },
+        {
+          "@id": "#experiment-protocol-6-3"
+        },
+        {
+          "@id": "#experiment-protocol-6-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/12142871/"
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-4889-8783",
+      "@type": "Person",
+      "name": "Paul Blainey",
+      "givenName": "Paul",
+      "familyName": "Blainey",
+      "email": "pblainey@broadinstitute.org",
+      "address": "Blainey Lab, Broad Institute, Cambridge, Massachusetts"
+    },
+    {
+      "@id": "https://doi.org/10.1016/j.cell.2019.09.016",
+      "@type": "ScholarlyArticle",
+      "name": "Optical pooled screens in human cells"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Optical pooled CRISPR knockout screen in HeLa cells for regulators of p65 translocation upon stimulation by IL-1b or TNF-a, detected by imaging a p65-mNeonGreen fluorescent reporter. CRISPR sgRNAs are detected by sequencing proxy barcodes in cells transduced with the lentiGuide-BC vector. Included cycles of sequencing-by-synthesis (SBS): 1, 2, 3, 4, 5, 6, 7, 8, 9.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000246",
+      "@type": "DefinedTerm",
+      "name": "fluorescence microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "description": "Optical pooled CRISPR knockout screen in HeLa cells for regulators of p65 translocation upon stimulation by IL-1b or TNF-a, detected by imaging a p65-mNeonGreen fluorescent reporter. CRISPR sgRNAs are detected by sequencing proxy barcodes in cells transduced with the lentiGuide-BC vector. Included cycles of sequencing-by-synthesis (SBS): 1, 2, 3, 4, 5, 6, 7, 8, 9."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "growth protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "treatment protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    },
+    {
+      "@id": "#experiment-biosample-2",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Optical pooled CRISPR knockout screen in HeLa cells for regulators of p65 translocation upon stimulation by IL-1b or TNF-a, detected by indirect immunofluorescence of endogenous p65. CRISPR sgRNAs are detected by sequencing from the 5' end of the sgRNA sequence in cells transduced with the CROPseq-Puro vector. Included cycles of sequencing by synthesis (SBS): 1, 2, 3, 5, 6, 7, 8, 9, 10",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-2-0",
+      "@type": "LabProtocol",
+      "name": "fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "description": "Optical pooled CRISPR knockout screen in HeLa cells for regulators of p65 translocation upon stimulation by IL-1b or TNF-a, detected by indirect immunofluorescence of endogenous p65. CRISPR sgRNAs are detected by sequencing from the 5' end of the sgRNA sequence in cells transduced with the CROPseq-Puro vector. Included cycles of sequencing by synthesis (SBS): 1, 2, 3, 5, 6, 7, 8, 9, 10"
+    },
+    {
+      "@id": "#experiment-protocol-2-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "growth protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-2-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "treatment protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-2-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#experiment-protocol-2-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    },
+    {
+      "@id": "#experiment-biosample-3",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Optical pooled CRISPR knockout screen in A549 cells for regulators of p65 translocation upon stimulation by IL-1b or TNF-a, detected by indirect immunofluorescence of endogenous p65. CRISPR sgRNAs are detected by sequencing from the 5' end of the sgRNA sequence in cells transduced with the CROPseq-Puro vector. Included cycles of sequencing-by-synthesis (SBS): 1, 2, 3, 4, 5, 7, 8, 9, 10.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-3-0",
+      "@type": "LabProtocol",
+      "name": "fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "description": "Optical pooled CRISPR knockout screen in A549 cells for regulators of p65 translocation upon stimulation by IL-1b or TNF-a, detected by indirect immunofluorescence of endogenous p65. CRISPR sgRNAs are detected by sequencing from the 5' end of the sgRNA sequence in cells transduced with the CROPseq-Puro vector. Included cycles of sequencing-by-synthesis (SBS): 1, 2, 3, 4, 5, 7, 8, 9, 10."
+    },
+    {
+      "@id": "#experiment-protocol-3-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "growth protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-3-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "treatment protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-3-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#experiment-protocol-3-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    },
+    {
+      "@id": "#experiment-biosample-4",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Optical pooled CRISPR knockout screen in HCT-116 cells for regulators of p65 translocation upon stimulation by IL-1b or TNF-a, detected by indirect immunofluorescence of endogenous p65. CRISPR sgRNAs are detected by sequencing from the 5' end of the sgRNA sequence in cells transduced with the CROPseq-Puro vector. Included cycles of sequencing-by-synthesis (SBS): 1, 2, 3, 4, 5, 6, 7, 8, 9.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-4-0",
+      "@type": "LabProtocol",
+      "name": "fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "description": "Optical pooled CRISPR knockout screen in HCT-116 cells for regulators of p65 translocation upon stimulation by IL-1b or TNF-a, detected by indirect immunofluorescence of endogenous p65. CRISPR sgRNAs are detected by sequencing from the 5' end of the sgRNA sequence in cells transduced with the CROPseq-Puro vector. Included cycles of sequencing-by-synthesis (SBS): 1, 2, 3, 4, 5, 6, 7, 8, 9."
+    },
+    {
+      "@id": "#experiment-protocol-4-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "growth protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-4-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "treatment protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-4-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#experiment-protocol-4-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    },
+    {
+      "@id": "#experiment-biosample-5",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Twelve cycles of in situ sequencing in HeLa cells expressing barcodes from the lentiGuide-BC lentiviral vector. Included cycles of sequencing-by-synthesis (SBS): 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-5-0",
+      "@type": "LabProtocol",
+      "name": "fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "description": "Twelve cycles of in situ sequencing in HeLa cells expressing barcodes from the lentiGuide-BC lentiviral vector. Included cycles of sequencing-by-synthesis (SBS): 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12."
+    },
+    {
+      "@id": "#experiment-protocol-5-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "growth protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-5-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "treatment protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-5-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#experiment-protocol-5-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    },
+    {
+      "@id": "#experiment-biosample-6",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Combinatorial detection of multiple CRISPR sgRNAs per cell in HeLa cells serially transduced with the CROPseq-Puro and CROPseq-Zeo vectors. Included cycles of sequencing-by-synthesis (SBS): 1, 2, 3, 4, 5, 6.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-6-0",
+      "@type": "LabProtocol",
+      "name": "fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "description": "Combinatorial detection of multiple CRISPR sgRNAs per cell in HeLa cells serially transduced with the CROPseq-Puro and CROPseq-Zeo vectors. Included cycles of sequencing-by-synthesis (SBS): 1, 2, 3, 4, 5, 6."
+    },
+    {
+      "@id": "#experiment-protocol-6-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "growth protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-6-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "treatment protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-6-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#experiment-protocol-6-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    }
+  ]
+}

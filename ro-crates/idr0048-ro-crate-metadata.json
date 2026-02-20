@@ -1,0 +1,249 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0048-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0048/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0048/",
+      "@type": "Dataset",
+      "name": "Multicolor multiscale brain imaging with chromatic multiphoton serial microscopy",
+      "description": "Large-scale microscopy approaches are transforming brain imaging, but currently lack efficient multicolor contrast modalities. We introduce chromatic multiphoton serial (ChroMS) microscopy, a method integrating one‐shot multicolor multiphoton excitation through wavelength mixing and serial block-face image acquisition. This approach provides organ-scale micrometric imaging of spectrally distinct fluorescent proteins and label-free third harmonic generation (THG) / coherent anti-Stokes Raman scattering (CARS) nonlinear  contrasts, with constant micrometer-scale resolution and sub-micron channel registration over the entire imaged volume. We demonstrate tridimensional (3D) multicolor imaging over several cubic millimeters as well as brain-wide serial 2D multichannel imaging. We  illustrate the strengths of this method through color-based 3D analysis of astrocyte morphology and contacts in the mouse cerebral cortex, tracing of densely labeled pyramidal neurons and multiplexed whole-brain mapping of axonal projections labeled with distinct tracers.",
+      "datePublished": "2020-08-12",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "copyrightNotice": "Abdeladim et al, CC-BY-NC-4.0, 2020",
+      "identifier": "idr0048",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/NA"
+        },
+        {
+          "@id": "https://orcid.org/0000-0003-3079-4908"
+        },
+        {
+          "@id": "https://orcid.org/0000-0002-2082-8214"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1038/s41467-019-09552-9"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "#experiment-protocol-1-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000255"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/9846152/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/NA",
+      "@type": "Person",
+      "name": "Lamiae Abdeladim",
+      "givenName": "Lamiae",
+      "familyName": "Abdeladim",
+      "email": "lamiae.abdeladim@polytechnique.edu",
+      "address": "Laboratory of Optics and Biosciences, Ecole Polytechnique 91128 Palaiseau, France."
+    },
+    {
+      "@id": "https://orcid.org/0000-0003-3079-4908",
+      "@type": "Person",
+      "name": "Jean Livet",
+      "givenName": "Jean",
+      "familyName": "Livet",
+      "email": "jean.livet@inserm.fr",
+      "address": "Sorbonne Université Institut de la Vision, INSERM, CNRS, Paris, France"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-2082-8214",
+      "@type": "Person",
+      "name": "Emmanuel Beaurepaire",
+      "givenName": "Emmanuel",
+      "familyName": "Beaurepaire",
+      "email": "emmanuel.beaurepaire@polytechnique.edu",
+      "address": "Laboratory of Optics and Biosciences, Ecole Polytechnique 91128 Palaiseau, France."
+    },
+    {
+      "@id": "https://doi.org/10.1038/s41467-019-09552-9",
+      "@type": "ScholarlyArticle",
+      "name": "Multicolor multiscale brain imaging with chromatic multiphoton serial microscopy"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090",
+      "@type": "Taxon",
+      "scientificName": "Mus musculus"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "tissue",
+      "description": "Multicolor brain-wide anatomical mapping and high-resolution continuous multicolor imaging of a >5mm3 cortical portion.  Astrocytes and layer 2/3 neurons are 'Brainbow-labeled'.  The dataset consists of a sequence of 92 high-resolution multicolor 2D whole-brain sections with high-content anatomical details and gives access to single-cell astrocyte morphologies with subcellular resolution over an unprecedented millimetric spatial scale.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000255",
+      "@type": "DefinedTerm",
+      "name": "multi-photon microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "multi-photon microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000255"
+        }
+      ],
+      "description": "Multicolor brain-wide anatomical mapping and high-resolution continuous multicolor imaging of a >5mm3 cortical portion.  Astrocytes and layer 2/3 neurons are 'Brainbow-labeled'.  The dataset consists of a sequence of 92 high-resolution multicolor 2D whole-brain sections with high-content anatomical details and gives access to single-cell astrocyte morphologies with subcellular resolution over an unprecedented millimetric spatial scale."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "growth protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "treatment protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 274877906944,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "0.25 TB"
+    }
+  ]
+}

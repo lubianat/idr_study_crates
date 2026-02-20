@@ -1,0 +1,194 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0165-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0165/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0165/",
+      "@type": "Dataset",
+      "name": "Automated analysis of ultrastructure through large-scale hyperspectral electron microscopy",
+      "description": "Microscopy is a key technique to visualize and understand biology. Electron microscopy (EM) facilitates the investigation of cellular ultrastructure at biomolecular resolution. Cellular EM was recently revolutionized by automation and digitalisation allowing routine capture of large areas and volumes at nanoscale resolution. Analysis, however, is hampered by the greyscale nature of electron images and their large data volume, often requiring laborious manual annotation. Here we demonstrate unsupervised and automated extraction of biomolecular assemblies in conventionally processed tissues using large-scale hyperspectral energy-dispersive X-ray (EDX) imaging. First, we discriminated biological features in the context of tissue based on selected elemental maps. Next, we designed a data-driven workflow based on dimensionality reduction and spectral mixture analysis, allowing the visualization and isolation of subcellular features with minimal manual intervention. Broad implementations of the presented methodology will accelerate the understanding of biological ultrastructure.",
+      "datePublished": "2025-02-18",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Duinkerken et al, CC-BY-4.0, 2025",
+      "identifier": "idr0165",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0001-5105-5915"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1038/s44303-024-00059-7"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000380"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/15160019/"
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0001-5105-5915",
+      "@type": "Person",
+      "name": "Ben Giepmans",
+      "givenName": "Ben",
+      "familyName": "Giepmans",
+      "email": "b.n.g.giepmans@umcg.nl",
+      "address": "Antoni Deusinglaan 1, BSCS, UMC Groningen, Netherlands"
+    },
+    {
+      "@id": "https://doi.org/10.1038/s44303-024-00059-7",
+      "@type": "ScholarlyArticle",
+      "name": "Automated analysis of ultrastructure through large-scale hyperspectral electron microscopy"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "tissue",
+      "description": "Large-scale scanning-transmission EM complemented with EDX imaging (STEM-EDX) on conventionally processed human pancreas and skin EM samples. The hyperspectral EDX output was subsequently used as input for automated ultrasctructure feature recognition.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000380",
+      "@type": "DefinedTerm",
+      "name": "scanning-transmission electron microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "scanning-transmission electron microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000380"
+        }
+      ],
+      "description": "Large-scale scanning-transmission EM complemented with EDX imaging (STEM-EDX) on conventionally processed human pancreas and skin EM samples. The hyperspectral EDX output was subsequently used as input for automated ultrasctructure feature recognition."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "TEM grids containing ultrathin epon embedded tissue sections were mounted in a low background double-tilt scanning transmission electron microscopy (STEM) specimen holder optimised for EDX imaging (4022 190 50334, Thermo Fisher Scientific). Samples were imaged at 80 kiloelectronvolt (keV) on a Thermo Scientific Talos F200i STEM equipped with an S-FEG. High-angle annular dark-field (HAADF) imaging was conducted using a HAADF detector and two Bruker X-Flash 6T-100 EDX detectors for simultaneous EM and EDX imaging. Acquisition was done using Thermo Scientific Velox which also provided the used elemental maps. Thermo Fisher Scientific MAPS software was used for mosaic acquisitions. Analyis and processing: hyperspectral imaging pre-processing, extraction of endmembers, spectral unmixing and visualisation, detection and segmentation; code availability: https://github.com/amjams/Hyperspectraledx",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    }
+  ]
+}

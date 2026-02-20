@@ -1,0 +1,226 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0007-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0007/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0007/",
+      "@type": "Dataset",
+      "name": "Global analysis of SUMO chain function reveals multiple roles in chromatin regulation",
+      "description": "Like ubiquitin, the small ubiquitin-related modifier (SUMO) proteins can form oligomeric \"chains,\" but the biological functions of these superstructures are not well understood. Here, we created mutant yeast strains unable to synthesize SUMO chains (smt3(allR)) and subjected them to high-content microscopic screening, synthetic genetic array (SGA) analysis, and high-density transcript profiling to perform the first global analysis of SUMO chain function. This comprehensive assessment identified 144 proteins with altered localization or intensity in smt3(allR) cells, 149 synthetic genetic interactions, and 225 mRNA transcripts (primarily consisting of stress- and nutrient-response genes) that displayed a >1.5-fold increase in expression levels. This information-rich resource strongly implicates SUMO chains in the regulation of chromatin. Indeed, using several different approaches, we demonstrate that SUMO chains are required for the maintenance of normal higher-order chromatin structure and transcriptional repression of environmental stress response genes in budding yeast.",
+      "datePublished": "2016-04-27",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "copyrightNotice": "Srikumar et al, CC-BY-NC-SA-3.0, 2016",
+      "identifier": "idr0007",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "#person-1"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1083/jcb.201210019"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#screen-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_4932"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#screen-protocol-1-0"
+        },
+        {
+          "@id": "#screen-protocol-1-1"
+        },
+        {
+          "@id": "#screen-protocol-1-2"
+        },
+        {
+          "@id": "#screen-protocol-1-3"
+        },
+        {
+          "@id": "#screen-protocol-1-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000251"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/95543/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        },
+        {
+          "@id": "#file-count"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "#person-1",
+      "@type": "Person",
+      "name": "Brian Raught",
+      "givenName": "Brian",
+      "familyName": "Raught",
+      "email": "brian.raught@uhnres.utoronto.ca",
+      "address": "Ontario Cancer Institute and McLaughlin Centre for Molecular Medicine, Ontario, Canada"
+    },
+    {
+      "@id": "https://doi.org/10.1083/jcb.201210019",
+      "@type": "ScholarlyArticle",
+      "name": "Global analysis of SUMO chain function reveals multiple roles in chromatin regulation."
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_4932",
+      "@type": "Taxon",
+      "scientificName": "Saccharomyces cerevisiae"
+    },
+    {
+      "@id": "#screen-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "In this screen two mutant yeast strains unable to synthesize SUMO chains (pro-smt3allR and smt3allR), were crossed with 384 yeast strains expressing GFP-tagged proteins (Huh et al., 2003) previously linked to the DNA damage response (Tkach et al., 2012).  144 GFP-tagged proteins displayed a change in localization and/or intensity when expressed in the smt3allR mutant grown in rich medium.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_4932"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000251",
+      "@type": "DefinedTerm",
+      "name": "confocal microscopy"
+    },
+    {
+      "@id": "#screen-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000251"
+        }
+      ],
+      "description": "In this screen two mutant yeast strains unable to synthesize SUMO chains (pro-smt3allR and smt3allR), were crossed with 384 yeast strains expressing GFP-tagged proteins (Huh et al., 2003) previously linked to the DNA damage response (Tkach et al., 2012).  144 GFP-tagged proteins displayed a change in localization and/or intensity when expressed in the smt3allR mutant grown in rich medium."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "S. cerevisiae strains used in this study were derivatives of the BY4741/2 haploid cells, unless otherwise specified, and are listed in Table S4. All yeast genetic manipulations were performed according to established procedures. Unless otherwise noted, yeast strains were grown at 30C to mid-logarithmic phase in YPD or selective minimal (SM) media supplemented with appro- priate nutrients and 2% glucose. Transformations were performed as de- scribed previously (Delorme, 1989). The AVY89 strain was kindly provided by D.J. Clarke (University of Minnesota Medical School, Minneapolis, MN). Construction of smt3allR strains: Multistep PCR was used to generate a product containing the NatMX cassette from p4339, 207 bp of the Smt3 5? UTR from genomic DNA, the smt3allR coding DNA sequence from Bylebyl et al. (2003), and 273 bp of the Smt3 3? UTR from genomic DNA. The resulting product was used to transform yeast strains as in Gietz and Woods (2002). See Table S5 for primers.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "An array consisting of 384 strains (Table S3) from the yeast GFP collection (Huh et al., 2003) expressing proteins previously demonstrated to display altered localization or intensity in response to replication stress (Tkach et al., 2012) was constructed and crossed with the smt3allR mutant (smt3allR:: NatMX NUP49-mCherry::URA3 or pro-smt3allR::NatMX NUP49-mCherry:: URA3) using SGA (Tong and Boone, 2007) to yield 384 GFP-ORF strains bearing the smt3allR allele. GFP protein localization and relative steady- state abundance for each strain in the WT and smt3allR mutants were de- termined essentially as described in Tkach et al. (2012). In brief, cultures were grown to mid-log phase in low-fluorescence medium and transferred to 384-well slides at a final density of 0.045 OD600/ml."
+    },
+    {
+      "@id": "#screen-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "HCS image acquistion and feature extraction protocol",
+      "description": "Four images per well in the green and red channels (800 ms exposure) were simultane- ously acquired, imaged using a high-throughput confocal microscope system (EVOTEC Opera; PerkinElmer) with quad-band dichroic filter (405/488/561/653)."
+    },
+    {
+      "@id": "#screen-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "The images were blinded and scored manually for localization and relative abundance changes versus the WT GFP-ORF (Huh et al., 2003). A brief description was recorded for each protein under- going a change in the smt3allR or pro-smt3allR strains."
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 219902325555,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "0.2 TB"
+    },
+    {
+      "@id": "#file-count",
+      "@type": "QuantitativeValue",
+      "value": 3456,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000189",
+      "unitText": "file count",
+      "description": "3456 5D images"
+    }
+  ]
+}

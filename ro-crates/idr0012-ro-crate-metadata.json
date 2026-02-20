@@ -1,0 +1,424 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0012-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0012/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0012/",
+      "@type": "Dataset",
+      "name": "Clustering phenotype populations by genome-wide RNAi and multiparametric imaging",
+      "description": "Genetic screens for phenotypic similarity have made key contributions to associating genes with biological processes. With RNA interference (RNAi), highly parallel phenotyping of loss-of-function effects in cells has become feasible. One of the current challenges however is the computational categorization of visual phenotypes and the prediction of biological function and processes. In this study, we describe a combined computational and experimental approach to discover novel gene functions and explore functional relationships. We performed a genome-wide RNAi screen in human cells and used quantitative descriptors derived from high-throughput imaging to generate multiparametric phenotypic profiles. We show that profiles predicted functions of genes by phenotypic similarity. Specifically, we examined several candidates including the largely uncharacterized gene DONSON, which shared phenotype similarity with known factors of DNA damage response (DDR) and genomic integrity. Experimental evidence supports that DONSON is a novel centrosomal protein required for DDR signalling and genomic integrity. Multiparametric phenotyping by automated imaging and computational annotation is a powerful method for functional discovery and mapping the landscape of phenotypic responses to cellular perturbations.",
+      "datePublished": "2016-12-16",
+      "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "copyrightNotice": "Fuchs et al, CC-BY-NC-ND-4.0, 2016",
+      "identifier": "idr0012",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "#person-1"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1038/msb.2010.25"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#screen-biosample-1"
+        },
+        {
+          "@id": "#screen-biosample-2"
+        },
+        {
+          "@id": "#screen-biosample-3"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#screen-protocol-1-0"
+        },
+        {
+          "@id": "#screen-protocol-2-0"
+        },
+        {
+          "@id": "#screen-protocol-3-0"
+        },
+        {
+          "@id": "#screen-protocol-1-1"
+        },
+        {
+          "@id": "#screen-protocol-1-2"
+        },
+        {
+          "@id": "#screen-protocol-1-3"
+        },
+        {
+          "@id": "#screen-protocol-1-4"
+        },
+        {
+          "@id": "#screen-protocol-2-1"
+        },
+        {
+          "@id": "#screen-protocol-2-2"
+        },
+        {
+          "@id": "#screen-protocol-2-3"
+        },
+        {
+          "@id": "#screen-protocol-2-4"
+        },
+        {
+          "@id": "#screen-protocol-3-1"
+        },
+        {
+          "@id": "#screen-protocol-3-2"
+        },
+        {
+          "@id": "#screen-protocol-3-3"
+        },
+        {
+          "@id": "#screen-protocol-3-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/1811438/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        },
+        {
+          "@id": "#file-count"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "#person-1",
+      "@type": "Person",
+      "name": "Michael Boutros",
+      "givenName": "Michael",
+      "familyName": "Boutros",
+      "email": "m.boutros@dkfz.de",
+      "address": "German Cancer Research Center (DKFZ), Im Neuenheimer Feld 580, D-69120 Heidelberg, Germany"
+    },
+    {
+      "@id": "https://doi.org/10.1038/msb.2010.25",
+      "@type": "ScholarlyArticle",
+      "name": "Clustering phenotype populations by genome-wide RNAi and multiparametric imaging."
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#screen-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "To cluster genes and predict function on a genome-wide scale, we measured the effects of 22 839 siRNA-mediated knockdowns on HeLa cells. Each siRNA effect was summarized by a phenotypic profile.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000246",
+      "@type": "DefinedTerm",
+      "name": "fluorescence microscopy"
+    },
+    {
+      "@id": "#screen-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "description": "To cluster genes and predict function on a genome-wide scale, we measured the effects of 22 839 siRNA-mediated knockdowns on HeLa cells. Each siRNA effect was summarized by a phenotypic profile."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "HeLa and U2OS cell lines were maintained in DMEM (Invitrogen) with 10% foetal bovine serum (FBS) (Invitrogen) and supplemented with penicillin (100 U/ml)/streptomycin (100 mg/ml) (Invitrogen). Cell lines were cultured at 371C, 5% CO2 in a humidied incubator according to standard procedures.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007571",
+      "@type": "DefinedTerm",
+      "name": "HCS library protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "For cell_based screening, the siRNA library was arrayed in black 384_well, clear bottom plates (Corning #3712 or BD Flacon #353962) using a Biomek FX200 liquid handling system (Beckman Coulter). Each well contained 5 _l of a 500 nM pool of four synthetic siRNA duplexes (dissolved in 1 _ siRNA solution buffer, Dharmacon). Library siRNAs were spotted in columns 5-24; the remaining columns were used for controls. Positions A04 and B04 contained an siRNA pool targeting Rluc as negative control. Positions I04 and J04 contained an siRNA pool targeting PLK1. Reverse transfection of cells with siRNA pools was performed by delivering 15 _l of RPMI (Invitrogen) containing 0.05 _l of Dharmafect1 (Dharmacon). After 30 min of incubation at room temperature, 1000 HeLa cells in 30 _l of DMEM medium (Invitrogen) supplemented with 10% FBS (Invitrogen) were added to the siRNA transfection mix. All dispensing steps were performed with a Multidrop Combi dispensing system (Thermo). Plates were incubated for 48 h at 37 C/5% CO2.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007572",
+      "@type": "DefinedTerm",
+      "name": "HCS image acquistion and feature extraction protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "HCS image acquistion and feature extraction protocol",
+      "description": "For fluorescence microscopy, cells were fixed, permeabilized and immunostained for DNA, tubulin and actin using a Beckman FX200 liquid handling robot. First, cells were fixed with 5% paraformaldehyde (PFA) in PBS for 20 min at room temperature and then permeabilized with 0.2% Triton X_100 in PBS. Subsequently, cells were washed with 0.05% TX_100 in PBS and incubated with blocking buffer (0.05% TX_100/3% BSA in PBS). Cells were incubated overnight at 4 C with primary antibody anti-alpha tubulin (Sigma, DM1A/T9026) diluted in PBS/0.05% TX_100/3% BSA. Then, cells were washed three times with PBS and incubated with Alexa 488 secondary antibody (1:500 in PBS, Invitrogen) for 45 min at room temperature. Actin was stained with TRITC_phalloidin (Sigma) in the secondary antibody solution, and DNA with Hoechst 33242 (Invitrogen). Cells were washed with PBS and stored therein. Batches of 10 384_well plates were processed per batch. Images were acquired on an automated BD Pathway 855 Bioimaging System (Becton Dickinson) with a 20 x objective (Olympus, NA=0.75) and a Hamamatsu monochrome digital black and white camera (Orca_ER). For high_throughput screening, plates were loaded onto the microscope with a Twister II Microplate robotic arm. Images of four different positions in each well were acquired, each containing channels for Hoechst (DNA), Alexa 488 (tubulin) and TRITC (actin). Each image had a resolution of 670 _ 510 pixels with each channel at 12_bit intensity resolution. The total number of cells measured in a well was typically around 300. For the primary screen, a total of 22 839 wells were imaged in four spots each, using three channels, resulting in 274 068 grey scale images. The combination of the three channels leads to 91 356 three_colour images.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007573",
+      "@type": "DefinedTerm",
+      "name": "HCS data analysis protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "We used the EBImage package to perform the image processing operations (Pau et al, 2010). Images consisted of three channels (actin, tubulin and DNA). First, nuclei were segmented by adaptive thresholding of the DNA channel, distance map computation and watershed segmentation. Next, nuclei were regularized by morphological opening, and internal holes were removed by inverse flood fill (see Supplementary information). Cell boundaries were identified by Voronoi segmentation (Jones et al, 2009). Each cell was characterized by a set of 51 morphological descriptors, computed on different channels, which were grouped into 4 categories: 9 geometric features, 26 Haralick textural features, 11 Zernike moments and 5 miscellaneous features (see Supplementary information). All descriptors are translation and rotation invariant and are commonly used in cell imaging for classification purposes (Loo et al, 2007). Cells were classified into 1 of 10 classes (Supplementary Table II), using the 'one_against_one' multi_class strategy of the SVM algorithm, with a training set of 2545 manually annotated cells (Supplementary Tables III, IV, V and VI). Each well subject to siRNA perturbation was summarized by a vector of 13 numerical descriptors (Supplementary Table VII). Each value of a phenotypic profile was transformed to a [0,1] score using a set of parameterized monotonic functions, leading to a vector of 19 scores, which we termed a phenoprint. A phenoprint was considered a hit if at least one of its elements was larger than 0.5. The phenotypic distance between two perturbations was defined as the distance between two phenoprints, according to a modified L1 metric (see Supplementary information).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-biosample-2",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "To test for biological reproducibility with independent siRNAs, we selected 604 out of the 1820 siRNA perturbations which produced non-zero phenoprints for retesting with independent siRNA pools (Qiagen). In this screen HeLa cells were used.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-0",
+      "@type": "LabProtocol",
+      "name": "fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "description": "To test for biological reproducibility with independent siRNAs, we selected 604 out of the 1820 siRNA perturbations which produced non-zero phenoprints for retesting with independent siRNA pools (Qiagen). In this screen HeLa cells were used."
+    },
+    {
+      "@id": "#screen-protocol-2-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "HeLa and U2OS cell lines were maintained in DMEM (Invitrogen) with 10% foetal bovine serum (FBS) (Invitrogen) and supplemented with penicillin (100 U/ml)/streptomycin (100 mg/ml) (Invitrogen). Cell lines were cultured at 371C, 5% CO2 in a humidied incubator according to standard procedures.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-2",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "To confirm siRNA_mediated phenotypic changes observed in the genome_wide screen, we used independent siRNA pools (Qiagen) for 604 gene transcripts (Supplementary Table X). The phenotype of the siRNA perturbation was monitored by microscopy as described in the primary screen in HeLa and U2OS cells.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-3",
+      "@type": "LabProtocol",
+      "name": "HCS image acquistion and feature extraction protocol",
+      "description": "For fluorescence microscopy, cells were fixed, permeabilized and immunostained for DNA, tubulin and actin using a Beckman FX200 liquid handling robot. First, cells were fixed with 5% paraformaldehyde (PFA) in PBS for 20 min at room temperature and then permeabilized with 0.2% Triton X_100 in PBS. Subsequently, cells were washed with 0.05% TX_100 in PBS and incubated with blocking buffer (0.05% TX_100/3% BSA in PBS). Cells were incubated overnight at 4 C with primary antibody anti___tubulin (Sigma, DM1A/T9026) diluted in PBS/0.05% TX_100/3% BSA. Then, cells were washed three times with PBS and incubated with Alexa 488 secondary antibody (1:500 in PBS, Invitrogen) for 45 min at room temperature. Actin was stained with TRITC_phalloidin (Sigma) in the secondary antibody solution, and DNA with Hoechst 33242 (Invitrogen). Cells were washed with PBS and stored therein. Batches of 10 384_well plates were processed per batch. Images were acquired on an automated BD Pathway 855 Bioimaging System (Becton Dickinson) with a 20 _ objective (Olympus, NA=0.75) and a Hamamatsu monochrome digital black and white camera (Orca_ER). For high_throughput screening, plates were loaded onto the microscope with a Twister II Microplate robotic arm. Images of four different positions in each well were acquired, each containing channels for Hoechst (DNA), Alexa 488 (tubulin) and TRITC (actin). Each image had a resolution of 670 x 510 pixels with each channel at 12_bit intensity resolution. The total number of cells measured in a well was typically around 300. For the primary screen, a total of 22 839 wells were imaged in four spots each, using three channels, resulting in 274 068 grey scale images. The combination of the three channels leads to 91 356 three_colour images.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-4",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "Phenotypic changes were visually confirmed.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-biosample-3",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "To test for biological reproducibility with independent siRNAs, we selected 604 out of the 1820 siRNA perturbations which produced non-zero phenoprints for retesting with independent siRNA pools (Qiagen). In this screen U2OS cells were used.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-3-0",
+      "@type": "LabProtocol",
+      "name": "fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "description": "To test for biological reproducibility with independent siRNAs, we selected 604 out of the 1820 siRNA perturbations which produced non-zero phenoprints for retesting with independent siRNA pools (Qiagen). In this screen U2OS cells were used."
+    },
+    {
+      "@id": "#screen-protocol-3-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "HeLa and U2OS cell lines were maintained in DMEM (Invitrogen) with 10% foetal bovine serum (FBS) (Invitrogen) and supplemented with penicillin (100 U/ml)/streptomycin (100 mg/ml) (Invitrogen). Cell lines were cultured at 371C, 5% CO2 in a humidied incubator according to standard procedures.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-3-2",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "To confirm siRNA_mediated phenotypic changes observed in the genome_wide screen, we used independent siRNA pools (Qiagen) for 604 gene transcripts (Supplementary Table X). The phenotype of the siRNA perturbation was monitored by microscopy as described in the primary screen in HeLa and U2OS cells.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-3-3",
+      "@type": "LabProtocol",
+      "name": "HCS image acquistion and feature extraction protocol",
+      "description": "For fluorescence microscopy, cells were fixed, permeabilized and immunostained for DNA, tubulin and actin using a Beckman FX200 liquid handling robot. First, cells were fixed with 5% paraformaldehyde (PFA) in PBS for 20 min at room temperature and then permeabilized with 0.2% Triton X_100 in PBS. Subsequently, cells were washed with 0.05% TX_100 in PBS and incubated with blocking buffer (0.05% TX_100/3% BSA in PBS). Cells were incubated overnight at 4 C with primary antibody anti___tubulin (Sigma, DM1A/T9026) diluted in PBS/0.05% TX_100/3% BSA. Then, cells were washed three times with PBS and incubated with Alexa 488 secondary antibody (1:500 in PBS, Invitrogen) for 45 min at room temperature. Actin was stained with TRITC_phalloidin (Sigma) in the secondary antibody solution, and DNA with Hoechst 33242 (Invitrogen). Cells were washed with PBS and stored therein. Batches of 10 384_well plates were processed per batch. Images were acquired on an automated BD Pathway 855 Bioimaging System (Becton Dickinson) with a 20 _ objective (Olympus, NA=0.75) and a Hamamatsu monochrome digital black and white camera (Orca_ER). For high_throughput screening, plates were loaded onto the microscope with a Twister II Microplate robotic arm. Images of four different positions in each well were acquired, each containing channels for Hoechst (DNA), Alexa 488 (tubulin) and TRITC (actin). Each image had a resolution of 670 x 510 pixels with each channel at 12_bit intensity resolution. The total number of cells measured in a well was typically around 300. For the primary screen, a total of 22 839 wells were imaged in four spots each, using three channels, resulting in 274 068 grey scale images. The combination of the three channels leads to 91 356 three_colour images.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-3-4",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "Phenotypic changes were visually confirmed.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 417814418554,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "0.38 TB"
+    },
+    {
+      "@id": "#file-count",
+      "@type": "QuantitativeValue",
+      "value": 45,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000189",
+      "unitText": "file count",
+      "description": "45 5D images"
+    }
+  ]
+}

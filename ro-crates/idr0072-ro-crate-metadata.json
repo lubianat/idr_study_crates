@@ -1,0 +1,331 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0072-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0072/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0072/",
+      "@type": "Dataset",
+      "name": "A Reference Library for Characterizing Protein Subcellular Localizations by Image-Based Machine Learning",
+      "description": "Libraries composed of 789,011 and 523,319 optically validated reference confocal micrographs of 17 and 20 EGFP fusion proteins localized at key cell organelles as landmarks in murine and human cells were generated for assignment of subcellular localization in mammalian cells. For each image of individual cells, 160 morphology and statistical features were used to train a random forests classifier to automatically assign the localization of proteins and dyes in both cell types and to analyze the sequence requirements that specify subcellular localization of a model tail-anchor (TA) protein. Automated assignment of subcellular localizations for a library of TA proteins with randomly mutated C-terminal targeting sequences enabled the discovery of motifs responsible for targeting TA proteins to mitochondria, endoplasmic reticulum and the late secretory pathway. Analysis of directed mutants enabled refinement of subcellular localization motifs that characterize cellular sub-compartments.",
+      "datePublished": "2021-04-29",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Schormann et al, CC-BY-4.0, 2021",
+      "identifier": "idr0072",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-9266-7157"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1083/jcb.201904090"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#screen-biosample-1"
+        },
+        {
+          "@id": "#screen-biosample-2"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#screen-protocol-1-0"
+        },
+        {
+          "@id": "#screen-protocol-2-0"
+        },
+        {
+          "@id": "#screen-protocol-1-1"
+        },
+        {
+          "@id": "#screen-protocol-1-2"
+        },
+        {
+          "@id": "#screen-protocol-1-3"
+        },
+        {
+          "@id": "#screen-protocol-1-4"
+        },
+        {
+          "@id": "#screen-protocol-1-5"
+        },
+        {
+          "@id": "#screen-protocol-2-1"
+        },
+        {
+          "@id": "#screen-protocol-2-2"
+        },
+        {
+          "@id": "#screen-protocol-2-3"
+        },
+        {
+          "@id": "#screen-protocol-2-4"
+        },
+        {
+          "@id": "#screen-protocol-2-5"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/12814262/"
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-9266-7157",
+      "@type": "Person",
+      "name": "David W. Andrews",
+      "givenName": "David W.",
+      "familyName": "Andrews",
+      "email": "david.andrews@sri.utoronto.ca",
+      "address": "Biological Sciences, Sunnybrook Research Institute, Toronto, ON, Canada"
+    },
+    {
+      "@id": "https://doi.org/10.1083/jcb.201904090",
+      "@type": "ScholarlyArticle",
+      "name": "A reference library for assigning protein subcellular localizations by image-based machine learning"
+    },
+    {
+      "@id": "#screen-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "EGFP fusion proteins of organelle marker proteins were stably expressed in eukaryotic cells MCF10A."
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000246",
+      "@type": "DefinedTerm",
+      "name": "fluorescence microscopy"
+    },
+    {
+      "@id": "#screen-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "description": "EGFP fusion proteins of organelle marker proteins were stably expressed in eukaryotic cells MCF10A."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "MCF10A were cultured in DMEM/F12 (Gibco) supplemented with 5% horse serum (Gibco), penicillin/streptomycin, 10 ug/ml insulin (Sigma), 0.02 ug/ml EGF (Preprotech), 0.5 ug/ml hydrocortisone (Sigma), and 0.25 mg/L isoproterenol (Sigma). All cell lines were maintained in a 5% CO2 atmosphere at 37oC.Cells were transduced with EGFP fusion organelle marker proteins. Prior to imaging cells were stained with DRAQ5 (50nM).Cells were imaged using PerkinElmer OPERA¨ QHS spinning disk automated confocal microscopes with 40x water objectives (NA =  0.9) in a defined temperature (37oC) and CO2 (5%) environment by using EvoShell acquisition software. Images were collected by using 3-Peltier-cooled 12-bit CCD cameras (Type sensiCam, PCO.imaging, Germany, camera resolution 1.3MPixel). Feature extraction was carried out by using Perkin Elmer Acapella software. Once images were acquired, they were segmented to obtain cell, nucleus and cytoplasm region.Features for all the different regions were acquired. Features are broadly classified into Shape, Texture, Colocalization and ROI features.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "treatment protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007571",
+      "@type": "DefinedTerm",
+      "name": "HCS library protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "HCS library protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007572",
+      "@type": "DefinedTerm",
+      "name": "HCS image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "HCS image acquisition and feature extraction protocol",
+      "description": "HCS image acquisition and feature extraction protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007573",
+      "@type": "DefinedTerm",
+      "name": "HCS data analysis protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-5",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "HCS data analysis protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-biosample-2",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "EGFP fusion proteins of organelle marker proteins were stably expressed in eukaryotic cells NMuMG."
+    },
+    {
+      "@id": "#screen-protocol-2-0",
+      "@type": "LabProtocol",
+      "name": "fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "description": "EGFP fusion proteins of organelle marker proteins were stably expressed in eukaryotic cells NMuMG."
+    },
+    {
+      "@id": "#screen-protocol-2-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Murine cells (NMuMG) were grown in DMEM supplemented with 10% FBS, penicillin/streptomycin and bovine insulin (10ug/ml).All cell lines were maintained in a 5% CO2 atmosphere at 37oC.Cells were transduced with EGFP fusion organelle marker proteins. Prior to imaging cells were stained with DRAQ5 (50nM).Cells were imaged using PerkinElmer OPERA¨ QHS spinning disk automated confocal microscopes with 40x water objectives (NA =  0.9) in a defined temperature (37oC) and CO2 (5%) environment by using EvoShell acquisition software. Images were collected by using 3-Peltier-cooled 12-bit CCD cameras (Type sensiCam, PCO.imaging, Germany, camera resolution 1.3MPixel). Feature extraction was carried out by using Perkin Elmer Acapella software. Once images were acquired, they were segmented to obtain cell, nucleus and cytoplasm region.Features for all the different regions were acquired. Features are broadly classified into Shape, Texture, Colocalization and ROI features.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "treatment protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-3",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "HCS library protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-4",
+      "@type": "LabProtocol",
+      "name": "HCS image acquisition and feature extraction protocol",
+      "description": "HCS image acquisition and feature extraction protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-5",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "HCS data analysis protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    }
+  ]
+}

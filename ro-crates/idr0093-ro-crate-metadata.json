@@ -1,0 +1,252 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0093-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0093/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0093/",
+      "@type": "Dataset",
+      "name": "High content genome-wide siRNA screen to investigate the coordination of cell size and RNA production",
+      "description": "Coordination of RNA abundance and transcription rates with cell size has been observed in diverse organisms and isogenic cell populations. However, how cells achieve such ‘size-scaling’ of transcription is unknown. Here we describe a genome-wide siRNA screen to find novel regulators of global RNA production in human cells. We quantify single-cell RNA production rates using metabolic pulse-labelling of RNA and subsequent high-content imaging. Our quantitative, single-cell measurements of DNA, nascent RNA, proliferating cell nuclear antigen (PCNA), and total protein, as well as cell morphology and population-context, capture a detailed phenotype of each cell. This allows us to account for changes in cell size and cell-cycle distribution (G1/S/G2) in perturbation conditions, which indirectly affect global RNA production. We also take advantage of the subcellular information to distinguish between nascent RNA localised in the nucleolus and nucleoplasm, to approximate ribosomal and non-ribosomal RNA contributions to the phenotype. The perturbations uncovered through the screen provide a resource for exploring the mechanisms of regulation of global RNA metabolism.",
+      "datePublished": "2021-03-17",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Mueller et al, CC-BY-4.0, 2021",
+      "identifier": "idr0093",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-1651-153X"
+        },
+        {
+          "@id": "https://orcid.org/0000-0002-1838-4976"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#screen-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#screen-protocol-1-0"
+        },
+        {
+          "@id": "#screen-protocol-1-1"
+        },
+        {
+          "@id": "#screen-protocol-1-2"
+        },
+        {
+          "@id": "#screen-protocol-1-3"
+        },
+        {
+          "@id": "#screen-protocol-1-4"
+        },
+        {
+          "@id": "#screen-protocol-1-5"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/12570400/"
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-1651-153X",
+      "@type": "Person",
+      "name": "Micha Müller",
+      "givenName": "Micha",
+      "familyName": "Müller",
+      "email": "micha.mueller@mls.uzh.ch",
+      "address": "Building/Room: Y55-K-04, University of Zurich, Winterthurerstrasse 190, 8057 Zurich, Switzerland"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-1838-4976",
+      "@type": "Person",
+      "name": "Scott Berry",
+      "givenName": "Scott",
+      "familyName": "Berry",
+      "email": "scott.berry@uzh.ch"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#screen-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Genome-wide siRNA screen to investigate the coordination of cell size and RNA production.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000253",
+      "@type": "DefinedTerm",
+      "name": "spinning disk confocal microscopy"
+    },
+    {
+      "@id": "#screen-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "spinning disk confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "description": "Genome-wide siRNA screen to investigate the coordination of cell size and RNA production."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "5nl of 5μM siRNAs from the Ambion Silencer Select library were dispensed with an Echo acoustic liquid handler (Labcyte) into each well of a 384-well well plate, resulting in a final siRNA concentration of 5nM in a final assay-volume of 40 μL. 10 μL of RNAiMax (Thermo-Fisher) at a final concentration of 1:180 in OptiMEM (Gibco) were dispensed into each well containing siRNA and incubated at room temperature for 10-60 minutes. Subsequently, 30 μL of cells at a concentration of 26’666 cells/ml (which equals 800 cells per well) were dispensed into the wells in DMEM medium supplemented with 13% FCS and 1.3% GlutaMAX. After 20 minutes at room temperature the cells were then transferred to a Liconics rotating incubator and grown at 37◦C and 5% CO2 for 72h.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "Cells were incubated with 1mM Ethynyl Uridine (EU) in complete growth media for 30min before fixation.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007571",
+      "@type": "DefinedTerm",
+      "name": "HCS library protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "To visualise DNA and total protein, cells were stained with DAPI and Succinimidyl ester-AlexaFluor647, respectively. Indirect immunofluorescence was used to detect PCNA. Ethynly Uridine incorporation into nascent RNA was visualised by coupling AlexaFluor-488 using Click chemistry after fixation. Images were acquired on a high-throughput spinning-disk confocal microscope (Yokogawa CV7000) using a 20X / 0.75NA objective lens. Images were acquired for two channels simultaneously in two separate acquisitions: DAPI/PCNA and EU/SE. Single cell segmentation and feature extraction was done using TissueMAPS.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007572",
+      "@type": "DefinedTerm",
+      "name": "HCS image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "HCS image acquisition and feature extraction protocol",
+      "description": "We used machine learning classifiers to assign each cell to a cell cycle phase using DAPI and PCNA staining. We then using linear regression to predict nascent RNA production (EU intensity), accounting for total protein content and cell cycle for the non-targeting control on each plate. Subsequently, for each perturbation the residuals to this model were calculated and used as a quantitative phenotype. Hit thresholds based on these residuals measurements were defined by incorporating results from a follow-up screen, and hits were then annotated based on these thresholds.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007573",
+      "@type": "DefinedTerm",
+      "name": "HCS data analysis protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-5",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "HCS data analysis protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    }
+  ]
+}

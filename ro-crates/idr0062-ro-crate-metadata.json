@@ -1,0 +1,212 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0062-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0062/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0062/",
+      "@type": "Dataset",
+      "name": "NesSys: a new set of tools for the automated detection of nuclei within intact tissues and dense 3D cultures",
+      "description": "Methods for measuring the properties of individual cells within their native 3D environment will enable a deeper understanding of embryonic development, tissue regeneration, and tumorigenesis. However current methods for segmenting nuclei in 3D tissues are not designed for situations where nuclei are densely packed, non- spherical, heterogeneous in shape, size, or texture, all of which are true of many embryonic and adult tissue types as well as in many cases for cells differentiating in culture. Here we overcome this bottleneck by devising a novel method based on labelling the nuclear envelope (NE) and automatically distinguishing individual nuclei using a tree structured ridge tracing method followed by shape ranking according to a trained classifier. The method is fast and makes it possible to process images that are larger than the computer’s memory. We consistently obtain accurate segmentation rates of >90% even for challenging images such as mid-gestation embryos or 3D cultures. We provide a 3D editor and inspector for the manual curation of the segmentation results as well as a program to assess the accuracy of the segmentation. We have also generated a live reporter of the NE that can be used to track live cells in three dimensions over time. We use this to monitor the history of cell interactions and occurrences of neighbour exchange within cultures of pluripotent cells during differentiation. We provide these tools in an open-access user-friendly format.",
+      "datePublished": "2019-06-17",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Blin et al., CC-BY-4.0, 2019",
+      "identifier": "idr0062",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-9295-237X"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1371/journal.pbio.3000388"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "#experiment-protocol-1-4"
+        },
+        {
+          "@id": "#00000251"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/6001240/"
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-9295-237X",
+      "@type": "Person",
+      "name": "Guillaume Blin",
+      "givenName": "Guillaume",
+      "familyName": "Blin",
+      "email": "guillaume.blin@ed.ac.uk",
+      "address": "Edinburgh BioQuarter, SCRM Building, 5 Little France Drive EH16 4UU, Edinburgh UK"
+    },
+    {
+      "@id": "https://doi.org/10.1371/journal.pbio.3000388",
+      "@type": "ScholarlyArticle",
+      "name": "NesSys: a novel method for accurate nuclear segmentation in 3D"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090",
+      "@type": "Taxon",
+      "scientificName": "Mus musculus"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "We provide a user-friendly 3D editing tool to rapidly correct segmentation errors.  We test our method alongside other previously-published user-friendly methods, with focus on mid-gestation embryos, 3D cultures of pluripotent stem cells and pluripotent stem cell-derived neural rosettes.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+        }
+      ]
+    },
+    {
+      "@id": "#00000251",
+      "@type": "DefinedTerm",
+      "name": "confocal microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "#00000251"
+        }
+      ],
+      "description": "We provide a user-friendly 3D editing tool to rapidly correct segmentation errors.  We test our method alongside other previously-published user-friendly methods, with focus on mid-gestation embryos, 3D cultures of pluripotent stem cells and pluripotent stem cell-derived neural rosettes."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Mouse embryonic stem cells were differentiated into EpiSC as described in (Guo and Smith, 2010) and then further differentiated into neural rosettes by culturing the cells onto matrigel in 10 uM of SB435215 containing  N2B27 for 7 days;",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "Mouse embryonic stem cells were grown in Matrigel for 2 days in EpiLC conditions;",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "image aquistion and feature extraction protocol",
+      "description": "Mouse blastocysts (E3.5);"
+    },
+    {
+      "@id": "#experiment-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "Mouse embryo (E7.5); Mouse embryo (E8.75);"
+    }
+  ]
+}

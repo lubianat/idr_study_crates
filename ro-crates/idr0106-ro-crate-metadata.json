@@ -1,0 +1,225 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0106-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0106/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0106/",
+      "@type": "Dataset",
+      "name": "Whole-organ analysis of TGF-beta-mediated remodelling of the tumour microenvironment by tissue clearing",
+      "description": "Tissue clearing is one of the most powerful strategies for a comprehensive analysis of disease progression. Here, we established an integrated pipeline that combines tissue clearing, 3D imaging, and machine learning and applied to a mouse tumour model of experimental lung metastasis using human lung adenocarcinoma A549 cells. This pipeline provided the spatial information of the tumour microenvironment. We further explored the role of transforming growth factor-beta (TGF-beta) in cancer metastasis. TGF-beta-stimulated cancer cells enhanced metastatic colonization of unstimulated-cancer cells in vivo when both cells were mixed. RNA-sequencing analysis showed that expression of the genes related to coagulation and inflammation were up-regulated in TGF-beta-stimulated cancer cells. Further, whole-organ analysis revealed accumulation of platelets or macrophages with TGF-beta-stimulated cancer cells, suggesting that TGF-beta might promote remodelling of the tumour microenvironment, enhancing the colonization of cancer cells. Hence, our integrated pipeline for 3D profiling will help the understanding of the tumour microenvironment.",
+      "datePublished": "2021-03-17",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Shimpei Kubota, CC-BY-4.0, 2021",
+      "identifier": "idr0106",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0003-3188-3988"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1038/s42003-021-01786-y"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "#experiment-protocol-1-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000369"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/12689244/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0003-3188-3988",
+      "@type": "Person",
+      "name": "Shimpei Kubota",
+      "givenName": "Shimpei",
+      "familyName": "Kubota",
+      "email": "skubota-ngy@umin.ac.jp",
+      "address": "Department of Molecular Pathology, Graduate School of Medicine, The University of Tokyo, 7-3-1 Hongo, Bunkyo-ku, Tokyo 113-0033, Japan"
+    },
+    {
+      "@id": "https://doi.org/10.1038/s42003-021-01786-y",
+      "@type": "ScholarlyArticle",
+      "name": "Whole-organ analysis of TGF-beta-mediated remodelling of the tumour microenvironment by tissue clearing"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090",
+      "@type": "Taxon",
+      "scientificName": "Mus musculus"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "tissue",
+      "description": "Whole lung image of metastatic model mouse.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000369",
+      "@type": "DefinedTerm",
+      "name": "light sheet fluorescence microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "light sheet fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000369"
+        }
+      ],
+      "description": "Whole lung image of metastatic model mouse."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "For preparation of whole-organ clearing samples, nude mice were sacrificed by an overdose of isoflurane (099-06571, FUJIFILM Wako Pure Chemical Corporation, Tokyo, Japan). Then, 20 ml of phosphate buffered saline (PBS, pH 7.4) and 30 ml of 4% (w/v) paraformaldehyde (PFA, 162-16065, FUJIFILM Wako Pure Chemical Corporation) in PBS were perfused independently via the left ventricle of the heart. The excised organs were post-fixed in 4% (w/v) PFA at room temperature for 2 h. The fixed organs were washed three times with PBS for 1 h to remove PFA just before clearing. For intense tissue decolorization, the fixed organs were immersed in CUBIC-P- with gentle shaking at 37°C for 1 h. Subsequently, the fixed organs were immersed in 50% (v/v) CUBIC-L (1:1 mixture of water and CUBIC-L) and further immersed in CUBIC-L with gentle shaking at 37°C for 11 h. CUBIC-P- and CUBIC-L were refreshed when the cocktail became coloured. After decolorization and delipidation, the organs were washed three times with PBS at room temperature for 2 h. The organs were further immersed in 50% (v/v) CUBIC-R+ (1:1 mixture of water and CUBIC-R+) and then in CUBIC-R+ at room temperature with gentle shaking for 6 h.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "Whole organ images were acquired with two custom-build light sheet fluorescence microscopes (MVX10-LS, developed by Olympus, Tokyo, Japan). Images were captured at 0.63 × objective lens (numerical aperture = 0.15, working distance = 87 mm) with digital zoom from 1 × to 6.3 × zoom. Lasers of 488 nm, 532 nm, 590 nm, and 639 nm wavelength were used for image acquisition. To cover whole organs, the stage was moved both in the lateral direction and axial direction. When the stage was moved to the axial direction, the detection objective lens was synchronically moved to the axial direction to avoid defocusing. RI matched sample was immersed in a mixture of silicon oil HIVAC-F4 (RI = 1.555, Shin-Etsu Chemical Co., Ltd., Tokyo, Japan) and mineral oil (RI = 1.467, M8410, Sigma-Aldrich) during image acquisition. 3D rendered images were visualized and captured with Imaris software (version 8.1.2, Bitplane AG, Zurich, Switzerland) and Imaris Viewer (version 9.5.1, Bitplane AG).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 52226802319360,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "47.5 TB"
+    }
+  ]
+}

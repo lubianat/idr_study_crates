@@ -1,0 +1,227 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0123-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0123/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0123/",
+      "@type": "Dataset",
+      "name": "Simultaneous visualization of DNA loci in single cells by combinatorial multi-color iFISH",
+      "description": "We describe a dataset obtained by applying our recently developed iFISH pipeline to simultaneously visualize 16 small (size range: 62–73 kilobases, kb) evenly spaced DNA loci on chromosome 2 in human cells, in a single round of hybridization. We show how, using combinatorial color coding, multiple loci can be precisely 3D localized in single cells, and how inter-loci distances scale inversely with chromosome contact frequencies determined by Hi-C, as expected. We provide raw images and sub-pixel resolution 3D coordinates for nearly 100,000 dots.",
+      "datePublished": "2022-02-28",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Mota et al, CC-BY-4.0, 2022",
+      "identifier": "idr0123",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-6499-9082"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1038/s41597-022-01139-2"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/CHMO_0002194"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/13965888/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        },
+        {
+          "@id": "#file-count"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-6499-9082",
+      "@type": "Person",
+      "name": "Magda Bienko",
+      "givenName": "Magda",
+      "familyName": "Bienko",
+      "email": "magda.bienko@ki.se",
+      "address": "Karolinska Institutet, SE"
+    },
+    {
+      "@id": "https://doi.org/10.1038/s41597-022-01139-2",
+      "@type": "ScholarlyArticle",
+      "name": "Simultaneous visualization of DNA loci in single cells by combinatorial multi-color iFISH"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Datasets 1 and 2 are replicates of the same experimental design which consists of 16 probes targeting 16 consecutive loci on chromosome 2 using iFISH4U. The 16 probes targeting different loci are spaced with 3 or 20 Mb in order to study relatively small genomic distances and compare them with larger distances. Furthermore, 10 loci are made by a combination of two colours alternating within the locus and 6 loci have only one colour. Dataset 3 is a single colour experiment where one probe with alternated colours (AF488-AF594) was tested together with other two probes in different colours located in distinct genomic sites. There is 1 probe with AF488 dye, 1 probe with AT542, 1 probe with AF594 and 1 probe with AT647N. Dataset 4 is a single colour experiment where one probe with alternated colours (AT542-AT647N) was tested together with two other probes in different colours located in distinct genomic sites. There is 1 probe with AF488 dye, 1 probe with AT542, 1 probe with AF594 and 1 probe with AT647N. Dataset 5 consists of 23 probes targeting 23 consecutive loci on chromosome 1 using iFISH4U. The 23 loci are spaced with 10 Mb. There are 3 probes with AF488 dye, 4 probes with AT542, 4 probes with AF594, 4 probes with AT647N, 4 probes with AF700 and 4 probes with AF790. Datasets 6 and 7 are replicates of the same experimental design which consists of 21 probes targeting 21 consecutive loci on chromosome 2 using iFISH4U. The 23 loci are spaced with 10 Mb. There are 3 probes with AF488 dye, 3 probes with AT542, 3 probes with AF594, 3 probes with AT647N, 6 probes with AF700 and 3 probes with AF790. Datasets 8 and 9 are replicates of the same experimental design which consists of 13 probes targeting 13 consecutive loci on chromosome 10 using iFISH4U. The 23 loci are spaced with 10 Mb. There are 2 probes with AF488 dye, 2 probes with AT542, 3 probes with AF594, 2 probes with AT647N, 2 probes with AF700 and 2 probes with AF790.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/CHMO_0002194",
+      "@type": "DefinedTerm",
+      "name": "epifluorescence microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "epifluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/CHMO_0002194"
+        }
+      ],
+      "description": "Datasets 1 and 2 are replicates of the same experimental design which consists of 16 probes targeting 16 consecutive loci on chromosome 2 using iFISH4U. The 16 probes targeting different loci are spaced with 3 or 20 Mb in order to study relatively small genomic distances and compare them with larger distances. Furthermore, 10 loci are made by a combination of two colours alternating within the locus and 6 loci have only one colour. Dataset 3 is a single colour experiment where one probe with alternated colours (AF488-AF594) was tested together with other two probes in different colours located in distinct genomic sites. There is 1 probe with AF488 dye, 1 probe with AT542, 1 probe with AF594 and 1 probe with AT647N. Dataset 4 is a single colour experiment where one probe with alternated colours (AT542-AT647N) was tested together with two other probes in different colours located in distinct genomic sites. There is 1 probe with AF488 dye, 1 probe with AT542, 1 probe with AF594 and 1 probe with AT647N. Dataset 5 consists of 23 probes targeting 23 consecutive loci on chromosome 1 using iFISH4U. The 23 loci are spaced with 10 Mb. There are 3 probes with AF488 dye, 4 probes with AT542, 4 probes with AF594, 4 probes with AT647N, 4 probes with AF700 and 4 probes with AF790. Datasets 6 and 7 are replicates of the same experimental design which consists of 21 probes targeting 21 consecutive loci on chromosome 2 using iFISH4U. The 23 loci are spaced with 10 Mb. There are 3 probes with AF488 dye, 3 probes with AT542, 3 probes with AF594, 3 probes with AT647N, 6 probes with AF700 and 3 probes with AF790. Datasets 8 and 9 are replicates of the same experimental design which consists of 13 probes targeting 13 consecutive loci on chromosome 10 using iFISH4U. The 23 loci are spaced with 10 Mb. There are 2 probes with AF488 dye, 2 probes with AT542, 3 probes with AF594, 2 probes with AT647N, 2 probes with AF700 and 2 probes with AF790."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "iFISH protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "iFISH protocol",
+      "description": "We amplified the oligos in each well by real-time PCR. Next, we converted each individual PCR product into RNA (IVT). We then converted the purified RNA into cDNA by reverse transcription (RT). We purified the ssDNA from RT and performed 3D DNA FISH as described by Gelali et al. Nature Communications 2019 and image in an epifluorescence microscope. We first incubated the samples for 1 h at 37 °C in a humidity chamber immersed in pre-hybridization buffer (PHB) containing 2x SSC/5x Denhardt’s solution/50mM sodium phosphate buffer/ 1mM EDTA/100 ng/μL ssDNA/50% formamide, pH 7.5–8.0. During this time, we prepared the first hybridization mix (HM-1) by mixing probes (final concentration is 0.05 nM of each oligo) at 1:9 v/v ratio with 1.1x first hybridization buffer (HB-1) containing 2.2x SSC/5.5x Denhardt’s solution/55mM sodium phosphate buffer/1.1mM EDTA/111 ng/μL ssDNA/55% formamide/11% dextran sulfate, pH 7.5–8.0. We removed the coverslip from PHB and dispensed the sample on top of 20 μL of HM-1 a microscope slide. We then sealed the coverslip with fixogum (MP Biomedical) and waited until the fixogum became solidified. Then we performed DNA denaturation for 2 min 30 s at 75 °C on a heating block. Afterwards, we incubated the sample for 15–18 h at 37 °C. The next day, we washed the coverslip two times, 5 min each at 65 °C in 0.2x SSC/0.2% Tween pre-warmed at 65 °C, inside a water bath, a brief wash in 4x SSC/0.2% Tween at RT, a brief wash in 2x SSC and one final short wash in 2x SSC/25% formamide. Next, we immersed the coverslip on 200 μL of the second hybridization mix (HM-2) containing the secondary fluorescently labeled oligonucleotides for the 6 colors, each at a final 20 nM concentration in HB-2 containing 2xSSC/25% formamide/10% Dextran sulfate/1 mg/mL E.coli tRNA/0.02% bovine serum albumin, and incubated the sample for 24 h at 30 °C. Afterwards, we washed the coverslip for 1 h at 30 °C in 2x SSC/25% formamide, followed by 30 min at 30 °C in 1.23 ng/mL Hoechst 33342 in 2x SSC/25% formamide. Lastly, we briefly rinsed the coverslip twice in 2x SSC, before mounting the sample with ProLongTM Diamond Antifade Mountant (Thermo Fisher). The clusters consisted in groups of dots that were considered for analysis and belonged to G1 cells which had two dots clusters clearly distinct. For each cluster, we extracted no more than 10 dots per colour, except for Alexa Fluor 790, for which we extracted up to 2, based on their intensities value and further match them based on their inter-colour distances, assuming the threshold computed from the datasets that have only one probe for each colour.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "image acquisition and feature extraction protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 21990232555,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "0.02 TB"
+    },
+    {
+      "@id": "#file-count",
+      "@type": "QuantitativeValue",
+      "value": 456,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000189",
+      "unitText": "file count",
+      "description": "456 5D images"
+    }
+  ]
+}

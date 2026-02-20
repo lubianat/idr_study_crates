@@ -1,0 +1,165 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0073-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0073/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0073/",
+      "@type": "Dataset",
+      "name": "Graph-based description of tertiary lymphoid organs (TLOs)  at single-cell level",
+      "description": "Object-oriented image analysis and graph-based description of the spatial context of B- and T-lymphocytes were performed to reflect the degree of organization in lymphocyte accumulations and their similarity with TLOs.  This study addresses the need to detect and reproducibly classify immune cell infiltrates in histopathological sections. We propose complementing observer-dependent approaches of immune cell evaluation in microscopy images with reproducible measures for spatial composition of lymphocytic infiltrates.",
+      "datePublished": "2020-03-03",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Schaadt et al., CC-BY-4.0, 2020",
+      "identifier": "idr0073",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-1234-982X"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1371/journal.pcbi.1007385"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000243"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/9798438/"
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-1234-982X",
+      "@type": "Person",
+      "name": "Friedrich Feuerhake",
+      "givenName": "Friedrich",
+      "familyName": "Feuerhake",
+      "email": "feuerhake.friedrich@mh-hannover.de",
+      "address": "Carl-Neuberg-Str. 1, 30615 Hannover, Germany"
+    },
+    {
+      "@id": "https://doi.org/10.1371/journal.pcbi.1007385",
+      "@type": "ScholarlyArticle",
+      "name": "Graph-based description of tertiary lymphoid organs at single-cell level"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "tissue",
+      "description": "Based on cell coordinates detected in the full image, a Delaunay triangulation and distance criteria were used to build neighborhood graphs. The composition of nodes and edges are used for classification, e.g. using a support vector machine.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000243",
+      "@type": "DefinedTerm",
+      "name": "bright-field microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "bright-field microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000243"
+        }
+      ],
+      "description": "Based on cell coordinates detected in the full image, a Delaunay triangulation and distance criteria were used to build neighborhood graphs. The composition of nodes and edges are used for classification, e.g. using a support vector machine."
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "AT2 40x with resolution of 0.253 µm/pixel (see publication)",
+      "description": "AT2 40x with resolution of 0.253 µm/pixel (see publication)"
+    }
+  ]
+}

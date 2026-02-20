@@ -1,0 +1,251 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0061-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0061/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0061/",
+      "@type": "Dataset",
+      "name": "Live imaging screen reveals that TYRO3 and GAK ensure accurate spindle positioning in human cells",
+      "description": "Proper spindle positioning is crucial for spatial cell division control. Spindle positioning in human cells relies on a ternary complex comprising Gαi1-3, LGN and NuMA, which anchors dynein at the cell cortex, thus enabling pulling forces to be exerted on astral microtubules. We developed a live imaging siRNA-based screen using stereotyped fibronectin micropatterns to uncover components modulating spindle positioning in human cells, testing 1280 genes, including all kinases and phosphatases. We thus discover 16 components whose inactivation dramatically perturbs spindle positioning, including Tyrosine receptor kinase 3 (TYRO3) and cyclin G associated kinase (GAK). TYRO3 depletion results in excess NuMA and dynein at the cell cortex during metaphase, as upon blocking Phosphatidylinositol 3-kinase (PI3K), which TYRO3 activates. Furthermore, depletion of GAK leads to impaired astral microtubules, as upon down-regulation of Clathrin, with which GAK interacts. Overall, our work uncovers novel components and mechanisms governing spindle positioning in human cells.",
+      "datePublished": "2019-07-03",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Wolf et al., CC-BY-4.0, 2019",
+      "identifier": "idr0061",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0001-5673-4239"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1038/s41467-019-10446-z"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#screen-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#screen-protocol-1-0"
+        },
+        {
+          "@id": "#screen-protocol-1-1"
+        },
+        {
+          "@id": "#screen-protocol-1-2"
+        },
+        {
+          "@id": "#screen-protocol-1-3"
+        },
+        {
+          "@id": "#screen-protocol-1-4"
+        },
+        {
+          "@id": "#screen-protocol-1-5"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/6001463/"
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0001-5673-4239",
+      "@type": "Person",
+      "name": "Benita Wolf",
+      "givenName": "Benita",
+      "familyName": "Wolf",
+      "email": "Benita.Wolf@chuv.ch",
+      "address": "CHUV, Lausanne EPFL, Lausanne"
+    },
+    {
+      "@id": "https://doi.org/10.1038/s41467-019-10446-z",
+      "@type": "ScholarlyArticle",
+      "name": "Live imaging screen reveals that TYRO3 and GAK ensure accurate spindle positioning in human cells."
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#screen-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Live imaging screen for regulators of mitotic spindle positioning, screening a library of 1200 kinases, phosphatases and associated proteins (4 siRNAs per gene), in a 96 well format. Cells were incubated 48 hours in the presence of siRNA and than transferred to micropatterned 96 well plates containing L-shaped, fibronectin coated, micropatterns, helping to stereotype cell organelle positioning. On L-shapes, mitotic DNA (metaphase plates) are positioned in a 45° angle with respect to the arms of the Ls, thereby creating a \"\"reference\"\" phenotype. We screened for candidates whose depletion led to a significant offset from this \"\"reference\"\" or normal position during metaphase. We used HeLa cells carrying the mCherry::H2B transgene, visualizing DNA. The L-micropatterns were coated with fibronectin containing Alexa 555, thereby Ls were visible in the same fluorescent channel. After transfer of cells to micropatterned plates, cells attached within 6 hours to the micropattern. We imaged each plate for 24 hours (framerate 8min), imaging 2 visual fields per well. Each plate contained negative and positive control wells (8 scrambles siRNA wells, 8 LGN siRNA wells). Movies were analyzed using the ImageJ based algorithm TRACMIT.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000246",
+      "@type": "DefinedTerm",
+      "name": "fluorescence microscopy"
+    },
+    {
+      "@id": "#screen-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "description": "Live imaging screen for regulators of mitotic spindle positioning, screening a library of 1200 kinases, phosphatases and associated proteins (4 siRNAs per gene), in a 96 well format. Cells were incubated 48 hours in the presence of siRNA and than transferred to micropatterned 96 well plates containing L-shaped, fibronectin coated, micropatterns, helping to stereotype cell organelle positioning. On L-shapes, mitotic DNA (metaphase plates) are positioned in a 45° angle with respect to the arms of the Ls, thereby creating a \"\"reference\"\" phenotype. We screened for candidates whose depletion led to a significant offset from this \"\"reference\"\" or normal position during metaphase. We used HeLa cells carrying the mCherry::H2B transgene, visualizing DNA. The L-micropatterns were coated with fibronectin containing Alexa 555, thereby Ls were visible in the same fluorescent channel. After transfer of cells to micropatterned plates, cells attached within 6 hours to the micropattern. We imaged each plate for 24 hours (framerate 8min), imaging 2 visual fields per well. Each plate contained negative and positive control wells (8 scrambles siRNA wells, 8 LGN siRNA wells). Movies were analyzed using the ImageJ based algorithm TRACMIT."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Growth Protocol - HeLa mCherry::H2B cells (gift from Arnaud Echard, Institut Pasteur, Paris6) were used for the screen. Cells were maintained in high-glucose DMEM with GlutaMAX (Thermofisher) medium supplemented with 10% FCS in a humidified 5% CO2 incubator at 37°C. For live imaging, the medium was supplemented with 25mM HEPES (Thermofisher) and 1% PenStrep (Thermofisher).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "treatment protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007571",
+      "@type": "DefinedTerm",
+      "name": "HCS library protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "HCS library protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007572",
+      "@type": "DefinedTerm",
+      "name": "HCS image acquistion and feature extraction protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "HCS image acquistion and feature extraction protocol",
+      "description": "HCS image acquistion and feature extraction protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007573",
+      "@type": "DefinedTerm",
+      "name": "HCS data analysis protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-5",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "HCS data analysis protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    }
+  ]
+}

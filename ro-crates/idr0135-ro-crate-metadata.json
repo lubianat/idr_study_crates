@@ -1,0 +1,248 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0135-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0135/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0135/",
+      "@type": "Dataset",
+      "name": "Stepwise-edited, human melanoma models reveal mutationsÕ effect on tumor and microenvironment",
+      "description": "Establishing causal relationships between genetic alterations of human cancers and the specific phenotypes of malignancy remains a challenge. We sequentially introduced mutations into healthy human melanocytes in up to five genes spanning six commonly disrupted melanoma pathways forming nine genetically distinct cellular models of melanoma. We connected mutant melanocyte genotypes to malignant cell expression programs in vitro and in vivo, replicative immortality, malignancy, rapid tumor growth, pigmentation, metastasis, and histopathology. Mutations in malignant cells also affected tumor microenvironment composition and cell states. Our melanoma models shared genotype-associated expression programs with patient melanomas, and a deep learning model showed they partially recapitulated genotype-associated histopathological features as well. Thus, a progressive series of genome-edited, human cancer models can causally connect genotypes carrying multiple mutations to phenotype.",
+      "datePublished": "2022-05-05",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Hodis, Torlai Triglia et al, CC-BY-4.0, 2022",
+      "identifier": "idr0135",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-5651-4268"
+        },
+        {
+          "@id": "https://orcid.org/0000-0002-6059-0116"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1126/science.abi8175"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "#experiment-protocol-1-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000243"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/14000892/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-5651-4268",
+      "@type": "Person",
+      "name": "Eran Hodis",
+      "givenName": "Eran",
+      "familyName": "Hodis",
+      "email": "Eran_Hodis@dfci.Harvard.edu",
+      "address": "Broad Institute of MIT and Harvard, Cambridge, MA 02142, USA"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-6059-0116",
+      "@type": "Person",
+      "name": "Elena Torlai Triglia",
+      "givenName": "Elena",
+      "familyName": "Torlai Triglia",
+      "email": "etorlait@broadinstitute.org",
+      "address": "Broad Institute of MIT and Harvard, Cambridge, MA 02142, USA"
+    },
+    {
+      "@id": "https://doi.org/10.1126/science.abi8175",
+      "@type": "ScholarlyArticle",
+      "name": "Stepwise-edited, human melanoma models reveal mutations' effect on tumor and microenvironment"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090",
+      "@type": "Taxon",
+      "scientificName": "Mus musculus"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "tissue",
+      "description": "After euthanizing the mice, solid tumors were collected and fixed with 10% formalin (Patterson Veterinary) for 24 hours. Samples were subsequently transferred into 70% ethanol and submitted to the Histology Core at the Koch Institute for paraffin embedding, in 3 batches, the paraffin blocks were subjected to tissue sectioning, Hematoxylin & Eosin (H&E) staining and digital whole slide scanning.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000243",
+      "@type": "DefinedTerm",
+      "name": "bright-field microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "bright-field microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000243"
+        }
+      ],
+      "description": "After euthanizing the mice, solid tumors were collected and fixed with 10% formalin (Patterson Veterinary) for 24 hours. Samples were subsequently transferred into 70% ethanol and submitted to the Histology Core at the Koch Institute for paraffin embedding, in 3 batches, the paraffin blocks were subjected to tissue sectioning, Hematoxylin & Eosin (H&E) staining and digital whole slide scanning."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Primary human melanocytes engineered to bear specific combinations of mutations were injected intradermally in the flanks of NSG mice.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "Genetic engineering.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "H&E staining, digital whole slide scanning (40x) at Koch Institute Histology Core."
+    },
+    {
+      "@id": "#experiment-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "Machine learning classifier - please see methods of associated publication."
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 76965813944,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "0.07 TB"
+    }
+  ]
+}

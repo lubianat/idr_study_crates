@@ -1,0 +1,183 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0161-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0161/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0161/",
+      "@type": "Dataset",
+      "name": "A spatial human thymus cell atlas mapped to a continuous tissue axis",
+      "description": "T cells develop from circulating precursor cells, which enter the thymus and migrate through specialised sub-compartments that support their maturation and selection. In humans, this process starts in early fetal development and is highly active until thymic involution in adolescence. To map the micro-anatomical underpinnings of this process in pre- and early postnatal stages, we established a novel quantitative morphological framework for the thymus, the Cortico-Medullary Axis, and used it to perform a spatially resolved analysis. By applying this framework to a curated multimodal single-cell atlas, spatial transcriptomics, and high-resolution multiplex imaging data, we demonstrate establishment of the lobular cytokine network, canonical thymocyte trajectories and thymic epithelial cell distributions within the first trimester of fetal development. We pinpoint tissue niches of thymic epithelial cell progenitors and distinct subtypes associated with Hassall’s corpuscles and uncover divergence in the timing of medullary entry between CD4 vs. CD8 T cell lineages. These findings provide a basis for a detailed understanding of T lymphocyte development and are complemented with a holistic toolkit for cross-platform imaging data analysis, annotation, and Organ Axis construction (TissueTag), which can be applied to any tissue.",
+      "datePublished": "2024-12-12",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Yayon et al, CC-BY-4.0, 2024",
+      "identifier": "idr0161",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-7034-0524"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1038/s41586-024-07944-6"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000251"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/15159248/"
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-7034-0524",
+      "@type": "Person",
+      "name": "Nadav Yayon",
+      "givenName": "Nadav",
+      "familyName": "Yayon",
+      "email": "ny1@sanger.ac.uk",
+      "address": "Wellcome Sanger Institute, Cellular Genetics, Cambridge, United Kingdom; European Molecular Biology Laboratory, European Bioinformatics Institute, Cambridge, United Kingdom"
+    },
+    {
+      "@id": "https://doi.org/10.1038/s41586-024-07944-6",
+      "@type": "ScholarlyArticle",
+      "name": "A spatial human thymus cell atlas mapped to a continuous tissue axis"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "tissue",
+      "description": "44-plex iterative bleaching extends multiplexity (IBEX) imaging was performed on fixed frozen tissues from normal human thymus samples.  Plus, 13 to 15-plex one-shot multiplex imaging of human thymus using the RareCyte technology and OCT embedded frozen tissues prepared from human thymus.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000251",
+      "@type": "DefinedTerm",
+      "name": "confocal microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000251"
+        }
+      ],
+      "description": "44-plex iterative bleaching extends multiplexity (IBEX) imaging was performed on fixed frozen tissues from normal human thymus samples.  Plus, 13 to 15-plex one-shot multiplex imaging of human thymus using the RareCyte technology and OCT embedded frozen tissues prepared from human thymus."
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "IBEX",
+      "description": "IBEX Sample Description: Fixed frozen tissues were prepared from human thymus samples. Images were acquired using the IBEX method and a panel of antibodies directed against 43 protein targets and the nuclear dye (Hoechst). Images were aligned using the Hoechst channel as a fiducial.  Additional details on antibodies, image alignment, and related protocols can be found on the IBEX Imaging Community website: https://ibeximagingcommunity.github.io/ibex_imaging_knowledge_base/.  IBEX Quantification Process: Details on the advanced image analyses performed on these samples are included in the accompanying manuscript."
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "P61_A31_C98a_Sanger16_Orion",
+      "description": "RareCyte: Multiplex immunofluorescence and single round imaging was performed as described in accompanying manuscript. All steps were performed at room temperature unless stated otherwise. Briefly, FFPE blocks were sectioned using a microtome (Leica RM2235) at 3.5-5 µm thickness and placed on a superfrost slide (Fisher scientific 12312148). Slides were dried at 60°C for 60 min to ensure tissue sections had adhered to the slides. Tissue sections were deparaffinised and subjected to antigen retrieval using the BioGenex EZ-Retriever system (95°C for 5 min followed by 107°C 5 min). For OCT sections, 7 µm sections were taken using a cryostat (Leica CM3050S), placed onto SuperFrost Plus slides (VWR) and immediately submerged in 10% buffered saline Formalin (cellpath BAF-6000-08A) for 1h at room temperature. Samples were then subjected to the following steps similarly to the FFPE samples. To remove autofluorescence, slides were bleached with AF Quench Buffer (4.5% H2O2, 24 mM NaOH in PBS). Slides were quenched for 60 min using the \"high\" setting with a strong white light exposure followed by further quenching for 30 min using 365 nm “high\" setting using a UV transilluminator. Slides were rinsed with 1X PBS and incubated in 300 µl of Image-iT™ FX Signal Enhancer (Thermo Fisher, # I36933) for 15 min. Slides were rinsed again and 300 µl of labelled primary antibody staining cocktail was added to the tissue, which subsequently was incubated for 120 min in the dark within a humidity tray. All antibodies were pre-diluted according to company recommendations and were not adjusted further (see Supplementary Table 4 in accompanying manuscript). Slides were washed with a surfactant wash buffer and 300 µl of nuclear staining in goat diluent was added to the slide. Slides were then incubated in the dark for 30 min in a humidity tray. Slides were then washed and placed in 1X PBS. Finally the slides were coverslipped using ArgoFluor mount media and left in the dark at room temperature overnight to dry. Slides were imaged on the following day using a RareCyte Orion microscope with a 20X objective and relevant acquisition settings were applied using the software Artemis.  RareCyte Quantification Process: Details on the advanced image analyses performed on these samples are included in the accompanying manuscript."
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "RNAScope",
+      "description": "For RNAscope analysis, sections were cut from the fresh frozen OCT-embedded (OCT, Leica) samples at a thickness of 10 μm using a cryostat (Leica CM3050S) and placed onto SuperFrost Plus slides (VWR). Sections were stored at −80 °C until stained. Sections were removed from the −80 °C storage and submerged in chilled (4 °C) 4% PFA for 15 min, then acclimatised to room temperature 4% PFA over 120 min. Sections were then briefly washed in 1X PBS to remove any remaining OCT. Sections were dehydrated in a series of 50%, 70%, and 100% ethanol (5 min each) and air-dried before performing automated 4-plex RNAscope. Using the automated Leica BOND RX, RNAscope staining was performed on the fresh frozen sections using the RNAscope LS multiplex fluorescent Reagent Kit v2 Assay and RNAscope LS 4-Plex Ancillary Kit for LS Multiplex Fluorescent (Advanced Cell Diagnostics (ACD), Bio-Techne) as per manufacturer's instructions. All sections were subjected to 15 min of protease III treatment before staining protocols were performed. Before running RNAscope probe panels, the RNA quality of fresh frozen samples was assessed using multiplex positive (RNAscope LS 2.5 4-plex Positive Control Probe, ACD Bio-Techne, 321808) and negative (RNAscope® 4-plex LS Multiplex Negative Control Probe, ACD Bio-Techne, 321838) controls. The probes were labelled using Opal 520, 570 and 650 fluorophores (Akoya Biosciences, diluted 1:1000) and one probe channel was labelled using Atto 425-Streptavidin fluorophore (Sigma, diluted 1:500), which was first incubated with TSA–biotin (Akoya Biosciences, diluted 1:400). The following RNAscope 2.5 LS probes were used for this study: Hs-AIRE (ACD Bio-Techne, 551248), Hs-LY75-C2 (ACD Bio-Techne, 481438-C2), Hs-CAMP-C3 (ACD Bio-Techne, 446248-C3), Hs-EPCAM-C4 (ACD Bio-Techne, 310288-C4), Hs-IGFBP6-C1 (ACD Bio-Techne, 496068), Hs-DLK2-C3 (ACD Bio-Techne, 425088-C3). All nuclei were DAPI-stained (Life Technologies, D1306).Confocal imaging was performed on a Perkin Elmer Operetta CLS High Content Analysis System using a 20X (NA 0.16, 0.299 μm/pixel) water-immersion objective with 9-11 z-stacks with 2 µm-step. Channels: DAPI (excitation 355-385 nm, emission 430-500 nm), Atto 425 (ex. 435-460 nm, em. 470-515 nm), Opal 520 (ex. 460-490 nm, em. 500-550 nm), Opal 570 (ex. 530-560 nm, em. 570-620 nm), Opal 650 (ex. 615-645 nm, em. 655-760 nm). Confocal image stacks were stitched as individual z-stacks using proprietary Acapella scripts provided by Perkin Elmer, and visualised using OMERO Plus (Glencoe Software).  Sample Description: RNAScope details.  RNAScope Quantification Process: Details on the advanced image analyses performed on these samples are included in the accompanying manuscript."
+    }
+  ]
+}

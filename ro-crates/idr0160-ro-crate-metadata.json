@@ -1,0 +1,276 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0160-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0160/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0160/",
+      "@type": "Dataset",
+      "name": "A morphology and secretome map of pyroptosis",
+      "description": "Pyroptosis represents one type of Programmed Cell Death (PCD). It is a form of inflammatory cell death that is canonically defined by caspase-1 cleavage and Gasdermin-mediated membrane pore formation. Caspase-1 initiates the inflammatory response (through IL-1β processing), and the N-terminal cleaved fragment of Gasdermin D polymerizes at the cell periphery forming pores to secrete pro-inflammatory markers. Cell morphology also changes in pyroptosis, with nuclear condensation and membrane rupture. However, recent research challenges canon, revealing a more complex secretome and morphological response in pyroptosis, including overlapping molecular characterization with other forms of cell death, such as apoptosis. Here, we take a multimodal, systems biology approach to characterize pyroptosis. We treated human Peripheral Blood Mononuclear Cells (PBMCs) with 36 different combinations of stimuli to induce pyroptosis or apoptosis. We applied both secretome profiling (nELISA) and high-content fluorescence microscopy (Cell Painting). To differentiate apoptotic, pyroptotic and control cells, we used canonical secretome markers and modified our Cell Painting assay to mark the N-terminus of Gasdermin-D. We trained hundreds of machine learning (ML) models to reveal intricate morphology signatures of pyroptosis that implicate changes across many different organelles and predict levels of many pro-inflammatory markers. Overall, our analysis provides a detailed map of pyroptosis which includes overlapping and distinct connections with apoptosis revealed through a mechanistic link between cell morphology and cell secretome.",
+      "datePublished": "2025-05-08",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "copyrightNotice": "Lippincott et al, CC0-1.0, 2025",
+      "identifier": "idr0160",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-8637-1448"
+        },
+        {
+          "@id": "https://orcid.org/0000-0002-0503-9348"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1091/mbc.E25-03-0119"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#screen-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#screen-protocol-1-0"
+        },
+        {
+          "@id": "#screen-protocol-1-1"
+        },
+        {
+          "@id": "#screen-protocol-1-2"
+        },
+        {
+          "@id": "#screen-protocol-1-3"
+        },
+        {
+          "@id": "#screen-protocol-1-4"
+        },
+        {
+          "@id": "#screen-protocol-1-5"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/15173234/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-8637-1448",
+      "@type": "Person",
+      "name": "Michael Lippincott",
+      "givenName": "Michael",
+      "familyName": "Lippincott",
+      "email": "michael.lippincott@cuanschutz.edu",
+      "address": "1890 N Revere Ct, Aurora, CO 80045, USA"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-0503-9348",
+      "@type": "Person",
+      "name": "Gregory Way",
+      "givenName": "Gregory",
+      "familyName": "Way",
+      "email": "gregory.way@cuanschutz.edu",
+      "address": "1890 N Revere Ct, Aurora, CO 80045, USA"
+    },
+    {
+      "@id": "https://doi.org/10.1091/mbc.E25-03-0119",
+      "@type": "ScholarlyArticle",
+      "name": "A morphology and secretome map of pyroptosis"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#screen-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Modified CellPainting assay to measure the morphological changes in pyroptotic cells. We removed the cytoplasmic RNA channel and replaced it with a cleaved (N-terminal) GSDMD channel.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000246",
+      "@type": "DefinedTerm",
+      "name": "fluorescence microscopy"
+    },
+    {
+      "@id": "#screen-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "description": "Modified CellPainting assay to measure the morphological changes in pyroptotic cells. We removed the cytoplasmic RNA channel and replaced it with a cleaved (N-terminal) GSDMD channel."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "We cultured PBMCs and SH-SY5Y cells in a controlled environment of 37ºC with 5% CO2.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "We treated cells with cell death inhibitor for one hour followed by treating with a cell death inducer for six hours.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007571",
+      "@type": "DefinedTerm",
+      "name": "HCS library protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "We used CellProfiler to extract morphology features.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007572",
+      "@type": "DefinedTerm",
+      "name": "HCS image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "HCS image acquisition and feature extraction protocol",
+      "description": "HCS image acquisition and feature extraction protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007573",
+      "@type": "DefinedTerm",
+      "name": "HCS data analysis protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-5",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "HCS data analysis protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 1099511627776,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "1.0 TB"
+    }
+  ]
+}

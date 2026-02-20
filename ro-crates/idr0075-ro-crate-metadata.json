@@ -1,0 +1,254 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0075-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0075/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0075/",
+      "@type": "Dataset",
+      "name": "Automated quantification of synaptic boutons reveals their 3D distribution in the honey bee mushroom body",
+      "description": "Synaptic boutons are highly plastic structures undergoing experience-dependent changes in their number, volume, and shape. Their plasticity has been intensively studied in the insect mushroom bodies by manually counting the number of boutons in small regions of interest and extrapolating this number to the volume of the mushroom body neuropil. Here we extend this analysis to the synaptic bouton distribution within a larger subregion of the mushroom body olfactory neuropil of honey bees (Apis mellifera). This required the development of an automated method combining two-photon imaging with advanced image post-processing and multiple threshold segmentation. The method was first validated in subregions of the mushroom body olfactory and visual neuropils. Further analyses in the olfactory neuropil suggested that previous studies overestimated the number of synaptic boutons. As a reason for that, we identified boundaries effects in the small volume samples. The application of the automated analysis to larger volumes of the mushroom body olfactory neuropil revealed a corrected average density of synaptic boutons and, for the first time, their 3D spatial distribution. This distribution exhibited a considerable heterogeneity. This additional information on the synaptic bouton distribution provides the basis for future studies on brain development, symmetry, and plasticity.",
+      "datePublished": "2020-01-20",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Amelie Cabirol, Albrecht Haase, CC-BY-4.0, 2020",
+      "identifier": "idr0075",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "#person-1"
+        },
+        {
+          "@id": "#person-3"
+        },
+        {
+          "@id": "#person-4"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1038/s41598-019-55974-2"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_7460"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "#experiment-protocol-1-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000254"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/9528933/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        },
+        {
+          "@id": "#file-count"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "#person-1",
+      "@type": "Person",
+      "name": "Albrecht Haase",
+      "givenName": "Albrecht",
+      "familyName": "Haase",
+      "email": "albrecht.haase@unitn.it",
+      "address": "University of Trento, piazza Manifattura 1, 38068 Rovereto, Italy"
+    },
+    {
+      "@id": "#person-3",
+      "@type": "Person",
+      "name": "#person-3",
+      "address": "Study Person ORCID"
+    },
+    {
+      "@id": "#person-4",
+      "@type": "Person",
+      "name": "#person-4",
+      "address": "0000-0002-8324-0047"
+    },
+    {
+      "@id": "https://doi.org/10.1038/s41598-019-55974-2",
+      "@type": "ScholarlyArticle",
+      "name": "Automated quantification of synaptic boutons reveals their 3D distribution in the honey bee mushroom body"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_7460",
+      "@type": "Taxon",
+      "scientificName": "Apis mellifera"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "tissue",
+      "description": "To study the spatial distribution of synaptic complexes called microglomeruli in the mushroom body neuropils of the honeybee brain, those structures where imaged by two-photon microscopy. A data analysis method was developed to automatically obtain the loci of those structures from large volume samples allowing to analyse their 3D density distribution.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_7460"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000254",
+      "@type": "DefinedTerm",
+      "name": "two-photon laser scanning microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "two-photon laser scanning microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000254"
+        }
+      ],
+      "description": "To study the spatial distribution of synaptic complexes called microglomeruli in the mushroom body neuropils of the honeybee brain, those structures where imaged by two-photon microscopy. A data analysis method was developed to automatically obtain the loci of those structures from large volume samples allowing to analyse their 3D density distribution."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Honeybees where reared to the age of 7 days in complete darkness, then sacrificed. Details in http://dx.doi.org/10.1101/589770 Materials and methods: Animals. Brains were extracted and immunostained with Alexa-488 using SYNORF1 antibodies and cleared methyl salicylate. Details in http://dx.doi.org/10.1101/589770 Materials and methods: Immunostaining of synapsin in whole-mount brains. Brains where imaged with a two-photon microscope (Bruker Ultima IV), voxel size MB calyx overview: (1.031x1.031x5)micron,  voxel size MB calyx overview: (0.3438x0.3438x0.5) micron, Details in http://dx.doi.org/10.1101/589770 Materials and methods: Image acquisition. 3D Loci of the synaptic complexes called microglomeruli were obtained by a multi-threshold segmentation protocol developed for this purpose. Details in http://dx.doi.org/10.1101/589770 Materials and methods: Volume reconstruction of the MB lip, Image processing for the quantification of microglomeruli, Quantification of microglomeruli in ROIs, Correction for the elliptic image of the microglomeruli.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "treatment protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 1099511627,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "0.001 TB"
+    },
+    {
+      "@id": "#file-count",
+      "@type": "QuantitativeValue",
+      "value": 20,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000189",
+      "unitText": "file count",
+      "description": "20 5D images"
+    }
+  ]
+}

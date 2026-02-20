@@ -1,0 +1,260 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0070-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0070/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0070/",
+      "@type": "Dataset",
+      "name": "HDBR Atlas: Gene Expression in Early Human Development",
+      "description": "Gene expression studies in early human development from 3 to 17 post conceptional weeks (PCW).",
+      "datePublished": "2020-06-30",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Kerwin et al, CC-BY-4.0, 2020",
+      "identifier": "idr0070",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "#person-1"
+        },
+        {
+          "@id": "#person-2"
+        },
+        {
+          "@id": "#person-3"
+        },
+        {
+          "@id": "#person-4"
+        },
+        {
+          "@id": "#person-5"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1111/j.1469-7580.2010.01290.x"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "#experiment-protocol-1-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000243"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/9840230/"
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "#person-1",
+      "@type": "Person",
+      "name": "Janet Kerwin",
+      "givenName": "Janet",
+      "familyName": "Kerwin",
+      "email": "janet.kerwin@newcastle.ac.uk",
+      "address": "HDBR, Newcastle University, international Centre for Life, Newcastle, NE1 4EP"
+    },
+    {
+      "@id": "#person-2",
+      "@type": "Person",
+      "name": "YuZhu Cheng",
+      "givenName": "YuZhu",
+      "familyName": "Cheng",
+      "email": "yuzhu.cheng@newcastle.ac.uk",
+      "address": "HDBR, Newcastle University, international Centre for Life, Newcastle, NE1 4EP"
+    },
+    {
+      "@id": "#person-3",
+      "@type": "Person",
+      "name": "Steven Lisgo",
+      "givenName": "Steven",
+      "familyName": "Lisgo",
+      "email": "steven.lisgo@newcastle.ac.uk",
+      "address": "HDBR, Newcastle University, international Centre for Life, Newcastle, NE1 4EP"
+    },
+    {
+      "@id": "#person-4",
+      "@type": "Person",
+      "name": "Andrew Copp",
+      "givenName": "Andrew",
+      "familyName": "Copp",
+      "email": "a.copp@ucl.ac.uk",
+      "address": "HDBR, UCL Institute of Child Health, 30 Guilford Street, London WC1N 1EH"
+    },
+    {
+      "@id": "#person-5",
+      "@type": "Person",
+      "name": "Deborah Henderson",
+      "givenName": "Deborah",
+      "familyName": "Henderson",
+      "email": "deborah.henderson@newcastle.ac.uk",
+      "address": "HDBR, Newcastle University, international Centre for Life, Newcastle, NE1 4EP"
+    },
+    {
+      "@id": "https://doi.org/10.1111/j.1469-7580.2010.01290.x",
+      "@type": "ScholarlyArticle",
+      "name": "The HUDSEN Atlas: a three-dimensional (3D) spatial framework for studying gene expression in the developing human brain."
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "tissue",
+      "description": "Immunohistochemistry and in situ hybridization analysis in early human development from 3 to 17 weeks post conception.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000243",
+      "@type": "DefinedTerm",
+      "name": "bright-field microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "bright-field microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000243"
+        }
+      ],
+      "description": "Immunohistochemistry and in situ hybridization analysis in early human development from 3 to 17 weeks post conception."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "growth protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "treatment protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    }
+  ]
+}

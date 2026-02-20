@@ -1,0 +1,165 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0158-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0158/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0158/",
+      "@type": "Dataset",
+      "name": "Multi-omic profiling of follicular lymphoma tumors reveals changes in tissue architecture and enhanced stromal remodeling in high-risk patients",
+      "description": "Reference atlases, molecular and spatial maps of mammalian tissues, are critical resources for discovery efforts and translational research. Their utility is dependent on operationalizing the resulting data by identifying cell types, histological patterns, and predictive biomarkers underlying health and disease. The human lymph node (LN) offers a compelling use case because of its importance in immunity, structural and cellular diversity, and neoplastic involvement. One hematological malignancy, follicular lymphoma (FL), evolves from developmentally blocked germinal center B cells residing in and trafficking through these tissues. To promote survival and immune escape, tumor B cells undergo significant genetic changes and extensively remodel the lymphoid microenvironment. Here, we present an integrated portrait of healthy and FL LNs using multiple genomic and advanced imaging technologies. By leveraging the strengths of each platform, we identify several tumor-specific features and microenvironmental patterns enriched in individuals who experience early relapse, the most high-risk of FL patients.",
+      "datePublished": "2024-10-08",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Radtke et al, CC-BY-4.0, 2024",
+      "identifier": "idr0158",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0003-4379-8967"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1016/j.ccell.2024.02.001"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000251"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/15159217/"
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0003-4379-8967",
+      "@type": "Person",
+      "name": "Andrea Radtke",
+      "givenName": "Andrea",
+      "familyName": "Radtke",
+      "email": "andrea.radtke@nih.gov",
+      "address": "Lymphocyte Biology Section and Center for Advanced Tissue Imaging, Laboratory of Immune System Biology, NIAID, NIH, Bethesda, MD, 20892, USA"
+    },
+    {
+      "@id": "https://doi.org/10.1016/j.ccell.2024.02.001",
+      "@type": "ScholarlyArticle",
+      "name": "Multi-omic profiling of follicular lymphoma reveals changes in tissue architecture and enhanced stromal remodeling in high-risk patients"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "tissue",
+      "description": "40-plex iterative bleaching extends multiplexity (IBEX) imaging was performed on fixed frozen tissues from normal human lymph nodes and follicular lymphoma lymph nodes. Multiplexed immunofluorescence (MxIF) imaging was performed on serial FFPE tissue sections from follicular lymphoma lymph nodes. Four distinct antibody panels were applied to each tissue section referred to as MxIF Panel 1 (MxIF_P1), MxIF Panel 2 (MxIF_P2),  MxIF Panel 3 (MxIF_P3), and MxIF Panel 4 (MxIF_P4). Multiplexed imaging was performed on serial FFPE tissue sections from normal and follicular lymphoma lymph nodes using the Cell DIVE imager and IBEX dye inactivation protocol (Cell DIVE-IBEX). Two panels of antibodies, immune (CellDIVE_IBEX_Immune) or stromal (CellDIVE_IBEX_Stromal), were applied to serial sections. IBEX and MxIF imaging were performed on a discovery cohort of 10 samples. Key spatial findings were extended to a larger validation cohort of 29 samples using the Cell DIVE-IBEX method.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000251",
+      "@type": "DefinedTerm",
+      "name": "confocal microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000251"
+        }
+      ],
+      "description": "40-plex iterative bleaching extends multiplexity (IBEX) imaging was performed on fixed frozen tissues from normal human lymph nodes and follicular lymphoma lymph nodes. Multiplexed immunofluorescence (MxIF) imaging was performed on serial FFPE tissue sections from follicular lymphoma lymph nodes. Four distinct antibody panels were applied to each tissue section referred to as MxIF Panel 1 (MxIF_P1), MxIF Panel 2 (MxIF_P2),  MxIF Panel 3 (MxIF_P3), and MxIF Panel 4 (MxIF_P4). Multiplexed imaging was performed on serial FFPE tissue sections from normal and follicular lymphoma lymph nodes using the Cell DIVE imager and IBEX dye inactivation protocol (Cell DIVE-IBEX). Two panels of antibodies, immune (CellDIVE_IBEX_Immune) or stromal (CellDIVE_IBEX_Stromal), were applied to serial sections. IBEX and MxIF imaging were performed on a discovery cohort of 10 samples. Key spatial findings were extended to a larger validation cohort of 29 samples using the Cell DIVE-IBEX method."
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "IBEX, MxIF, Cell DIVE-IBEX",
+      "description": "Sample Description: For IBEX images: Fixed frozen tissues were prepared from excisional lymph node biopsies. Images were acquired using the IBEX method and a panel of antibodies directed against 39 protein targets and the nuclear dye (Hoechst). For MxIF images: FFPE tissues were prepared from excisional lymph node biopsies. Prior to antibody labeling, antigen retrieval was performed using the AR6 (pH 6) buffer and a water bath. Four panels of antibodies (2-4 protein targets per panel) and the nuclear dye (Hoechst) were visualized in each tissue section. For Cell DIVE-IBEX images: FFPE tissues were prepared from excisional lymph node biopsies. Prior to antibody labeling, antigen retrieval was performed using the ER1 and ER2 buffers and the Leica Bond. Two antibody panels, termed immune or stromal, were applied to serial sections using cyclic imaging with the Cell DIVE and dye inactivation using the IBEX protocol. Images were aligned using the Hoechst channel as a fiducial.  Additional details on antibodies, image alignment, and related protocols can be found on the IBEX Imaging Community website: https://ibeximagingcommunity.github.io/ibex_imaging_knowledge_base/"
+    }
+  ]
+}

@@ -1,0 +1,237 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0151-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0151/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0151/",
+      "@type": "Dataset",
+      "name": "A timer gene network is spatially regulated by the terminal system in the Drosophila embryo",
+      "description": "In insect embryos, anteroposterior patterning is coordinated by the sequential expression of the  timer  genes caudal, Dichaete, and odd-paired, whose expression dynamics correlate with the mode of segmentation. In Drosophila, the timer genes are expressed broadly across much of the blastoderm, which segments simultaneously, but their expression is delayed in a small  tail  region, just anterior to the hindgut, which segments during germband extension. Specification of the tail and the hindgut depends on the terminal gap gene tailless, but beyond this the regulation of the timer genes is poorly understood. We used a combination of multiplexed imaging, mutant analysis, and gene network modelling to resolve the regulation of the timer genes, identifying 11 new regulatory interactions and clarifying the mechanism of posterior terminal patterning. We propose that a dynamic Tailless expression gradient modulates the intrinsic dynamics of a timer gene cross-regulatory module, delineating the tail region and delaying its developmental maturation.",
+      "datePublished": "2025-07-10",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Clark et al, CC-BY-4.0, 2025",
+      "identifier": "idr0151",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0001-7953-0765"
+        },
+        {
+          "@id": "https://orcid.org/0000-0002-5588-796X"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.7554/eLife.78902"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_7227"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "#experiment-protocol-1-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000251"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/15177681/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0001-7953-0765",
+      "@type": "Person",
+      "name": "Matthew Benton",
+      "givenName": "Matthew",
+      "familyName": "Benton",
+      "email": "matthew.benton@gmail.com",
+      "address": "Developmental Biology Unit, EMBL, Germany"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-5588-796X",
+      "@type": "Person",
+      "name": "Erik Clark",
+      "givenName": "Erik",
+      "familyName": "Clark",
+      "email": "ec491@cam.ac.uk",
+      "address": "Department of Genetics, University of Cambridge, Cambridge, United Kingdom"
+    },
+    {
+      "@id": "https://doi.org/10.7554/eLife.78902",
+      "@type": "ScholarlyArticle",
+      "name": "A timer gene network is spatially regulated by the terminal system in the Drosophila embryo"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_7227",
+      "@type": "Taxon",
+      "scientificName": "Drosophila melanogaster"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "tissue",
+      "description": "Fluorescent hybridisation chain reaction (HCR) RNA in situ and immunohistochemistry analysis of gene expression during embryonic patterning in wildtype and mutant Drosophila embryos.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_7227"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000251",
+      "@type": "DefinedTerm",
+      "name": "confocal microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000251"
+        }
+      ],
+      "description": "Fluorescent hybridisation chain reaction (HCR) RNA in situ and immunohistochemistry analysis of gene expression during embryonic patterning in wildtype and mutant Drosophila embryos."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Further detailed information on staining, mounting, imaging, etc is available with the published article (10.7554/eLife.78902) or on BioImage Archive (Accession S-BIAD582).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "treatment protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 368336395304,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "0.335 TB"
+    }
+  ]
+}

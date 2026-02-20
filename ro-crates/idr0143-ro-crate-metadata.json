@@ -1,0 +1,251 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0143-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0143/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0143/",
+      "@type": "Dataset",
+      "name": "Comparing the value of mono- versus coculture for high-throughput compound screening in hematological malignancies",
+      "description": "Large-scale compound screens are a powerful model system for understanding variability of treatment response and for discovering druggable tumor vulnerabilities of hematological malignancies. However, as mostly performed in a monoculture of tumor cells, these assays disregard modulatory effects of the in vivo microenvironment. It is an open question whether and to what extent coculture with bone marrow stromal cells could improve the biological relevance of drug testing assays over monoculture. Here, we established a high throughput platform to measured ex vivo sensitivity of 108 primary blood cancer samples to 50 drugs in monoculture and in coculture with bone marrow stromal cells. Stromal coculture conferred resistance to 52 % of compounds in chronic lymphocytic leukemia (CLL) and to 36 % of compounds in acute myeloid leukemia (AML), including chemotherapeutics, BCR inhibitors, proteasome inhibitors and BET inhibitors. While most of the remaining drugs were similarly effective in mono- and coculture, oOnly the JAK inhibitors ruxolitinib and tofacitinib exhibited increased efficacy in AML and CLL stromal coculture. We further confirmed the importance of JAK-STAT signaling for stroma-mediated resistance by showing that stromal cells induce phosphorylation of STAT3 in CLL cells. We genetically characterized the 108 cancer samples and found that drug-gene associations agreed strongly correlated well between mono- and coculture. OverallHowever, effect sizes were lower in coculture, thus with more drug-gene associations were detected in monoculture than in coculture. Our results suggest justifies a two-step strategy for drug perturbation testing, with large-scale screening performed in monoculture, followed by focused evaluation of potential stroma-mediated resistances in coculture.",
+      "datePublished": "2023-10-09",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Herbst, Kim, Roider et al., CC-BY-4.0, 2023",
+      "identifier": "idr0143",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-0648-1832"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1182/bloodadvances.2022009652"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#screen-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#screen-protocol-1-0"
+        },
+        {
+          "@id": "#screen-protocol-1-1"
+        },
+        {
+          "@id": "#screen-protocol-1-2"
+        },
+        {
+          "@id": "#screen-protocol-1-3"
+        },
+        {
+          "@id": "#screen-protocol-1-4"
+        },
+        {
+          "@id": "#screen-protocol-1-5"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/14915538/"
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-0648-1832",
+      "@type": "Person",
+      "name": "Sascha Dietrich",
+      "givenName": "Sascha",
+      "familyName": "Dietrich",
+      "email": "sascha.dietrich@embl.de",
+      "address": "Department of Hematology and Oncology, University Hospital Düsseldorf"
+    },
+    {
+      "@id": "https://doi.org/10.1182/bloodadvances.2022009652",
+      "@type": "ScholarlyArticle",
+      "name": "Comparing the value of mono- versus coculture for high-throughput compound screening in hematological malignancies"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#screen-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "To systematically assess whether coculture studies provide superior biological insights for drug screening, we performed a large-scale study comparing compound efficacy in leukemia monoculture and leukemia-stroma coculture. We used the well-established bone-marrow derived stroma cell line HS-5 and an imaging-based platform to investigate not only drug effects in mono- and leukemia-stroma coculture but also to capture cellular changes due to the stromal environment and drug treatments.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000253",
+      "@type": "DefinedTerm",
+      "name": "spinning disk confocal microscopy"
+    },
+    {
+      "@id": "#screen-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "spinning disk confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "description": "To systematically assess whether coculture studies provide superior biological insights for drug screening, we performed a large-scale study comparing compound efficacy in leukemia monoculture and leukemia-stroma coculture. We used the well-established bone-marrow derived stroma cell line HS-5 and an imaging-based platform to investigate not only drug effects in mono- and leukemia-stroma coculture but also to capture cellular changes due to the stromal environment and drug treatments."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "HS-5 cells were cultured in DMEM (Thermo Fisher Scientific) supplemented with 10 % fetal bovine serum (FBS; Thermo Fisher Scientific), 1 % penicillin/streptomycin (Thermo Fisher Scientific) and 1 % glutamine (Thermo Fisher Scientific) in a humidified atmosphere at 37° C and 10 % CO2. Patient samples were selected based on availability and tumor cell content higher than 80 %. Clinical flow cytometry data were used to estimate the proportion of malignant cells in collected blood samples. Peripheral blood mononuclear cells (PBMCs) were isolated using Ficoll density gradient centrifugation. Cells were viably frozen in RPMI (Thermo Fisher Scientific) containing 45 % FBS (Thermo Fisher Scientific) and 10 % DMSO (SERVA Electrophoresis GmbH) and kept on liquid nitrogen until use. Cells were thawed freshly before the experiment and rolled in serum containing medium for 3 hours on a roll mixer at room temperature to allow cells to recover. To deplete dead cells, which form clumps during this procedure, the suspension was filtered through a 40 μm cell strainer (Sarstedt). Drug screens were carried out in CellCarrier-384 Ultra Microplates (Perkin Elmer) with a seeding density of HS-5 stromal cells of 1x104 cells/well and 2x10 4 patient cells per well. The screen was carried out in DMEM (Thermo Fisher Scientific) supplemented with 10 % human serum (male AB, H6914-100ml Batch SLBT2873, Sigma-Aldrich), 1 % penicillin/streptomycin (Thermo Fisher Scientific) and 1 % glutamine (Thermo Fisher Scientific) at a final volume of 40 μL in the culture plates. Cells were incubated at 37 °C in a humidified atmosphere and 10 % CO 2 for 3 days.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "For the screen, 50 drugs were probed at 3 different concentrations (Supplementary Table 1). Drug concentrations ranged from subnanomolar to low micromolar and were chosen based on previous experience with the drugs [3]. Increase of the concentration was 15-fold per step to cover a broad spectrum of concentrations. Drugs were diluted according to the manufacturer's instructions. Further dilution was carried out in DMSO (SERVA Electrophoresis GmbH) and master plates containing 4 μL of diluted drugs were frozen at -20 °C for direct use on the screening days.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007571",
+      "@type": "DefinedTerm",
+      "name": "HCS library protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "Compounds were chosen based on whether they are in clincal use for the treatment of leukemia, target pathways known to be important in leukemia or have been described in the context of co-cultures.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007572",
+      "@type": "DefinedTerm",
+      "name": "HCS image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "HCS image acquisition and feature extraction protocol",
+      "description": "High-throughput screening was conducted using Opera Phenix High Content Screening System (Perkin Elmer). CLL screening plates were stained with 4 μg/ml Hoechst 33342 (Invitrogen) and 1 μl/ml lysosomal dye NIR (Abcam). Plates of non-CLL entities were additionally stained with 1 μM Calcein AM (Invitrogen). All dyes were diluted using serum-free medium and staining solution was added to each well. After an incubation period of 45 minutes at 37 °C, three positions per well with a stack of ten images at a distance of 1.2 μm were acquired with a 40x water objective in confocal mode.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007573",
+      "@type": "DefinedTerm",
+      "name": "HCS data analysis protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-5",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "Images of CLL samples were processed using the image analysis software Harmony (Perkin Elmer). Results were further analyzed in the statistical programming language R (R Core Team, 2018).Maximum intensity projection and gamma correction (gamma = 0.3) was applied to all images. All 3 color channels (lysosomal dye, Calcein and Hoechst) were combined to generate RGB overlays. Each image (2160 x 2160, omitting the color channel axis) was cut into 9 blocks of size 720 x 720 to speed up training and prediction. Faster R-CNN object detection model [37] with Inception v2 [38] backbone architecture was used to detect patient-derived leukemia and lymphoma cells. The two defined classes were viable and apoptotic leukemia cells. The object detection model implemented in TensorFlow 1.14 was trained for 21,000 epochs on coculture images from 5 AML samples. 5 control and 5 drug-treated well images were randomly selected from each of the five AML plates, resulting in 5 * 10 * 9 = 450 images that were split into train / test sets with 80% / 20% ratio. The average precision (AP) on the test set was 0.99 and 0.93 for viable and apoptotic leukemia cells, respectively. The area under the ROC curve (AUCROC) was 0.98 for both viable and apoptotic leukemia cells.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    }
+  ]
+}

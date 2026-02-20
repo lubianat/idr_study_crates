@@ -1,0 +1,225 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0047-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0047/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0047/",
+      "@type": "Dataset",
+      "name": "A microscopy data set of discrete spatial and temporal single molecule RNA expression in single cells",
+      "description": "We report a comprehensive single cell dataset of spatial distributions of nuclear and cytoplasmic mRNA as a function of time. We measure mRNA expression with single molecule RNA fluorescent in-situ hybridization microscopy in the yeast model organism Saccharomyces cerevisiae in tens of thousands of cells. The resulting dataset contains the discrete number of mRNA molecules in the nucleus and the cytoplasm for sixteen time points, two genes and two stress conditions each in biological duplicates or triplicates. We present these datasets as population means, fraction of cells above basal mRNA expression (ON-cells), the variance normalized by the expression mean (Fano factor), marginal probability of nuclear and cytoplasmic mRNA, and the joint probability of nuclear and cytoplasmic RNA expression. The reuse potential are in three areas: (1) development of discreate single cell modelling approaches, (2) building predictive models to study fundamental processes in transcription regulation, (3) development of single cell image processing approaches not possible with continuous, non-spatial datasets of low temporal resolution.",
+      "datePublished": "2019-01-16",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Neuert et al., CC-BY-4.0, 2019",
+      "identifier": "idr0047",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-8928-6425"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1038/s41597-019-0106-6"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_4932"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "#experiment-protocol-1-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000243"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/4498386/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-8928-6425",
+      "@type": "Person",
+      "name": "Gregor Neuert",
+      "givenName": "Gregor",
+      "familyName": "Neuert",
+      "email": "gregor.neuert@vanderbilt.edu",
+      "address": "Vanderbilt University, Nashville, TN, USA"
+    },
+    {
+      "@id": "https://doi.org/10.1038/s41597-019-0106-6",
+      "@type": "ScholarlyArticle",
+      "name": "Multiplex RNA single molecule FISH of inducible mRNAs in single yeast cells."
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_4932",
+      "@type": "Taxon",
+      "scientificName": "Saccharomyces cerevisiae"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "We performed single molecule in-situ hybridization on yeast cells that have been exposed to osmotic stress and measured mRNA expression for two genes. The goal of this study was to generate data sets for single cell transcription modeling.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_4932"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000243",
+      "@type": "DefinedTerm",
+      "name": "bright-field microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "bright-field microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000243"
+        }
+      ],
+      "description": "We performed single molecule in-situ hybridization on yeast cells that have been exposed to osmotic stress and measured mRNA expression for two genes. The goal of this study was to generate data sets for single cell transcription modeling."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "CSM, 30C 0.2M NaCl, step",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "TRANS: brightfield of the cells; DAPI: fluorescent stained DNA; TMR: TAMRA labeled oligo nucleotide probes that bind to an STL1 mRNA; CY5: Cy5 labeled oligo nucleotide probes that bind to an CTT1 mRNA; each image in a z-stack was 200nm apart; Nikon Ti Eclipse epifluorescent microscope equipped with perfect focus (Nikon), a 100x VC DIC lens (Nikon), fluorescent filters for DAPI, TMR and CY5 (Semrock), an X-cite 120 fluorescent light source (Excelitas), and an Orca Flash 4v2 CMOS camera (Hamamatsu); Image acquisition with Micro Manager; Image processing with Matlab using costume written scripts; TRANS and DAPI images have been used for cell segmentation; TMR and CY5 images have been used to detect RNA spots; The RNA pots are detected by a Laplacian of a Gaussian filter throughout the image stack; The RNA in the nucleus and cytoplasm was determined by multiplying the segmented nuclear and cell boundary mask with the filtered RNA images followed by counting the number of RNA in each compartment.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 60978914876,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "0.05546 TB"
+    }
+  ]
+}

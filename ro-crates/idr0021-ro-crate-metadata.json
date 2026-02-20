@@ -1,0 +1,229 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0021-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0021/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0021/",
+      "@type": "Dataset",
+      "name": "Subdiffraction imaging of centrosomes reveals higher-order organizational features of pericentriolar material.",
+      "description": "The centrosome is the main microtubule organization centre of animal cells. It is composed of a centriole pair surrounded by pericentriolar material (PCM). Traditionally described as amorphous, the architecture of the PCM is not known, although its intricate mode of assembly alludes to the presence of a functional, hierarchical structure. Here we used subdiffraction imaging to reveal organizational features of the PCM. Interphase PCM components adopt a concentric toroidal distribution of discrete diameter around centrioles. Positional mapping of multiple non-overlapping epitopes revealed that pericentrin (PCNT) is an elongated molecule extending away from the centriole. We find that PCM components occupy separable spatial domains within mitotic PCM that are maintained in the absence of microtubule nucleation complexes and further implicate PCNT and CDK5RAP2 in the organization and assembly of PCM. Globally, this work highlights the role of higher-order PCM organization in the regulation of centrosome assembly and function.",
+      "datePublished": "2016-05-26",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Lawo et al, CC-BY-4.0, 2016",
+      "identifier": "idr0021",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "#person-1"
+        },
+        {
+          "@id": "#person-2"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1038/ncb2591"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000332"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/1885209/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        },
+        {
+          "@id": "#file-count"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "#person-1",
+      "@type": "Person",
+      "name": "Monica Hasegan",
+      "givenName": "Monica",
+      "familyName": "Hasegan",
+      "email": "hasegan@lunenfeld.ca",
+      "address": "Lunenfeld-Tanenbaum Research Institute, Toronto, Canada"
+    },
+    {
+      "@id": "#person-2",
+      "@type": "Person",
+      "name": "Laurence Pelletier",
+      "givenName": "Laurence",
+      "familyName": "Pelletier",
+      "email": "pelletier@lunenfeld.ca",
+      "address": "Lunenfeld-Tanenbaum Research Institute, Toronto, Canada"
+    },
+    {
+      "@id": "https://doi.org/10.1038/ncb2591",
+      "@type": "ScholarlyArticle",
+      "name": "Subdiffraction imaging of centrosomes reveals higher-order organizational features of pericentriolar material."
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Images relating to Figure 1e in Lawo et al 2012. These are the 3D-SIM reconstructed, maximum intensity projected and aligned images of centriole or PCM proteins of cycling HeLa cells in interphase.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000332",
+      "@type": "DefinedTerm",
+      "name": "structured illumination microscopy (SIM)"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "structured illumination microscopy (SIM)",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000332"
+        }
+      ],
+      "description": "Images relating to Figure 1e in Lawo et al 2012. These are the 3D-SIM reconstructed, maximum intensity projected and aligned images of centriole or PCM proteins of cycling HeLa cells in interphase."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "HeLa and RPE-1 cells were grown in Dulbecco's modified Eagle's medium supplemented with 10% fetal bovine serum, 2mM l-glutamine and maintained using standard procedures.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "image aquistion and feature extraction protocol",
+      "description": "Immunofluorescence microscopy. Cells grown on coverslips were fixed in ice-cold methanol at _20 _ C for 10 min. After blocking in 0.2% gelatine from cold-water fish (Sigma) in PBS (PBS/FSG) for 15 min, coverslips were incubated with primary antibodies in blocking solution for 1h (Table in Supplementary Fig. S1g for all antibodies used). Following washes with 0.2% PBS/FSG, the cells were incubated with a 1:500 dilution of secondary antibodies for 1 h (donkey anti- mouse/rabbit/goat/sheep conjugated to Alexa 488 or Alexa 594; Molecular Probes  or donkey anti-mouse conjugated to DyLight 405, Jackson ImmunoResearch). The cells were counterstained with 1 _g ml_1 Hoechst 33342 (Sigma) to visualize chromatin. After washing with 0.2% PBS/FSG, the coverslips were mounted on glass slides by inverting them into mounting solution (ProLong Gold antifade, Molecular Probes). The samples were allowed to cure for 24-48 h. The two antibodies targeting the N terminus of PCNT (N1: Abcam ab4448 and N2: Santa Cruz N20) produced similar results in immunofluorescence microscopy, interphase ring measurements and mitotic co-localization analysis. Therefore, the two antibodies were used interchangeably as indicated. Microscopy. Super-resolution microscopy was performed on a three-dimensional (3D) structured illumination microscope (OMX v3, Applied Precision) equipped with 405, 488 and 592.5 nm diode lasers, electron multiplying CCD (charge-coupled device) cameras (Cascade II 512 _ 512, Photometrics), and a _100/1.40 NA planApochromat oil-immersion objective (Olympus). Where indicated, 3D image stacks (0.125 _m apart) were first imaged in the conventional (deconvolution) imag- ing mode, followed by the three-dimensional structured illumination microscopy (3D-SIM) imaging mode with sequential excitation of fluorophores. Photobleaching was measured to be <20% across a typical two-channel, 3D image stack with these conditions and ProLong-mounted samples. Optical transfer functions (Fourier transforms of the point spread functions) were created for each colour channel from recordings of 0.1-_m-diameter fluorescent beads. 3D-SIM image stacks were reconstructed using the softWoRx 5.0 software package (Applied Precision) with the following settings: pixel size 39.5 nm; channel-specific optical transfer functions; Wiener filter 0.002; keeping negative intensities; default value of 65 for background intensity; drift correction with respect to first angle; and custom K0 guess angles for camera positions. After reconstruction, individual channels were imported as 32-bit floating points into ImageJ (v1.46m) and maximum intensity projected. When negative values were present after projection, a constant corresponding to the absolute value of the lowest intensity was added to the value of each pixel in the image. Pixel values were then rounded to the nearest lower integer before exporting the entire dynamic range to an 8-bit TIFF and aligning the differ- ent channels using Acapella software (v2.18, Perkin Elmer). Alignment between channels was accurate to 1 pixel unit. The pixel size of our imaging set-up was 39.5 nm; thus, we achieved a Nyquist sampling ratio of _3 pixels per Airy disc with our X Y resolution being 120 nm (525 nm wavelength). Relative pixel intensities were quantitatively preserved throughout the reconstruction procedure, which is deterministic69. If images were acquired in the conventional imaging mode, they were deconvolved, 2_ resampled and maximum intensity projected using softWoRx (v5.0, Applied Precision). For final display of figures, cropped centrosomal regions (of deconvolution and 3D-SIM micrographs) were further resampled (4_ bicubic smoother)."
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "Image quantifications. All image quantifications were performed in MATLAB and details are provided in Supplementary Fig. S2. Unless specified, all measure- ments were made on 3D-SIM reconstructed, maximum intensity projected, and aligned images. Briefly, interphase toroid measurements were made by fitting a circle interactively on each image and the circle diameter was computed (Supplementary Fig. S2b). These measurements were made in cells embedded in ProLong (for its superior photostability), which when cured causes minor (<10%) shrinkage when compared with glycerol-mounted samples. However, relative differences between toroid diameters in ProLong-mounted samples were accurately preserved (data not shown). Different imaging channels and channel-specific point spread functions did not affect the diameter measurements under our experimental conditions (data not shown) and therefore we pooled toroid diameters in Figs 1 and 2 from different channels."
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 219902325,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "0.0002 TB"
+    },
+    {
+      "@id": "#file-count",
+      "@type": "QuantitativeValue",
+      "value": 414,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000189",
+      "unitText": "file count",
+      "description": "414 5D images"
+    }
+  ]
+}

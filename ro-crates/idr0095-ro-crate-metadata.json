@@ -1,0 +1,258 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0095-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0095/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0095/",
+      "@type": "Dataset",
+      "name": "Inherent regulatory asymmetry emanating from network architecture in a prevalent autoregulatory motif",
+      "description": "Predicting gene expression from DNA sequence remains a major goal in the field of gene regulation. A challenge to this goal is the connectivity of the network, whose role in altering gene expression remains unclear. Here, we study a common autoregulatory network motif, the negative single-input module, to explore the regulatory properties inherited from the motif. Using stochastic simulations and a synthetic biology approach in E. coli, we find that the TF gene and its target genes have inherent asymmetry in regulation, even when their promoters are identical; the TF gene being more repressed than its targets. The magnitude of asymmetry depends on network features such as network size and TF binding affinities. Intriguingly, asymmetry disappears when the growth rate is too fast or too slow and is most significant for typical growth conditions. These results highlight the importance of accounting for network architecture in quantitative models of gene expression.",
+      "datePublished": "2020-11-19",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Ali et al, CC-BY-4.0, 2020",
+      "identifier": "idr0095",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-7054-0059 (Md Zulfikar)"
+        },
+        {
+          "@id": "https://orcid.org/0000-0002-0349-4072 (Vinuselvi Parisutham)"
+        },
+        {
+          "@id": "https://orcid.org/0000-0002-7656-4086 (Robert Brewster)"
+        },
+        {
+          "@id": "#person-4"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.7554/eLife.56517"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "#experiment-biosample-2"
+        },
+        {
+          "@id": "#experiment-biosample-3"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_562"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-2-0"
+        },
+        {
+          "@id": "#experiment-protocol-3-0"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/11512177/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-7054-0059 (Md Zulfikar)",
+      "@type": "Person",
+      "name": "Md Zulfikar Ali",
+      "givenName": "Md Zulfikar",
+      "familyName": "Ali",
+      "email": "Zulfikar.Ali@umassmed.edu",
+      "address": "University of Massachusetts Medical School, 368 Plantation St., AS5-1043 Worcester, MA 01605"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-0349-4072 (Vinuselvi Parisutham)",
+      "@type": "Person",
+      "name": "Vinuselvi Parisutham",
+      "givenName": "Vinuselvi",
+      "familyName": "Parisutham",
+      "email": "Vinuselvi.Parisutham@umassmed.edu"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-7656-4086 (Robert Brewster)",
+      "@type": "Person",
+      "name": "Sandeep Choubey",
+      "givenName": "Sandeep",
+      "familyName": "Choubey",
+      "email": "007007.sandeep@gmail.com"
+    },
+    {
+      "@id": "#person-4",
+      "@type": "Person",
+      "name": "Robert Brewster",
+      "givenName": "Robert",
+      "familyName": "Brewster",
+      "email": "robert.brewster@umassmed.edu"
+    },
+    {
+      "@id": "https://doi.org/10.7554/eLife.56517",
+      "@type": "ScholarlyArticle",
+      "name": "Inherent regulatory asymmetry emanating from network architecture in a prevalent autoregulatory motif"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_562",
+      "@type": "Taxon",
+      "scientificName": "Escherichia coli"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Studying the asymmetry when the strength of regulation for Transcription factor is kept fixed (O1 operator) and the strength of regulation for target is altered (stronger than TF, same as TF or weaker than TF).",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_562"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000246",
+      "@type": "DefinedTerm",
+      "name": "fluorescence microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "description": "Studying the asymmetry when the strength of regulation for Transcription factor is kept fixed (O1 operator) and the strength of regulation for target is altered (stronger than TF, same as TF or weaker than TF)."
+    },
+    {
+      "@id": "#experiment-biosample-2",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Studying the asymmetry when the turnover rate of transcription factor is altered by introducing degradation tags.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_562"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-2-0",
+      "@type": "LabProtocol",
+      "name": "fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "description": "Studying the asymmetry when the turnover rate of transcription factor is altered by introducing degradation tags."
+    },
+    {
+      "@id": "#experiment-biosample-3",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": ": Studying the asymmetry between TF and target gene when the protein dilution rate is altered by growing cells in different media.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_562"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-3-0",
+      "@type": "LabProtocol",
+      "name": "fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "description": ": Studying the asymmetry between TF and target gene when the protein dilution rate is altered by growing cells in different media."
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 24739011624960,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "9.0 + 13.5 = 22.50 TB"
+    }
+  ]
+}

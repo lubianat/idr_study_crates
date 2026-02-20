@@ -1,0 +1,508 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0028-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0028/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0028/",
+      "@type": "Dataset",
+      "name": "RNAi screens for Rho GTPase regulators of cell shape and YAP/TAZ localisation in triple negative breast cancer.",
+      "description": "In order to metastasize triple negative breast cancer (TNBC) must make dynamic changes in cell shape. The shape of all eukaryotic cells is regulated by Rho GTP Exchange Factors (RhoGEFs), which activate Rho-family GTPases in response to mechanical and informational cues. In contrast, Rho GTPase-activating proteins (RhoGAPs) inhibit Rho GTPases. However, which RhoGEFs and RhoGAPS couple TNBC cell shape to changes in their environment is very poorly understood. Moreover, whether the activity of particular RhoGEFs and RhoGAPs become dysregulated as cells evolve the ability to metastasise is not clear. Towards the ultimate goal of identifying RhoGEFs and RhoGAPs that are essential for TNBC metastasis, we performed an RNAi screen to isolate RhoGEFs and RhoGAPs that contribute to the morphogenesis of the highly metastatic TNBC cell line LM2, and its less-metastatic parental cell line MDA-MB-231. For ~6 million cells from each cell line we measured 127 different features following the depletion of 142 genes. Using a linear classifier scheme we also describe the morphological heterogeneity of each gene-depleted population.",
+      "datePublished": "2016-11-01",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Pascual Vargas et al, CC-BY-4.0, 2016",
+      "identifier": "idr0028",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "#person-1"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1038/sdata.2017.18"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#screen-biosample-1"
+        },
+        {
+          "@id": "#screen-biosample-2"
+        },
+        {
+          "@id": "#screen-biosample-3"
+        },
+        {
+          "@id": "#screen-biosample-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#screen-protocol-1-0"
+        },
+        {
+          "@id": "#screen-protocol-2-0"
+        },
+        {
+          "@id": "#screen-protocol-3-0"
+        },
+        {
+          "@id": "#screen-protocol-4-0"
+        },
+        {
+          "@id": "#screen-protocol-1-1"
+        },
+        {
+          "@id": "#screen-protocol-1-2"
+        },
+        {
+          "@id": "#screen-protocol-1-3"
+        },
+        {
+          "@id": "#screen-protocol-1-4"
+        },
+        {
+          "@id": "#screen-protocol-2-1"
+        },
+        {
+          "@id": "#screen-protocol-2-2"
+        },
+        {
+          "@id": "#screen-protocol-2-3"
+        },
+        {
+          "@id": "#screen-protocol-2-4"
+        },
+        {
+          "@id": "#screen-protocol-3-1"
+        },
+        {
+          "@id": "#screen-protocol-3-2"
+        },
+        {
+          "@id": "#screen-protocol-3-3"
+        },
+        {
+          "@id": "#screen-protocol-3-4"
+        },
+        {
+          "@id": "#screen-protocol-4-1"
+        },
+        {
+          "@id": "#screen-protocol-4-2"
+        },
+        {
+          "@id": "#screen-protocol-4-3"
+        },
+        {
+          "@id": "#screen-protocol-4-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/2898590/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        },
+        {
+          "@id": "#file-count"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "#person-1",
+      "@type": "Person",
+      "name": "Patricia Pascual Vargas",
+      "givenName": "Patricia",
+      "familyName": "Pascual Vargas",
+      "email": "patricia.pascualvargas@icr.ac.uk",
+      "address": "Institute of Cancer Research, Chester Beatty Laboratories, 237 Fulham Road, SW3 6JB, London, Umited Kingdom."
+    },
+    {
+      "@id": "https://doi.org/10.1038/sdata.2017.18",
+      "@type": "ScholarlyArticle",
+      "name": "RNAi screens for Rho GTPase regulators of cell shape and YAP/TAZ localisation in triple negative breast cancer."
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#screen-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Human RhoGEF/RhoGAP siGenome siRNA screen on highly metastatic triple negative breast cancer cell line LM2",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000253",
+      "@type": "DefinedTerm",
+      "name": "spinning disk confocal microscopy"
+    },
+    {
+      "@id": "#screen-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "spinning disk confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "description": "Human RhoGEF/RhoGAP siGenome siRNA screen on highly metastatic triple negative breast cancer cell line LM2"
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "We seeded 1000 cells/well of LM2 and MDA-MB-231 cells in Dulbecco's Modified Eagle Medium (DMEM) supplemented with 10% heat-inactivated bovine serum (FBS) and 1% penicillin/streptomyocin. We seeded the cells in 384 well plates and incubated them for 48 hours at 37 C and supplemented with 5% CO2 in humidified incubators.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007571",
+      "@type": "DefinedTerm",
+      "name": "HCS library protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "Overview of RNAi screening methodology. Two human RhoGEF and RhoGAP libraries were used: siGENOME and ONTARGETPlus (Dharmacon). Both libraries were made up of SMARTpools, where each gene is targeted by a pool of 4 different siRNA strands per siRNA. Each siRNA library was arrayed across 2 black, optically clear bottom, 384 well Cell Carrier plates (PerkinElmer). Individual siRNAs were arrayed in duplicate per plate, and each plate was screened in duplicate, resulting in 4 plates per screen per cell line: 1A, 1B, 2A and 2B. Day 0: Plating siRNAs. 40nl (0.08pmol) siRNA from the siGENOME and ONTARGETPlus libraries (stock concentration of 20uM) were arrayed using the acoustic liquid handler Echo 550 prior to transfection and kept at -80 C. Day 1: Reverse transfection. Pre-stamped siRNA plates were thawed at room temperature for 30 to 60 minutes prior to use. Subsequently, 5ul of Opti-MEM Reduced Serum Media were added per well. 5 minutes later, 5ul of mix containing Opti-MEM and RNAimax reagent in a 125:1 ratio were added, and plates were spun at 1000 rpm for 1 minute. Plates were incubated at room temperature for 20 minutes, so as to allow siRNA-RNAimax complexes to form. Cells were then seeded at 1000 cells/well (30000 cells/ml) in 30ul DMEM (10% FBS, 1% penicillin/streptomyocin), resulting in a total volume of 40ul per well: 5ul Opti-MEM, 5ul of Opti-MEM and RNAimax mix (125:1) plus 30ul of cells. As positive controls LATS1 (Dharmacon cat # M-004632-00) and YAP (Dharmacon cat # L-012200-00) siRNA were introduced on columns 23 and 24 with a minimum of 4 wells per control per screen. LATS1 siRNA was used as a control for our ability to assess YAP/TAZ localisation, as in the absence of LATS1 YAP/TAZ nuclear localisation is expected to increase14 YAP siRNA was used as a control to assess our ability to monitor both YAP levels and localisation. As a control to assess our ability to transfect cells we used ECT2 siRNA (Dharmacon cat # L-006450-00, # M-006450-00) which results in multinucleate cells. YAP/TAZ nuclear translocation can be sensitive to cell density, and thus some siRNAs might affect YAP/TAZ localisation simply because they reduce cell numbers17. To account for density dependent effects cells were plated at increasing densities on columns 1, 2, 23 and 24. By performing a linear regression, or similar analysis on these samples users can identify the relationship between YAP/TAZ localisation and cell density. However, in these screens presented here no siRNAs had significant effects on cell number.  Mock transfected cells served as our negative controls, due to our previous observation that non-targeting siRNAs result in phenotypic changes (unpublished data).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007572",
+      "@type": "DefinedTerm",
+      "name": "HCS image acquistion and feature extraction protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "HCS image acquistion and feature extraction protocol",
+      "description": "Automated handling and processing of samples was performed using a Cell::Explorer robot station, using the PlateWorks software (Perkin Elmer). Cells were fixed 48 hours post transfection by addition of 40ul of warm 8% paraformaldehyde (final concentration 4%) for 15 minutes. Cells were then permeabilised with 0.1% Triton-X-100 in PBS for 10 minutes and blocked with 2% BSA for 2 hours. All antibody incubations were performed in solution containing 0.5% BSA, 0.01% Triton-X-100 dissolved in PBS in a 1:1000 ratio. Washes were carried out three fold by rinsing in PBS between steps using a Microplate Washer (Bio Tek). Antibodies were added sequentially to avoid cross-talk, with the primary antibody for YAP/TAZ being added first and left overnight. Staining procedures were continued in the following order with each antibody being left on for an hour and a half: secondary antibody for YAP/TAZ AlexaFluor 647, primary antibody for alpha tubulin, secondary antibody for alpha tubulin AlexaFluor 548, and Phalloidin 488 combined in the same step. Finally the nuclear stain Hoerscht was added for 15 minutes, upon which it was removed and 15ul of PBS were dispensed. All cells were imaged using an automated Opera HCS spinning-disk confocal microscope (Perkin Elmer) with 20x air lens. Four channels were used: Hoechst, Tubulin, YAP/TAZ, Actin. Images were processed and analysed using the Columbus 2.6.0. Software Platform (Perkin Elmer). To identify single cells, nuclei were segmented using Hoechst signal. The cytoplasm was subsequently segmented based on the identified nuclei utilising tubulin intensity. Cells touching the image border were filtered out.129 features describing intensity, morphological, and texture properties were extracted for each cell. Additionally the fraction of neighbouring cells was calculated. All features are given as the average feature value across all single cells for a given well of the screen. Moreover, using a linear classifier scheme we describe the morphological heterogeneity of each gene-depleted population.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007573",
+      "@type": "DefinedTerm",
+      "name": "HCS data analysis protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "As part of initial exploration of the data we identified siRNAs (\"hits\") that resulted in significantly different: (1) cell shapes; (2) YAP/TAZ ratio (YAP/TAZ activation); (3) and sum of nuclear region and ring region YAP/TAZ intensities normalised to nuclear area (hereafter referred to as 'total YAP/TAZ'). The sum of nuclear region and ring region YAP/TAZ intensities were normalised to nuclear area so as to account for nuclear size. Raw data obtained from the analysis performed by Columbus software for each plate, was normalised to each plate. Normalised values were then grouped per screen and then Z-scores were calculated using the control well average and standard deviation for each screen. A threshold of minimum 1.5 was used for selecting hits.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-biosample-2",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Human RhoGEF/RhoGAP OnTargetPlus siRNA screen on highly metastatic triple negative breast cancer cell line LM2",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-0",
+      "@type": "LabProtocol",
+      "name": "spinning disk confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "description": "Human RhoGEF/RhoGAP OnTargetPlus siRNA screen on highly metastatic triple negative breast cancer cell line LM2"
+    },
+    {
+      "@id": "#screen-protocol-2-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "We seeded 1000 cells/well of LM2 and MDA-MB-231 cells in Dulbecco's Modified Eagle Medium (DMEM) supplemented with 10% heat-inactivated bovine serum (FBS) and 1% penicillin/streptomyocin. We seeded the cells in 384 well plates and incubated them for 48 hours at 37 C and supplemented with 5% CO2 in humidified incubators.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-2",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "Overview of RNAi screening methodology. Two human RhoGEF and RhoGAP libraries were used: siGENOME and ONTARGETPlus (Dharmacon). Both libraries were made up of SMARTpools, where each gene is targeted by a pool of 4 different siRNA strands per siRNA. Each siRNA library was arrayed across 2 black, optically clear bottom, 384 well Cell Carrier plates (PerkinElmer). Individual siRNAs were arrayed in duplicate per plate, and each plate was screened in duplicate, resulting in 4 plates per screen per cell line: 1A, 1B, 2A and 2B. Day 0: Plating siRNAs. 40nl (0.08pmol) siRNA from the siGENOME and ONTARGETPlus libraries (stock concentration of 20uM) were arrayed using the acoustic liquid handler Echo 550 prior to transfection and kept at -80 C. Day 1: Reverse transfection. Pre-stamped siRNA plates were thawed at room temperature for 30 to 60 minutes prior to use. Subsequently, 5ul of Opti-MEM Reduced Serum Media were added per well. 5 minutes later, 5ul of mix containing Opti-MEM and RNAimax reagent in a 125:1 ratio were added, and plates were spun at 1000 rpm for 1 minute. Plates were incubated at room temperature for 20 minutes, so as to allow siRNA-RNAimax complexes to form. Cells were then seeded at 1000 cells/well (30000 cells/ml) in 30ul DMEM (10% FBS, 1% penicillin/streptomyocin), resulting in a total volume of 40ul per well: 5ul Opti-MEM, 5ul of Opti-MEM and RNAimax mix (125:1) plus 30ul of cells. As positive controls LATS1 (Dharmacon cat # M-004632-00) and YAP (Dharmacon cat # L-012200-00) siRNA were introduced on columns 23 and 24 with a minimum of 4 wells per control per screen. LATS1 siRNA was used as a control for our ability to assess YAP/TAZ localisation, as in the absence of LATS1 YAP/TAZ nuclear localisation is expected to increase14 YAP siRNA was used as a control to assess our ability to monitor both YAP levels and localisation. As a control to assess our ability to transfect cells we used ECT2 siRNA (Dharmacon cat # L-006450-00, # M-006450-00) which results in multinucleate cells. YAP/TAZ nuclear translocation can be sensitive to cell density, and thus some siRNAs might affect YAP/TAZ localisation simply because they reduce cell numbers17. To account for density dependent effects cells were plated at increasing densities on columns 1, 2, 23 and 24. By performing a linear regression, or similar analysis on these samples users can identify the relationship between YAP/TAZ localisation and cell density. However, in these screens presented here no siRNAs had significant effects on cell number.  Mock transfected cells served as our negative controls, due to our previous observation that non-targeting siRNAs result in phenotypic changes (unpublished data).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-3",
+      "@type": "LabProtocol",
+      "name": "HCS image acquistion and feature extraction protocol",
+      "description": "Automated handling and processing of samples was performed using a Cell::Explorer robot station, using the PlateWorks software (Perkin Elmer). Cells were fixed 48 hours post transfection by addition of 40ul of warm 8% paraformaldehyde (final concentration 4%) for 15 minutes. Cells were then permeabilised with 0.1% Triton-X-100 in PBS for 10 minutes and blocked with 2% BSA for 2 hours. All antibody incubations were performed in solution containing 0.5% BSA, 0.01% Triton-X-100 dissolved in PBS in a 1:1000 ratio. Washes were carried out three fold by rinsing in PBS between steps using a Microplate Washer (Bio Tek). Antibodies were added sequentially to avoid cross-talk, with the primary antibody for YAP/TAZ being added first and left overnight. Staining procedures were continued in the following order with each antibody being left on for an hour and a half: secondary antibody for YAP/TAZ AlexaFluor 647, primary antibody for alpha tubulin, secondary antibody for alpha tubulin AlexaFluor 548, and Phalloidin 488 combined in the same step. Finally the nuclear stain Hoerscht was added for 15 minutes, upon which it was removed and 15ul of PBS were dispensed. All cells were imaged using an automated Opera HCS spinning-disk confocal microscope (Perkin Elmer) with 20x air lens. Four channels were used: Hoechst, Tubulin, YAP/TAZ, Actin. Images were processed and analysed using the Columbus 2.6.0. Software Platform (Perkin Elmer). To identify single cells, nuclei were segmented using Hoechst signal. The cytoplasm was subsequently segmented based on the identified nuclei utilising tubulin intensity. Cells touching the image border were filtered out.129 features describing intensity, morphological, and texture properties were extracted for each cell. Additionally the fraction of neighbouring cells was calculated. All features are given as the average feature value across all single cells for a given well of the screen. Moreover, using a linear classifier scheme we describe the morphological heterogeneity of each gene-depleted population.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-4",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "As part of initial exploration of the data we identified siRNAs (\"hits\") that resulted in significantly different: (1) cell shapes; (2) YAP/TAZ ratio (YAP/TAZ activation); (3) and sum of nuclear region and ring region YAP/TAZ intensities normalised to nuclear area (hereafter referred to as 'total YAP/TAZ'). The sum of nuclear region and ring region YAP/TAZ intensities were normalised to nuclear area so as to account for nuclear size. Raw data obtained from the analysis performed by Columbus software for each plate, was normalised to each plate. Normalised values were then grouped per screen and then Z-scores were calculated using the control well average and standard deviation for each screen. A threshold of minimum 1.5 was used for selecting hits.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-biosample-3",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Human RhoGEF/RhoGAP siGenome siRNA screen on triple negative breast cancer cell line MDA-MB-231",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-3-0",
+      "@type": "LabProtocol",
+      "name": "spinning disk confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "description": "Human RhoGEF/RhoGAP siGenome siRNA screen on triple negative breast cancer cell line MDA-MB-231"
+    },
+    {
+      "@id": "#screen-protocol-3-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "We seeded 1000 cells/well of LM2 and MDA-MB-231 cells in Dulbecco's Modified Eagle Medium (DMEM) supplemented with 10% heat-inactivated bovine serum (FBS) and 1% penicillin/streptomyocin. We seeded the cells in 384 well plates and incubated them for 48 hours at 37 C and supplemented with 5% CO2 in humidified incubators.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-3-2",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "Overview of RNAi screening methodology. Two human RhoGEF and RhoGAP libraries were used: siGENOME and ONTARGETPlus (Dharmacon). Both libraries were made up of SMARTpools, where each gene is targeted by a pool of 4 different siRNA strands per siRNA. Each siRNA library was arrayed across 2 black, optically clear bottom, 384 well Cell Carrier plates (PerkinElmer). Individual siRNAs were arrayed in duplicate per plate, and each plate was screened in duplicate, resulting in 4 plates per screen per cell line: 1A, 1B, 2A and 2B. Day 0: Plating siRNAs. 40nl (0.08pmol) siRNA from the siGENOME and ONTARGETPlus libraries (stock concentration of 20uM) were arrayed using the acoustic liquid handler Echo 550 prior to transfection and kept at -80 C. Day 1: Reverse transfection. Pre-stamped siRNA plates were thawed at room temperature for 30 to 60 minutes prior to use. Subsequently, 5ul of Opti-MEM Reduced Serum Media were added per well. 5 minutes later, 5ul of mix containing Opti-MEM and RNAimax reagent in a 125:1 ratio were added, and plates were spun at 1000 rpm for 1 minute. Plates were incubated at room temperature for 20 minutes, so as to allow siRNA-RNAimax complexes to form. Cells were then seeded at 1000 cells/well (30000 cells/ml) in 30ul DMEM (10% FBS, 1% penicillin/streptomyocin), resulting in a total volume of 40ul per well: 5ul Opti-MEM, 5ul of Opti-MEM and RNAimax mix (125:1) plus 30ul of cells. As positive controls LATS1 (Dharmacon cat # M-004632-00) and YAP (Dharmacon cat # L-012200-00) siRNA were introduced on columns 23 and 24 with a minimum of 4 wells per control per screen. LATS1 siRNA was used as a control for our ability to assess YAP/TAZ localisation, as in the absence of LATS1 YAP/TAZ nuclear localisation is expected to increase14 YAP siRNA was used as a control to assess our ability to monitor both YAP levels and localisation. As a control to assess our ability to transfect cells we used ECT2 siRNA (Dharmacon cat # L-006450-00, # M-006450-00) which results in multinucleate cells. YAP/TAZ nuclear translocation can be sensitive to cell density, and thus some siRNAs might affect YAP/TAZ localisation simply because they reduce cell numbers17. To account for density dependent effects cells were plated at increasing densities on columns 1, 2, 23 and 24. By performing a linear regression, or similar analysis on these samples users can identify the relationship between YAP/TAZ localisation and cell density. However, in these screens presented here no siRNAs had significant effects on cell number.  Mock transfected cells served as our negative controls, due to our previous observation that non-targeting siRNAs result in phenotypic changes (unpublished data).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-3-3",
+      "@type": "LabProtocol",
+      "name": "HCS image acquistion and feature extraction protocol",
+      "description": "Automated handling and processing of samples was performed using a Cell::Explorer robot station, using the PlateWorks software (Perkin Elmer). Cells were fixed 48 hours post transfection by addition of 40ul of warm 8% paraformaldehyde (final concentration 4%) for 15 minutes. Cells were then permeabilised with 0.1% Triton-X-100 in PBS for 10 minutes and blocked with 2% BSA for 2 hours. All antibody incubations were performed in solution containing 0.5% BSA, 0.01% Triton-X-100 dissolved in PBS in a 1:1000 ratio. Washes were carried out three fold by rinsing in PBS between steps using a Microplate Washer (Bio Tek). Antibodies were added sequentially to avoid cross-talk, with the primary antibody for YAP/TAZ being added first and left overnight. Staining procedures were continued in the following order with each antibody being left on for an hour and a half: secondary antibody for YAP/TAZ AlexaFluor 647, primary antibody for alpha tubulin, secondary antibody for alpha tubulin AlexaFluor 548, and Phalloidin 488 combined in the same step. Finally the nuclear stain Hoerscht was added for 15 minutes, upon which it was removed and 15ul of PBS were dispensed. All cells were imaged using an automated Opera HCS spinning-disk confocal microscope (Perkin Elmer) with 20x air lens. Four channels were used: Hoechst, Tubulin, YAP/TAZ, Actin. Images were processed and analysed using the Columbus 2.6.0. Software Platform (Perkin Elmer). To identify single cells, nuclei were segmented using Hoechst signal. The cytoplasm was subsequently segmented based on the identified nuclei utilising tubulin intensity. Cells touching the image border were filtered out.129 features describing intensity, morphological, and texture properties were extracted for each cell. Additionally the fraction of neighbouring cells was calculated. All features are given as the average feature value across all single cells for a given well of the screen. Moreover, using a linear classifier scheme we describe the morphological heterogeneity of each gene-depleted population.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-3-4",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "As part of initial exploration of the data we identified siRNAs (\"hits\") that resulted in significantly different: (1) cell shapes; (2) YAP/TAZ ratio (YAP/TAZ activation); (3) and sum of nuclear region and ring region YAP/TAZ intensities normalised to nuclear area (hereafter referred to as 'total YAP/TAZ'). The sum of nuclear region and ring region YAP/TAZ intensities were normalised to nuclear area so as to account for nuclear size. Raw data obtained from the analysis performed by Columbus software for each plate, was normalised to each plate. Normalised values were then grouped per screen and then Z-scores were calculated using the control well average and standard deviation for each screen. A threshold of minimum 1.5 was used for selecting hits.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-biosample-4",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Human RhoGEF/RhoGAP OnTargetplus siRNA screen on triple negative breast cancer cell line MDA-MB-231",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-4-0",
+      "@type": "LabProtocol",
+      "name": "spinning disk confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "description": "Human RhoGEF/RhoGAP OnTargetplus siRNA screen on triple negative breast cancer cell line MDA-MB-231"
+    },
+    {
+      "@id": "#screen-protocol-4-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "We seeded 1000 cells/well of LM2 and MDA-MB-231 cells in Dulbecco's Modified Eagle Medium (DMEM) supplemented with 10% heat-inactivated bovine serum (FBS) and 1% penicillin/streptomyocin. We seeded the cells in 384 well plates and incubated them for 48 hours at 37 C and supplemented with 5% CO2 in humidified incubators.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-4-2",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "Overview of RNAi screening methodology. Two human RhoGEF and RhoGAP libraries were used: siGENOME and ONTARGETPlus (Dharmacon). Both libraries were made up of SMARTpools, where each gene is targeted by a pool of 4 different siRNA strands per siRNA. Each siRNA library was arrayed across 2 black, optically clear bottom, 384 well Cell Carrier plates (PerkinElmer). Individual siRNAs were arrayed in duplicate per plate, and each plate was screened in duplicate, resulting in 4 plates per screen per cell line: 1A, 1B, 2A and 2B. Day 0: Plating siRNAs. 40nl (0.08pmol) siRNA from the siGENOME and ONTARGETPlus libraries (stock concentration of 20uM) were arrayed using the acoustic liquid handler Echo 550 prior to transfection and kept at -80 C. Day 1: Reverse transfection. Pre-stamped siRNA plates were thawed at room temperature for 30 to 60 minutes prior to use. Subsequently, 5ul of Opti-MEM Reduced Serum Media were added per well. 5 minutes later, 5ul of mix containing Opti-MEM and RNAimax reagent in a 125:1 ratio were added, and plates were spun at 1000 rpm for 1 minute. Plates were incubated at room temperature for 20 minutes, so as to allow siRNA-RNAimax complexes to form. Cells were then seeded at 1000 cells/well (30000 cells/ml) in 30ul DMEM (10% FBS, 1% penicillin/streptomyocin), resulting in a total volume of 40ul per well: 5ul Opti-MEM, 5ul of Opti-MEM and RNAimax mix (125:1) plus 30ul of cells. As positive controls LATS1 (Dharmacon cat # M-004632-00) and YAP (Dharmacon cat # L-012200-00) siRNA were introduced on columns 23 and 24 with a minimum of 4 wells per control per screen. LATS1 siRNA was used as a control for our ability to assess YAP/TAZ localisation, as in the absence of LATS1 YAP/TAZ nuclear localisation is expected to increase14 YAP siRNA was used as a control to assess our ability to monitor both YAP levels and localisation. As a control to assess our ability to transfect cells we used ECT2 siRNA (Dharmacon cat # L-006450-00, # M-006450-00) which results in multinucleate cells. YAP/TAZ nuclear translocation can be sensitive to cell density, and thus some siRNAs might affect YAP/TAZ localisation simply because they reduce cell numbers17. To account for density dependent effects cells were plated at increasing densities on columns 1, 2, 23 and 24. By performing a linear regression, or similar analysis on these samples users can identify the relationship between YAP/TAZ localisation and cell density. However, in these screens presented here no siRNAs had significant effects on cell number.  Mock transfected cells served as our negative controls, due to our previous observation that non-targeting siRNAs result in phenotypic changes (unpublished data).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-4-3",
+      "@type": "LabProtocol",
+      "name": "HCS image acquistion and feature extraction protocol",
+      "description": "Automated handling and processing of samples was performed using a Cell::Explorer robot station, using the PlateWorks software (Perkin Elmer). Cells were fixed 48 hours post transfection by addition of 40ul of warm 8% paraformaldehyde (final concentration 4%) for 15 minutes. Cells were then permeabilised with 0.1% Triton-X-100 in PBS for 10 minutes and blocked with 2% BSA for 2 hours. All antibody incubations were performed in solution containing 0.5% BSA, 0.01% Triton-X-100 dissolved in PBS in a 1:1000 ratio. Washes were carried out three fold by rinsing in PBS between steps using a Microplate Washer (Bio Tek). Antibodies were added sequentially to avoid cross-talk, with the primary antibody for YAP/TAZ being added first and left overnight. Staining procedures were continued in the following order with each antibody being left on for an hour and a half: secondary antibody for YAP/TAZ AlexaFluor 647, primary antibody for alpha tubulin, secondary antibody for alpha tubulin AlexaFluor 548, and Phalloidin 488 combined in the same step. Finally the nuclear stain Hoerscht was added for 15 minutes, upon which it was removed and 15ul of PBS were dispensed. All cells were imaged using an automated Opera HCS spinning-disk confocal microscope (Perkin Elmer) with 20x air lens. Four channels were used: Hoechst, Tubulin, YAP/TAZ, Actin. Images were processed and analysed using the Columbus 2.6.0. Software Platform (Perkin Elmer). To identify single cells, nuclei were segmented using Hoechst signal. The cytoplasm was subsequently segmented based on the identified nuclei utilising tubulin intensity. Cells touching the image border were filtered out.129 features describing intensity, morphological, and texture properties were extracted for each cell. Additionally the fraction of neighbouring cells was calculated. All features are given as the average feature value across all single cells for a given well of the screen. Moreover, using a linear classifier scheme we describe the morphological heterogeneity of each gene-depleted population.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-4-4",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "As part of initial exploration of the data we identified siRNAs (\"hits\") that resulted in significantly different: (1) cell shapes; (2) YAP/TAZ ratio (YAP/TAZ activation); (3) and sum of nuclear region and ring region YAP/TAZ intensities normalised to nuclear area (hereafter referred to as 'total YAP/TAZ'). The sum of nuclear region and ring region YAP/TAZ intensities were normalised to nuclear area so as to account for nuclear size. Raw data obtained from the analysis performed by Columbus software for each plate, was normalised to each plate. Normalised values were then grouped per screen and then Z-scores were calculated using the control well average and standard deviation for each screen. A threshold of minimum 1.5 was used for selecting hits.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 197912092999,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "0.03 + 0.05 + 0.05 + 0.05 = 0.18 TB"
+    },
+    {
+      "@id": "#file-count",
+      "@type": "QuantitativeValue",
+      "value": 155232,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000189",
+      "unitText": "file count",
+      "description": "26880 + 42644 + 42700 + 43008 = 155232 5D images"
+    }
+  ]
+}

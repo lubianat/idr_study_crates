@@ -1,0 +1,256 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0001-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0001/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0001/",
+      "@type": "Dataset",
+      "name": "A genomic Multiprocess survey of machineries that control and link cell shape, microtubule organization, and cell-cycle progression.",
+      "description": "Understanding cells as integrated systems requires that we systematically decipher how single genes affect multiple biological processes and how processes are functionally linked. Here, we used multiprocess phenotypic profiling, combining high-resolution 3D confocal microscopy and multiparametric image analysis, to simultaneously survey the fission yeast genome with respect to three key cellular processes: cell shape, microtubule organization, and cell-cycle progression. We identify, validate, and functionally annotate 262 genes controlling specific aspects of those processes. Of these, 62% had not been linked to these processes before and 35% are implicated in multiple processes. Importantly, we identify a conserved role for DNA-damage responses in controlling microtubule stability. In addition, we investigate how the processes are functionally linked. We show unexpectedly that disruption of cell-cycle progression does not necessarily affect cell size control and that distinct aspects of cell shape regulate microtubules and vice versa, identifying important systems-level links across these processes.",
+      "datePublished": "2016-04-27",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Graml et al, CC-BY-4.0, 2016",
+      "identifier": "idr0001",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "#person-1"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1016/j.devcel.2014.09.005"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#screen-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_4896"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#screen-protocol-1-0"
+        },
+        {
+          "@id": "#screen-protocol-1-1"
+        },
+        {
+          "@id": "#screen-protocol-1-2"
+        },
+        {
+          "@id": "#screen-protocol-1-3"
+        },
+        {
+          "@id": "#screen-protocol-1-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/1239777/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        },
+        {
+          "@id": "#file-count"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "#person-1",
+      "@type": "Person",
+      "name": "Rafael Carazo Salas",
+      "givenName": "Rafael",
+      "familyName": "Carazo Salas",
+      "email": "rafael.carazosalas@bristol.ac.uk",
+      "address": "School of Cellular and Molecular Medicine, University of Bristol, United Kingdom"
+    },
+    {
+      "@id": "https://doi.org/10.1016/j.devcel.2014.09.005",
+      "@type": "ScholarlyArticle",
+      "name": "A genomic Multiprocess survey of machineries that control and link cell shape, microtubule organization, and cell-cycle progression."
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_4896",
+      "@type": "Taxon",
+      "scientificName": "Schizosaccharomyces pombe"
+    },
+    {
+      "@id": "#screen-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Primary screen of fission yeast knock out mutants looking for genes controlling cell shape, microtubules, and cell-cycle progression. 262 genes controlling specific aspects of those processes are identifed, validated, and functionally annotated.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_4896"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000253",
+      "@type": "DefinedTerm",
+      "name": "spinning disk confocal microscopy"
+    },
+    {
+      "@id": "#screen-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "spinning disk confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "description": "Primary screen of fission yeast knock out mutants looking for genes controlling cell shape, microtubules, and cell-cycle progression. 262 genes controlling specific aspects of those processes are identifed, validated, and functionally annotated."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "KO mutants were grown exponentially for >48 hr and imaged in 96-well micro- plates (lectin-coated glass bottom, 10 mg/well) containing Cascade Blue Dextran-labeled YES medium (0.1 mg/ml).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007571",
+      "@type": "DefinedTerm",
+      "name": "HCS library protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "The Bioneer haploid deletion (knockout, KO) library v.2 (Bioneer, Korea) was modified to generate a GFP-tubulin expressing library (Dixon et al., 2008).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007572",
+      "@type": "DefinedTerm",
+      "name": "HCS image acquistion and feature extraction protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "HCS image acquistion and feature extraction protocol",
+      "description": "Two-color images were acquired using an automated OperaLX spinning-disk confocal microscope (Perkin Elmer) with 603 water-immersion objective (NA 1.2). Six stacks of 16 z planes 0.4 mm separation were collected for each well. The entire genomic KO library was filmed twice. Customized software was used for image analysis and feature extraction.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007573",
+      "@type": "DefinedTerm",
+      "name": "HCS data analysis protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "Cell shape or microtubule hits were KO strains with a: (1) low Kolmogorov- Smirnov p value relative to a mean wild-type for any one feature, or (2) signif- icant Euclidean distance deviation from a mean wild-type across many features. Cell-cycle progression hits were KOs with the proportion of cells in greater than two 2-cell cycle stages outside the 95% bootstrap confidence interval of the corresponding wild-type stages. Genotypic and visual quality controls were done for corroboration. Hits were large-scale validated with ten times independent rescreening (see Protocol) and if picked in R35% of cases kept as high-confidence hits for analysis. Support vector machine clas- sifiers assigned eight phenotypic classes to cell shape hits. ERA rates (Kafri et al., 2013) were calculated for cell-cycle progression hits. Clustering used R, functional GO assignments DAVID, Bayesian analysis, and the R package bnlearn (Scutari, 2010).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 11061086975426,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "10.06 TB"
+    },
+    {
+      "@id": "#file-count",
+      "@type": "QuantitativeValue",
+      "value": 109728,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000189",
+      "unitText": "file count",
+      "description": "109728 5D images"
+    }
+  ]
+}

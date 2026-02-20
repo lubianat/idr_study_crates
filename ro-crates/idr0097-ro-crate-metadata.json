@@ -1,0 +1,396 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0097-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0097/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0097/",
+      "@type": "Dataset",
+      "name": "Pooled protein tagging, cellular imaging and in situ sequencing for monitoring drug action in real time",
+      "description": "The levels and subcellular localizations of proteins regulate critical aspects of many cellular processes and can become targets of therapeutic intervention. However, high-throughput methods for unbiased discovery of proteins that change localization either by shuttling between compartments, by binding larger complexes or by localizing to distinct membraneless organelles are not available. Here we describe a scalable strategy to characterize effects on protein localizations and levels in response to different perturbations. We use CRISPR-Cas9 based intron tagging to generate cell pools expressing hundreds of GFP-fusion proteins from their endogenous promoters and monitor localization changes by time-lapse microscopy followed by clone identification using in situ sequencing. We show that this strategy can characterize cellular responses to drug treatment and thus identify non-classical effects such as modulation of protein-protein interactions, condensate formation and chemical degradation.",
+      "datePublished": "2021-02-11",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Reicher et al, CC-BY-4.0, 2021",
+      "identifier": "idr0097",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "#person-1"
+        },
+        {
+          "@id": "https://orcid.org/0000-0003-0855-8343"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1101/gr.261503.120"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#screen-biosample-1"
+        },
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "#experiment-biosample-2"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#screen-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-2-0"
+        },
+        {
+          "@id": "#screen-protocol-1-1"
+        },
+        {
+          "@id": "#screen-protocol-1-2"
+        },
+        {
+          "@id": "#screen-protocol-1-3"
+        },
+        {
+          "@id": "#screen-protocol-1-4"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "#experiment-protocol-1-4"
+        },
+        {
+          "@id": "#experiment-protocol-2-1"
+        },
+        {
+          "@id": "#experiment-protocol-2-2"
+        },
+        {
+          "@id": "#experiment-protocol-2-3"
+        },
+        {
+          "@id": "#experiment-protocol-2-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/12529301/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        },
+        {
+          "@id": "#file-count"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "#person-1",
+      "@type": "Person",
+      "name": "Andreas Reicher",
+      "givenName": "Andreas",
+      "familyName": "Reicher",
+      "email": "areicher@cemm.oeaw.ac.at",
+      "address": "CeMM Research Center for Molecular Medicine, Lazarettgasse 14, AKH BT 25.3, 1090 Vienna, Austria"
+    },
+    {
+      "@id": "https://orcid.org/0000-0003-0855-8343",
+      "@type": "Person",
+      "name": "Stefan Kubicek",
+      "givenName": "Stefan",
+      "familyName": "Kubicek",
+      "email": "skubicek@cemm.oeaw.ac.at",
+      "address": "CeMM Research Center for Molecular Medicine, Lazarettgasse 14, AKH BT 25.3, 1090 Vienna, Austria"
+    },
+    {
+      "@id": "https://doi.org/10.1101/gr.261503.120",
+      "@type": "ScholarlyArticle",
+      "name": "Pooled protein tagging, cellular imaging, and in situ sequencing for monitoring drug action in real time"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#screen-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "We use CRISPR-Cas9 based intron tagging to generate cell pools expressing more than 900 GFP-fusion proteins (one GFP-tagged protein per cell). From that pool we isolated and imaged 720 clonal cell lines (one clonal cell line per well, 5 fields of view per well). Additionally, we sequenced the expressed intron-targeting sgRNA in each clone to identify the tagged protein in each clone. For 335 clonal cell lines our sgRNA amplicon sequencing strategy unambiguously identified the integrated sgRNAs indicating a single tagged protein, while in the remaining wells we could not unambiguisly identify the taged protein ('0' values in the respective columns in the library file). We then manually annotated the subcellular the subcellular protein localization of GFP-tagged protein to later compare them to antibody-based annotations available on The Human Protein Atlas.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000253",
+      "@type": "DefinedTerm",
+      "name": "spinning disk confocal microscopy"
+    },
+    {
+      "@id": "#screen-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "spinning disk confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "description": "We use CRISPR-Cas9 based intron tagging to generate cell pools expressing more than 900 GFP-fusion proteins (one GFP-tagged protein per cell). From that pool we isolated and imaged 720 clonal cell lines (one clonal cell line per well, 5 fields of view per well). Additionally, we sequenced the expressed intron-targeting sgRNA in each clone to identify the tagged protein in each clone. For 335 clonal cell lines our sgRNA amplicon sequencing strategy unambiguously identified the integrated sgRNAs indicating a single tagged protein, while in the remaining wells we could not unambiguisly identify the taged protein ('0' values in the respective columns in the library file). We then manually annotated the subcellular the subcellular protein localization of GFP-tagged protein to later compare them to antibody-based annotations available on The Human Protein Atlas."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "HAP1 cells were grown in IMDM media with 10% FBS (37C, 5% CO2).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "no treatment",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "Perkin Elmer Opera Phenix High Content Screening System, 63x water-immersion objective, confocal mode, excitation laser 488 nm, and emission filter 500-550 nm, 700 ms exposure time, raw tiff images."
+    },
+    {
+      "@id": "#screen-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "We use CRISPR-Cas9 based intron tagging to generate cell pools expressing more than 900 GFP-fusion proteins (one GFP-tagged protein per cell). For this experiment, we seeded the cell pool in a single well of 384-well plate and imaged the entire well twice (0h and 3h timepoint, 289 fields of view per timepoint, raw tiff files were merged to 9 tiles per well). Cells in the same well were then fixed and we performed in situ sequencing to identify the expressed sgRNA in each cell indicating which protein is GFP tagged (7 cycles of in situ sequencing by synthesis, 289 fields of view per cycle,  raw tiff files were merged to 9 tiles per well).",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "spinning disk confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "description": "We use CRISPR-Cas9 based intron tagging to generate cell pools expressing more than 900 GFP-fusion proteins (one GFP-tagged protein per cell). For this experiment, we seeded the cell pool in a single well of 384-well plate and imaged the entire well twice (0h and 3h timepoint, 289 fields of view per timepoint, raw tiff files were merged to 9 tiles per well). Cells in the same well were then fixed and we performed in situ sequencing to identify the expressed sgRNA in each cell indicating which protein is GFP tagged (7 cycles of in situ sequencing by synthesis, 289 fields of view per cycle,  raw tiff files were merged to 9 tiles per well)."
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "HAP1 cells were grown in IMDM media with 10% FBS (37C, 5% CO2).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "no treatment",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "Perkin Elmer Opera Phenix High Content Screening System, 63x water-immersion objective, confocal mode, live cell imaging 0h and 3h using the 'green' channel: excitation laser 488 nm, and emission filter 500-550 nm, 700 ms exposure time and 7 cycles of in situ sequencing by synthesis on fixed cells using the 'yellow' channel excitation laser: 561 nm, emission filter:570-630, 500 ms; the 'red' channel: excitation laser: 640 nm, emission filter: 650-760 nm, 500 ms and only on the seventh cycle additionally with the 'DAPI' channel. 289 fields of view per well, raw tiff images were merged to result in 9 tiff images per well."
+    },
+    {
+      "@id": "#experiment-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    },
+    {
+      "@id": "#experiment-biosample-2",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "We use CRISPR-Cas9 based intron tagging to generate cell pools expressing more than 900 GFP-fusion proteins (one GFP-tagged protein per cell). For this experiment, we seeded the cell pool in a single well of 384-well plate and treated the cells with dBET6, a BRD4-targeting PROTAC. We imaged the entire well at three timepoints (before treatment, after 1h and 3h after treatment, 289 fields of view per timepoint). Cells in the same well were then fixed and we performed in situ sequencing to identify the expressed sgRNA in each cell indicating which protein is GFP tagged (8 cycles of in situ sequencing by synthesis, 289 fields of view per cycle).",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-2-0",
+      "@type": "LabProtocol",
+      "name": "spinning disk confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "description": "We use CRISPR-Cas9 based intron tagging to generate cell pools expressing more than 900 GFP-fusion proteins (one GFP-tagged protein per cell). For this experiment, we seeded the cell pool in a single well of 384-well plate and treated the cells with dBET6, a BRD4-targeting PROTAC. We imaged the entire well at three timepoints (before treatment, after 1h and 3h after treatment, 289 fields of view per timepoint). Cells in the same well were then fixed and we performed in situ sequencing to identify the expressed sgRNA in each cell indicating which protein is GFP tagged (8 cycles of in situ sequencing by synthesis, 289 fields of view per cycle)."
+    },
+    {
+      "@id": "#experiment-protocol-2-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "HAP1 cells were grown in IMDM media with 10% FBS (37C, 5% CO2).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-2-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "Cells were treated with 100 nM dBET6.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-2-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "Perkin Elmer Opera Phenix High Content Screening System, 63x water-immersion objective, confocal mode, live cell imaging 0h and 3h using the 'green' channel: excitation laser 488 nm, and emission filter 500-550 nm, 700 ms exposure time and 7 cycles of in situ sequencing by synthesis on fixed cells using the 'yellow' channel excitation laser: 561 nm, emission filter:570-630, 500 ms; the 'red' channel: excitation laser: 640 nm, emission filter: 650-760 nm, 500 ms and only on the seventh cycle additionally with the 'DAPI' channel. 289 fields of view per well, raw tiff images were merged to result in 9 tiff images per well."
+    },
+    {
+      "@id": "#experiment-protocol-2-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 73887181386,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "0.0058 + 0.0104 + 0.051 = 0.07 TB"
+    },
+    {
+      "@id": "#file-count",
+      "@type": "QuantitativeValue",
+      "value": 3642,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000189",
+      "unitText": "file count",
+      "description": "3600 + 9 + 33 = 3642 5D images"
+    }
+  ]
+}

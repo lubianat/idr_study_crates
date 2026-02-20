@@ -1,0 +1,295 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0009-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0009/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0009/",
+      "@type": "Dataset",
+      "name": "Genome-wide RNAi screening identifies human proteins with a regulatory function in the early secretory pathway",
+      "description": "The secretory pathway in mammalian cells has evolved to facilitate the transfer of cargo molecules to internal and cell surface membranes. Use of automated microscopy-based genome-wide RNA interference screens in cultured human cells allowed us to identify 554 proteins influencing secretion. Cloning, fluorescent-tagging and subcellular localization analysis of 179 of these proteins revealed that more than two-thirds localize to either the cytoplasm or membranes of the secretory and endocytic pathways. The depletion of 143 of them resulted in perturbations in the organization of the COPII and/or COPI vesicular coat complexes of the early secretory pathway, or the morphology of the Golgi complex. Network analyses revealed a so far unappreciated link between early secretory pathway function, small GTP-binding protein regulation, actin cytoskeleton organization and EGF-receptor-mediated signalling. This work provides an important resource for an integrative understanding of global cellular organization and regulation of the secretory pathway in mammalian cells.",
+      "datePublished": "2016-05-26",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Simpson et al, CC-BY-4.0, 2016",
+      "identifier": "idr0009",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "#person-1"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1038/ncb2510"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#screen-biosample-1"
+        },
+        {
+          "@id": "#screen-biosample-2"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#screen-protocol-1-0"
+        },
+        {
+          "@id": "#screen-protocol-2-0"
+        },
+        {
+          "@id": "#screen-protocol-1-1"
+        },
+        {
+          "@id": "#screen-protocol-1-2"
+        },
+        {
+          "@id": "#screen-protocol-1-3"
+        },
+        {
+          "@id": "#screen-protocol-1-4"
+        },
+        {
+          "@id": "#screen-protocol-2-1"
+        },
+        {
+          "@id": "#screen-protocol-2-2"
+        },
+        {
+          "@id": "#screen-protocol-2-3"
+        },
+        {
+          "@id": "#screen-protocol-2-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/1313778/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        },
+        {
+          "@id": "#file-count"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "#person-1",
+      "@type": "Person",
+      "name": "Jeremy Simpson",
+      "givenName": "Jeremy",
+      "familyName": "Simpson",
+      "email": "jeremy.simpson@ucd.ie",
+      "address": "School of Biology & Environmental Science, University College Dublin, Ireland"
+    },
+    {
+      "@id": "https://doi.org/10.1038/ncb2510",
+      "@type": "ScholarlyArticle",
+      "name": "Genome-wide RNAi screening identifies human proteins with a regulatory function in the early secretory pathway."
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#screen-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "This screen uses a genome-wide library of over 51,000 small interfering RNAs (siRNAs) targeting approximately 22,000 human genes for interference with ER-to-plasma membrane transport of the well-characterized secretory cargo membrane protein tsO45G.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000246",
+      "@type": "DefinedTerm",
+      "name": "fluorescence microscopy"
+    },
+    {
+      "@id": "#screen-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "description": "This screen uses a genome-wide library of over 51,000 small interfering RNAs (siRNAs) targeting approximately 22,000 human genes for interference with ER-to-plasma membrane transport of the well-characterized secretory cargo membrane protein tsO45G."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "A strongly adherent HeLa cell line isolate 'Kyoto' was a gift from Shuh Narumiya (Kyoto University, Japan). HeLa Kyoto cells were maintained in DMEM supplemented with 10% foetal calf serum (FCS), 2 mM glutamine and penicillin/streptomycin. Recombinant adenoviruses expressing CFP-tagged tsO45G have been previously described (Keller et al., 2001), and were prepared from infected 293 cells (ATCC CRL-1573) by caesium chloride centrifugation. HeLa Kyoto cells (70,000-130,000 cells) were plated in complete DMEM medium in a total volume of 1.5 ml in each LabTek chamber. Cells were allowed to adhere and take up the siRNA oligonucleotides for 32 h prior to the beginning of the assay. At this time, cells were infected with recombinant adenoviruses encoding CFP-tsO45G. After a 1 h infection, incubation at 37ʡC, the arrays were transferred to the restrictive temperature of 39.5C for 16 h to accumulate the tsO45G in the ER. A wave of secretion was induced (for between 45 and 90 min) at 32ʡC in the presence of 100 ug/ml cycloheximide to prevent further protein synthesis. Cells were fixed with 3% paraformaldehyde in PBS for 20 min, then immunostained for cell surface tsO45G using standard methods. Cells were stored at 4ʡC in PBS/0.01% NaN3 prior to transfer to PBS for staining with DAPI and image acquisition. This total time of downregulation (50 h) had previously been determined to be optimal for our positive controls (i.e., sufficiently long to cause a strong phenotype, but not induce apoptosis, and therefore was used in all experiments, see Erfle et al., 2004).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "All siRNAs used in the primary screen were from Ambion, and in the validation and secondary screens from Ambion and Qiagen. These libraries are further described elsewhere12. The genome-wide library was arrayed into a total of 149 chambered coverglass slides at a density of 384 siRNA spots per chamber. All primary screen chambers contained between 1 and 4 positive control siRNAs against the _-COP (COPB1) subunit of the vesicular coat protein complex COPI, in addition to 7-8 non-silencing negative control siRNAs, all previously described. The siRNAs were mapped to Ensembl version e!61."
+    },
+    {
+      "@id": "#screen-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "HCS image acquistion and feature extraction protocol",
+      "description": "All images were acquired on a fully automated Olympus ScanR screening microscope. At the end of each experiment the cell plating density of every chamber was visually assessed, and those arrays showing obvious edge or cell density effects were excluded from quantification"
+    },
+    {
+      "@id": "#screen-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "Secretory transport was calculated from individual cells by determining the ratio of cell surface tsO45G to total tsO45G. Mean values per spot were converted into deviation scores, with values >0.75-1.00 indicating mild reduction of cell surface tsO45G delivery, values >1.0 indicating strong reduction of cell surface tsO45G delivery, and values <_1 indicating enhanced cell surface tsO45G delivery. All other values were considered as no effect. Secretion deviation values in the validation screen were determined from the formula (Tcontrol_Texperiment)/2_s.e.m.control, where T is the ratio of cell surface tsO45G to total tsO45G. Quality control thresholds were applied to the data from the primary and validation screens as follows. A minimum of 15 cells per spot needed to be recognized by the analysis software if the spot was to be considered valid and used for quantification. A minimum of 50 cells from all replicate chambers was the minimum number for consideration of the siRNA giving reliable information. The siRNAs were considered as inhibitory to secretion only when >=50% of the replicates (that is 2/2, 2/3, 3/3, 2/4, 3/4, 4/4, 3/5, 4/5, 5/5 and so on) had matching deviation values (0.75-1.00 or >1.0). Data from siRNAs mapping to multiple genes, or showing any mismatches, were removed from the analysis as part of the quality control process."
+    },
+    {
+      "@id": "#screen-biosample-2",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "This validation screen focused on those 1,531 genes that caused the most significant inhibition of secretion on knockdown. Using independent siRNA sequences targeting these genes, we tested for their interference with tsO45G transport.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-0",
+      "@type": "LabProtocol",
+      "name": "fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "description": "This validation screen focused on those 1,531 genes that caused the most significant inhibition of secretion on knockdown. Using independent siRNA sequences targeting these genes, we tested for their interference with tsO45G transport."
+    },
+    {
+      "@id": "#screen-protocol-2-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "A strongly adherent HeLa cell line isolate 'Kyoto' was a gift from Shuh Narumiya (Kyoto University, Japan). HeLa Kyoto cells were maintained in DMEM supplemented with 10% foetal calf serum (FCS), 2 mM glutamine and penicillin/streptomycin. Recombinant adenoviruses expressing CFP-tagged tsO45G have been previously described (Keller et al., 2001), and were prepared from infected 293 cells (ATCC CRL-1573) by caesium chloride centrifugation. HeLa Kyoto cells (70,000-130,000 cells) were plated in complete DMEM medium in a total volume of 1.5 ml in each LabTek chamber. Cells were allowed to adhere and take up the siRNA oligonucleotides for 32 h prior to the beginning of the assay. At this time, cells were infected with recombinant adenoviruses encoding CFP-tsO45G. After a 1 h infection, incubation at 37ʡC, the arrays were transferred to the restrictive temperature of 39.5ʡC for 16 h to accumulate the tsO45G in the ER. A wave of secretion was induced (for between 45 and 90 min) at 32ʡC in the presence of 100 ug/ml cycloheximide to prevent further protein synthesis. Cells were fixed with 3% paraformaldehyde in PBS for 20 min, then immunostained for cell surface tsO45G using standard methods. Cells were stored at 4ʡC in PBS/0.01% NaN3 prior to transfer to PBS for staining with DAPI and image acquisition. This total time of downregulation (50 h) had previously been determined to be optimal for our positive controls (i.e., sufficiently long to cause a strong phenotype, but not induce apoptosis, and therefore was used in all experiments, see Erfle et al., 2004).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-2",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "All siRNAs used in the primary screen were from Ambion, and in the validation and secondary screens from Ambion and Qiagen. These libraries are further described elsewhere12. The genome-wide library was arrayed into a total of 149 chambered coverglass slides at a density of 384 siRNA spots per chamber. The validation screen arrays contained a total of 44 controls, as follows. 16 spots of negative control siRNA, 4 spots of siRNA against INCENP to mark the extreme corners of the arrays, 8 spots of siRNA against COPB1, 8 spots of siRNA against GOSR1 (Ambion ID 111531) and 8 spots of siRNA against RAB1A (Ambion ID 120368; refs 11,12,48). The siRNAs were mapped to Ensembl version e!61. Data from siRNAs mapping to multiple genes, or showing any mismatches, were removed from the analysis as part of the quality control process."
+    },
+    {
+      "@id": "#screen-protocol-2-3",
+      "@type": "LabProtocol",
+      "name": "HCS image acquistion and feature extraction protocol",
+      "description": "All images were acquired on a fully automated Olympus ScanR screening microscope. At the end of each experiment the cell plating density of every chamber was visually assessed, and those arrays showing obvious edge or cell density effects were excluded from quantification"
+    },
+    {
+      "@id": "#screen-protocol-2-4",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "Secretion deviation values in the validation screen were determined from the formula (Tcontrol _ Texperiment )/2 _ s.e.m.control , where T is the ratio of cell surface tsO45G to total tsO45G. Quality control thresholds were applied to the data from the primary and validation screens as follows. A minimum of 15 cells per spot needed to be recognized by the analysis software if the spot was to be considered valid and used for quantification. A minimum of 50 cells from all replicate chambers was the minimum number for consideration of the siRNA giving reliable information. The siRNAs were considered as inhibitory to secretion only when >= 50% of the replicates (that is 2/2, 2/3, 3/3, 2/4, 3/4, 4/4, 3/5, 4/5, 5/5 and so on) had matching deviation values (0.75-1.00 or >1.0)."
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 3573412790272,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "3.04 + 0.21 = 3.25 TB"
+    },
+    {
+      "@id": "#file-count",
+      "@type": "QuantitativeValue",
+      "value": 397056,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000189",
+      "unitText": "file count",
+      "description": "370176 + 26880 = 397056 5D images"
+    }
+  ]
+}

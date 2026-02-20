@@ -1,0 +1,236 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0110-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0110/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0110/",
+      "@type": "Dataset",
+      "name": "Time-resolved structured illumination microscopy reveals key principles of Xist RNA spreading",
+      "description": "Xist RNA directs the process of X-chromosome inactivation in mammals by spreading in cis along the chromosome from which it is transcribed and recruiting chromatin modifiers to silence gene transcription. To elucidate mechanisms of Xist RNA cis-confinement, we established a sequential dual-color labeling, super-resolution imaging approach to trace individual Xist RNA molecules over time, enabling us to define fundamental parameters of spreading. We demonstrate a feedback mechanism linking Xist RNA synthesis and degradation, and an unexpected physical coupling between preceding and newly synthesized Xist RNA molecules. Additionally, we find that the protein SPEN, a key factor for Xist-mediated gene-silencing, has a distinct function in Xist RNA localization, stability and coupling behavior. Our results provide important insights towards understanding the unique dynamic properties of Xist RNA.",
+      "datePublished": "2021-08-03",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Rodermund et al, CC-BY-4.0, 2021",
+      "identifier": "idr0110",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-3233-7885"
+        },
+        {
+          "@id": "#person-2"
+        },
+        {
+          "@id": "#person-3"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1126/science.abe7500"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "#experiment-protocol-1-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000332"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/13422206/"
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-3233-7885",
+      "@type": "Person",
+      "name": "Lisa Rodermund",
+      "givenName": "Lisa",
+      "familyName": "Rodermund",
+      "email": "lisa.rodermund@gmail.com",
+      "address": "Department of Biochemistry, University of Oxford, South Parks Rd, Oxford, OX1 3QU"
+    },
+    {
+      "@id": "#person-2",
+      "@type": "Person",
+      "name": "Lothar Schermelleh",
+      "givenName": "Lothar",
+      "familyName": "Schermelleh",
+      "email": "lothar.schermelleh@bioch.ox.ac.uk",
+      "address": "Department of Biochemistry, University of Oxford, South Parks Rd, Oxford, OX1 3QU"
+    },
+    {
+      "@id": "#person-3",
+      "@type": "Person",
+      "name": "Neil Brockdorff",
+      "givenName": "Neil",
+      "familyName": "Brockdorff",
+      "email": "neil.brockdorff@bioch.ox.ac.uk",
+      "address": "Department of Biochemistry, University of Oxford, South Parks Rd, Oxford, OX1 3QU"
+    },
+    {
+      "@id": "https://doi.org/10.1126/science.abe7500",
+      "@type": "ScholarlyArticle",
+      "name": "Time-resolved structured illumination microscopy reveals key principles of Xist RNA spreading"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090",
+      "@type": "Taxon",
+      "scientificName": "Mus musculus"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "In this project, XX mESCs with inducible endogenous Xist RNA, as well as XY mESCs with inducible autosomal transgenic Xist RNA, were used to study the localisation, dynamics and spreading behaviour of Xist RNA during the early phases of XCI. The Bgl-stem-loop labelling system was used in this project to label endogenous Xist RNA. A transgene encoding the BglG-Halo fusion protein was engineered to be doxycycline inducible. Later, different mutant cell lines were created using CRISPR/Cas9 genome editing. Considering the technical difficulties associated with live imaging of Xist foci, a different approach to studying Xist RNA dynamics was developed: RNA-SPLIT (Sequential Pulse Localisation Imaging over Time). In order to add temporal information one can make use of the fact that HaloTag technology enables addition of cell permeable ligands with different properties to cells, with excess ligand being washed out prior to fixation. Specifically, instead of a single HaloTag ligand, two different wavelength emitting HaloTag ligands were added sequentially after induction with doxycycline. Cells were induced for 1.5 h and 24 h before the start of the experiment to assess Xist localisation and dynamics in expansion and steady state respectively. Subsequent addition of the HaloTag ligands allowed for splitting the RNA into two differently labelled pools, pre-synthesised RNA labelled with Halo ligand 1 and newly synthesised RNA labelled with Halo ligand 2. This novel technique is especially powerful because variations of the set up can be used to study different aspects of RNA dynamics and localisation, and it can potentially be applied to any RNA and any stem-loop labelling system. Firstly, localisation of Xist to the X chromosome territory at the different stages of XCI and in different cellular backgrounds can be assessed by measuring the molecule density and volume of spread. Moreover, one can determine RNA turnover by scoring the number of pre-synthesised RNA molecules over time, while gradually increasing the staining time of newly synthesised RNA molecules for up to 4 h. Full turnover of the RNA can be assumed when no pre-synthesised RNA signal can be detected anymore. Turnover rates can be complemented by analysis of RNA transcription dynamics, quantified by scoring the number of newly synthesised RNA molecules while gradually increasing the staining time of newly synthesised RNA in 10 min intervals. Finally, RNA-SPLIT can be used to assess the localisation of newly synthesised RNA with respect to pre-synthesised RNA by measuring the distance of each newly synthesised molecule to the nearest pre-synthesised molecule. Image processing and analysis is critical for successful RNA-SPLIT experiments. After image acquisition with 3D-SIM, the data is reconstructed and undergoes quality checks through the SIMcheck plugin. Artefacts are reduced by generating modulation contrast maps and applying suitable and consistent filters to discard low modulation contrast signal. Then, background stemming from free diffusing BglG-Halo is discarded by manual thresholding. Channels are aligned using the open-source software package Chromagnon and EdU calibration data acquired on the date of image acquisition. In the final step of image processing, Xist territories are manually cropped. The volume of the cropped Xist territory gives first insights into the spreading volume of the RNA. To analyse the fully processed images, the signal is masked and the centroids of each molecule are determined by a Watershed algorithm. This allows for the counting of pre-synthesised and newly synthesised molecules at different time points and under various experimental conditions. RNA turnover and transcription dynamics can be deduced from this information. The localisation of each molecule in 3D determined by the Watershed algorithm can then be used to conduct NNA, where the distance of each newly synthesised molecule to its nearest neighbouring pre-synthesised molecule is measured. Variations of NNA, where distances between all RNA molecules or between the approximate transcription site and newly synthesised RNA are determined, can be used to examine RNA density and spreading behaviour. The development of this new tool for studying RNA localisation and dynamics allows for the addition of temporal resolution to super-resolved localisation microscopy data without the need for live cell imaging.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000332",
+      "@type": "DefinedTerm",
+      "name": "structured illumination microscopy (SIM)"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "structured illumination microscopy (SIM)",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000332"
+        }
+      ],
+      "description": "In this project, XX mESCs with inducible endogenous Xist RNA, as well as XY mESCs with inducible autosomal transgenic Xist RNA, were used to study the localisation, dynamics and spreading behaviour of Xist RNA during the early phases of XCI. The Bgl-stem-loop labelling system was used in this project to label endogenous Xist RNA. A transgene encoding the BglG-Halo fusion protein was engineered to be doxycycline inducible. Later, different mutant cell lines were created using CRISPR/Cas9 genome editing. Considering the technical difficulties associated with live imaging of Xist foci, a different approach to studying Xist RNA dynamics was developed: RNA-SPLIT (Sequential Pulse Localisation Imaging over Time). In order to add temporal information one can make use of the fact that HaloTag technology enables addition of cell permeable ligands with different properties to cells, with excess ligand being washed out prior to fixation. Specifically, instead of a single HaloTag ligand, two different wavelength emitting HaloTag ligands were added sequentially after induction with doxycycline. Cells were induced for 1.5 h and 24 h before the start of the experiment to assess Xist localisation and dynamics in expansion and steady state respectively. Subsequent addition of the HaloTag ligands allowed for splitting the RNA into two differently labelled pools, pre-synthesised RNA labelled with Halo ligand 1 and newly synthesised RNA labelled with Halo ligand 2. This novel technique is especially powerful because variations of the set up can be used to study different aspects of RNA dynamics and localisation, and it can potentially be applied to any RNA and any stem-loop labelling system. Firstly, localisation of Xist to the X chromosome territory at the different stages of XCI and in different cellular backgrounds can be assessed by measuring the molecule density and volume of spread. Moreover, one can determine RNA turnover by scoring the number of pre-synthesised RNA molecules over time, while gradually increasing the staining time of newly synthesised RNA molecules for up to 4 h. Full turnover of the RNA can be assumed when no pre-synthesised RNA signal can be detected anymore. Turnover rates can be complemented by analysis of RNA transcription dynamics, quantified by scoring the number of newly synthesised RNA molecules while gradually increasing the staining time of newly synthesised RNA in 10 min intervals. Finally, RNA-SPLIT can be used to assess the localisation of newly synthesised RNA with respect to pre-synthesised RNA by measuring the distance of each newly synthesised molecule to the nearest pre-synthesised molecule. Image processing and analysis is critical for successful RNA-SPLIT experiments. After image acquisition with 3D-SIM, the data is reconstructed and undergoes quality checks through the SIMcheck plugin. Artefacts are reduced by generating modulation contrast maps and applying suitable and consistent filters to discard low modulation contrast signal. Then, background stemming from free diffusing BglG-Halo is discarded by manual thresholding. Channels are aligned using the open-source software package Chromagnon and EdU calibration data acquired on the date of image acquisition. In the final step of image processing, Xist territories are manually cropped. The volume of the cropped Xist territory gives first insights into the spreading volume of the RNA. To analyse the fully processed images, the signal is masked and the centroids of each molecule are determined by a Watershed algorithm. This allows for the counting of pre-synthesised and newly synthesised molecules at different time points and under various experimental conditions. RNA turnover and transcription dynamics can be deduced from this information. The localisation of each molecule in 3D determined by the Watershed algorithm can then be used to conduct NNA, where the distance of each newly synthesised molecule to its nearest neighbouring pre-synthesised molecule is measured. Variations of NNA, where distances between all RNA molecules or between the approximate transcription site and newly synthesised RNA are determined, can be used to examine RNA density and spreading behaviour. The development of this new tool for studying RNA localisation and dynamics allows for the addition of temporal resolution to super-resolved localisation microscopy data without the need for live cell imaging."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "growth protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "treatment protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    }
+  ]
+}

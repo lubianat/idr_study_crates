@@ -1,0 +1,352 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0140-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0140/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0140/",
+      "@type": "Dataset",
+      "name": "Phenotypic Heterogeneity in the DNA Replication Stress Response Revealed by Quantitative Protein Dynamics Measurements",
+      "description": "Cells respond to environmental stressors by activating programs that result in protein abundance and localization changes. The DNA damage and DNA replication stress responses have been heavily studied and provide exemplars of the roles of protein localization and abundance regulation in proper cellular stress response. While vast amounts of data have been collected to describe the dynamics of yeast proteins in response to numerous external stresses, few have assessed and compared both protein localization kinetics and phenotypic heterogeneity in the same context, particularly during DNA replication stress. We developed a robust yet simple quantification scheme to identify and measure protein localization change events (re-localization) and applied it to the 314 yeast proteins whose subcellular distribution changes following DNA replication stress. We captured different kinetics of protein re-localization, identified proteins with localization changes that were not detected in previous analyses, and defined the extent of heterogeneity in stress-induced protein re-localization. Our imaging platforms and analysis pipeline enables efficient measurements of protein localization phenotypes for single cells over time and will guide future work in elucidating the biological parameters that govern cellular heterogeneity.",
+      "datePublished": "2022-10-31",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Ho et al, CC-BY-4.0, 2022",
+      "identifier": "idr0140",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-9002-5003"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#screen-biosample-1"
+        },
+        {
+          "@id": "#screen-biosample-2"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_4932"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#screen-protocol-1-0"
+        },
+        {
+          "@id": "#screen-protocol-2-0"
+        },
+        {
+          "@id": "#screen-protocol-1-1"
+        },
+        {
+          "@id": "#screen-protocol-1-2"
+        },
+        {
+          "@id": "#screen-protocol-1-3"
+        },
+        {
+          "@id": "#screen-protocol-1-4"
+        },
+        {
+          "@id": "#screen-protocol-1-5"
+        },
+        {
+          "@id": "#screen-protocol-2-1"
+        },
+        {
+          "@id": "#screen-protocol-2-2"
+        },
+        {
+          "@id": "#screen-protocol-2-3"
+        },
+        {
+          "@id": "#screen-protocol-2-4"
+        },
+        {
+          "@id": "#screen-protocol-2-5"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/14249830/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-9002-5003",
+      "@type": "Person",
+      "name": "Grant Brown",
+      "givenName": "Grant",
+      "familyName": "Brown",
+      "email": "grant.brown@utoronto.ca",
+      "address": "Department of Biochemistry, Donnelly CCBR, 160 College Street, Toronto, Ontario, Canada"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_4932",
+      "@type": "Taxon",
+      "scientificName": "Saccharomyces cerevisiae"
+    },
+    {
+      "@id": "#screen-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "High-throughput confocal microscope screen of protein localization screen for 314 yeast strains expressing unique GFP-tagged proteins treated with 200mM HU, imaged at 7 time points over 4 hours (0, 30, 60, 90, 120, 180, and 240 minutes).",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_4932"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000253",
+      "@type": "DefinedTerm",
+      "name": "spinning disk confocal microscopy"
+    },
+    {
+      "@id": "#screen-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "spinning disk confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "description": "High-throughput confocal microscope screen of protein localization screen for 314 yeast strains expressing unique GFP-tagged proteins treated with 200mM HU, imaged at 7 time points over 4 hours (0, 30, 60, 90, 120, 180, and 240 minutes)."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "The 322 GFP-tagged strains were grown to mid- logarithmic phase in liquid Synthetic Defined (SD) media and imaged on a 384-well imaging plate (PerkinElmer 384 Cell Carrier Ultra, 6057300) in a high-throughput confocal microscope (PerkinElmer Opera High-Content Screening System) as previously described. Briefly, cells were treated with 200mM HU or 0.03% MMS and imaged at 7 timepoints over 4 hours (0, 30, 60, 90, 120, 180, and 240 minutes). The addition of drug to each column of the plate was staggered by 1 minute to compensate for the imaging time of the Opera microscope. For each time point, 4 different regions of the well were imaged. Both GFP and RFP was imaged on the microscope with 800 ms exposure. Cells expressed a constitutively cytoplasmic tdTomato fluorophore, and whole cell image segmentation was conducted using CellProfiler based on tdTomato signal. Dead cells displaying high GFP fluorescence were removed from the analysis. An automated quantification scheme was developed using custom written Python scripts to acquire measurements of GFP pixel intensities for each individual cell from all obtained images.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "treatment protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007571",
+      "@type": "DefinedTerm",
+      "name": "HCS library protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "HCS library protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007572",
+      "@type": "DefinedTerm",
+      "name": "HCS image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "HCS image acquisition and feature extraction protocol",
+      "description": "HCS image acquisition and feature extraction protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007573",
+      "@type": "DefinedTerm",
+      "name": "HCS data analysis protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-5",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "HCS data analysis protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-biosample-2",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "High-throughput confocal microscope screen of protein localization screen for 314 yeast strains expressing unique GFP-tagged proteins treated with 0.03% MMS, imaged at 7 time points over 4 hours (0, 30, 60, 90, 120, 180, and 240 minutes).",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_4932"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-0",
+      "@type": "LabProtocol",
+      "name": "spinning disk confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "description": "High-throughput confocal microscope screen of protein localization screen for 314 yeast strains expressing unique GFP-tagged proteins treated with 0.03% MMS, imaged at 7 time points over 4 hours (0, 30, 60, 90, 120, 180, and 240 minutes)."
+    },
+    {
+      "@id": "#screen-protocol-2-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "The 322 GFP-tagged strains were grown to mid- logarithmic phase in liquid Synthetic Defined (SD) media and imaged on a 384-well imaging plate (PerkinElmer 384 Cell Carrier Ultra, 6057300) in a high-throughput confocal microscope (PerkinElmer Opera High-Content Screening System) as previously described. Briefly, cells were treated with 200mM HU or 0.03% MMS and imaged at 7 timepoints over 4 hours (0, 30, 60, 90, 120, 180, and 240 minutes). The addition of drug to each column of the plate was staggered by 1 minute to compensate for the imaging time of the Opera microscope. For each time point, 4 different regions of the well were imaged. Both GFP and RFP was imaged on the microscope with 800 ms exposure. Cells expressed a constitutively cytoplasmic tdTomato fluorophore, and whole cell image segmentation was conducted using CellProfiler based on tdTomato signal. Dead cells displaying high GFP fluorescence were removed from the analysis. An automated quantification scheme was developed using custom written Python scripts to acquire measurements of GFP pixel intensities for each individual cell from all obtained images.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "treatment protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-3",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "HCS library protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-4",
+      "@type": "LabProtocol",
+      "name": "HCS image acquisition and feature extraction protocol",
+      "description": "HCS image acquisition and feature extraction protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-5",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "HCS data analysis protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 134734154867,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "0.06127 + 0.06127 = 0.12 TB"
+    }
+  ]
+}

@@ -1,0 +1,245 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0084-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0084/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0084/",
+      "@type": "Dataset",
+      "name": "Activation of alpha-globin transcription in primary mouse erythroid progenitors",
+      "description": "Mammalian gene expression patterns are controlled by regulatory elements, which interact within Topologically Associating Domains (TADs). The relationship between activation of regulatory elements, formation of structural chromatin interactions and gene expression during development is unclear. Here, we present Tiled-C, a low-input Chromosome Conformation Capture (3C) technique. We use this approach to study chromatin architecture at high spatial and temporal resolution through in vivo mouse erythroid differentiation. In this dataset, we measure nascent transcription of the mouse alpha-globin genes by FISH using oligonucleotide probes that are specific for the alpha-globin introns. We measure the initial stages of alpha-globin upregulation in three subsets of early erythroid progenitors (S0-low, S0-medium and S1) and compare these to the levels observed in a positive control (mature, Ter119+ mouse erythroblasts) and in two negative controls (mouse primary brain, which does not express alpha-globin, and a no primary antibody control).",
+      "datePublished": "2020-07-22",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Oudelaar et al, CC-BY-4.0, 2020",
+      "identifier": "idr0084",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0003-1076-5595"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1038/s41467-020-16598-7"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "#experiment-protocol-1-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/9842150/"
+      ],
+      "size": [
+        {
+          "@id": "#file-count"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0003-1076-5595",
+      "@type": "Person",
+      "name": "Robert Beagrie",
+      "givenName": "Robert",
+      "familyName": "Beagrie",
+      "email": "robert.beagrie@ndcls.ox.ac.uk",
+      "address": "MRC Weatherall Institute of Molecular Medicine, Oxford University, UK"
+    },
+    {
+      "@id": "https://doi.org/10.1038/s41467-020-16598-7",
+      "@type": "ScholarlyArticle",
+      "name": "Dynamics of the 4D genome during in vivo mouse erythroid lineage specification and differentiation"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090",
+      "@type": "Taxon",
+      "scientificName": "Mus musculus"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "We performed RNA-FISH assays to determine the proportion of cells at three different stages of early erythroid differentiation that display nascent transcription of alpha-globin genes.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000246",
+      "@type": "DefinedTerm",
+      "name": "fluorescence microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "description": "We performed RNA-FISH assays to determine the proportion of cells at three different stages of early erythroid differentiation that display nascent transcription of alpha-globin genes."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0005518",
+      "@type": "DefinedTerm",
+      "name": "sample collection protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "sample collection protocol",
+      "description": "Primary erythroid progenitor cells were isolated from fetal livers, which were freshly isolated at e12.5-e13.5 from C57BL/6 mouse embryos. 5-15 livers were pooled together for each experimental replicate, mechanically dissociated in staining buffer (PBS, 0.2% BSA, 5mM Glucose) and strained through a 30-μm strainer. Cells were immunostained at 4 °C in the presence of rabbit IgG (200 μg/ml, Jackson Laboratories 015-000-003) to block Fc receptors. To enrich for early erythroid progenitors, cells were first stained with 5 μg/ml biotin-conjugated anti-Ter119 (BD 553672) for 30 minutes, before magnetic depletion using streptavidin nanobeads (BioLegend Mojosort 480016) following the manufacturer’s instructions. Cells were then incubated with 0.5 μg/ml APC-conjugated streptavidin (BD 553672), 0.33 μg/ml PE-Cy7-conjugated anti-CD71 (BioLegend 113811) and a panel of 5 FITC-conjugated lineage antibodies (anti-CD41, anti-CD45R, anti-CD3e, anti-CD11b and anti-Ly-6G/6C, all at 1 μg/ml; BD 553848, 553087, 553061, 557396 and 553126, respectively) for 45 minutes. Cells were then resuspended in FACS running buffer (staining buffer plus 2 mM EDTA). 0.66 μg/ml Hoechst was added immediately prior to sorting in order to distinguish live cells. Cells were sorted into Eppendorf tubes containing 500 μl RPMI supplemented with 10% FCS using a BD FACSAria™ Fusion machine with a 100 μM nozzle size.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0005518"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003790",
+      "@type": "DefinedTerm",
+      "name": "hybridization protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "hybridization protocol",
+      "description": "Sorted cells from mouse fetal liver were placed back into culture for 6 hours to allow nascent transcription to be re-established. Samples were hybridized with digoxygenin-labelled oligonucleotide probes directed to alpha-globin introns (30 ng per slide; pool of four oligonucleotides with sequences AGCTGCCCACTGAGCGAGTGCCAGGTCCAT, GAGAAGTTGAGGTCACAGAAAAGCATAGTT, CTTCCTAGGGGTCCCAGATGCCGCCTGCCA, CCACTATGTTCCCTGCCTTGGGCACGAGGA) and visualized using FITC-conjugated antibodies (primary: sheep anti-DIG FITC [Roche 11207741910] 1:50, secondary: rabbit anti-sheep FITC [Vector FI-6000] 1:100). Two negative controls were also included: brain tissue from a male, adult CD1 mouse and Ter119+ (i.e. mature) fetal liver erythroid cells that were probed with secondary antibody but no primary antibody. Magnetically purified but not FACS-purified Ter119+ fetal liver erythroid cells were used as a positive control.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003790"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007572",
+      "@type": "DefinedTerm",
+      "name": "image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "Widefield fluorescence imaging was performed at 20 °C on a DeltaVision Elite system (Applied Precision) equipped with a 100 ×/1.40 NA UPLSAPO oil immersion objective (Olympus), a CoolSnap HQ2 CCD camera (Photometrics), DAPI (excitation 390/18; emission 435/40) and FITC (excitation 475/28; emission 525/45) filters. 12-bit image stacks were acquired with a z-step of 150 nm giving a voxel size of 64.5 nm x 64.5 nm x 150 nm.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007573",
+      "@type": "DefinedTerm",
+      "name": "data analysis protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "Image analysis was blinded by renaming image files from all experiments with random character strings and processing them together. Images were manually examined, and each cell was scored for the presence of active nascent-transcription foci. Analysis scripts are available at https://github.com/rbeagrie/alpha-tiledc",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    },
+    {
+      "@id": "#file-count",
+      "@type": "QuantitativeValue",
+      "value": 493,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000189",
+      "unitText": "file count",
+      "description": "493 5D images"
+    }
+  ]
+}

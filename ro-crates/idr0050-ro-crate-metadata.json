@@ -1,0 +1,192 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0050-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0050/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0050/",
+      "@type": "Dataset",
+      "name": "Analysis of cyclic straining on cytoskeletal systems",
+      "description": "In mammalian cells, actin, microtubules, and various types of cytoplasmic intermediate filaments respond to external stretching. Here, we investigated the underlying processes in endothelial cells plated on soft substrates from silicone elastomer. After cyclic stretch (0.13 Hz, 14% strain amplitude) for periods ranging from 5 min to 8 h, cells were fixed and double-stained for microtubules and either actin or vimentin. Cell images were analyzed by a two-step routine. In the first step, micrographs were segmented for potential fibrous structures. In the second step, the resulting binary masks were auto- or cross-correlated. Autocorrelation of segmented images provided a sensitive and objective measure of orientational and translational order of the different cytoskeletal systems. Aligning of correlograms from individual cells removed the influence of only partial alignment between cells and enabled determination of intrinsic cytoskeletal order. We found that cyclic stretching affected the actin cytoskeleton most, microtubules little, and vimentin mostly only via reorientation of the whole cell. The similarity, i.e., cross-correlation, between vimentin and microtubules was much higher than the one between actin and microtubules. Moreover, prolonged cyclic stretching slightly decoupled the cytoskeletal systems as it reduced the cross-correlations in both cases. Finally, actin and microtubules were more correlated at peripheral regions of cells whereas vimentin and microtubules correlated more in central regions.",
+      "datePublished": "2019-02-07",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Springer et al, CC-BY-4.0, 2019",
+      "identifier": "idr0050",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "#person-1"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1371/journal.pone.0210570"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "#experiment-protocol-1-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000251"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/4995115/"
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "#person-1",
+      "@type": "Person",
+      "name": "Rudolf Merkel",
+      "givenName": "Rudolf",
+      "familyName": "Merkel",
+      "email": "r.merkel@fz-juelich.de",
+      "address": "Institute of Complex Systems 7, Forschungszentrum Jülich GmbH, Jülich, Germany"
+    },
+    {
+      "@id": "https://doi.org/10.1371/journal.pone.0210570",
+      "@type": "ScholarlyArticle",
+      "name": "Unbiased pattern analysis reveals highly diverse responses of cytoskeletal systems to cyclic straining."
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Characterization of cytoskeletal systems (actin, microtubules, vimentin networks) to cyclic straining using confocal laser scanning microscopy, including experiments with nocodazole to depolymerize microtubules.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000251",
+      "@type": "DefinedTerm",
+      "name": "confocal microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000251"
+        }
+      ],
+      "description": "Characterization of cytoskeletal systems (actin, microtubules, vimentin networks) to cyclic straining using confocal laser scanning microscopy, including experiments with nocodazole to depolymerize microtubules."
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "growth protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "treatment protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "image acquistion and feature extraction protocol",
+      "description": "image acquistion and feature extraction protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    }
+  ]
+}

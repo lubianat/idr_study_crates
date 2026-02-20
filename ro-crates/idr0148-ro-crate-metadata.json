@@ -1,0 +1,155 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0148-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0148/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0148/",
+      "@type": "Dataset",
+      "name": "Ultrastructure of first trimester human fetal kidneys",
+      "description": "Research on the ultrastructural development of the kidney is limited, and research on rodent kidneys prevails. Yet, large differences between rodent and human nephrogenesis exist and therefore translation between species is not desirable. At the same time, there is an increasing demand for human research, in addition to assessing the potential of novel therapies such as renal organoids. We therefore generated an interactive atlas of large transmission electron microscopy tile scans of first trimester human kidneys, specifically Carnegie stage 20 until post-conceptional week 12. Analysis identified key ultrastructural features of proximal and distal progenitor cells such as cell shape, microvilli and luminal budding in the renal vesicle. Regarding glomerular development, we identified a new W-shaped body stage and three distinct sub-stages of the well-known capillary loop stage. Chromatin organization, nuclear shape and location were used to describe tubule cell identity and maturity, indicating a specific order of tubular maturation. The greatest congruence with adult tissue was seen in proximal tubules and the least in distal tubules. Finally, cytoplasmic glycogen depositions in collecting duct cells, which are absent in adult tissue, were found to be an early feature distinguishing distal tubules from collecting ducts as well as differentiating cortical from medullary collecting ducts. The findings of this research provide new fundamental insights for researchers who aim to understand and recreate kidney development.",
+      "datePublished": "2023-04-05",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Schumacher et al, CC-BY-4.0, 2023",
+      "identifier": "idr0148",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0001-7790-2756"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000258"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/14788721/"
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0001-7790-2756",
+      "@type": "Person",
+      "name": "Anika Schumacher",
+      "givenName": "Anika",
+      "familyName": "Schumacher",
+      "email": "anika.schumacher@gmail.com",
+      "address": "Universiteitssingel 40, Maastricht, The Netherlands"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "tissue",
+      "description": "Development of human fetal kidneys of first trimester were assessed using large transmission electron microscopy tilescans.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000258",
+      "@type": "DefinedTerm",
+      "name": "transmission electron microscopy (TEM)"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "transmission electron microscopy (TEM)",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000258"
+        }
+      ],
+      "description": "Development of human fetal kidneys of first trimester were assessed using large transmission electron microscopy tilescans."
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "TEM image acquisition and processing",
+      "description": "The region of interest (ROI) was determined in toluidine blue stained 1 μm sections of the Epon embedded kidneys."
+    }
+  ]
+}

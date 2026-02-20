@@ -1,0 +1,582 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0011-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0011/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0011/",
+      "@type": "Dataset",
+      "name": "Protein Kinase C and the stress response pathways are required for kinetochore homeostasis.",
+      "description": "Kinetochores serve both a structural role linking chromosomes to the mitotic spindle and a regulatory role, controlling the timing of mitosis via the spindle assembly checkpoint. To identify proteins that regulate the kinetochore we used a genome-wide fluorescence microscopy approach. We combined an array of mutants of either non-essential gene deletions or essential temperature-sensitive alleles with fluorescently tagged spindle pole bodies (centrosome) and outer kinetochores. Quantitative and qualitative analysis revealed mutants that affect the levels and distribution of kinetochores respectively. These mutants are enriched for those involved in mRNA processing, chromatin organization, DNA replication/repair and mitosis. Our data show that the Pkc1 kinase maintains the kinetochore focus via its ability to prevent cell stress and this phenotype is rescued by an osmotic stabilizer. These data support the notion that kinetochore and microtubule homeostasis are perturbed by the stress response pathways. Hence this observation provides a candidate mechanism for extracellular stress leading to chromosome segregation defects.",
+      "datePublished": "2017-01-18",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Ledesma-Fernandez et al, CC-BY-4.0, 2017",
+      "identifier": "idr0011",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "#person-1"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#screen-biosample-1"
+        },
+        {
+          "@id": "#screen-biosample-2"
+        },
+        {
+          "@id": "#screen-biosample-3"
+        },
+        {
+          "@id": "#screen-biosample-4"
+        },
+        {
+          "@id": "#screen-biosample-5"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_4932"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#screen-protocol-1-0"
+        },
+        {
+          "@id": "#screen-protocol-2-0"
+        },
+        {
+          "@id": "#screen-protocol-3-0"
+        },
+        {
+          "@id": "#screen-protocol-4-0"
+        },
+        {
+          "@id": "#screen-protocol-5-0"
+        },
+        {
+          "@id": "#screen-protocol-1-1"
+        },
+        {
+          "@id": "#screen-protocol-1-2"
+        },
+        {
+          "@id": "#screen-protocol-1-3"
+        },
+        {
+          "@id": "#screen-protocol-1-4"
+        },
+        {
+          "@id": "#screen-protocol-2-1"
+        },
+        {
+          "@id": "#screen-protocol-2-2"
+        },
+        {
+          "@id": "#screen-protocol-2-3"
+        },
+        {
+          "@id": "#screen-protocol-2-4"
+        },
+        {
+          "@id": "#screen-protocol-3-1"
+        },
+        {
+          "@id": "#screen-protocol-3-2"
+        },
+        {
+          "@id": "#screen-protocol-3-3"
+        },
+        {
+          "@id": "#screen-protocol-3-4"
+        },
+        {
+          "@id": "#screen-protocol-4-1"
+        },
+        {
+          "@id": "#screen-protocol-4-2"
+        },
+        {
+          "@id": "#screen-protocol-4-3"
+        },
+        {
+          "@id": "#screen-protocol-4-4"
+        },
+        {
+          "@id": "#screen-protocol-5-1"
+        },
+        {
+          "@id": "#screen-protocol-5-2"
+        },
+        {
+          "@id": "#screen-protocol-5-3"
+        },
+        {
+          "@id": "#screen-protocol-5-4"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/2857890/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        },
+        {
+          "@id": "#file-count"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "#person-1",
+      "@type": "Person",
+      "name": "Peter Thorpe",
+      "givenName": "Peter",
+      "familyName": "Thorpe",
+      "email": "peter.thorpe@crick.ac.uk",
+      "address": "The Francis Crick Institute, 1 Midland Road, London NW1 1AT"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_4932",
+      "@type": "Taxon",
+      "scientificName": "Saccharomyces cerevisiae"
+    },
+    {
+      "@id": "#screen-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "In this screen, Synthetic Genetic Array (SGA) methodology (Tong et al, 2001) was used to combine the DAD4-YFP and SPC42-RFP alleles with the non-essential deletion collection (Winzeler et al, 1999), which includes 4746 separate viable deletion strains, to systematically assess the effect of specific mutations on the kinetochore.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_4932"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000246",
+      "@type": "DefinedTerm",
+      "name": "fluorescence microscopy"
+    },
+    {
+      "@id": "#screen-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "description": "In this screen, Synthetic Genetic Array (SGA) methodology (Tong et al, 2001) was used to combine the DAD4-YFP and SPC42-RFP alleles with the non-essential deletion collection (Winzeler et al, 1999), which includes 4746 separate viable deletion strains, to systematically assess the effect of specific mutations on the kinetochore."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "A full list of the yeast strains used in this study is provided in Table S1. Yeast were manipulated using standard methods (Sherman, 2002); ts strains were grown at 23C and then at non-permissive temperatures as indicated in the text.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007571",
+      "@type": "DefinedTerm",
+      "name": "HCS library protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "Synthetic Genetic Array (SGA). Strains encoding fluorescently tagged spindle components Dad4-YFP and Spc42-RFP (T34 and T37) were mated with an array of gene deletions (Winzeler et al, 1999) or ts alleles (Li et al, 2011) by combining the cells together on YPD plates using a Singer ROTOR pinning robot (Singer Instruments, UK). Diploids were then selected by two cycles of growth on rich media containing geneticin (G418), hygromycin (HYG) and nourseothricin (NAT). These diploids were sporulated for 2 weeks at 23C on sporulation medium. The resulting spores were selected in four successive cycles of growth for 1 or 2 days at 30C on synthetic media lacking leucine and lysine (1) with thialysine; (2) with thialysine and G418; (3) thialysine, G418 and NAT; and (4) thialysine, G418, NAT and HYG.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007572",
+      "@type": "DefinedTerm",
+      "name": "HCS image acquistion and feature extraction protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "HCS image acquistion and feature extraction protocol",
+      "description": "Cells were prepared for imaging by growth in liquid synthetic medium containing 120 mg/litre adenine at 23C for ~5 hours in 96 well plates. The cells were then collected by centrifugation and placed onto an 8x6 grid of agar pedestals (Werner et al, 2009). These 48 pad arrays were covered with a custom-sized 175 um thick coverslip and imaged on an upright epifluoresence microscope (Zeiss Axiovision Z2), using a 63x 1.4NA plan apochromat oil immersion lens. Zeiss Immersol 518F immersion oil was used with a refractive index of 1.5181. Fluorescence illumination for the screen was provided by a 100W mercury bulb. Fluorescence filter cubes were as follows: YFP imaging used Zeiss filter set 46 (excitation BP 500/20; dichroic FT 515, emission BP 535/30), RFP imaging used Zeiss filter set 63HE (excitation BP 572/25; dichroic FT 590, emission BP 629/62), GFP imaging used Zeiss filter set 38HE (excitation BP 470/40; dichroic FT 495, emission BP 525/50) and CFP imaging used Zeiss filter set 47HE (excitation BP 436/25; dichroic FT455, emission BP 480/40). Later experiments employed a Zeiss Colibri LED illumination system (445 nm for CFP excitation, 470 nm for GFP excitation, 505 nm for YFP excitation and 590nm for RFP excitation), with the filter cubes outlined above. A z stack of 21 images with a vertical separation of 350 nm was acquired for each strain. Brightfield contrast was enhanced with differential interference contrast (DIC) prisms. The resulting light was captured using a Hamamatsu ORCA ERII CCD camera with 6.45 um pixels, binned 2x2 or a Flash 4.0 Lte CMOS camera with 6.5 um pixels, binned 2x2 (Hamamatsu Photonics, Japan). The exposure times were set to ensure that pixels were not saturated, typically < 200 msec for the genome-wide screen Dad4-YFP exposure times were 40 msec and Spc42-RFP 50 msec. Images shown in the figures were prepared using Volocity imaging software (Perkin Elmer Inc., USA).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007573",
+      "@type": "DefinedTerm",
+      "name": "HCS data analysis protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "Qualitative image analysis was performed using Volocity to visualize the fluorescence images. Quantitative image analysis used an automated ImageJ script, FociQuant to quantify the kinetochore fluorescence signal (Ledesma-Fernandez & Thorpe, 2015). In brief, each kinetochore is identified automatically using the 'FindMaxima' function in ImageJ. The fluoresecence intensity within a ~600 nm square box in the focal plane of each foci is measured and a local background signal for each focus is subtracted. We found that the deviations in fluorescence intensity of control strains across each 48 pad imaging plate and consequently we used a smoothing algorithm to normalize values across each plate of the screen (Olafsson & Thorpe, 2015).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-biosample-2",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "This screen examines the impact of essential genes on the kinetochore, using a collection of temperature-sensitive (ts) alleles (Li et al, 2011) (1334 members, include 754 unique alleles of 475 unique ORFs). These strains were also combined with the fluorescence alleles using SGA and the resulting haploid strains were then grown for 5 hours at 37C prior to imaging.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_4932"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-0",
+      "@type": "LabProtocol",
+      "name": "fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "description": "This screen examines the impact of essential genes on the kinetochore, using a collection of temperature-sensitive (ts) alleles (Li et al, 2011) (1334 members, include 754 unique alleles of 475 unique ORFs). These strains were also combined with the fluorescence alleles using SGA and the resulting haploid strains were then grown for 5 hours at 37C prior to imaging."
+    },
+    {
+      "@id": "#screen-protocol-2-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "A full list of the yeast strains used in this study is provided in Table S1. Yeast were manipulated using standard methods (Sherman, 2002); ts strains were grown at 23C and then at non-permissive temperatures as indicated in the text.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-2",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "Synthetic Genetic Array (SGA). Strains encoding fluorescently tagged spindle components Dad4-YFP and Spc42-RFP (T34 and T37) were mated with an array of gene deletions (Winzeler et al, 1999) or ts alleles (Li et al, 2011) by combining the cells together on YPD plates using a Singer ROTOR pinning robot (Singer Instruments, UK). Diploids were then selected by two cycles of growth on rich media containing geneticin (G418), hygromycin (HYG) and nourseothricin (NAT). These diploids were sporulated for 2 weeks at 23C on sporulation medium. The resulting spores were selected in four successive cycles of growth for 1 or 2 days at 30C on synthetic media lacking leucine and lysine (1) with thialysine; (2) with thialysine and G418; (3) thialysine, G418 and NAT; and (4) thialysine, G418, NAT and HYG.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-3",
+      "@type": "LabProtocol",
+      "name": "HCS image acquistion and feature extraction protocol",
+      "description": "Cells were prepared for imaging by growth in liquid synthetic medium containing 120 mg/litre adenine at 23C for ~5 hours in 96 well plates. The cells were then collected by centrifugation and placed onto an 8x6 grid of agar pedestals (Werner et al, 2009). These 48 pad arrays were covered with a custom-sized 175 um thick coverslip and imaged on an upright epifluoresence microscope (Zeiss Axiovision Z2), using a 63x 1.4NA plan apochromat oil immersion lens. Zeiss Immersol 518F immersion oil was used with a refractive index of 1.5181. Fluorescence illumination for the screen was provided by a 100W mercury bulb. Fluorescence filter cubes were as follows: YFP imaging used Zeiss filter set 46 (excitation BP 500/20; dichroic FT 515, emission BP 535/30), RFP imaging used Zeiss filter set 63HE (excitation BP 572/25; dichroic FT 590, emission BP 629/62), GFP imaging used Zeiss filter set 38HE (excitation BP 470/40; dichroic FT 495, emission BP 525/50) and CFP imaging used Zeiss filter set 47HE (excitation BP 436/25; dichroic FT455, emission BP 480/40). Later experiments employed a Zeiss Colibri LED illumination system (445 nm for CFP excitation, 470 nm for GFP excitation, 505 nm for YFP excitation and 590nm for RFP excitation), with the filter cubes outlined above. A z stack of 21 images with a vertical separation of 350 nm was acquired for each strain. Brightfield contrast was enhanced with differential interference contrast (DIC) prisms. The resulting light was captured using a Hamamatsu ORCA ERII CCD camera with 6.45 um pixels, binned 2x2 or a Flash 4.0 Lte CMOS camera with 6.5 um pixels, binned 2x2 (Hamamatsu Photonics, Japan). The exposure times were set to ensure that pixels were not saturated, typically < 200 msec for the genome-wide screen Dad4-YFP exposure times were 40 msec and Spc42-RFP 50 msec. Images shown in the figures were prepared using Volocity imaging software (Perkin Elmer Inc., USA).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-4",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "Qualitative image analysis was performed using Volocity to visualize the fluorescence images. Quantitative image analysis used an automated ImageJ script, FociQuant to quantify the kinetochore fluorescence signal (Ledesma-Fernandez & Thorpe, 2015). In brief, each kinetochore is identified automatically using the 'FindMaxima' function in ImageJ. The fluoresecence intensity within a ~600 nm square box in the focal plane of each foci is measured and a local background signal for each focus is subtracted. We found that the deviations in fluorescence intensity of control strains across each 48 pad imaging plate and consequently we used a smoothing algorithm to normalize values across each plate of the screen (Olafsson & Thorpe, 2015).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-biosample-3",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Re-screen of non-essential mutants that did not grow in screen A.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_4932"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-3-0",
+      "@type": "LabProtocol",
+      "name": "fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "description": "Re-screen of non-essential mutants that did not grow in screen A."
+    },
+    {
+      "@id": "#screen-protocol-3-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "A full list of the yeast strains used in this study is provided in Table S1. Yeast were manipulated using standard methods (Sherman, 2002); ts strains were grown at 23C and then at non-permissive temperatures as indicated in the text.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-3-2",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "Synthetic Genetic Array (SGA). Strains encoding fluorescently tagged spindle components Dad4-YFP and Spc42-RFP (T34 and T37) were mated with an array of gene deletions (Winzeler et al, 1999) or ts alleles (Li et al, 2011) by combining the cells together on YPD plates using a Singer ROTOR pinning robot (Singer Instruments, UK). Diploids were then selected by two cycles of growth on rich media containing geneticin (G418), hygromycin (HYG) and nourseothricin (NAT). These diploids were sporulated for 2 weeks at 23C on sporulation medium. The resulting spores were selected in four successive cycles of growth for 1 or 2 days at 30C on synthetic media lacking leucine and lysine (1) with thialysine; (2) with thialysine and G418; (3) thialysine, G418 and NAT; and (4) thialysine, G418, NAT and HYG.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-3-3",
+      "@type": "LabProtocol",
+      "name": "HCS image acquistion and feature extraction protocol",
+      "description": "Cells were prepared for imaging by growth in liquid synthetic medium containing 120 mg/litre adenine at 23C for ~5 hours in 96 well plates. The cells were then collected by centrifugation and placed onto an 8x6 grid of agar pedestals (Werner et al, 2009). These 48 pad arrays were covered with a custom-sized 175 um thick coverslip and imaged on an upright epifluoresence microscope (Zeiss Axiovision Z2), using a 63x 1.4NA plan apochromat oil immersion lens. Zeiss Immersol 518F immersion oil was used with a refractive index of 1.5181. Fluorescence illumination for the screen was provided by a 100W mercury bulb. Fluorescence filter cubes were as follows: YFP imaging used Zeiss filter set 46 (excitation BP 500/20; dichroic FT 515, emission BP 535/30), RFP imaging used Zeiss filter set 63HE (excitation BP 572/25; dichroic FT 590, emission BP 629/62), GFP imaging used Zeiss filter set 38HE (excitation BP 470/40; dichroic FT 495, emission BP 525/50) and CFP imaging used Zeiss filter set 47HE (excitation BP 436/25; dichroic FT455, emission BP 480/40). Later experiments employed a Zeiss Colibri LED illumination system (445 nm for CFP excitation, 470 nm for GFP excitation, 505 nm for YFP excitation and 590nm for RFP excitation), with the filter cubes outlined above. A z stack of 21 images with a vertical separation of 350 nm was acquired for each strain. Brightfield contrast was enhanced with differential interference contrast (DIC) prisms. The resulting light was captured using a Hamamatsu ORCA ERII CCD camera with 6.45 um pixels, binned 2x2 or a Flash 4.0 Lte CMOS camera with 6.5 um pixels, binned 2x2 (Hamamatsu Photonics, Japan). The exposure times were set to ensure that pixels were not saturated, typically < 200 msec for the genome-wide screen Dad4-YFP exposure times were 40 msec and Spc42-RFP 50 msec. Images shown in the figures were prepared using Volocity imaging software (Perkin Elmer Inc., USA).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-3-4",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "Qualitative image analysis was performed using Volocity to visualize the fluorescence images. Quantitative image analysis used an automated ImageJ script, FociQuant to quantify the kinetochore fluorescence signal (Ledesma-Fernandez & Thorpe, 2015). In brief, each kinetochore is identified automatically using the 'FindMaxima' function in ImageJ. The fluoresecence intensity within a ~600 nm square box in the focal plane of each foci is measured and a local background signal for each focus is subtracted. We found that the deviations in fluorescence intensity of control strains across each 48 pad imaging plate and consequently we used a smoothing algorithm to normalize values across each plate of the screen (Olafsson & Thorpe, 2015).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-biosample-4",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Re-screen of essential mutants that did not grow in screen B.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_4932"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-4-0",
+      "@type": "LabProtocol",
+      "name": "fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "description": "Re-screen of essential mutants that did not grow in screen B."
+    },
+    {
+      "@id": "#screen-protocol-4-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "A full list of the yeast strains used in this study is provided in Table S1. Yeast were manipulated using standard methods (Sherman, 2002); ts strains were grown at 23C and then at non-permissive temperatures as indicated in the text.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-4-2",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "Synthetic Genetic Array (SGA). Strains encoding fluorescently tagged spindle components Dad4-YFP and Spc42-RFP (T34 and T37) were mated with an array of gene deletions (Winzeler et al, 1999) or ts alleles (Li et al, 2011) by combining the cells together on YPD plates using a Singer ROTOR pinning robot (Singer Instruments, UK). Diploids were then selected by two cycles of growth on rich media containing geneticin (G418), hygromycin (HYG) and nourseothricin (NAT). These diploids were sporulated for 2 weeks at 23C on sporulation medium. The resulting spores were selected in four successive cycles of growth for 1 or 2 days at 30C on synthetic media lacking leucine and lysine (1) with thialysine; (2) with thialysine and G418; (3) thialysine, G418 and NAT; and (4) thialysine, G418, NAT and HYG.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-4-3",
+      "@type": "LabProtocol",
+      "name": "HCS image acquistion and feature extraction protocol",
+      "description": "Cells were prepared for imaging by growth in liquid synthetic medium containing 120 mg/litre adenine at 23C for ~5 hours in 96 well plates. The cells were then collected by centrifugation and placed onto an 8x6 grid of agar pedestals (Werner et al, 2009). These 48 pad arrays were covered with a custom-sized 175 um thick coverslip and imaged on an upright epifluoresence microscope (Zeiss Axiovision Z2), using a 63x 1.4NA plan apochromat oil immersion lens. Zeiss Immersol 518F immersion oil was used with a refractive index of 1.5181. Fluorescence illumination for the screen was provided by a 100W mercury bulb. Fluorescence filter cubes were as follows: YFP imaging used Zeiss filter set 46 (excitation BP 500/20; dichroic FT 515, emission BP 535/30), RFP imaging used Zeiss filter set 63HE (excitation BP 572/25; dichroic FT 590, emission BP 629/62), GFP imaging used Zeiss filter set 38HE (excitation BP 470/40; dichroic FT 495, emission BP 525/50) and CFP imaging used Zeiss filter set 47HE (excitation BP 436/25; dichroic FT455, emission BP 480/40). Later experiments employed a Zeiss Colibri LED illumination system (445 nm for CFP excitation, 470 nm for GFP excitation, 505 nm for YFP excitation and 590nm for RFP excitation), with the filter cubes outlined above. A z stack of 21 images with a vertical separation of 350 nm was acquired for each strain. Brightfield contrast was enhanced with differential interference contrast (DIC) prisms. The resulting light was captured using a Hamamatsu ORCA ERII CCD camera with 6.45 um pixels, binned 2x2 or a Flash 4.0 Lte CMOS camera with 6.5 um pixels, binned 2x2 (Hamamatsu Photonics, Japan). The exposure times were set to ensure that pixels were not saturated, typically < 200 msec for the genome-wide screen Dad4-YFP exposure times were 40 msec and Spc42-RFP 50 msec. Images shown in the figures were prepared using Volocity imaging software (Perkin Elmer Inc., USA).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-4-4",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "Qualitative image analysis was performed using Volocity to visualize the fluorescence images. Quantitative image analysis used an automated ImageJ script, FociQuant to quantify the kinetochore fluorescence signal (Ledesma-Fernandez & Thorpe, 2015). In brief, each kinetochore is identified automatically using the 'FindMaxima' function in ImageJ. The fluoresecence intensity within a ~600 nm square box in the focal plane of each foci is measured and a local background signal for each focus is subtracted. We found that the deviations in fluorescence intensity of control strains across each 48 pad imaging plate and consequently we used a smoothing algorithm to normalize values across each plate of the screen (Olafsson & Thorpe, 2015).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-biosample-5",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Validation screen of essential mutants found to affect Dad4-YFP levels in screen B.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_4932"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-5-0",
+      "@type": "LabProtocol",
+      "name": "fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "description": "Validation screen of essential mutants found to affect Dad4-YFP levels in screen B."
+    },
+    {
+      "@id": "#screen-protocol-5-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "A full list of the yeast strains used in this study is provided in Table S1. Yeast were manipulated using standard methods (Sherman, 2002); ts strains were grown at 23C and then at non-permissive temperatures as indicated in the text.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-5-2",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "Synthetic Genetic Array (SGA). Strains encoding fluorescently tagged spindle components Dad4-YFP and Spc42-RFP (T34 and T37) were mated with an array of gene deletions (Winzeler et al, 1999) or ts alleles (Li et al, 2011) by combining the cells together on YPD plates using a Singer ROTOR pinning robot (Singer Instruments, UK). Diploids were then selected by two cycles of growth on rich media containing geneticin (G418), hygromycin (HYG) and nourseothricin (NAT). These diploids were sporulated for 2 weeks at 23C on sporulation medium. The resulting spores were selected in four successive cycles of growth for 1 or 2 days at 30C on synthetic media lacking leucine and lysine (1) with thialysine; (2) with thialysine and G418; (3) thialysine, G418 and NAT; and (4) thialysine, G418, NAT and HYG.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-5-3",
+      "@type": "LabProtocol",
+      "name": "HCS image acquistion and feature extraction protocol",
+      "description": "Cells were prepared for imaging by growth in liquid synthetic medium containing 120 mg/litre adenine at 23C for ~5 hours in 96 well plates. The cells were then collected by centrifugation and placed onto an 8x6 grid of agar pedestals (Werner et al, 2009). These 48 pad arrays were covered with a custom-sized 175 um thick coverslip and imaged on an upright epifluoresence microscope (Zeiss Axiovision Z2), using a 63x 1.4NA plan apochromat oil immersion lens. Zeiss Immersol 518F immersion oil was used with a refractive index of 1.5181. Fluorescence illumination for the screen was provided by a 100W mercury bulb. Fluorescence filter cubes were as follows: YFP imaging used Zeiss filter set 46 (excitation BP 500/20; dichroic FT 515, emission BP 535/30), RFP imaging used Zeiss filter set 63HE (excitation BP 572/25; dichroic FT 590, emission BP 629/62), GFP imaging used Zeiss filter set 38HE (excitation BP 470/40; dichroic FT 495, emission BP 525/50) and CFP imaging used Zeiss filter set 47HE (excitation BP 436/25; dichroic FT455, emission BP 480/40). Later experiments employed a Zeiss Colibri LED illumination system (445 nm for CFP excitation, 470 nm for GFP excitation, 505 nm for YFP excitation and 590nm for RFP excitation), with the filter cubes outlined above. A z stack of 21 images with a vertical separation of 350 nm was acquired for each strain. Brightfield contrast was enhanced with differential interference contrast (DIC) prisms. The resulting light was captured using a Hamamatsu ORCA ERII CCD camera with 6.45 um pixels, binned 2x2 or a Flash 4.0 Lte CMOS camera with 6.5 um pixels, binned 2x2 (Hamamatsu Photonics, Japan). The exposure times were set to ensure that pixels were not saturated, typically < 200 msec for the genome-wide screen Dad4-YFP exposure times were 40 msec and Spc42-RFP 50 msec. Images shown in the figures were prepared using Volocity imaging software (Perkin Elmer Inc., USA).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-5-4",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "Qualitative image analysis was performed using Volocity to visualize the fluorescence images. Quantitative image analysis used an automated ImageJ script, FociQuant to quantify the kinetochore fluorescence signal (Ledesma-Fernandez & Thorpe, 2015). In brief, each kinetochore is identified automatically using the 'FindMaxima' function in ImageJ. The fluoresecence intensity within a ~600 nm square box in the focal plane of each foci is measured and a local background signal for each focus is subtracted. We found that the deviations in fluorescence intensity of control strains across each 48 pad imaging plate and consequently we used a smoothing algorithm to normalize values across each plate of the screen (Olafsson & Thorpe, 2015).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 428809534832,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "0.27 + 0.08 + 0.0 + 0.04 + 0.0 = 0.39 TB"
+    },
+    {
+      "@id": "#file-count",
+      "@type": "QuantitativeValue",
+      "value": 983,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000189",
+      "unitText": "file count",
+      "description": "6 + 1 + 86 + 865 + 25 = 983 5D images"
+    }
+  ]
+}

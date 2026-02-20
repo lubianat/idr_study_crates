@@ -1,0 +1,244 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0124-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0124/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0124/",
+      "@type": "Dataset",
+      "name": "Pseudo-dynamic analysis of heart tube formation in the mouse reveals strong regional variability and early left-right asymmetry",
+      "description": "We provide the first and complete atlas for morphometric analysis and visualization of heart tube morphogenesis, reporting morphological variability and early emergence of left-right asymmetry patterns.",
+      "datePublished": "2022-01-17",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Esteban et al, CC-BY-4.0, 2022",
+      "identifier": "idr0124",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0003-0906-4767"
+        },
+        {
+          "@id": "https://orcid.org/0000-0003-3530-1850"
+        },
+        {
+          "@id": "#person-3"
+        },
+        {
+          "@id": "#person-4"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1038/s44161-022-00065-1"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "#experiment-protocol-1-4"
+        },
+        {
+          "@id": "#experiment-protocol-1-5"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000393"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/13965767/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0003-0906-4767",
+      "@type": "Person",
+      "name": "Miguel Torres",
+      "givenName": "Miguel",
+      "familyName": "Torres",
+      "email": "mtorres@cnic.es",
+      "address": "Cardiovascular Development Program"
+    },
+    {
+      "@id": "https://orcid.org/0000-0003-3530-1850",
+      "@type": "Person",
+      "name": "Isaac Esteban",
+      "givenName": "Isaac",
+      "familyName": "Esteban",
+      "email": "iesteban@cnic.es",
+      "address": "Centro Nacional de Investigaciones Cardiovasculares (CNIC)"
+    },
+    {
+      "@id": "#person-3",
+      "@type": "Person",
+      "name": "#person-3",
+      "address": "Cardiovascular Development Program"
+    },
+    {
+      "@id": "#person-4",
+      "@type": "Person",
+      "name": "#person-4",
+      "address": "Centro Nacional de Investigaciones Cardiovasculares (CNIC)"
+    },
+    {
+      "@id": "https://doi.org/10.1038/s44161-022-00065-1",
+      "@type": "ScholarlyArticle",
+      "name": "Pseudo-dynamic analysis of heart tube formation in the mouse reveals strong regional variability and early left-right asymmetry"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090",
+      "@type": "Taxon",
+      "scientificName": "Mus musculus"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "tissue",
+      "description": "Imaging of a temporally dense collection of mouse embryonic heart morphologies between E7.75 and E8.5.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000393",
+      "@type": "DefinedTerm",
+      "name": "array-scan confocal microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "array-scan confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000393"
+        }
+      ],
+      "description": "Imaging of a temporally dense collection of mouse embryonic heart morphologies between E7.75 and E8.5."
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Images where acquired using confocal microscopy and features extracted by segmented tissues of interest. Semi-automatic and fully automatic segmentation approaches. Imaging hardware: SP8 Leica confocal microscope and a HC PL Apo CS2 20 0.75 NA multi-immersion lens corrected to glycerol immersion. Imaging software: Leica LAS X 3.5.2.18963"
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "Embryos are cleared in CUBIC I to achieve tissue transparency."
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "Whole-mount Nodal mutants and their controls were fixed at E8.5 in 4% PFA and dehydrated in 100% methanol."
+    },
+    {
+      "@id": "#experiment-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "Embryos were then stained with Hoechst as a nuclear counterstain and transferred to R2 CUBIC clearing reagents."
+    },
+    {
+      "@id": "#experiment-protocol-1-5",
+      "@type": "LabProtocol",
+      "name": "Embryo clearing",
+      "description": "Embryo clearing"
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 571746046443520,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "520.0 TB"
+    }
+  ]
+}

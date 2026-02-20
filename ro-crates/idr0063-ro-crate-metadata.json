@@ -1,0 +1,271 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0063-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0063/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0063/",
+      "@type": "Dataset",
+      "name": "Homologous chromosomes undergo sequential quasi-stable interactions during meiotic prophase",
+      "description": "The pairing of homologous chromosomes in meiosis I is essential for sexual reproduction and is mediated, in part, by the formation and repair of Spo11-induced DNA double strand breaks (DSBs). In budding yeast, each cell receives 150-200 DSBs, yet only a fraction go on to form crossover products. How and why the cell initially coordinates so many interactions along each chromosome is not well understood. Using a fluorescent reporter-operator system (FROS), we measure the kinetics of interacting homologous loci at various stages of meiosis. We find that while tagged loci undergo considerable motion throughout prophase I, they are constrained in how far they can diffuse from their homolog pair. This effective tethering radius decreases over the course of meiosis in a DSB-dependent manner. We develop a theoretical model that captures the biological contributions of centromere attachment to the nuclear envelope, homolog pairing, and nuclear confinement. With this model, we demonstrate that the experimentally observed heterogeneity in single-cell behavior and the effective tethering between loci is captured for two polymers forming randomly-spaced linkages. The small number of connections required to reproduce our data demonstrates that a single linkage site between homologous chromosomes can constrain the movement of loci up to hundreds of kilobases away.",
+      "datePublished": "2021-04-29",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Newman et al, CC-BY-4.0, 2021",
+      "identifier": "idr0063",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-6767-1429"
+        },
+        {
+          "@id": "https://orcid.org/0000-0003-2931-5412"
+        },
+        {
+          "@id": "https://orcid.org/0000-0002-0585-1942"
+        },
+        {
+          "@id": "https://orcid.org/0000-0003-0511-0084"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_4932"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "#experiment-protocol-1-4"
+        },
+        {
+          "@id": "#experiment-protocol-1-5"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/12922261/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        },
+        {
+          "@id": "#file-count"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-6767-1429",
+      "@type": "Person",
+      "name": "Trent Newman",
+      "givenName": "Trent",
+      "familyName": "Newman",
+      "email": "tacnewman@gmail.com",
+      "address": "University of California Davis"
+    },
+    {
+      "@id": "https://orcid.org/0000-0003-2931-5412",
+      "@type": "Person",
+      "name": "Bruno Beltran",
+      "givenName": "Bruno",
+      "familyName": "Beltran",
+      "email": "brunobeltran0@gmail.com",
+      "address": "Stanford"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-0585-1942",
+      "@type": "Person",
+      "name": "Andrew Spakowitz",
+      "givenName": "Andrew",
+      "familyName": "Spakowitz",
+      "email": "ajspakow@stanford.edu",
+      "address": "Stanford"
+    },
+    {
+      "@id": "https://orcid.org/0000-0003-0511-0084",
+      "@type": "Person",
+      "name": "Sean Burgess",
+      "givenName": "Sean",
+      "familyName": "Burgess",
+      "email": "smburgess@ucdavis.edu",
+      "address": "University of California Davis"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_4932",
+      "@type": "Taxon",
+      "scientificName": "Saccharomyces cerevisiae"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Live-cell imaging was used to measure the distance between two fluorescently-tagged chromosomal loci over time in yeast nuclei throughout prophase I of meiosis.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_4932"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000253",
+      "@type": "DefinedTerm",
+      "name": "spinning disk confocal microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "spinning disk confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "description": "Live-cell imaging was used to measure the distance between two fluorescently-tagged chromosomal loci over time in yeast nuclei throughout prophase I of meiosis."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "Lui 2019",
+      "description": "Cell synchronization and meiotic induction was performed as described previously (Lui and Burgess 2009).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "Dresser 2009",
+      "description": "Slides prepared for imaging according to (Dresser 2009), using silicone isolators (Cat. no. JTR20R-2.0, Grace Bio Labs).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "Thomann 2002",
+      "description": "Labeling: The original \\textit{teto}/TetR-GFP strains were a gift from Angelika Amon (Brar et al. 2009). Imaging hardware: Imaging was performed on a Marianas real time confocal workstation with mSAC + mSwitcher (3i), using a CSU-X1, microlens enhanced, spinning disk unit (Yokogawa). All imaging was performed in a full enclosure environmental chamber preheated to $\\SI{30}{\\celsius}$, using a microscope incubator (Okolab). Samples were excited with the LaserStack $\\SI{488}{\\nm}$ line (3i), observed using an ALPHA PLAN APO 100X/1.46 OIL objective lens (Zeiss), and photographed using a Cascade QuantEM 512SC camera (Photometrics), with a $\\SI{0.133}{\\um}$ pixel size. Samples were kept in focus using Definite Focus (Zeiss), capturing 41 (typically) z-sections, with a $\\SI{0.25}{\\um}$ step size, every $\\SI{30}{\\second}$ for 50 time points (total of $\\SI{25}{\\minute}$). Software: Slidebook v5 (3i) was used to run the time-lapse live-cell imaging and export each plane as a separate 16-bit .tiff file. Feature extraction: The position of the fluorescent foci within each cropped cell was detected independently for each time point in the video according to the algorithm described in Thomann et al. 2002, using a custom MATLAB pipeline (https://github.com/burgess-lab/SeeSpotRun). The raw image intensity data from each cropped cell was filtered with a 3D Gaussian kernel to remove as many noise-related local maxima as possible. Peak localization (\\texttt{runSpotAnalysistest.m}) was performed through local maxima detection in 3D using image dilation, followed by curvature measurement which allowed significant peaks to be identified through a cumulative histogram thresholding method."
+    },
+    {
+      "@id": "#experiment-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "https://github.com/burgess-lab/SeeSpotRun",
+      "description": "Downstream analysis was performed using a custom Python module (multi$\\_$locus$\\_$analysis (mla), for documentation see multi-locus-analysis.readthedocs.io). Velocities from trajectories of interest were extracted with \\texttt{mla.stats.pos$\\_$to$\\_$all$\\_$vel()}, using the distance between the two trajectories as a drift-free measurement. From these velocities a time-and-ensemble-averaged mean squared displacement (MSD) of the distance between two homolog pairs (or mean squared change in distance: MSCD) was calculated using the xy positions of unpaired spots. The velocity autocorrelation of the interspot distance, was calculated from the velocities with \\texttt{mla.stats.vels$\\_$to$\\_$cvvs$\\_$by$\\_$_hand()}, which writes out all the products of $V^{\\delta}(t+t_{k}) \\cdot V^{\\delta}(t_{k})$ for every single $\\delta$ and $t_{k}$ and takes the average. The VAID fit value was calculated using \\texttt{mla.fitting.get$\\_$best$\\_$fit$\\_$fixed$\\_$beta()}. The bound and unbound wait time distributions were calculated by correcting for issues of synchrony and censoring inherent in the data collection. The function \\texttt{mla.finite$\\_$window.discrete$\\_$trajectory$\\_$to$\\_$wait$\\_$times()} was used to identify the interior censored wait times in the trajectories, with \\texttt{burgess$\\_$plots.cdf$\\_$exact$\\_$given$\\_$windows$\\_$quinn()} used to calculate the cumulative distribution function, and \\texttt{mla.finite$\\_$window.bars$\\_$given$\\_$confint()} used to generate the final probability distribution to be plotted."
+    },
+    {
+      "@id": "#experiment-protocol-1-5",
+      "@type": "LabProtocol",
+      "name": "https://pypi.org/project/multi-locus-analysis/",
+      "description": "https://pypi.org/project/multi-locus-analysis/"
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 131941395333,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "0.12 TB"
+    },
+    {
+      "@id": "#file-count",
+      "@type": "QuantitativeValue",
+      "value": 146,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000189",
+      "unitText": "file count",
+      "description": "146 5D images"
+    }
+  ]
+}

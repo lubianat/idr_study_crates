@@ -1,0 +1,184 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0042-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0042/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0042/",
+      "@type": "Dataset",
+      "name": "A Deep-learning classifier identifies patients with clinical heart failure using whole-slide images of H&E tissue",
+      "description": "Cardiac histopathology from human patients with clinical heart failure or cadaveric donor hearts from patients without clinical heart failure.",
+      "datePublished": "2018-04-12",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Nirschl et al, CC-BY-4.0, 2018",
+      "identifier": "idr0042",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "#person-1"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1371/journal.pone.0192726"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000243"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/3428111/"
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "#person-1",
+      "@type": "Person",
+      "name": "Anant Madabhushi",
+      "givenName": "Anant",
+      "familyName": "Madabhushi",
+      "email": "axm788@case.edu",
+      "address": "Department of Biomedical Engineering, Case Western Reserve University, Cleveland, OH, 44106, USA"
+    },
+    {
+      "@id": "https://doi.org/10.1371/journal.pone.0192726",
+      "@type": "ScholarlyArticle",
+      "name": "A deep-learning classifier identifies patients with clinical heart failure using whole-slide images of H&E tissue."
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "tissue",
+      "description": "Histopathology sub-image from patient whole-slide images from patients with end-stage clinical heart failure or cadaveric donor hearts from patients without heart failure.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000243",
+      "@type": "DefinedTerm",
+      "name": "bright-field microscopy"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "bright-field microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000243"
+        }
+      ],
+      "description": "Histopathology sub-image from patient whole-slide images from patients with end-stage clinical heart failure or cadaveric donor hearts from patients without heart failure."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "Dataset collection and histological processing: Both failing and non-failing hearts received in situ cold cardioplegia in the operating room and were immediately placed on wet ice in 4°C Krebs-Henseleit buffer. Within 4 hours of cardiectomy, transmural tissue from the left ventricular free wall were fixed in 4% paraformaldehyde and later processed, embedded in paraffin, sectioned and stained with hematoxylin and eosin (H&E) for morphologic analysis.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "image acquisition",
+      "description": "Whole-slide images were acquired at 20x magnification using an Aperio ScanScope slide scanner. Images were down-sampled to 5x magnification for image analysis, a magnification sufficient for expert assessment of gross tissue pathology. The allocation to the training and held-out test cohort was random and performed prior to image analysis."
+    }
+  ]
+}

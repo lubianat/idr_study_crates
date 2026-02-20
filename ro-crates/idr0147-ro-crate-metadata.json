@@ -1,0 +1,224 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0147-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0147/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0147/",
+      "@type": "Dataset",
+      "name": "Terabyte-scale supervised 3D training and benchmarking dataset of the mouse kidney",
+      "description": "The performance of machine learning algorithms, when used for segmenting 3D biomedical images, does not reach the level expected based on results achieved with 2D photos. This may be explained by the comparative lack of high-volume, high-quality training datasets, which require state-of-the art imaging facilities, domain experts for annotation and large computational and personal resources. The HR-Kidney dataset presented in this work bridges this gap by providing 1.7 TB of artefact-corrected synchrotron radiation-based X-ray phase-contrast microtomography images of whole mouse kidneys and validated segmentations of 33 729 glomeruli, which corresponds to a one to two orders of magnitude increase over currently available biomedical datasets. The image sets also contain the underlying raw data, threshold- and morphology-based semi-automatic segmentations of renal vasculature and uriniferous tubules, as well as true 3D manual annotations. We therewith provide a broad basis for the scientific community to build upon and expand in the fields of image processing, data augmentation and machine learning, in particular unsupervised and semi-supervised learning investigations, as well as transfer learning and generative adversarial networks.",
+      "datePublished": "2023-06-19",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Kuo at al, CC-BY-4.0, 2023",
+      "identifier": "idr0147",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0003-2665-0995"
+        },
+        {
+          "@id": "https://orcid.org/0000-0002-0870-7997"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1038/s41597-023-02407-5"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#experiment-biosample-1"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#experiment-protocol-1-0"
+        },
+        {
+          "@id": "#experiment-protocol-1-1"
+        },
+        {
+          "@id": "#experiment-protocol-1-2"
+        },
+        {
+          "@id": "#experiment-protocol-1-3"
+        },
+        {
+          "@id": "#experiment-protocol-1-4"
+        },
+        {
+          "@id": "#0026155"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/14788883/"
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0003-2665-0995",
+      "@type": "Person",
+      "name": "Vartan Kurtcuoglu",
+      "givenName": "Vartan",
+      "familyName": "Kurtcuoglu",
+      "email": "vartan.kurtcuoglu@uzh.ch",
+      "address": "Institute of Physiology, University of Zurich, Winterthurerstrasse 190, 8057 Zurich, Switzerland"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-0870-7997",
+      "@type": "Person",
+      "name": "Willy Kuo",
+      "givenName": "Willy",
+      "familyName": "Kuo",
+      "email": "willy.kuo@uzh.ch",
+      "address": "Institute of Physiology, University of Zurich, Winterthurerstrasse 190, 8057 Zurich, Switzerland"
+    },
+    {
+      "@id": "https://doi.org/10.1038/s41597-023-02407-5",
+      "@type": "ScholarlyArticle",
+      "name": "Terabyte-scale supervised 3D training and benchmarking dataset of the mouse kidney"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090",
+      "@type": "Taxon",
+      "scientificName": "Mus musculus"
+    },
+    {
+      "@id": "#experiment-biosample-1",
+      "@type": "BioSample",
+      "name": "tissue",
+      "description": "C57BL/6J mice were purchased from Janvier Labs (Le Genest-Saint-Isle, France) and kept in individually ventilated cages with ad libitum access to water and standard diet (Kliba Nafag 3436, Kaiseraugst, Switzerland) in 12 h light/dark cycles. Dataset 1 derives from the left kidney of a male mouse, 15 weeks of age with a body weight of 28.0 g. Dataset 2 is the right kidney of the same mouse. Dataset 3 derives from the right kidney of a female mouse, 15 weeks of age with a body weight of 22.5 g. All animal experiments were approved by the cantonal veterinary office of Zurich, Switzerland, in accordance with the Swiss federal animal welfare regulations (license numbers ZH177/13 and ZH233/15). Mice were anaesthetized with ketamine/xylazine. A blunted 21G butterfly needle was inserted retrogradely into the abdominal aorta and fixed with a ligation. The abdominal aorta and superior mesenteric artery above the renal arteries were ligated, the vena cava opened as an outlet and the kidneys were flushed with 10 ml, 37 °C phosphate-buffered saline (PBS) to remove the blood, then fixed with 50 ml 37 °C 4 % paraformaldehyde in PBS (PFA) solution at 150 mmHg hydrostatic pressure.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+        }
+      ]
+    },
+    {
+      "@id": "#0026155",
+      "@type": "DefinedTerm",
+      "name": "X-Ray Microtomography"
+    },
+    {
+      "@id": "#experiment-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "X-Ray Microtomography",
+      "measurementTechnique": [
+        {
+          "@id": "#0026155"
+        }
+      ],
+      "description": "C57BL/6J mice were purchased from Janvier Labs (Le Genest-Saint-Isle, France) and kept in individually ventilated cages with ad libitum access to water and standard diet (Kliba Nafag 3436, Kaiseraugst, Switzerland) in 12 h light/dark cycles. Dataset 1 derives from the left kidney of a male mouse, 15 weeks of age with a body weight of 28.0 g. Dataset 2 is the right kidney of the same mouse. Dataset 3 derives from the right kidney of a female mouse, 15 weeks of age with a body weight of 22.5 g. All animal experiments were approved by the cantonal veterinary office of Zurich, Switzerland, in accordance with the Swiss federal animal welfare regulations (license numbers ZH177/13 and ZH233/15). Mice were anaesthetized with ketamine/xylazine. A blunted 21G butterfly needle was inserted retrogradely into the abdominal aorta and fixed with a ligation. The abdominal aorta and superior mesenteric artery above the renal arteries were ligated, the vena cava opened as an outlet and the kidneys were flushed with 10 ml, 37 °C phosphate-buffered saline (PBS) to remove the blood, then fixed with 50 ml 37 °C 4 % paraformaldehyde in PBS (PFA) solution at 150 mmHg hydrostatic pressure."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "growth protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "treatment protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#experiment-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "image acquisition and feature extraction protocol",
+      "description": "image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#experiment-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "data analysis protocol",
+      "description": "data analysis protocol"
+    }
+  ]
+}

@@ -1,0 +1,456 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0056-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0056/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0056/",
+      "@type": "Dataset",
+      "name": "Identification of long noncoding RNAs in regulation of cell division",
+      "description": "Long noncoding RNAs (lncRNAs) regulate many biological processes and have been implicated in development and disease pathogenesis. The exact function for the large majority of lncRNAs is still unknown. To address whether lncRNAs could play a role in cell division, we combined a microscopy-based high-content RNAi screen with dedicated image analysis workflows to identify lncRNAs that regulate mitotic progression, chromosome segregation and cytokinesis. By targeting over 2000 lncRNAs in HeLa cells, we discovered an assortment of new lncRNAs with unexplored functions in maintenance of genome stability.",
+      "datePublished": "2020-03-03",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Stojic et al, CC-BY-4.0, 2020",
+      "identifier": "idr0056",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0001-6691-3396"
+        },
+        {
+          "@id": "#person-2"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1038/s41467-020-14978-7"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#screen-biosample-1"
+        },
+        {
+          "@id": "#screen-biosample-2"
+        },
+        {
+          "@id": "#screen-biosample-3"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#screen-protocol-1-0"
+        },
+        {
+          "@id": "#screen-protocol-2-0"
+        },
+        {
+          "@id": "#screen-protocol-3-0"
+        },
+        {
+          "@id": "#screen-protocol-1-1"
+        },
+        {
+          "@id": "#screen-protocol-1-2"
+        },
+        {
+          "@id": "#screen-protocol-1-3"
+        },
+        {
+          "@id": "#screen-protocol-1-4"
+        },
+        {
+          "@id": "#screen-protocol-1-5"
+        },
+        {
+          "@id": "#screen-protocol-2-1"
+        },
+        {
+          "@id": "#screen-protocol-2-2"
+        },
+        {
+          "@id": "#screen-protocol-2-3"
+        },
+        {
+          "@id": "#screen-protocol-2-4"
+        },
+        {
+          "@id": "#screen-protocol-2-5"
+        },
+        {
+          "@id": "#screen-protocol-3-1"
+        },
+        {
+          "@id": "#screen-protocol-3-2"
+        },
+        {
+          "@id": "#screen-protocol-3-3"
+        },
+        {
+          "@id": "#screen-protocol-3-4"
+        },
+        {
+          "@id": "#screen-protocol-3-5"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/9753804/"
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0001-6691-3396",
+      "@type": "Person",
+      "name": "Lovorka Stojic",
+      "givenName": "Lovorka",
+      "familyName": "Stojic",
+      "email": "lovorka.stojic@cruk.cam.ac.uk",
+      "address": "Cancer Research UK Cambridge Institute, University of Cambridge, Li Ka Shing Centre, Robinson Way, Cambridge CB2 0RE, United Kingdom"
+    },
+    {
+      "@id": "#person-2",
+      "@type": "Person",
+      "name": "#person-2",
+      "email": "l.stojic@qmul.ac.uk"
+    },
+    {
+      "@id": "https://doi.org/10.1038/s41467-020-14978-7",
+      "@type": "ScholarlyArticle",
+      "name": "A long noncoding RNA regulates microtubule behaviour during mitosis"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "#screen-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Hela cells were transfected with the human Lincode small interfering RNA (siRNA) library targeting 2231 lncRNAs. Following 48 hr incubation, cells were fixed and processed for immunostaining and subsequent automated image acquisition and analysis. Antibodies targeting CEP215 (to label centrosomes), alpha-tubulin (to label the microtubule cytoskeleton), phalloidin (to label the actin cytoskeleton) and Hoechst (to label nuclei) were used.  10x 384-well plates were used.  The fixation and staining was carried out at the Institute for Cancer Research (ICR, London) using the PerkinElmer Cell:Explorer system coupled to automated liquid handling equipment. Solutions were dispensed using a Multidrop Combi Reagent dispenser (Thermo Fisher Scientific) and aspirated/washed using a Biotek washer with 96 pins. All plates were imaged using the PerkinElmer Opera high-content confocal screening platform with spinning disc. Thirty fields of view per well were captured using a 20x air objective, numerical aperture (NA) 0.45.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000253",
+      "@type": "DefinedTerm",
+      "name": "spinning disk confocal microscopy"
+    },
+    {
+      "@id": "#screen-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "spinning disk confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "description": "Hela cells were transfected with the human Lincode small interfering RNA (siRNA) library targeting 2231 lncRNAs. Following 48 hr incubation, cells were fixed and processed for immunostaining and subsequent automated image acquisition and analysis. Antibodies targeting CEP215 (to label centrosomes), alpha-tubulin (to label the microtubule cytoskeleton), phalloidin (to label the actin cytoskeleton) and Hoechst (to label nuclei) were used.  10x 384-well plates were used.  The fixation and staining was carried out at the Institute for Cancer Research (ICR, London) using the PerkinElmer Cell:Explorer system coupled to automated liquid handling equipment. Solutions were dispensed using a Multidrop Combi Reagent dispenser (Thermo Fisher Scientific) and aspirated/washed using a Biotek washer with 96 pins. All plates were imaged using the PerkinElmer Opera high-content confocal screening platform with spinning disc. Thirty fields of view per well were captured using a 20x air objective, numerical aperture (NA) 0.45."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Growth Protocol - HeLa cells were grown in Dulbecco’s modified Eagle’s medium (Gibco, 41966-029) supplemented with 10% Fetal bovine serum (FBS, Thermo Fisher Scientific, 10500064). Exponentially growing cells were reverse transfected with 20nM of siRNA. An siRNA targeting exon 1 of lncRNA GNG12-AS1 (Silencer select, Life Technologies, S59962) and SMARTpool siRNAs targeting protein-coding gene CKAP5/Ch-TOG (GE Dharmacon, L-006847-00) were also included on each plate. CKAP5/Ch-TOG was used as a positive control as its depletion leads to mitotic delay and increased mitotic index. ECT2 SMARTpool siRNAs (GE Dharmacon, L-006450-00-0005) were used as a positive control only in the third validation screen as its depletion results in multinucleated cells. 48 hr after transfection cells were fixed and stained with appropriate antibodies.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "treatment protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007571",
+      "@type": "DefinedTerm",
+      "name": "HCS library protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "HCS library protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007572",
+      "@type": "DefinedTerm",
+      "name": "HCS image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "HCS image acquisition and feature extraction protocol",
+      "description": "HCS image acquisition and feature extraction protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007573",
+      "@type": "DefinedTerm",
+      "name": "HCS data analysis protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-5",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "HCS data analysis protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-biosample-2",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Hela cells were transfecetd with the human Lincode small interfering RNA (siRNA) library targeting 2231 lncRNAs. Following 48 hr incubation, cells were fixed and processed for immunostaining and subsequent automated image acquisition and analysis.  In screen B, phospho-histone H3 (PHH3; to specifically label mitotic cells), alpha-tubulin, gamma-tubulin (to label centrosomes) and Hoechst was used. 10x 384-well plates were used.  The fixation and staining for both screen A and B  was carried out at the Institute for Cancer Research (ICR, London) using the PerkinElmer Cell:Explorer system coupled to automated liquid handling equipment. Solutions were dispensed using a Multidrop Combi Reagent dispenser (Thermo Fisher Scientific) and aspirated/washed using a Biotek washer with 96 pins. All plates were imaged using the PerkinElmer Opera high-content confocal screening platform with spinning disc. Thirty fields of view per well were captured using a 20x air objective, numerical aperture (NA) 0.45.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-0",
+      "@type": "LabProtocol",
+      "name": "spinning disk confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "description": "Hela cells were transfecetd with the human Lincode small interfering RNA (siRNA) library targeting 2231 lncRNAs. Following 48 hr incubation, cells were fixed and processed for immunostaining and subsequent automated image acquisition and analysis.  In screen B, phospho-histone H3 (PHH3; to specifically label mitotic cells), alpha-tubulin, gamma-tubulin (to label centrosomes) and Hoechst was used. 10x 384-well plates were used.  The fixation and staining for both screen A and B  was carried out at the Institute for Cancer Research (ICR, London) using the PerkinElmer Cell:Explorer system coupled to automated liquid handling equipment. Solutions were dispensed using a Multidrop Combi Reagent dispenser (Thermo Fisher Scientific) and aspirated/washed using a Biotek washer with 96 pins. All plates were imaged using the PerkinElmer Opera high-content confocal screening platform with spinning disc. Thirty fields of view per well were captured using a 20x air objective, numerical aperture (NA) 0.45."
+    },
+    {
+      "@id": "#screen-protocol-2-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Growth Protocol - HeLa cells were grown in Dulbecco’s modified Eagle’s medium (Gibco, 41966-029) supplemented with 10% Fetal bovine serum (FBS, Thermo Fisher Scientific, 10500064). Exponentially growing cells were reverse transfected with 20nM of siRNA. An siRNA targeting exon 1 of lncRNA GNG12-AS1 (Silencer select, Life Technologies, S59962) and SMARTpool siRNAs targeting protein-coding gene CKAP5/Ch-TOG (GE Dharmacon, L-006847-00) were also included on each plate. CKAP5/Ch-TOG was used as a positive control as its depletion leads to mitotic delay and increased mitotic index. ECT2 SMARTpool siRNAs (GE Dharmacon, L-006450-00-0005) were used as a positive control only in the third validation screen as its depletion results in multinucleated cells. 48 hr after transfection cells were fixed and stained with appropriate antibodies.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "treatment protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-3",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "HCS library protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-4",
+      "@type": "LabProtocol",
+      "name": "HCS image acquisition and feature extraction protocol",
+      "description": "HCS image acquisition and feature extraction protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-5",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "HCS data analysis protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-biosample-3",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "The third-pass validation screen was performed in two replicates with four technical replicates using the top 25 candidates from each of the categories (mitotic progression, cytokinesis) using phospho-histone H3 (PHH3; to specifically label mitotic cells), alpha-tubulin (to label the microtubule cytoskeleton), gamma-tubulin (to label centrosomes) and Hoechst (DNA). Correlation coefficients between replicate plates in third screen were calculated by Spearman’s rank correlation (mitotic index = 0.967888, viability = 0.93249, multinucleation index = 0.995897, cytokinetic bridges = 0.898324).  The fixation and staining for the validation screen  was carried out at the Institute for Cancer Research (ICR, London) using the PerkinElmer Cell:Explorer system coupled to automated liquid handling equipment. Solutions were dispensed using a Multidrop Combi Reagent dispenser (Thermo Fisher Scientific) and aspirated/washed using a Biotek washer with 96 pins. All plates were imaged using the PerkinElmer Opera high-content confocal screening platform with spinning disc. Thirty fields of view per well were captured using a 20x air objective, numerical aperture (NA) 0.45.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-3-0",
+      "@type": "LabProtocol",
+      "name": "spinning disk confocal microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000253"
+        }
+      ],
+      "description": "The third-pass validation screen was performed in two replicates with four technical replicates using the top 25 candidates from each of the categories (mitotic progression, cytokinesis) using phospho-histone H3 (PHH3; to specifically label mitotic cells), alpha-tubulin (to label the microtubule cytoskeleton), gamma-tubulin (to label centrosomes) and Hoechst (DNA). Correlation coefficients between replicate plates in third screen were calculated by Spearman’s rank correlation (mitotic index = 0.967888, viability = 0.93249, multinucleation index = 0.995897, cytokinetic bridges = 0.898324).  The fixation and staining for the validation screen  was carried out at the Institute for Cancer Research (ICR, London) using the PerkinElmer Cell:Explorer system coupled to automated liquid handling equipment. Solutions were dispensed using a Multidrop Combi Reagent dispenser (Thermo Fisher Scientific) and aspirated/washed using a Biotek washer with 96 pins. All plates were imaged using the PerkinElmer Opera high-content confocal screening platform with spinning disc. Thirty fields of view per well were captured using a 20x air objective, numerical aperture (NA) 0.45."
+    },
+    {
+      "@id": "#screen-protocol-3-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "Growth Protocol - HeLa cells were grown in Dulbecco’s modified Eagle’s medium (Gibco, 41966-029) supplemented with 10% Fetal bovine serum (FBS, Thermo Fisher Scientific, 10500064). Exponentially growing cells were reverse transfected with 20nM of siRNA. An siRNA targeting exon 1 of lncRNA GNG12-AS1 (Silencer select, Life Technologies, S59962) and SMARTpool siRNAs targeting protein-coding gene CKAP5/Ch-TOG (GE Dharmacon, L-006847-00) were also included on each plate. CKAP5/Ch-TOG was used as a positive control as its depletion leads to mitotic delay and increased mitotic index. ECT2 SMARTpool siRNAs (GE Dharmacon, L-006450-00-0005) were used as a positive control only in the third validation screen as its depletion results in multinucleated cells. 48 hr after transfection cells were fixed and stained with appropriate antibodies.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-3-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "treatment protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-3-3",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "HCS library protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-3-4",
+      "@type": "LabProtocol",
+      "name": "HCS image acquisition and feature extraction protocol",
+      "description": "HCS image acquisition and feature extraction protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-3-5",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "HCS data analysis protocol",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    }
+  ]
+}

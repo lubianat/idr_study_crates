@@ -1,0 +1,690 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context",
+    {
+      "bia": "https://bioimage-archive.org/ro-crate/",
+      "obo": "http://purl.obolibrary.org/obo/",
+      "dwc": "http://rs.tdwg.org/dwc/terms/",
+      "dwciri": "http://rs.tdwg.org/dwc/iri/",
+      "bao": "http://www.bioassayontology.org/bao#",
+      "vernacularName": {
+        "@id": "dwc:vernacularName"
+      },
+      "scientificName": {
+        "@id": "dwc:scientificName"
+      },
+      "Taxon": {
+        "@id": "dwc:Taxon"
+      },
+      "hasCellLine": {
+        "@id": "bao:BAO_0002004"
+      },
+      "measurementMethod": {
+        "@id": "dwciri:measurementMethod",
+        "@type": "@id"
+      },
+      "taxonomicRange": {
+        "@id": "http://schema.org/taxonomicRange",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdf:seeAlso",
+        "@type": "@id"
+      },
+      "BioSample": {
+        "@id": "http://schema.org/BioSample"
+      },
+      "LabProtocol": {
+        "@id": "http://schema.org/LabProtocol"
+      },
+      "labEquipment": {
+        "@id": "http://schema.org/labEquipment"
+      },
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "datePublished": {
+        "@id": "http://schema.org/datePublished",
+        "@type": "xsd:date"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "idr0081-ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      },
+      "about": {
+        "@id": "https://idr.openmicroscopy.org/study/idr0081/"
+      }
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/study/idr0081/",
+      "@type": "Dataset",
+      "name": "High-content image-based drug screen identifies a clinical compound against cell transmission of adenovirus",
+      "description": "Human adenoviruses (HAdVs) are fatal to immune-suppressed people, but no effective anti-HAdV therapy is available. Here, we present a novel image-based high-throughput screening (HTS) platform, which scores the full viral replication cycle from virus entry to dissemination of progeny. We analysed 1,280 small molecular compounds of the Prestwick Chemical Library (PCL) for interference with HAdV-C2 infection in a quadruplicate blinded format, followed by robust image analyses, and hit identification. We identified Nelfinavir mesylate as an inhibitor of HAdV plaque formation, in agreement with the previous notion that Nelfinavir is ineffective in single round HAdV infection assays. Nelfinavir has been FDA-approved for anti-retroviral therapy in humans. Our results underscore the power of image-based multi-round infection assays in identifying viral inhibitors with clinical potential.",
+      "datePublished": "2020-05-19",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "copyrightNotice": "Georgi et al, CC-BY-4.0, 2020",
+      "identifier": "idr0081",
+      "publisher": {
+        "@id": "https://idr.openmicroscopy.org/"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-4803-5099"
+        }
+      ],
+      "seeAlso": [
+        {
+          "@id": "https://doi.org/10.1038/s41597-020-00604-0"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#screen-biosample-1"
+        },
+        {
+          "@id": "#screen-biosample-2"
+        },
+        {
+          "@id": "#screen-biosample-3"
+        },
+        {
+          "@id": "#screen-biosample-4"
+        },
+        {
+          "@id": "#screen-biosample-5"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10515"
+        }
+      ],
+      "measurementMethod": [
+        {
+          "@id": "#screen-protocol-1-0"
+        },
+        {
+          "@id": "#screen-protocol-2-0"
+        },
+        {
+          "@id": "#screen-protocol-3-0"
+        },
+        {
+          "@id": "#screen-protocol-4-0"
+        },
+        {
+          "@id": "#screen-protocol-5-0"
+        },
+        {
+          "@id": "#screen-protocol-1-1"
+        },
+        {
+          "@id": "#screen-protocol-1-2"
+        },
+        {
+          "@id": "#screen-protocol-1-3"
+        },
+        {
+          "@id": "#screen-protocol-1-4"
+        },
+        {
+          "@id": "#screen-protocol-1-5"
+        },
+        {
+          "@id": "#screen-protocol-2-1"
+        },
+        {
+          "@id": "#screen-protocol-2-2"
+        },
+        {
+          "@id": "#screen-protocol-2-3"
+        },
+        {
+          "@id": "#screen-protocol-2-4"
+        },
+        {
+          "@id": "#screen-protocol-2-5"
+        },
+        {
+          "@id": "#screen-protocol-3-1"
+        },
+        {
+          "@id": "#screen-protocol-3-2"
+        },
+        {
+          "@id": "#screen-protocol-3-3"
+        },
+        {
+          "@id": "#screen-protocol-3-4"
+        },
+        {
+          "@id": "#screen-protocol-3-5"
+        },
+        {
+          "@id": "#screen-protocol-4-1"
+        },
+        {
+          "@id": "#screen-protocol-4-2"
+        },
+        {
+          "@id": "#screen-protocol-4-3"
+        },
+        {
+          "@id": "#screen-protocol-4-4"
+        },
+        {
+          "@id": "#screen-protocol-4-5"
+        },
+        {
+          "@id": "#screen-protocol-5-1"
+        },
+        {
+          "@id": "#screen-protocol-5-2"
+        },
+        {
+          "@id": "#screen-protocol-5-3"
+        },
+        {
+          "@id": "#screen-protocol-5-4"
+        },
+        {
+          "@id": "#screen-protocol-5-5"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "thumbnailUrl": [
+        "https://idr.openmicroscopy.org/webgateway/render_thumbnail/9830833/"
+      ],
+      "size": [
+        {
+          "@id": "#total-dataset-size"
+        },
+        {
+          "@id": "#file-count"
+        }
+      ]
+    },
+    {
+      "@id": "https://idr.openmicroscopy.org/",
+      "@type": "Organization",
+      "name": "Image Data Resource",
+      "url": "https://idr.openmicroscopy.org/"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-4803-5099",
+      "@type": "Person",
+      "name": "Fanny Georgi",
+      "givenName": "Fanny",
+      "familyName": "Georgi",
+      "email": "fanny.georgi@uzh.ch",
+      "address": "University of Zurich, Department of Molecular Life Sciences, Winterthurerstrasse 190, 8057 Zurich, Switzerland"
+    },
+    {
+      "@id": "https://doi.org/10.1038/s41597-020-00604-0",
+      "@type": "ScholarlyArticle",
+      "name": "High-content image-based drug screen identifies a clinical compound against cell transmission of adenovirus"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+      "@type": "Taxon",
+      "scientificName": "Homo sapiens"
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10515",
+      "@type": "Taxon",
+      "scientificName": "Human adenovirus 2"
+    },
+    {
+      "@id": "#screen-biosample-1",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Human adenovirus infected quality control plates consisting solely on the solvent control DMSO to confirm assay stability prior to Z' plates (preZ) and screen (preScreen).",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10515"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.obolibrary.org/obo/FBBI_00000246",
+      "@type": "DefinedTerm",
+      "name": "fluorescence microscopy"
+    },
+    {
+      "@id": "#screen-protocol-1-0",
+      "@type": "LabProtocol",
+      "name": "fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "description": "Human adenovirus infected quality control plates consisting solely on the solvent control DMSO to confirm assay stability prior to Z' plates (preZ) and screen (preScreen)."
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "A549 ATCC (CCL-185) were maintained in full medium: high glucose DMEM containing 7.5% FBS, 1% L-glutamine and 1% penicillin streptomycin and subcultured following PBS washing and trypsinisation weekly. Cell cultures were grown at standard conditions (37°C, 5% CO2, 95% humidity) and passage number limited to 20.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0003969",
+      "@type": "DefinedTerm",
+      "name": "treatment protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "The screening was performed in four independent biological replicates on 384-well plates. Wet-lab liquid handling was performed using a Matrix WellMate dispenser and Matrix WellMate tubing cartridges. Prior to usage, tubings were rinsed with 125 ml autoclaved ddH2O followed by 125 ml autoclaved PBS. Pre-spotted compound plates were thawed at room temperature for 30 min, briefly centrifuged before compounds were dissolved in 10 μl/ well PBS. 4,000 A549 cells/ well in 60 μl full medium were seeded onto the compounds using standard bore tubing cartridges. Following cell adhesion over night, the cells are inoculated with 1.77*105 genome equivalents per well of HAdV-C2-dE3B in 10 μl full media using bovine serum albumin-blocked small bore tubing cartridges. Final compound concentration was 1.25 μM at 0.0125% DMSO. Infection was allowed to progress over multiple infection rounds for 72 h giving rise to foci of infected cells originating from a single first round infected cell termed plaque. Cells were fixed for 1 h at RT by addition of 26.6 μL 16% PFA and 4 μg/ml Hoechst 33342 in PBS using standard bore tubing cartridges. Cells were washed 3 times with PBS before PBS supplemented with 0.02% N3 was added and plates were sealed for long-term storage at 4°C.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007571",
+      "@type": "DefinedTerm",
+      "name": "HCS library protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-3",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "The Prestwick Chemical Library was selected because it contains 1,280 commercially available off-patent FDA-approved small molecules from a variety of pharmaceutical classes. Identified anti-adenoviral hits are likely repurposable, since toxicity and bioavailability has been assessed in clinical trials.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007572",
+      "@type": "DefinedTerm",
+      "name": "HCS image acquisition and feature extraction protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-4",
+      "@type": "LabProtocol",
+      "name": "HCS image acquisition and feature extraction protocol",
+      "description": "Cells were fixed and nuclei stained with Hoechst. Infected wells did not have to be stained since HAdV-C2-dE3B-CMV-GFP expressed GFP as infection marker. Plates were epifluorescently imaged using an IXM-C (Molecular Devices) and an IN Cell 2200 (GE Healthcare). The infection phenotype for each well was quantified by Plaque2.0 (Yakimovich et al. 2015) via five read-outs: number of nuclei, number of infected nuclei, the ratio between infected and total nuclei referred to as infection index, number of multi-round infection foci termed plaques (plaque forming units, pfu) and the integrated viral transgenic GFP intensity. Plaque2.0 parameters were optimized independently for the data acquired at the respective institution.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.ebi.ac.uk/efo/EFO_0007573",
+      "@type": "DefinedTerm",
+      "name": "HCS data analysis protocol"
+    },
+    {
+      "@id": "#screen-protocol-1-5",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "Hits were filtered for maximal antiviral effect (outside of 3 SD of negative control) and minimal toxicity (inside of 2 SD of negative control and additional non-infected assays).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-biosample-2",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Human adenovirus infected Z' plates in biological duplicates consisting of 192 technical replicates of the solvent control DMSO and positive control DFT to confirm assay quality.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10515"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-0",
+      "@type": "LabProtocol",
+      "name": "fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "description": "Human adenovirus infected Z' plates in biological duplicates consisting of 192 technical replicates of the solvent control DMSO and positive control DFT to confirm assay quality."
+    },
+    {
+      "@id": "#screen-protocol-2-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "A549 ATCC (CCL-185) were maintained in full medium: high glucose DMEM containing 7.5% FBS, 1% L-glutamine and 1% penicillin streptomycin and subcultured following PBS washing and trypsinisation weekly. Cell cultures were grown at standard conditions (37°C, 5% CO2, 95% humidity) and passage number limited to 20.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "The screening was performed in four independent biological replicates on 384-well plates. Wet-lab liquid handling was performed using a Matrix WellMate dispenser and Matrix WellMate tubing cartridges. Prior to usage, tubings were rinsed with 125 ml autoclaved ddH2O followed by 125 ml autoclaved PBS. Pre-spotted compound plates were thawed at room temperature for 30 min, briefly centrifuged before compounds were dissolved in 10 μl/ well PBS. 4,000 A549 cells/ well in 60 μl full medium were seeded onto the compounds using standard bore tubing cartridges. Following cell adhesion over night, the cells are inoculated with 1.77*105 genome equivalents per well of HAdV-C2-dE3B in 10 μl full media using bovine serum albumin-blocked small bore tubing cartridges. Final compound concentration was 1.25 μM at 0.0125% DMSO. Infection was allowed to progress over multiple infection rounds for 72 h giving rise to foci of infected cells originating from a single first round infected cell termed plaque. Cells were fixed for 1 h at RT by addition of 26.6 μL 16% PFA and 4 μg/ml Hoechst 33342 in PBS using standard bore tubing cartridges. Cells were washed 3 times with PBS before PBS supplemented with 0.02% N3 was added and plates were sealed for long-term storage at 4°C.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-3",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "The Prestwick Chemical Library was selected because it contains 1,280 commercially available off-patent FDA-approved small molecules from a variety of pharmaceutical classes. Identified anti-adenoviral hits are likely repurposable, since toxicity and bioavailability has been assessed in clinical trials.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-4",
+      "@type": "LabProtocol",
+      "name": "HCS image acquisition and feature extraction protocol",
+      "description": "Cells were fixed and nuclei stained with Hoechst. Infected wells did not have to be stained since HAdV-C2-dE3B-CMV-GFP expressed GFP as infection marker. Plates were epifluorescently imaged using an IXM-C (Molecular Devices) and an IN Cell 2200 (GE Healthcare). The infection phenotype for each well was quantified by Plaque2.0 (Yakimovich et al. 2015) via five read-outs: number of nuclei, number of infected nuclei, the ratio between infected and total nuclei referred to as infection index, number of multi-round infection foci termed plaques (plaque forming units, pfu) and the integrated viral transgenic GFP intensity. Plaque2.0 parameters were optimized independently for the data acquired at the respective institution.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-2-5",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "Hits were filtered for maximal antiviral effect (outside of 3 SD of negative control) and minimal toxicity (inside of 2 SD of negative control and additional non-infected assays).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-biosample-3",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Human adenovirus infected Z' plates in biological duplicates consisting of 192 technical replicates of the solvent control DMSO and positive control DFT to confirm assay quality.",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10515"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-3-0",
+      "@type": "LabProtocol",
+      "name": "fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "description": "Human adenovirus infected Z' plates in biological duplicates consisting of 192 technical replicates of the solvent control DMSO and positive control DFT to confirm assay quality."
+    },
+    {
+      "@id": "#screen-protocol-3-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "A549 ATCC (CCL-185) were maintained in full medium: high glucose DMEM containing 7.5% FBS, 1% L-glutamine and 1% penicillin streptomycin and subcultured following PBS washing and trypsinisation weekly. Cell cultures were grown at standard conditions (37°C, 5% CO2, 95% humidity) and passage number limited to 20.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-3-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "The screening was performed in four independent biological replicates on 384-well plates. Wet-lab liquid handling was performed using a Matrix WellMate dispenser and Matrix WellMate tubing cartridges. Prior to usage, tubings were rinsed with 125 ml autoclaved ddH2O followed by 125 ml autoclaved PBS. Pre-spotted compound plates were thawed at room temperature for 30 min, briefly centrifuged before compounds were dissolved in 10 μl/ well PBS. 4,000 A549 cells/ well in 60 μl full medium were seeded onto the compounds using standard bore tubing cartridges. Following cell adhesion over night, the cells are inoculated with 1.77*105 genome equivalents per well of HAdV-C2-dE3B in 10 μl full media using bovine serum albumin-blocked small bore tubing cartridges. Final compound concentration was 1.25 μM at 0.0125% DMSO. Infection was allowed to progress over multiple infection rounds for 72 h giving rise to foci of infected cells originating from a single first round infected cell termed plaque. Cells were fixed for 1 h at RT by addition of 26.6 μL 16% PFA and 4 μg/ml Hoechst 33342 in PBS using standard bore tubing cartridges. Cells were washed 3 times with PBS before PBS supplemented with 0.02% N3 was added and plates were sealed for long-term storage at 4°C.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-3-3",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "The Prestwick Chemical Library was selected because it contains 1,280 commercially available off-patent FDA-approved small molecules from a variety of pharmaceutical classes. Identified anti-adenoviral hits are likely repurposable, since toxicity and bioavailability has been assessed in clinical trials.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-3-4",
+      "@type": "LabProtocol",
+      "name": "HCS image acquisition and feature extraction protocol",
+      "description": "Cells were fixed and nuclei stained with Hoechst. Infected wells did not have to be stained since HAdV-C2-dE3B-CMV-GFP expressed GFP as infection marker. Plates were epifluorescently imaged using an IXM-C (Molecular Devices) and an IN Cell 2200 (GE Healthcare). The infection phenotype for each well was quantified by Plaque2.0 (Yakimovich et al. 2015) via five read-outs: number of nuclei, number of infected nuclei, the ratio between infected and total nuclei referred to as infection index, number of multi-round infection foci termed plaques (plaque forming units, pfu) and the integrated viral transgenic GFP intensity. Plaque2.0 parameters were optimized independently for the data acquired at the respective institution.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-3-5",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "Hits were filtered for maximal antiviral effect (outside of 3 SD of negative control) and minimal toxicity (inside of 2 SD of negative control and additional non-infected assays).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-biosample-4",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Primary image-based screen of 1,278 mostly FDA-approved, off-patent small molecules, collected in the Prestwick Chemical Library for inhibitors of Human adenovirus infection",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10515"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-4-0",
+      "@type": "LabProtocol",
+      "name": "fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "description": "Primary image-based screen of 1,278 mostly FDA-approved, off-patent small molecules, collected in the Prestwick Chemical Library for inhibitors of Human adenovirus infection"
+    },
+    {
+      "@id": "#screen-protocol-4-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "A549 ATCC (CCL-185) were maintained in full medium: high glucose DMEM containing 7.5% FBS, 1% L-glutamine and 1% penicillin streptomycin and subcultured following PBS washing and trypsinisation weekly. Cell cultures were grown at standard conditions (37°C, 5% CO2, 95% humidity) and passage number limited to 20.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-4-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "The screening was performed in four independent biological replicates on 384-well plates. Wet-lab liquid handling was performed using a Matrix WellMate dispenser and Matrix WellMate tubing cartridges. Prior to usage, tubings were rinsed with 125 ml autoclaved ddH2O followed by 125 ml autoclaved PBS. Pre-spotted compound plates were thawed at room temperature for 30 min, briefly centrifuged before compounds were dissolved in 10 μl/ well PBS. 4,000 A549 cells/ well in 60 μl full medium were seeded onto the compounds using standard bore tubing cartridges. Following cell adhesion over night, the cells are inoculated with 1.77*105 genome equivalents per well of HAdV-C2-dE3B in 10 μl full media using bovine serum albumin-blocked small bore tubing cartridges. Final compound concentration was 1.25 μM at 0.0125% DMSO. Infection was allowed to progress over multiple infection rounds for 72 h giving rise to foci of infected cells originating from a single first round infected cell termed plaque. Cells were fixed for 1 h at RT by addition of 26.6 μL 16% PFA and 4 μg/ml Hoechst 33342 in PBS using standard bore tubing cartridges. Cells were washed 3 times with PBS before PBS supplemented with 0.02% N3 was added and plates were sealed for long-term storage at 4°C.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-4-3",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "The Prestwick Chemical Library was selected because it contains 1,280 commercially available off-patent FDA-approved small molecules from a variety of pharmaceutical classes. Identified anti-adenoviral hits are likely repurposable, since toxicity and bioavailability has been assessed in clinical trials.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-4-4",
+      "@type": "LabProtocol",
+      "name": "HCS image acquisition and feature extraction protocol",
+      "description": "Cells were fixed and nuclei stained with Hoechst. Infected wells did not have to be stained since HAdV-C2-dE3B-CMV-GFP expressed GFP as infection marker. Plates were epifluorescently imaged using an IXM-C (Molecular Devices) and an IN Cell 2200 (GE Healthcare). The infection phenotype for each well was quantified by Plaque2.0 (Yakimovich et al. 2015) via five read-outs: number of nuclei, number of infected nuclei, the ratio between infected and total nuclei referred to as infection index, number of multi-round infection foci termed plaques (plaque forming units, pfu) and the integrated viral transgenic GFP intensity. Plaque2.0 parameters were optimized independently for the data acquired at the respective institution.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-4-5",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "Hits were filtered for maximal antiviral effect (outside of 3 SD of negative control) and minimal toxicity (inside of 2 SD of negative control and additional non-infected assays).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-biosample-5",
+      "@type": "BioSample",
+      "name": "cell",
+      "description": "Primary image-based screen of 1,278 mostly FDA-approved, off-patent small molecules, collected in the Prestwick Chemical Library for inhibitors of Human adenovirus infection",
+      "taxonomicRange": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+        },
+        {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10515"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-5-0",
+      "@type": "LabProtocol",
+      "name": "fluorescence microscopy",
+      "measurementTechnique": [
+        {
+          "@id": "http://purl.obolibrary.org/obo/FBBI_00000246"
+        }
+      ],
+      "description": "Primary image-based screen of 1,278 mostly FDA-approved, off-patent small molecules, collected in the Prestwick Chemical Library for inhibitors of Human adenovirus infection"
+    },
+    {
+      "@id": "#screen-protocol-5-1",
+      "@type": "LabProtocol",
+      "name": "growth protocol",
+      "description": "A549 ATCC (CCL-185) were maintained in full medium: high glucose DMEM containing 7.5% FBS, 1% L-glutamine and 1% penicillin streptomycin and subcultured following PBS washing and trypsinisation weekly. Cell cultures were grown at standard conditions (37°C, 5% CO2, 95% humidity) and passage number limited to 20.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003789"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-5-2",
+      "@type": "LabProtocol",
+      "name": "treatment protocol",
+      "description": "The screening was performed in four independent biological replicates on 384-well plates. Wet-lab liquid handling was performed using a Matrix WellMate dispenser and Matrix WellMate tubing cartridges. Prior to usage, tubings were rinsed with 125 ml autoclaved ddH2O followed by 125 ml autoclaved PBS. Pre-spotted compound plates were thawed at room temperature for 30 min, briefly centrifuged before compounds were dissolved in 10 μl/ well PBS. 4,000 A549 cells/ well in 60 μl full medium were seeded onto the compounds using standard bore tubing cartridges. Following cell adhesion over night, the cells are inoculated with 1.77*105 genome equivalents per well of HAdV-C2-dE3B in 10 μl full media using bovine serum albumin-blocked small bore tubing cartridges. Final compound concentration was 1.25 μM at 0.0125% DMSO. Infection was allowed to progress over multiple infection rounds for 72 h giving rise to foci of infected cells originating from a single first round infected cell termed plaque. Cells were fixed for 1 h at RT by addition of 26.6 μL 16% PFA and 4 μg/ml Hoechst 33342 in PBS using standard bore tubing cartridges. Cells were washed 3 times with PBS before PBS supplemented with 0.02% N3 was added and plates were sealed for long-term storage at 4°C.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0003969"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-5-3",
+      "@type": "LabProtocol",
+      "name": "HCS library protocol",
+      "description": "The Prestwick Chemical Library was selected because it contains 1,280 commercially available off-patent FDA-approved small molecules from a variety of pharmaceutical classes. Identified anti-adenoviral hits are likely repurposable, since toxicity and bioavailability has been assessed in clinical trials.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007571"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-5-4",
+      "@type": "LabProtocol",
+      "name": "HCS image acquisition and feature extraction protocol",
+      "description": "Cells were fixed and nuclei stained with Hoechst. Infected wells did not have to be stained since HAdV-C2-dE3B-CMV-GFP expressed GFP as infection marker. Plates were epifluorescently imaged using an IXM-C (Molecular Devices) and an IN Cell 2200 (GE Healthcare). The infection phenotype for each well was quantified by Plaque2.0 (Yakimovich et al. 2015) via five read-outs: number of nuclei, number of infected nuclei, the ratio between infected and total nuclei referred to as infection index, number of multi-round infection foci termed plaques (plaque forming units, pfu) and the integrated viral transgenic GFP intensity. Plaque2.0 parameters were optimized independently for the data acquired at the respective institution.",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007572"
+        }
+      ]
+    },
+    {
+      "@id": "#screen-protocol-5-5",
+      "@type": "LabProtocol",
+      "name": "HCS data analysis protocol",
+      "description": "Hits were filtered for maximal antiviral effect (outside of 3 SD of negative control) and minimal toxicity (inside of 2 SD of negative control and additional non-infected assays).",
+      "measurementTechnique": [
+        {
+          "@id": "http://www.ebi.ac.uk/efo/EFO_0007573"
+        }
+      ]
+    },
+    {
+      "@id": "#total-dataset-size",
+      "@type": "QuantitativeValue",
+      "value": 263113132526,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000233",
+      "unitText": "bytes",
+      "description": "0.0126 + 0.0126 + 0.0126 + 0.1008 + 0.1007 = 0.24 TB"
+    },
+    {
+      "@id": "#file-count",
+      "@type": "QuantitativeValue",
+      "value": 27,
+      "unitCode": "http://purl.obolibrary.org/obo/UO_0000189",
+      "unitText": "file count",
+      "description": "1 + 1 + 1 + 12 + 12 = 27 5D images"
+    }
+  ]
+}
