@@ -2923,6 +2923,19 @@ RO_CRATE_CONTEXT_FALLBACK = {
 }
 
 
+def descriptor_output_name(descriptor_id: str | None) -> str:
+    """Normalize metadata descriptor IDs to a filename in the output folder."""
+    candidate = (descriptor_id or "ro-crate-metadata.json").strip()
+    if not candidate:
+        return "ro-crate-metadata.json"
+
+    parsed = urlparse(candidate)
+    if parsed.path:
+        candidate = parsed.path
+    filename = Path(candidate).name
+    return filename or "ro-crate-metadata.json"
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(
         description="Batch-generate RO-Crates from IDR study metadata files."
@@ -2987,23 +3000,35 @@ def main() -> None:
     log(f"Found {len(study_files)} study metadata files under {input_dir}")
     log(f"Writing RO-Crates to {output_dir}")
 
+    seen_descriptor_files = {}
     subcrates = []
     for study_path in progress:
         metadata = decoder.decode(study_path)
         crate = encoder.encode(metadata)
-        crate_dir = output_dir / study_path.stem
-        crate_dir.mkdir(parents=True, exist_ok=True)
-        descriptor_id = extract_metadata_descriptor_id(crate) or "ro-crate-metadata.json"
-        output_path = crate_dir / descriptor_id
+        descriptor_file = descriptor_output_name(extract_metadata_descriptor_id(crate))
+        previous_study = seen_descriptor_files.get(descriptor_file)
+        if previous_study is not None:
+            raise SystemExit(
+                f"Conflicting output filename '{descriptor_file}' for {study_path} and {previous_study}. "
+                "All generated RO-Crates must resolve to unique files in a single output folder."
+            )
+        if not args.no_index_crate and descriptor_file == "ro-crate-metadata.json":
+            raise SystemExit(
+                f"Descriptor filename '{descriptor_file}' from {study_path} conflicts with the index crate. "
+                "Use --no-index-crate or update descriptor IDs to unique filenames."
+            )
+
+        output_path = output_dir / descriptor_file
         output_path.write_text(
             json.dumps(crate, indent=2, ensure_ascii=False), encoding="utf-8"
         )
         log(f"Wrote {output_path}")
-        subcrates.append((crate_dir, crate))
+        seen_descriptor_files[descriptor_file] = study_path
+        subcrates.append((descriptor_file, crate))
 
     index_path: Optional[Path] = None
     if not args.no_index_crate:
-        index_crate = build_index_crate(output_dir, subcrates)
+        index_crate = build_index_crate(subcrates)
         index_path = output_dir / "ro-crate-metadata.json"
         index_path.write_text(
             json.dumps(index_crate, indent=2, ensure_ascii=False), encoding="utf-8"
@@ -3012,11 +3037,11 @@ def main() -> None:
 
     if args.ttl_out:
         ttl_path = Path(args.ttl_out)
-        write_merged_ttl(ttl_path, subcrates, index_path)
+        write_merged_ttl(ttl_path, output_dir, subcrates, index_path)
         log(f"Wrote merged Turtle to {ttl_path}")
 
 
-def build_index_crate(output_dir: Path, subcrates) -> dict:
+def build_index_crate(subcrates) -> dict:
     graph = []
     graph.append(
         {
@@ -3037,15 +3062,15 @@ def build_index_crate(output_dir: Path, subcrates) -> dict:
         "hasPart": [],
     }
 
-    for crate_dir, crate in subcrates:
-        crate_rel = crate_dir.relative_to(output_dir).as_posix() + "/"
+    for idx, (descriptor_file, crate) in enumerate(subcrates, start=1):
+        crate_rel = f"./{descriptor_file}"
+        dataset_id = f"#subcrate-{idx}"
         root_entry = extract_root_entity(crate)
-        descriptor_id = extract_metadata_descriptor_id(crate) or "ro-crate-metadata.json"
         entity = {
-            "@id": crate_rel,
+            "@id": dataset_id,
             "@type": "Dataset",
             "conformsTo": {"@id": "https://w3id.org/ro/crate"},
-            "subjectOf": {"@id": f"{crate_rel}{descriptor_id}"},
+            "subjectOf": {"@id": crate_rel},
         }
         if root_entry:
             name = root_entry.get("name")
@@ -3057,11 +3082,11 @@ def build_index_crate(output_dir: Path, subcrates) -> dict:
                 entity["description"] = description
             if identifier and identifier.startswith("http"):
                 entity["identifier"] = identifier
-        root["hasPart"].append({"@id": crate_rel})
+        root["hasPart"].append({"@id": dataset_id})
         graph.append(entity)
         graph.append(
             {
-                "@id": f"{crate_rel}{descriptor_id}",
+                "@id": crate_rel,
                 "@type": "CreativeWork",
                 "encodingFormat": "application/ld+json",
             }
@@ -3074,7 +3099,9 @@ def build_index_crate(output_dir: Path, subcrates) -> dict:
     }
 
 
-def write_merged_ttl(output_path: Path, subcrates, index_path: Optional[Path]) -> None:
+def write_merged_ttl(
+    output_path: Path, output_dir: Path, subcrates, index_path: Optional[Path]
+) -> None:
     try:
         from rdflib import Graph
     except ImportError as exc:
@@ -3102,9 +3129,8 @@ def write_merged_ttl(output_path: Path, subcrates, index_path: Optional[Path]) -
                 data=json.dumps(index_data), format="json-ld", publicID=index_base
             )
 
-        for crate_dir, crate in subcrates:
-            descriptor_id = extract_metadata_descriptor_id(crate) or "ro-crate-metadata.json"
-            crate_path = (crate_dir / descriptor_id).resolve()
+        for descriptor_file, crate in subcrates:
+            crate_path = (output_dir / descriptor_file).resolve()
             crate_base = crate_base_iri(crate, crate_path.as_uri())
             graph.parse(data=json.dumps(crate), format="json-ld", publicID=crate_base)
     finally:
