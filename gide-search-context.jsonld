@@ -1,6 +1,5 @@
 {
-    "@context": [
-        "https://w3id.org/ro/crate/1.2/context",
+    "@context":
         {
             "obo": "http://purl.obolibrary.org/obo/",
             "dwc": "http://rs.tdwg.org/dwc/terms/",
@@ -32,5 +31,4 @@
                 "@id": "http://schema.org/labEquipment"
             }
         }
-    ]
 }
